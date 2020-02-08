@@ -1,2 +1,5 @@
-# disciple-tools-events
-This is a Disciple Tools extension that tracts events like Trainings, Meetings, Shares and cross references against contacts, groups, and locations.
+[![Build Status](https://travis-ci.com/DiscipleTools/disciple-tools-events.svg?branch=master)](https://travis-ci.com/DiscipleTools/disciple-tools-cevents)
+
+# Disciple Tools Events
+
+This extension adds a new post type which can track 
