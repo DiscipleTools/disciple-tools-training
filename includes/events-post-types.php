@@ -1,6 +1,6 @@
 <?php
 
-class DT_Events{
+class DT_Events_Post_Type {
     private static $_instance = null;
     public static function instance() {
         if ( is_null( self::$_instance ) ) {
@@ -24,12 +24,12 @@ class DT_Events{
 
     public function after_setup_theme(){
         if ( class_exists( 'Disciple_Tools_Post_Type_Template' )) {
-            new Disciple_Tools_Post_Type_Template( "clusters", 'Cluster', 'Clusters' );
+            new Disciple_Tools_Post_Type_Template( "events", 'Training', 'Trainings' );
         }
     }
 
     public function dt_custom_fields_settings( $fields, $post_type ){
-        if ( $post_type === 'clusters' ){
+        if ( $post_type === 'events' ){
             $fields['contact_count'] = [
                 'name' => "Number of contacts",
                 'type' => 'text',
@@ -42,19 +42,25 @@ class DT_Events{
                 'default' => '',
                 'show_in_table' => true
             ];
+            $fields['type'] = [
+                'name' => "Type",
+                'type' => 'text',
+                'default' => [],
+                'show_in_table' => true
+            ];
             $fields['contacts'] = [
                 'name' => "Contacts",
                 'type' => 'connection',
                 "post_type" => 'contacts',
                 "p2p_direction" => "from",
-                "p2p_key" => "clusters_to_contacts",
+                "p2p_key" => "events_to_contacts",
             ];
             $fields['groups'] = [
                 'name' => "Groups",
                 'type' => 'connection',
                 "post_type" => 'groups',
                 "p2p_direction" => "from",
-                "p2p_key" => "clusters_to_groups",
+                "p2p_key" => "events_to_groups",
             ];
             $fields["location_grid"] = [
                 'name' => "Locations",
@@ -62,46 +68,25 @@ class DT_Events{
                 'default' => [],
                 'show_in_table' => true
             ];
-            $fields["people_groups"] = [
-                "name" => __( 'People Groups', 'disciple_tools' ),
-                "type" => "connection",
-                "post_type" => "peoplegroups",
-                "p2p_direction" => "from",
-                "p2p_key" => "clusters_to_peoplegroups"
-            ];
-            $fields["parent_clusters"] =[
-                'name' => "Parent Cluster",
-                'type' => "connection",
-                "post_type" => "clusters",
-                "p2p_key" => "clusters_to_clusters",
-                "p2p_direction" => "from",
-                "show_in_table" => true
-            ];
-            $fields["child_clusters"] =[
-                'name' => "Child Clusters",
-                'type' => "connection",
-                "post_type" => "clusters",
-                "p2p_key" => "clusters_to_clusters",
-                "p2p_direction" => "to",
-                "show_in_table" => true
-            ];
+
+
         }
         if ( $post_type === 'groups' ){
-            $fields['clusters'] = [
-                'name' => "Clusters",
+            $fields['events'] = [
+                'name' => "Events",
                 'type' => 'connection',
-                "post_type" => 'clusters',
+                "post_type" => 'events',
                 "p2p_direction" => "to",
-                "p2p_key" => "clusters_to_groups",
+                "p2p_key" => "events_to_groups",
             ];
         }
         if ( $post_type === 'contacts' ){
-            $fields['clusters'] = [
-                'name' => "Clusters",
+            $fields['events'] = [
+                'name' => "Events",
                 'type' => 'connection',
-                "post_type" => 'clusters',
+                "post_type" => 'events',
                 "p2p_direction" => "to",
-                "p2p_key" => "clusters_to_contacts",
+                "p2p_key" => "events_to_contacts",
             ];
         }
         return $fields;
@@ -109,40 +94,31 @@ class DT_Events{
 
     public function p2p_init(){
         p2p_register_connection_type([
-            'name' => 'clusters_to_contacts',
-            'from' => 'clusters',
+            'name' => 'events_to_contacts',
+            'from' => 'events',
             'to' => 'contacts'
         ]);
         p2p_register_connection_type([
-            'name' => 'clusters_to_groups',
-            'from' => 'clusters',
+            'name' => 'events_to_groups',
+            'from' => 'events',
             'to' => 'groups'
         ]);
-        p2p_register_connection_type([
-            'name' => 'clusters_to_clusters',
-            'from' => 'clusters',
-            'to' => 'clusters'
-        ]);
-        p2p_register_connection_type([
-            'name' => 'clusters_to_peoplegroups',
-            'from' => 'clusters',
-            'to' => 'peoplegroups'
-        ]);
+
     }
 
     public function dt_details_additional_section_ids( $sections, $post_type = "" ){
-        if ( $post_type === "clusters"){
+        if ( $post_type === "events"){
             $sections[] = 'contacts';
             $sections[] = 'groups';
         }
         if ( $post_type === 'contacts' || $post_type === 'groups' ){
-            $sections[] = 'clusters';
+            $sections[] = 'events';
         }
         return $sections;
     }
 
     public function dt_details_additional_section( $section, $post_type ){
-        if ($section == "contacts" && $post_type === "clusters"){
+        if ($section == "contacts" && $post_type === "events"){
             $post_type = get_post_type();
             $post_settings = apply_filters( "dt_get_post_type_settings", [], $post_type );
             $dt_post = DT_Posts::get_post( $post_type, get_the_ID() );
@@ -158,7 +134,7 @@ class DT_Events{
 
         <?php }
 
-        if ($section == "groups" && $post_type === "clusters"){
+        if ($section == "groups" && $post_type === "events"){
             $post_type = get_post_type();
             $post_settings = apply_filters( "dt_get_post_type_settings", [], $post_type );
             $dt_post = DT_Posts::get_post( $post_type, get_the_ID() );
@@ -174,49 +150,46 @@ class DT_Events{
 
         <?php }
 
-        if ($section == "clusters" && $post_type === "contacts"){
+        if ($section == "events" && $post_type === "contacts"){
             $post_type = get_post_type();
             $post_settings = apply_filters( "dt_get_post_type_settings", [], $post_type );
             $dt_post = DT_Posts::get_post( $post_type, get_the_ID() );
             ?>
 
             <label class="section-header">
-                <?php esc_html_e( 'Clusters', 'disciple_tools' )?>
+                <?php esc_html_e( 'Events', 'disciple_tools' )?>
             </label>
 
-            <?php render_field_for_display( 'clusters', $post_settings["fields"], $dt_post ) ?>
+            <?php render_field_for_display( 'events', $post_settings["fields"], $dt_post ) ?>
 
         <?php }
 
-        if ($section == "clusters" && $post_type === "groups"){
+        if ($section == "events" && $post_type === "groups"){
             $post_type = get_post_type();
             $post_settings = apply_filters( "dt_get_post_type_settings", [], $post_type );
             $dt_post = DT_Posts::get_post( $post_type, get_the_ID() );
             ?>
 
             <label class="section-header">
-                <?php esc_html_e( 'Clusters', 'disciple_tools' )?>
+                <?php esc_html_e( 'Events', 'disciple_tools' )?>
             </label>
 
-            <?php render_field_for_display( 'clusters', $post_settings["fields"], $dt_post ) ?>
+            <?php render_field_for_display( 'events', $post_settings["fields"], $dt_post ) ?>
 
         <?php }
 
-        if ( $section === "details" && $post_type === "clusters" ){
+        if ( $section === "details" && $post_type === "events" ){
             $post_settings = apply_filters( "dt_get_post_type_settings", [], $post_type );
             $dt_post = DT_Posts::get_post( $post_type, get_the_ID() );
             render_field_for_display( 'location_grid', $post_settings["fields"], $dt_post );
-            render_field_for_display( 'people_groups', $post_settings["fields"], $dt_post );
-            render_field_for_display( 'parent_clusters', $post_settings["fields"], $dt_post );
-            render_field_for_display( 'child_clusters', $post_settings["fields"], $dt_post );
         }
     }
 
-    private function update_cluster_counts( $cluster_id, $action = "added", $type = 'contacts' ){
+    private function update_event_counts( $cluster_id, $action = "added", $type = 'contacts' ){
         $cluster = get_post( $cluster_id );
         if ( $type === 'contacts' ){
             $args = [
-                'connected_type'   => "clusters_to_contacts",
+                'connected_type'   => "events_to_contacts",
                 'connected_direction' => 'from',
                 'connected_items'  => $cluster,
                 'nopaging'         => true,
@@ -232,7 +205,7 @@ class DT_Events{
         }
         if ( $type === 'groups' ){
             $args = [
-                'connected_type'   => "clusters_to_groups",
+                'connected_type'   => "events_to_groups",
                 'connected_direction' => 'from',
                 'connected_items'  => $cluster,
                 'nopaging'         => true,
@@ -248,31 +221,31 @@ class DT_Events{
         }
     }
     public function post_connection_added( $post_type, $post_id, $post_key, $value ){
-        if ( $post_type === "clusters" && ( $post_key === "contacts" || $post_key === "groups" ) ){
-            $this->update_cluster_counts( $post_id, 'added', $post_key );
-        } elseif ( ( $post_type === "contacts" || $post_type === "groups" ) && $post_key === "clusters" ) {
-            $this->update_cluster_counts( $value, 'added', $post_type );
+        if ( $post_type === "events" && ( $post_key === "contacts" || $post_key === "groups" ) ){
+            $this->update_event_counts( $post_id, 'added', $post_key );
+        } elseif ( ( $post_type === "contacts" || $post_type === "groups" ) && $post_key === "events" ) {
+            $this->update_event_counts( $value, 'added', $post_type );
         }
     }
     public function post_connection_removed( $post_type, $post_id, $post_key, $value ){
-        if ( $post_type === "clusters" && ( $post_key === "contacts" || $post_key === "groups" ) ){
-            $this->update_cluster_counts( $post_id, 'removed', $post_key );
-        } elseif ( ( $post_type === "contacts" || $post_type === "groups" ) && $post_key === "clusters" ) {
-            $this->update_cluster_counts( $value, 'removed', $post_type );
+        if ( $post_type === "events" && ( $post_key === "contacts" || $post_key === "groups" ) ){
+            $this->update_event_counts( $post_id, 'removed', $post_key );
+        } elseif ( ( $post_type === "contacts" || $post_type === "groups" ) && $post_key === "events" ) {
+            $this->update_event_counts( $value, 'removed', $post_type );
         }
     }
 
     public static function dt_user_list_filters( $filters, $post_type ) {
-        if ( $post_type === 'clusters' ) {
+        if ( $post_type === 'events' ) {
             $filters["tabs"][] = [
-                "key" => "all_clusters",
+                "key" => "all_events",
                 "label" => _x( "All", 'List Filters', 'disciple_tools' ),
                 "order" => 10
             ];
             // add assigned to me filters
             $filters["filters"][] = [
-                'ID' => 'all_clusters',
-                'tab' => 'all_clusters',
+                'ID' => 'all_events',
+                'tab' => 'all_events',
                 'name' => _x( "All", 'List Filters', 'disciple_tools' ),
                 'query' => [],
             ];

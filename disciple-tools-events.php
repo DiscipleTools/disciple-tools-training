@@ -55,11 +55,14 @@ function dt_events() {
      * Don't load the plugin on every rest request. Only those with the metrics namespace
      */
 //    $is_rest = dt_is_rest();
-//    if ( !$is_rest || strpos( dt_get_url_path(), 'sample' ) != false ){
+//    if ( !$is_rest || strpos( dt_get_url_path(), 'events' ) != false ){
+//
+//    } else {
+//        return false;
 //    }
-        return DT_Events::get_instance();
+    return DT_Events::get_instance();
 }
-add_action( 'plugins_loaded', 'dt_events' );
+add_action( 'plugin_loaded', 'dt_events' );
 
 /**
  * Singleton class for setting up the plugin.
@@ -121,9 +124,11 @@ class DT_Events {
      * @return void
      */
     private function includes() {
-        require_once( 'includes/admin/admin-menu-and-tabs.php' );
-        require_once( 'includes/clusters.php' );
-        new DT_Events();
+        if ( is_admin() ) {
+            require_once( 'includes/admin/admin-menu-and-tabs.php' );
+        }
+        require_once( 'includes/events-post-types.php' );
+        new DT_Events_Post_Type();
     }
 
     /**
@@ -149,7 +154,7 @@ class DT_Events {
         $this->token             = 'dt_events';
         $this->version             = '0.1';
 
-        // sample rest api class
+        // rest api class
         require_once( 'includes/rest-api.php' );
         DT_Events_Endpoints::instance();
     }
@@ -185,7 +190,7 @@ class DT_Events {
         }
 
         // Internationalize the text strings used.
-        add_action( 'plugins_loaded', array( $this, 'i18n' ), 2 );
+        add_action( 'after_setup_theme', array( $this, 'i18n' ), 2 );
     }
 
     /**
