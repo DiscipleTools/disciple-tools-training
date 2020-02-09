@@ -4,7 +4,7 @@
  */
 
 
-class DT_Events_Endpoints
+class DT_Training_Endpoints
 {
     public $permissions = [ 'view_any_contacts', 'view_project_metrics' ];
 

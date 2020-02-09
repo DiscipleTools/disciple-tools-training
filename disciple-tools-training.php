@@ -1,8 +1,8 @@
 <?php
 /**
- * Plugin Name: Disciple Tools Extension - Events
+ * Plugin Name: Disciple Tools Extension - Training
  * Plugin URI: https://github.com/DiscipleTools/disciple-tools-starter-plugin
- * Description: Disciple Tools - Add recording of trainings, events, gatherings and cross reference them with contacts, groups, and locations.
+ * Description: Disciple Tools - Add recording of trainings and cross reference them with contacts, groups, and locations.
  * Version:  0.1.0
  * Author URI: https://github.com/DiscipleTools
  * GitHub Plugin URI: https://github.com/DiscipleTools/disciple-tools-starter-plugin
@@ -20,26 +20,26 @@
 if ( ! defined( 'ABSPATH' ) ) {
     exit; // Exit if accessed directly
 }
-$dt_events_required_dt_theme_version = '0.19.0';
+$dt_training_required_dt_theme_version = '0.19.0';
 
 /**
- * Gets the instance of the `DT_Events` class.
+ * Gets the instance of the `DT_Training` class.
  *
  * @since  0.1
  * @access public
  * @return object|bool;
  */
-function dt_events() {
-    global $dt_events_required_dt_theme_version;
+function dt_training() {
+    global $dt_training_required_dt_theme_version;
     $wp_theme = wp_get_theme();
     $version = $wp_theme->version;
     /*
      * Check if the Disciple.Tools theme is loaded and is the latest required version
      */
     $is_theme_dt = strpos( $wp_theme->get_template(), "disciple-tools-theme" ) !== false || $wp_theme->name === "Disciple Tools";
-    if ( !$is_theme_dt || version_compare( $version, $dt_events_required_dt_theme_version, "<" ) ) {
+    if ( !$is_theme_dt || version_compare( $version, $dt_training_required_dt_theme_version, "<" ) ) {
         if ( ! is_multisite() ) {
-            add_action( 'admin_notices', 'dt_events_hook_admin_notice' );
+            add_action( 'admin_notices', 'dt_training_hook_admin_notice' );
             add_action( 'wp_ajax_dismissed_notice_handler', 'dt_hook_ajax_notice_handler' );
         }
 
@@ -60,9 +60,9 @@ function dt_events() {
 //    } else {
 //        return false;
 //    }
-    return DT_Events::get_instance();
+    return DT_Training::get_instance();
 }
-add_action( 'plugin_loaded', 'dt_events' );
+add_action( 'plugin_loaded', 'dt_training' );
 
 /**
  * Singleton class for setting up the plugin.
@@ -70,7 +70,7 @@ add_action( 'plugin_loaded', 'dt_events' );
  * @since  0.1
  * @access public
  */
-class DT_Events {
+class DT_Training {
 
     /**
      * Declares public variables
@@ -98,7 +98,7 @@ class DT_Events {
         static $instance = null;
 
         if ( is_null( $instance ) ) {
-            $instance = new dt_events();
+            $instance = new dt_training();
             $instance->setup();
             $instance->includes();
             $instance->setup_actions();
@@ -127,8 +127,8 @@ class DT_Events {
         if ( is_admin() ) {
             require_once( 'includes/admin/admin-menu-and-tabs.php' );
         }
-        require_once( 'includes/events-post-types.php' );
-        new DT_Events_Post_Type();
+        require_once( 'includes/training-post-types.php' );
+        new DT_Training_Post_Type();
     }
 
     /**
@@ -151,12 +151,12 @@ class DT_Events {
         $this->img_uri      = trailingslashit( $this->dir_uri . 'img' );
 
         // Admin and settings variables
-        $this->token             = 'dt_events';
+        $this->token             = 'dt_training';
         $this->version             = '0.1';
 
         // rest api class
         require_once( 'includes/rest-api.php' );
-        DT_Events_Endpoints::instance();
+        DT_Training_Endpoints::instance();
     }
 
     /**
@@ -230,7 +230,7 @@ class DT_Events {
      * @return void
      */
     public function i18n() {
-        load_plugin_textdomain( 'dt_events', false, trailingslashit( dirname( plugin_basename( __FILE__ ) ) ). 'languages' );
+        load_plugin_textdomain( 'dt_training', false, trailingslashit( dirname( plugin_basename( __FILE__ ) ) ). 'languages' );
     }
 
     /**
@@ -241,7 +241,7 @@ class DT_Events {
      * @return string
      */
     public function __toString() {
-        return 'dt_events';
+        return 'dt_training';
     }
 
     /**
@@ -252,7 +252,7 @@ class DT_Events {
      * @return void
      */
     public function __clone() {
-        _doing_it_wrong( __FUNCTION__, esc_html__( 'Whoah, partner!', 'dt_events' ), '0.1' );
+        _doing_it_wrong( __FUNCTION__, esc_html__( 'Whoah, partner!', 'dt_training' ), '0.1' );
     }
 
     /**
@@ -263,7 +263,7 @@ class DT_Events {
      * @return void
      */
     public function __wakeup() {
-        _doing_it_wrong( __FUNCTION__, esc_html__( 'Whoah, partner!', 'dt_events' ), '0.1' );
+        _doing_it_wrong( __FUNCTION__, esc_html__( 'Whoah, partner!', 'dt_training' ), '0.1' );
     }
 
     /**
@@ -275,7 +275,7 @@ class DT_Events {
      */
     public function __call( $method = '', $args = array() ) {
         // @codingStandardsIgnoreLine
-        _doing_it_wrong( "dt_events::{$method}", esc_html__( 'Method does not exist.', 'dt_events' ), '0.1' );
+        _doing_it_wrong( "dt_training::{$method}", esc_html__( 'Method does not exist.', 'dt_training' ), '0.1' );
         unset( $method, $args );
         return null;
     }
@@ -283,16 +283,16 @@ class DT_Events {
 // end main plugin class
 
 // Register activation hook.
-register_activation_hook( __FILE__, [ 'DT_Events', 'activation' ] );
-register_deactivation_hook( __FILE__, [ 'DT_Events', 'deactivation' ] );
+register_activation_hook( __FILE__, [ 'DT_Training', 'activation' ] );
+register_deactivation_hook( __FILE__, [ 'DT_Training', 'deactivation' ] );
 
-function dt_events_hook_admin_notice() {
-    global $dt_events_required_dt_theme_version;
+function dt_training_hook_admin_notice() {
+    global $dt_training_required_dt_theme_version;
     $wp_theme = wp_get_theme();
     $current_version = $wp_theme->version;
-    $message = __( "'Disciple Tools - Disciple Tools Events' plugin requires 'Disciple Tools' theme to work. Please activate 'Disciple Tools' theme or make sure it is latest version.", "dt_events" );
+    $message = __( "'Disciple Tools - Disciple Tools Training' plugin requires 'Disciple Tools' theme to work. Please activate 'Disciple Tools' theme or make sure it is latest version.", "dt_training" );
     if ( $wp_theme->get_template() === "disciple-tools-theme" ){
-        $message .= sprintf( esc_html__( 'Current Disciple Tools version: %1$s, required version: %2$s', 'dt_events' ), esc_html( $current_version ), esc_html( $dt_events_required_dt_theme_version ) );
+        $message .= sprintf( esc_html__( 'Current Disciple Tools version: %1$s, required version: %2$s', 'dt_training' ), esc_html( $current_version ), esc_html( $dt_training_required_dt_theme_version ) );
     }
     // Check if it's been dismissed...
     if ( ! get_option( 'dismissed-dt-events', false ) ) { ?>

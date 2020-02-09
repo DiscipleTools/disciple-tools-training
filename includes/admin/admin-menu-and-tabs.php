@@ -1,38 +1,38 @@
 <?php
 /**
- * DT_Events_Menu class for the admin page
+ * DT_Training_Menu class for the admin page
  *
- * @class       DT_Events_Menu
+ * @class       DT_Training_Menu
  * @version     0.1.0
  * @since       0.1.0
  */
 
-//@todo Replace all instances if DT_Events
+//@todo Replace all instances if DT_Training
 if ( ! defined( 'ABSPATH' ) ) { exit; // Exit if accessed directly
 }
 
 /**
  * Initialize menu class
  */
-DT_Events_Menu::instance();
+DT_Training_Menu::instance();
 
 /**
- * Class DT_Events_Menu
+ * Class DT_Training_Menu
  */
-class DT_Events_Menu {
+class DT_Training_Menu {
 
-    public $token = 'dt_events';
+    public $token = 'dt_training';
 
     private static $_instance = null;
 
     /**
-     * DT_Events_Menu Instance
+     * DT_Training_Menu Instance
      *
-     * Ensures only one instance of DT_Events_Menu is loaded or can be loaded.
+     * Ensures only one instance of DT_Training_Menu is loaded or can be loaded.
      *
      * @since 0.1.0
      * @static
-     * @return DT_Events_Menu instance
+     * @return DT_Training_Menu instance
      */
     public static function instance() {
         if ( is_null( self::$_instance ) ) {
@@ -60,7 +60,7 @@ class DT_Events_Menu {
      */
     public function register_menu() {
         add_menu_page( __( 'Extensions (DT)', 'disciple_tools' ), __( 'Extensions (DT)', 'disciple_tools' ), 'manage_dt', 'dt_extensions', [ $this, 'extensions_menu' ], 'dashicons-admin-generic', 59 );
-        add_submenu_page( 'dt_extensions', __( 'Disciple Tools Events', 'dt_events' ), __( 'Disciple Tools Events', 'dt_events' ), 'manage_dt', $this->token, [ $this, 'content' ] );
+        add_submenu_page( 'dt_extensions', __( 'Training', 'dt_training' ), __( 'Training', 'dt_training' ), 'manage_dt', $this->token, [ $this, 'content' ] );
     }
 
     /**
@@ -88,20 +88,20 @@ class DT_Events_Menu {
 
         ?>
         <div class="wrap">
-            <h2><?php esc_attr_e( 'Disciple Tools Events', 'dt_events' ) ?></h2>
+            <h2><?php esc_attr_e( 'Disciple Tools Training', 'dt_training' ) ?></h2>
             <h2 class="nav-tab-wrapper">
-                <a href="<?php echo esc_attr( $link ) . 'general' ?>" class="nav-tab <?php ( $tab == 'general' || ! isset( $tab ) ) ? esc_attr_e( 'nav-tab-active', 'dt_events' ) : print ''; ?>"><?php esc_attr_e( 'General', 'dt_events' ) ?></a>
-                <a href="<?php echo esc_attr( $link ) . 'second' ?>" class="nav-tab <?php ( $tab == 'second' ) ? esc_attr_e( 'nav-tab-active', 'dt_events' ) : print ''; ?>"><?php esc_attr_e( 'Second', 'dt_events' ) ?></a>
+                <a href="<?php echo esc_attr( $link ) . 'general' ?>" class="nav-tab <?php ( $tab == 'general' || ! isset( $tab ) ) ? esc_attr_e( 'nav-tab-active', 'dt_training' ) : print ''; ?>"><?php esc_attr_e( 'General', 'dt_training' ) ?></a>
+                <a href="<?php echo esc_attr( $link ) . 'second' ?>" class="nav-tab <?php ( $tab == 'second' ) ? esc_attr_e( 'nav-tab-active', 'dt_training' ) : print ''; ?>"><?php esc_attr_e( 'Second', 'dt_training' ) ?></a>
             </h2>
 
             <?php
             switch ($tab) {
                 case "general":
-                    $object = new DT_Events_Tab_General();
+                    $object = new DT_Training_Tab_General();
                     $object->content();
                     break;
                 case "second":
-                    $object = new DT_Events_Tab_Second();
+                    $object = new DT_Training_Tab_Second();
                     $object->content();
                     break;
                 default:
@@ -116,9 +116,9 @@ class DT_Events_Menu {
 }
 
 /**
- * Class DT_Events_Tab_General
+ * Class DT_Training_Tab_General
  */
-class DT_Events_Tab_General
+class DT_Training_Tab_General
 {
     public function content() {
         ?>
@@ -190,9 +190,9 @@ class DT_Events_Tab_General
 }
 
 /**
- * Class DT_Events_Tab_Second
+ * Class DT_Training_Tab_Second
  */
-class DT_Events_Tab_Second
+class DT_Training_Tab_Second
 {
     public function content() {
         ?>
