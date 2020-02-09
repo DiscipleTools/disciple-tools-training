@@ -237,8 +237,6 @@ class DT_Training_Post_Type {
                 <?php esc_html_e( 'Details', 'disciple_tools' )?>
             </label>
 
-
-
             <?php render_field_for_display( 'location_grid', $post_settings["fields"], $dt_post ); ?>
 
             <!-- @todo make live date adding -->

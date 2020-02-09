@@ -62,7 +62,7 @@ function dt_training() {
 //    }
     return DT_Training::get_instance();
 }
-add_action( 'plugin_loaded', 'dt_training' );
+add_action( 'after_setup_theme', 'dt_training', 50 );
 
 /**
  * Singleton class for setting up the plugin.
