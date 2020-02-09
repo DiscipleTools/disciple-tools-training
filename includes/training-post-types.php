@@ -21,7 +21,6 @@ class DT_Training_Post_Type {
         add_filter( "dt_user_list_filters", [ $this, "dt_user_list_filters" ], 10, 2 );
     }
 
-
     public function after_setup_theme(){
         if ( class_exists( 'Disciple_Tools_Post_Type_Template' )) {
             new Disciple_Tools_Post_Type_Template( "trainings", 'Training', 'Trainings' );
@@ -30,14 +29,20 @@ class DT_Training_Post_Type {
 
     public function dt_custom_fields_settings( $fields, $post_type ){
         if ( $post_type === 'trainings' ){
+            $fields['leaders_count'] = [
+                'name' => "Leaders",
+                'type' => 'text',
+                'default' => '',
+                'show_in_table' => true
+            ];
             $fields['contact_count'] = [
-                'name' => "Number of contacts",
+                'name' => "Participants",
                 'type' => 'text',
                 'default' => '',
                 'show_in_table' => true
             ];
             $fields['group_count'] = [
-                'name' => "Number of groups",
+                'name' => "Groups",
                 'type' => 'text',
                 'default' => '',
                 'show_in_table' => false
@@ -48,20 +53,70 @@ class DT_Training_Post_Type {
                 'default' => [],
                 'show_in_table' => true
             ];
+            $fields["location_grid_meta"] = [
+                'name' => "Locations",
+                'type' => 'location_meta',
+                'default' => [],
+                'show_in_table' => false
+            ];
+            $fields["status"] = [
+                'name' => "Status",
+                'type' => 'key_select',
+                'default' => [
+                    'new'   => [
+                        "label" => _x( 'New', 'Training Status label', 'disciple_tools' ),
+                        "description" => _x( "New training added to the system", "Training Status field description", 'disciple_tools' ),
+                        "color" => "#F43636",
+                    ],
+                    'proposed'   => [
+                        "label" => _x( 'Proposed', 'Training Status label', 'disciple_tools' ),
+                        "description" => _x( "This training has been proposed and is in initial conversations", "Training Status field description", 'disciple_tools' ),
+                        "color" => "#F43636",
+                    ],
+                    'scheduled' => [
+                        "label" => _x( 'Scheduled', 'Training Status label', 'disciple_tools' ),
+                        "description" => _x( "This training is confirmed, on the calendar.", "Training Status field description", 'disciple_tools' ),
+                        "color" => "#FF9800",
+                    ],
+                    'in_progress' => [
+                        "label" => _x( 'In Progress', 'Training Status label', 'disciple_tools' ),
+                        "description" => _x( "This training is confirmed, on the calendar, or currently active.", "Training Status field description", 'disciple_tools' ),
+                        "color" => "#FF9800",
+                    ],
+                    'complete'     => [
+                        "label" => _x( "Complete", 'Training Status label', 'disciple_tools' ),
+                        "description" => _x( "This training has successfully completed", "Training Status field description", 'disciple_tools' ),
+                        "color" => "#FF9800",
+                    ],
+                    'paused'       => [
+                        "label" => _x( 'Paused', 'Training Status label', 'disciple_tools' ),
+                        "description" => _x( "This contact is currently on hold. It has potential of getting scheduled in the future.", "Training Status field description", 'disciple_tools' ),
+                        "color" => "#FF9800",
+                    ],
+                    'closed'       => [
+                        "label" => _x( 'Closed', 'Training Status label', 'disciple_tools' ),
+                        "description" => _x( "This training is no longer going to happen.", "Training Status field description", 'disciple_tools' ),
+                        "color" => "#F43636",
+                    ],
+                ],
+                'show_in_table' => true
+            ];
             $fields["start_date"] = [
                 'name' => "Start Date",
                 'type' => 'date',
-                'default' => [],
+                'default' => '',
                 'show_in_table' => true
             ];
-            $fields["end_date"] = [
-                'name' => "End Date",
-                'type' => 'date',
-                'default' => [],
-                'show_in_table' => true
+
+            $fields['leaders'] = [
+                'name' => "Leaders",
+                'type' => 'connection',
+                "post_type" => 'contacts',
+                "p2p_direction" => "from",
+                "p2p_key" => "trainings_to_leaders",
             ];
             $fields['contacts'] = [
-                'name' => "Contacts",
+                'name' => "Participants",
                 'type' => 'connection',
                 "post_type" => 'contacts',
                 "p2p_direction" => "from",
@@ -85,8 +140,15 @@ class DT_Training_Post_Type {
             ];
         }
         if ( $post_type === 'contacts' ){
-            $fields['trainings'] = [
-                'name' => "Trainings",
+            $fields['training_leader'] = [
+                'name' => "Leader",
+                'type' => 'connection',
+                "post_type" => 'trainings',
+                "p2p_direction" => "to",
+                "p2p_key" => "trainings_to_leaders",
+            ];
+            $fields['training_participant'] = [
+                'name' => "Participant",
                 'type' => 'connection',
                 "post_type" => 'trainings',
                 "p2p_direction" => "to",
@@ -107,15 +169,18 @@ class DT_Training_Post_Type {
             'from' => 'trainings',
             'to' => 'groups'
         ]);
+        p2p_register_connection_type([
+            'name' => 'trainings_to_leaders',
+            'from' => 'trainings',
+            'to' => 'contacts'
+        ]);
 
     }
 
     public function dt_details_additional_section_ids( $sections, $post_type = "" ){
         if ( $post_type === "trainings"){
-            $sections[] = 'contacts';
-            $sections[] = 'groups';
             $sections[] = 'connections';
-
+            $sections[] = 'meta';
         }
         if ( $post_type === 'contacts' || $post_type === 'groups' ){
             $sections[] = 'trainings';
@@ -124,31 +189,24 @@ class DT_Training_Post_Type {
     }
 
     public function dt_details_additional_section( $section, $post_type ){
-        // top tile on training details page
+        // top tile on training details page // @todo remove unncessary header or add editing capability
         if ( $section === "details" && $post_type === "trainings" ){
             $post_settings = apply_filters( "dt_get_post_type_settings", [], $post_type );
             $dt_post = DT_Posts::get_post( $post_type, get_the_ID() );
-
             ?>
             <div class="grid-x grid-padding-x">
-                <div class="cell">
-                    <?php render_field_for_display( 'location_grid', $post_settings["fields"], $dt_post ); ?>
+                <div class="cell medium-6">
+                    <?php render_field_for_display('status', $post_settings["fields"], $dt_post); ?>
                 </div>
                 <div class="cell medium-6">
-                    <?php
-                    render_field_for_display( 'start_date', $post_settings["fields"], $dt_post );
-                    ?>
-                </div>
-                <div class="cell medium-6">
-                    <?php
-                    render_field_for_display( 'end_date', $post_settings["fields"], $dt_post );
-                    ?>
+                    <?php render_field_for_display( 'start_date', $post_settings["fields"], $dt_post ); ?>
                 </div>
             </div>
             <?php
         }
+
         // Connections tile on Trainings details page
-        if ($section == "connections" && $post_type === "trainings"){
+        if ($section === "connections" && $post_type === "trainings"){
             $post_type = get_post_type();
             $post_settings = apply_filters( "dt_get_post_type_settings", [], $post_type );
             $dt_post = DT_Posts::get_post( $post_type, get_the_ID() );
@@ -158,15 +216,38 @@ class DT_Training_Post_Type {
                 <?php esc_html_e( 'Connections', 'disciple_tools' )?>
             </label>
 
+            <?php render_field_for_display( 'leaders', $post_settings["fields"], $dt_post ) ?>
+
             <?php render_field_for_display( 'contact_count', $post_settings["fields"], $dt_post ) ?>
 
             <?php render_field_for_display( 'contacts', $post_settings["fields"], $dt_post ) ?>
 
-            <?php render_field_for_display( 'group_count', $post_settings["fields"], $dt_post ) ?>
-
             <?php render_field_for_display( 'groups', $post_settings["fields"], $dt_post ) ?>
 
         <?php }
+
+        // Connections tile on Trainings details page
+        if ($section === "meta" && $post_type === "trainings"){
+            $post_type = get_post_type();
+            $post_settings = apply_filters( "dt_get_post_type_settings", [], $post_type );
+            $dt_post = DT_Posts::get_post( $post_type, get_the_ID() );
+            ?>
+
+            <label class="section-header">
+                <?php esc_html_e( 'Details', 'disciple_tools' )?>
+            </label>
+
+
+
+            <?php render_field_for_display( 'location_grid', $post_settings["fields"], $dt_post ); ?>
+
+            <!-- @todo make live date adding -->
+            <div class="section-subheader">More dates</div>
+            <div id="training-dates"></div>
+
+            <a class="button small primary-button" onclick="jQuery('#training-dates').append(`<input type='text' class='date-picker dt_date_picker hasDatepicker' id='start_date' autocomplete='off' value='February 16, 2020'>`)">add</a>
+        <?php }
+
 
         // Trainings tile on contacts details page
         if ($section == "trainings" && $post_type === "contacts"){
@@ -179,7 +260,9 @@ class DT_Training_Post_Type {
                 <?php esc_html_e( 'Trainings', 'disciple_tools' )?>
             </label>
 
-            <?php render_field_for_display( 'trainings', $post_settings["fields"], $dt_post ) ?>
+            <?php render_field_for_display( 'training_leader', $post_settings["fields"], $dt_post ) ?>
+
+            <?php render_field_for_display( 'training_participant', $post_settings["fields"], $dt_post ) ?>
 
         <?php }
 
