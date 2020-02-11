@@ -181,6 +181,7 @@ class DT_Training_Post_Type {
         if ( $post_type === "trainings"){
             $sections[] = 'connections';
             $sections[] = 'meta';
+            $sections[] = 'location';
         }
         if ( $post_type === 'contacts' || $post_type === 'groups' ){
             $sections[] = 'trainings';
@@ -205,6 +206,20 @@ class DT_Training_Post_Type {
             <?php
         }
 
+        if ($section === "location" && $post_type === "trainings"){
+            $post_type = get_post_type();
+            $post_settings = apply_filters( "dt_get_post_type_settings", [], $post_type );
+            $dt_post = DT_Posts::get_post( $post_type, get_the_ID() );
+            ?>
+
+            <label class="section-header">
+                <?php esc_html_e( 'Location', 'disciple_tools' )?>
+            </label>
+
+            <?php render_field_for_display( 'location_grid', $post_settings["fields"], $dt_post ); ?>
+
+        <?php }
+
         // Connections tile on Trainings details page
         if ($section === "connections" && $post_type === "trainings"){
             $post_type = get_post_type();
@@ -218,9 +233,9 @@ class DT_Training_Post_Type {
 
             <?php render_field_for_display( 'leaders', $post_settings["fields"], $dt_post ) ?>
 
-            <?php render_field_for_display( 'contact_count', $post_settings["fields"], $dt_post ) ?>
-
             <?php render_field_for_display( 'contacts', $post_settings["fields"], $dt_post ) ?>
+
+            <?php render_field_for_display( 'contact_count', $post_settings["fields"], $dt_post ) ?>
 
             <?php render_field_for_display( 'groups', $post_settings["fields"], $dt_post ) ?>
 
@@ -237,13 +252,25 @@ class DT_Training_Post_Type {
                 <?php esc_html_e( 'Details', 'disciple_tools' )?>
             </label>
 
-            <?php render_field_for_display( 'location_grid', $post_settings["fields"], $dt_post ); ?>
 
             <!-- @todo make live date adding -->
             <div class="section-subheader">More dates</div>
             <div id="training-dates"></div>
 
-            <a class="button small primary-button" onclick="jQuery('#training-dates').append(`<input type='text' class='date-picker dt_date_picker hasDatepicker' id='start_date' autocomplete='off' value='February 16, 2020'>`)">add</a>
+            <a class="button small primary-button" onclick="add_new_date()">add</a>
+
+            <script>
+               function add_new_date() {
+                   let masonGrid = $('.grid')
+
+                   jQuery('#training-dates').append(`<input type='text' class='date-picker dt_date_picker hasDatepicker' id='start_date' autocomplete='off' value='February 16, 2020'>`)
+
+                   masonGrid.masonry({
+                       itemSelector: '.grid-item',
+                       percentPosition: true
+                   });
+               }
+            </script>
         <?php }
 
 
@@ -347,12 +374,49 @@ class DT_Training_Post_Type {
                 'query' => [],
             ];
             $filters["filters"][] = [
+                'ID' => 'all_new',
+                'tab' => 'all_trainings',
+                'name' => _x( "New", 'List Filters', 'disciple_tools' ),
+                'query' => ["status" => [ "new" ] ],
+            ];
+            $filters["filters"][] = [
+                'ID' => 'all_proposed',
+                'tab' => 'all_trainings',
+                'name' => _x( "Proposed", 'List Filters', 'disciple_tools' ),
+                'query' => ["status" => [ "proposed" ] ],
+            ];
+            $filters["filters"][] = [
                 'ID' => 'all_scheduled',
                 'tab' => 'all_trainings',
                 'name' => _x( "Scheduled", 'List Filters', 'disciple_tools' ),
                 'query' => ["status" => [ "scheduled" ] ],
             ];
+            $filters["filters"][] = [
+                'ID' => 'all_in_progress',
+                'tab' => 'all_trainings',
+                'name' => _x( "In Progress", 'List Filters', 'disciple_tools' ),
+                'query' => ["status" => [ "in_progress" ] ],
+            ];
+            $filters["filters"][] = [
+                'ID' => 'all_complete',
+                'tab' => 'all_trainings',
+                'name' => _x( "Complete", 'List Filters', 'disciple_tools' ),
+                'query' => ["status" => [ "complete" ] ],
+            ];
+            $filters["filters"][] = [
+                'ID' => 'all_paused',
+                'tab' => 'all_trainings',
+                'name' => _x( "Paused", 'List Filters', 'disciple_tools' ),
+                'query' => ["status" => [ "paused" ] ],
+            ];
+            $filters["filters"][] = [
+                'ID' => 'all_closed',
+                'tab' => 'all_trainings',
+                'name' => _x( "Closed", 'List Filters', 'disciple_tools' ),
+                'query' => ["status" => [ "closed" ] ],
+            ];
         }
         return $filters;
     }
 }
+DT_Training_Post_Type::instance();

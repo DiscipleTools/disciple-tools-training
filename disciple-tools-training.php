@@ -128,7 +128,7 @@ class DT_Training {
             require_once( 'includes/admin/admin-menu-and-tabs.php' );
         }
         require_once( 'includes/training-post-types.php' );
-        new DT_Training_Post_Type();
+        require_once( 'includes/enqueue.php' );
     }
 
     /**
