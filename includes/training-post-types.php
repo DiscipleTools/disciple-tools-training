@@ -346,6 +346,12 @@ class DT_Training_Post_Type {
                 'name' => _x( "All", 'List Filters', 'disciple_tools' ),
                 'query' => [],
             ];
+            $filters["filters"][] = [
+                'ID' => 'all_scheduled',
+                'tab' => 'all_trainings',
+                'name' => _x( "Scheduled", 'List Filters', 'disciple_tools' ),
+                'query' => ["status" => [ "scheduled" ] ],
+            ];
         }
         return $filters;
     }
