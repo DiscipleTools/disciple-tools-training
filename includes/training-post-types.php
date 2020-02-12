@@ -29,22 +29,22 @@ class DT_Training_Post_Type {
 
     public function dt_custom_fields_settings( $fields, $post_type ){
         if ( $post_type === 'trainings' ){
-            $fields['leaders_count'] = [
-                'name' => "Leaders",
+            $fields['leader_count'] = [
+                'name' => "Leaders #",
                 'type' => 'text',
-                'default' => '',
+                'default' => '0',
                 'show_in_table' => true
             ];
             $fields['contact_count'] = [
-                'name' => "Participants",
+                'name' => "Participants #",
                 'type' => 'text',
-                'default' => '',
+                'default' => '0',
                 'show_in_table' => true
             ];
             $fields['group_count'] = [
-                'name' => "Groups",
+                'name' => "Groups #",
                 'type' => 'text',
-                'default' => '',
+                'default' => '0',
                 'show_in_table' => false
             ];
             $fields["location_grid"] = [
@@ -180,8 +180,8 @@ class DT_Training_Post_Type {
     public function dt_details_additional_section_ids( $sections, $post_type = "" ){
         if ( $post_type === "trainings"){
             $sections[] = 'connections';
-            $sections[] = 'meta';
             $sections[] = 'location';
+            $sections[] = 'meta';
         }
         if ( $post_type === 'contacts' || $post_type === 'groups' ){
             $sections[] = 'trainings';
@@ -232,6 +232,8 @@ class DT_Training_Post_Type {
             </label>
 
             <?php render_field_for_display( 'leaders', $post_settings["fields"], $dt_post ) ?>
+
+            <?php render_field_for_display( 'leader_count', $post_settings["fields"], $dt_post ) ?>
 
             <?php render_field_for_display( 'contacts', $post_settings["fields"], $dt_post ) ?>
 
@@ -341,6 +343,22 @@ class DT_Training_Post_Type {
                 update_post_meta( $training_id, 'group_count', sizeof( $groups ) );
             } elseif ( $action === "removed" ){
                 update_post_meta( $training_id, 'group_count', intval( $group_count ) - 1 );
+            }
+        }
+        if ( $type === 'leaders' ){
+            $args = [
+                'connected_type'   => "trainings_to_leaders",
+                'connected_direction' => 'from',
+                'connected_items'  => $training,
+                'nopaging'         => true,
+                'suppress_filters' => false,
+            ];
+            $contacts = get_posts( $args );
+            $contact_count = get_post_meta( $training_id, 'leader_count', true );
+            if ( sizeof( $contacts ) > intval( $contact_count ) ){
+                update_post_meta( $training_id, 'leader_count', sizeof( $contacts ) );
+            } elseif ( $action === "removed" ){
+                update_post_meta( $training_id, 'leader_count', intval( $contact_count ) - 1 );
             }
         }
     }
