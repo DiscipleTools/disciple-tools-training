@@ -54,15 +54,9 @@ function dt_training() {
     /*
      * Don't load the plugin on every rest request. Only those with the metrics namespace
      */
-//    $is_rest = dt_is_rest();
-//    if ( !$is_rest || strpos( dt_get_url_path(), 'events' ) != false ){
-//
-//    } else {
-//        return false;
-//    }
     return DT_Training::get_instance();
 }
-add_action( 'after_setup_theme', 'dt_training', 50 );
+add_action( 'plugin_loaded', 'dt_training', 50 );
 
 /**
  * Singleton class for setting up the plugin.
@@ -128,6 +122,7 @@ class DT_Training {
             require_once( 'includes/admin/admin-menu-and-tabs.php' );
         }
         require_once( 'includes/training-post-types.php' );
+        require_once( 'includes/customize-site-linking.php' );
         require_once( 'includes/enqueue.php' );
     }
 
@@ -155,8 +150,8 @@ class DT_Training {
         $this->version             = '0.1';
 
         // rest api class
-        require_once( 'includes/rest-api.php' );
-        DT_Training_Endpoints::instance();
+//        require_once( 'includes/rest-api.php' );
+//        DT_Training_Endpoints::instance();
     }
 
     /**

@@ -6,7 +6,7 @@
 
 class DT_Training_Endpoints
 {
-    public $permissions = [ 'view_any_contacts', 'view_project_metrics' ];
+    public $permissions = [ 'view_any_contacts', 'create_trainings', 'update_any_trainings' ];
 
     private static $_instance = null;
     public static function instance() {
@@ -33,7 +33,7 @@ class DT_Training_Endpoints
 
     //See https://github.com/DiscipleTools/disciple-tools-theme/wiki/Site-to-Site-Link for outside of wordpress authentication
     public function add_api_routes() {
-        $namespace = 'dt-sample/v1';
+        $namespace = 'dt-training/v1';
 
         register_rest_route(
             $namespace, '/endpoint', [
