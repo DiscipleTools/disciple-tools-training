@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Disciple Tools Extension - Training
  * Plugin URI: https://github.com/DiscipleTools/disciple-tools-starter-plugin
- * Description: Disciple Tools - Add recording of trainings and cross reference them with contacts, groups, and locations.
+ * Description: Disciple Tools Training Extension adds recording of trainings and cross reference them with contacts, groups, and locations.
  * Version:  0.1.0
  * Author URI: https://github.com/DiscipleTools
  * GitHub Plugin URI: https://github.com/DiscipleTools/disciple-tools-starter-plugin
