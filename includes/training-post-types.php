@@ -252,6 +252,7 @@ class DT_Training_Post_Type {
         <?php }
 
         // Connections tile on Trainings details page
+        /*
         if ($section === "meta" && $post_type === "trainings"){
             $post_type = get_post_type();
             $post_settings = apply_filters( "dt_get_post_type_settings", [], $post_type );
@@ -282,6 +283,7 @@ class DT_Training_Post_Type {
                }
             </script>
         <?php }
+        */
 
 
         // Trainings tile on contacts details page
