@@ -189,7 +189,7 @@ class DT_Training_Post_Type {
         if ( $post_type === "trainings"){
             $sections[] = 'connections';
             $sections[] = 'location';
-            $sections[] = 'meta';
+//            $sections[] = 'meta';
         }
         if ( $post_type === 'contacts' || $post_type === 'groups' ){
             $sections[] = 'trainings';
