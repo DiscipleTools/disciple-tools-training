@@ -131,12 +131,6 @@ class DT_Training_Post_Type {
                 "p2p_key" => "trainings_to_groups",
             ];
 
-            $fields["post_type"] = [ /* @todo This field is added as a way to overcome a validation check in wp-content/themes/disciple-tools-theme/dt-posts/dt-posts.php:84 for default use of the REST create_post */
-                'name' => "Trainings",
-                'type' => 'text',
-                'default' => '',
-                'show_in_table' => false
-            ];
         }
         if ( $post_type === 'groups' ){
             $fields['trainings'] = [
