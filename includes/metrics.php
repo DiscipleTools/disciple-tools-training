@@ -63,6 +63,10 @@ class DT_Training_Metrics
                     <li><a href="'. site_url( '/metrics/trainings/' ) .'#basic_map" onclick="write_training_basicmap()">'. esc_html__( 'Basic Map', 'disciple_tools' ) .'</a></li>
                     <li><a href="'. site_url( '/metrics/trainings/' ) .'#heat_map_1" onclick="write_training_heatmap1()">'. esc_html__( 'Heat Map 1', 'disciple_tools' ) .'</a></li>
                     <li><a href="'. site_url( '/metrics/trainings/' ) .'#heat_map_2" onclick="write_training_heatmap2()">'. esc_html__( 'Heat Map 2', 'disciple_tools' ) .'</a></li>
+                    <li><a href="'. site_url( '/metrics/trainings/' ) .'#heat_map_3" onclick="write_training_heatmap3()">'. esc_html__( 'Heat Map 3', 'disciple_tools' ) .'</a></li>
+                    <li><a href="'. site_url( '/metrics/trainings/' ) .'#heat_map_4" onclick="write_training_heatmap4()">'. esc_html__( 'Heat Map 4', 'disciple_tools' ) .'</a></li>
+                    <li><a href="'. site_url( '/metrics/trainings/' ) .'#heat_map_5" onclick="write_training_heatmap5()">'. esc_html__( 'Heat Map 5', 'disciple_tools' ) .'</a></li>
+                    <li><a href="'. site_url( '/metrics/trainings/' ) .'#heat_map_6" onclick="write_training_heatmap6()">'. esc_html__( 'Heat Map 6', 'disciple_tools' ) .'</a></li>
                 </ul>
             </li>
             ';
@@ -109,9 +113,59 @@ class DT_Training_Metrics
         }
         $params = $request->get_params();
 
-        /* add response logic */
 
-        return $params;
+        global $wpdb;
+
+        $results = $wpdb->get_results("
+            SELECT ps.post_type, lg.longitude as lng, lg.latitude as lat, p.post_id 
+            FROM $wpdb->postmeta as p 
+                INNER JOIN $wpdb->dt_location_grid as lg ON p.meta_value=lg.grid_id 
+                JOIN $wpdb->posts as ps ON ps.ID=p.post_id
+            WHERE p.meta_key = 'location_grid'
+            ", ARRAY_A );
+//        dt_write_log($results);
+        $features = [];
+        foreach( $results as $result ) {
+            $features[] = array(
+                'type' => 'Feature',
+                'properties' => array("post_type" => $result['post_type'], "post_id" => $result['post_id']),
+                'geometry' => array(
+                    'type' => 'Point',
+                    'coordinates' => array(
+                        $result['lng'],
+                        $result['lat'],
+                        1
+                    ),
+                ),
+            );
+        }
+
+
+/* pulling 30k from location_grid_meta table */
+//        $results = $wpdb->get_results("SELECT * FROM wp_3_dt_location_grid_meta", ARRAY_A );
+//        $features = [];
+//        foreach( $results as $result ) {
+//            $features[] = array(
+//                'type' => 'Feature',
+//                'properties' => array("name" => $result['label']),
+//                'geometry' => array(
+//                    'type' => 'Point',
+//                    'coordinates' => array(
+//                        $result['lng'],
+//                        $result['lat'],
+//                        1
+//                    ),
+//                ),
+//            );
+//        }
+
+
+        $new_data = array(
+            'type' => 'FeatureCollection',
+            'features' => $features,
+        );
+
+        return $new_data;
     }
 
 
