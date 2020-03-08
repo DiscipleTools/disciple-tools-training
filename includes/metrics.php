@@ -116,38 +116,19 @@ class DT_Training_Metrics
 
         global $wpdb;
 
-        $results = $wpdb->get_results("
-            SELECT ps.post_type, lg.longitude as lng, lg.latitude as lat, p.post_id 
-            FROM $wpdb->postmeta as p 
-                INNER JOIN $wpdb->dt_location_grid as lg ON p.meta_value=lg.grid_id 
-                JOIN $wpdb->posts as ps ON ps.ID=p.post_id
-            WHERE p.meta_key = 'location_grid'
-            ", ARRAY_A );
-//        dt_write_log($results);
-        $features = [];
-        foreach( $results as $result ) {
-            $features[] = array(
-                'type' => 'Feature',
-                'properties' => array("post_type" => $result['post_type'], "post_id" => $result['post_id']),
-                'geometry' => array(
-                    'type' => 'Point',
-                    'coordinates' => array(
-                        $result['lng'],
-                        $result['lat'],
-                        1
-                    ),
-                ),
-            );
-        }
-
-
-/* pulling 30k from location_grid_meta table */
-//        $results = $wpdb->get_results("SELECT * FROM wp_3_dt_location_grid_meta", ARRAY_A );
+//        $results = $wpdb->get_results("
+//            SELECT ps.post_type, lg.longitude as lng, lg.latitude as lat, p.post_id
+//            FROM $wpdb->postmeta as p
+//                INNER JOIN $wpdb->dt_location_grid as lg ON p.meta_value=lg.grid_id
+//                JOIN $wpdb->posts as ps ON ps.ID=p.post_id
+//            WHERE p.meta_key = 'location_grid'
+//            ", ARRAY_A );
+////        dt_write_log($results);
 //        $features = [];
 //        foreach( $results as $result ) {
 //            $features[] = array(
 //                'type' => 'Feature',
-//                'properties' => array("name" => $result['label']),
+//                'properties' => array("post_type" => $result['post_type'], "post_id" => $result['post_id']),
 //                'geometry' => array(
 //                    'type' => 'Point',
 //                    'coordinates' => array(
@@ -158,6 +139,25 @@ class DT_Training_Metrics
 //                ),
 //            );
 //        }
+
+
+///* pulling 30k from location_grid_meta table */
+        $results = $wpdb->get_results("SELECT label, lng, lat FROM wp_3_dt_location_grid_meta LIMIT 40000", ARRAY_A );
+        $features = [];
+        foreach( $results as $result ) {
+            $features[] = array(
+                'type' => 'Feature',
+                'properties' => array("name" => $result['label']),
+                'geometry' => array(
+                    'type' => 'Point',
+                    'coordinates' => array(
+                        $result['lng'],
+                        $result['lat'],
+                        1
+                    ),
+                ),
+            );
+        }
 
 
         $new_data = array(

@@ -1020,7 +1020,6 @@ function write_training_heatmap6() {
 
     chart.empty().html(`<img src="${obj.plugin_uri}spinner.svg" width="30px" alt="spinner" />`)
 
-
     tAPI.heatmap()
         .then(data=>{
             console.log(data)
@@ -1175,13 +1174,13 @@ function write_training_heatmap6() {
                 map.on('click', 'unclustered-point', function(e) {
 
                     var coordinates = e.features[0].geometry.coordinates.slice();
-                    var name = e.features[0].properties.post_id;
+                    var name = e.features[0].properties.name;
 
                     while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
                         coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
                     }
 
-                    jQuery('#data').empty().html(`<a href='/${e.features[0].properties.post_type}/${e.features[0].properties.post_id}'>Show Record</a>`)
+                    jQuery('#data').empty().html(`${name}`)
 
                 });
 
