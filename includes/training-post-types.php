@@ -215,32 +215,14 @@ class DT_Training_Post_Type {
             ?>
 
             <label class="section-header">
-                <?php esc_html_e( 'Location', 'disciple_tools' )?> <a class="button clear" id="new-mapbox-search">add</a>
+                <?php esc_html_e( 'Location', 'disciple_tools' )?> <a class="button clear" id="new-mapbox-search"><?php esc_html_e("add", 'zume' ) ?></a>
             </label>
 
             <?php /* If Mapbox Upgrade */ if ( DT_Mapbox_API::get_key() ) : ?>
 
-                <div id="mapbox-search-wrapper"></div>
+                <div id="mapbox-wrapper"></div>
 
                 <?php if ( isset( $dt_post['location_grid_meta']) ) : ?>
-
-                    <div class="grid-x">
-                        <?php
-                        foreach ( $dt_post['location_grid_meta'] as $location ) {
-                            ?>
-                            <div class="cell small-10">
-                                <a data-open="map-reveal"><?php echo esc_html( $location['label'] ) ?></a>
-                            </div>
-                            <div class="cell small-2 float-right">
-                                <button class="button clear delete-button small margin-bottom-0" data-id="contact_address_f6e" data-type="contact_address">
-                                    <img src="<?php echo get_stylesheet_directory_uri() ?>/dt-assets/images/invalid.svg" alt="delete">
-                                </button>
-                            </div>
-
-                         <?php
-                        }
-                        ?>
-                    </div>
 
                     <!-- reveal -->
                     <div class="reveal" id="map-reveal" data-reveal>
