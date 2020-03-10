@@ -6,20 +6,21 @@ function dt_training_scripts() {
         $url_path = dt_get_url_path();
         if ( strpos( $url_path, 'trainings' ) !== false ){
 
-            wp_enqueue_script( 'trainings', plugin_dir_url(__FILE__) . '/trainings.js', array( 'jquery' ), filemtime( plugin_dir_path(__FILE__) . '/trainings.js' ), true );
-            wp_localize_script(
-                "trainings", "dtTrainings", array(
-                    "translations" => array(
-                        "cancel" => esc_html__( 'Cancel', 'zume' ),
-                        "current:" => esc_html__( 'Current Step:', 'zume' ),
-                        "pagination" => esc_html__( 'Cancel', 'zume' ),
-                        "finish" => esc_html__( 'Finish', 'zume' ),
-                        "next" => esc_html__( 'Next', 'zume' ),
-                        "previous" => esc_html__( 'Previous', 'zume' ),
-                        "loading" => esc_html__( 'Loading...', 'zume' ),
-                    )
-                )
-            );
+            if ( ! empty( DT_Mapbox_API::get_key() ) ) {
+
+                if ( class_exists( 'DT_Mapbox_API' ) ) {
+                    DT_Mapbox_API::load_mapbox_header_scripts();
+                    DT_Mapbox_API::load_mapbox_search_widget();
+                }
+                else if ( ! class_exists( 'DT_Mapbox_API' ) && file_exists( get_stylesheet_directory() . 'dt-mapping/geocode-api/mapbox-api.php' ) ) {
+                    require_once( get_stylesheet_directory() . 'dt-mapping/geocode-api/mapbox-api.php' );
+
+                    DT_Mapbox_API::load_mapbox_header_scripts();
+                    DT_Mapbox_API::load_mapbox_search_widget();
+
+                }
+
+            }
         }
 
     }

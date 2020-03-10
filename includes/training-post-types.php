@@ -57,7 +57,8 @@ class DT_Training_Post_Type {
                 'name' => "Locations",
                 'type' => 'location_meta',
                 'default' => [],
-                'show_in_table' => false
+                'show_in_table' => false,
+                'silent' => true,
             ];
             $fields["status"] = [
                 'name' => "Status",
@@ -107,8 +108,6 @@ class DT_Training_Post_Type {
                 'default' => '',
                 'show_in_table' => true
             ];
-
-
             $fields['leaders'] = [
                 'name' => "Leaders",
                 'type' => 'connection',
@@ -212,13 +211,34 @@ class DT_Training_Post_Type {
             $post_type = get_post_type();
             $post_settings = apply_filters( "dt_get_post_type_settings", [], $post_type );
             $dt_post = DT_Posts::get_post( $post_type, get_the_ID() );
+
             ?>
 
             <label class="section-header">
-                <?php esc_html_e( 'Location', 'disciple_tools' )?>
+                <?php esc_html_e( 'Location', 'disciple_tools' )?> <a class="button clear" id="new-mapbox-search"><?php esc_html_e("add", 'zume' ) ?></a>
             </label>
 
-            <?php render_field_for_display( 'location_grid', $post_settings["fields"], $dt_post ); ?>
+            <?php /* If Mapbox Upgrade */ if ( DT_Mapbox_API::get_key() ) : ?>
+
+                <div id="mapbox-wrapper"></div>
+
+                <?php if ( isset( $dt_post['location_grid_meta']) ) : ?>
+
+                    <!-- reveal -->
+                    <div class="reveal" id="map-reveal" data-reveal>
+                        <div id="map-reveal-content"><!-- load content here --><div class="loader">Loading...</div></div>
+                        <button class="close-button" data-close aria-label="Close modal" type="button">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                <?php endif; ?>
+
+            <?php /* No Mapbox Upgrade */ else: ?>
+
+                <?php render_field_for_display( 'location_grid', $post_settings["fields"], $dt_post ); ?>
+
+            <?php endif; ?>
+
 
         <?php }
 

@@ -124,6 +124,7 @@ class DT_Training {
         require_once( 'includes/training-post-types.php' );
         require_once( 'includes/customize-site-linking.php' );
         require_once( 'includes/enqueue.php' );
+        require_once( 'includes/metrics.php' );
     }
 
     /**
