@@ -36,7 +36,6 @@ class DT_Training_Metrics
             }
         }
 
-//        parent::__construct();
     }
 
     public function has_permission(){
@@ -59,14 +58,9 @@ class DT_Training_Metrics
         $content .= '
             <li><a href="">' .  esc_html__( 'Training', 'disciple_tools' ) . '</a>
                 <ul class="menu vertical nested" id="training-menu" aria-expanded="true">
-                    <li><a href="'. site_url( '/metrics/trainings/' ) .'#overview" onclick="write_training_overview()">'. esc_html__( 'Overview', 'disciple_tools' ) .'</a></li>
-                    <li><a href="'. site_url( '/metrics/trainings/' ) .'#basic_map" onclick="write_training_basicmap()">'. esc_html__( 'Basic Map', 'disciple_tools' ) .'</a></li>
-                    <li><a href="'. site_url( '/metrics/trainings/' ) .'#heat_map_1" onclick="write_training_heatmap1()">'. esc_html__( 'Heat Map 1', 'disciple_tools' ) .'</a></li>
-                    <li><a href="'. site_url( '/metrics/trainings/' ) .'#heat_map_2" onclick="write_training_heatmap2()">'. esc_html__( 'Heat Map 2', 'disciple_tools' ) .'</a></li>
-                    <li><a href="'. site_url( '/metrics/trainings/' ) .'#heat_map_3" onclick="write_training_heatmap3()">'. esc_html__( 'Heat Map 3', 'disciple_tools' ) .'</a></li>
-                    <li><a href="'. site_url( '/metrics/trainings/' ) .'#heat_map_4" onclick="write_training_heatmap4()">'. esc_html__( 'Heat Map 4', 'disciple_tools' ) .'</a></li>
-                    <li><a href="'. site_url( '/metrics/trainings/' ) .'#heat_map_5" onclick="write_training_heatmap5()">'. esc_html__( 'Heat Map 5', 'disciple_tools' ) .'</a></li>
-                    <li><a href="'. site_url( '/metrics/trainings/' ) .'#heat_map_6" onclick="write_training_heatmap6()">'. esc_html__( 'Heat Map 6', 'disciple_tools' ) .'</a></li>
+                    <li><a href="'. site_url( '/metrics/trainings/' ) .'#cluster_map" onclick="write_training_cluster_map()">'. esc_html__( 'Cluster Map', 'disciple_tools' ) .'</a></li>
+                    <li><a href="'. site_url( '/metrics/trainings/' ) .'#choropleth_map" onclick="write_training_choropleth_map()">'. esc_html__( 'Choropleth Map', 'disciple_tools' ) .'</a></li>
+                    <li><a href="'. site_url( '/metrics/trainings/' ) .'#contacts_map" onclick="contacts_map()">'. esc_html__( 'Contacts Map', 'disciple_tools' ) .'</a></li>
                 </ul>
             </li>
             ';
@@ -101,6 +95,14 @@ class DT_Training_Metrics
                 [
                     'methods'  => WP_REST_Server::CREATABLE,
                     'callback' => [ $this, 'heatmap1' ],
+                ],
+            ]
+        );
+        register_rest_route(
+            $namespace, '/trainings/contacts_map', [
+                [
+                    'methods'  => WP_REST_Server::READABLE,
+                    'callback' => [ $this, 'contacts_map' ],
                 ],
             ]
         );
@@ -159,6 +161,44 @@ class DT_Training_Metrics
             );
         }
 
+
+        $new_data = array(
+            'type' => 'FeatureCollection',
+            'features' => $features,
+        );
+
+        return $new_data;
+    }
+
+    public function contacts_map( WP_REST_Request $request ) {
+        if ( !$this->has_permission() ){
+            return new WP_Error( __METHOD__, "Missing Permissions", [ 'status' => 400 ] );
+        }
+
+        global $wpdb;
+        $results = $wpdb->get_results("
+            SELECT lg.longitude as lng, lg.latitude as lat, p.meta_value as location_grid
+            FROM $wpdb->postmeta as p 
+                INNER JOIN $wpdb->dt_location_grid as lg ON p.meta_value=lg.grid_id 
+                JOIN $wpdb->posts as ps ON ps.ID=p.post_id
+            WHERE p.meta_key = 'location_grid' AND ps.post_type = 'contacts'
+            ", ARRAY_A );
+
+        $features = [];
+        foreach ( $results as $result ) {
+            $features[] = array(
+                'type' => 'Feature',
+                'properties' => array( "location_grid" => $result['location_grid'] ),
+                'geometry' => array(
+                    'type' => 'Point',
+                    'coordinates' => array(
+                        $result['lng'],
+                        $result['lat'],
+                        1
+                    ),
+                ),
+            );
+        }
 
         $new_data = array(
             'type' => 'FeatureCollection',
