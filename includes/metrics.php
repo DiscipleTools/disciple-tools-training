@@ -144,7 +144,7 @@ class DT_Training_Metrics
 
 
 ///* pulling 30k from location_grid_meta table */
-        $results = $wpdb->get_results("SELECT label, lng, lat FROM wp_3_dt_location_grid_meta LIMIT 40000", ARRAY_A );
+        $results = $wpdb->get_results("SELECT label, lng, lat FROM $wpdb->dt_location_grid_meta LIMIT 40000", ARRAY_A );
         $features = [];
         foreach( $results as $result ) {
             $features[] = array(
