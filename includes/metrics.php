@@ -81,6 +81,7 @@ class DT_Training_Metrics
                 'current_user_login' => wp_get_current_user()->user_login,
                 'current_user_id' => get_current_user_id(),
                 'map_key' => DT_Mapbox_API::get_key(),
+                "spinner_url" => get_stylesheet_directory_uri() . '/spinner.svg',
                 'data' => [],
             ]
         );
@@ -95,6 +96,14 @@ class DT_Training_Metrics
                 [
                     'methods'  => WP_REST_Server::CREATABLE,
                     'callback' => [ $this, 'heatmap1' ],
+                ],
+            ]
+        );
+        register_rest_route(
+            $namespace, '/trainings/list', [
+                [
+                    'methods'  => WP_REST_Server::CREATABLE,
+                    'callback' => [ $this, 'get_list' ],
                 ],
             ]
         );
@@ -144,12 +153,12 @@ class DT_Training_Metrics
 
 
 ///* pulling 30k from location_grid_meta table */
-        $results = $wpdb->get_results("SELECT label, lng, lat FROM $wpdb->dt_location_grid_meta LIMIT 40000", ARRAY_A );
+        $results = $wpdb->get_results("SELECT lg.label as address, p.post_title as name, post_id, lng, lat FROM $wpdb->dt_location_grid_meta as lg JOIN $wpdb->posts as p ON p.ID=lg.post_id WHERE lg.post_type = 'trainings' LIMIT 40000", ARRAY_A );
         $features = [];
         foreach( $results as $result ) {
             $features[] = array(
                 'type' => 'Feature',
-                'properties' => array("name" => $result['label']),
+                'properties' => array("address" => $result['address'], "post_id" => $result['post_id'], "name" => $result['name'] ),
                 'geometry' => array(
                     'type' => 'Point',
                     'coordinates' => array(
@@ -168,6 +177,15 @@ class DT_Training_Metrics
         );
 
         return $new_data;
+    }
+
+    public function get_list( WP_REST_Request $request ) {
+        if ( !$this->has_permission() ){
+            return new WP_Error( __METHOD__, "Missing Permissions", [ 'status' => 400 ] );
+        }
+
+
+
     }
 
     public function contacts_map( WP_REST_Request $request ) {

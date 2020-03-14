@@ -55,7 +55,7 @@ function write_training_cluster_map() {
                     position: absolute;
                     top: 50px;
                     right: 20px;
-                    z-index: 10;
+                    z-index: 2;
                  }
                  #data {
                     word-wrap: break-word;
@@ -64,7 +64,6 @@ function write_training_cluster_map() {
                     background-color: #fff;
                     border-radius: 3px;
                     width: 250px;
-                    
                     box-shadow: 0 1px 2px rgba(0,0,0,0.10);
                     font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
                     padding: 10px;
@@ -83,9 +82,8 @@ function write_training_cluster_map() {
             <div id="map-wrapper">
                 <div id='map'></div>
                 <div id='legend' class='legend'>
-                    <h4>Location Information</h4><hr>
-                <div id="data">Sample of a points cluster map</div>
-            </div>
+                    <div id="data">Zoom to ungrouped record and click for details.</div>
+                </div>
             </div>
             `)
 
@@ -166,6 +164,7 @@ function write_training_cluster_map() {
                     var features = map.queryRenderedFeatures(e.point, {
                         layers: ['clusters']
                     });
+
                     var clusterId = features[0].properties.cluster_id;
                     map.getSource('trainings').getClusterExpansionZoom(
                         clusterId,
@@ -182,15 +181,17 @@ function write_training_cluster_map() {
 
 
                 map.on('click', 'unclustered-point', function(e) {
+                    console.log( e.features )
+                    let dataDiv = jQuery('#data')
+                    dataDiv.empty()
 
-                    var coordinates = e.features[0].geometry.coordinates.slice();
-                    var name = e.features[0].properties.name;
+                    jQuery.each( e.features, function(i,v) {
+                        var address = v.properties.address;
+                        var post_id = v.properties.post_id;
+                        var name = v.properties.name
 
-                    while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
-                        coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
-                    }
-
-                    jQuery('#data').empty().html(`${name}`)
+                        dataDiv.append(`<p><a href="/trainings/${post_id}">${name}</a><br>${address}</p>`)
+                    })
 
                 });
 
@@ -209,6 +210,10 @@ function write_training_cluster_map() {
 
 }
 
+window.validate_timer_id = '';
+function clear_timer() {
+    clearTimeout(window.validate_timer_id);
+}
 function write_training_choropleth_map() {
     let obj = dtTrainingMetrics
     let chart = jQuery('#chart')
@@ -234,7 +239,7 @@ function write_training_choropleth_map() {
                 position: absolute;
                 top: 20px;
                 right: 20px;
-                z-index: 10;
+                z-index: 2;
              }
              #data {
                 word-wrap: break-word;
@@ -262,9 +267,11 @@ function write_training_choropleth_map() {
         <div id="map-wrapper">
             <div id='map'></div>
             <div id='legend' class='legend'>
-                <h4>Location Information</h4><hr>
-            <div id="data"></div>
-        </div>
+                <div id="spinner" style="display:none"><img src="${obj.spinner_url}" alt="spinner" style="width: 25px;" /></div>
+                <div id="grid"></div>
+                <div id="info"></div>
+                <div id="data"></div>
+            </div>
         </div>
      `)
 
@@ -276,92 +283,311 @@ function write_training_choropleth_map() {
         minZoom: 0,
         zoom: 0
     });
-    map.on('load', function() {
 
+    window.boundary_list = []
 
-        map.addLayer({
-            'id': 'states-layer-outline',
-            'type': 'line',
-            'source': {
-                'type': 'geojson',
-                'data': 'https://storage.googleapis.com/location-grid-mirror/collection/1.geojson'
-            },
-            'paint': {
-                'line-color': 'black',
-                'line-width': 2
+    // drag
+    /*
+        map.on('dragend', function(){
+
+        let level = '0'
+        window.zoom_level = Math.ceil( map.getZoom() )
+        if ( window.zoom_level >= 3  && window.zoom_level < 7 ) {
+            level = '1'
+        } else if ( window.zoom_level >= 7 ) {
+            level = '2'
+        }
+        level = '2'
+        let bounds = map.getBounds()
+
+        jQuery.get(obj.theme_uri + 'dt-mapping/location-grid-list-api.php',
+            {
+                type: 'match_within_bbox',
+                north_latitude: bounds._ne.lat,
+                south_latitude: bounds._sw.lat,
+                west_longitude: bounds._sw.lng,
+                east_longitude: bounds._ne.lng,
+                level: level,
+                nonce: obj.nonce
+            }, null, 'json').done(function (data) {
+            if (data) {
+                // console.log(data)
+
+                let old_list = Array.from(window.boundary_list)
+                window.boundary_list = data
+
+                console.log(map.getStyle().layers)
+
+                jQuery.each( data, function( i,v ){
+
+                    var mapLayer = map.getLayer(v.toString());
+
+                    if(typeof mapLayer === 'undefined') {
+                        map.addLayer({
+                            'id': v.toString(),
+                            'type': 'line',
+                            'source': {
+                                'type': 'geojson',
+                                'data': 'https://storage.googleapis.com/location-grid-mirror/low/'+v+'.geojson'
+                            },
+                            'paint': {
+                                'line-color': 'red',
+                                'line-width': 2
+                            }
+                        });
+                    }
+                })
+
+                jQuery.each( old_list, function(i,v) {
+
+                    if ( data.indexOf(v) < 0 && map.getLayer( v.toString() ) ) {
+
+                        map.removeLayer( v.toString() )
+                        console.log( 'removed: ' + v.toString())
+                    }
+
+                })
+
             }
-        });
 
+
+        });
+    })
+    */
+
+
+    // zoom
+    window.previous_grid_id = 0
+    map.on('zoomend', function() {
+        let spinner = jQuery('#spinner')
+
+        spinner.show()
+
+        // call geocoder
+        let level = 'admin0'
+        if ( window.zoom_level >= 5  && window.zoom_level < 7 ) {
+            level = 'admin1'
+        } else if ( window.zoom_level >= 7 ) {
+            level = 'admin2'
+        }
+
+        let lnglat = map.getCenter()
+
+        let lng = lnglat.lng
+        let lat = lnglat.lat
+
+        if (lng > 180) {
+            lng = lng - 180
+            lng = -Math.abs(lng)
+        } else if (lng < -180) {
+            lng = lng + 180
+            lng = Math.abs(lng)
+        }
+
+        window.active_lnglat = [lng, lat]
+
+        jQuery.get(obj.theme_uri + 'dt-mapping/location-grid-list-api.php',
+            {
+                type: 'geocode',
+                longitude: lng,
+                latitude: lat,
+                level: level,
+                country_code: null,
+                nonce: obj.nonce
+            }, null, 'json').done(function (data) {
+
+            if ( window.previous_grid_id !== data.grid_id ) {
+
+                // remove previous
+                if ( window.previous_grid_id > 0 && map.getLayer( window.previous_grid_id.toString() ) ) {
+                    map.removeLayer(window.previous_grid_id.toString() )
+                    map.removeSource(window.previous_grid_id.toString() )
+                }
+                // set new
+                window.previous_grid_id = data.grid_id
+
+                // add info to box
+                if (data) {
+                    jQuery('#data').empty().html(`
+                    <p><strong>${data.name}</strong></p>
+                    <p>Population: ${data.population}</p>
+                    `)
+                }
+
+                // add layer
+                var mapLayer = map.getLayer(data.grid_id);
+                if(typeof mapLayer === 'undefined') {
+
+                    map.addLayer({
+                        'id': data.grid_id.toString(),
+                        'type': 'line',
+                        'source': {
+                            'type': 'geojson',
+                            'data': 'https://storage.googleapis.com/location-grid-mirror/collection/'+data.grid_id+'.geojson'
+                        },
+                        'paint': {
+                            'line-color': 'red',
+                            'line-width': 2
+                        }
+                    });
+                }
+            }
+            spinner.hide()
+        });
     })
 
+    // drag pan
+    window.previous_grid_id = 0
+    map.on('dragend', function() {
+        let spinner = jQuery('#spinner')
+
+        spinner.show()
+
+        // call geocoder
+        let level = 'admin0'
+        if ( window.zoom_level >= 5  && window.zoom_level < 7 ) {
+            level = 'admin1'
+        } else if ( window.zoom_level >= 7 ) {
+            level = 'admin2'
+        }
+
+        let lnglat = map.getCenter()
+
+        let lng = lnglat.lng
+        let lat = lnglat.lat
+
+        if (lng > 180) {
+            lng = lng - 180
+            lng = -Math.abs(lng)
+        } else if (lng < -180) {
+            lng = lng + 180
+            lng = Math.abs(lng)
+        }
+
+        window.active_lnglat = [lng, lat]
+
+        jQuery.get(obj.theme_uri + 'dt-mapping/location-grid-list-api.php',
+            {
+                type: 'geocode',
+                longitude: lng,
+                latitude: lat,
+                level: level,
+                country_code: null,
+                nonce: obj.nonce
+            }, null, 'json').done(function (data) {
+
+            if ( window.previous_grid_id !== data.grid_id ) {
+
+                // remove previous
+                if ( window.previous_grid_id > 0 && map.getLayer( window.previous_grid_id.toString() ) ) {
+                    map.removeLayer(window.previous_grid_id.toString() )
+                    map.removeSource(window.previous_grid_id.toString() )
+                }
+                // set new
+                window.previous_grid_id = data.grid_id
+
+                // add info to box
+                if (data) {
+                    jQuery('#data').empty().html(`
+                    <p><strong>${data.name}</strong></p>
+                    <p>Population: ${data.population}</p>
+                    `)
+                }
+
+                // add layer
+                var mapLayer = map.getLayer(data.grid_id);
+                if(typeof mapLayer === 'undefined') {
+
+                    map.addLayer({
+                        'id': data.grid_id.toString(),
+                        'type': 'line',
+                        'source': {
+                            'type': 'geojson',
+                            'data': 'https://storage.googleapis.com/location-grid-mirror/collection/'+data.grid_id+'.geojson'
+                        },
+                        'paint': {
+                            'line-color': 'red',
+                            'line-width': 2
+                        }
+                    });
+                }
+            }
+            spinner.hide()
+        });
+    })
+
+    // details on zoom
     window.zoom_level = 0
     map.on('zoom', function() {
         if ( map.getZoom() >= 1 && map.getZoom() < 2 && window.zoom_level !== 1 ) {
             window.zoom_level = 1
-            document.getElementById('data').innerHTML = 'zoom: ' + map.getZoom() + '<br>center: ' + map.getCenter() + '<br>boundary: ' + map.getBounds() + '<h1>Level 1</h1>'
+            document.getElementById('data').innerHTML = '<h1>Level 1</h1>' + 'zoom: ' + map.getZoom() + '<br>center: ' + map.getCenter() + '<br>boundary: ' + map.getBounds()
         }
         if ( map.getZoom() >= 2 && map.getZoom() < 3 && window.zoom_level !== 2 ) {
             window.zoom_level = 2
-            document.getElementById('data').innerHTML = 'zoom: ' + map.getZoom() + '<br>center: ' + map.getCenter() + '<br>boundary: ' + map.getBounds() + '<h1>Level 2</h1>'
+            document.getElementById('data').innerHTML = '<h1>Level 2</h1>' + 'zoom: ' + map.getZoom() + '<br>center: ' + map.getCenter() + '<br>boundary: ' + map.getBounds()
         }
         if ( map.getZoom() >= 3 && map.getZoom() < 4 && window.zoom_level !== 3 ) {
             window.zoom_level = 3
-            document.getElementById('data').innerHTML = 'zoom: ' + map.getZoom() + '<br>center: ' + map.getCenter() + '<br>boundary: ' + map.getBounds() + '<h1>Level 3</h1>'
+            document.getElementById('data').innerHTML = '<h1>Level 3</h1>' + 'zoom: ' + map.getZoom() + '<br>center: ' + map.getCenter() + '<br>boundary: ' + map.getBounds()
         }
         if ( map.getZoom() >= 4 && map.getZoom() < 5 && window.zoom_level !== 4 ) {
             window.zoom_level = 4
-            document.getElementById('data').innerHTML = 'zoom: ' + map.getZoom() + '<br>center: ' + map.getCenter() + '<br>boundary: ' + map.getBounds() + '<h1>Level 4</h1>'
+            document.getElementById('data').innerHTML = '<h1>Level 4</h1>' + 'zoom: ' + map.getZoom() + '<br>center: ' + map.getCenter() + '<br>boundary: ' + map.getBounds()
         }
         if ( map.getZoom() >= 5 && map.getZoom() < 6 && window.zoom_level !== 5 ) {
             window.zoom_level = 5
-            document.getElementById('data').innerHTML = 'zoom: ' + map.getZoom() + '<br>center: ' + map.getCenter() + '<br>boundary: ' + map.getBounds() + '<h1>Level 5</h1>'
+            document.getElementById('data').innerHTML = '<h1>Level 5</h1>' + 'zoom: ' + map.getZoom() + '<br>center: ' + map.getCenter() + '<br>boundary: ' + map.getBounds()
         }
         if ( map.getZoom() >= 6 && map.getZoom() < 7 && window.zoom_level !== 6 ) {
             window.zoom_level = 6
-            document.getElementById('data').innerHTML = 'zoom: ' + map.getZoom() + '<br>center: ' + map.getCenter() + '<br>boundary: ' + map.getBounds() + '<h1>Level 6</h1>'
+            document.getElementById('data').innerHTML = '<h1>Level 6</h1>' + 'zoom: ' + map.getZoom() + '<br>center: ' + map.getCenter() + '<br>boundary: ' + map.getBounds()
         }
         if ( map.getZoom() >= 7 && map.getZoom() < 8 && window.zoom_level !== 7 ) {
             window.zoom_level = 7
-            document.getElementById('data').innerHTML = 'zoom: ' + map.getZoom() + '<br>center: ' + map.getCenter() + '<br>boundary: ' + map.getBounds() + '<h1>Level 7</h1>'
+            document.getElementById('data').innerHTML = '<h1>Level 7</h1>' + 'zoom: ' + map.getZoom() + '<br>center: ' + map.getCenter() + '<br>boundary: ' + map.getBounds()
         }
         if ( map.getZoom() >= 8 && map.getZoom() < 9 && window.zoom_level !== 8 ) {
             window.zoom_level = 8
-            document.getElementById('data').innerHTML = 'zoom: ' + map.getZoom() + '<br>center: ' + map.getCenter() + '<br>boundary: ' + map.getBounds() + '<h1>Level 8</h1>'
+            document.getElementById('data').innerHTML = '<h1>Level 8</h1>' + 'zoom: ' + map.getZoom() + '<br>center: ' + map.getCenter() + '<br>boundary: ' + map.getBounds()
         }
         if ( map.getZoom() >= 9 && map.getZoom() < 10 && window.zoom_level !== 9 ) {
             window.zoom_level = 9
-            document.getElementById('data').innerHTML = 'zoom: ' + map.getZoom() + '<br>center: ' + map.getCenter() + '<br>boundary: ' + map.getBounds() + '<h1>Level 9</h1>'
+            document.getElementById('data').innerHTML = '<h1>Level 9</h1>' + 'zoom: ' + map.getZoom() + '<br>center: ' + map.getCenter() + '<br>boundary: ' + map.getBounds()
         }
         if ( map.getZoom() >= 10 && map.getZoom() < 11 && window.zoom_level !== 10 ) {
             window.zoom_level = 10
-            document.getElementById('data').innerHTML = 'zoom: ' + map.getZoom() + '<br>center: ' + map.getCenter() + '<br>boundary: ' + map.getBounds() + '<h1>Level 10</h1>'
+            document.getElementById('data').innerHTML = '<h1>Level 10</h1>' + 'zoom: ' + map.getZoom() + '<br>center: ' + map.getCenter() + '<br>boundary: ' + map.getBounds()
         }
         if ( map.getZoom() >= 11 && map.getZoom() < 12 && window.zoom_level !== 11 ) {
             window.zoom_level = 11
-            document.getElementById('data').innerHTML = 'zoom: ' + map.getZoom() + '<br>center: ' + map.getCenter() + '<br>boundary: ' + map.getBounds() + '<h1>Level 11</h1>'
+            document.getElementById('data').innerHTML = '<h1>Level 11</h1>' + 'zoom: ' + map.getZoom() + '<br>center: ' + map.getCenter() + '<br>boundary: ' + map.getBounds()
         }
         if ( map.getZoom() >= 12 && map.getZoom() < 13 && window.zoom_level !== 12 ) {
             window.zoom_level = 12
-            document.getElementById('data').innerHTML = 'zoom: ' + map.getZoom() + '<br>center: ' + map.getCenter() + '<br>boundary: ' + map.getBounds() + '<h1>Level 12</h1>'
+            document.getElementById('data').innerHTML = '<h1>Level 12</h1>' + 'zoom: ' + map.getZoom() + '<br>center: ' + map.getCenter() + '<br>boundary: ' + map.getBounds()
         }
         if ( map.getZoom() >= 13 && map.getZoom() < 14 && window.zoom_level !== 13 ) {
             window.zoom_level = 13
-            document.getElementById('data').innerHTML = 'zoom: ' + map.getZoom() + '<br>center: ' + map.getCenter() + '<br>boundary: ' + map.getBounds() + '<h1>Level 13</h1>'
+            document.getElementById('data').innerHTML = '<h1>Level 13</h1>' + 'zoom: ' + map.getZoom() + '<br>center: ' + map.getCenter() + '<br>boundary: ' + map.getBounds()
         }
 
 
     })
+
+
 
     /***********************************
      * Click
      ***********************************/
     map.on('click', function (e) {
-        console.log(e)
+        let spinner = jQuery('#spinner')
+        spinner.show()
 
         let level = 'admin0'
         if ( window.zoom_level >= 5  && window.zoom_level < 7 ) {
             level = 'admin1'
-        } else if ( window.zoom_level >= 7  && window.zoom_level < 13  ) {
+        } else if ( window.zoom_level >= 7 ) {
             level = 'admin2'
         }
 
@@ -395,32 +621,46 @@ function write_training_choropleth_map() {
                 country_code: null,
                 nonce: obj.nonce
             }, null, 'json').done(function (data) {
-            if (data) {
-                jQuery('#data').empty().html(`
-                    <p><strong>${data.name}</strong></p>
-                    <p>Population: ${data.population}</p>
-                    `)
-            }
 
-            map.addLayer({
-                'id': data.grid_id,
-                'type': 'line',
-                'source': {
-                    'type': 'geojson',
-                    'data': 'https://storage.googleapis.com/location-grid-mirror/low/'+data.grid_id+'.geojson'
-                },
-                'paint': {
-                    'line-color': 'red',
-                    'line-width': 2
+            if ( window.previous_grid_id !== data.grid_id ) {
+
+                // remove previous
+                if ( window.previous_grid_id > 0 && map.getLayer( window.previous_grid_id.toString() ) ) {
+                    map.removeLayer(window.previous_grid_id.toString() )
+                    map.removeSource(window.previous_grid_id.toString() )
                 }
-            });
+                // set new
+                window.previous_grid_id = data.grid_id
 
-            console.log(data)
+                // add info to box
+                if (data) {
+                    jQuery('#data').empty().html(`
+                <p><strong>${data.name}</strong></p>
+                <p>Population: ${data.population}</p>
+                `)
+                }
+
+                // add layer
+                var mapLayer = map.getLayer(data.grid_id);
+                if(typeof mapLayer === 'undefined') {
+
+                    map.addLayer({
+                        'id': data.grid_id.toString(),
+                        'type': 'line',
+                        'source': {
+                            'type': 'geojson',
+                            'data': 'https://storage.googleapis.com/location-grid-mirror/collection/'+data.grid_id+'.geojson'
+                        },
+                        'paint': {
+                            'line-color': 'red',
+                            'line-width': 2
+                        }
+                    });
+                }
+            }
+            spinner.hide()
         });
     })
-
-
-
 }
 
 function contacts_map() {
@@ -571,9 +811,11 @@ function contacts_map() {
 
 
                 map.on('click', 'clusters', function(e) {
+
                     var features = map.queryRenderedFeatures(e.point, {
                         layers: ['clusters']
                     });
+
                     var clusterId = features[0].properties.cluster_id;
                     map.getSource('trainings').getClusterExpansionZoom(
                         clusterId,
@@ -623,8 +865,6 @@ function contacts_map() {
                                     info.append(`<p><a href="/contacts/${v.ID}">${v.post_title}</a></p>`)
                                 })
                             }
-
-
                         })
 
                 });
@@ -653,7 +893,6 @@ function write_training_overview() {
 
 
 }
-
 
 
 window.tAPI = {
