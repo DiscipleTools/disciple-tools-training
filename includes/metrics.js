@@ -263,98 +263,61 @@ function write_training_choropleth_map() {
                 margin-right: 5px;
                 width: 10px;
             }
+            #cross-hair {
+                position: absolute;
+                z-index: 20;
+                font-size:3em;
+                top:50%;
+                left:50%;
+                display:none;
+            }
+            #spinner {
+                position: absolute;
+                top:50%;
+                left:50%;
+                z-index: 20;
+                display:none;
+            }
         </style>
         <div id="map-wrapper">
             <div id='map'></div>
             <div id='legend' class='legend'>
-                <div id="spinner" style="display:none"><img src="${obj.spinner_url}" alt="spinner" style="width: 25px;" /></div>
                 <div id="grid"></div>
                 <div id="info"></div>
                 <div id="data"></div>
             </div>
+            <div id="spinner"><img src="${obj.spinner_url}" alt="spinner" style="width: 25px;" /></div>
+            <div id="cross-hair">&#8982</div>
         </div>
      `)
+
+
 
     mapboxgl.accessToken = obj.map_key;
     var map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/mapbox/light-v10',
+        // style: 'mapbox://styles/mapbox/streets-v11',
         center: [-98, 38.88],
-        minZoom: 0,
-        zoom: 0
+        minZoom: 2,
+        zoom: 2
     });
 
-    window.boundary_list = []
-
-    // drag
-    /*
-        map.on('dragend', function(){
-
-        let level = '0'
-        window.zoom_level = Math.ceil( map.getZoom() )
-        if ( window.zoom_level >= 3  && window.zoom_level < 7 ) {
-            level = '1'
-        } else if ( window.zoom_level >= 7 ) {
-            level = '2'
-        }
-        level = '2'
-        let bounds = map.getBounds()
-
-        jQuery.get(obj.theme_uri + 'dt-mapping/location-grid-list-api.php',
-            {
-                type: 'match_within_bbox',
-                north_latitude: bounds._ne.lat,
-                south_latitude: bounds._sw.lat,
-                west_longitude: bounds._sw.lng,
-                east_longitude: bounds._ne.lng,
-                level: level,
-                nonce: obj.nonce
-            }, null, 'json').done(function (data) {
-            if (data) {
-                // console.log(data)
-
-                let old_list = Array.from(window.boundary_list)
-                window.boundary_list = data
-
-                console.log(map.getStyle().layers)
-
-                jQuery.each( data, function( i,v ){
-
-                    var mapLayer = map.getLayer(v.toString());
-
-                    if(typeof mapLayer === 'undefined') {
-                        map.addLayer({
-                            'id': v.toString(),
-                            'type': 'line',
-                            'source': {
-                                'type': 'geojson',
-                                'data': 'https://storage.googleapis.com/location-grid-mirror/low/'+v+'.geojson'
-                            },
-                            'paint': {
-                                'line-color': 'red',
-                                'line-width': 2
-                            }
-                        });
-                    }
-                })
-
-                jQuery.each( old_list, function(i,v) {
-
-                    if ( data.indexOf(v) < 0 && map.getLayer( v.toString() ) ) {
-
-                        map.removeLayer( v.toString() )
-                        console.log( 'removed: ' + v.toString())
-                    }
-
-                })
-
-            }
-
-
-        });
+    map.on('zoomstart', function() {
+        jQuery('#cross-hair').show()
     })
-    */
+    map.on('zoomend', function() {
+        jQuery('#cross-hair').hide()
+    })
+    map.on('dragstart', function() {
+        jQuery('#cross-hair').show()
+    })
+    map.on('dragend', function() {
+        jQuery('#cross-hair').hide()
+    })
 
+
+    window.boundary_list = []
 
     // zoom
     window.previous_grid_id = 0
@@ -386,7 +349,7 @@ function write_training_choropleth_map() {
 
         window.active_lnglat = [lng, lat]
 
-        jQuery.get(obj.theme_uri + 'dt-mapping/location-grid-list-api.php',
+        jQuery.get(obj.plugin_uri + 'includes/location-grid-map-api.php',
             {
                 type: 'geocode',
                 longitude: lng,
@@ -418,18 +381,48 @@ function write_training_choropleth_map() {
                 var mapLayer = map.getLayer(data.grid_id);
                 if(typeof mapLayer === 'undefined') {
 
-                    map.addLayer({
-                        'id': data.grid_id.toString(),
-                        'type': 'line',
-                        'source': {
-                            'type': 'geojson',
-                            'data': 'https://storage.googleapis.com/location-grid-mirror/collection/'+data.grid_id+'.geojson'
-                        },
-                        'paint': {
-                            'line-color': 'red',
-                            'line-width': 2
-                        }
-                    });
+                    jQuery.get('https://storage.googleapis.com/location-grid-mirror/collection/'+data.grid_id+'.geojson', null, null, 'json')
+                        .done(function (geojson) {
+
+                            jQuery.each( geojson.features, function(i,v) {
+                                geojson.features[i].properties.value = data.children[geojson.features[i].properties.id].value
+                            })
+                            map.addSource(data.grid_id.toString(), {
+                                'type': 'geojson',
+                                'data': geojson
+                            });
+                            map.addLayer({
+                                'id': data.grid_id.toString(),
+                                'type': 'fill',
+                                'source': data.grid_id.toString(),
+                                'paint': {
+                                    'fill-color': [
+                                        'interpolate',
+                                        ['linear'],
+                                        ['get', 'value'],
+                                        0,
+                                        '#F2F12D',
+                                        20,
+                                        '#EED322',
+                                        30,
+                                        '#E6B71E',
+                                        40,
+                                        '#DA9C20',
+                                        50,
+                                        '#CA8323',
+                                        70,
+                                        '#B86B25',
+                                        80,
+                                        '#A25626',
+                                        90,
+                                        '#8B4225',
+                                        100,
+                                        '#723122'
+                                    ],
+                                    'fill-opacity': 0.75
+                                }
+                            });
+                        })
                 }
             }
             spinner.hide()
@@ -466,7 +459,7 @@ function write_training_choropleth_map() {
 
         window.active_lnglat = [lng, lat]
 
-        jQuery.get(obj.theme_uri + 'dt-mapping/location-grid-list-api.php',
+        jQuery.get(obj.plugin_uri + 'includes/location-grid-map-api.php',
             {
                 type: 'geocode',
                 longitude: lng,
@@ -498,18 +491,163 @@ function write_training_choropleth_map() {
                 var mapLayer = map.getLayer(data.grid_id);
                 if(typeof mapLayer === 'undefined') {
 
-                    map.addLayer({
-                        'id': data.grid_id.toString(),
-                        'type': 'line',
-                        'source': {
-                            'type': 'geojson',
-                            'data': 'https://storage.googleapis.com/location-grid-mirror/collection/'+data.grid_id+'.geojson'
-                        },
-                        'paint': {
-                            'line-color': 'red',
-                            'line-width': 2
-                        }
-                    });
+                    jQuery.get('https://storage.googleapis.com/location-grid-mirror/collection/'+data.grid_id+'.geojson', null, null, 'json')
+                        .done(function (geojson) {
+
+                            jQuery.each( geojson.features, function(i,v) {
+                                geojson.features[i].properties.value = data.children[geojson.features[i].properties.id].value
+                            })
+                            map.addSource(data.grid_id.toString(), {
+                                'type': 'geojson',
+                                'data': geojson
+                            });
+                            map.addLayer({
+                                'id': data.grid_id.toString(),
+                                'type': 'fill',
+                                'source': data.grid_id.toString(),
+                                'paint': {
+                                    'fill-color': [
+                                        'interpolate',
+                                        ['linear'],
+                                        ['get', 'value'],
+                                        0,
+                                        '#F2F12D',
+                                        20,
+                                        '#EED322',
+                                        30,
+                                        '#E6B71E',
+                                        40,
+                                        '#DA9C20',
+                                        50,
+                                        '#CA8323',
+                                        70,
+                                        '#B86B25',
+                                        80,
+                                        '#A25626',
+                                        90,
+                                        '#8B4225',
+                                        100,
+                                        '#723122'
+                                    ],
+                                    'fill-opacity': 0.75
+                                }
+                            });
+                        })
+                }
+            }
+            spinner.hide()
+        });
+    })
+
+    /***********************************
+     * Click
+     ***********************************/
+    map.on('click', function (e) {
+        let spinner = jQuery('#spinner')
+        spinner.show()
+
+        let level = 'admin0'
+        if ( window.zoom_level >= 5  && window.zoom_level < 7 ) {
+            level = 'admin1'
+        } else if ( window.zoom_level >= 7 ) {
+            level = 'admin2'
+        }
+
+        let lng = e.lngLat.lng
+        let lat = e.lngLat.lat
+
+        if (lng > 180) {
+            lng = lng - 180
+            lng = -Math.abs(lng)
+        } else if (lng < -180) {
+            lng = lng + 180
+            lng = Math.abs(lng)
+        }
+
+        window.active_lnglat = [lng, lat]
+
+        // add marker
+        if (window.active_marker) {
+            window.active_marker.remove()
+        }
+        window.active_marker = new mapboxgl.Marker()
+            .setLngLat(e.lngLat)
+            .addTo(map);
+
+        jQuery.get(obj.plugin_uri + 'includes/location-grid-map-api.php',
+            {
+                type: 'geocode',
+                longitude: lng,
+                latitude: lat,
+                level: level,
+                country_code: null,
+                nonce: obj.nonce
+            }, null, 'json').done(function (data) {
+
+            if ( window.previous_grid_id !== data.grid_id ) {
+
+                // remove previous
+                if ( window.previous_grid_id > 0 && map.getLayer( window.previous_grid_id.toString() ) ) {
+                    map.removeLayer(window.previous_grid_id.toString() )
+                    map.removeSource(window.previous_grid_id.toString() )
+                }
+                // set new
+                window.previous_grid_id = data.grid_id
+
+                // add info to box
+                if (data) {
+                    jQuery('#data').empty().html(`
+                <p><strong>${data.name}</strong></p>
+                <p>Population: ${data.population}</p>
+                `)
+                }
+
+                // add layer
+                var mapLayer = map.getLayer(data.grid_id);
+                if(typeof mapLayer === 'undefined') {
+
+                    jQuery.get('https://storage.googleapis.com/location-grid-mirror/collection/'+data.grid_id+'.geojson', null, null, 'json')
+                        .done(function (geojson) {
+
+                            jQuery.each( geojson.features, function(i,v) {
+                                geojson.features[i].properties.value = data.children[geojson.features[i].properties.id].value
+                            })
+                            map.addSource(data.grid_id.toString(), {
+                                'type': 'geojson',
+                                'data': geojson
+                            });
+                            map.addLayer({
+                                'id': data.grid_id.toString(),
+                                'type': 'fill',
+                                'source': data.grid_id.toString(),
+                                'paint': {
+                                    'fill-color': [
+                                        'interpolate',
+                                        ['linear'],
+                                        ['get', 'value'],
+                                        0,
+                                        '#F2F12D',
+                                        20,
+                                        '#EED322',
+                                        30,
+                                        '#E6B71E',
+                                        40,
+                                        '#DA9C20',
+                                        50,
+                                        '#CA8323',
+                                        70,
+                                        '#B86B25',
+                                        80,
+                                        '#A25626',
+                                        90,
+                                        '#8B4225',
+                                        100,
+                                        '#723122'
+                                    ],
+                                    'fill-opacity': 0.75
+                                }
+                            });
+                        })
                 }
             }
             spinner.hide()
@@ -571,96 +709,17 @@ function write_training_choropleth_map() {
             window.zoom_level = 13
             document.getElementById('data').innerHTML = '<h1>Level 13</h1>' + 'zoom: ' + map.getZoom() + '<br>center: ' + map.getCenter() + '<br>boundary: ' + map.getBounds()
         }
+        if ( map.getZoom() >= 14 && window.zoom_level !== 14 ) {
+            window.zoom_level = 14
+            document.getElementById('data').innerHTML = '<h1>Level 14</h1>' + 'zoom: ' + map.getZoom() + '<br>center: ' + map.getCenter() + '<br>boundary: ' + map.getBounds()
+        }
 
 
     })
 
 
 
-    /***********************************
-     * Click
-     ***********************************/
-    map.on('click', function (e) {
-        let spinner = jQuery('#spinner')
-        spinner.show()
 
-        let level = 'admin0'
-        if ( window.zoom_level >= 5  && window.zoom_level < 7 ) {
-            level = 'admin1'
-        } else if ( window.zoom_level >= 7 ) {
-            level = 'admin2'
-        }
-
-        let lng = e.lngLat.lng
-        let lat = e.lngLat.lat
-
-        if (lng > 180) {
-            lng = lng - 180
-            lng = -Math.abs(lng)
-        } else if (lng < -180) {
-            lng = lng + 180
-            lng = Math.abs(lng)
-        }
-
-        window.active_lnglat = [lng, lat]
-
-        // add marker
-        if (window.active_marker) {
-            window.active_marker.remove()
-        }
-        window.active_marker = new mapboxgl.Marker()
-            .setLngLat(e.lngLat)
-            .addTo(map);
-
-        jQuery.get(obj.theme_uri + 'dt-mapping/location-grid-list-api.php',
-            {
-                type: 'geocode',
-                longitude: lng,
-                latitude: lat,
-                level: level,
-                country_code: null,
-                nonce: obj.nonce
-            }, null, 'json').done(function (data) {
-
-            if ( window.previous_grid_id !== data.grid_id ) {
-
-                // remove previous
-                if ( window.previous_grid_id > 0 && map.getLayer( window.previous_grid_id.toString() ) ) {
-                    map.removeLayer(window.previous_grid_id.toString() )
-                    map.removeSource(window.previous_grid_id.toString() )
-                }
-                // set new
-                window.previous_grid_id = data.grid_id
-
-                // add info to box
-                if (data) {
-                    jQuery('#data').empty().html(`
-                <p><strong>${data.name}</strong></p>
-                <p>Population: ${data.population}</p>
-                `)
-                }
-
-                // add layer
-                var mapLayer = map.getLayer(data.grid_id);
-                if(typeof mapLayer === 'undefined') {
-
-                    map.addLayer({
-                        'id': data.grid_id.toString(),
-                        'type': 'line',
-                        'source': {
-                            'type': 'geojson',
-                            'data': 'https://storage.googleapis.com/location-grid-mirror/collection/'+data.grid_id+'.geojson'
-                        },
-                        'paint': {
-                            'line-color': 'red',
-                            'line-width': 2
-                        }
-                    });
-                }
-            }
-            spinner.hide()
-        });
-    })
 }
 
 function contacts_map() {

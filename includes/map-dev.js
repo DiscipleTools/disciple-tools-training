@@ -549,3 +549,72 @@ function write_training_heatmap4() {
     });
 
 }
+
+// drag
+/*
+    map.on('dragend', function(){
+
+    let level = '0'
+    window.zoom_level = Math.ceil( map.getZoom() )
+    if ( window.zoom_level >= 3  && window.zoom_level < 7 ) {
+        level = '1'
+    } else if ( window.zoom_level >= 7 ) {
+        level = '2'
+    }
+    level = '2'
+    let bounds = map.getBounds()
+
+    jQuery.get(obj.theme_uri + 'dt-mapping/location-grid-list-api.php',
+        {
+            type: 'match_within_bbox',
+            north_latitude: bounds._ne.lat,
+            south_latitude: bounds._sw.lat,
+            west_longitude: bounds._sw.lng,
+            east_longitude: bounds._ne.lng,
+            level: level,
+            nonce: obj.nonce
+        }, null, 'json').done(function (data) {
+        if (data) {
+            // console.log(data)
+
+            let old_list = Array.from(window.boundary_list)
+            window.boundary_list = data
+
+            console.log(map.getStyle().layers)
+
+            jQuery.each( data, function( i,v ){
+
+                var mapLayer = map.getLayer(v.toString());
+
+                if(typeof mapLayer === 'undefined') {
+                    map.addLayer({
+                        'id': v.toString(),
+                        'type': 'line',
+                        'source': {
+                            'type': 'geojson',
+                            'data': 'https://storage.googleapis.com/location-grid-mirror/low/'+v+'.geojson'
+                        },
+                        'paint': {
+                            'line-color': 'red',
+                            'line-width': 2
+                        }
+                    });
+                }
+            })
+
+            jQuery.each( old_list, function(i,v) {
+
+                if ( data.indexOf(v) < 0 && map.getLayer( v.toString() ) ) {
+
+                    map.removeLayer( v.toString() )
+                    console.log( 'removed: ' + v.toString())
+                }
+
+            })
+
+        }
+
+
+    });
+})
+*/
