@@ -1,7 +1,7 @@
 <?php
 
 function dt_training_scripts() {
-    if ( function_exists( 'dt_get_url_path') ) {
+    if ( function_exists( 'dt_get_url_path' ) ) {
 
         $url_path = dt_get_url_path();
         if ( strpos( $url_path, 'trainings' ) !== false ){
@@ -19,10 +19,8 @@ function dt_training_scripts() {
                     DT_Mapbox_API::load_mapbox_search_widget();
 
                 }
-
             }
         }
-
     }
 }
 add_action( 'wp_enqueue_scripts', 'dt_training_scripts', 999 );

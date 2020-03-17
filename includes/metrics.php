@@ -35,7 +35,6 @@ class DT_Training_Metrics
                 add_action( 'wp_enqueue_scripts', [ $this, 'scripts' ], 99 );
             }
         }
-
     }
 
     public function has_permission(){
@@ -60,7 +59,7 @@ class DT_Training_Metrics
                 <ul class="menu vertical nested" id="training-menu" aria-expanded="true">
                     <li><a href="'. site_url( '/metrics/trainings/' ) .'#cluster_map" onclick="write_training_cluster_map()">'. esc_html__( 'Cluster Map', 'disciple_tools' ) .'</a></li>
                     <li><a href="'. site_url( '/metrics/trainings/' ) .'#choropleth_map" onclick="write_training_choropleth_map()">'. esc_html__( 'Choropleth Map', 'disciple_tools' ) .'</a></li>
-                    <li><a href="'. site_url( '/metrics/trainings/' ) .'#contacts_map" onclick="contacts_map()">'. esc_html__( 'Contacts Map', 'disciple_tools' ) .'</a></li>
+                    <li><a href="'. site_url( '/metrics/trainings/' ) .'#points_map" onclick="write_training_points_map()">'. esc_html__( 'Points Map', 'disciple_tools' ) .'</a></li>
                 </ul>
             </li>
             ';
@@ -69,20 +68,19 @@ class DT_Training_Metrics
 
     public function scripts() {
 
-        wp_enqueue_script( 'dt_training_metrics',  trailingslashit( plugin_dir_url(__FILE__) ) . 'metrics.js', [
+        wp_enqueue_script( 'dt_training_metrics', trailingslashit( plugin_dir_url( __FILE__ ) ) . 'metrics.js', [
             'jquery',
-        ], filemtime( trailingslashit(plugin_dir_path(__FILE__) ) . 'metrics.js' ), true );
+        ], filemtime( trailingslashit( plugin_dir_path( __FILE__ ) ) . 'metrics.js' ), true );
         wp_localize_script(
             'dt_training_metrics', 'dtTrainingMetrics', [
                 'root' => esc_url_raw( rest_url() ),
                 'theme_uri' => trailingslashit( get_template_directory_uri() ),
-                'plugin_uri' => plugin_dir_url(__DIR__),
+                'plugin_uri' => plugin_dir_url( __DIR__ ),
                 'nonce' => wp_create_nonce( 'wp_rest' ),
                 'current_user_login' => wp_get_current_user()->user_login,
                 'current_user_id' => get_current_user_id(),
                 'map_key' => DT_Mapbox_API::get_key(),
                 "spinner_url" => get_stylesheet_directory_uri() . '/spinner.svg',
-                'data' => $this->get_totals(),
             ]
         );
 
@@ -92,46 +90,63 @@ class DT_Training_Metrics
         $namespace = 'dt/v1';
 
         register_rest_route(
-            $namespace, '/trainings/heatmap1', [
-                [
-                    'methods'  => WP_REST_Server::CREATABLE,
-                    'callback' => [ $this, 'heatmap1' ],
-                ],
-            ]
-        );
-        register_rest_route(
-            $namespace, '/trainings/list', [
-                [
-                    'methods'  => WP_REST_Server::CREATABLE,
-                    'callback' => [ $this, 'get_list' ],
-                ],
-            ]
-        );
-        register_rest_route(
-            $namespace, '/trainings/contacts_map', [
+            $namespace, '/trainings/cluster_geojson', [
                 [
                     'methods'  => WP_REST_Server::READABLE,
-                    'callback' => [ $this, 'contacts_map' ],
+                    'callback' => [ $this, 'cluster_geojson' ],
+                ],
+            ]
+        );
+        register_rest_route(
+            $namespace, '/trainings/points_geojson', [
+                [
+                    'methods'  => WP_REST_Server::READABLE,
+                    'callback' => [ $this, 'points_geojson' ],
+                ],
+            ]
+        );
+        register_rest_route(
+            $namespace, '/trainings/grid_totals', [
+                [
+                    'methods'  => WP_REST_Server::READABLE,
+                    'callback' => [ $this, 'grid_totals' ],
+                ],
+            ]
+        );
+        register_rest_route(
+            $namespace, '/trainings/grid_country_totals', [
+                [
+                    'methods'  => WP_REST_Server::READABLE,
+                    'callback' => [ $this, 'grid_country_totals' ],
                 ],
             ]
         );
 
     }
 
-    public function heatmap1( WP_REST_Request $request ) {
+    public function cluster_geojson( WP_REST_Request $request ) {
         if ( ! $this->has_permission() ){
             return new WP_Error( __METHOD__, "Missing Permissions", [ 'status' => 400 ] );
         }
-        $params = $request->get_params();
         global $wpdb;
 
         /* pulling 30k from location_grid_meta table */
-        $results = $wpdb->get_results("SELECT lg.label as address, p.post_title as name, post_id, lng, lat FROM $wpdb->dt_location_grid_meta as lg JOIN $wpdb->posts as p ON p.ID=lg.post_id WHERE lg.post_type = 'trainings' LIMIT 40000", ARRAY_A );
+        $results = $wpdb->get_results("
+            SELECT lg.label as address, p.post_title as name, post_id, lng, lat 
+            FROM $wpdb->dt_location_grid_meta as lg 
+                JOIN $wpdb->posts as p ON p.ID=lg.post_id 
+            WHERE lg.post_type = 'trainings' 
+            LIMIT 40000
+            ", ARRAY_A );
         $features = [];
-        foreach( $results as $result ) {
+        foreach ( $results as $result ) {
             $features[] = array(
                 'type' => 'Feature',
-                'properties' => array("address" => $result['address'], "post_id" => $result['post_id'], "name" => $result['name'] ),
+                'properties' => array(
+            "address" => $result['address'],
+            "post_id" => $result['post_id'],
+            "name" => $result['name']
+            ),
                 'geometry' => array(
                     'type' => 'Point',
                     'coordinates' => array(
@@ -143,6 +158,50 @@ class DT_Training_Metrics
             );
         }
 
+        $new_data = array(
+            'type' => 'FeatureCollection',
+            'features' => $features,
+        );
+
+        return $new_data;
+    }
+
+    public function points_geojson( WP_REST_Request $request ) {
+        if ( ! $this->has_permission() ){
+            return new WP_Error( __METHOD__, "Missing Permissions", [ 'status' => 400 ] );
+        }
+        global $wpdb;
+
+        /* pulling 30k from location_grid_meta table */
+        $results = $wpdb->get_results("
+            SELECT lgm.label as l, p.post_title as n, lgm.post_id as pid, lgm.lng, lgm.lat, lg.admin0_grid_id as a0, lg.admin1_grid_id as a1
+            FROM $wpdb->dt_location_grid_meta as lgm
+                 LEFT JOIN $wpdb->posts as p ON p.ID=lgm.post_id  
+                 LEFT JOIN $wpdb->dt_location_grid as lg ON lg.grid_id=lgm.grid_id   
+            WHERE lgm.post_type = 'trainings' 
+            LIMIT 40000;
+            ", ARRAY_A );
+        $features = [];
+        foreach ( $results as $result ) {
+            $features[] = array(
+                'type' => 'Feature',
+                'properties' => array(
+            "l" => $result['l'],
+            "pid" => $result['pid'],
+            "n" => $result['n'],
+            "a0" => $result['a0'],
+            "a1" => $result['a1']
+            ),
+                'geometry' => array(
+                    'type' => 'Point',
+                    'coordinates' => array(
+                        $result['lng'],
+                        $result['lat'],
+                        1
+                    ),
+                ),
+            );
+        }
 
         $new_data = array(
             'type' => 'FeatureCollection',
@@ -152,165 +211,81 @@ class DT_Training_Metrics
         return $new_data;
     }
 
-    public function get_list( WP_REST_Request $request ) {
-        if ( !$this->has_permission() ){
-            return new WP_Error( __METHOD__, "Missing Permissions", [ 'status' => 400 ] );
-        }
-
-        return $this->get_totals();
-
-    }
-
-    public function get_totals() {
-        global $wpdb;
-
-//        if ( get_transient( __METHOD__) ) {
-//            return get_transient( __METHOD__ );
-//        }
-
-        $results = $wpdb->get_results("
-        SELECT
-          t1.admin0_grid_id as grid_id,
-          t1.type,
-          count(t1.admin0_grid_id) as count
-        FROM (
-            SELECT
-                g.admin0_grid_id,
-                CASE
-                    WHEN gt.meta_value = 'church' THEN 'churches'
-                    WHEN cu.meta_value IS NOT NULL THEN 'users'
-                    ELSE pp.post_type
-                END as type
-            FROM $wpdb->postmeta as p
-                JOIN $wpdb->posts as pp ON p.post_id=pp.ID
-                LEFT JOIN $wpdb->dt_location_grid as g ON g.grid_id=p.meta_value             
-                LEFT JOIN $wpdb->postmeta as cu ON cu.post_id=p.post_id AND cu.meta_key = 'corresponds_to_user'
-                LEFT JOIN $wpdb->postmeta as gt ON gt.post_id=p.post_id AND gt.meta_key = 'group_type'
-            WHERE p.meta_key = 'location_grid'
-        ) as t1
-        WHERE t1.admin0_grid_id != ''
-        GROUP BY t1.admin0_grid_id, t1.type
-        UNION
-        SELECT
-          t2.admin1_grid_id as grid_id,
-          t2.type,
-          count(t2.admin1_grid_id) as count
-        FROM (
-                SELECT
-                g.admin1_grid_id,
-                CASE
-                    WHEN gt.meta_value = 'church' THEN 'churches'
-                    WHEN cu.meta_value IS NOT NULL THEN 'users'
-                    ELSE pp.post_type
-                END as type
-            FROM $wpdb->postmeta as p
-                JOIN $wpdb->posts as pp ON p.post_id=pp.ID
-                LEFT JOIN $wpdb->dt_location_grid as g ON g.grid_id=p.meta_value             
-                LEFT JOIN $wpdb->postmeta as cu ON cu.post_id=p.post_id AND cu.meta_key = 'corresponds_to_user'
-                LEFT JOIN $wpdb->postmeta as gt ON gt.post_id=p.post_id AND gt.meta_key = 'group_type'
-            WHERE p.meta_key = 'location_grid'
-        ) as t2
-        WHERE t2.admin1_grid_id != ''
-        GROUP BY t2.admin1_grid_id, t2.type
-        UNION
-        SELECT
-          t3.admin2_grid_id as grid_id,
-          t3.type,
-          count(t3.admin2_grid_id) as count
-        FROM (
-                SELECT
-                g.admin2_grid_id,
-                CASE
-                    WHEN gt.meta_value = 'church' THEN 'churches'
-                    WHEN cu.meta_value IS NOT NULL THEN 'users'
-                    ELSE pp.post_type
-                END as type
-            FROM $wpdb->postmeta as p
-                JOIN $wpdb->posts as pp ON p.post_id=pp.ID
-                LEFT JOIN $wpdb->dt_location_grid as g ON g.grid_id=p.meta_value             
-                LEFT JOIN $wpdb->postmeta as cu ON cu.post_id=p.post_id AND cu.meta_key = 'corresponds_to_user'
-                LEFT JOIN $wpdb->postmeta as gt ON gt.post_id=p.post_id AND gt.meta_key = 'group_type'
-            WHERE p.meta_key = 'location_grid'
-        ) as t3
-        WHERE t3.admin2_grid_id != ''
-        GROUP BY t3.admin2_grid_id, t3.type
-        UNION
-        SELECT
-          t4.admin3_grid_id as grid_id,
-          t4.type,
-          count(t4.admin3_grid_id) as count
-        FROM (
-                SELECT
-                g.admin3_grid_id,
-                CASE
-                    WHEN gt.meta_value = 'church' THEN 'churches'
-                    WHEN cu.meta_value IS NOT NULL THEN 'users'
-                    ELSE pp.post_type
-                END as type
-            FROM $wpdb->postmeta as p
-                JOIN $wpdb->posts as pp ON p.post_id=pp.ID
-                LEFT JOIN $wpdb->dt_location_grid as g ON g.grid_id=p.meta_value             
-                LEFT JOIN $wpdb->postmeta as cu ON cu.post_id=p.post_id AND cu.meta_key = 'corresponds_to_user'
-                LEFT JOIN $wpdb->postmeta as gt ON gt.post_id=p.post_id AND gt.meta_key = 'group_type'
-            WHERE p.meta_key = 'location_grid'
-        ) as t4
-        WHERE t4.admin3_grid_id != ''
-        GROUP BY t4.admin3_grid_id, t4.type;
-    ", ARRAY_A );
-
-        $data = [];
-        foreach ( $results as $result ) {
-            $data[$result['grid_id'] ] = $result;
-        }
-
-        set_transient( __METHOD__, $data, 60 * 60 * 24 );
-
-
-        if ( empty( $data ) ) {
-            $data = [];
-        }
-
-        return $data;
-    }
-
-    public function contacts_map( WP_REST_Request $request ) {
+    public function grid_totals( WP_REST_Request $request ) {
         if ( !$this->has_permission() ){
             return new WP_Error( __METHOD__, "Missing Permissions", [ 'status' => 400 ] );
         }
 
         global $wpdb;
-        $results = $wpdb->get_results("
-            SELECT lg.longitude as lng, lg.latitude as lat, p.meta_value as location_grid
-            FROM $wpdb->postmeta as p 
-                INNER JOIN $wpdb->dt_location_grid as lg ON p.meta_value=lg.grid_id 
-                JOIN $wpdb->posts as ps ON ps.ID=p.post_id
-            WHERE p.meta_key = 'location_grid' AND ps.post_type = 'contacts'
+        $results = $wpdb->get_results( "
+            SELECT t0.admin0_grid_id as grid_id, count(t0.admin0_grid_id) as count 
+            FROM (
+             SELECT lg.admin0_grid_id FROM $wpdb->dt_location_grid as lg LEFT JOIN $wpdb->dt_location_grid_meta as lgm ON lg.grid_id=lgm.grid_id WHERE lgm.post_type = 'trainings'
+            ) as t0
+            GROUP BY t0.admin0_grid_id
+            UNION
+            SELECT t1.admin1_grid_id as grid_id, count(t1.admin1_grid_id) as count 
+            FROM (
+             SELECT lg.admin1_grid_id FROM $wpdb->dt_location_grid as lg LEFT JOIN $wpdb->dt_location_grid_meta as lgm ON lg.grid_id=lgm.grid_id WHERE lgm.post_type = 'trainings'
+            ) as t1
+            GROUP BY t1.admin1_grid_id
+            UNION
+            SELECT t2.admin2_grid_id as grid_id, count(t2.admin2_grid_id) as count 
+            FROM (
+             SELECT lg.admin2_grid_id FROM $wpdb->dt_location_grid as lg LEFT JOIN $wpdb->dt_location_grid_meta as lgm ON lg.grid_id=lgm.grid_id WHERE lgm.post_type = 'trainings'
+            ) as t2
+            GROUP BY t2.admin2_grid_id
+            UNION
+            SELECT t3.admin3_grid_id as grid_id, count(t3.admin3_grid_id) as count 
+            FROM (
+             SELECT lg.admin3_grid_id FROM $wpdb->dt_location_grid as lg LEFT JOIN $wpdb->dt_location_grid_meta as lgm ON lg.grid_id=lgm.grid_id WHERE lgm.post_type = 'trainings'
+            ) as t3
+            GROUP BY t3.admin3_grid_id
+            UNION
+            SELECT t4.admin4_grid_id as grid_id, count(t4.admin4_grid_id) as count 
+            FROM (
+             SELECT lg.admin4_grid_id FROM $wpdb->dt_location_grid as lg LEFT JOIN $wpdb->dt_location_grid_meta as lgm ON lg.grid_id=lgm.grid_id WHERE lgm.post_type = 'trainings'
+            ) as t4
+            GROUP BY t4.admin4_grid_id
+            UNION
+            SELECT t5.admin5_grid_id as grid_id, count(t5.admin5_grid_id) as count 
+            FROM (
+             SELECT lg.admin5_grid_id FROM $wpdb->dt_location_grid as lg LEFT JOIN $wpdb->dt_location_grid_meta as lgm ON lg.grid_id=lgm.grid_id WHERE lgm.post_type = 'trainings'
+            ) as t5
+            GROUP BY t5.admin5_grid_id;
             ", ARRAY_A );
 
-        $features = [];
+
+        $list = [];
         foreach ( $results as $result ) {
-            $features[] = array(
-                'type' => 'Feature',
-                'properties' => array( "location_grid" => $result['location_grid'] ),
-                'geometry' => array(
-                    'type' => 'Point',
-                    'coordinates' => array(
-                        $result['lng'],
-                        $result['lat'],
-                        1
-                    ),
-                ),
-            );
+            $list[$result['grid_id']] = $result;
         }
 
-        $new_data = array(
-            'type' => 'FeatureCollection',
-            'features' => $features,
-        );
+        return $list;
 
-        return $new_data;
     }
 
+    public function grid_country_totals( WP_REST_Request $request ) {
+        if ( !$this->has_permission() ){
+            return new WP_Error( __METHOD__, "Missing Permissions", [ 'status' => 400 ] );
+        }
+        global $wpdb;
+        $results = $wpdb->get_results( "
+            SELECT t0.admin0_grid_id as grid_id, count(t0.admin0_grid_id) as count 
+            FROM (
+             SELECT lg.admin0_grid_id FROM $wpdb->dt_location_grid as lg LEFT JOIN $wpdb->dt_location_grid_meta as lgm ON lg.grid_id=lgm.grid_id WHERE lgm.post_type = 'trainings'
+            ) as t0
+            GROUP BY t0.admin0_grid_id
+            ", ARRAY_A );
+
+        $list = [];
+        foreach ( $results as $result ) {
+            $list[$result['grid_id']] = $result;
+        }
+
+        return $list;
+
+    }
 
 }
 

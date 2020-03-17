@@ -55,7 +55,7 @@ if ( isset( $_GET['type'] ) && isset( $_GET['longitude'] ) && isset( $_GET['lati
         $longitude = sanitize_text_field( wp_unslash( $_GET['longitude'] ) );
         $latitude  = sanitize_text_field( wp_unslash( $_GET['latitude'] ) );
 
-        require_once ( $mapping_url . 'mapping-queries.php' );
+        require_once( $mapping_url . 'mapping-queries.php' );
 
         if ( 'world' === $level ) {
             $response = Disciple_Tools_Mapping_Queries::get_children_by_grid_id( 1 );

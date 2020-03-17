@@ -198,7 +198,7 @@ class DT_Training_Post_Type {
             ?>
             <div class="grid-x grid-padding-x">
                 <div class="cell medium-6">
-                    <?php render_field_for_display('status', $post_settings["fields"], $dt_post); ?>
+                    <?php render_field_for_display( 'status', $post_settings["fields"], $dt_post ); ?>
                 </div>
                 <div class="cell medium-6">
                     <?php render_field_for_display( 'start_date', $post_settings["fields"], $dt_post ); ?>
@@ -215,14 +215,14 @@ class DT_Training_Post_Type {
             ?>
 
             <label class="section-header">
-                <?php esc_html_e( 'Location', 'disciple_tools' )?> <a class="button clear" id="new-mapbox-search"><?php esc_html_e("add", 'zume' ) ?></a>
+                <?php esc_html_e( 'Location', 'disciple_tools' )?> <a class="button clear" id="new-mapbox-search"><?php esc_html_e( "add", 'zume' ) ?></a>
             </label>
 
             <?php /* If Mapbox Upgrade */ if ( DT_Mapbox_API::get_key() ) : ?>
 
                 <div id="mapbox-wrapper"></div>
 
-                <?php if ( isset( $dt_post['location_grid_meta']) ) : ?>
+                <?php if ( isset( $dt_post['location_grid_meta'] ) ) : ?>
 
                     <!-- reveal -->
                     <div class="reveal" id="map-reveal" data-reveal>
@@ -233,7 +233,7 @@ class DT_Training_Post_Type {
                     </div>
                 <?php endif; ?>
 
-            <?php /* No Mapbox Upgrade */ else: ?>
+            <?php /* No Mapbox Upgrade */ else : ?>
 
                 <?php render_field_for_display( 'location_grid', $post_settings["fields"], $dt_post ); ?>
 
@@ -419,43 +419,43 @@ class DT_Training_Post_Type {
                 'ID' => 'all_new',
                 'tab' => 'all_trainings',
                 'name' => _x( "New", 'List Filters', 'disciple_tools' ),
-                'query' => ["status" => [ "new" ] ],
+                'query' => [ "status" => [ "new" ] ],
             ];
             $filters["filters"][] = [
                 'ID' => 'all_proposed',
                 'tab' => 'all_trainings',
                 'name' => _x( "Proposed", 'List Filters', 'disciple_tools' ),
-                'query' => ["status" => [ "proposed" ] ],
+                'query' => [ "status" => [ "proposed" ] ],
             ];
             $filters["filters"][] = [
                 'ID' => 'all_scheduled',
                 'tab' => 'all_trainings',
                 'name' => _x( "Scheduled", 'List Filters', 'disciple_tools' ),
-                'query' => ["status" => [ "scheduled" ] ],
+                'query' => [ "status" => [ "scheduled" ] ],
             ];
             $filters["filters"][] = [
                 'ID' => 'all_in_progress',
                 'tab' => 'all_trainings',
                 'name' => _x( "In Progress", 'List Filters', 'disciple_tools' ),
-                'query' => ["status" => [ "in_progress" ] ],
+                'query' => [ "status" => [ "in_progress" ] ],
             ];
             $filters["filters"][] = [
                 'ID' => 'all_complete',
                 'tab' => 'all_trainings',
                 'name' => _x( "Complete", 'List Filters', 'disciple_tools' ),
-                'query' => ["status" => [ "complete" ] ],
+                'query' => [ "status" => [ "complete" ] ],
             ];
             $filters["filters"][] = [
                 'ID' => 'all_paused',
                 'tab' => 'all_trainings',
                 'name' => _x( "Paused", 'List Filters', 'disciple_tools' ),
-                'query' => ["status" => [ "paused" ] ],
+                'query' => [ "status" => [ "paused" ] ],
             ];
             $filters["filters"][] = [
                 'ID' => 'all_closed',
                 'tab' => 'all_trainings',
                 'name' => _x( "Closed", 'List Filters', 'disciple_tools' ),
-                'query' => ["status" => [ "closed" ] ],
+                'query' => [ "status" => [ "closed" ] ],
             ];
         }
         return $filters;

@@ -1,0 +1,16 @@
+
+.sass-cache/
+node_modules/
+/vendor/*
+.env
+.idea
+.DS_Store
+dt-people-groups/json/*
+composer.phar
+.vscode/*
+CodeSniffer.conf
+phpcbf.phar
+phpcs.phar
+
+*/development-only/*
+
