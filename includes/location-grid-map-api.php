@@ -34,6 +34,7 @@ require_once( $mapping_url . 'geocode-api/location-grid-geocoder.php' );
 // register global database
 global $wpdb;
 $wpdb->dt_location_grid = $wpdb->prefix . 'dt_location_grid';
+$wpdb->dt_location_grid_meta = $wpdb->prefix . 'dt_location_grid_meta';
 
 $geocoder = new Location_Grid_Geocoder();
 
@@ -54,28 +55,13 @@ if ( isset( $_GET['type'] ) && isset( $_GET['longitude'] ) && isset( $_GET['lati
         $longitude = sanitize_text_field( wp_unslash( $_GET['longitude'] ) );
         $latitude  = sanitize_text_field( wp_unslash( $_GET['latitude'] ) );
 
-        $response = $geocoder->get_grid_id_by_lnglat( $longitude, $latitude, $country_code, $level );
-
         require_once ( $mapping_url . 'mapping-queries.php' );
 
-        $results = $wpdb->get_results( $wpdb->prepare( "
-            SELECT
-              g.grid_id as grid_id, 
-              g.alt_name as name, 
-              g.alt_population as population
-            FROM $wpdb->dt_location_grid as g
-            WHERE g.parent_id = %d
-            ORDER BY g.alt_name ASC
-        ", $response['grid_id'] ), ARRAY_A );
-
-        $children = [];
-        foreach ( $results as $result ) {
-            $children[$result['grid_id'] ] = [
-                'value' => rand( 0, 100)
-            ];
+        if ( 'world' === $level ) {
+            $response = Disciple_Tools_Mapping_Queries::get_children_by_grid_id( 1 );
+        } else {
+            $response = $geocoder->get_grid_id_by_lnglat( $longitude, $latitude, $country_code, $level );
         }
-
-        $response['children'] = $children;
 
         header( 'Content-type: application/json' );
         echo json_encode( $response );

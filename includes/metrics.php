@@ -82,7 +82,7 @@ class DT_Training_Metrics
                 'current_user_id' => get_current_user_id(),
                 'map_key' => DT_Mapbox_API::get_key(),
                 "spinner_url" => get_stylesheet_directory_uri() . '/spinner.svg',
-                'data' => [],
+                'data' => $this->get_totals(),
             ]
         );
 
@@ -123,36 +123,9 @@ class DT_Training_Metrics
             return new WP_Error( __METHOD__, "Missing Permissions", [ 'status' => 400 ] );
         }
         $params = $request->get_params();
-
-
         global $wpdb;
 
-//        $results = $wpdb->get_results("
-//            SELECT ps.post_type, lg.longitude as lng, lg.latitude as lat, p.post_id
-//            FROM $wpdb->postmeta as p
-//                INNER JOIN $wpdb->dt_location_grid as lg ON p.meta_value=lg.grid_id
-//                JOIN $wpdb->posts as ps ON ps.ID=p.post_id
-//            WHERE p.meta_key = 'location_grid'
-//            ", ARRAY_A );
-////        dt_write_log($results);
-//        $features = [];
-//        foreach( $results as $result ) {
-//            $features[] = array(
-//                'type' => 'Feature',
-//                'properties' => array("post_type" => $result['post_type'], "post_id" => $result['post_id']),
-//                'geometry' => array(
-//                    'type' => 'Point',
-//                    'coordinates' => array(
-//                        $result['lng'],
-//                        $result['lat'],
-//                        1
-//                    ),
-//                ),
-//            );
-//        }
-
-
-///* pulling 30k from location_grid_meta table */
+        /* pulling 30k from location_grid_meta table */
         $results = $wpdb->get_results("SELECT lg.label as address, p.post_title as name, post_id, lng, lat FROM $wpdb->dt_location_grid_meta as lg JOIN $wpdb->posts as p ON p.ID=lg.post_id WHERE lg.post_type = 'trainings' LIMIT 40000", ARRAY_A );
         $features = [];
         foreach( $results as $result ) {
@@ -184,8 +157,120 @@ class DT_Training_Metrics
             return new WP_Error( __METHOD__, "Missing Permissions", [ 'status' => 400 ] );
         }
 
+        return $this->get_totals();
+
+    }
+
+    public function get_totals() {
+        global $wpdb;
+
+//        if ( get_transient( __METHOD__) ) {
+//            return get_transient( __METHOD__ );
+//        }
+
+        $results = $wpdb->get_results("
+        SELECT
+          t1.admin0_grid_id as grid_id,
+          t1.type,
+          count(t1.admin0_grid_id) as count
+        FROM (
+            SELECT
+                g.admin0_grid_id,
+                CASE
+                    WHEN gt.meta_value = 'church' THEN 'churches'
+                    WHEN cu.meta_value IS NOT NULL THEN 'users'
+                    ELSE pp.post_type
+                END as type
+            FROM $wpdb->postmeta as p
+                JOIN $wpdb->posts as pp ON p.post_id=pp.ID
+                LEFT JOIN $wpdb->dt_location_grid as g ON g.grid_id=p.meta_value             
+                LEFT JOIN $wpdb->postmeta as cu ON cu.post_id=p.post_id AND cu.meta_key = 'corresponds_to_user'
+                LEFT JOIN $wpdb->postmeta as gt ON gt.post_id=p.post_id AND gt.meta_key = 'group_type'
+            WHERE p.meta_key = 'location_grid'
+        ) as t1
+        WHERE t1.admin0_grid_id != ''
+        GROUP BY t1.admin0_grid_id, t1.type
+        UNION
+        SELECT
+          t2.admin1_grid_id as grid_id,
+          t2.type,
+          count(t2.admin1_grid_id) as count
+        FROM (
+                SELECT
+                g.admin1_grid_id,
+                CASE
+                    WHEN gt.meta_value = 'church' THEN 'churches'
+                    WHEN cu.meta_value IS NOT NULL THEN 'users'
+                    ELSE pp.post_type
+                END as type
+            FROM $wpdb->postmeta as p
+                JOIN $wpdb->posts as pp ON p.post_id=pp.ID
+                LEFT JOIN $wpdb->dt_location_grid as g ON g.grid_id=p.meta_value             
+                LEFT JOIN $wpdb->postmeta as cu ON cu.post_id=p.post_id AND cu.meta_key = 'corresponds_to_user'
+                LEFT JOIN $wpdb->postmeta as gt ON gt.post_id=p.post_id AND gt.meta_key = 'group_type'
+            WHERE p.meta_key = 'location_grid'
+        ) as t2
+        WHERE t2.admin1_grid_id != ''
+        GROUP BY t2.admin1_grid_id, t2.type
+        UNION
+        SELECT
+          t3.admin2_grid_id as grid_id,
+          t3.type,
+          count(t3.admin2_grid_id) as count
+        FROM (
+                SELECT
+                g.admin2_grid_id,
+                CASE
+                    WHEN gt.meta_value = 'church' THEN 'churches'
+                    WHEN cu.meta_value IS NOT NULL THEN 'users'
+                    ELSE pp.post_type
+                END as type
+            FROM $wpdb->postmeta as p
+                JOIN $wpdb->posts as pp ON p.post_id=pp.ID
+                LEFT JOIN $wpdb->dt_location_grid as g ON g.grid_id=p.meta_value             
+                LEFT JOIN $wpdb->postmeta as cu ON cu.post_id=p.post_id AND cu.meta_key = 'corresponds_to_user'
+                LEFT JOIN $wpdb->postmeta as gt ON gt.post_id=p.post_id AND gt.meta_key = 'group_type'
+            WHERE p.meta_key = 'location_grid'
+        ) as t3
+        WHERE t3.admin2_grid_id != ''
+        GROUP BY t3.admin2_grid_id, t3.type
+        UNION
+        SELECT
+          t4.admin3_grid_id as grid_id,
+          t4.type,
+          count(t4.admin3_grid_id) as count
+        FROM (
+                SELECT
+                g.admin3_grid_id,
+                CASE
+                    WHEN gt.meta_value = 'church' THEN 'churches'
+                    WHEN cu.meta_value IS NOT NULL THEN 'users'
+                    ELSE pp.post_type
+                END as type
+            FROM $wpdb->postmeta as p
+                JOIN $wpdb->posts as pp ON p.post_id=pp.ID
+                LEFT JOIN $wpdb->dt_location_grid as g ON g.grid_id=p.meta_value             
+                LEFT JOIN $wpdb->postmeta as cu ON cu.post_id=p.post_id AND cu.meta_key = 'corresponds_to_user'
+                LEFT JOIN $wpdb->postmeta as gt ON gt.post_id=p.post_id AND gt.meta_key = 'group_type'
+            WHERE p.meta_key = 'location_grid'
+        ) as t4
+        WHERE t4.admin3_grid_id != ''
+        GROUP BY t4.admin3_grid_id, t4.type;
+    ", ARRAY_A );
+
+        $data = [];
+        foreach ( $results as $result ) {
+            $data[$result['grid_id'] ] = $result;
+        }
+
+        set_transient( __METHOD__, $data, 60 * 60 * 24 );
 
 
+        if ( empty( $data ) ) {
+            $data = [];
+        }
+
+        return $data;
     }
 
     public function contacts_map( WP_REST_Request $request ) {

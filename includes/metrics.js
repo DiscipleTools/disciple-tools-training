@@ -270,6 +270,7 @@ function write_training_choropleth_map() {
                 top:50%;
                 left:50%;
                 display:none;
+                pointer-events: none;
             }
             #spinner {
                 position: absolute;
@@ -292,17 +293,23 @@ function write_training_choropleth_map() {
      `)
 
 
-
     mapboxgl.accessToken = obj.map_key;
     var map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/mapbox/light-v10',
         // style: 'mapbox://styles/mapbox/streets-v11',
         center: [-98, 38.88],
-        minZoom: 2,
-        zoom: 2
+        minZoom: 1,
+        zoom: 1
     });
 
+    // disable map rotation using right click + drag
+    map.dragRotate.disable();
+
+    // disable map rotation using touch rotation gesture
+    map.touchZoomRotate.disableRotation();
+
+    // cross-hair
     map.on('zoomstart', function() {
         jQuery('#cross-hair').show()
     })
@@ -316,246 +323,209 @@ function write_training_choropleth_map() {
         jQuery('#cross-hair').hide()
     })
 
+    // default load
+    window.previous_grid_id = 0
+    map.on('load', function() {
 
-    window.boundary_list = []
+        window.previous_grid_id = '1'
+
+        jQuery.get('https://storage.googleapis.com/location-grid-mirror/collection/1.geojson', null, null, 'json')
+            .done(function (geojson) {
+
+                jQuery.each(geojson.features, function (i, v) {
+                    if (dtTrainingMetrics.data[geojson.features[i].properties.id]) {
+                        geojson.features[i].properties.value = parseInt(dtTrainingMetrics.data[geojson.features[i].properties.id].count)
+                    } else {
+                        geojson.features[i].properties.value = 0
+                    }
+                })
+                map.addSource('1', {
+                    'type': 'geojson',
+                    'data': geojson
+                });
+                map.addLayer({
+                    'id': '1',
+                    'type': 'fill',
+                    'source': '1',
+                    'paint': {
+                        'fill-color': [
+                            'interpolate',
+                            ['linear'],
+                            ['get', 'value'],
+                            0,
+                            'rgba(0, 0, 0, 0)',
+                            1,
+                            '#547df8',
+                            50,
+                            '#3754ab',
+                            100,
+                            '#22346a'
+                        ],
+                        'fill-opacity': 0.75
+                    }
+                });
+                map.addLayer({
+                    'id': '1line',
+                    'type': 'line',
+                    'source': '1',
+                    'paint': {
+                        'line-color': 'black',
+                        'line-width': 1
+                    }
+                });
+            })
+    })
 
     // zoom
-    window.previous_grid_id = 0
     map.on('zoomend', function() {
-        let spinner = jQuery('#spinner')
-
-        spinner.show()
-
-        // call geocoder
-        let level = 'admin0'
-        if ( window.zoom_level >= 5  && window.zoom_level < 7 ) {
-            level = 'admin1'
-        } else if ( window.zoom_level >= 7 ) {
-            level = 'admin2'
-        }
-
         let lnglat = map.getCenter()
-
-        let lng = lnglat.lng
-        let lat = lnglat.lat
-
-        if (lng > 180) {
-            lng = lng - 180
-            lng = -Math.abs(lng)
-        } else if (lng < -180) {
-            lng = lng + 180
-            lng = Math.abs(lng)
-        }
-
-        window.active_lnglat = [lng, lat]
-
-        jQuery.get(obj.plugin_uri + 'includes/location-grid-map-api.php',
-            {
-                type: 'geocode',
-                longitude: lng,
-                latitude: lat,
-                level: level,
-                country_code: null,
-                nonce: obj.nonce
-            }, null, 'json').done(function (data) {
-
-            if ( window.previous_grid_id !== data.grid_id ) {
-
-                // remove previous
-                if ( window.previous_grid_id > 0 && map.getLayer( window.previous_grid_id.toString() ) ) {
-                    map.removeLayer(window.previous_grid_id.toString() )
-                    map.removeSource(window.previous_grid_id.toString() )
-                }
-                // set new
-                window.previous_grid_id = data.grid_id
-
-                // add info to box
-                if (data) {
-                    jQuery('#data').empty().html(`
-                    <p><strong>${data.name}</strong></p>
-                    <p>Population: ${data.population}</p>
-                    `)
-                }
-
-                // add layer
-                var mapLayer = map.getLayer(data.grid_id);
-                if(typeof mapLayer === 'undefined') {
-
-                    jQuery.get('https://storage.googleapis.com/location-grid-mirror/collection/'+data.grid_id+'.geojson', null, null, 'json')
-                        .done(function (geojson) {
-
-                            jQuery.each( geojson.features, function(i,v) {
-                                geojson.features[i].properties.value = data.children[geojson.features[i].properties.id].value
-                            })
-                            map.addSource(data.grid_id.toString(), {
-                                'type': 'geojson',
-                                'data': geojson
-                            });
-                            map.addLayer({
-                                'id': data.grid_id.toString(),
-                                'type': 'fill',
-                                'source': data.grid_id.toString(),
-                                'paint': {
-                                    'fill-color': [
-                                        'interpolate',
-                                        ['linear'],
-                                        ['get', 'value'],
-                                        0,
-                                        '#F2F12D',
-                                        20,
-                                        '#EED322',
-                                        30,
-                                        '#E6B71E',
-                                        40,
-                                        '#DA9C20',
-                                        50,
-                                        '#CA8323',
-                                        70,
-                                        '#B86B25',
-                                        80,
-                                        '#A25626',
-                                        90,
-                                        '#8B4225',
-                                        100,
-                                        '#723122'
-                                    ],
-                                    'fill-opacity': 0.75
-                                }
-                            });
-                        })
-                }
-            }
-            spinner.hide()
-        });
-    })
+        load_section( lnglat.lng, lnglat.lat )
+    } )
 
     // drag pan
-    window.previous_grid_id = 0
     map.on('dragend', function() {
-        let spinner = jQuery('#spinner')
-
-        spinner.show()
-
-        // call geocoder
-        let level = 'admin0'
-        if ( window.zoom_level >= 5  && window.zoom_level < 7 ) {
-            level = 'admin1'
-        } else if ( window.zoom_level >= 7 ) {
-            level = 'admin2'
-        }
-
         let lnglat = map.getCenter()
+        load_section( lnglat.lng, lnglat.lat )
+    } )
 
-        let lng = lnglat.lng
-        let lat = lnglat.lat
-
-        if (lng > 180) {
-            lng = lng - 180
-            lng = -Math.abs(lng)
-        } else if (lng < -180) {
-            lng = lng + 180
-            lng = Math.abs(lng)
-        }
-
-        window.active_lnglat = [lng, lat]
-
-        jQuery.get(obj.plugin_uri + 'includes/location-grid-map-api.php',
-            {
-                type: 'geocode',
-                longitude: lng,
-                latitude: lat,
-                level: level,
-                country_code: null,
-                nonce: obj.nonce
-            }, null, 'json').done(function (data) {
-
-            if ( window.previous_grid_id !== data.grid_id ) {
-
-                // remove previous
-                if ( window.previous_grid_id > 0 && map.getLayer( window.previous_grid_id.toString() ) ) {
-                    map.removeLayer(window.previous_grid_id.toString() )
-                    map.removeSource(window.previous_grid_id.toString() )
-                }
-                // set new
-                window.previous_grid_id = data.grid_id
-
-                // add info to box
-                if (data) {
-                    jQuery('#data').empty().html(`
-                    <p><strong>${data.name}</strong></p>
-                    <p>Population: ${data.population}</p>
-                    `)
-                }
-
-                // add layer
-                var mapLayer = map.getLayer(data.grid_id);
-                if(typeof mapLayer === 'undefined') {
-
-                    jQuery.get('https://storage.googleapis.com/location-grid-mirror/collection/'+data.grid_id+'.geojson', null, null, 'json')
-                        .done(function (geojson) {
-
-                            jQuery.each( geojson.features, function(i,v) {
-                                geojson.features[i].properties.value = data.children[geojson.features[i].properties.id].value
-                            })
-                            map.addSource(data.grid_id.toString(), {
-                                'type': 'geojson',
-                                'data': geojson
-                            });
-                            map.addLayer({
-                                'id': data.grid_id.toString(),
-                                'type': 'fill',
-                                'source': data.grid_id.toString(),
-                                'paint': {
-                                    'fill-color': [
-                                        'interpolate',
-                                        ['linear'],
-                                        ['get', 'value'],
-                                        0,
-                                        '#F2F12D',
-                                        20,
-                                        '#EED322',
-                                        30,
-                                        '#E6B71E',
-                                        40,
-                                        '#DA9C20',
-                                        50,
-                                        '#CA8323',
-                                        70,
-                                        '#B86B25',
-                                        80,
-                                        '#A25626',
-                                        90,
-                                        '#8B4225',
-                                        100,
-                                        '#723122'
-                                    ],
-                                    'fill-opacity': 0.75
-                                }
-                            });
-                        })
-                }
-            }
-            spinner.hide()
-        });
+    // click
+    map.on('click', function( e ) {
+        load_section( e.lngLat.lng, e.lngLat.lat )
     })
+    // map.on('click', function (e) {
+    //     let spinner = jQuery('#spinner')
+    //     spinner.show()
+    //
+    //     let level = 'admin0'
+    //     if ( map.getZoom() <= 2 ) {
+    //         level = 'world'
+    //     }
+    //     else if ( map.getZoom() >= 5 ) {
+    //         level = 'admin1'
+    //     }
+    //
+    //
+    //
+    //     if (lng > 180) {
+    //         lng = lng - 180
+    //         lng = -Math.abs(lng)
+    //     } else if (lng < -180) {
+    //         lng = lng + 180
+    //         lng = Math.abs(lng)
+    //     }
+    //
+    //     window.active_lnglat = [lng, lat]
+    //
+    //     // add marker
+    //     if (window.active_marker) {
+    //         window.active_marker.remove()
+    //     }
+    //     window.active_marker = new mapboxgl.Marker()
+    //         .setLngLat(e.lngLat)
+    //         .addTo(map);
+    //
+    //     jQuery.get(obj.plugin_uri + 'includes/location-grid-map-api.php',
+    //         {
+    //             type: 'geocode',
+    //             longitude: lng,
+    //             latitude: lat,
+    //             level: level,
+    //             country_code: null,
+    //             nonce: obj.nonce
+    //         }, null, 'json').done(function (data) {
+    //
+    //         if ( data.grid_id === undefined ) {
+    //             data.grid_id = '1'
+    //         }
+    //
+    //         if ( window.previous_grid_id !== data.grid_id ) {
+    //
+    //             // remove previous
+    //             if ( window.previous_grid_id > 0 && map.getLayer( window.previous_grid_id.toString() ) ) {
+    //                 map.removeLayer(window.previous_grid_id.toString() )
+    //                 map.removeLayer(window.previous_grid_id.toString() + 'line' )
+    //                 map.removeSource(window.previous_grid_id.toString() )
+    //             }
+    //             // set new
+    //             window.previous_grid_id = data.grid_id
+    //
+    //             // add info to box
+    //             if (data && data.grid_id !== '1' ) {
+    //                 jQuery('#data').empty().html(`
+    //             <p><strong>${data.name}</strong></p>
+    //             <p>Population: ${data.population}</p>
+    //             `)
+    //             }
+    //
+    //             // add layer
+    //             var mapLayer = map.getLayer(data.grid_id);
+    //             if(typeof mapLayer === 'undefined') {
+    //
+    //                 jQuery.get('https://storage.googleapis.com/location-grid-mirror/collection/'+data.grid_id+'.geojson', null, null, 'json')
+    //                     .done(function (geojson) {
+    //
+    //                         jQuery.each( geojson.features, function(i,v) {
+    //                             if ( dtTrainingMetrics.data[geojson.features[i].properties.id] ) {
+    //                                 geojson.features[i].properties.value = parseInt( dtTrainingMetrics.data[geojson.features[i].properties.id].count )
+    //                             } else {
+    //                                 geojson.features[i].properties.value = 0
+    //                             }
+    //                         })
+    //                         map.addSource(data.grid_id.toString(), {
+    //                             'type': 'geojson',
+    //                             'data': geojson
+    //                         });
+    //                         map.addLayer({
+    //                             'id': data.grid_id.toString(),
+    //                             'type': 'fill',
+    //                             'source': data.grid_id.toString(),
+    //                             'paint': {
+    //                                 'fill-color': [
+    //                                     'interpolate',
+    //                                     ['linear'],
+    //                                     ['get', 'value'],
+    //                                     0,
+    //                                     'rgba(0, 0, 0, 0)',
+    //                                     1,
+    //                                     '#547df8',
+    //                                     50,
+    //                                     '#3754ab',
+    //                                     100,
+    //                                     '#22346a'
+    //                                 ],
+    //                                 'fill-opacity': 0.75
+    //                             }
+    //                         });
+    //                         map.addLayer({
+    //                             'id': data.grid_id.toString() + 'line',
+    //                             'type': 'line',
+    //                             'source': data.grid_id.toString(),
+    //                             'paint': {
+    //                                 'line-color': 'black',
+    //                                 'line-width': 1
+    //                             }
+    //                         });
+    //                     })
+    //             }
+    //         }
+    //         spinner.hide()
+    //     });
+    // })
 
-    /***********************************
-     * Click
-     ***********************************/
-    map.on('click', function (e) {
+    function load_section( lng, lat ) {
         let spinner = jQuery('#spinner')
         spinner.show()
 
+        // set geocode level
         let level = 'admin0'
-        if ( window.zoom_level >= 5  && window.zoom_level < 7 ) {
+        if ( map.getZoom() <= 2 ) {
+            level = 'world'
+        }
+        else if ( map.getZoom() >= 5 ) {
             level = 'admin1'
-        } else if ( window.zoom_level >= 7 ) {
-            level = 'admin2'
         }
 
-        let lng = e.lngLat.lng
-        let lat = e.lngLat.lat
-
+        // standardize longitude
         if (lng > 180) {
             lng = lng - 180
             lng = -Math.abs(lng)
@@ -564,16 +534,7 @@ function write_training_choropleth_map() {
             lng = Math.abs(lng)
         }
 
-        window.active_lnglat = [lng, lat]
-
-        // add marker
-        if (window.active_marker) {
-            window.active_marker.remove()
-        }
-        window.active_marker = new mapboxgl.Marker()
-            .setLngLat(e.lngLat)
-            .addTo(map);
-
+        // geocode
         jQuery.get(obj.plugin_uri + 'includes/location-grid-map-api.php',
             {
                 type: 'geocode',
@@ -584,141 +545,153 @@ function write_training_choropleth_map() {
                 nonce: obj.nonce
             }, null, 'json').done(function (data) {
 
-            if ( window.previous_grid_id !== data.grid_id ) {
-
-                // remove previous
-                if ( window.previous_grid_id > 0 && map.getLayer( window.previous_grid_id.toString() ) ) {
-                    map.removeLayer(window.previous_grid_id.toString() )
-                    map.removeSource(window.previous_grid_id.toString() )
-                }
-                // set new
-                window.previous_grid_id = data.grid_id
-
-                // add info to box
-                if (data) {
-                    jQuery('#data').empty().html(`
-                <p><strong>${data.name}</strong></p>
-                <p>Population: ${data.population}</p>
-                `)
+                // default layer to world
+                if ( data.grid_id === undefined ) {
+                    data.grid_id = '1'
                 }
 
-                // add layer
-                var mapLayer = map.getLayer(data.grid_id);
-                if(typeof mapLayer === 'undefined') {
+                // load layer, if new
+                if ( window.previous_grid_id !== data.grid_id ) {
 
-                    jQuery.get('https://storage.googleapis.com/location-grid-mirror/collection/'+data.grid_id+'.geojson', null, null, 'json')
-                        .done(function (geojson) {
+                    // remove previous layer
+                    if ( window.previous_grid_id > 0 && map.getLayer( window.previous_grid_id.toString() ) ) {
+                        map.removeLayer(window.previous_grid_id.toString() )
+                        map.removeLayer(window.previous_grid_id.toString() + 'line' )
+                        map.removeSource(window.previous_grid_id.toString() )
+                    }
+                    window.previous_grid_id = data.grid_id
 
-                            jQuery.each( geojson.features, function(i,v) {
-                                geojson.features[i].properties.value = data.children[geojson.features[i].properties.id].value
-                            })
-                            map.addSource(data.grid_id.toString(), {
-                                'type': 'geojson',
-                                'data': geojson
-                            });
-                            map.addLayer({
-                                'id': data.grid_id.toString(),
-                                'type': 'fill',
-                                'source': data.grid_id.toString(),
-                                'paint': {
-                                    'fill-color': [
-                                        'interpolate',
-                                        ['linear'],
-                                        ['get', 'value'],
-                                        0,
-                                        '#F2F12D',
-                                        20,
-                                        '#EED322',
-                                        30,
-                                        '#E6B71E',
-                                        40,
-                                        '#DA9C20',
-                                        50,
-                                        '#CA8323',
-                                        70,
-                                        '#B86B25',
-                                        80,
-                                        '#A25626',
-                                        90,
-                                        '#8B4225',
-                                        100,
-                                        '#723122'
-                                    ],
-                                    'fill-opacity': 0.75
-                                }
-                            });
-                        })
-                }
-            }
+                    // add info to box
+                    if (data && data.grid_id !== '1' ) {
+                        jQuery('#data').empty().html(`
+                        <p><strong>${data.name}</strong></p>
+                        <p>Population: ${data.population}</p>
+                        `)
+                    }
+
+                    // add layer
+                    var mapLayer = map.getLayer(data.grid_id);
+                    if(typeof mapLayer === 'undefined') {
+
+                        // get geojson collection
+                        jQuery.get('https://storage.googleapis.com/location-grid-mirror/collection/'+data.grid_id+'.geojson', null, null, 'json')
+                            .done(function (geojson) {
+
+                                // add data to geojson properties
+                                jQuery.each( geojson.features, function(i,v) {
+                                    if ( dtTrainingMetrics.data[geojson.features[i].properties.id] ) {
+                                        geojson.features[i].properties.value = parseInt( dtTrainingMetrics.data[geojson.features[i].properties.id].count )
+                                    } else {
+                                        geojson.features[i].properties.value = 0
+                                    }
+                                })
+
+                                // add source
+                                map.addSource(data.grid_id.toString(), {
+                                    'type': 'geojson',
+                                    'data': geojson
+                                });
+
+                                // add fill layer
+                                map.addLayer({
+                                    'id': data.grid_id.toString(),
+                                    'type': 'fill',
+                                    'source': data.grid_id.toString(),
+                                    'paint': {
+                                        'fill-color': [
+                                            'interpolate',
+                                            ['linear'],
+                                            ['get', 'value'],
+                                            0,
+                                            'rgba(0, 0, 0, 0)',
+                                            1,
+                                            '#547df8',
+                                            50,
+                                            '#3754ab',
+                                            100,
+                                            '#22346a'
+                                        ],
+                                        'fill-opacity': 0.75
+                                    }
+                                });
+
+                                // add border lines
+                                map.addLayer({
+                                    'id': data.grid_id.toString() + 'line',
+                                    'type': 'line',
+                                    'source': data.grid_id.toString(),
+                                    'paint': {
+                                        'line-color': 'black',
+                                        'line-width': 1
+                                    }
+                                });
+                            }) // end get geojson collection
+                    } // end add layer
+                } // end load new layer
             spinner.hide()
-        });
-    })
+        }); // end geocode
+    } // end load section function
 
     // details on zoom
-    window.zoom_level = 0
-    map.on('zoom', function() {
-        if ( map.getZoom() >= 1 && map.getZoom() < 2 && window.zoom_level !== 1 ) {
-            window.zoom_level = 1
-            document.getElementById('data').innerHTML = '<h1>Level 1</h1>' + 'zoom: ' + map.getZoom() + '<br>center: ' + map.getCenter() + '<br>boundary: ' + map.getBounds()
-        }
-        if ( map.getZoom() >= 2 && map.getZoom() < 3 && window.zoom_level !== 2 ) {
-            window.zoom_level = 2
-            document.getElementById('data').innerHTML = '<h1>Level 2</h1>' + 'zoom: ' + map.getZoom() + '<br>center: ' + map.getCenter() + '<br>boundary: ' + map.getBounds()
-        }
-        if ( map.getZoom() >= 3 && map.getZoom() < 4 && window.zoom_level !== 3 ) {
-            window.zoom_level = 3
-            document.getElementById('data').innerHTML = '<h1>Level 3</h1>' + 'zoom: ' + map.getZoom() + '<br>center: ' + map.getCenter() + '<br>boundary: ' + map.getBounds()
-        }
-        if ( map.getZoom() >= 4 && map.getZoom() < 5 && window.zoom_level !== 4 ) {
-            window.zoom_level = 4
-            document.getElementById('data').innerHTML = '<h1>Level 4</h1>' + 'zoom: ' + map.getZoom() + '<br>center: ' + map.getCenter() + '<br>boundary: ' + map.getBounds()
-        }
-        if ( map.getZoom() >= 5 && map.getZoom() < 6 && window.zoom_level !== 5 ) {
-            window.zoom_level = 5
-            document.getElementById('data').innerHTML = '<h1>Level 5</h1>' + 'zoom: ' + map.getZoom() + '<br>center: ' + map.getCenter() + '<br>boundary: ' + map.getBounds()
-        }
-        if ( map.getZoom() >= 6 && map.getZoom() < 7 && window.zoom_level !== 6 ) {
-            window.zoom_level = 6
-            document.getElementById('data').innerHTML = '<h1>Level 6</h1>' + 'zoom: ' + map.getZoom() + '<br>center: ' + map.getCenter() + '<br>boundary: ' + map.getBounds()
-        }
-        if ( map.getZoom() >= 7 && map.getZoom() < 8 && window.zoom_level !== 7 ) {
-            window.zoom_level = 7
-            document.getElementById('data').innerHTML = '<h1>Level 7</h1>' + 'zoom: ' + map.getZoom() + '<br>center: ' + map.getCenter() + '<br>boundary: ' + map.getBounds()
-        }
-        if ( map.getZoom() >= 8 && map.getZoom() < 9 && window.zoom_level !== 8 ) {
-            window.zoom_level = 8
-            document.getElementById('data').innerHTML = '<h1>Level 8</h1>' + 'zoom: ' + map.getZoom() + '<br>center: ' + map.getCenter() + '<br>boundary: ' + map.getBounds()
-        }
-        if ( map.getZoom() >= 9 && map.getZoom() < 10 && window.zoom_level !== 9 ) {
-            window.zoom_level = 9
-            document.getElementById('data').innerHTML = '<h1>Level 9</h1>' + 'zoom: ' + map.getZoom() + '<br>center: ' + map.getCenter() + '<br>boundary: ' + map.getBounds()
-        }
-        if ( map.getZoom() >= 10 && map.getZoom() < 11 && window.zoom_level !== 10 ) {
-            window.zoom_level = 10
-            document.getElementById('data').innerHTML = '<h1>Level 10</h1>' + 'zoom: ' + map.getZoom() + '<br>center: ' + map.getCenter() + '<br>boundary: ' + map.getBounds()
-        }
-        if ( map.getZoom() >= 11 && map.getZoom() < 12 && window.zoom_level !== 11 ) {
-            window.zoom_level = 11
-            document.getElementById('data').innerHTML = '<h1>Level 11</h1>' + 'zoom: ' + map.getZoom() + '<br>center: ' + map.getCenter() + '<br>boundary: ' + map.getBounds()
-        }
-        if ( map.getZoom() >= 12 && map.getZoom() < 13 && window.zoom_level !== 12 ) {
-            window.zoom_level = 12
-            document.getElementById('data').innerHTML = '<h1>Level 12</h1>' + 'zoom: ' + map.getZoom() + '<br>center: ' + map.getCenter() + '<br>boundary: ' + map.getBounds()
-        }
-        if ( map.getZoom() >= 13 && map.getZoom() < 14 && window.zoom_level !== 13 ) {
-            window.zoom_level = 13
-            document.getElementById('data').innerHTML = '<h1>Level 13</h1>' + 'zoom: ' + map.getZoom() + '<br>center: ' + map.getCenter() + '<br>boundary: ' + map.getBounds()
-        }
-        if ( map.getZoom() >= 14 && window.zoom_level !== 14 ) {
-            window.zoom_level = 14
-            document.getElementById('data').innerHTML = '<h1>Level 14</h1>' + 'zoom: ' + map.getZoom() + '<br>center: ' + map.getCenter() + '<br>boundary: ' + map.getBounds()
-        }
-
-
-    })
-
-
-
+    // window.zoom_level = 0
+    // map.on('zoom', function() {
+    //     if ( map.getZoom() >= 1 && map.getZoom() < 2 && window.zoom_level !== 1 ) {
+    //         window.zoom_level = 1
+    //         document.getElementById('data').innerHTML = '<h1>Level 1</h1>' + 'zoom: ' + map.getZoom() + '<br>center: ' + map.getCenter() + '<br>boundary: ' + map.getBounds()
+    //     }
+    //     if ( map.getZoom() >= 2 && map.getZoom() < 3 && window.zoom_level !== 2 ) {
+    //         window.zoom_level = 2
+    //         document.getElementById('data').innerHTML = '<h1>Level 2</h1>' + 'zoom: ' + map.getZoom() + '<br>center: ' + map.getCenter() + '<br>boundary: ' + map.getBounds()
+    //     }
+    //     if ( map.getZoom() >= 3 && map.getZoom() < 4 && window.zoom_level !== 3 ) {
+    //         window.zoom_level = 3
+    //         document.getElementById('data').innerHTML = '<h1>Level 3</h1>' + 'zoom: ' + map.getZoom() + '<br>center: ' + map.getCenter() + '<br>boundary: ' + map.getBounds()
+    //     }
+    //     if ( map.getZoom() >= 4 && map.getZoom() < 5 && window.zoom_level !== 4 ) {
+    //         window.zoom_level = 4
+    //         document.getElementById('data').innerHTML = '<h1>Level 4</h1>' + 'zoom: ' + map.getZoom() + '<br>center: ' + map.getCenter() + '<br>boundary: ' + map.getBounds()
+    //     }
+    //     if ( map.getZoom() >= 5 && map.getZoom() < 6 && window.zoom_level !== 5 ) {
+    //         window.zoom_level = 5
+    //         document.getElementById('data').innerHTML = '<h1>Level 5</h1>' + 'zoom: ' + map.getZoom() + '<br>center: ' + map.getCenter() + '<br>boundary: ' + map.getBounds()
+    //     }
+    //     if ( map.getZoom() >= 6 && map.getZoom() < 7 && window.zoom_level !== 6 ) {
+    //         window.zoom_level = 6
+    //         document.getElementById('data').innerHTML = '<h1>Level 6</h1>' + 'zoom: ' + map.getZoom() + '<br>center: ' + map.getCenter() + '<br>boundary: ' + map.getBounds()
+    //     }
+    //     if ( map.getZoom() >= 7 && map.getZoom() < 8 && window.zoom_level !== 7 ) {
+    //         window.zoom_level = 7
+    //         document.getElementById('data').innerHTML = '<h1>Level 7</h1>' + 'zoom: ' + map.getZoom() + '<br>center: ' + map.getCenter() + '<br>boundary: ' + map.getBounds()
+    //     }
+    //     if ( map.getZoom() >= 8 && map.getZoom() < 9 && window.zoom_level !== 8 ) {
+    //         window.zoom_level = 8
+    //         document.getElementById('data').innerHTML = '<h1>Level 8</h1>' + 'zoom: ' + map.getZoom() + '<br>center: ' + map.getCenter() + '<br>boundary: ' + map.getBounds()
+    //     }
+    //     if ( map.getZoom() >= 9 && map.getZoom() < 10 && window.zoom_level !== 9 ) {
+    //         window.zoom_level = 9
+    //         document.getElementById('data').innerHTML = '<h1>Level 9</h1>' + 'zoom: ' + map.getZoom() + '<br>center: ' + map.getCenter() + '<br>boundary: ' + map.getBounds()
+    //     }
+    //     if ( map.getZoom() >= 10 && map.getZoom() < 11 && window.zoom_level !== 10 ) {
+    //         window.zoom_level = 10
+    //         document.getElementById('data').innerHTML = '<h1>Level 10</h1>' + 'zoom: ' + map.getZoom() + '<br>center: ' + map.getCenter() + '<br>boundary: ' + map.getBounds()
+    //     }
+    //     if ( map.getZoom() >= 11 && map.getZoom() < 12 && window.zoom_level !== 11 ) {
+    //         window.zoom_level = 11
+    //         document.getElementById('data').innerHTML = '<h1>Level 11</h1>' + 'zoom: ' + map.getZoom() + '<br>center: ' + map.getCenter() + '<br>boundary: ' + map.getBounds()
+    //     }
+    //     if ( map.getZoom() >= 12 && map.getZoom() < 13 && window.zoom_level !== 12 ) {
+    //         window.zoom_level = 12
+    //         document.getElementById('data').innerHTML = '<h1>Level 12</h1>' + 'zoom: ' + map.getZoom() + '<br>center: ' + map.getCenter() + '<br>boundary: ' + map.getBounds()
+    //     }
+    //     if ( map.getZoom() >= 13 && map.getZoom() < 14 && window.zoom_level !== 13 ) {
+    //         window.zoom_level = 13
+    //         document.getElementById('data').innerHTML = '<h1>Level 13</h1>' + 'zoom: ' + map.getZoom() + '<br>center: ' + map.getCenter() + '<br>boundary: ' + map.getBounds()
+    //     }
+    //     if ( map.getZoom() >= 14 && window.zoom_level !== 14 ) {
+    //         window.zoom_level = 14
+    //         document.getElementById('data').innerHTML = '<h1>Level 14</h1>' + 'zoom: ' + map.getZoom() + '<br>center: ' + map.getCenter() + '<br>boundary: ' + map.getBounds()
+    //     }
+    // })
 
 }
 
