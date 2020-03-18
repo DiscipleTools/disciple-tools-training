@@ -296,25 +296,34 @@ function write_training_choropleth_map() {
                                     <option value="none" disabled></option>
                                 </select> 
                             </div>
-                            <div class="cell small-2 center border-left float-right" >
+                            <div class="cell small-3 center border-left float-right" >
                                 <div class="grid-x">
-                                    <div class="cell small-4">
+                                    <div class="cell small-3">
+                                        Click
+                                    </div>
+                                    <div class="cell small-3">
                                         <div class="switch small center" style="margin:0 auto;">
-                                          <input class="switch-input" id="exampleSwitch1" type="radio" checked name="exampleSwitch">
-                                          <label class="switch-paddle" for="exampleSwitch1">
-                                            <span class="show-for-sr">Download Kittens</span>
+                                          <input class="switch-input" id="click1" type="radio" checked name="exampleSwitch">
+                                          <label class="switch-paddle" for="click1">
+                                            <span class="show-for-sr">Layer</span>
                                           </label>
                                         </div>
                                         Layer
                                     </div>
-                                    <div class="cell small-4">
-                                        Click
-                                    </div>
-                                    <div class="cell small-4">
+                                    <div class="cell small-3">
                                         <div class="switch small center" style="margin:0 auto;">
-                                          <input class="switch-input" id="exampleSwitch2" type="radio" name="exampleSwitch">
-                                          <label class="switch-paddle" for="exampleSwitch2">
-                                            <span class="show-for-sr">Download Kittens</span>
+                                          <input class="switch-input" id="click2" type="radio" name="exampleSwitch">
+                                          <label class="switch-paddle" for="click2">
+                                            <span class="show-for-sr">Add</span>
+                                          </label>
+                                        </div>
+                                        Add
+                                    </div>
+                                    <div class="cell small-3">
+                                        <div class="switch small center" style="margin:0 auto;">
+                                          <input class="switch-input" id="click3" type="radio" name="exampleSwitch">
+                                          <label class="switch-paddle" for="click4">
+                                            <span class="show-for-sr">Details</span>
                                           </label>
                                         </div>
                                         Details
@@ -339,7 +348,7 @@ function write_training_choropleth_map() {
                                     <option value="none" disabled></option>
                                 </select> 
                             </div>
-                            <div class="cell small-3 center border-left info-bar-font">
+                            <div class="cell small-2 center border-left info-bar-font">
                                 
                             </div>
                             <div id="admin" class="cell small-1 center border-left info-bar-font">
