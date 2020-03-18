@@ -19,6 +19,7 @@ class DT_Training_Post_Type {
         add_action( "post_connection_removed", [ $this, "post_connection_removed" ], 10, 4 );
         add_action( "post_connection_added", [ $this, "post_connection_added" ], 10, 4 );
         add_filter( "dt_user_list_filters", [ $this, "dt_user_list_filters" ], 10, 2 );
+        add_filter( "dt_get_post_fields_filter", [ $this, "dt_get_post_fields_filter" ], 10, 2 );
     }
 
     public function after_setup_theme(){
@@ -459,6 +460,13 @@ class DT_Training_Post_Type {
             ];
         }
         return $filters;
+    }
+
+    public function dt_get_post_fields_filter( $fields, $post_type ) {
+        if ( $post_type === 'trainings' ){
+            $fields = apply_filters( 'dt_trainings_fields_post_filter', $fields );
+        }
+        return $fields;
     }
 }
 DT_Training_Post_Type::instance();
