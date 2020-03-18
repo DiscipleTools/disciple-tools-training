@@ -227,8 +227,8 @@ function write_training_choropleth_map() {
                      }
                      #legend {
                         position: absolute;
-                        top: 20px;
-                        right: 20px;
+                        top: 10px;
+                        left: 10px;
                         z-index: 2;
                      }
                      #data {
@@ -237,11 +237,10 @@ function write_training_choropleth_map() {
                     .legend {
                         background-color: #fff;
                         border-radius: 3px;
-                        width: 250px;
-                        
                         box-shadow: 0 1px 2px rgba(0,0,0,0.10);
                         font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
                         padding: 10px;
+                        opacity: .9;
                     }
                     .legend h4 {
                         margin: 0 0 10px;
@@ -269,20 +268,100 @@ function write_training_choropleth_map() {
                         z-index: 20;
                         display:none;
                     }
+                    .info-bar-font {
+                        font-size: 1.5em;
+                        padding-top: 9px;
+                    }
+                    .border-left {
+                        border-left: 1px lightgray solid;
+                    }
                 </style>
                 <div id="map-wrapper">
                     <div id='map'></div>
                     <div id='legend' class='legend'>
-                        <div id="grid"></div>
-                        <div id="info"></div>
-                        <div id="data"></div>
+                        <div class="grid-x grid-margin-x grid-padding-x">
+                            <div class="cell small-1 center info-bar-font">
+                                Trainings 
+                            </div>
+                            <div class="cell small-2 center border-left">
+                                <select id="level" class="small" style="width:170px;">
+                                    <option value="none" disabled></option>
+                                    <option value="none" disabled>Zoom Level</option>
+                                    <option value="none"></option>
+                                    <option value="none" selected>Auto Zoom</option>
+                                    <option value="none" disabled>-----</option>
+                                    <option value="world">World</option>
+                                    <option value="country">Country</option>
+                                    <option value="state">State</option>
+                                    <option value="none" disabled></option>
+                                </select> 
+                            </div>
+                            <div class="cell small-2 center border-left float-right" >
+                                <div class="grid-x">
+                                    <div class="cell small-4">
+                                        <div class="switch small center" style="margin:0 auto;">
+                                          <input class="switch-input" id="exampleSwitch1" type="radio" checked name="exampleSwitch">
+                                          <label class="switch-paddle" for="exampleSwitch1">
+                                            <span class="show-for-sr">Download Kittens</span>
+                                          </label>
+                                        </div>
+                                        Layer
+                                    </div>
+                                    <div class="cell small-4">
+                                        Click
+                                    </div>
+                                    <div class="cell small-4">
+                                        <div class="switch small center" style="margin:0 auto;">
+                                          <input class="switch-input" id="exampleSwitch2" type="radio" name="exampleSwitch">
+                                          <label class="switch-paddle" for="exampleSwitch2">
+                                            <span class="show-for-sr">Download Kittens</span>
+                                          </label>
+                                        </div>
+                                        Details
+                                    </div>
+                                    
+                                </div>
+                           </div>
+                            
+                            <div class="cell small-2 center border-left">
+                                <select id="level" class="small" style="width:170px;">
+                                    <option value="none" disabled></option>
+                                    <option value="none" disabled>Status</option>
+                                    <option value="none"></option>
+                                    <option value="none" selected>All</option>
+                                    <option value="none" disabled>-----</option>
+                                    <option value="world">New</option>
+                                    <option value="country">Proposed</option>
+                                    <option value="state">In-Progress</option>
+                                    <option value="state">Completed</option>
+                                    <option value="state">Paused</option>
+                                    <option value="state">Closed</option>
+                                    <option value="none" disabled></option>
+                                </select> 
+                            </div>
+                            <div class="cell small-3 center border-left info-bar-font">
+                                
+                            </div>
+                            <div id="admin" class="cell small-1 center border-left info-bar-font">
+                                World 
+                            </div>
+                            <div id="zoom" class="cell small-1 center border-left info-bar-font">
+                                0
+                            </div>
+                        </div>
                     </div>
                     <div id="spinner"><img src="${obj.spinner_url}" alt="spinner" style="width: 25px;" /></div>
                     <div id="cross-hair">&#8982</div>
                 </div>
              `)
 
+            // set info box
+            jQuery('.legend').css( 'width', jQuery('#map-wrapper').innerWidth() - 20 )
+            jQuery( window ).resize(function() {
+                jQuery('.legend').css( 'width', jQuery('#map-wrapper').innerWidth() - 20 )
+            });
 
+            // init map
             mapboxgl.accessToken = obj.map_key;
             var map = new mapboxgl.Map({
                 container: 'map',
@@ -383,7 +462,7 @@ function write_training_choropleth_map() {
                 load_layer( e.lngLat.lng, e.lngLat.lat )
             })
 
-
+            // load layer
             function load_layer( lng, lat ) {
                 let spinner = jQuery('#spinner')
                 spinner.show()
@@ -504,66 +583,22 @@ function write_training_choropleth_map() {
                 }); // end geocode
             } // end load section function
 
-            // details on zoom
-            // window.zoom_level = 0
-            // map.on('zoom', function() {
-            //     if ( map.getZoom() >= 1 && map.getZoom() < 2 && window.zoom_level !== 1 ) {
-            //         window.zoom_level = 1
-            //         document.getElementById('data').innerHTML = '<h1>Level 1</h1>' + 'zoom: ' + map.getZoom() + '<br>center: ' + map.getCenter() + '<br>boundary: ' + map.getBounds()
-            //     }
-            //     if ( map.getZoom() >= 2 && map.getZoom() < 3 && window.zoom_level !== 2 ) {
-            //         window.zoom_level = 2
-            //         document.getElementById('data').innerHTML = '<h1>Level 2</h1>' + 'zoom: ' + map.getZoom() + '<br>center: ' + map.getCenter() + '<br>boundary: ' + map.getBounds()
-            //     }
-            //     if ( map.getZoom() >= 3 && map.getZoom() < 4 && window.zoom_level !== 3 ) {
-            //         window.zoom_level = 3
-            //         document.getElementById('data').innerHTML = '<h1>Level 3</h1>' + 'zoom: ' + map.getZoom() + '<br>center: ' + map.getCenter() + '<br>boundary: ' + map.getBounds()
-            //     }
-            //     if ( map.getZoom() >= 4 && map.getZoom() < 5 && window.zoom_level !== 4 ) {
-            //         window.zoom_level = 4
-            //         document.getElementById('data').innerHTML = '<h1>Level 4</h1>' + 'zoom: ' + map.getZoom() + '<br>center: ' + map.getCenter() + '<br>boundary: ' + map.getBounds()
-            //     }
-            //     if ( map.getZoom() >= 5 && map.getZoom() < 6 && window.zoom_level !== 5 ) {
-            //         window.zoom_level = 5
-            //         document.getElementById('data').innerHTML = '<h1>Level 5</h1>' + 'zoom: ' + map.getZoom() + '<br>center: ' + map.getCenter() + '<br>boundary: ' + map.getBounds()
-            //     }
-            //     if ( map.getZoom() >= 6 && map.getZoom() < 7 && window.zoom_level !== 6 ) {
-            //         window.zoom_level = 6
-            //         document.getElementById('data').innerHTML = '<h1>Level 6</h1>' + 'zoom: ' + map.getZoom() + '<br>center: ' + map.getCenter() + '<br>boundary: ' + map.getBounds()
-            //     }
-            //     if ( map.getZoom() >= 7 && map.getZoom() < 8 && window.zoom_level !== 7 ) {
-            //         window.zoom_level = 7
-            //         document.getElementById('data').innerHTML = '<h1>Level 7</h1>' + 'zoom: ' + map.getZoom() + '<br>center: ' + map.getCenter() + '<br>boundary: ' + map.getBounds()
-            //     }
-            //     if ( map.getZoom() >= 8 && map.getZoom() < 9 && window.zoom_level !== 8 ) {
-            //         window.zoom_level = 8
-            //         document.getElementById('data').innerHTML = '<h1>Level 8</h1>' + 'zoom: ' + map.getZoom() + '<br>center: ' + map.getCenter() + '<br>boundary: ' + map.getBounds()
-            //     }
-            //     if ( map.getZoom() >= 9 && map.getZoom() < 10 && window.zoom_level !== 9 ) {
-            //         window.zoom_level = 9
-            //         document.getElementById('data').innerHTML = '<h1>Level 9</h1>' + 'zoom: ' + map.getZoom() + '<br>center: ' + map.getCenter() + '<br>boundary: ' + map.getBounds()
-            //     }
-            //     if ( map.getZoom() >= 10 && map.getZoom() < 11 && window.zoom_level !== 10 ) {
-            //         window.zoom_level = 10
-            //         document.getElementById('data').innerHTML = '<h1>Level 10</h1>' + 'zoom: ' + map.getZoom() + '<br>center: ' + map.getCenter() + '<br>boundary: ' + map.getBounds()
-            //     }
-            //     if ( map.getZoom() >= 11 && map.getZoom() < 12 && window.zoom_level !== 11 ) {
-            //         window.zoom_level = 11
-            //         document.getElementById('data').innerHTML = '<h1>Level 11</h1>' + 'zoom: ' + map.getZoom() + '<br>center: ' + map.getCenter() + '<br>boundary: ' + map.getBounds()
-            //     }
-            //     if ( map.getZoom() >= 12 && map.getZoom() < 13 && window.zoom_level !== 12 ) {
-            //         window.zoom_level = 12
-            //         document.getElementById('data').innerHTML = '<h1>Level 12</h1>' + 'zoom: ' + map.getZoom() + '<br>center: ' + map.getCenter() + '<br>boundary: ' + map.getBounds()
-            //     }
-            //     if ( map.getZoom() >= 13 && map.getZoom() < 14 && window.zoom_level !== 13 ) {
-            //         window.zoom_level = 13
-            //         document.getElementById('data').innerHTML = '<h1>Level 13</h1>' + 'zoom: ' + map.getZoom() + '<br>center: ' + map.getCenter() + '<br>boundary: ' + map.getBounds()
-            //     }
-            //     if ( map.getZoom() >= 14 && window.zoom_level !== 14 ) {
-            //         window.zoom_level = 14
-            //         document.getElementById('data').innerHTML = '<h1>Level 14</h1>' + 'zoom: ' + map.getZoom() + '<br>center: ' + map.getCenter() + '<br>boundary: ' + map.getBounds()
-            //     }
-            // })
+            // info box
+            map.on('zoom', function() {
+                document.getElementById('zoom').innerHTML = Math.floor(map.getZoom())
+
+                let level = 'Country'
+                if ( map.getZoom() <= 2 ) {
+                    level = 'World'
+                }
+                else if ( map.getZoom() >= 5 ) {
+                    level = 'State'
+                }
+                document.getElementById('admin').innerHTML = level
+            })
+
+
+
         }).catch(err=>{
         console.log("error")
         console.log(err)
