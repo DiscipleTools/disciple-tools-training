@@ -651,7 +651,7 @@ function write_training_heatmap4() {
 //         .setLngLat(e.lngLat)
 //         .addTo(map);
 //
-//     jQuery.get(obj.plugin_uri + 'includes/location-grid-map-api.php',
+//     jQuery.get(obj.plugin_uri + 'includes/training-location-grid-api.php',
 //         {
 //             type: 'geocode',
 //             longitude: lng,

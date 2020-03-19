@@ -238,7 +238,7 @@ function write_training_choropleth_map() {
                         background-color: #fff;
                         border-radius: 3px;
                         box-shadow: 0 1px 2px rgba(0,0,0,0.10);
-                        font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+                        font: 12px/20px 'Roboto', Arial, sans-serif;
                         padding: 10px;
                         opacity: .9;
                     }
@@ -279,15 +279,24 @@ function write_training_choropleth_map() {
                     .border-left {
                         border-left: 1px lightgray solid;
                     }
-                    #error-info {
+                    #geocode-details {
                         position: absolute;
-                        z-index: 20;
-                        font-size:1em;
-                        font-weight: normal;
-                        top:50%;
-                        left:50%;
+                        top: 100px;
+                        right: 10px;
+                        z-index: 2;
+                    }
+                    .geocode-details {
+                        background-color: #fff;
+                        border-radius: 3px;
+                        box-shadow: 0 1px 2px rgba(0,0,0,0.10);
+                        font: 12px/20px 'Roboto', Arial, sans-serif;
+                        padding: 10px;
+                        opacity: .9;
+                        width: 300px;
                         display:none;
-                        pointer-events: none;
+                    }
+                    .close-details {
+                        cursor:pointer;
                     }
                 </style>
                 <div id="map-wrapper">
@@ -302,7 +311,7 @@ function write_training_choropleth_map() {
                                     <option value="none" disabled></option>
                                     <option value="none" disabled>Zoom Level</option>
                                     <option value="none"></option>
-                                    <option value="none" selected>Auto Zoom</option>
+                                    <option value="auto" selected>Auto Zoom</option>
                                     <option value="none" disabled>-----</option>
                                     <option value="world">World</option>
                                     <option value="admin0">Country</option>
@@ -377,15 +386,16 @@ function write_training_choropleth_map() {
                     </div>
                     <div id="spinner"><img src="${obj.spinner_url}" class="spinner-image" alt="spinner"/></div>
                     <div id="cross-hair">&#8982</div>
-                    <div id="error-info"></div>
+                    <div id="geocode-details" class="geocode-details">
+                        Details<span class="close-details" style="float:right;"><i class="fi-x"></i></span>
+                        <hr style="margin:10px 5px;">
+                        <div id="geocode-details-content"></div>
+                    </div>
                 </div>
              `)
 
             // set info box
-            jQuery('.legend').css( 'width', jQuery('#map-wrapper').innerWidth() - 20 )
-            jQuery( window ).resize(function() {
-                jQuery('.legend').css( 'width', jQuery('#map-wrapper').innerWidth() - 20 )
-            });
+            set_info_boxes()
 
             // init map
             mapboxgl.accessToken = obj.map_key;
@@ -395,7 +405,7 @@ function write_training_choropleth_map() {
                 // style: 'mapbox://styles/mapbox/streets-v11',
                 center: [-98, 38.88],
                 minZoom: 1,
-                zoom: 1
+                zoom: 1.5
             });
 
             // disable map rotation using right click + drag
@@ -473,19 +483,43 @@ function write_training_choropleth_map() {
                     })
             })
 
+            // update info box on zoom
+            map.on('zoom', function() {
+                document.getElementById('zoom').innerHTML = Math.floor(map.getZoom())
+
+                let level = get_level()
+                let name = ''
+                if ( level === 'world') {
+                    name = 'World'
+                } else if ( level === 'admin0') {
+                    name = 'Country'
+                } else if ( level === 'admin1' ) {
+                    name = 'State'
+                }
+                document.getElementById('admin').innerHTML = name
+            })
+
             // click controls
             window.click_behavior = 'layer'
             window.click_add_list = []
             jQuery('.click-behavior').on('click', function() {
                 window.click_behavior = jQuery("input:radio[name=click]:checked").val()
                 if ( window.click_behavior === 'add' ) {
-                    jQuery('#level :selected').attr('selected', false)
-                    jQuery('#level').val(get_level())
+                    close_geocode_details()
+                    set_level()
+                }
+                if ( window.click_behavior === 'detail' ) {
+                    set_level()
+                }
+                if ( window.click_behavior === 'layer' ) {
+                    close_geocode_details()
+                    clear_layers( window.previous_grid_id )
+                    set_level()
                 }
             })
             map.on('click', function( e ) {
-                if ( window.click_behavior === 'details' ) {
-                    // @todo
+                if ( window.click_behavior === 'detail' ) {
+                    load_detail_panel( e.lngLat.lng, e.lngLat.lat )
                 } else {
                     load_layer( e.lngLat.lng, e.lngLat.lat, 'click' )
                 }
@@ -493,13 +527,13 @@ function write_training_choropleth_map() {
 
             // load new layer on event
             map.on('zoomend', function() {
-                if ( window.click_behavior !== 'add' ) {
+                if ( window.click_behavior === 'layer' ) {
                     let lnglat = map.getCenter()
                     load_layer( lnglat.lng, lnglat.lat, 'zoom' )
                 }
             } )
             map.on('dragend', function() {
-                if ( window.click_behavior !== 'add' ) {
+                if ( window.click_behavior === 'layer' ) {
                     let lnglat = map.getCenter()
                     load_layer( lnglat.lng, lnglat.lat, 'drag' )
                 }
@@ -509,10 +543,7 @@ function write_training_choropleth_map() {
                 spinner.show()
 
                 // set geocode level, default to auto
-                let level = jQuery('#level').val()
-                if ( level === 'none' ) { // if none, then auto set
-                    level = get_level()
-                }
+                let level = get_level()
 
                 // standardize longitude
                 if (lng > 180) {
@@ -524,7 +555,7 @@ function write_training_choropleth_map() {
                 }
 
                 // geocode
-                jQuery.get(obj.plugin_uri + 'includes/location-grid-map-api.php',
+                jQuery.get(obj.plugin_uri + 'includes/training-location-grid-api.php',
                     {
                         type: 'geocode',
                         longitude: lng,
@@ -620,13 +651,46 @@ function write_training_choropleth_map() {
                 }); // end geocode
 
             } // end load section function
+            function load_detail_panel( lng, lat ) {
+
+                // standardize longitude
+                if (lng > 180) {
+                    lng = lng - 180
+                    lng = -Math.abs(lng)
+                } else if (lng < -180) {
+                    lng = lng + 180
+                    lng = Math.abs(lng)
+                }
+
+                let content = jQuery('#geocode-details-content')
+                content.empty().html(`<img src="${obj.spinner_url}" class="spinner-image" alt="spinner"/>`)
+
+                jQuery('#geocode-details').show()
+
+                // geocode
+                tAPI.geocode_details( { lng: lng, lat: lat })
+                    .then(details=>{
+                        console.log(details)
+
+                        content.empty().html(`Success`)
+
+                    }); // end geocode
+            }
+            function set_level( auto = false) {
+                if ( auto ) {
+                    jQuery('#level :selected').attr('selected', false)
+                    jQuery('#level').val('auto')
+                } else {
+                    jQuery('#level :selected').attr('selected', false)
+                    jQuery('#level').val(get_level())
+                }
+            }
             function remove_layer( grid_id, event_type ) {
                 window.previous_grid_list.push( grid_id )
                 window.previous_grid_id = grid_id
 
                 if ( event_type === 'click' && window.click_behavior === 'add' ) {
                     window.click_add_list.push( grid_id )
-                    console.log(window.click_add_list)
                 }
                 else {
                     clear_layers ( grid_id )
@@ -643,28 +707,32 @@ function write_training_choropleth_map() {
                 })
             }
             function get_level() {
-                let level = 'admin0'
-                if ( map.getZoom() <= 2 ) {
-                    level = 'world'
-                }
-                else if ( map.getZoom() >= 5 ) {
-                    level = 'admin1'
+                let level = jQuery('#level').val()
+                if ( level === 'auto' || level === 'none' ) { // if none, then auto set
+                    level = 'admin0'
+                    if ( map.getZoom() <= 3 ) {
+                        level = 'world'
+                    }
+                    else if ( map.getZoom() >= 5 ) {
+                        level = 'admin1'
+                    }
                 }
                 return level;
             }
+            function set_info_boxes() {
+                let map_wrapper = jQuery('#map-wrapper')
+                jQuery('.legend').css( 'width', map_wrapper.innerWidth() - 20 )
+                jQuery( window ).resize(function() {
+                    jQuery('.legend').css( 'width', map_wrapper.innerWidth() - 20 )
+                });
+                jQuery('#geocode-details').css('height', map_wrapper.innerHeight() - 125 )
+            }
+            function close_geocode_details() {
+                jQuery('#geocode-details').hide()
+            }
 
-            // update info box on zoom
-            map.on('zoom', function() {
-                document.getElementById('zoom').innerHTML = Math.floor(map.getZoom())
-
-                let level = 'Country'
-                if ( map.getZoom() <= 2 ) {
-                    level = 'World'
-                }
-                else if ( map.getZoom() >= 5 ) {
-                    level = 'State'
-                }
-                document.getElementById('admin').innerHTML = level
+            jQuery('.close-details').on('click', function() {
+                jQuery('#geocode-details').hide()
             })
 
         }).catch(err=>{
@@ -895,7 +963,7 @@ function write_training_points_map() {
         }
 
         // geocode
-        jQuery.get(obj.plugin_uri + 'includes/location-grid-map-api.php',
+        jQuery.get(obj.plugin_uri + 'includes/training-location-grid-api.php',
             {
                 type: 'geocode',
                 longitude: lng,
@@ -1015,6 +1083,8 @@ window.tAPI = {
     grid_totals: () => makeRequest('GET', 'trainings/grid_totals' ),
 
     grid_country_totals: () => makeRequest('GET', 'trainings/grid_country_totals' ),
+
+    geocode_details: ( data ) => makeRequest('POST', 'trainings/geocode_details', data ),
 
 }
 function makeRequest (type, url, data, base = 'dt/v1/') {

@@ -121,6 +121,14 @@ class DT_Training_Metrics
                 ],
             ]
         );
+        register_rest_route(
+            $namespace, '/trainings/geocode_details', [
+                [
+                    'methods'  => WP_REST_Server::CREATABLE,
+                    'callback' => [ $this, 'geocode_details' ],
+                ],
+            ]
+        );
 
     }
 
@@ -285,6 +293,21 @@ class DT_Training_Metrics
 
         return $list;
 
+    }
+
+    public function geocode_details( WP_REST_Request $request ) {
+        if ( !$this->has_permission() ){
+            return new WP_Error( __METHOD__, "Missing Permissions", [ 'status' => 400 ] );
+        }
+        $params = $request->get_json_params() ?? $request->get_body_params();
+        if ( isset( $params['lng'] ) && ! empty( $params['lng'] ) && isset( $params['lat'] ) && ! empty( $params['lat'] ) ) {
+            $geocoder = new Location_Grid_Geocoder();
+            $response = $geocoder->get_grid_id_by_lnglat( $params['lng'], $params['lat'] );
+
+            return $response;
+        } else {
+            return new WP_Error( __METHOD__, "Wrong parameters", [ 'status' => 400 ] );
+        }
     }
 
 }
