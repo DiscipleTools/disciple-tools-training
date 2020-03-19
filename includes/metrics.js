@@ -317,7 +317,7 @@ function write_training_choropleth_map() {
                                     </div>
                                     <div class="cell small-3">
                                         <div class="switch small center" style="margin:0 auto;">
-                                          <input class="switch-input" id="click1" type="radio" checked name="click">
+                                          <input class="switch-input click-behavior" id="click1" type="radio" value="layer" checked name="click">
                                           <label class="switch-paddle" for="click1">
                                             <span class="show-for-sr">Layer</span>
                                           </label>
@@ -326,7 +326,7 @@ function write_training_choropleth_map() {
                                     </div>
                                     <div class="cell small-3">
                                         <div class="switch small center" style="margin:0 auto;">
-                                          <input class="switch-input" id="click2" type="radio" name="click">
+                                          <input class="switch-input click-behavior" id="click2" type="radio" value="add" name="click">
                                           <label class="switch-paddle" for="click2">
                                             <span class="show-for-sr">Add</span>
                                           </label>
@@ -335,7 +335,7 @@ function write_training_choropleth_map() {
                                     </div>
                                     <div class="cell small-3">
                                         <div class="switch small center" style="margin:0 auto;">
-                                          <input class="switch-input" id="click3" type="radio" name="click">
+                                          <input class="switch-input click-behavior" id="click3" type="radio" value="detail" name="click">
                                           <label class="switch-paddle" for="click3">
                                             <span class="show-for-sr">Details</span>
                                           </label>
@@ -370,6 +370,7 @@ function write_training_choropleth_map() {
                                 <div class="grid-y">
                                     <div class="cell center" id="admin">World</div>
                                     <div class="cell center" id="zoom" >0</div>
+                                    <div class="cell center"><a onclick="write_training_choropleth_map()">reset</a></div>
                                 </div>
                             </div>
                         </div>
@@ -417,12 +418,14 @@ function write_training_choropleth_map() {
                 jQuery('#cross-hair').hide()
             })
 
-            // default load
+            // grid memory vars
             window.previous_grid_id = 0
+            window.previous_grid_list = []
+
+            // default load state
             map.on('load', function() {
-
                 window.previous_grid_id = '1'
-
+                window.previous_grid_list.push('1')
                 jQuery.get('https://storage.googleapis.com/location-grid-mirror/collection/1.geojson', null, null, 'json')
                     .done(function (geojson) {
 
@@ -470,38 +473,45 @@ function write_training_choropleth_map() {
                     })
             })
 
-            // zoom
-            map.on('zoomend', function() {
-                let lnglat = map.getCenter()
-                load_layer( lnglat.lng, lnglat.lat )
-            } )
-
-            // drag pan
-            map.on('dragend', function() {
-                let lnglat = map.getCenter()
-                load_layer( lnglat.lng, lnglat.lat )
-            } )
-
-            // click
+            // click controls
+            window.click_behavior = 'layer'
+            window.click_add_list = []
+            jQuery('.click-behavior').on('click', function() {
+                window.click_behavior = jQuery("input:radio[name=click]:checked").val()
+                if ( window.click_behavior === 'add' ) {
+                    jQuery('#level :selected').attr('selected', false)
+                    jQuery('#level').val(get_level())
+                }
+            })
             map.on('click', function( e ) {
-                load_layer( e.lngLat.lng, e.lngLat.lat )
+                if ( window.click_behavior === 'details' ) {
+                    // @todo
+                } else {
+                    load_layer( e.lngLat.lng, e.lngLat.lat, 'click' )
+                }
             })
 
-            // load layer
-            function load_layer( lng, lat ) {
+            // load new layer on event
+            map.on('zoomend', function() {
+                if ( window.click_behavior !== 'add' ) {
+                    let lnglat = map.getCenter()
+                    load_layer( lnglat.lng, lnglat.lat, 'zoom' )
+                }
+            } )
+            map.on('dragend', function() {
+                if ( window.click_behavior !== 'add' ) {
+                    let lnglat = map.getCenter()
+                    load_layer( lnglat.lng, lnglat.lat, 'drag' )
+                }
+            } )
+            function load_layer( lng, lat, event_type ) {
                 let spinner = jQuery('#spinner')
                 spinner.show()
 
                 // set geocode level, default to auto
                 let level = jQuery('#level').val()
                 if ( level === 'none' ) { // if none, then auto set
-                    level = 'admin0'
-                    if ( map.getZoom() <= 2 ) {
-                        level = 'world'
-                    }
-                    else if ( map.getZoom() >= 5 ) {
-                        level = 'admin1'
-                    }
+                    level = get_level()
                 }
 
                 // standardize longitude
@@ -530,11 +540,10 @@ function write_training_choropleth_map() {
                             data.grid_id = '1'
                         }
 
-                        // load layer, if new
+                        // is new test
                         if ( window.previous_grid_id !== data.grid_id ) {
 
-
-
+                            // is defined test
                             var mapLayer = map.getLayer(data.grid_id);
                             if(typeof mapLayer === 'undefined') {
 
@@ -601,18 +610,9 @@ function write_training_choropleth_map() {
                                             }
                                         });
 
-                                        // remove previous layer
-                                        if ( window.previous_grid_id > 0 && map.getLayer( window.previous_grid_id.toString() ) ) {
-                                            map.removeLayer(window.previous_grid_id.toString() )
-                                            map.removeLayer(window.previous_grid_id.toString() + 'line' )
-                                            map.removeSource(window.previous_grid_id.toString() )
-                                        }
-                                        window.previous_grid_id = data.grid_id
-
+                                        remove_layer( data.grid_id, event_type )
 
                                     }) // end get geojson collection
-
-
 
                             }
                         } // end load new layer
@@ -620,8 +620,40 @@ function write_training_choropleth_map() {
                 }); // end geocode
 
             } // end load section function
+            function remove_layer( grid_id, event_type ) {
+                window.previous_grid_list.push( grid_id )
+                window.previous_grid_id = grid_id
 
-            // info box
+                if ( event_type === 'click' && window.click_behavior === 'add' ) {
+                    window.click_add_list.push( grid_id )
+                    console.log(window.click_add_list)
+                }
+                else {
+                    clear_layers ( grid_id )
+                }
+            }
+            function clear_layers ( grid_id = null ) {
+                jQuery.each(window.previous_grid_list, function(i,v) {
+                    let mapLayer = map.getLayer(v.toString());
+                    if(typeof mapLayer !== 'undefined' && v !== grid_id) {
+                        map.removeLayer( v.toString() )
+                        map.removeLayer( v.toString() + 'line' )
+                        map.removeSource( v.toString() )
+                    }
+                })
+            }
+            function get_level() {
+                let level = 'admin0'
+                if ( map.getZoom() <= 2 ) {
+                    level = 'world'
+                }
+                else if ( map.getZoom() >= 5 ) {
+                    level = 'admin1'
+                }
+                return level;
+            }
+
+            // update info box on zoom
             map.on('zoom', function() {
                 document.getElementById('zoom').innerHTML = Math.floor(map.getZoom())
 
@@ -634,7 +666,6 @@ function write_training_choropleth_map() {
                 }
                 document.getElementById('admin').innerHTML = level
             })
-
 
         }).catch(err=>{
         console.log("error")
