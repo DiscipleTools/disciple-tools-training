@@ -255,7 +255,8 @@ function write_training_choropleth_map() {
                     #cross-hair {
                         position: absolute;
                         z-index: 20;
-                        font-size:3em;
+                        font-size:30px;
+                        font-weight: normal;
                         top:50%;
                         left:50%;
                         display:none;
@@ -268,12 +269,25 @@ function write_training_choropleth_map() {
                         z-index: 20;
                         display:none;
                     }
+                    .spinner-image {
+                        width: 30px;
+                    }
                     .info-bar-font {
                         font-size: 1.5em;
                         padding-top: 9px;
                     }
                     .border-left {
                         border-left: 1px lightgray solid;
+                    }
+                    #error-info {
+                        position: absolute;
+                        z-index: 20;
+                        font-size:1em;
+                        font-weight: normal;
+                        top:50%;
+                        left:50%;
+                        display:none;
+                        pointer-events: none;
                     }
                 </style>
                 <div id="map-wrapper">
@@ -291,8 +305,8 @@ function write_training_choropleth_map() {
                                     <option value="none" selected>Auto Zoom</option>
                                     <option value="none" disabled>-----</option>
                                     <option value="world">World</option>
-                                    <option value="country">Country</option>
-                                    <option value="state">State</option>
+                                    <option value="admin0">Country</option>
+                                    <option value="admin1">State</option>
                                     <option value="none" disabled></option>
                                 </select> 
                             </div>
@@ -303,7 +317,7 @@ function write_training_choropleth_map() {
                                     </div>
                                     <div class="cell small-3">
                                         <div class="switch small center" style="margin:0 auto;">
-                                          <input class="switch-input" id="click1" type="radio" checked name="exampleSwitch">
+                                          <input class="switch-input" id="click1" type="radio" checked name="click">
                                           <label class="switch-paddle" for="click1">
                                             <span class="show-for-sr">Layer</span>
                                           </label>
@@ -312,7 +326,7 @@ function write_training_choropleth_map() {
                                     </div>
                                     <div class="cell small-3">
                                         <div class="switch small center" style="margin:0 auto;">
-                                          <input class="switch-input" id="click2" type="radio" name="exampleSwitch">
+                                          <input class="switch-input" id="click2" type="radio" name="click">
                                           <label class="switch-paddle" for="click2">
                                             <span class="show-for-sr">Add</span>
                                           </label>
@@ -321,8 +335,8 @@ function write_training_choropleth_map() {
                                     </div>
                                     <div class="cell small-3">
                                         <div class="switch small center" style="margin:0 auto;">
-                                          <input class="switch-input" id="click3" type="radio" name="exampleSwitch">
-                                          <label class="switch-paddle" for="click4">
+                                          <input class="switch-input" id="click3" type="radio" name="click">
+                                          <label class="switch-paddle" for="click3">
                                             <span class="show-for-sr">Details</span>
                                           </label>
                                         </div>
@@ -348,19 +362,21 @@ function write_training_choropleth_map() {
                                     <option value="none" disabled></option>
                                 </select> 
                             </div>
-                            <div class="cell small-2 center border-left info-bar-font">
+                            <div class="cell small-3 center border-left info-bar-font">
                                 
                             </div>
-                            <div id="admin" class="cell small-1 center border-left info-bar-font">
-                                World 
-                            </div>
-                            <div id="zoom" class="cell small-1 center border-left info-bar-font">
-                                0
+                            
+                            <div class="cell small-1 center border-left">
+                                <div class="grid-y">
+                                    <div class="cell center" id="admin">World</div>
+                                    <div class="cell center" id="zoom" >0</div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div id="spinner"><img src="${obj.spinner_url}" alt="spinner" style="width: 25px;" /></div>
+                    <div id="spinner"><img src="${obj.spinner_url}" class="spinner-image" alt="spinner"/></div>
                     <div id="cross-hair">&#8982</div>
+                    <div id="error-info"></div>
                 </div>
              `)
 
@@ -476,13 +492,16 @@ function write_training_choropleth_map() {
                 let spinner = jQuery('#spinner')
                 spinner.show()
 
-                // set geocode level
-                let level = 'admin0'
-                if ( map.getZoom() <= 2 ) {
-                    level = 'world'
-                }
-                else if ( map.getZoom() >= 5 ) {
-                    level = 'admin1'
+                // set geocode level, default to auto
+                let level = jQuery('#level').val()
+                if ( level === 'none' ) { // if none, then auto set
+                    level = 'admin0'
+                    if ( map.getZoom() <= 2 ) {
+                        level = 'world'
+                    }
+                    else if ( map.getZoom() >= 5 ) {
+                        level = 'admin1'
+                    }
                 }
 
                 // standardize longitude
@@ -503,7 +522,8 @@ function write_training_choropleth_map() {
                         level: level,
                         country_code: null,
                         nonce: obj.nonce
-                    }, null, 'json').done(function (data) {
+                    }, null, 'json')
+                    .done(function (data) {
 
                         // default layer to world
                         if ( data.grid_id === undefined ) {
@@ -513,34 +533,29 @@ function write_training_choropleth_map() {
                         // load layer, if new
                         if ( window.previous_grid_id !== data.grid_id ) {
 
-                            // remove previous layer
-                            if ( window.previous_grid_id > 0 && map.getLayer( window.previous_grid_id.toString() ) ) {
-                                map.removeLayer(window.previous_grid_id.toString() )
-                                map.removeLayer(window.previous_grid_id.toString() + 'line' )
-                                map.removeSource(window.previous_grid_id.toString() )
-                            }
-                            window.previous_grid_id = data.grid_id
 
-                            // add info to box
-                            if (data && data.grid_id !== '1' ) {
-                                jQuery('#data').empty().html(`
-                                <p><strong>${data.name}</strong></p>
-                                <p>Population: ${data.population}</p>
-                                `)
-                            }
 
-                            // add layer
                             var mapLayer = map.getLayer(data.grid_id);
                             if(typeof mapLayer === 'undefined') {
 
                                 // get geojson collection
-                                jQuery.get('https://storage.googleapis.com/location-grid-mirror/collection/'+data.grid_id+'.geojson', null, null, 'json')
+                                jQuery.ajax({
+                                    type: 'GET',
+                                    contentType: "application/json; charset=utf-8",
+                                    dataType: "json",
+                                    url: 'https://storage.googleapis.com/location-grid-mirror/collection/' + data.grid_id + '.geojson',
+                                    statusCode: {
+                                        404: function() {
+                                            console.log('404. Do nothing.')
+                                        }
+                                    }
+                                })
                                     .done(function (geojson) {
 
                                         // add data to geojson properties
-                                        jQuery.each( geojson.features, function(i,v) {
-                                            if ( grid_data[geojson.features[i].properties.id] ) {
-                                                geojson.features[i].properties.value = parseInt( grid_data[geojson.features[i].properties.id].count )
+                                        jQuery.each(geojson.features, function (i, v) {
+                                            if (grid_data[geojson.features[i].properties.id]) {
+                                                geojson.features[i].properties.value = parseInt(grid_data[geojson.features[i].properties.id].count)
                                             } else {
                                                 geojson.features[i].properties.value = 0
                                             }
@@ -585,11 +600,25 @@ function write_training_choropleth_map() {
                                                 'line-width': 1
                                             }
                                         });
+
+                                        // remove previous layer
+                                        if ( window.previous_grid_id > 0 && map.getLayer( window.previous_grid_id.toString() ) ) {
+                                            map.removeLayer(window.previous_grid_id.toString() )
+                                            map.removeLayer(window.previous_grid_id.toString() + 'line' )
+                                            map.removeSource(window.previous_grid_id.toString() )
+                                        }
+                                        window.previous_grid_id = data.grid_id
+
+
                                     }) // end get geojson collection
-                            } // end add layer
+
+
+
+                            }
                         } // end load new layer
                     spinner.hide()
                 }); // end geocode
+
             } // end load section function
 
             // info box
@@ -605,7 +634,6 @@ function write_training_choropleth_map() {
                 }
                 document.getElementById('admin').innerHTML = level
             })
-
 
 
         }).catch(err=>{
@@ -975,12 +1003,6 @@ function makeRequest (type, url, data, base = 'dt/v1/') {
 
     return jQuery.ajax(options)
 }
-function handleAjaxError (err) {
-    if (_.get(err, "statusText") !== "abortPromise" && err.responseText){
-        console.trace("error")
-        console.log(err)
-    }
-}
 jQuery(document).ajaxComplete((event, xhr, settings) => {
     if (_.get(xhr, 'responseJSON.data.status') === 401) {
         console.log('401 error')
@@ -989,3 +1011,7 @@ jQuery(document).ajaxComplete((event, xhr, settings) => {
 }).ajaxError((event, xhr) => {
     handleAjaxError(xhr)
 })
+function handleAjaxError (err) {
+    if (_.get(err, "statusText") !== "abortPromise" && err.responseText){
+    }
+}
