@@ -514,7 +514,7 @@ function write_training_choropleth_map() {
                 if ( window.click_behavior === 'layer' ) {
                     close_geocode_details()
                     clear_layers( window.previous_grid_id )
-                    set_level()
+                    set_level( true )
                 }
             })
             map.on('click', function( e ) {
