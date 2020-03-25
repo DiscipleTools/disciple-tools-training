@@ -60,6 +60,7 @@ class DT_Training_Metrics
                     <li><a href="'. site_url( '/metrics/trainings/' ) .'#cluster_map" onclick="write_training_cluster_map()">'. esc_html__( 'Cluster Map', 'disciple_tools' ) .'</a></li>
                     <li><a href="'. site_url( '/metrics/trainings/' ) .'#choropleth_map" onclick="write_training_choropleth_map()">'. esc_html__( 'Choropleth Map', 'disciple_tools' ) .'</a></li>
                     <li><a href="'. site_url( '/metrics/trainings/' ) .'#points_map" onclick="write_training_points_map()">'. esc_html__( 'Points Map', 'disciple_tools' ) .'</a></li>
+                    <li><a href="'. site_url( '/metrics/trainings/' ) .'#nearest_map" onclick="write_nearest_trainers_map()">'. esc_html__( 'Nearest Map', 'disciple_tools' ) .'</a></li>
                 </ul>
             </li>
             ';
@@ -98,6 +99,14 @@ class DT_Training_Metrics
             ]
         );
         register_rest_route(
+            $namespace, '/trainings/user_geojson', [
+                [
+                    'methods'  => WP_REST_Server::READABLE,
+                    'callback' => [ $this, 'user_geojson' ],
+                ],
+            ]
+        );
+        register_rest_route(
             $namespace, '/trainings/points_geojson', [
                 [
                     'methods'  => WP_REST_Server::READABLE,
@@ -118,14 +127,6 @@ class DT_Training_Metrics
                 [
                     'methods'  => WP_REST_Server::READABLE,
                     'callback' => [ $this, 'grid_country_totals' ],
-                ],
-            ]
-        );
-        register_rest_route(
-            $namespace, '/trainings/geocode_details', [
-                [
-                    'methods'  => WP_REST_Server::CREATABLE,
-                    'callback' => [ $this, 'geocode_details' ],
                 ],
             ]
         );
@@ -151,10 +152,10 @@ class DT_Training_Metrics
             $features[] = array(
                 'type' => 'Feature',
                 'properties' => array(
-            "address" => $result['address'],
-            "post_id" => $result['post_id'],
-            "name" => $result['name']
-            ),
+                    "address" => $result['address'],
+                    "post_id" => $result['post_id'],
+                    "name" => $result['name']
+                    ),
                 'geometry' => array(
                     'type' => 'Point',
                     'coordinates' => array(
@@ -170,6 +171,49 @@ class DT_Training_Metrics
             'type' => 'FeatureCollection',
             'features' => $features,
         );
+
+        return $new_data;
+    }
+
+    public function user_geojson( WP_REST_Request $request ) { //@todo get users to populate comparison map
+        if ( ! $this->has_permission() ){
+            return new WP_Error( __METHOD__, "Missing Permissions", [ 'status' => 400 ] );
+        }
+        $new_data = false;
+//        global $wpdb;
+//
+//        /* pulling 30k from location_grid_meta table */
+//        $results = $wpdb->get_results("
+//            SELECT lg.label as address, p.post_title as name, post_id, lng, lat
+//            FROM $wpdb->dt_location_grid_meta as lg
+//                JOIN $wpdb->posts as p ON p.ID=lg.post_id
+//            WHERE lg.post_type = 'users'
+//            LIMIT 40000
+//            ", ARRAY_A );
+//        $features = [];
+//        foreach ( $results as $result ) {
+//            $features[] = array(
+//                'type' => 'Feature',
+//                'properties' => array(
+//                    "address" => $result['address'],
+//                    "post_id" => $result['post_id'],
+//                    "name" => $result['name']
+//                ),
+//                'geometry' => array(
+//                    'type' => 'Point',
+//                    'coordinates' => array(
+//                        $result['lng'],
+//                        $result['lat'],
+//                        1
+//                    ),
+//                ),
+//            );
+//        }
+//
+//        $new_data = array(
+//            'type' => 'FeatureCollection',
+//            'features' => $features,
+//        );
 
         return $new_data;
     }
@@ -224,8 +268,22 @@ class DT_Training_Metrics
             return new WP_Error( __METHOD__, "Missing Permissions", [ 'status' => 400 ] );
         }
 
-        global $wpdb;
-        $results = $wpdb->get_results( "
+        $results = $this->query_totals();
+
+        $list = [];
+        foreach ( $results as $result ) {
+            $list[$result['grid_id']] = $result;
+        }
+
+        return $list;
+
+    }
+
+    public function query_totals( $grid_id = null ) {
+        $results = [];
+        if ( is_null( $grid_id ) ) {
+            global $wpdb;
+            $results = $wpdb->get_results( "
             SELECT t0.admin0_grid_id as grid_id, count(t0.admin0_grid_id) as count 
             FROM (
              SELECT lg.admin0_grid_id FROM $wpdb->dt_location_grid as lg LEFT JOIN $wpdb->dt_location_grid_meta as lgm ON lg.grid_id=lgm.grid_id WHERE lgm.post_type = 'trainings'
@@ -262,14 +320,8 @@ class DT_Training_Metrics
             ) as t5
             GROUP BY t5.admin5_grid_id;
             ", ARRAY_A );
-
-
-        $list = [];
-        foreach ( $results as $result ) {
-            $list[$result['grid_id']] = $result;
         }
-
-        return $list;
+        return $results;
 
     }
 
@@ -295,20 +347,24 @@ class DT_Training_Metrics
 
     }
 
-    public function geocode_details( WP_REST_Request $request ) {
-        if ( !$this->has_permission() ){
-            return new WP_Error( __METHOD__, "Missing Permissions", [ 'status' => 400 ] );
-        }
-        $params = $request->get_json_params() ?? $request->get_body_params();
-        if ( isset( $params['lng'] ) && ! empty( $params['lng'] ) && isset( $params['lat'] ) && ! empty( $params['lat'] ) ) {
-            $geocoder = new Location_Grid_Geocoder();
-            $response = $geocoder->get_grid_id_by_lnglat( $params['lng'], $params['lat'] );
-
-            return $response;
-        } else {
-            return new WP_Error( __METHOD__, "Wrong parameters", [ 'status' => 400 ] );
-        }
-    }
+//    public function geocode_details( WP_REST_Request $request ) {
+//        if ( !$this->has_permission() ){
+//            return new WP_Error( __METHOD__, "Missing Permissions", [ 'status' => 400 ] );
+//        }
+//        $params = $request->get_json_params() ?? $request->get_body_params();
+//
+//        if ( isset( $params['lng'] )
+//            && isset( $params['lat'] )
+//            && isset( $params['level'] ) ) {
+//
+//            $geocoder = new Location_Grid_Geocoder();
+//            $response = $geocoder->get_grid_id_by_lnglat( $params['lng'], $params['lat'], null, $params['level'] );
+//
+//            return $response;
+//        } else {
+//            return new WP_Error( __METHOD__, "Wrong parameters", [ 'status' => 400 ] );
+//        }
+//    }
 
 }
 

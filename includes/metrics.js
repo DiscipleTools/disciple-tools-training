@@ -13,6 +13,10 @@ jQuery(document).ready(function() {
         jQuery('#metrics-sidemenu').foundation('down', jQuery('#training-menu'));
         write_training_points_map()
     }
+    if( '#nearest_map' === window.location.hash  ) {
+        jQuery('#metrics-sidemenu').foundation('down', jQuery('#training-menu'));
+        write_nearest_trainers_map()
+    }
 })
 
 function write_training_cluster_map() {
@@ -387,7 +391,7 @@ function write_training_choropleth_map() {
                     <div id="spinner"><img src="${obj.spinner_url}" class="spinner-image" alt="spinner"/></div>
                     <div id="cross-hair">&#8982</div>
                     <div id="geocode-details" class="geocode-details">
-                        Details<span class="close-details" style="float:right;"><i class="fi-x"></i></span>
+                        Trainings<span class="close-details" style="float:right;"><i class="fi-x"></i></span>
                         <hr style="margin:10px 5px;">
                         <div id="geocode-details-content"></div>
                     </div>
@@ -519,7 +523,19 @@ function write_training_choropleth_map() {
             })
             map.on('click', function( e ) {
                 if ( window.click_behavior === 'detail' ) {
-                    load_detail_panel( e.lngLat.lng, e.lngLat.lat )
+                    // this section increments up the result on level because
+                    // it corresponds better to the viewable user intent for details
+                    let level = get_level()
+                    if ( level === 'world' ) {
+                        level = 'admin0'
+                    }
+                    else if ( level === 'admin0' ) {
+                        level = 'admin1'
+                    }
+                    else if ( level === 'admin1' ) {
+                        level = 'admin2'
+                    }
+                    load_detail_panel( e.lngLat.lng, e.lngLat.lat, level )
                 } else {
                     load_layer( e.lngLat.lng, e.lngLat.lat, 'click' )
                 }
@@ -651,7 +667,7 @@ function write_training_choropleth_map() {
                 }); // end geocode
 
             } // end load section function
-            function load_detail_panel( lng, lat ) {
+            function load_detail_panel( lng, lat, level ) {
 
                 // standardize longitude
                 if (lng > 180) {
@@ -662,19 +678,57 @@ function write_training_choropleth_map() {
                     lng = Math.abs(lng)
                 }
 
+                if ( level === 'world' ) {
+                    level = 'admin0'
+                }
+
                 let content = jQuery('#geocode-details-content')
                 content.empty().html(`<img src="${obj.spinner_url}" class="spinner-image" alt="spinner"/>`)
 
                 jQuery('#geocode-details').show()
 
                 // geocode
-                tAPI.geocode_details( { lng: lng, lat: lat })
+                tAPI.geocode( { lng: lng, lat: lat, level: level } )
                     .then(details=>{
-                        console.log(details)
+                        content.empty()
 
-                        content.empty().html(`Success`)
+                        if ( grid_data[details.admin0_grid_id] ) {
+                            content.append( `
+                            <div>
+                            ${details.admin0_name} : ${grid_data[details.admin0_grid_id].count}
+                            </div>
+                            `)
+                        }
+                        if ( grid_data[details.admin1_grid_id] ) {
+                            content.append( `
+                            <div>
+                            ${details.admin1_name} : ${grid_data[details.admin1_grid_id].count}
+                            </div>
+                            `)
+                        }
+                        if ( grid_data[details.admin2_grid_id] ) {
+                            content.append( `
+                            <div>
+                            ${details.admin2_name} : ${grid_data[details.admin2_grid_id].count}
+                            </div>
+                            `)
+                        }
+
 
                     }); // end geocode
+            }
+            function get_level( ) {
+                let level = jQuery('#level').val()
+                if ( level === 'auto' || level === 'none' ) { // if none, then auto set
+                    level = 'admin0'
+                    if ( map.getZoom() <= 3 ) {
+                        level = 'world'
+                    }
+                    else if ( map.getZoom() >= 5 ) {
+                        level = 'admin1'
+                    }
+                }
+                return level;
             }
             function set_level( auto = false) {
                 if ( auto ) {
@@ -706,26 +760,13 @@ function write_training_choropleth_map() {
                     }
                 })
             }
-            function get_level() {
-                let level = jQuery('#level').val()
-                if ( level === 'auto' || level === 'none' ) { // if none, then auto set
-                    level = 'admin0'
-                    if ( map.getZoom() <= 3 ) {
-                        level = 'world'
-                    }
-                    else if ( map.getZoom() >= 5 ) {
-                        level = 'admin1'
-                    }
-                }
-                return level;
-            }
             function set_info_boxes() {
                 let map_wrapper = jQuery('#map-wrapper')
                 jQuery('.legend').css( 'width', map_wrapper.innerWidth() - 20 )
                 jQuery( window ).resize(function() {
                     jQuery('.legend').css( 'width', map_wrapper.innerWidth() - 20 )
                 });
-                jQuery('#geocode-details').css('height', map_wrapper.innerHeight() - 125 )
+                // jQuery('#geocode-details').css('height', map_wrapper.innerHeight() - 125 )
             }
             function close_geocode_details() {
                 jQuery('#geocode-details').hide()
@@ -1074,9 +1115,310 @@ function write_training_points_map() {
 
 }
 
+function write_nearest_trainers_map() {
+    let obj = dtTrainingMetrics
+    let chart = jQuery('#chart')
+
+    chart.empty().html(`<img src="${obj.plugin_uri}spinner.svg" width="30px" alt="spinner" />`)
+
+    tAPI.cluster_geojson()
+        .then(data=>{
+            console.log(data)
+
+            let geojson = JSON.stringify( data )
+
+            chart.empty().html(`
+            <style>
+                #map-wrapper {
+                    position: relative;
+                    height: ${window.innerHeight - 100}px; 
+                    width:100%;
+                }
+                #map { 
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: 1;
+                    width:100%;
+                    height: ${window.innerHeight - 100}px; 
+                 }
+                 #legend {
+                    position: absolute;
+                    top: 50px;
+                    right: 20px;
+                    z-index: 2;
+                 }
+                 #data {
+                    word-wrap: break-word;
+                 }
+                .legend {
+                    background-color: #fff;
+                    border-radius: 3px;
+                    width: 250px;
+                    box-shadow: 0 1px 2px rgba(0,0,0,0.10);
+                    font: 12px/20px 'Roboto','Helvetica Neue', Arial, Helvetica, sans-serif;
+                    padding: 10px;
+                }
+                .legend h4 {
+                    margin: 0 0 10px;
+                }    
+                .legend div span {
+                    border-radius: 50%;
+                    display: inline-block;
+                    height: 10px;
+                    margin-right: 5px;
+                    width: 10px;
+                }
+            </style>
+            <div id="map-wrapper">
+                <div id='map'></div>
+                <div id='legend' class='legend'>
+                    <div id="data">Zoom to ungrouped record and click for details.</div>
+                </div>
+            </div>
+            `)
+
+            mapboxgl.accessToken = obj.map_key;
+            var map = new mapboxgl.Map({
+                container: 'map',
+                style: 'mapbox://styles/mapbox/light-v10',
+                center: [-98, 38.88],
+                minZoom: 0,
+                zoom: 0
+            });
+            map.addControl(new mapboxgl.FullscreenControl());
+
+            map.on('load', function() {
+
+                map.addSource('trainings', {
+                    type: 'geojson',
+                    data: data,
+                    cluster: true,
+                    clusterMaxZoom: 14,
+                    clusterRadius: 50
+                });
+
+                map.addLayer({
+                    id: 'clusters',
+                    type: 'circle',
+                    source: 'trainings',
+                    filter: ['has', 'point_count'],
+                    paint: {
+                        'circle-color': [
+                            'step',
+                            ['get', 'point_count'],
+                            '#51bbd6',
+                            100,
+                            '#51bbd6',
+                            750,
+                            '#51bbd6'
+                        ],
+                        'circle-radius': [
+                            'step',
+                            ['get', 'point_count'],
+                            20,
+                            100,
+                            30,
+                            750,
+                            40
+                        ]
+                    }
+                });
+
+                map.addLayer({
+                    id: 'cluster-count',
+                    type: 'symbol',
+                    source: 'trainings',
+                    filter: ['has', 'point_count'],
+                    layout: {
+                        'text-field': '{point_count_abbreviated}',
+                        'text-font': ['DIN Offc Pro Medium', 'Arial Unicode MS Bold'],
+                        'text-size': 12
+                    }
+                });
+
+                map.addLayer({
+                    id: 'unclustered-point',
+                    type: 'circle',
+                    source: 'trainings',
+                    filter: ['!', ['has', 'point_count']],
+                    paint: {
+                        'circle-color': '#11b4da',
+                        'circle-radius':12,
+                        'circle-stroke-width': 1,
+                        'circle-stroke-color': '#fff'
+                    }
+                });
+
+
+                map.on('click', 'clusters', function(e) {
+                    var features = map.queryRenderedFeatures(e.point, {
+                        layers: ['clusters']
+                    });
+
+                    var clusterId = features[0].properties.cluster_id;
+                    map.getSource('trainings').getClusterExpansionZoom(
+                        clusterId,
+                        function(err, zoom) {
+                            if (err) return;
+
+                            map.easeTo({
+                                center: features[0].geometry.coordinates,
+                                zoom: zoom
+                            });
+                        }
+                    );
+                })
+
+
+                map.on('click', 'unclustered-point', function(e) {
+                    console.log( e.features )
+                    let dataDiv = jQuery('#data')
+                    dataDiv.empty()
+
+                    jQuery.each( e.features, function(i,v) {
+                        var address = v.properties.address;
+                        var post_id = v.properties.post_id;
+                        var name = v.properties.name
+
+                        dataDiv.append(`<p><a href="/trainings/${post_id}">${name}</a><br>${address}</p>`)
+                    })
+
+                });
+
+                map.on('mouseenter', 'clusters', function() {
+                    map.getCanvas().style.cursor = 'pointer';
+                });
+                map.on('mouseleave', 'clusters', function() {
+                    map.getCanvas().style.cursor = '';
+                });
+
+
+                // load users
+                tAPI.user_geojson()
+                    .then(user_data=>{
+                        map.addSource('trainers', {
+                            type: 'geojson',
+                            data: user_data,
+                            cluster: true,
+                            clusterMaxZoom: 14,
+                            clusterRadius: 50
+                        });
+
+                        map.addLayer({
+                            id: 'user-clusters',
+                            type: 'circle',
+                            source: 'trainers',
+                            filter: ['has', 'point_count'],
+                            paint: {
+                                'circle-color': [
+                                    'step',
+                                    ['get', 'point_count'],
+                                    '#d65155',
+                                    100,
+                                    '#d65155',
+                                    750,
+                                    '#d65155'
+                                ],
+                                'circle-radius': [
+                                    'step',
+                                    ['get', 'point_count'],
+                                    25,
+                                    105,
+                                    35,
+                                    755,
+                                    45
+                                ]
+                            }
+                        });
+
+                        map.addLayer({
+                            id: 'user-cluster-count',
+                            type: 'symbol',
+                            source: 'trainers',
+                            filter: ['has', 'point_count'],
+                            layout: {
+                                'text-field': '{point_count_abbreviated}',
+                                'text-font': ['DIN Offc Pro Medium', 'Arial Unicode MS Bold'],
+                                'text-size': 12
+                            }
+                        });
+
+                        map.addLayer({
+                            id: 'user-unclustered-point',
+                            type: 'circle',
+                            source: 'trainers',
+                            filter: ['!', ['has', 'point_count']],
+                            paint: {
+                                'circle-color': '#11b4da',
+                                'circle-radius':15,
+                                'circle-stroke-width': 1,
+                                'circle-stroke-color': '#fff'
+                            }
+                        });
+
+
+                        map.on('click', 'user-clusters', function(e) {
+                            var features = map.queryRenderedFeatures(e.point, {
+                                layers: ['user-clusters']
+                            });
+
+                            var clusterId = features[0].properties.cluster_id;
+                            map.getSource('trainers').getClusterExpansionZoom(
+                                clusterId,
+                                function(err, zoom) {
+                                    if (err) return;
+
+                                    map.easeTo({
+                                        center: features[0].geometry.coordinates,
+                                        zoom: zoom
+                                    });
+                                }
+                            );
+                        })
+
+
+                        map.on('click', 'user-unclustered-point', function(e) {
+                            console.log( e.features )
+                            let dataDiv = jQuery('#data')
+                            dataDiv.empty()
+
+                            jQuery.each( e.features, function(i,v) {
+                                var address = v.properties.address;
+                                var post_id = v.properties.post_id;
+                                var name = v.properties.name
+
+                                dataDiv.append(`<p><a href="/trainings/${post_id}">${name}</a><br>${address}</p>`)
+                            })
+
+                        });
+
+                        map.on('mouseenter', 'user-clusters', function() {
+                            map.getCanvas().style.cursor = 'pointer';
+                        });
+                        map.on('mouseleave', 'user-clusters', function() {
+                            map.getCanvas().style.cursor = '';
+                        });
+
+                    }).catch(err=>{
+                    console.log("error")
+                    console.log(err)
+                })
+
+            });
+
+        }).catch(err=>{
+        console.log("error")
+        console.log(err)
+    })
+
+}
+
 window.tAPI = {
 
     cluster_geojson: () => makeRequest('GET', 'trainings/cluster_geojson' ),
+
+    user_geojson: () => makeRequest('GET', 'trainings/user_geojson' ),
 
     points_geojson: () => makeRequest('GET', 'trainings/points_geojson' ),
 
@@ -1084,7 +1426,7 @@ window.tAPI = {
 
     grid_country_totals: () => makeRequest('GET', 'trainings/grid_country_totals' ),
 
-    geocode_details: ( data ) => makeRequest('POST', 'trainings/geocode_details', data ),
+    geocode: ( data ) => makeRequest('GET', dtTrainingMetrics.plugin_uri + 'includes/training-location-grid-api.php?type=geocode&longitude='+data.lng+'&latitude='+data.lat+'&level='+data.level+'&nonce='+dtTrainingMetrics.nonce ),
 
 }
 function makeRequest (type, url, data, base = 'dt/v1/') {

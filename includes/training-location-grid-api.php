@@ -57,7 +57,7 @@ if ( isset( $_GET['type'] ) && isset( $_GET['longitude'] ) && isset( $_GET['lati
 
         require_once( $mapping_url . 'mapping-queries.php' );
 
-        if ( 'world' === $level ) {
+        if ( 'world' === $level ) { // @todo world level might need removed
             $response = Disciple_Tools_Mapping_Queries::get_children_by_grid_id( 1 );
         } else {
             $response = $geocoder->get_grid_id_by_lnglat( $longitude, $latitude, $country_code, $level );
