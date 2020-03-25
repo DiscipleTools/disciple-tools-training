@@ -117,7 +117,7 @@ class DT_Training_Metrics
         register_rest_route(
             $namespace, '/trainings/grid_totals', [
                 [
-                    'methods'  => WP_REST_Server::READABLE,
+                    'methods'  => WP_REST_Server::CREATABLE,
                     'callback' => [ $this, 'grid_totals' ],
                 ],
             ]
@@ -267,8 +267,13 @@ class DT_Training_Metrics
         if ( !$this->has_permission() ){
             return new WP_Error( __METHOD__, "Missing Permissions", [ 'status' => 400 ] );
         }
+        $params = $request->get_json_params() ?? $request->get_body_params();
+        $status = null;
+        if ( isset( $params['status'] ) && $params['status'] !== 'all' ) {
+            $status = sanitize_text_field( wp_unslash( $params['status'] ) );
+        }
 
-        $results = $this->query_totals();
+        $results = $this->query_totals( $status );
 
         $list = [];
         foreach ( $results as $result ) {
@@ -279,10 +284,81 @@ class DT_Training_Metrics
 
     }
 
-    public function query_totals( $grid_id = null ) {
-        $results = [];
-        if ( is_null( $grid_id ) ) {
-            global $wpdb;
+    public function query_totals( $status = null ) {
+
+        global $wpdb;
+
+        if ( $status ) {
+            $results = $wpdb->get_results( $wpdb->prepare( "
+            SELECT t0.admin0_grid_id as grid_id, count(t0.admin0_grid_id) as count 
+            FROM (
+             SELECT lg.admin0_grid_id 
+             FROM $wpdb->dt_location_grid_meta as lgm 
+                LEFT JOIN $wpdb->dt_location_grid as lg ON lg.grid_id=lgm.grid_id
+                INNER JOIN $wpdb->postmeta as pm ON pm.post_id=lgm.post_id AND pm.meta_key = 'status' AND pm.meta_value = %s
+             WHERE lgm.post_type = 'trainings'
+            ) as t0
+            GROUP BY t0.admin0_grid_id
+            UNION
+            SELECT t1.admin1_grid_id as grid_id, count(t1.admin1_grid_id) as count 
+            FROM (
+             SELECT lg.admin1_grid_id 
+             FROM $wpdb->dt_location_grid_meta as lgm 
+                LEFT JOIN $wpdb->dt_location_grid as lg ON lg.grid_id=lgm.grid_id
+                INNER JOIN $wpdb->postmeta as pm ON pm.post_id=lgm.post_id AND pm.meta_key = 'status' AND pm.meta_value = %s
+             WHERE lgm.post_type = 'trainings'
+            ) as t1
+            GROUP BY t1.admin1_grid_id
+            UNION
+            SELECT t2.admin2_grid_id as grid_id, count(t2.admin2_grid_id) as count 
+            FROM (
+             SELECT lg.admin2_grid_id 
+             FROM $wpdb->dt_location_grid_meta as lgm 
+                LEFT JOIN $wpdb->dt_location_grid as lg ON lg.grid_id=lgm.grid_id
+                INNER JOIN $wpdb->postmeta as pm ON pm.post_id=lgm.post_id AND pm.meta_key = 'status' AND pm.meta_value = %s
+             WHERE lgm.post_type = 'trainings'
+            ) as t2
+            GROUP BY t2.admin2_grid_id
+            UNION
+            SELECT t3.admin3_grid_id as grid_id, count(t3.admin3_grid_id) as count 
+            FROM (
+             SELECT lg.admin3_grid_id 
+             FROM $wpdb->dt_location_grid_meta as lgm 
+                LEFT JOIN $wpdb->dt_location_grid as lg ON lg.grid_id=lgm.grid_id
+                INNER JOIN $wpdb->postmeta as pm ON pm.post_id=lgm.post_id AND pm.meta_key = 'status' AND pm.meta_value = %s
+             WHERE lgm.post_type = 'trainings'
+            ) as t3
+            GROUP BY t3.admin3_grid_id
+            UNION
+            SELECT t4.admin4_grid_id as grid_id, count(t4.admin4_grid_id) as count 
+            FROM (
+             SELECT lg.admin4_grid_id 
+             FROM $wpdb->dt_location_grid_meta as lgm 
+                LEFT JOIN $wpdb->dt_location_grid as lg ON lg.grid_id=lgm.grid_id
+                INNER JOIN $wpdb->postmeta as pm ON pm.post_id=lgm.post_id AND pm.meta_key = 'status' AND pm.meta_value = %s
+             WHERE lgm.post_type = 'trainings'
+            ) as t4
+            GROUP BY t4.admin4_grid_id
+            UNION
+            SELECT t5.admin5_grid_id as grid_id, count(t5.admin5_grid_id) as count 
+            FROM (
+             SELECT lg.admin5_grid_id 
+             FROM $wpdb->dt_location_grid_meta as lgm 
+                LEFT JOIN $wpdb->dt_location_grid as lg ON lg.grid_id=lgm.grid_id
+                INNER JOIN $wpdb->postmeta as pm ON pm.post_id=lgm.post_id AND pm.meta_key = 'status' AND pm.meta_value = %s
+             WHERE lgm.post_type = 'trainings'
+            ) as t5
+            GROUP BY t5.admin5_grid_id;
+            ",
+                $status,
+                $status,
+                $status,
+                $status,
+                $status,
+                $status ),  ARRAY_A );
+
+        } else {
+
             $results = $wpdb->get_results( "
             SELECT t0.admin0_grid_id as grid_id, count(t0.admin0_grid_id) as count 
             FROM (
@@ -321,6 +397,7 @@ class DT_Training_Metrics
             GROUP BY t5.admin5_grid_id;
             ", ARRAY_A );
         }
+
         return $results;
 
     }
@@ -347,24 +424,6 @@ class DT_Training_Metrics
 
     }
 
-//    public function geocode_details( WP_REST_Request $request ) {
-//        if ( !$this->has_permission() ){
-//            return new WP_Error( __METHOD__, "Missing Permissions", [ 'status' => 400 ] );
-//        }
-//        $params = $request->get_json_params() ?? $request->get_body_params();
-//
-//        if ( isset( $params['lng'] )
-//            && isset( $params['lat'] )
-//            && isset( $params['level'] ) ) {
-//
-//            $geocoder = new Location_Grid_Geocoder();
-//            $response = $geocoder->get_grid_id_by_lnglat( $params['lng'], $params['lat'], null, $params['level'] );
-//
-//            return $response;
-//        } else {
-//            return new WP_Error( __METHOD__, "Wrong parameters", [ 'status' => 400 ] );
-//        }
-//    }
 
 }
 

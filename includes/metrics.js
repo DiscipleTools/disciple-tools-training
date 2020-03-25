@@ -214,6 +214,8 @@ function write_training_choropleth_map() {
     tAPI.grid_totals()
         .then(grid_data=>{
 
+            window.grid_data = grid_data
+
             chart.empty().html(`
                 <style>
                     #map-wrapper {
@@ -360,18 +362,19 @@ function write_training_choropleth_map() {
                            </div>
                             
                             <div class="cell small-2 center border-left">
-                                <select id="level" class="small" style="width:170px;">
+                                <select id="status" class="small" style="width:170px;">
                                     <option value="none" disabled></option>
                                     <option value="none" disabled>Status</option>
                                     <option value="none"></option>
-                                    <option value="none" selected>All</option>
+                                    <option value="all" selected>Status - All</option>
                                     <option value="none" disabled>-----</option>
-                                    <option value="world">New</option>
-                                    <option value="country">Proposed</option>
-                                    <option value="state">In-Progress</option>
-                                    <option value="state">Completed</option>
-                                    <option value="state">Paused</option>
-                                    <option value="state">Closed</option>
+                                    <option value="new">New</option>
+                                    <option value="proposed">Proposed</option>
+                                    <option value="scheduled">Scheduled</option>
+                                    <option value="in_progress">In-Progress</option>
+                                    <option value="complete">Completed</option>
+                                    <option value="paused">Paused</option>
+                                    <option value="closed">Closed</option>
                                     <option value="none" disabled></option>
                                 </select> 
                             </div>
@@ -444,8 +447,8 @@ function write_training_choropleth_map() {
                     .done(function (geojson) {
 
                         jQuery.each(geojson.features, function (i, v) {
-                            if (grid_data[geojson.features[i].properties.id]) {
-                                geojson.features[i].properties.value = parseInt(grid_data[geojson.features[i].properties.id].count)
+                            if (window.grid_data[geojson.features[i].properties.id]) {
+                                geojson.features[i].properties.value = parseInt(window.grid_data[geojson.features[i].properties.id].count)
                             } else {
                                 geojson.features[i].properties.value = 0
                             }
@@ -541,6 +544,24 @@ function write_training_choropleth_map() {
                 }
             })
 
+            // Status
+            jQuery('#status').on('change', function() {
+                window.current_status = jQuery('#status').val()
+
+                tAPI.grid_totals( { status: window.current_status } )
+                    .then(grid_data=>{
+                        console.log( grid_data )
+
+                        window.previous_grid_id = 0
+                        clear_layers()
+                        window.grid_data = grid_data
+
+                        let lnglat = map.getCenter()
+                        load_layer( lnglat.lng, lnglat.lat )
+
+                    })
+
+            })
             // load new layer on event
             map.on('zoomend', function() {
                 if ( window.click_behavior === 'layer' ) {
@@ -610,8 +631,8 @@ function write_training_choropleth_map() {
 
                                         // add data to geojson properties
                                         jQuery.each(geojson.features, function (i, v) {
-                                            if (grid_data[geojson.features[i].properties.id]) {
-                                                geojson.features[i].properties.value = parseInt(grid_data[geojson.features[i].properties.id].count)
+                                            if (window.grid_data[geojson.features[i].properties.id]) {
+                                                geojson.features[i].properties.value = parseInt(window.grid_data[geojson.features[i].properties.id].count)
                                             } else {
                                                 geojson.features[i].properties.value = 0
                                             }
@@ -692,24 +713,24 @@ function write_training_choropleth_map() {
                     .then(details=>{
                         content.empty()
 
-                        if ( grid_data[details.admin0_grid_id] ) {
+                        if ( window.grid_data[details.admin0_grid_id] ) {
                             content.append( `
                             <div>
-                            ${details.admin0_name} : ${grid_data[details.admin0_grid_id].count}
+                            ${details.admin0_name} : ${window.grid_data[details.admin0_grid_id].count}
                             </div>
                             `)
                         }
-                        if ( grid_data[details.admin1_grid_id] ) {
+                        if ( window.grid_data[details.admin1_grid_id] ) {
                             content.append( `
                             <div>
-                            ${details.admin1_name} : ${grid_data[details.admin1_grid_id].count}
+                            ${details.admin1_name} : ${window.grid_data[details.admin1_grid_id].count}
                             </div>
                             `)
                         }
-                        if ( grid_data[details.admin2_grid_id] ) {
+                        if ( window.grid_data[details.admin2_grid_id] ) {
                             content.append( `
                             <div>
-                            ${details.admin2_name} : ${grid_data[details.admin2_grid_id].count}
+                            ${details.admin2_name} : ${window.grid_data[details.admin2_grid_id].count}
                             </div>
                             `)
                         }
@@ -1422,7 +1443,7 @@ window.tAPI = {
 
     points_geojson: () => makeRequest('GET', 'trainings/points_geojson' ),
 
-    grid_totals: () => makeRequest('GET', 'trainings/grid_totals' ),
+    grid_totals: ( data ) => makeRequest('POST', 'trainings/grid_totals', data ),
 
     grid_country_totals: () => makeRequest('GET', 'trainings/grid_country_totals' ),
 
