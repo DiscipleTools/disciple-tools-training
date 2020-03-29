@@ -408,6 +408,7 @@ class DT_Training_Post_Type {
                 "key" => "all_trainings",
                 "label" => _x( "All", 'List Filters', 'disciple_tools' ),
                 "order" => 10
+
             ];
             // add assigned to me filters
             $filters["filters"][] = [

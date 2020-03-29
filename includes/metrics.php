@@ -93,7 +93,7 @@ class DT_Training_Metrics
         register_rest_route(
             $namespace, '/trainings/cluster_geojson', [
                 [
-                    'methods'  => WP_REST_Server::READABLE,
+                    'methods'  => WP_REST_Server::CREATABLE,
                     'callback' => [ $this, 'cluster_geojson' ],
                 ],
             ]
@@ -139,14 +139,24 @@ class DT_Training_Metrics
         }
         global $wpdb;
 
-        /* pulling 30k from location_grid_meta table */
-        $results = $wpdb->get_results("
-            SELECT lg.label as address, p.post_title as name, post_id, lng, lat 
+        $params = $request->get_json_params() ?? $request->get_body_params();
+        $status = '';
+
+        $query = "
+            SELECT lg.label as address, p.post_title as name, lg.post_id, lg.lng, lg.lat 
             FROM $wpdb->dt_location_grid_meta as lg 
                 JOIN $wpdb->posts as p ON p.ID=lg.post_id 
-            WHERE lg.post_type = 'trainings' 
-            LIMIT 40000
-            ", ARRAY_A );
+                LEFT JOIN $wpdb->postmeta as pm ON pm.post_id=p.ID AND pm.meta_key = 'status'
+            WHERE lg.post_type = 'trainings' ";
+
+        if ( isset( $params['status'] ) && ! empty( $params['status'] ) ) {
+            $query .= $wpdb->prepare( " AND pm.meta_value = %s ", $params['status'] );
+        }
+
+        $query .= " LIMIT 40000";
+
+        $results = $wpdb->get_results( $query, ARRAY_A );
+
         $features = [];
         foreach ( $results as $result ) {
             $features[] = array(
