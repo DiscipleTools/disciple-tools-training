@@ -192,7 +192,7 @@ class DT_Training_Post_Type {
     }
 
     public function dt_details_additional_section( $section, $post_type ){
-        // top tile on training details page // @todo remove unncessary header or add editing capability
+        // top tile on training details page // @todo remove unnecessary header or add editing capability
         if ( $section === "details" && $post_type === "trainings" ){
             $post_settings = apply_filters( "dt_get_post_type_settings", [], $post_type );
             $dt_post = DT_Posts::get_post( $post_type, get_the_ID() );
