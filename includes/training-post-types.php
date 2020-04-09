@@ -402,8 +402,40 @@ class DT_Training_Post_Type {
         }
     }
 
+    public static function get_all_training_counts(){
+        global $wpdb;
+        if ( current_user_can( 'view_any_trainings' ) ){
+            $results = $wpdb->get_results("
+                SELECT pm.meta_value as status, count(pm.meta_value) as count
+                FROM $wpdb->postmeta pm
+                INNER JOIN $wpdb->posts a ON( a.ID = pm.post_id AND a.post_type = 'trainings' and a.post_status = 'publish' )
+                WHERE pm.meta_key = 'status'
+                GROUP BY pm.meta_value
+            ", ARRAY_A);
+        } else {
+            $results = []; //@todo with assignment field.
+        }
+
+        return $results;
+    }
+
+
+    private static function increment( &$var, $val ){
+        if ( !isset( $var ) ){
+            $var = 0;
+        }
+        $var += (int) $val;
+    }
     public static function dt_user_list_filters( $filters, $post_type ) {
         if ( $post_type === 'trainings' ) {
+            $counts = self::get_all_training_counts();
+            $post_settings = apply_filters( "dt_get_post_type_settings", [], "trainings" );
+            $total = 0;
+            $status_counts = [];
+            foreach ( $counts as $count ) {
+                $total += $count["count"];
+                self::increment( $status_counts[$count["status"]], $count["count"] );
+            }
             $filters["tabs"][] = [
                 "key" => "all_trainings",
                 "label" => _x( "All", 'List Filters', 'disciple_tools' ),
@@ -416,49 +448,20 @@ class DT_Training_Post_Type {
                 'tab' => 'all_trainings',
                 'name' => _x( "All", 'List Filters', 'disciple_tools' ),
                 'query' => [],
+                'count' => $total
             ];
-            $filters["filters"][] = [
-                'ID' => 'all_new',
-                'tab' => 'all_trainings',
-                'name' => _x( "New", 'List Filters', 'disciple_tools' ),
-                'query' => [ "status" => [ "new" ] ],
-            ];
-            $filters["filters"][] = [
-                'ID' => 'all_proposed',
-                'tab' => 'all_trainings',
-                'name' => _x( "Proposed", 'List Filters', 'disciple_tools' ),
-                'query' => [ "status" => [ "proposed" ] ],
-            ];
-            $filters["filters"][] = [
-                'ID' => 'all_scheduled',
-                'tab' => 'all_trainings',
-                'name' => _x( "Scheduled", 'List Filters', 'disciple_tools' ),
-                'query' => [ "status" => [ "scheduled" ] ],
-            ];
-            $filters["filters"][] = [
-                'ID' => 'all_in_progress',
-                'tab' => 'all_trainings',
-                'name' => _x( "In Progress", 'List Filters', 'disciple_tools' ),
-                'query' => [ "status" => [ "in_progress" ] ],
-            ];
-            $filters["filters"][] = [
-                'ID' => 'all_complete',
-                'tab' => 'all_trainings',
-                'name' => _x( "Complete", 'List Filters', 'disciple_tools' ),
-                'query' => [ "status" => [ "complete" ] ],
-            ];
-            $filters["filters"][] = [
-                'ID' => 'all_paused',
-                'tab' => 'all_trainings',
-                'name' => _x( "Paused", 'List Filters', 'disciple_tools' ),
-                'query' => [ "status" => [ "paused" ] ],
-            ];
-            $filters["filters"][] = [
-                'ID' => 'all_closed',
-                'tab' => 'all_trainings',
-                'name' => _x( "Closed", 'List Filters', 'disciple_tools' ),
-                'query' => [ "status" => [ "closed" ] ],
-            ];
+
+            foreach ( $post_settings["fields"]['status']['default'] as $status_key => $status_value ){
+                if ( isset( $status_counts[$status_key] ) ){
+                    $filters["filters"][] = [
+                        'ID' => "all_$status_key",
+                        'tab' => 'all_trainings',
+                        'name' => $status_value["label"],
+                        'query' => [ "status" => [ $status_key ] ],
+                        'count' => $status_counts[$status_key]
+                    ];
+                }
+            }
         }
         return $filters;
     }
