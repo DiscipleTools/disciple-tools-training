@@ -20,6 +20,7 @@ class DT_Training_Post_Type {
         add_action( "post_connection_added", [ $this, "post_connection_added" ], 10, 4 );
         add_filter( "dt_user_list_filters", [ $this, "dt_user_list_filters" ], 10, 2 );
         add_filter( "dt_get_post_fields_filter", [ $this, "dt_get_post_fields_filter" ], 10, 2 );
+        add_filter( "dt_post_create_fields", [ $this, "dt_post_create_fields" ], 10, 2 );
     }
 
     public function after_setup_theme(){
@@ -400,6 +401,15 @@ class DT_Training_Post_Type {
         } elseif ( ( $post_type === "contacts" || $post_type === "groups" ) && $post_key === "trainings" ) {
             $this->update_event_counts( $value, 'removed', $post_type );
         }
+    }
+
+    public function dt_post_create_fields( $fields, $post_type ){
+        if ( $post_type === "trainings" ){
+            if ( !isset( $fields["status"] ) ){
+                $fields["status"] = "new";
+            }
+        }
+        return $fields;
     }
 
     public static function get_all_training_counts(){
