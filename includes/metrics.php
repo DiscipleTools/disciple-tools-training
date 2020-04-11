@@ -7,7 +7,7 @@ function dt_training_metrics() {
 
 class DT_Training_Metrics
 {
-    public $permissions = [ 'view_any_contacts', 'view_project_metrics' ];
+    public $permissions = [ 'view_any_contacts', 'view_project_metrics', 'create_trainings' ];
 
     private static $_instance = null;
     public static function instance() {
