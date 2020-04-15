@@ -58,8 +58,8 @@ class DT_Training_Metrics
             <li><a href="">' .  esc_html__( 'Training', 'disciple_tools' ) . '</a>
                 <ul class="menu vertical nested" id="training-menu" aria-expanded="true">
                     <li><a href="'. site_url( '/metrics/trainings/' ) .'#cluster_map" onclick="write_training_cluster_map()">'. esc_html__( 'Cluster Map', 'disciple_tools' ) .'</a></li>
-                    <li><a href="'. site_url( '/metrics/trainings/' ) .'#choropleth_map" onclick="write_training_choropleth_map()">'. esc_html__( 'Choropleth Map', 'disciple_tools' ) .'</a></li>
                     <li><a href="'. site_url( '/metrics/trainings/' ) .'#points_map" onclick="write_training_points_map()">'. esc_html__( 'Points Map', 'disciple_tools' ) .'</a></li>
+                    <li><a href="'. site_url( '/metrics/trainings/' ) .'#area_map" onclick="write_training_area_map()">'. esc_html__( 'Area Map', 'disciple_tools' ) .'</a></li>
                     
                 </ul>
             </li>

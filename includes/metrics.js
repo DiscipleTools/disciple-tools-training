@@ -5,9 +5,9 @@ jQuery(document).ready(function() {
         jQuery('#metrics-sidemenu').foundation('down', jQuery('#training-menu'));
         write_training_cluster_map()
     }
-    if( '#choropleth_map' === window.location.hash) {
+    if( '#area_map' === window.location.hash) {
         jQuery('#metrics-sidemenu').foundation('down', jQuery('#training-menu'));
-        write_training_choropleth_map()
+        write_training_area_map()
     }
     if( '#points_map' === window.location.hash  ) {
         jQuery('#metrics-sidemenu').foundation('down', jQuery('#training-menu'));
@@ -305,7 +305,7 @@ function write_training_cluster_map() {
 
 }
 
-function write_training_choropleth_map() {
+function write_training_area_map() {
     let obj = dtTrainingMetrics
     let chart = jQuery('#chart')
 
@@ -486,7 +486,7 @@ function write_training_choropleth_map() {
                                 <div class="grid-y">
                                     <div class="cell center" id="admin">World</div>
                                     <div class="cell center" id="zoom" >0</div>
-                                    <div class="cell center"><a onclick="write_training_choropleth_map()">reset</a></div>
+                                    <div class="cell center"><a onclick="write_training_area_map()">reset</a></div>
                                 </div>
                             </div>
                         </div>
