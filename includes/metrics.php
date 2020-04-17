@@ -98,14 +98,14 @@ class DT_Training_Metrics
                 ],
             ]
         );
-        register_rest_route(
-            $namespace, '/trainings/user_geojson', [
-                [
-                    'methods'  => WP_REST_Server::READABLE,
-                    'callback' => [ $this, 'user_geojson' ],
-                ],
-            ]
-        );
+//        register_rest_route(
+//            $namespace, '/trainings/user_geojson', [
+//                [
+//                    'methods'  => WP_REST_Server::READABLE,
+//                    'callback' => [ $this, 'user_geojson' ],
+//                ],
+//            ]
+//        );
         register_rest_route(
             $namespace, '/trainings/points_geojson', [
                 [
@@ -185,11 +185,11 @@ class DT_Training_Metrics
         return $new_data;
     }
 
-    public function user_geojson( WP_REST_Request $request ) { //@todo get users to populate comparison map
-        if ( ! $this->has_permission() ){
-            return new WP_Error( __METHOD__, "Missing Permissions", [ 'status' => 400 ] );
-        }
-        $new_data = false;
+//    public function user_geojson( WP_REST_Request $request ) { //@todo get users to populate comparison map
+//        if ( ! $this->has_permission() ){
+//            return new WP_Error( __METHOD__, "Missing Permissions", [ 'status' => 400 ] );
+//        }
+//        $new_data = false;
 //        global $wpdb;
 //
 //        /* pulling 30k from location_grid_meta table */
@@ -224,9 +224,8 @@ class DT_Training_Metrics
 //            'type' => 'FeatureCollection',
 //            'features' => $features,
 //        );
-
-        return $new_data;
-    }
+//        return $new_data;
+//    }
 
     public function points_geojson( WP_REST_Request $request ) {
         if ( ! $this->has_permission() ){
@@ -234,7 +233,7 @@ class DT_Training_Metrics
         }
         global $wpdb;
 
-        /* pulling 30k from location_grid_meta table */
+        /* pulling 40k from location_grid_meta table */
         $results = $wpdb->get_results("
             SELECT lgm.label as l, p.post_title as n, lgm.post_id as pid, lgm.lng, lgm.lat, lg.admin0_grid_id as a0, lg.admin1_grid_id as a1
             FROM $wpdb->dt_location_grid_meta as lgm
