@@ -1,5 +1,5 @@
-[![Build Status](https://travis-ci.com/DiscipleTools/disciple-tools-events.svg?branch=master)](https://travis-ci.com/DiscipleTools/disciple-tools-cevents)
+[![Build Status](https://travis-ci.com/DiscipleTools/disciple-tools-training.svg?branch=master)](https://travis-ci.com/DiscipleTools/disciple-tools-training)
 
 # Disciple Tools Training
 
-This extension adds a new post type which can track 
+This extension adds a new post type which can track training events inside Disciple Tools.

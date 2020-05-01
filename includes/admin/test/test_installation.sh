@@ -3,7 +3,7 @@
 # Test installing this plugin using the Wordpress CLI, with a command like this
 # one:
 #
-# wp plugin install --activate https://github.com/ZumeProject/disciple-tools-zume/archive/master.zip
+# wp plugin install --activate https://github.com/ZumeProject/disciple-tools-training/archive/master.zip
 #
 # If this fails, we know we have an issue that we need to fix to make the plugin
 # installable again
