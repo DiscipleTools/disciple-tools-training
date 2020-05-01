@@ -2,4 +2,4 @@
 
 # Disciple Tools Training
 
-This extension adds a new post type which can track training events inside Disciple Tools.
+This extension adds a new post type which can track training events inside Disciple Tools and report on locations.
