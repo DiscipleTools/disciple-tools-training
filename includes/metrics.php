@@ -147,7 +147,7 @@ class DT_Training_Metrics
 
         $query .= " LIMIT 40000";
 
-        $results = $wpdb->get_results( $query, ARRAY_A );
+        $results = $wpdb->get_results( $query, ARRAY_A ); //phpcs:ignore
 
         $features = [];
         foreach ( $results as $result ) {
@@ -314,7 +314,8 @@ class DT_Training_Metrics
                 $status,
                 $status,
                 $status,
-                $status ),  ARRAY_A );
+                $status
+            ), ARRAY_A );
 
         } else {
 

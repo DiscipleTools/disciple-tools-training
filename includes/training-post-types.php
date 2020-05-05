@@ -217,7 +217,7 @@ class DT_Training_Post_Type {
             ?>
 
             <label class="section-header">
-                <?php esc_html_e( 'Location', 'disciple_tools' )?> <a class="button clear" id="new-mapbox-search"><?php esc_html_e( "add", 'zume' ) ?></a>
+                <?php esc_html_e( 'Location', 'disciple_tools' )?> <a class="button clear" id="new-mapbox-search"><?php esc_html_e( "add", 'disciple_tools' ) ?></a>
             </label>
 
             <?php /* If Mapbox Upgrade */ if ( DT_Mapbox_API::get_key() ) : ?>

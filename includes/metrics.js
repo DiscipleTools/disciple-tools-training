@@ -1,5 +1,4 @@
 jQuery(document).ready(function() {
-    // console.log(dtTrainingMetrics)
 
     if( '#cluster_map' === window.location.hash || ! window.location.hash) {
         jQuery('#metrics-sidemenu').foundation('down', jQuery('#training-menu'));
@@ -23,12 +22,10 @@ function write_training_cluster_map() {
     let obj = dtTrainingMetrics
     let chart = jQuery('#chart')
 
-    chart.empty().html(`<img src="${obj.plugin_uri}spinner.svg" width="30px" alt="spinner" />`)
+    chart.empty().html(`<img src="${_.escape(obj.plugin_uri)}spinner.svg" width="30px" alt="spinner" />`)
 
     tAPI.cluster_geojson()
         .then(data=>{
-            console.log(data)
-
             chart.empty().html(`
             <style>
                     #map-wrapper {
@@ -144,7 +141,7 @@ function write_training_cluster_map() {
                             </div>
                         </div>
                     </div>
-                    <div id="spinner"><img src="${obj.spinner_url}" class="spinner-image" alt="spinner"/></div>
+                    <div id="spinner"><img src="${_.escape(obj.spinner_url)}" class="spinner-image" alt="spinner"/></div>
                     <div id="cross-hair">&#8982</div>
                     <div id="geocode-details" class="geocode-details">
                         Trainings<span class="close-details" style="float:right;"><i class="fi-x"></i></span>
@@ -180,9 +177,6 @@ function write_training_cluster_map() {
                 window.current_status = jQuery('#status').val()
                 tAPI.cluster_geojson( { status: window.current_status } )
                     .then(data=> {
-                        console.log(window.current_status)
-                        console.log(data)
-
                         clear_layer()
                         load_layer( data )
                     })
@@ -309,7 +303,7 @@ function write_training_area_map() {
     let obj = dtTrainingMetrics
     let chart = jQuery('#chart')
 
-    chart.empty().html(`<img src="${obj.plugin_uri}spinner.svg" width="30px" alt="spinner" />`)
+    chart.empty().html(`<img src="${_.escape(obj.plugin_uri)}spinner.svg" width="30px" alt="spinner" />`)
 
     tAPI.grid_totals()
         .then(grid_data=>{
@@ -491,7 +485,7 @@ function write_training_area_map() {
                             </div>
                         </div>
                     </div>
-                    <div id="spinner"><img src="${obj.spinner_url}" class="spinner-image" alt="spinner"/></div>
+                    <div id="spinner"><img src="${_.escape(obj.spinner_url)}" class="spinner-image" alt="spinner"/></div>
                     <div id="cross-hair">&#8982</div>
                     <div id="geocode-details" class="geocode-details">
                         Trainings<span class="close-details" style="float:right;"><i class="fi-x"></i></span>
@@ -650,8 +644,6 @@ function write_training_area_map() {
 
                 tAPI.grid_totals( { status: window.current_status } )
                     .then(grid_data=>{
-                        console.log( grid_data )
-
                         window.previous_grid_id = 0
                         clear_layers()
                         window.grid_data = grid_data
@@ -804,7 +796,7 @@ function write_training_area_map() {
                 }
 
                 let content = jQuery('#geocode-details-content')
-                content.empty().html(`<img src="${obj.spinner_url}" class="spinner-image" alt="spinner"/>`)
+                content.empty().html(`<img src="${_.escape(obj.spinner_url)}" class="spinner-image" alt="spinner"/>`)
 
                 jQuery('#geocode-details').show()
 
@@ -908,7 +900,7 @@ function write_training_points_map() {
     let obj = dtTrainingMetrics
     let chart = jQuery('#chart')
 
-    chart.empty().html(`<img src="${obj.plugin_uri}spinner.svg" width="30px" alt="spinner" />`)
+    chart.empty().html(`<img src="${_.escape(obj.plugin_uri)}spinner.svg" width="30px" alt="spinner" />`)
 
     chart.empty().html(`
                 <style>
@@ -977,7 +969,7 @@ function write_training_points_map() {
                         <div id="info"></div>
                         <div id="data"></div>
                     </div>
-                    <div id="spinner"><img src="${obj.spinner_url}" alt="spinner" style="width: 25px;" /></div>
+                    <div id="spinner"><img src="${_.escape(obj.spinner_url)}" alt="spinner" style="width: 25px;" /></div>
                     <div id="cross-hair">&#8982</div>
                 </div>
              `)
@@ -1157,8 +1149,8 @@ function write_training_points_map() {
                 // add info to box
                 if (data && data.grid_id !== '1' ) {
                     jQuery('#data').empty().html(`
-                        <p><strong>${data.name}</strong></p>
-                        <p>Population: ${data.population}</p>
+                        <p><strong>${_.escape(data.name)}</strong></p>
+                        <p>Population: ${_.escape(data.population)}</p>
                         `)
                 }
 
@@ -1198,7 +1190,6 @@ function write_training_points_map() {
                                 filter: ["==", data.grid_id.toString(), ["get", "a0"] ]
                             });
                             map.on('click', data.grid_id.toString() + 'points', function(e) {
-                                console.log( e.features )
                                 let dataDiv = jQuery('#data')
                                 dataDiv.empty()
 
@@ -1207,7 +1198,7 @@ function write_training_points_map() {
                                     var post_id = v.properties.pid;
                                     var name = v.properties.n
 
-                                    dataDiv.append(`<p><a href="/trainings/${post_id}">${name}</a><br>${address}</p>`)
+                                    dataDiv.append(`<p><a href="/trainings/${_.escape(post_id)}">${_.escape(name)}</a><br>${_.escape(address)}</p>`)
                                 })
 
                             });

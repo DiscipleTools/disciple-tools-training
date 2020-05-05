@@ -20,7 +20,7 @@
 if ( ! defined( 'ABSPATH' ) ) {
     exit; // Exit if accessed directly
 }
-$dt_training_required_dt_theme_version = '0.27.0';
+$dt_training_required_dt_theme_version = '0.28.0';
 
 /**
  * Gets the instance of the `DT_Training` class.
@@ -124,7 +124,9 @@ class DT_Training {
         require_once( 'includes/training-post-types.php' );
         require_once( 'includes/customize-site-linking.php' );
         require_once( 'includes/enqueue.php' );
-        require_once( 'includes/metrics.php' );
+        if ( DT_Mapbox_API::get_key() ) {
+            require_once( 'includes/metrics.php' );
+        }
     }
 
     /**
