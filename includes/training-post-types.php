@@ -13,6 +13,7 @@ class DT_Training_Post_Type {
         add_action( 'after_setup_theme', [ $this, 'after_setup_theme' ], 100 );
         add_action( 'p2p_init', [ $this, 'p2p_init' ] );
         add_action( 'dt_details_additional_section', [ $this, 'dt_details_additional_section' ], 10, 2 );
+        add_action( 'dt_modal_help_text', [ $this, 'modal_help_text'], 10 );
 
         add_filter( 'dt_custom_fields_settings', [ $this, 'dt_custom_fields_settings' ], 10, 2 );
         add_filter( 'dt_details_additional_section_ids', [ $this, 'dt_details_additional_section_ids' ], 10, 2 );
@@ -184,7 +185,6 @@ class DT_Training_Post_Type {
         if ( $post_type === "trainings"){
             $sections[] = 'connections';
             $sections[] = 'location';
-//            $sections[] = 'meta';
         }
         if ( $post_type === 'contacts' || $post_type === 'groups' ){
             $sections[] = 'trainings';
@@ -253,54 +253,31 @@ class DT_Training_Post_Type {
 
             <label class="section-header">
                 <?php esc_html_e( 'Connections', 'disciple_tools' )?>
+                <button class="help-button float-right" data-section="connections-help-text">
+                    <img class="help-icon" src="<?php echo esc_html( get_template_directory_uri() . '/dt-assets/images/help.svg' ) ?>"/>
+                </button>
+                <button class="section-chevron chevron_down">
+                    <img src="<?php echo esc_html( get_template_directory_uri() . '/dt-assets/images/chevron_down.svg' ) ?>"/>
+                </button>
+                <button class="section-chevron chevron_up">
+                    <img src="<?php echo esc_html( get_template_directory_uri() . '/dt-assets/images/chevron_up.svg' ) ?>"/>
+                </button>
             </label>
+            <div class="section-body">
 
-            <?php render_field_for_display( 'leaders', $post_settings["fields"], $dt_post ) ?>
+                <?php render_field_for_display( 'leaders', $post_settings["fields"], $dt_post ) ?>
 
-            <?php render_field_for_display( 'leader_count', $post_settings["fields"], $dt_post ) ?>
+                <?php render_field_for_display( 'leader_count', $post_settings["fields"], $dt_post ) ?>
 
-            <?php render_field_for_display( 'contacts', $post_settings["fields"], $dt_post ) ?>
+                <?php render_field_for_display( 'contacts', $post_settings["fields"], $dt_post ) ?>
 
-            <?php render_field_for_display( 'contact_count', $post_settings["fields"], $dt_post ) ?>
+                <?php render_field_for_display( 'contact_count', $post_settings["fields"], $dt_post ) ?>
 
-            <?php render_field_for_display( 'groups', $post_settings["fields"], $dt_post ) ?>
+                <?php render_field_for_display( 'groups', $post_settings["fields"], $dt_post ) ?>
+
+            </div>
 
         <?php }
-
-        // Connections tile on Trainings details page
-        /*
-        if ($section === "meta" && $post_type === "trainings"){
-            $post_type = get_post_type();
-            $post_settings = apply_filters( "dt_get_post_type_settings", [], $post_type );
-            $dt_post = DT_Posts::get_post( $post_type, get_the_ID() );
-            ?>
-
-            <label class="section-header">
-                <?php esc_html_e( 'Details', 'disciple_tools' )?>
-            </label>
-
-
-            <!-- @todo make live date adding -->
-            <div class="section-subheader">More dates</div>
-            <div id="training-dates"></div>
-
-            <a class="button small primary-button" onclick="add_new_date()">add</a>
-
-            <script>
-               function add_new_date() {
-                   let masonGrid = $('.grid')
-
-                   jQuery('#training-dates').append(`<input type='text' class='date-picker dt_date_picker hasDatepicker' id='start_date' autocomplete='off' value='February 16, 2020'>`)
-
-                   masonGrid.masonry({
-                       itemSelector: '.grid-item',
-                       percentPosition: true
-                   });
-               }
-            </script>
-        <?php }
-        */
-
 
         // Trainings tile on contacts details page
         if ($section == "trainings" && $post_type === "contacts"){
@@ -311,11 +288,23 @@ class DT_Training_Post_Type {
 
             <label class="section-header">
                 <?php esc_html_e( 'Trainings', 'disciple_tools' )?>
+                <button class="help-button float-right" data-section="trainings-help-text">
+                    <img class="help-icon" src="<?php echo esc_html( get_template_directory_uri() . '/dt-assets/images/help.svg' ) ?>"/>
+                </button>
+                <button class="section-chevron chevron_down">
+                    <img src="<?php echo esc_html( get_template_directory_uri() . '/dt-assets/images/chevron_down.svg' ) ?>"/>
+                </button>
+                <button class="section-chevron chevron_up">
+                    <img src="<?php echo esc_html( get_template_directory_uri() . '/dt-assets/images/chevron_up.svg' ) ?>"/>
+                </button>
             </label>
+            <div class="section-body">
 
-            <?php render_field_for_display( 'training_leader', $post_settings["fields"], $dt_post ) ?>
+                <?php render_field_for_display( 'training_leader', $post_settings["fields"], $dt_post ) ?>
 
-            <?php render_field_for_display( 'training_participant', $post_settings["fields"], $dt_post ) ?>
+                <?php render_field_for_display( 'training_participant', $post_settings["fields"], $dt_post ) ?>
+
+            </div>
 
         <?php }
 
@@ -328,13 +317,51 @@ class DT_Training_Post_Type {
 
             <label class="section-header">
                 <?php esc_html_e( 'Trainings', 'disciple_tools' )?>
+                <button class="help-button float-right" data-section="trainings-help-text">
+                    <img class="help-icon" src="<?php echo esc_html( get_template_directory_uri() . '/dt-assets/images/help.svg' ) ?>"/>
+                </button>
+                <button class="section-chevron chevron_down">
+                    <img src="<?php echo esc_html( get_template_directory_uri() . '/dt-assets/images/chevron_down.svg' ) ?>"/>
+                </button>
+                <button class="section-chevron chevron_up">
+                    <img src="<?php echo esc_html( get_template_directory_uri() . '/dt-assets/images/chevron_up.svg' ) ?>"/>
+                </button>
             </label>
+            <div class="section-body">
 
-            <?php render_field_for_display( 'trainings', $post_settings["fields"], $dt_post ) ?>
+                <?php render_field_for_display( 'trainings', $post_settings["fields"], $dt_post ) ?>
+
+            </div>
 
         <?php }
+    }
 
-
+    public function modal_help_text() {
+        if ( is_singular( "trainings" ) ) {
+            ?>
+            <div class="help-section" id="connections-help-text" style="display: none">
+                <h3><?php echo esc_html_x( "Connections", 'Optional Documentation', 'disciple_tools' ) ?></h3>
+                <p><?php echo esc_html_x( "You can track leaders or number of leaders independently, depending on what information you have. This is also true of participants and number of participants.", 'Optional Documentation', 'disciple_tools' ) ?></p>
+                <p><?php echo esc_html_x( "Connected leaders, participants, and groups create a link to the trainings tile on the corresponding contacts and groups sections.", 'Optional Documentation', 'disciple_tools' ) ?></p>
+            </div>
+            <?php
+        }
+        if ( is_singular( "contacts" ) ) {
+            ?>
+            <div class="help-section" id="trainings-help-text" style="display: none">
+                <h3><?php echo esc_html_x( "Trainings", 'Optional Documentation', 'disciple_tools' ) ?></h3>
+                <p><?php echo esc_html_x( "You can connect this contact as a leader or a participant to a training.", 'Optional Documentation', 'disciple_tools' ) ?></p>
+            </div>
+            <?php
+        }
+        if ( is_singular( "groups" ) ) {
+            ?>
+            <div class="help-section" id="trainings-help-text" style="display: none">
+                <h3><?php echo esc_html_x( "Trainings", 'Optional Documentation', 'disciple_tools' ) ?></h3>
+                <p><?php echo esc_html_x( "You can connect this group to a training.", 'Optional Documentation', 'disciple_tools' ) ?></p>
+            </div>
+            <?php
+        }
     }
 
     private function update_event_counts( $training_id, $action = "added", $type = 'contacts' ){

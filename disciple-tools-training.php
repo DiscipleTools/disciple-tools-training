@@ -3,7 +3,7 @@
  * Plugin Name: Disciple Tools - Training
  * Plugin URI: https://github.com/DiscipleTools/disciple-tools-training
  * Description: Disciple Tools Training Extension adds recording of trainings and cross reference them with contacts, groups, and locations.
- * Version:  1.0
+ * Version:  1.1
  * Author URI: https://github.com/DiscipleTools
  * GitHub Plugin URI: https://github.com/DiscipleTools/disciple-tools-training
  * Requires at least: 4.7.0
@@ -20,7 +20,7 @@
 if ( ! defined( 'ABSPATH' ) ) {
     exit; // Exit if accessed directly
 }
-$dt_training_required_dt_theme_version = '0.19.0';
+$dt_training_required_dt_theme_version = '0.27.0';
 
 /**
  * Gets the instance of the `DT_Training` class.
@@ -148,7 +148,7 @@ class DT_Training {
 
         // Admin and settings variables
         $this->token             = 'dt_training';
-        $this->version             = '1.0';
+        $this->version             = '1.1';
 
         // rest api class
 //        require_once( 'includes/rest-api.php' );
