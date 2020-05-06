@@ -118,6 +118,20 @@ class DT_Training_Post_Type {
                 "p2p_direction" => "from",
                 "p2p_key" => "trainings_to_leaders",
             ];
+            $fields['parents'] = [
+                'name' => "Parent Training",
+                'type' => 'connection',
+                "post_type" => 'trainings',
+                "p2p_direction" => "from",
+                "p2p_key" => "trainings_to_trainings",
+            ];
+            $fields['children'] = [
+                'name' => "Child Training",
+                'type' => 'connection',
+                "post_type" => 'trainings',
+                "p2p_direction" => "to",
+                "p2p_key" => "trainings_to_trainings",
+            ];
             $fields['contacts'] = [
                 'name' => "Participants",
                 'type' => 'connection',
@@ -177,6 +191,11 @@ class DT_Training_Post_Type {
             'name' => 'trainings_to_leaders',
             'from' => 'trainings',
             'to' => 'contacts'
+        ]);
+        p2p_register_connection_type([
+            'name' => 'trainings_to_trainings',
+            'from' => 'trainings',
+            'to' => 'trainings'
         ]);
 
     }
@@ -274,6 +293,10 @@ class DT_Training_Post_Type {
                 <?php render_field_for_display( 'contact_count', $post_settings["fields"], $dt_post ) ?>
 
                 <?php render_field_for_display( 'groups', $post_settings["fields"], $dt_post ) ?>
+
+                <?php render_field_for_display( 'parents', $post_settings["fields"], $dt_post ) ?>
+
+                <?php render_field_for_display( 'children', $post_settings["fields"], $dt_post ) ?>
 
             </div>
 

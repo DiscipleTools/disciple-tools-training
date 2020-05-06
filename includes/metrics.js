@@ -1002,6 +1002,8 @@ function write_training_points_map() {
                     'type': 'geojson',
                     'data': points
                 });
+                console.log('POINTS')
+                console.log(points)
             })
         jQuery.get('https://storage.googleapis.com/location-grid-mirror/collection/1.geojson', null, null, 'json')
             .done(function (geojson) {
@@ -1214,16 +1216,6 @@ function write_training_points_map() {
             spinner.hide()
         }); // end geocode
     } // end load section function
-
-    // click
-    // map.on('click', function( e ) {
-    //     if ( map.getZoom() <= 2 ) {
-    //         load_world()
-    //     } else {
-    //         load_layer( e.lngLat.lng, e.lngLat.lat )
-    //
-    //     }
-    // })
 
 }
 
