@@ -13,7 +13,7 @@ class DT_Training_Post_Type {
         add_action( 'after_setup_theme', [ $this, 'after_setup_theme' ], 100 );
         add_action( 'p2p_init', [ $this, 'p2p_init' ] );
         add_action( 'dt_details_additional_section', [ $this, 'dt_details_additional_section' ], 10, 2 );
-        add_action( 'dt_modal_help_text', [ $this, 'modal_help_text'], 10 );
+        add_action( 'dt_modal_help_text', [ $this, 'modal_help_text' ], 10 );
 
         add_filter( 'dt_custom_fields_settings', [ $this, 'dt_custom_fields_settings' ], 10, 2 );
         add_filter( 'dt_details_additional_section_ids', [ $this, 'dt_details_additional_section_ids' ], 10, 2 );
