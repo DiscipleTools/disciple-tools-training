@@ -127,6 +127,7 @@ class DT_Training {
         if ( DT_Mapbox_API::get_key() ) {
             require_once( 'includes/metrics.php' );
         }
+        require_once ('includes/movement-log-training.php');
     }
 
     /**
