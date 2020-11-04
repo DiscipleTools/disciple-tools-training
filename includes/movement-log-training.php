@@ -129,3 +129,75 @@ function dt_network_dashboard_read_log_trainings( $activity_log ){
 
     return $activity_log;
 }
+
+add_action( 'dt_network_dashboard_rebuild_activity', 'dt_network_dashboard_rebuild_training_activity', 10, 1 );
+function dt_network_dashboard_rebuild_training_activity(){
+    global $wpdb;
+    $site_id = dt_network_site_id();
+
+    /**
+     * New
+     */
+    $training_new = $wpdb->get_results( $wpdb->prepare( "
+                SELECT 
+                   a.object_id as site_object_id, 
+                   'training_new' as action, 
+                   a.hist_time as timestamp
+                FROM $wpdb->dt_activity_log as a
+                LEFT JOIN $wpdb->dt_movement_log as m
+                    ON a.object_id=m.site_object_id
+                    AND m.site_id = %s
+                    AND m.action = 'training_new'
+                WHERE a.object_type = 'trainings' 
+                    AND a.action = 'created'
+                    AND m.id IS NULL
+                ORDER BY a.object_id;", $site_id ),
+        ARRAY_A );
+    DT_Network_Activity_Log::local_bulk_insert( $training_new );
+
+    /**
+     * In Progress
+     */
+    $training_in_progress = $wpdb->get_results( $wpdb->prepare( "
+            SELECT 
+               DISTINCT( a.object_id ) as site_object_id, 
+               'training_in_progress' as action, 
+               a.hist_time as timestamp
+            FROM $wpdb->dt_activity_log as a
+            LEFT JOIN $wpdb->dt_movement_log as m
+                ON a.object_id=m.site_object_id
+                AND m.site_id = %s
+                AND m.action = 'training_in_progress'
+            WHERE a.object_type = 'trainings' 
+                AND a.action = 'field_update'
+                AND a.meta_key = 'status'
+                AND a.meta_value = 'in_progress'
+                AND m.id IS NULL
+            ORDER BY a.object_id;", $site_id ),
+        ARRAY_A );
+    DT_Network_Activity_Log::local_bulk_insert( $training_in_progress );
+
+    /**
+     * Completed
+     */
+    $training_completed = $wpdb->get_results( $wpdb->prepare( "
+                 SELECT 
+               DISTINCT( a.object_id ) as site_object_id, 
+               'training_completed' as action, 
+               a.hist_time as timestamp
+            FROM $wpdb->dt_activity_log as a
+            LEFT JOIN $wpdb->dt_movement_log as m
+                ON a.object_id=m.site_object_id
+                AND m.site_id = %s
+                AND m.action = 'training_completed'
+            WHERE a.object_type = 'trainings' 
+                AND a.action = 'field_update'
+                AND a.meta_key = 'status'
+                AND a.meta_value = 'complete'
+                AND m.id IS NULL
+            ORDER BY a.object_id;", $site_id ),
+        ARRAY_A );
+    DT_Network_Activity_Log::local_bulk_insert( $training_completed );
+
+
+}
