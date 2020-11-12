@@ -2,6 +2,7 @@
 
 /**
  * Test if Network Dashboard Exists and is Active
+ * if true, continue; if false, stop load.
  */
 $active_plugins = get_option( 'active_plugins' );
 if ( ! in_array('disciple-tools-network-dashboard/disciple-tools-network-dashboard.php', $active_plugins ) ){
@@ -9,6 +10,30 @@ if ( ! in_array('disciple-tools-network-dashboard/disciple-tools-network-dashboa
 }
 
 
+
+/**************************************************************************************************************
+ * CREATE AND READ NETWORK DASHBOARD ACTIVITY LOG SECTION
+ *
+ * The following actions provide the support to register action key, create the training activity log, and
+ * upgrade the activity log for missing items, and generate the proper message to be displayed from the log.
+ *
+ * dt_network_dashboard_register_actions
+ * This action registers the action keys that are to be used throughout the system. This is required.
+ *
+ * dt_post_created & dt_post_updated
+ * The post_created & post_updated actions fire after a post is created or updated and the action must be filtered
+ * to match the intended event. Once the event is identified, the location details can be collected, the data array
+ * constructed, and the log inserted.
+ *
+ * dt_network_dashboard_build_message
+ * This action interprets the key into the message to be displayed. This can be expanded to construct the message
+ *
+ * dt_network_dashboard_rebuild_activity
+ * This action support the administrative area when the process to rebuild/resync the local database is triggered.
+ * Not all events might be able to be recreated, but nearly all that leave an activity log record in the standard
+ * log system.
+ *
+ **************************************************************************************************************/
 /**
  * REGISTER ACTIONS (AND CATEGORIES)
  */
@@ -70,7 +95,6 @@ function dt_network_dashboard_write_log_new_trainings( $post_type, $post_id, $in
     }
 
 }
-
 add_action( 'dt_post_updated', 'dt_network_dashboard_write_log_update_trainings', 10, 5 );
 function dt_network_dashboard_write_log_update_trainings( $post_type, $post_id, $initial_fields, $existing_post, $post ){
 
@@ -96,9 +120,7 @@ function dt_network_dashboard_write_log_update_trainings( $post_type, $post_id, 
 
             DT_Network_Activity_Log::insert_log($data);
         }
-
     }
-
 }
 
 /**
@@ -123,13 +145,10 @@ function dt_network_dashboard_read_log_trainings( $activity_log ){
         if ( 'training_completed' === $log['action'] ) {
             $activity_log[$index]['message'] = $log['site_name'] . ' is reporting a training has completed';
         }
-
-
     }
 
     return $activity_log;
 }
-
 add_action( 'dt_network_dashboard_rebuild_activity', 'dt_network_dashboard_rebuild_training_activity', 10, 1 );
 function dt_network_dashboard_rebuild_training_activity(){
     global $wpdb;
@@ -198,6 +217,17 @@ function dt_network_dashboard_rebuild_training_activity(){
             ORDER BY a.object_id;", $site_id ),
         ARRAY_A );
     DT_Network_Activity_Log::local_bulk_insert( $training_completed );
-
-
 }
+
+
+/**************************************************************************************************************
+ * Loading Custom Metrics Section
+ *
+ * This action fires after the network dashboard plugin is loaded and can be used to guarantee resources needed
+ * are available.
+ *
+ **************************************************************************************************************/
+
+add_action( 'dt_network_dashboard_loaded', function(){ // only load once the
+
+} );
