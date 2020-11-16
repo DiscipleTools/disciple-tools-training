@@ -5,7 +5,7 @@
  * if true, continue; if false, stop load.
  */
 $active_plugins = get_option( 'active_plugins' );
-if ( ! in_array('disciple-tools-network-dashboard/disciple-tools-network-dashboard.php', $active_plugins ) ){
+if ( ! in_array( 'disciple-tools-network-dashboard/disciple-tools-network-dashboard.php', $active_plugins ) ){
     return false;
 }
 
@@ -43,25 +43,19 @@ function dt_network_dashboard_register_training_actions( $actions ){
     $actions['training_new'] = [
         'key' => 'training_new',
         'label' => 'New Training',
-        'message_pattern' => [
-
-        ]
+        'message_pattern' => []
     ];
 
     $actions['training_in_progress'] = [
         'key' => 'training_in_progress',
         'label' => 'Training Started',
-        'message_pattern' => [
-
-        ]
+        'message_pattern' => []
     ];
 
     $actions['training_completed'] = [
         'key' => 'training_completed',
         'label' => 'Training Completed',
-        'message_pattern' => [
-
-        ]
+        'message_pattern' => []
     ];
 
     return $actions;
@@ -91,7 +85,7 @@ function dt_network_dashboard_write_log_new_trainings( $post_type, $post_id, $in
             ]
         ];
 
-        DT_Network_Activity_Log::insert_log($data);
+        DT_Network_Activity_Log::insert_log( $data );
     }
 
 }
@@ -118,7 +112,7 @@ function dt_network_dashboard_write_log_update_trainings( $post_type, $post_id, 
                 ]
             ];
 
-            DT_Network_Activity_Log::insert_log($data);
+            DT_Network_Activity_Log::insert_log( $data );
         }
     }
 }
@@ -129,7 +123,7 @@ function dt_network_dashboard_write_log_update_trainings( $post_type, $post_id, 
 add_filter( 'dt_network_dashboard_build_message', 'dt_network_dashboard_read_log_trainings', 10, 1 );
 function dt_network_dashboard_read_log_trainings( $activity_log ){
 
-    foreach( $activity_log as $index => $log ){
+    foreach ( $activity_log as $index => $log ){
 
         /* training object created */
         if ( 'training_new' === $log['action'] ) {
@@ -171,7 +165,7 @@ function dt_network_dashboard_rebuild_training_activity(){
                     AND a.action = 'created'
                     AND m.id IS NULL
                 ORDER BY a.object_id;", $site_id ),
-        ARRAY_A );
+    ARRAY_A );
     DT_Network_Activity_Log::local_bulk_insert( $training_new );
 
     /**
@@ -193,7 +187,7 @@ function dt_network_dashboard_rebuild_training_activity(){
                 AND a.meta_value = 'in_progress'
                 AND m.id IS NULL
             ORDER BY a.object_id;", $site_id ),
-        ARRAY_A );
+    ARRAY_A );
     DT_Network_Activity_Log::local_bulk_insert( $training_in_progress );
 
     /**
@@ -215,7 +209,7 @@ function dt_network_dashboard_rebuild_training_activity(){
                 AND a.meta_value = 'complete'
                 AND m.id IS NULL
             ORDER BY a.object_id;", $site_id ),
-        ARRAY_A );
+    ARRAY_A );
     DT_Network_Activity_Log::local_bulk_insert( $training_completed );
 }
 
