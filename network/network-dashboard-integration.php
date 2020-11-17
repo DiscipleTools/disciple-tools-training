@@ -9,8 +9,6 @@ if ( ! in_array( 'disciple-tools-network-dashboard/disciple-tools-network-dashbo
     return false;
 }
 
-
-
 /**************************************************************************************************************
  * CREATE AND READ NETWORK DASHBOARD ACTIVITY LOG SECTION
  *

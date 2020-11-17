@@ -53,6 +53,19 @@ function dt_training() {
     if ( !defined( 'DT_FUNCTIONS_READY' ) ){
         require_once get_template_directory() . '/dt-core/global-functions.php';
     }
+
+    /**
+     * We want to make sure migrations are run on updates.
+     * @see https://www.sitepoint.com/wordpress-plugin-updates-right-way/
+     */
+    try {
+        require_once( plugin_dir_path( __FILE__ ) . '/admin/class-migration-engine.php' );
+        DT_Training_Migration_Engine::migrate( DT_Training_Migration_Engine::$migration_number );
+    } catch ( Throwable $e ) {
+        new WP_Error( 'migration_error', 'Migration engine failed to migrate.' );
+    }
+
+
     /*
      * Don't load the plugin on every rest request. Only those with the metrics namespace
      */
@@ -120,16 +133,19 @@ class DT_Training {
      * @return void
      */
     private function includes() {
-        if ( is_admin() ) {
-            require_once( 'includes/admin/admin-menu-and-tabs.php' );
-        }
-        require_once( 'includes/training-post-types.php' );
-        require_once( 'includes/customize-site-linking.php' );
-        require_once( 'includes/enqueue.php' );
+        // post type
+        require_once( 'post-type/trainings.php' );
+
+        // metrics
         if ( DT_Mapbox_API::get_key() ) {
-            require_once( 'includes/metrics.php' );
+            require_once( 'metrics/metrics.php' );
         }
-        require_once( 'includes/movement-log-training.php' );
+        require_once( 'metrics/enqueue.php' );
+
+        // network support
+        require_once( 'network/customize-site-linking.php' );
+        require_once( 'network/network-dashboard-integration.php' );
+
     }
 
     /**

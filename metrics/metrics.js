@@ -684,7 +684,7 @@ function write_training_area_map() {
                 }
 
                 // geocode
-                jQuery.get(obj.plugin_uri + 'includes/training-location-grid-api.php',
+                jQuery.get(obj.theme_uri + 'dt-mapping/location-grid-list-api.php',
                     {
                         type: 'geocode',
                         longitude: lng,

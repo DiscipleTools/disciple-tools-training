@@ -1,8 +1,7 @@
 language: php
 php:
-  - '7.0'
-  - '7.2'
-  - '7.3'
+  - '7.1'
+  - '7.4'
 dist: trusty
 sudo: required # this seems to be required for some reason to get MySQL to work
 services:
@@ -16,6 +15,6 @@ before_install:
 before_script:
   - composer install --no-interaction
 script:
-  - includes/admin/test/test_for_syntax_errors.sh
-  - includes/admin/test/test_installation.sh
-  - includes/admin/test/test_phpcs.sh
+  - admin/test/test_for_syntax_errors.sh
+  - admin/test/test_installation.sh
+  - admin/test/test_phpcs.sh

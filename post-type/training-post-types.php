@@ -52,16 +52,27 @@ class DT_Training_Post_Type {
     }
 
     public function dt_set_roles_and_permissions( $expected_roles ){
-        if ( !isset( $expected_roles["multiplier"] ) ){
+        if ( ! isset( $expected_roles["multiplier"] ) ){
             $expected_roles["multiplier"] = [
                 "label" => __( 'Multiplier', 'disciple_tools' ),
                 "permissions" => []
             ];
         }
+
         foreach ( $expected_roles as $role => $role_value ){
             if ( isset( $expected_roles[$role]["permissions"]['access_contacts'] ) && $expected_roles[$role]["permissions"]['access_contacts'] ){
                 $expected_roles[$role]["permissions"]['access_' . $this->post_type] = true;
                 $expected_roles[$role]["permissions"]['create_' . $this->post_type] = true;
+            }
+            if ( isset( $expected_roles[$role]["permissions"]['manage_dt'] ) && $expected_roles[$role]["permissions"]['access_contacts'] ){
+                $expected_roles[$role]["permissions"]['list_' . $this->post_type] = true;
+
+                $expected_roles[$role]["permissions"]['update_all_' . $this->post_type] = true; // @todo is this needed
+
+                $expected_roles[$role]["permissions"]['view_any_' . $this->post_type] = true;
+                $expected_roles[$role]["permissions"]['assign_any_' . $this->post_type] = true;
+                $expected_roles[$role]["permissions"]['delete_any_' . $this->post_type] = true;
+                $expected_roles[$role]["permissions"]['update_any_' . $this->post_type] = true;
             }
         }
 
@@ -98,7 +109,7 @@ class DT_Training_Post_Type {
                 'name' => "Leaders #",
                 'type' => 'text',
                 'default' => '0',
-                'show_in_table' => false
+                'show_in_table' => 30
             ];
             $fields['contact_count'] = [
                 'name' => "Participants #",
@@ -110,9 +121,8 @@ class DT_Training_Post_Type {
                 'name' => "Groups #",
                 'type' => 'text',
                 'default' => '0',
-                'show_in_table' => false
+                'show_in_table' => 30
             ];
-
             $fields["requires_update"] = [
                 'name'        => __( 'Requires Update', 'disciple_tools' ),
                 'description' => '',
@@ -125,7 +135,7 @@ class DT_Training_Post_Type {
                 'type'        => 'location',
                 'default'     => [],
                 'icon' => get_template_directory_uri() . '/dt-assets/images/location.svg',
-                'show_in_table' => 40
+                'show_in_table' => false
             ];
             $fields['location_grid_meta'] = [
                 'name'        => 'Location Grid Meta', //system string does not need translation
@@ -133,6 +143,7 @@ class DT_Training_Post_Type {
                 'default'     => [],
                 'hidden' => true,
             ];
+
             $fields["status"] = [
                 'name' => "Status",
                 'type' => 'key_select',
@@ -174,7 +185,7 @@ class DT_Training_Post_Type {
                         "color" => "#F43636",
                     ],
                 ],
-                'show_in_table' => false
+                'show_in_table' => 30
             ];
             $fields['start_date'] = [
                 'name'        => __( 'Start Date', 'disciple_tools' ),
@@ -184,6 +195,51 @@ class DT_Training_Post_Type {
                 "tile" => "details",
                 'icon' => get_template_directory_uri() . '/dt-assets/images/date-start.svg',
             ];
+            $fields['end_date'] = [
+                'name'        => __( 'End Date', 'disciple_tools' ),
+                'description' => _x( 'The date this group ended meeting.', 'Optional Documentation', 'disciple_tools' ),
+                'type'        => 'date',
+                'default'     => time(),
+                "tile" => "details",
+                'icon' => get_template_directory_uri() . '/dt-assets/images/date-start.svg',
+            ];
+
+
+
+            // post type support fields
+            $fields['tasks'] = [
+                'name' => __( 'Tasks', 'disciple_tools' ),
+                'type' => 'post_user_meta',
+            ];
+            $fields["languages"] = [
+                'name' => __( 'Languages', 'disciple_tools' ),
+                'type' => 'multi_select',
+                'default' => dt_get_option( "dt_working_languages" ) ?: [],
+                'icon' => get_template_directory_uri() . "/dt-assets/images/languages.svg",
+            ];
+            $fields["follow"] = [
+                'name'        => __( 'Follow', 'disciple_tools' ),
+                'type'        => 'multi_select',
+                'default'     => [],
+                'hidden'      => true
+            ];
+            $fields["unfollow"] = [
+                'name'        => __( 'Un-Follow', 'disciple_tools' ),
+                'type'        => 'multi_select',
+                'default'     => [],
+                'hidden'      => true
+            ];
+            $fields['tags'] = [
+                'name'        => __( 'Tags', 'disciple_tools' ),
+                'description' => _x( 'A useful way to group related items and can help group contacts associated with noteworthy characteristics. e.g. business owner, sports lover. The contacts can also be filtered using these tags.', 'Optional Documentation', 'disciple_tools' ),
+                'type'        => 'multi_select',
+                'default'     => [],
+                'tile'        => 'other',
+                'custom_display' => true,
+                'icon' => get_template_directory_uri() . "/dt-assets/images/tag.svg",
+            ];
+
+            // post to post connection fields
             $fields["leaders"] = [
                 "name" => __( 'Leaders', 'disciple_tools' ),
                 'description' => '',
@@ -191,7 +247,7 @@ class DT_Training_Post_Type {
                 "post_type" => "contacts",
                 "p2p_direction" => "from",
                 "p2p_key" => "trainings_to_leaders",
-                "show_in_table" => 30
+
             ];
             $fields['parents'] = [
                 'name' => "Parent Training",
@@ -226,7 +282,6 @@ class DT_Training_Post_Type {
                 "p2p_direction" => "from",
                 "p2p_key" => "trainings_to_groups",
             ];
-
         }
         if ( $post_type === 'groups' ){
             $fields[$this->post_type] = [
@@ -264,6 +319,7 @@ class DT_Training_Post_Type {
         if ( $post_type === 'contacts' || $post_type === 'groups' ){
             $tiles[$this->post_type] = [ "label" => __( "Training", 'disciple_tools' ) ];
         }
+        dt_write_log( $tiles );
         return $tiles;
     }
 
@@ -298,7 +354,6 @@ class DT_Training_Post_Type {
                 <?php render_field_for_display( 'location_grid', $post_settings["fields"], $dt_post ); ?>
 
             <?php endif; ?>
-
 
         <?php }
 
@@ -442,7 +497,7 @@ class DT_Training_Post_Type {
                 }
             }
 
-            $existing_group = DT_Posts::get_post(  $this->post_type, $post_id, true, false );
+            $existing_group = DT_Posts::get_post( $this->post_type, $post_id, true, false );
             if ( isset( $fields["group_type"] ) && empty( $fields["church_start_date"] ) && empty( $existing_group["church_start_date"] ) && $fields["group_type"] === 'church' ){
                 $fields["church_start_date"] = time();
             }
@@ -472,40 +527,119 @@ class DT_Training_Post_Type {
     }
 
     public function dt_user_list_filters( $filters, $post_type ) {
-        if ( $post_type === $this->post_type ) {
-            $counts = self::get_all_training_counts();
-            $post_settings = apply_filters( "dt_get_post_type_settings", [], $this->post_type );
-            $total = 0;
-            $status_counts = [];
-            foreach ( $counts as $count ) {
-                $total += $count["count"];
-                self::increment( $status_counts[$count["status"]], $count["count"] );
-            }
+//        if ( $post_type === $this->post_type ) {
+//            $counts = self::get_all_training_counts();
+//            $post_settings = apply_filters( "dt_get_post_type_settings", [], $this->post_type );
+//            $total = 0;
+//            $status_counts = [];
+//            foreach ( $counts as $count ) {
+//                $total += $count["count"];
+//                self::increment( $status_counts[$count["status"]], $count["count"] );
+//            }
+//            $filters["tabs"][] = [
+//                "key" => "all_trainings",
+//                "label" => _x( "All", 'List Filters', 'disciple_tools' ),
+//                "order" => 10
+//
+//            ];
+//            // add assigned to me filters
+//            $filters["filters"][] = [
+//                'ID' => 'all_trainings',
+//                'tab' => 'all_trainings',
+//                'name' => _x( "All", 'List Filters', 'disciple_tools' ),
+//                'query' => [],
+//                'count' => $total
+//            ];
+//
+//            foreach ( $post_settings["fields"]['status']['default'] as $status_key => $status_value ){
+//                if ( isset( $status_counts[$status_key] ) ){
+//                    $filters["filters"][] = [
+//                        'ID' => "all_$status_key",
+//                        'tab' => 'all_trainings',
+//                        'name' => $status_value["label"],
+//                        'query' => [ "status" => [ $status_key ] ],
+//                        'count' => $status_counts[$status_key]
+//                    ];
+//                }
+//            }
+//        }
+//        return $filters;
+        if ( $post_type === 'trainings' ){
+            $shared_by_type_counts = DT_Posts_Metrics::get_shared_with_meta_field_counts( "trainings", 'status' );
+            $post_label_plural = DT_Posts::get_post_settings( $post_type )['label_plural'];
+
             $filters["tabs"][] = [
-                "key" => "all_trainings",
-                "label" => _x( "All", 'List Filters', 'disciple_tools' ),
-                "order" => 10
-
+                "key" => "default",
+                "label" => __( "Default Filters", 'disciple_tools' ),
+                "order" => 7
             ];
-            // add assigned to me filters
             $filters["filters"][] = [
-                'ID' => 'all_trainings',
-                'tab' => 'all_trainings',
-                'name' => _x( "All", 'List Filters', 'disciple_tools' ),
-                'query' => [],
-                'count' => $total
+                'ID' => 'all_my_trainings',
+                'tab' => 'default',
+                'name' => sprintf( _x( "All %s", 'All records', 'disciple_tools' ), $post_label_plural ),
+                'labels' =>[
+                    [
+                        'id' => 'all',
+                        'name' => sprintf( _x( "All %s I can view", 'All records I can view', 'disciple_tools' ), $post_label_plural ),
+                    ]
+                ],
+                'query' => [
+                    'sort' => '-post_date',
+                ],
+            ];
+            $filters["filters"][] = [
+                'ID' => 'recent',
+                'tab' => 'default',
+                'name' => __( "Recent", 'disciple_tools' ),
+                'query' => [
+                    'dt_recent' => true
+                ],
             ];
 
-            foreach ( $post_settings["fields"]['status']['default'] as $status_key => $status_value ){
-                if ( isset( $status_counts[$status_key] ) ){
-                    $filters["filters"][] = [
-                        'ID' => "all_$status_key",
-                        'tab' => 'all_trainings',
-                        'name' => $status_value["label"],
-                        'query' => [ "status" => [ $status_key ] ],
-                        'count' => $status_counts[$status_key]
-                    ];
-                }
+
+            $filters["filters"] = self::add_default_custom_list_filters( $filters["filters"] );
+        }
+        return $filters;
+    }
+
+    //list page filters function
+    private static function add_default_custom_list_filters( $filters ){
+        if ( empty( $filters )){
+            $filters = [];
+        }
+        $default_filters = [
+            [
+                'ID' => 'my_shared',
+                'visible' => "1",
+                'type' => 'default',
+                'tab' => 'custom',
+                'name' => __( 'Shared with me', 'disciple_tools' ),
+                'query' => [
+                    'shared_with' => [ 'me' ],
+                    'sort' => 'name',
+                ],
+                'labels' => [
+                    [
+                        'id' => 'my_shared',
+                        'name' => __( 'Shared with me', 'disciple_tools' ),
+                    ],
+                ],
+            ]
+        ];
+        //prepend filter if it is not already created.
+        $contact_filter_ids = array_map( function ( $a ){
+            return $a["ID"];
+        }, $filters );
+        foreach ( $default_filters as $filter ) {
+            if ( !in_array( $filter["ID"], $contact_filter_ids ) ){
+                array_unshift( $filters, $filter );
+            }
+        }
+        //translation for default fields
+        foreach ( $filters as $index => $filter ) {
+            if ( $filter["name"] === 'Shared with me' ) {
+                $filters[$index]["name"] = __( 'Shared with me', 'disciple_tools' );
+                $filters[$index]['labels'][0]['name'] = __( 'Shared with me', 'disciple_tools' );
             }
         }
         return $filters;
