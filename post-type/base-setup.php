@@ -32,7 +32,7 @@ class DT_Training_Base {
 
         //list
         add_filter( "dt_user_list_filters", [ $this, "dt_user_list_filters" ], 10, 2 );
-
+        add_filter( "dt_filter_access_permissions", [ $this, "dt_filter_access_permissions" ], 20, 2 );
     }
 
 
@@ -45,6 +45,13 @@ class DT_Training_Base {
         if ( !isset( $expected_roles["multiplier"] ) ){
             $expected_roles["multiplier"] = [
                 "label" => __( 'Multiplier', 'disciple_tools' ),
+                "permissions" => []
+            ];
+        }
+        if ( !isset( $expected_roles["dispatcher"] ) ){
+            $expected_roles["dispatcher"] = [
+                "label" => __( 'Dispatcher', 'disciple_tools' ),
+                "description" => "All D.T permissions",
                 "permissions" => []
             ];
         }
@@ -64,25 +71,18 @@ class DT_Training_Base {
         }
 
         foreach ( $expected_roles as $role => $role_value ){
+
             if ( isset( $expected_roles[$role]["permissions"]['access_contacts'] ) && $expected_roles[$role]["permissions"]['access_contacts'] ){
                 $expected_roles[$role]["permissions"]['access_' . $this->post_type] = true;
                 $expected_roles[$role]["permissions"]['create_' . $this->post_type] = true;
             }
-            if ( isset( $expected_roles[$role]["permissions"]['manage_dt'] ) && $expected_roles[$role]["permissions"]['manage_dt'] ){
-                $expected_roles[$role]["permissions"]['list_' . $this->post_type] = true;
-
-                $expected_roles[$role]["permissions"]['update_all_' . $this->post_type] = true; // @todo is this needed
-
+            if ( in_array( $role, [ 'administrator', 'dispatcher', 'dt_admin' ] ) ) {
                 $expected_roles[$role]["permissions"]['view_any_' . $this->post_type] = true;
-                $expected_roles[$role]["permissions"]['assign_any_' . $this->post_type] = true;
-                $expected_roles[$role]["permissions"]['delete_any_' . $this->post_type] = true;
-                $expected_roles[$role]["permissions"]['update_any_' . $this->post_type] = true;
             }
         }
 
         return $expected_roles;
     }
-
 
     public function dt_custom_fields_settings( $fields, $post_type ){
         if ( $post_type === 'trainings' ){
@@ -119,49 +119,48 @@ class DT_Training_Base {
                 'default' => [],
             ];
 
-
             $fields["status"] = [
                 'name' => "Status",
                 'type' => 'key_select',
-                "tile" => "details",
+                "tile" => "",
                 'default' => [
                     'new'   => [
                         "label" => _x( 'New', 'Training Status label', 'disciple_tools' ),
                         "description" => _x( "New training added to the system", "Training Status field description", 'disciple_tools' ),
-                        "color" => "#F43636",
+                        'color' => "#ff9800"
                     ],
                     'proposed'   => [
                         "label" => _x( 'Proposed', 'Training Status label', 'disciple_tools' ),
                         "description" => _x( "This training has been proposed and is in initial conversations", "Training Status field description", 'disciple_tools' ),
-                        "color" => "#F43636",
+                        'color' => "#ff9800"
                     ],
                     'scheduled' => [
                         "label" => _x( 'Scheduled', 'Training Status label', 'disciple_tools' ),
                         "description" => _x( "This training is confirmed, on the calendar.", "Training Status field description", 'disciple_tools' ),
-                        "color" => "#FF9800",
+                        'color' => "#4CAF50"
                     ],
                     'in_progress' => [
                         "label" => _x( 'In Progress', 'Training Status label', 'disciple_tools' ),
                         "description" => _x( "This training is confirmed, on the calendar, or currently active.", "Training Status field description", 'disciple_tools' ),
-                        "color" => "#FF9800",
+                        'color' => "#4CAF50"
                     ],
                     'complete'     => [
                         "label" => _x( "Complete", 'Training Status label', 'disciple_tools' ),
                         "description" => _x( "This training has successfully completed", "Training Status field description", 'disciple_tools' ),
-                        "color" => "#FF9800",
+                        'color' => "#4CAF50"
                     ],
                     'paused'       => [
                         "label" => _x( 'Paused', 'Training Status label', 'disciple_tools' ),
                         "description" => _x( "This contact is currently on hold. It has potential of getting scheduled in the future.", "Training Status field description", 'disciple_tools' ),
-                        "color" => "#FF9800",
+                        'color' => "#ff9800"
                     ],
                     'closed'       => [
                         "label" => _x( 'Closed', 'Training Status label', 'disciple_tools' ),
                         "description" => _x( "This training is no longer going to happen.", "Training Status field description", 'disciple_tools' ),
-                        "color" => "#F43636",
+                        "color" => "#366184",
                     ],
                 ],
-                'show_in_table' => 30
+                "default_color" => "#366184",
             ];
 
             $fields['assigned_to'] = [
@@ -198,7 +197,7 @@ class DT_Training_Base {
                 "post_type" => "trainings",
                 "p2p_direction" => "from",
                 "p2p_key" => "trainings_to_trainings",
-                'tile' => 'trainings',
+                'tile' => 'other',
                 'icon' => get_template_directory_uri() . '/dt-assets/images/group-parent.svg',
                 'create-icon' => get_template_directory_uri() . '/dt-assets/images/add-group.svg',
             ];
@@ -209,7 +208,7 @@ class DT_Training_Base {
                 "post_type" => "trainings",
                 "p2p_direction" => "any",
                 "p2p_key" => "trainings_to_peers",
-                'tile' => 'trainings',
+                'tile' => 'other',
                 'icon' => get_template_directory_uri() . '/dt-assets/images/group-peer.svg',
                 'create-icon' => get_template_directory_uri() . '/dt-assets/images/add-group.svg',
             ];
@@ -220,17 +219,19 @@ class DT_Training_Base {
                 "post_type" => "trainings",
                 "p2p_direction" => "to",
                 "p2p_key" => "trainings_to_trainings",
-                'tile' => 'trainings',
+                'tile' => 'other',
                 'icon' => get_template_directory_uri() . '/dt-assets/images/group-child.svg',
                 'create-icon' => get_template_directory_uri() . '/dt-assets/images/add-group.svg',
             ];
+
+
+
             $fields["member_count"] = [
                 'name' => __( 'Member Count', 'disciple_tools' ),
                 'description' => _x( 'The number of members in this training. It will automatically be updated when new members are added or removed in the member list. Change this number manually to included people who may not be in the system but are also members of the training.', 'Optional Documentation', 'disciple_tools' ),
                 'type' => 'number',
                 'default' => '',
                 'tile' => 'relationships',
-                "show_in_table" => 40
             ];
             $fields["members"] = [
                 "name" => __( 'Member List', 'disciple_tools' ),
@@ -273,7 +274,6 @@ class DT_Training_Base {
                 'default'     => [],
                 'tile' => 'details',
                 'icon' => get_template_directory_uri() . '/dt-assets/images/location.svg',
-                'show_in_table' => 40
             ];
             $fields['location_grid_meta'] = [
                 'name'        => 'Location Grid Meta', //system string does not need translation
@@ -286,56 +286,180 @@ class DT_Training_Base {
                 "name" => __( 'People Groups', 'disciple_tools' ),
                 'description' => _x( 'The people trainings represented by this training.', 'Optional Documentation', 'disciple_tools' ),
                 "type" => "connection",
+                'tile' => 'details',
                 "post_type" => "peoplegroups",
                 "p2p_direction" => "from",
                 "p2p_key" => "trainings_to_peoplegroups"
             ];
 
-        }
-
-        if ( $post_type === "contacts" ){
-            $fields["trainings"] = [
-                "name" => __( "Trainings", 'disciple_tools' ),
-                "description" => _x( "Trainings this contact is a member of.", 'Optional Documentation', 'disciple_tools' ),
-                "type" => "connection",
-                "post_type" => "trainings",
+            $fields['groups'] = [
+                'name' => __( "Groups", 'disciple_tools' ),
+                'type' => 'connection',
+                "post_type" => 'groups',
                 "p2p_direction" => "to",
-                "p2p_key" => "trainings_to_contacts",
+                "p2p_key" => "trainings_to_groups",
                 "tile" => "other",
-                'icon' => get_template_directory_uri() . "/dt-assets/images/group-type.svg",
+                'icon' => get_template_directory_uri() . "/dt-assets/images/group-child.svg",
                 'create-icon' => get_template_directory_uri() . "/dt-assets/images/add-group.svg",
-                "show_in_table" => 35
             ];
         }
+
         if ( $post_type === 'contacts' ){
             $fields['training_leader'] = [
-                'name' => "Leader",
+                'name' => __( "Training as Leader", 'disciple_tools' ),
+                'description' => _x( 'Leader of a training', 'Optional Documentation', 'disciple_tools' ),
                 'type' => 'connection',
                 "post_type" => $this->post_type,
                 "p2p_direction" => "to",
                 "p2p_key" => "trainings_to_leaders",
+                "tile" => "other",
+                'icon' => get_template_directory_uri() . "/dt-assets/images/socialmedia.svg",
+                'create-icon' => get_template_directory_uri() . "/dt-assets/images/add-group.svg",
             ];
             $fields['training_participant'] = [
-                'name' => "Participant",
+                'name' => __( "Training as Participant", 'disciple_tools' ),
+                'description' => _x( 'Participant in a training.', 'Optional Documentation', 'disciple_tools' ),
                 'type' => 'connection',
                 "post_type" => $this->post_type,
                 "p2p_direction" => "to",
                 "p2p_key" => "trainings_to_contacts",
+                "tile" => "other",
+                'icon' => get_template_directory_uri() . "/dt-assets/images/socialmedia.svg",
+                'create-icon' => get_template_directory_uri() . "/dt-assets/images/add-group.svg",
             ];
         }
         if ( $post_type === 'groups' ){
             $fields[$this->post_type] = [
-                'name' => "Trainings",
+                'name' => __( "Trainings", 'disciple_tools' ),
                 'type' => 'connection',
                 "post_type" => $this->post_type,
                 "p2p_direction" => "to",
                 "p2p_key" => "trainings_to_groups",
+                "tile" => "other",
+                'icon' => get_template_directory_uri() . "/dt-assets/images/socialmedia.svg",
+                'create-icon' => get_template_directory_uri() . "/dt-assets/images/add-group.svg",
             ];
         }
         return $fields;
     }
 
+    public function p2p_init(){
+        /**
+         * Training members field
+         */
+        p2p_register_connection_type(
+            [
+                'name'           => 'trainings_to_contacts',
+                'from'           => 'trainings',
+                'to'             => 'contacts',
+                'admin_box' => [
+                    'show' => false,
+                ],
+                'title'          => [
+                    'from' => __( 'Members', 'disciple_tools' ),
+                    'to'   => __( 'Contacts', 'disciple_tools' ),
+                ]
+            ]
+        );
+        /**
+         * Training to groups
+         */
+        p2p_register_connection_type(
+            [
+                'name'           => 'trainings_to_groups',
+                'from'           => 'trainings',
+                'to'             => 'groups',
+                'admin_box' => [
+                    'show' => false,
+                ],
+                'title'          => [
+                    'from' => __( 'Trainings', 'disciple_tools' ),
+                    'to'   => __( 'Groups', 'disciple_tools' ),
+                ]
+            ]
+        );
+        /**
+         * Training leaders field
+         */
+        p2p_register_connection_type(
+            [
+                'name'           => 'trainings_to_leaders',
+                'from'           => 'trainings',
+                'to'             => 'contacts',
+                'admin_box' => [
+                    'show' => false,
+                ],
+                'title'          => [
+                    'from' => __( 'Trainings', 'disciple_tools' ),
+                    'to'   => __( 'Leaders', 'disciple_tools' ),
+                ]
+            ]
+        );
+        /**
+         * Training coaches field
+         */
+        p2p_register_connection_type(
+            [
+                'name'           => 'trainings_to_coaches',
+                'from'           => 'trainings',
+                'to'             => 'contacts',
+                'admin_box' => [
+                    'show' => false,
+                ],
+                'title'          => [
+                    'from' => __( 'Trainings', 'disciple_tools' ),
+                    'to'   => __( 'Coaches', 'disciple_tools' ),
+                ]
+            ]
+        );
+        /**
+         * Parent and child trainings
+         */
+        p2p_register_connection_type(
+            [
+                'name'         => 'trainings_to_trainings',
+                'from'         => 'trainings',
+                'to'           => 'trainings',
+                'title'        => [
+                    'from' => __( 'Planted by', 'disciple_tools' ),
+                    'to'   => __( 'Planting', 'disciple_tools' ),
+                ],
+            ]
+        );
+        /**
+         * Peer trainings
+         */
+        p2p_register_connection_type( [
+            'name'         => 'trainings_to_peers',
+            'from'         => 'trainings',
+            'to'           => 'trainings',
+        ] );
+        /**
+         * Training People Groups field
+         */
+        p2p_register_connection_type(
+            [
+                'name'        => 'trainings_to_peoplegroups',
+                'from'        => 'trainings',
+                'to'          => 'peoplegroups',
+                'title'       => [
+                    'from' => __( 'People Groups', 'disciple_tools' ),
+                    'to'   => __( 'Trainings', 'disciple_tools' ),
+                ]
+            ]
+        );
+    }
+
+    public function dt_details_additional_tiles( $tiles, $post_type = "" ){
+        if ( $post_type === "trainings" ){
+            $tiles["relationships"] = [ "label" => __( "Member List", 'disciple_tools' ) ];
+            $tiles["other"] = [ "label" => __( "Other", 'disciple_tools' ) ];
+        }
+        return $tiles;
+    }
+
     public function dt_details_additional_section( $section, $post_type ){
+
         if ( $post_type === "trainings" && $section === "status" ){
             $training = DT_Posts::get_post( $post_type, get_the_ID() );
             $training_fields = DT_Posts::get_post_field_settings( $post_type );
@@ -454,106 +578,6 @@ class DT_Training_Base {
             </div>
         <?php }
     }
-
-    public function p2p_init(){
-        /**
-         * Training members field
-         */
-        p2p_register_connection_type(
-            [
-                'name'           => 'trainings_to_contacts',
-                'from'           => 'trainings',
-                'to'             => 'contacts',
-                'admin_box' => [
-                    'show' => false,
-                ],
-                'title'          => [
-                    'from' => __( 'Members', 'disciple_tools' ),
-                    'to'   => __( 'Contacts', 'disciple_tools' ),
-                ]
-            ]
-        );
-        /**
-         * Training leaders field
-         */
-        p2p_register_connection_type(
-            [
-                'name'           => 'trainings_to_leaders',
-                'from'           => 'trainings',
-                'to'             => 'contacts',
-                'admin_box' => [
-                    'show' => false,
-                ],
-                'title'          => [
-                    'from' => __( 'Trainings', 'disciple_tools' ),
-                    'to'   => __( 'Leaders', 'disciple_tools' ),
-                ]
-            ]
-        );
-        /**
-         * Training coaches field
-         */
-        p2p_register_connection_type(
-            [
-                'name'           => 'trainings_to_coaches',
-                'from'           => 'trainings',
-                'to'             => 'contacts',
-                'admin_box' => [
-                    'show' => false,
-                ],
-                'title'          => [
-                    'from' => __( 'Trainings', 'disciple_tools' ),
-                    'to'   => __( 'Coaches', 'disciple_tools' ),
-                ]
-            ]
-        );
-        /**
-         * Parent and child trainings
-         */
-        p2p_register_connection_type(
-            [
-                'name'         => 'trainings_to_trainings',
-                'from'         => 'trainings',
-                'to'           => 'trainings',
-                'title'        => [
-                    'from' => __( 'Planted by', 'disciple_tools' ),
-                    'to'   => __( 'Planting', 'disciple_tools' ),
-                ],
-            ]
-        );
-        /**
-         * Peer trainings
-         */
-        p2p_register_connection_type( [
-            'name'         => 'trainings_to_peers',
-            'from'         => 'trainings',
-            'to'           => 'trainings',
-        ] );
-        /**
-         * Training People Groups field
-         */
-        p2p_register_connection_type(
-            [
-                'name'        => 'trainings_to_peoplegroups',
-                'from'        => 'trainings',
-                'to'          => 'peoplegroups',
-                'title'       => [
-                    'from' => __( 'People Groups', 'disciple_tools' ),
-                    'to'   => __( 'Trainings', 'disciple_tools' ),
-                ]
-            ]
-        );
-    }
-
-    public function dt_details_additional_tiles( $tiles, $post_type = "" ){
-        if ( $post_type === "trainings" ){
-            $tiles["relationships"] = [ "label" => __( "Member List", 'disciple_tools' ) ];
-            $tiles["trainings"] = [ "label" => __( "Trainings", 'disciple_tools' ) ];
-            $tiles["other"] = [ "label" => __( "Other", 'disciple_tools' ) ];
-        }
-        return $tiles;
-    }
-
 
     //action when a post connection is added during create or update
     public function post_connection_added( $post_type, $post_id, $field_key, $value ){
@@ -921,6 +945,15 @@ class DT_Training_Base {
                 'details'
             ], filemtime( trailingslashit( plugin_dir_path( __FILE__ ) ) . 'trainings.js' ), true );
         }
+    }
+
+    public static function dt_filter_access_permissions( $permissions, $post_type ){
+        if ( $post_type === "trainings" ){
+            if ( DT_Posts::can_view_all( $post_type ) ){
+                $permissions = [];
+            }
+        }
+        return $permissions;
     }
 
 
