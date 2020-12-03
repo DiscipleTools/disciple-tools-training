@@ -86,6 +86,7 @@ class DT_Training_Base {
 
     public function dt_custom_fields_settings( $fields, $post_type ){
         if ( $post_type === 'trainings' ){
+            // framework fields
             $fields['tags'] = [
                 'name'        => __( 'Tags', 'disciple_tools' ),
                 'description' => _x( 'A useful way to training related items and can help training contacts associated with noteworthy characteristics. e.g. business owner, sports lover. The contacts can also be filtered using these tags.', 'Optional Documentation', 'disciple_tools' ),
@@ -107,18 +108,15 @@ class DT_Training_Base {
                 'default'     => [],
                 'hidden'      => true
             ];
-
             $fields['tasks'] = [
                 'name' => __( 'Tasks', 'disciple_tools' ),
                 'type' => 'post_user_meta',
             ];
-
             $fields["duplicate_data"] = [
                 "name" => 'Duplicates', //system string does not need translation
                 'type' => 'array',
                 'default' => [],
             ];
-
             $fields["status"] = [
                 'name' => "Status",
                 'type' => 'key_select',
@@ -162,7 +160,6 @@ class DT_Training_Base {
                 ],
                 "default_color" => "#366184",
             ];
-
             $fields['assigned_to'] = [
                 'name'        => __( 'Assigned To', 'disciple_tools' ),
                 'description' => __( "Select the main person who is responsible for reporting on this training.", 'disciple_tools' ),
@@ -172,7 +169,22 @@ class DT_Training_Base {
                 'icon' => get_template_directory_uri() . '/dt-assets/images/assigned-to.svg',
                 'custom_display' => true,
             ];
+            $fields["requires_update"] = [
+                'name'        => __( 'Requires Update', 'disciple_tools' ),
+                'description' => '',
+                'type'        => 'boolean',
+                'default'     => false,
+            ];
 
+
+            $fields['time_notes'] = [
+                'name'        => __( 'Time Notes', 'disciple_tools' ),
+                'description' => _x( 'Notes on when the trainings will happen', 'Optional Documentation', 'disciple_tools' ),
+                'type'        => 'text',
+                'default'     => time(),
+                'tile' => 'details',
+                'icon' => get_template_directory_uri() . '/dt-assets/images/edit.svg',
+            ];
             $fields['start_date'] = [
                 'name'        => __( 'Start Date', 'disciple_tools' ),
                 'description' => _x( 'The date this training began meeting.', 'Optional Documentation', 'disciple_tools' ),
@@ -190,6 +202,42 @@ class DT_Training_Base {
                 'icon' => get_template_directory_uri() . '/dt-assets/images/date-end.svg',
             ];
 
+
+            // location
+            $fields['location_grid'] = [
+                'name'        => __( 'Locations', 'disciple_tools' ),
+                'description' => _x( 'The general location where this contact is located.', 'Optional Documentation', 'disciple_tools' ),
+                'type'        => 'location',
+                'mapbox'    => false,
+                "in_create_form" => true,
+                "tile" => "details",
+                "icon" => get_template_directory_uri() . "/dt-assets/images/location.svg",
+            ];
+            $fields['location_grid_meta'] = [
+                'name'        => __( 'Locations', 'disciple_tools' ), //system string does not need translation
+                'description' => _x( 'The general location where this contact is located.', 'Optional Documentation', 'disciple_tools' ),
+                'type'        => 'location_meta',
+                "tile"      => "details",
+                'mapbox'    => false,
+                'hidden' => true
+            ];
+            $fields["contact_address"] = [
+                "name" => __( 'Address', 'disciple_tools' ),
+                "icon" => get_template_directory_uri() . "/dt-assets/images/house.svg",
+                "type" => "communication_channel",
+                "tile" => "details",
+                'mapbox'    => false,
+                "customizable" => false
+            ];
+            if ( DT_Mapbox_API::get_key() ){
+                $fields["contact_address"]["hidden"] = true;
+                $fields["contact_address"]["mapbox"] = true;
+                $fields["location_grid"]["mapbox"] = true;
+                $fields["location_grid_meta"]["mapbox"] = true;
+            }
+
+
+            // connection fields
             $fields["parent_trainings"] = [
                 "name" => __( 'Parent Training', 'disciple_tools' ),
                 'description' => _x( 'A training that launched this training.', 'Optional Documentation', 'disciple_tools' ),
@@ -223,16 +271,6 @@ class DT_Training_Base {
                 'icon' => get_template_directory_uri() . '/dt-assets/images/group-child.svg',
                 'create-icon' => get_template_directory_uri() . '/dt-assets/images/add-group.svg',
             ];
-
-
-
-            $fields["member_count"] = [
-                'name' => __( 'Member Count', 'disciple_tools' ),
-                'description' => _x( 'The number of members in this training. It will automatically be updated when new members are added or removed in the member list. Change this number manually to included people who may not be in the system but are also members of the training.', 'Optional Documentation', 'disciple_tools' ),
-                'type' => 'number',
-                'default' => '',
-                'tile' => 'relationships',
-            ];
             $fields["members"] = [
                 "name" => __( 'Member List', 'disciple_tools' ),
                 'description' => _x( 'The contacts who are members of this training.', 'Optional Documentation', 'disciple_tools' ),
@@ -260,29 +298,7 @@ class DT_Training_Base {
                 'icon' => get_template_directory_uri() . '/dt-assets/images/coach.svg',
                 'create-icon' => get_template_directory_uri() . '/dt-assets/images/add-contact.svg',
             ];
-
-            $fields["requires_update"] = [
-                'name'        => __( 'Requires Update', 'disciple_tools' ),
-                'description' => '',
-                'type'        => 'boolean',
-                'default'     => false,
-            ];
-            $fields['location_grid'] = [
-                'name'        => __( 'Locations', 'disciple_tools' ),
-                'description' => _x( 'The general location where this training meets.', 'Optional Documentation', 'disciple_tools' ),
-                'type'        => 'location',
-                'default'     => [],
-                'tile' => 'details',
-                'icon' => get_template_directory_uri() . '/dt-assets/images/location.svg',
-            ];
-            $fields['location_grid_meta'] = [
-                'name'        => 'Location Grid Meta', //system string does not need translation
-                'type'        => 'location_meta',
-                'default'     => [],
-                'hidden' => true,
-            ];
-
-            $fields["people_trainings"] = [
+            $fields["peoplegroups"] = [
                 "name" => __( 'People Groups', 'disciple_tools' ),
                 'description' => _x( 'The people trainings represented by this training.', 'Optional Documentation', 'disciple_tools' ),
                 "type" => "connection",
@@ -291,7 +307,6 @@ class DT_Training_Base {
                 "p2p_direction" => "from",
                 "p2p_key" => "trainings_to_peoplegroups"
             ];
-
             $fields['groups'] = [
                 'name' => __( "Groups", 'disciple_tools' ),
                 'type' => 'connection',
@@ -302,6 +317,24 @@ class DT_Training_Base {
                 'icon' => get_template_directory_uri() . "/dt-assets/images/group-child.svg",
                 'create-icon' => get_template_directory_uri() . "/dt-assets/images/add-group.svg",
             ];
+
+            // count fields
+            $fields["member_count"] = [
+                'name' => __( 'Member Count', 'disciple_tools' ),
+                'description' => _x( 'The number of members in this training. It will automatically be updated when new members are added or removed in the member list. Change this number manually to included people who may not be in the system but are also members of the training.', 'Optional Documentation', 'disciple_tools' ),
+                'type' => 'number',
+                'default' => '',
+                'tile' => 'relationships',
+            ];
+            $fields["leader_count"] = [
+                'name' => __( 'Leader Count', 'disciple_tools' ),
+                'description' => _x( 'The number of members in this training. It will automatically be updated when new members are added or removed in the member list. Change this number manually to included people who may not be in the system but are also members of the training.', 'Optional Documentation', 'disciple_tools' ),
+                'type' => 'number',
+                'default' => '',
+                'tile' => 'relationships',
+            ];
+
+
         }
 
         if ( $post_type === 'contacts' ){
@@ -593,6 +626,9 @@ class DT_Training_Base {
                 }
                 self::update_training_member_count( $post_id );
             }
+            if ( $field_key === "leaders" ){
+                self::update_training_leader_count( $post_id );
+            }
             if ( $field_key === "coaches" ){
                 // share the training with the coach when a coach is added.
                 $user_id = get_post_meta( $value, "corresponds_to_user", true );
@@ -619,6 +655,9 @@ class DT_Training_Base {
         if ( $post_type === "trainings" ){
             if ( $field_key === "members" ){
                 self::update_training_member_count( $post_id, "removed" );
+            }
+            if ( $field_key === "leaders" ){
+                self::update_training_leader_count( $post_id, "removed" );
             }
         }
         if ( $post_type === "contacts" && $field_key === "trainings" ){
@@ -656,7 +695,7 @@ class DT_Training_Base {
         return $fields;
     }
 
-    //update the training member count when members and added or removed.
+    //update the training member count when members are added or removed.
     private static function update_training_member_count( $training_id, $action = "added" ){
         $training = get_post( $training_id );
         $args = [
@@ -672,6 +711,24 @@ class DT_Training_Base {
             update_post_meta( $training_id, 'member_count', sizeof( $members ) );
         } elseif ( $action === "removed" ){
             update_post_meta( $training_id, 'member_count', intval( $member_count ) - 1 );
+        }
+    }
+
+    private static function update_training_leader_count( $training_id, $action = "added" ){
+        $training = get_post( $training_id );
+        $args = [
+            'connected_type'   => "trainings_to_leaders",
+            'connected_direction' => 'from',
+            'connected_items'  => $training,
+            'nopaging'         => true,
+            'suppress_filters' => false,
+        ];
+        $leaders = get_posts( $args );
+        $leader_count = get_post_meta( $training_id, 'leader_count', true );
+        if ( sizeof( $leaders ) > intval( $leader_count ) ){
+            update_post_meta( $training_id, 'leader_count', sizeof( $leaders ) );
+        } elseif ( $action === "removed" ){
+            update_post_meta( $training_id, 'leader_count', intval( $leader_count - 1 ) );
         }
     }
 
