@@ -155,4 +155,53 @@ jQuery(document).ready(function($) {
         assigned_to_input.focus()
     })
 
+    /*https://www.daterangepicker.com/*/
+    $('#recurring_time').daterangepicker({
+        singleDatePicker: true,
+        timePicker: true,
+        timePickerIncrement: 15
+    }, function( start ){
+        console.log(start.format('YYYY-MM-DD hh:mm:ss'))
+        let rtime = $('#recurring_time')
+        rtime.val(start.format('YYYY-MM-DD hh:mm:ss'))
+
+
+            if (document.querySelector('#group-details-edit-modal') && document.querySelector('#group-details-edit-modal').contains( this)) {
+                // do nothing
+            } else {
+                let date = window.SHAREDFUNCTIONS.convertArabicToEnglishNumbers(start.format('YYYY-MM-DD hh:mm:ss'));
+
+                if (!rtime.val()) {
+                    date = " ";//null;
+                }
+                let id = rtime.attr('id')
+                $(`#${id}-spinner`).addClass('active')
+                window.API.update_post( post_type, post_id, { [id]: moment.utc(date).unix() }).then((resp)=>{
+                    console.log(resp)
+                    $(`#${id}-spinner`).removeClass('active')
+                    if (rtime.value) {
+                        rtime.value = window.SHAREDFUNCTIONS.formatDate(resp[id]["timestamp"]);
+                    }
+                    $( document ).trigger( "dt_datetime_picker-updated", [ resp, id, date ] );
+
+                    if (rtime.value && moment.unix(rtime.value).isValid()) {
+                        rtime.value = window.SHAREDFUNCTIONS.formatDate(rtime.value);
+                    }
+
+                }).catch(handleAjaxError)
+            }
+
+
+        })
+
+    // $('#demo').daterangepicker({
+    //     "singleDatePicker": true,
+    //     "timePicker": true,
+    //     "autoApply": true,
+    //     "startDate": "11/27/2020",
+    //     "endDate": "12/03/2020",
+    //     "minDate": "YYYY/MM/DD"
+    // }, function(start, end, label) {
+    //     console.log('New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')');
+    // });
 })

@@ -1,4 +1,5 @@
 <?php
+if ( !defined( 'ABSPATH' ) ) { exit; } // Exit if accessed directly.
 
 class DT_Training_Base {
     private static $_instance = null;
@@ -21,6 +22,8 @@ class DT_Training_Base {
         add_filter( 'dt_details_additional_tiles', [ $this, 'dt_details_additional_tiles' ], 10, 2 );
         add_action( 'dt_details_additional_section', [ $this, 'dt_details_additional_section' ], 20, 2 );
         add_action( 'wp_enqueue_scripts', [ $this, 'scripts' ], 99 );
+
+        add_action( 'dt_render_field_for_display_template', [ $this, 'render_datetime_field' ], 10, 5 );
 
         // hooks
         add_action( "post_connection_removed", [ $this, "post_connection_removed" ], 10, 4 );
@@ -199,6 +202,16 @@ class DT_Training_Base {
                 'type'        => 'date',
                 'default'     => '',
                 'tile' => 'details',
+                'icon' => get_template_directory_uri() . '/dt-assets/images/date-end.svg',
+            ];
+
+
+            $fields['time'] = [
+                'name'        => __( 'Times', 'disciple_tools' ),
+                'description' => _x( 'The date this training stopped meeting (if applicable).', 'Optional Documentation', 'disciple_tools' ),
+                'type'        => 'datetime',
+                'default'     => '',
+                'tile' => 'times',
                 'icon' => get_template_directory_uri() . '/dt-assets/images/date-end.svg',
             ];
 
@@ -486,6 +499,7 @@ class DT_Training_Base {
     public function dt_details_additional_tiles( $tiles, $post_type = "" ){
         if ( $post_type === "trainings" ){
             $tiles["relationships"] = [ "label" => __( "Member List", 'disciple_tools' ) ];
+            $tiles["times"] = [ "label" => __( "Meeting Times", 'disciple_tools' ) ];
             $tiles["other"] = [ "label" => __( "Other", 'disciple_tools' ) ];
         }
         return $tiles;
@@ -693,6 +707,20 @@ class DT_Training_Base {
             }
         }
         return $fields;
+    }
+
+    public function render_datetime_field( $post, $field_type, $field_key, $required_tag ){
+        if ( $field_type === "datetime" ) :
+            ?>
+            <div class="<?php echo esc_html( $field_key ) ?> input-group">
+                <input id="<?php echo esc_html( $field_key ) ?>" class="input-group-field dt_datetime_picker" type="text" autocomplete="off" <?php echo esc_html( $required_tag ) ?>
+                       value="<?php echo esc_html( $post[$field_key]["timestamp"] ?? '' ) ?>" >
+                <div class="input-group-button">
+                    <button id="<?php echo esc_html( $field_key ) ?>-clear-button" class="button alert clear-date-button" data-inputid="<?php echo esc_html( $field_key ) ?>" title="Delete Date" type="button">x</button>
+                </div>
+            </div>
+        <?php
+        endif;
     }
 
     //update the training member count when members are added or removed.
@@ -997,9 +1025,10 @@ class DT_Training_Base {
 
     public function scripts(){
         if ( is_singular( "trainings" ) ){
+
             wp_enqueue_script( 'dt_trainings', trailingslashit( plugin_dir_url( __FILE__ ) ) . 'trainings.js', [
                 'jquery',
-                'details'
+                'details',
             ], filemtime( trailingslashit( plugin_dir_path( __FILE__ ) ) . 'trainings.js' ), true );
         }
     }

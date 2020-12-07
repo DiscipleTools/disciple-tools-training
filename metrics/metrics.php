@@ -1,4 +1,5 @@
 <?php
+if ( !defined( 'ABSPATH' ) ) { exit; } // Exit if accessed directly.
 
 add_action( 'after_setup_theme', 'dt_training_metrics', 100 );
 function dt_training_metrics() {

@@ -1,4 +1,5 @@
 <?php
+if ( !defined( 'ABSPATH' ) ) { exit; } // Exit if accessed directly.
 
 function dt_training_scripts() {
     if ( function_exists( 'dt_get_url_path' ) ) {
