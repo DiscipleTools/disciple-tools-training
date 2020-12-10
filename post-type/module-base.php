@@ -1,9 +1,10 @@
 <?php
 if ( !defined( 'ABSPATH' ) ) { exit; } // Exit if accessed directly.
 
-class DT_Training_Base {
+class DT_Training_Base extends DT_Module_Base {
     private static $_instance = null;
     public $post_type = "trainings";
+    public $module = "trainings_base";
     public static function instance() {
         if ( is_null( self::$_instance ) ) {
             self::$_instance = new self();
@@ -12,6 +13,11 @@ class DT_Training_Base {
     } // End instance()
 
     public function __construct() {
+        parent::__construct();
+        if ( !self::check_enabled_and_prerequisites() ){
+            return;
+        }
+
         //setup post type
         add_action( 'after_setup_theme', [ $this, 'after_setup_theme' ], 100 );
         add_filter( 'dt_set_roles_and_permissions', [ $this, 'dt_set_roles_and_permissions' ], 20, 1 );
@@ -179,7 +185,7 @@ class DT_Training_Base {
                 'default'     => false,
             ];
 
-
+            // @todo Add schedule section
             $fields['time_notes'] = [
                 'name'        => __( 'Time Notes', 'disciple_tools' ),
                 'description' => _x( 'Notes on when the trainings will happen', 'Optional Documentation', 'disciple_tools' ),
@@ -204,8 +210,6 @@ class DT_Training_Base {
                 'tile' => 'details',
                 'icon' => get_template_directory_uri() . '/dt-assets/images/date-end.svg',
             ];
-
-
             $fields['time'] = [
                 'name'        => __( 'Times', 'disciple_tools' ),
                 'description' => _x( 'The date this training stopped meeting (if applicable).', 'Optional Documentation', 'disciple_tools' ),
@@ -214,6 +218,7 @@ class DT_Training_Base {
                 'tile' => 'times',
                 'icon' => get_template_directory_uri() . '/dt-assets/images/date-end.svg',
             ];
+            // @todo end
 
 
             // location
