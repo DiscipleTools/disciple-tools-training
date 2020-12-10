@@ -36,7 +36,7 @@ class DT_Training_Apps extends DT_Module_Base {
 
         return $fields;
     }
-    public function dt_details_additional_section(  $section, $post_type ) {
+    public function dt_details_additional_section( $section, $post_type ) {
         if ( $post_type === 'trainings' && $section === "apps" ){
             $record = DT_Posts::get_post( $post_type, get_the_ID() );
             $magic = DT_Magic_URL::instance( $this->root );
@@ -46,10 +46,10 @@ class DT_Training_Apps extends DT_Module_Base {
             <div class="cell small-12 medium-4">
                 <?php
                 if ( ! empty( $types ) ){
-                    foreach( $types as $key => $type ){
+                    foreach ( $types as $key => $type ){
                         ?>
                         <div class="cell small-12 medium-4">
-                            <?php echo $type['name'] ?> :
+                            <?php echo esc_html( $type['name'] ) ?> :
                             <?php
                             if ( isset( $record[$type['meta_key']] ) ) {
                                 ?><a href="<?php echo esc_url( site_url() ) . '/' . esc_attr( $type['root'] ) . '/' . esc_attr( $type['type'] ) . '/'. esc_attr( $record[$type['meta_key']] ) ?>"><?php echo esc_html__( 'link to form', 'disciple-tools' ) ?></a><?php
@@ -148,7 +148,8 @@ class DT_Training_Magic_Registration
         // register url and access
         add_filter( 'dt_templates_for_urls', [ $this, 'register_url' ], 199, 1 );
         add_filter( 'dt_blank_access', [ $this, '_has_access' ] );
-        add_filter( 'dt_allow_non_login_access', function(){ return true; }, 100, 1  );
+        add_filter( 'dt_allow_non_login_access', function(){ return true;
+        }, 100, 1 );
     }
 
     public function register_type( array $types ) : array {
@@ -234,7 +235,7 @@ class DT_Training_Magic_Registration
         );
 
         if ( Disciple_Tools_Google_Geocode_API::get_key() ){
-            wp_enqueue_script( 'google-search-widget', 'https://maps.googleapis.com/maps/api/js?libraries=places&key='.Disciple_Tools_Google_Geocode_API::get_key(), [ 'jquery', 'mapbox-gl'], '1', false );
+            wp_enqueue_script( 'google-search-widget', 'https://maps.googleapis.com/maps/api/js?libraries=places&key='.Disciple_Tools_Google_Geocode_API::get_key(), [ 'jquery', 'mapbox-gl' ], '1', false );
         }
 
     }
@@ -342,10 +343,10 @@ class DT_Training_Magic_Registration
                 'nonce' => wp_create_nonce( 'wp_rest' ),
                 'parts' => $this->parts,
                 'translations' => [
-                    'title' => __('Register for Training', 'disciple-tools'),
-                    'add' => __('Add', 'disciple-tools'),
-                    'submit' => __('Join Training', 'disciple-tools' ),
-                    'submit_in' => __('Join in', 'disciple-tools' )
+                    'title' => __( 'Register for Training', 'disciple-tools' ),
+                    'add' => __( 'Add', 'disciple-tools' ),
+                    'submit' => __( 'Join Training', 'disciple-tools' ),
+                    'submit_in' => __( 'Join in', 'disciple-tools' )
                 ],
             ]) ?>][0]
 
@@ -388,7 +389,8 @@ class DT_Training_Magic_Registration
                     let name = $('#name').val()
                     let phone = $('#phone').val()
                     let email = $('#e').val()
-                    let location
+
+                    /* @todo add submit logic */
 
                 })
 
@@ -651,12 +653,12 @@ class DT_Training_Magic_Registration
                             Location <br>
                             <div id="mapbox-wrapper">
                                 <div id="mapbox-autocomplete" class="mapbox-autocomplete input-group" data-autosubmit="false" data-add-address="false">
-                                    <input id="mapbox-search" type="text" name="mapbox_search" class="input-group-field" autocomplete="off" placeholder="<?php echo esc_html__('Search Location', 'disciple-tools') ?>" />
+                                    <input id="mapbox-search" type="text" name="mapbox_search" class="input-group-field" autocomplete="off" placeholder="<?php echo esc_html__( 'Search Location', 'disciple-tools' ) ?>" />
                                     <div class="input-group-button">
                                         <button id="mapbox-spinner-button" class="button hollow" style="display:none;border-color:lightgrey;">
                                             <span class="" style="border-radius: 50%;width: 24px;height: 24px;border: 0.25rem solid lightgrey;border-top-color: black;animation: spin 1s infinite linear;display: inline-block;"></span>
                                         </button>
-                                        <button id="mapbox-clear-autocomplete" class="button alert input-height delete-button-style mapbox-delete-button" type="button" title="<?php echo esc_html__('Clear', 'disciple-tools') ?>" style="display:none;">&times;</button>
+                                        <button id="mapbox-clear-autocomplete" class="button alert input-height delete-button-style mapbox-delete-button" type="button" title="<?php echo esc_html__( 'Clear', 'disciple-tools' ) ?>" style="display:none;">&times;</button>
                                     </div>
                                     <div id="mapbox-autocomplete-list" class="mapbox-autocomplete-items"></div>
                                 </div>
@@ -715,31 +717,31 @@ class DT_Training_Magic_Registration
             return new WP_Error( __METHOD__, "Missing parameters", [ 'status' => 400 ] );
         }
 
-        $params = recursive_sanitize_text_field($params);
+        $params = recursive_sanitize_text_field( $params );
 
         // validate
         $magic = DT_Magic_URL::instance( $this->root );
-        $post_id = $magic->get_post_id( $params['parts']['meta_key'], $params['parts']['public_key']);
+        $post_id = $magic->get_post_id( $params['parts']['meta_key'], $params['parts']['public_key'] );
 
         if ( ! $post_id ){
-            return new WP_Error( __METHOD__ , "Missing post record", [ 'status' => 400 ] );
+            return new WP_Error( __METHOD__, "Missing post record", [ 'status' => 400 ] );
         }
 
         $action = sanitize_text_field( wp_unslash( $params['action'] ) );
 
-        switch( $action ) {
+        switch ( $action ) {
             case 'insert':
                 return $this->insert_report( $params, $post_id );
             case 'get':
                 return $this->retrieve_reports( $post_id );
             case 'delete':
-                return $this->delete_report( $params, $post_id);
+                return $this->delete_report( $params, $post_id );
             case 'geojson':
-                return $this->geojson_reports( $params, $post_id);
+                return $this->geojson_reports( $params, $post_id );
             case 'statistics':
-                return $this->statistics_reports( $params, $post_id);
+                return $this->statistics_reports( $params, $post_id );
             default:
-                return new WP_Error( __METHOD__ , "Missing valid action", [ 'status' => 400 ] );
+                return new WP_Error( __METHOD__, "Missing valid action", [ 'status' => 400 ] );
         }
     }
 
@@ -781,7 +783,7 @@ class DT_Training_Magic_Registration
         $report_id = dt_report_insert( $args );
 
         if ( is_wp_error( $report_id ) || empty( $report_id ) ){
-            return new WP_Error( __METHOD__ , "Failed to create report.", [ 'status' => 400 ] );
+            return new WP_Error( __METHOD__, "Failed to create report.", [ 'status' => 400 ] );
         }
 
         return $this->retrieve_reports( $post_id );
@@ -802,7 +804,7 @@ class DT_Training_Magic_Registration
                 if ( empty( $time ) ) {
                     continue;
                 }
-                $year = date('Y', $time );
+                $year = date( 'Y', $time );
                 if ( ! isset( $data[$year] ) ) {
                     $data[$year] = [];
                 }
@@ -849,7 +851,7 @@ class DT_Training_Magic_Registration
             if ( empty( $time ) ) {
                 continue;
             }
-            $year = date('Y', $time );
+            $year = date( 'Y', $time );
             if ( ! isset( $data[$year] ) ) {
                 $data[$year] = [
                     'total_groups' => 0,
@@ -900,9 +902,9 @@ class DT_Training_Magic_Registration
                 $counties[$result['admin2_grid_id']] = $counties[$result['admin2_grid_id']]['baptisms'] + $result['value'];
             }
 
-            $data[$year]['total_countries'] = count($countries);
-            $data[$year]['total_states'] = count($states);
-            $data[$year]['total_counties'] = count($counties);
+            $data[$year]['total_countries'] = count( $countries );
+            $data[$year]['total_states'] = count( $states );
+            $data[$year]['total_counties'] = count( $counties );
 
             $data[$year]['countries'] = $countries;
             $data[$year]['states'] = $states;
@@ -916,22 +918,21 @@ class DT_Training_Magic_Registration
     public function delete_report( $params, $post_id ) {
         $result = Disciple_Tools_Reports::delete( $params['report_id'] );
         if ( ! $result ) {
-            return new WP_Error( __METHOD__ , "Failed to delete report", [ 'status' => 400 ] );
+            return new WP_Error( __METHOD__, "Failed to delete report", [ 'status' => 400 ] );
         }
         return $this->retrieve_reports( $post_id );
     }
 
-    public function geojson_reports( $params, $post_id )
-    {
+    public function geojson_reports( $params, $post_id ) {
         global $wpdb;
-        $results = $wpdb->get_results( $wpdb->prepare("SELECT * FROM $wpdb->dt_reports WHERE post_id = %s ORDER BY time_end DESC", $post_id), ARRAY_A);
+        $results = $wpdb->get_results( $wpdb->prepare( "SELECT * FROM $wpdb->dt_reports WHERE post_id = %s ORDER BY time_end DESC", $post_id ), ARRAY_A );
 
         if ( empty( $results ) ) {
             return $this->_empty_geojson();
         }
 
         foreach ($results as $index => $result) {
-            $results[$index]['payload'] = maybe_unserialize( $result['payload']);
+            $results[$index]['payload'] = maybe_unserialize( $result['payload'] );
         }
 
         // @todo sum multiple reports for same area
@@ -946,7 +947,7 @@ class DT_Training_Magic_Registration
             if ( empty( $time ) ) {
                 continue;
             }
-            $year = date('Y', $time );
+            $year = date( 'Y', $time );
 
             // build feature
             $features[] = array(

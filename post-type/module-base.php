@@ -724,7 +724,7 @@ class DT_Training_Base extends DT_Module_Base {
                     <button id="<?php echo esc_html( $field_key ) ?>-clear-button" class="button alert clear-date-button" data-inputid="<?php echo esc_html( $field_key ) ?>" title="Delete Date" type="button">x</button>
                 </div>
             </div>
-        <?php
+            <?php
         endif;
     }
 
