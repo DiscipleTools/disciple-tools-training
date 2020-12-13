@@ -184,22 +184,22 @@ class DT_Training_Base extends DT_Module_Base {
                 'type'        => 'boolean',
                 'default'     => false,
             ];
-
-            // @todo Add schedule section
-            $fields['time_notes'] = [
-                'name'        => __( 'Time Notes', 'disciple_tools' ),
-                'description' => _x( 'Notes on when the trainings will happen', 'Optional Documentation', 'disciple_tools' ),
+            $fields['video_link'] = [
+                'name'        => __( 'Video Link', 'disciple_tools' ),
+                'description' => _x( 'Link to video chat service', 'Optional Documentation', 'disciple_tools' ),
                 'type'        => 'text',
                 'default'     => time(),
                 'tile' => 'details',
                 'icon' => get_template_directory_uri() . '/dt-assets/images/edit.svg',
             ];
+
+            // @todo Add schedule section
             $fields['start_date'] = [
                 'name'        => __( 'Start Date', 'disciple_tools' ),
                 'description' => _x( 'The date this training began meeting.', 'Optional Documentation', 'disciple_tools' ),
                 'type'        => 'date',
                 'default'     => time(),
-                'tile' => 'details',
+                'tile' => 'meeting_times',
                 'icon' => get_template_directory_uri() . '/dt-assets/images/date-start.svg',
             ];
             $fields['end_date'] = [
@@ -207,16 +207,25 @@ class DT_Training_Base extends DT_Module_Base {
                 'description' => _x( 'The date this training stopped meeting (if applicable).', 'Optional Documentation', 'disciple_tools' ),
                 'type'        => 'date',
                 'default'     => '',
-                'tile' => 'details',
+                'tile' => 'meeting_times',
                 'icon' => get_template_directory_uri() . '/dt-assets/images/date-end.svg',
             ];
-            $fields['time'] = [
-                'name'        => __( 'Times', 'disciple_tools' ),
+            $fields['recurring_time'] = [
+                'name'        => __( 'Recurring Time', 'disciple_tools' ),
                 'description' => _x( 'The date this training stopped meeting (if applicable).', 'Optional Documentation', 'disciple_tools' ),
                 'type'        => 'datetime',
                 'default'     => '',
-                'tile' => 'times',
+                'tile' => 'meeting_times',
                 'icon' => get_template_directory_uri() . '/dt-assets/images/date-end.svg',
+            ];
+
+            $fields['time_notes'] = [
+                'name'        => __( 'Notes', 'disciple_tools' ),
+                'description' => _x( 'Notes on when the trainings will happen', 'Optional Documentation', 'disciple_tools' ),
+                'type'        => 'text',
+                'default'     => time(),
+                'tile' => 'meeting_times',
+                'icon' => get_template_directory_uri() . '/dt-assets/images/edit.svg',
             ];
             // @todo end
 
@@ -504,7 +513,7 @@ class DT_Training_Base extends DT_Module_Base {
     public function dt_details_additional_tiles( $tiles, $post_type = "" ){
         if ( $post_type === "trainings" ){
             $tiles["relationships"] = [ "label" => __( "Member List", 'disciple_tools' ) ];
-            $tiles["times"] = [ "label" => __( "Meeting Times", 'disciple_tools' ) ];
+            $tiles["meeting_times"] = [ "label" => __( "Meeting Times", 'disciple_tools' ) ];
             $tiles["other"] = [ "label" => __( "Other", 'disciple_tools' ) ];
         }
         return $tiles;

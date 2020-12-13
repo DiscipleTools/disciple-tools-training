@@ -42,19 +42,29 @@ class DT_Training_Apps extends DT_Module_Base {
             $magic = DT_Magic_URL::instance( $this->root );
             $types = $magic->list_types();
             ?>
-
-            <div class="cell small-12 medium-4">
+            <div class="section-subheader">
+                <img class="dt-icon" src="<?php echo get_stylesheet_directory_uri() ?>/dt-assets/images/date-end.svg">
+                Registration
+                <span id="register-spinner" class="loading-spinner"></span>
+            </div>
+            <div class="cell">
                 <?php
                 if ( ! empty( $types ) ){
                     foreach ( $types as $key => $type ){
                         ?>
                         <div class="cell small-12 medium-4">
-                            <?php echo esc_html( $type['name'] ) ?> :
                             <?php
                             if ( isset( $record[$type['meta_key']] ) ) {
-                                ?><a href="<?php echo esc_url( site_url() ) . '/' . esc_attr( $type['root'] ) . '/' . esc_attr( $type['type'] ) . '/'. esc_attr( $record[$type['meta_key']] ) ?>"><?php echo esc_html__( 'link to form', 'disciple-tools' ) ?></a><?php
-                            } else {
-                                ?><a class="create-magic-link" data-meta_key_name="<?php echo esc_attr( $type['meta_key'] ) ?>" data-meta_key_value="<?php echo esc_attr( DT_Magic_URL::create_unique_key() ) ?>" ><?php echo esc_html__( 'create link', 'disciple-tools' ) ?></a><?php
+                                /* copy link */
+                                ?><a class="button hollow small" href="<?php echo esc_url( site_url() ) . '/' . esc_attr( $type['root'] ) . '/' . esc_attr( $type['type'] ) . '/'. esc_attr( $record[$type['meta_key']] ) ?>"><?php echo esc_html__( 'copy link', 'disciple-tools' ) ?></a> <?php
+                                /* edit form */
+                                ?><a class="button hollow small" data-open="modal-large"><?php echo esc_html__( 'edit form', 'disciple-tools' ) ?></a> <?php
+                                /* show report */
+                                ?><a class="button hollow small" data-open="modal-small" ><?php echo esc_html__( 'report', 'disciple-tools' ) ?></a><?php
+                            }
+                            /* create link*/
+                            else {
+                                ?><a class="create-magic-link button hollow small" data-meta_key_name="<?php echo esc_attr( $type['meta_key'] ) ?>" data-meta_key_value="<?php echo esc_attr( DT_Magic_URL::create_unique_key() ) ?>" ><?php echo esc_html__( 'create link', 'disciple-tools' ) ?></a><?php
                             }
                             ?>
                         </div>
@@ -77,12 +87,42 @@ class DT_Training_Apps extends DT_Module_Base {
                         makeRequestOnPosts('POST', detailsSettings.post_type+'/'+detailsSettings.post_id, data)
                             .done((updatedPost)=>{
                                 console.log(updatedPost)
-                                link.html('Link')
-                                link.attr('href', url + updatedPost[meta_key_name] )
+                                link.parent().empty().append(`
+                                <a class="button hollow small" href="${url + updatedPost[meta_key_name]}">copy link</a>
+                                <a class="button hollow small" >edit form</a>
+                                <a class="button hollow small" >reports</a>
+                                `)
                             })
                     })
                 })
             </script>
+
+
+            <div class="section-subheader">
+                <img class="dt-icon" src="<?php echo get_stylesheet_directory_uri() ?>/dt-assets/images/date-end.svg">
+                Public Calendar
+                <span id="register-spinner" class="loading-spinner"></span>
+            </div>
+            <div class="cell">
+                <?php
+                if ( ! empty( $types ) ){
+                    foreach ( $types as $key => $type ){
+                        ?>
+                        <div class="cell small-12 medium-4">
+                            <?php
+                            /* copy link */
+                            ?><a class="button hollow small" href="<?php echo esc_url( site_url() ) . '/' . esc_attr( $type['root'] ) . '/' . esc_attr( $type['type'] ) . '/' ?>"><?php echo esc_html__( 'link', 'disciple-tools' ) ?></a> <?php
+                            /* edit form */
+                            ?><a class="button hollow small" data-open="modal-large"><?php echo esc_html__( 'show on calendar', 'disciple-tools' ) ?></a> <?php
+                            /* show report */
+                            ?><a class="button hollow small" data-open="modal-small" ><?php echo esc_html__( 'open registration ', 'disciple-tools' ) ?></a><?php
+                            ?>
+                        </div>
+                        <?php
+                    }
+                }
+                ?>
+            </div>
 
         <?php }
     }
@@ -632,49 +672,51 @@ class DT_Training_Magic_Registration
             <div class="grid-x grid-padding-x" id="main-section" style="height: inherit !important;">
                 <div class="cell center" id="bottom-spinner"><span class="loading-spinner active"></span></div>
                 <div class="cell" id="content">
-                    <div id="form" class="grid-x">
-<!--                        <div class="cell">-->
-<!--                            Description-->
-<!--                        </div>-->
-                        <div class="cell">
-                            Name <br>
-                            <input name="name" type="text" id="name" placeholder="Name" />
-                        </div>
-                        <div class="cell">
-                            Phone <br>
-                            <input name="name" type="text" id="phone" placeholder="Phone" />
-                        </div>
-                        <div class="cell">
-                            Email <br>
-                            <input name="email" type="email" id="email" value="something" placeholder="Email" />
-                            <input name="e" type="email" id="e" placeholder="Email" />
-                        </div>
-                        <div class="cell">
-                            Location <br>
-                            <div id="mapbox-wrapper">
-                                <div id="mapbox-autocomplete" class="mapbox-autocomplete input-group" data-autosubmit="false" data-add-address="false">
-                                    <input id="mapbox-search" type="text" name="mapbox_search" class="input-group-field" autocomplete="off" placeholder="<?php echo esc_html__( 'Search Location', 'disciple-tools' ) ?>" />
-                                    <div class="input-group-button">
-                                        <button id="mapbox-spinner-button" class="button hollow" style="display:none;border-color:lightgrey;">
-                                            <span class="" style="border-radius: 50%;width: 24px;height: 24px;border: 0.25rem solid lightgrey;border-top-color: black;animation: spin 1s infinite linear;display: inline-block;"></span>
-                                        </button>
-                                        <button id="mapbox-clear-autocomplete" class="button alert input-height delete-button-style mapbox-delete-button" type="button" title="<?php echo esc_html__( 'Clear', 'disciple-tools' ) ?>" style="display:none;">&times;</button>
+                    <form data-abide novalidate>
+                        <div  class="grid-x">
+                            <div class="cell">
+                                Description
+                            </div>
+                            <div class="cell">
+                                Name <br>
+                                <input name="name" type="text" id="name" placeholder="Name" required />
+                            </div>
+                            <div class="cell">
+                                Email <br>
+                                <input name="email" type="email" id="email" value="something" placeholder="Email" />
+                                <input name="e" type="email" id="e" placeholder="Email" required />
+                            </div>
+                            <div class="cell">
+                                Phone <br>
+                                <input name="name" type="text" id="phone" placeholder="Phone" required />
+                            </div>
+                            <div class="cell">
+                                Location <br>
+                                <div id="mapbox-wrapper">
+                                    <div id="mapbox-autocomplete" class="mapbox-autocomplete input-group" data-autosubmit="false" data-add-address="false">
+                                        <input id="mapbox-search" type="text" name="mapbox_search" class="input-group-field" autocomplete="off" placeholder="<?php echo esc_html__( 'Search Location', 'disciple-tools' ) ?>" />
+                                        <div class="input-group-button">
+                                            <button id="mapbox-spinner-button" class="button hollow" style="display:none;border-color:lightgrey;">
+                                                <span class="" style="border-radius: 50%;width: 24px;height: 24px;border: 0.25rem solid lightgrey;border-top-color: black;animation: spin 1s infinite linear;display: inline-block;"></span>
+                                            </button>
+                                            <button id="mapbox-clear-autocomplete" class="button alert input-height delete-button-style mapbox-delete-button" type="button" title="<?php echo esc_html__( 'Clear', 'disciple-tools' ) ?>" style="display:none;">&times;</button>
+                                        </div>
+                                        <div id="mapbox-autocomplete-list" class="mapbox-autocomplete-items"></div>
                                     </div>
-                                    <div id="mapbox-autocomplete-list" class="mapbox-autocomplete-items"></div>
                                 </div>
                             </div>
+                            <div class="cell">
+                                Comments <br>
+                                <input name="name" type="text" />
+                            </div>
+    <!--                        <div class="cell">-->
+    <!--                            Footer-->
+    <!--                        </div>-->
+                            <div class="cell center">
+                                <button type="button" id="submit-button" class="button" ></button>
+                            </div>
                         </div>
-                        <div class="cell">
-                            Comments <br>
-                            <input name="name" type="text" />
-                        </div>
-<!--                        <div class="cell">-->
-<!--                            Footer-->
-<!--                        </div>-->
-                        <div class="cell center">
-                            <button type="button" id="submit-button" class="button" ></button>
-                        </div>
-                    </div>
+                    </form>
                 </div>
                 <div class="cell grid" id="error"></div>
             </div>

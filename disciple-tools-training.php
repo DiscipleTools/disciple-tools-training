@@ -134,7 +134,7 @@ class DT_Training {
      */
     private function includes() {
         // post type
-        require_once( 'post-type/trainings.php' );
+        require_once( 'post-type/loader.php' );
 
         // metrics
         if ( DT_Mapbox_API::get_key() ) {
