@@ -178,6 +178,17 @@ class DT_Training_Base extends DT_Module_Base {
                 'icon' => get_template_directory_uri() . '/dt-assets/images/assigned-to.svg',
                 'custom_display' => true,
             ];
+            $fields["coaches"] = [
+                "name" => __( 'Training Coach / Church Planter', 'disciple_tools' ),
+                'description' => _x( 'The person who planted and/or is coaching this training. Only one person can be assigned to a training while multiple people can be coaches / church planters of this training.', 'Optional Documentation', 'disciple_tools' ),
+                "type" => "connection",
+                "post_type" => "contacts",
+                "p2p_direction" => "from",
+                "p2p_key" => "trainings_to_coaches",
+                'tile' => '',
+                'icon' => get_template_directory_uri() . '/dt-assets/images/coach.svg',
+                'create-icon' => get_template_directory_uri() . '/dt-assets/images/add-contact.svg',
+            ];
             $fields["requires_update"] = [
                 'name'        => __( 'Requires Update', 'disciple_tools' ),
                 'description' => '',
@@ -314,17 +325,7 @@ class DT_Training_Base extends DT_Module_Base {
                 "p2p_direction" => "from",
                 "p2p_key" => "trainings_to_leaders",
             ];
-            $fields["coaches"] = [
-                "name" => __( 'Training Coach / Church Planter', 'disciple_tools' ),
-                'description' => _x( 'The person who planted and/or is coaching this training. Only one person can be assigned to a training while multiple people can be coaches / church planters of this training.', 'Optional Documentation', 'disciple_tools' ),
-                "type" => "connection",
-                "post_type" => "contacts",
-                "p2p_direction" => "from",
-                "p2p_key" => "trainings_to_coaches",
-                'tile' => '',
-                'icon' => get_template_directory_uri() . '/dt-assets/images/coach.svg',
-                'create-icon' => get_template_directory_uri() . '/dt-assets/images/add-contact.svg',
-            ];
+
             $fields["peoplegroups"] = [
                 "name" => __( 'People Groups', 'disciple_tools' ),
                 'description' => _x( 'The people trainings represented by this training.', 'Optional Documentation', 'disciple_tools' ),

@@ -3,7 +3,7 @@ if ( !defined( 'ABSPATH' ) ) { exit; } // Exit if accessed directly.
 
 class DT_Training_Apps extends DT_Module_Base {
     public $post_type = "trainings";
-    public $module = "app_module";
+    public $module = "trainings_app_module";
     public $root = 'training_app';
 
     private static $_instance = null;
@@ -39,7 +39,7 @@ class DT_Training_Apps extends DT_Module_Base {
     public function dt_details_additional_section( $section, $post_type ) {
         if ( $post_type === 'trainings' && $section === "apps" ){
             $record = DT_Posts::get_post( $post_type, get_the_ID() );
-            $magic = DT_Magic_URL::instance( $this->root );
+            $magic = new DT_Magic_URL( $this->root );
             $types = $magic->list_types();
             ?>
             <div class="section-subheader">
@@ -64,7 +64,7 @@ class DT_Training_Apps extends DT_Module_Base {
                             }
                             /* create link*/
                             else {
-                                ?><a class="create-magic-link button hollow small" data-meta_key_name="<?php echo esc_attr( $type['meta_key'] ) ?>" data-meta_key_value="<?php echo esc_attr( DT_Magic_URL::create_unique_key() ) ?>" ><?php echo esc_html__( 'create link', 'disciple-tools' ) ?></a><?php
+                                ?><a class="create-magic-link button hollow small" data-meta_key_name="<?php echo esc_attr( $type['meta_key'] ) ?>" data-meta_key_value="<?php echo esc_attr( $magic->create_unique_key() ) ?>" ><?php echo esc_html__( 'create link', 'disciple-tools' ) ?></a><?php
                             }
                             ?>
                         </div>
@@ -148,7 +148,7 @@ class DT_Training_Magic_Registration
     public function __construct() {
         // register type
         add_filter( 'dt_magic_url_register_types', [ $this, 'register_type' ], 10, 1 );
-        $this->url_magic = DT_Magic_URl::instance( $this->root );
+        $this->url_magic = new DT_Magic_URL( $this->root );
 
         // register REST and REST access
         add_action( 'rest_api_init', [ $this, 'add_api_routes' ] );
@@ -762,7 +762,7 @@ class DT_Training_Magic_Registration
         $params = recursive_sanitize_text_field( $params );
 
         // validate
-        $magic = DT_Magic_URL::instance( $this->root );
+        $magic = new DT_Magic_URL( $this->root );
         $post_id = $magic->get_post_id( $params['parts']['meta_key'], $params['parts']['public_key'] );
 
         if ( ! $post_id ){

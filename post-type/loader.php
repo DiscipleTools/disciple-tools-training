@@ -10,7 +10,7 @@ add_filter( 'dt_post_type_modules', function( $modules ){
         "post_type" => "trainings",
         "description" => "Default Trainings Module"
     ];
-    $modules["app_module"] = [
+    $modules["trainings_app_module"] = [
         "name" => "Trainings - Apps Module",
         "enabled" => true,
         "locked" => false,
@@ -26,5 +26,4 @@ DT_Training_Base::instance();
 
 require_once 'module-app.php';
 DT_Training_Apps::instance();
-DT_Magic_URL::instance( 'training_app' );
 DT_Training_Magic_Registration::instance();
