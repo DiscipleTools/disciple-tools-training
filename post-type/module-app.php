@@ -730,7 +730,7 @@ class DT_Training_Magic_Registration
      * @return bool
      */
     public function authorize_url( $authorized ){
-        if ( isset( $_SERVER['REQUEST_URI'] ) && strpos( sanitize_text_field( wp_unslash( $_SERVER['REQUEST_URI'] ) ), 'dt-coaching-magic/v1/'.$this->type ) !== false ) {
+        if ( isset( $_SERVER['REQUEST_URI'] ) && strpos( sanitize_text_field( wp_unslash( $_SERVER['REQUEST_URI'] ) ), $this->root . '/v1/'.$this->type ) !== false ) {
             $authorized = true;
         }
         return $authorized;
@@ -759,7 +759,7 @@ class DT_Training_Magic_Registration
             return new WP_Error( __METHOD__, "Missing parameters", [ 'status' => 400 ] );
         }
 
-        $params = recursive_sanitize_text_field( $params );
+        $params = dt_recursive_sanitize_array( $params );
 
         // validate
         $magic = new DT_Magic_URL( $this->root );
