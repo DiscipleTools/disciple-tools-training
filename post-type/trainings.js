@@ -156,52 +156,198 @@ jQuery(document).ready(function($) {
     })
 
     /*https://www.daterangepicker.com/*/
-    $('#recurring_time').daterangepicker({
-        singleDatePicker: true,
-        timePicker: true,
-        timePickerIncrement: 15
-    }, function( start ){
-        console.log(start.format('YYYY-MM-DD hh:mm:ss'))
-        let rtime = $('#recurring_time')
-        rtime.val(start.format('YYYY-MM-DD hh:mm:ss'))
-
-
-            if (document.querySelector('#group-details-edit-modal') && document.querySelector('#group-details-edit-modal').contains( this)) {
-                // do nothing
-            } else {
-                let date = window.SHAREDFUNCTIONS.convertArabicToEnglishNumbers(start.format('YYYY-MM-DD hh:mm:ss'));
-
-                if (!rtime.val()) {
-                    date = " ";//null;
-                }
-                let id = rtime.attr('id')
-                $(`#${id}-spinner`).addClass('active')
-                window.API.update_post( post_type, post_id, { [id]: moment.utc(date).unix() }).then((resp)=>{
-                    console.log(resp)
-                    $(`#${id}-spinner`).removeClass('active')
-                    if (rtime.value) {
-                        rtime.value = window.SHAREDFUNCTIONS.formatDate(resp[id]["timestamp"]);
-                    }
-                    $( document ).trigger( "dt_datetime_picker-updated", [ resp, id, date ] );
-
-                    if (rtime.value && moment.unix(rtime.value).isValid()) {
-                        rtime.value = window.SHAREDFUNCTIONS.formatDate(rtime.value);
-                    }
-
-                }).catch(handleAjaxError)
+    function add_datetime_series_picker_listener(){
+        $('.dt-datetime-series-picker').daterangepicker({
+            singleDatePicker: true,
+            timePicker: true,
+            timePickerIncrement: 15,
+            autoUpdateInput: false,
+            locale: {
+                cancelLabel: 'Clear'
             }
-
-
         })
+            .on('apply.daterangepicker', function (ev, picker) {
+                $(this).val(picker.startDate.format('YYYY-MM-DD hh:mm:ss a'));
 
-    // $('#demo').daterangepicker({
-    //     "singleDatePicker": true,
-    //     "timePicker": true,
-    //     "autoApply": true,
-    //     "startDate": "11/27/2020",
-    //     "endDate": "12/03/2020",
-    //     "minDate": "YYYY/MM/DD"
-    // }, function(start, end, label) {
-    //     console.log('New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')');
-    // });
+                if (document.querySelector('#group-details-edit-modal') && document.querySelector('#group-details-edit-modal').contains(this)) {
+                    // do nothing
+                } else {
+                    let date = window.SHAREDFUNCTIONS.convertArabicToEnglishNumbers(picker.startDate.format('YYYY-MM-DD hh:mm:ss'));
+
+                    if (!picker.startDate) {
+                        date = " ";//null;
+                    }
+                    let id = 'meeting_times'
+                    $(`#${id}-spinner`).addClass('active')
+
+                    let data = {}
+                    data.meeting_times = []
+
+                    let key = $(this).data('key')
+                    if ( key ) {
+                        data.meeting_times.push({ key: key, value: moment.utc(date).unix() })
+                    } else {
+                        data.meeting_times.push({ value: moment.utc(date).unix() })
+                    }
+
+                    window.API.update_post(post_type, post_id, data ).then((resp) => {
+                        console.log(resp)
+                        post = resp
+                        window.write_meeting_times_list()
+
+
+
+                        // let list = $(`#edit-${id}`)
+                        // list.empty()
+                        // $.each(resp.)
+                        // list.append(`<div class="input-group">
+                        //     <input type="text" data-field="${_.escape( field )}" class="dt-datetime-series-picker input-group-field" />
+                        //     <div class="input-group-button">
+                        //     <button class="button alert input-height delete-button-style datetime-series-delete-button delete-button new-${_.escape( field )}" data-key="new" data-field="${_.escape( field )}">&times;</button>
+                        //     </div></div>`)
+                        //
+                        // $(`#${id}-spinner`).removeClass('active')
+                        // $(this).val(resp[id]["formatted"]);
+                        // $(document).trigger("dt-datetime-series-picker-updated", [resp, id, resp[id]["formatted"]]);
+
+                        // masonGrid.masonry({
+                        //     itemSelector: '.grid-item',
+                        //     percentPosition: true
+                        // });
+
+                    }).catch(handleAjaxError)
+                }
+            })
+    }
+
+    window.write_meeting_times_list = () => {
+        let field = 'meeting_times'
+        let list = $(`#edit-${field}`)
+
+        list.empty()
+
+        if ( typeof post[field] !== 'undefined' ) {
+            let times = post[field]
+            $.each( _.orderBy(times, ['timestamp']), function(i,v){
+                list.append(`
+                    <div class="input-group">
+                        <input id="${v.key}"
+                               type="text"
+                               data-field="${field}"
+                               value="${v.formatted}"
+                               class="dt-datetime-series-picker input-group-field" />
+                        <div class="input-group-button">
+                            <button class="button alert input-height delete-button-style datetime-series-delete-button delete-button" data-field="${field}" data-key="${v.key}">&times;</button>
+                        </div>
+                    </div>
+               `)
+            })
+        } else {
+            list.append(`
+            <div class="input-group">
+                <input type="text" data-field="${_.escape( field )}" class="dt-datetime-series-picker input-group-field" />
+                <div class="input-group-button">
+                    <button class="button alert input-height delete-button-style datetime-series-delete-button delete-button new-${_.escape( field )}" data-key="new" data-field="${_.escape( field )}">&times;</button>
+                </div>
+            </div>
+            `)
+        }
+
+        add_datetime_series_picker_listener()
+
+        $(`#${field}-spinner`).removeClass('active')
+
+        masonGrid.masonry({
+            itemSelector: '.grid-item',
+            percentPosition: true
+        });
+    }
+
+    window.write_meeting_times_list()
+
+
+    // Clicking the plus sign next to the field label
+    $('button.add-time-button').on('click', e => {
+        const field = $(e.currentTarget).data('list-class')
+        const $list = $(`#edit-${field}`)
+
+        $list.prepend(`<div class="input-group">
+            <input type="text" data-field="${_.escape( field )}" class="dt-datetime-series-picker input-group-field" />
+            <div class="input-group-button">
+            <button class="button alert input-height delete-button-style datetime-series-delete-button delete-button new-${_.escape( field )}" data-key="new" data-field="${_.escape( field )}">&times;</button>
+            </div></div>`)
+
+        add_datetime_series_picker_listener()
+        //leave at the end of this file
+        masonGrid.masonry({
+            itemSelector: '.grid-item',
+            percentPosition: true
+        });
+
+    })
+    $(document).on('click', '.datetime-series-delete-button', function(){
+        let field = $(this).data('field')
+        let key = $(this).data('key')
+        let update = { delete:true }
+        if ( key === 'new' ){
+            $(this).parent().remove()
+        } else if ( key ){
+            $(`#${field}-spinner`).addClass('active')
+            update["key"] = key;
+            API.update_post(post_type, post_id, { [field]: [update]}).then((updatedContact)=>{
+                $(this).parent().parent().remove()
+                let list = $(`#edit-${field}`)
+                if ( list.children().length === 0 ){
+                    list.append(`<div class="input-group">
+                        <input type="text" data-field="${_.escape( field )}" class="dt-datetime-series-picker input-group-field" />
+                        <div class="input-group-button">
+                        <button class="button alert input-height delete-button-style datetime-series-delete-button delete-button new-${_.escape( field )}" data-key="new" data-field="${_.escape( field )}">&times;</button>
+                        </div></div>`)
+                }
+                $(`#${field}-spinner`).removeClass('active')
+                add_datetime_series_picker_listener()
+                post = updatedContact
+
+                masonGrid.masonry({
+                    itemSelector: '.grid-item',
+                    percentPosition: true
+                });
+
+            }).catch(handleAjaxError)
+        }
+
+
+    })
+
+    $(document).on('blur', 'input.dt-communication-channel', function(){
+        let field_key = $(this).data('field')
+        let value = $(this).val()
+        let id = $(this).attr('id')
+        let update = { value }
+        if ( id ) {
+            update["key"] = id;
+        }
+        $(`#${field_key}-spinner`).addClass('active')
+        API.update_post(post_type, post_id, { [field_key]: [update]}).then((updatedContact)=>{
+            $(`#${field_key}-spinner`).removeClass('active')
+            let key = _.last(updatedContact[field_key]).key
+            $(this).attr('id', key)
+            if ( $(this).next('div.input-group-button').length === 1 ) {
+                console.log('present')
+                $(this).parent().find('.datetime-series-delete-button').data('key', key)
+            } else {
+                console.log('new x')
+                $(this).parent().append(`<div class="input-group-button">
+                    <button class="button alert delete-button-style input-height datetime-series-delete-button delete-button" data-key="${_.escape( key )}" data-field="${_.escape( field_key )}">&times;</button>
+                </div>`)
+            }
+            post = updatedContact
+            
+            masonGrid.masonry({
+                itemSelector: '.grid-item',
+                percentPosition: true
+            });
+        }).catch(handleAjaxError)
+    })
+
 })

@@ -11,7 +11,7 @@ add_filter( 'dt_post_type_modules', function( $modules ){
         "description" => "Default Trainings Module"
     ];
     $modules["trainings_app_module"] = [
-        "name" => "Trainings - Apps Module",
+        "name" => "Trainings - Registration Module",
         "enabled" => true,
         "locked" => false,
         "prerequisites" => [ "trainings_base",  "contacts_base" ],
@@ -24,6 +24,8 @@ add_filter( 'dt_post_type_modules', function( $modules ){
 require_once 'module-base.php';
 DT_Training_Base::instance();
 
-require_once 'module-app.php';
-DT_Training_Apps::instance();
-DT_Training_Magic_Registration::instance();
+require_once 'module-registration.php';
+//DT_Training_Apps::instance();
+//DT_Training_Magic_Registration::instance();
+
+//require_once 'module-public-calendar.php';

@@ -29,27 +29,31 @@ class DT_Training_Base extends DT_Module_Base {
         add_action( 'dt_details_additional_section', [ $this, 'dt_details_additional_section' ], 20, 2 );
         add_action( 'wp_enqueue_scripts', [ $this, 'scripts' ], 99 );
 
-        add_action( 'dt_render_field_for_display_template', [ $this, 'render_datetime_field' ], 10, 5 );
-
         // hooks
-        add_action( "post_connection_removed", [ $this, "post_connection_removed" ], 10, 4 );
-        add_action( "post_connection_added", [ $this, "post_connection_added" ], 10, 4 );
-        add_filter( "dt_post_update_fields", [ $this, "dt_post_update_fields" ], 10, 3 );
+        add_filter( "dt_post_updated_custom_handled_meta", [$this, "dt_post_updated_custom_handled_meta"], 10, 2 );
+        add_filter( "dt_post_update_fields", [ $this, "dt_post_update_fields" ], 10, 4 );
         add_filter( "dt_post_create_fields", [ $this, "dt_post_create_fields" ], 10, 2 );
         add_action( "dt_post_created", [ $this, "dt_post_created" ], 10, 3 );
         add_action( "dt_comment_created", [ $this, "dt_comment_created" ], 10, 4 );
+        add_action( "post_connection_added", [ $this, "post_connection_added" ], 10, 4 );
+        add_action( "post_connection_removed", [ $this, "post_connection_removed" ], 10, 4 );
+
+        add_filter( "dt_adjust_post_custom_fields", [ $this, 'dt_adjust_post_custom_fields'], 10, 2 );
+        add_action( 'dt_render_field_for_display_template', [ $this, 'dt_render_field_for_display_template' ], 10, 5 );
 
         //list
         add_filter( "dt_user_list_filters", [ $this, "dt_user_list_filters" ], 10, 2 );
         add_filter( "dt_filter_access_permissions", [ $this, "dt_filter_access_permissions" ], 20, 2 );
     }
 
+    // setup post type
 
     public function after_setup_theme(){
         if ( class_exists( 'Disciple_Tools_Post_Type_Template' )) {
             new Disciple_Tools_Post_Type_Template( "trainings", 'Training', 'Trainings' );
         }
     }
+
     public function dt_set_roles_and_permissions( $expected_roles ){
         if ( !isset( $expected_roles["multiplier"] ) ){
             $expected_roles["multiplier"] = [
@@ -91,6 +95,115 @@ class DT_Training_Base extends DT_Module_Base {
         }
 
         return $expected_roles;
+    }
+
+    // setup tiles
+
+    public function p2p_init(){
+        /**
+         * Training members field
+         */
+        p2p_register_connection_type(
+            [
+                'name'           => 'trainings_to_contacts',
+                'from'           => 'trainings',
+                'to'             => 'contacts',
+                'admin_box' => [
+                    'show' => false,
+                ],
+                'title'          => [
+                    'from' => __( 'Members', 'disciple_tools' ),
+                    'to'   => __( 'Contacts', 'disciple_tools' ),
+                ]
+            ]
+        );
+        /**
+         * Training to groups
+         */
+        p2p_register_connection_type(
+            [
+                'name'           => 'trainings_to_groups',
+                'from'           => 'trainings',
+                'to'             => 'groups',
+                'admin_box' => [
+                    'show' => false,
+                ],
+                'title'          => [
+                    'from' => __( 'Trainings', 'disciple_tools' ),
+                    'to'   => __( 'Groups', 'disciple_tools' ),
+                ]
+            ]
+        );
+        /**
+         * Training leaders field
+         */
+        p2p_register_connection_type(
+            [
+                'name'           => 'trainings_to_leaders',
+                'from'           => 'trainings',
+                'to'             => 'contacts',
+                'admin_box' => [
+                    'show' => false,
+                ],
+                'title'          => [
+                    'from' => __( 'Trainings', 'disciple_tools' ),
+                    'to'   => __( 'Leaders', 'disciple_tools' ),
+                ]
+            ]
+        );
+        /**
+         * Training coaches field
+         */
+        p2p_register_connection_type(
+            [
+                'name'           => 'trainings_to_coaches',
+                'from'           => 'trainings',
+                'to'             => 'contacts',
+                'admin_box' => [
+                    'show' => false,
+                ],
+                'title'          => [
+                    'from' => __( 'Trainings', 'disciple_tools' ),
+                    'to'   => __( 'Coaches', 'disciple_tools' ),
+                ]
+            ]
+        );
+        /**
+         * Parent and child trainings
+         */
+        p2p_register_connection_type(
+            [
+                'name'         => 'trainings_to_trainings',
+                'from'         => 'trainings',
+                'to'           => 'trainings',
+                'title'        => [
+                    'from' => __( 'Planted by', 'disciple_tools' ),
+                    'to'   => __( 'Planting', 'disciple_tools' ),
+                ],
+            ]
+        );
+        /**
+         * Peer trainings
+         */
+        p2p_register_connection_type( [
+            'name'         => 'trainings_to_peers',
+            'from'         => 'trainings',
+            'to'           => 'trainings',
+        ] );
+        /**
+         * Training People Groups field
+         */
+        p2p_register_connection_type(
+            [
+                'name'        => 'trainings_to_peoplegroups',
+                'from'        => 'trainings',
+                'to'          => 'peoplegroups',
+                'title'       => [
+                    'from' => __( 'People Groups', 'disciple_tools' ),
+                    'to'   => __( 'Trainings', 'disciple_tools' ),
+                ]
+            ]
+        );
     }
 
     public function dt_custom_fields_settings( $fields, $post_type ){
@@ -203,41 +316,71 @@ class DT_Training_Base extends DT_Module_Base {
                 'tile' => 'details',
                 'icon' => get_template_directory_uri() . '/dt-assets/images/edit.svg',
             ];
-
-            // @todo Add schedule section
-            $fields['start_date'] = [
-                'name'        => __( 'Start Date', 'disciple_tools' ),
-                'description' => _x( 'The date this training began meeting.', 'Optional Documentation', 'disciple_tools' ),
-                'type'        => 'date',
-                'default'     => time(),
-                'tile' => 'meeting_times',
-                'icon' => get_template_directory_uri() . '/dt-assets/images/date-start.svg',
-            ];
-            $fields['end_date'] = [
-                'name'        => __( 'End Date', 'disciple_tools' ),
-                'description' => _x( 'The date this training stopped meeting (if applicable).', 'Optional Documentation', 'disciple_tools' ),
-                'type'        => 'date',
-                'default'     => '',
-                'tile' => 'meeting_times',
-                'icon' => get_template_directory_uri() . '/dt-assets/images/date-end.svg',
-            ];
-            $fields['recurring_time'] = [
-                'name'        => __( 'Recurring Time', 'disciple_tools' ),
-                'description' => _x( 'The date this training stopped meeting (if applicable).', 'Optional Documentation', 'disciple_tools' ),
-                'type'        => 'datetime',
-                'default'     => '',
-                'tile' => 'meeting_times',
-                'icon' => get_template_directory_uri() . '/dt-assets/images/date-end.svg',
-            ];
-
-            $fields['time_notes'] = [
+            $fields['notes'] = [
                 'name'        => __( 'Notes', 'disciple_tools' ),
                 'description' => _x( 'Notes on when the trainings will happen', 'Optional Documentation', 'disciple_tools' ),
                 'type'        => 'text',
                 'default'     => time(),
-                'tile' => 'meeting_times',
+                'tile' => 'details',
                 'icon' => get_template_directory_uri() . '/dt-assets/images/edit.svg',
             ];
+
+            // @todo Add schedule section
+//            $fields["contact_times"] = [
+//                "name" => __( 'Times', 'disciple_tools' ),
+//                "icon" => get_template_directory_uri() . "/dt-assets/images/phone.svg",
+//                "type" => "communication_channel",
+//                "tile" => "meeting_times",
+//                "customizable" => false,
+//                "in_create_form" => true,
+//            ];
+
+            $fields["meeting_times"] = [
+                "name" => __( 'Meeting Times', 'disciple_tools' ),
+                "icon" => get_template_directory_uri() . "/dt-assets/images/phone.svg",
+                "type" => "datetime_series",
+                "tile" => "meeting_times",
+                "customizable" => false,
+                "in_create_form" => true,
+            ];
+
+
+            $fields['repeat_start'] = [
+                'name'        => __( 'End Date', 'disciple_tools' ),
+                'description' => _x( 'The date this training stopped meeting (if applicable).', 'Optional Documentation', 'disciple_tools' ),
+                'type'        => 'datetime',
+                'default'     => '',
+                'icon' => get_template_directory_uri() . '/dt-assets/images/date-end.svg',
+            ];
+            $fields['repeat_year'] = [
+                'name'        => __( 'End Date', 'disciple_tools' ),
+                'description' => '',
+                'type'        => 'text',
+                'default'     => '',
+                'icon' => get_template_directory_uri() . '/dt-assets/images/date-end.svg',
+            ];
+            $fields['repeat_month'] = [
+                'name'        => __( 'End Date', 'disciple_tools' ),
+                'description' => '',
+                'type'        => 'text',
+                'default'     => '',
+                'icon' => get_template_directory_uri() . '/dt-assets/images/date-end.svg',
+            ];
+            $fields['repeat_week'] = [
+                'name'        => __( 'End Date', 'disciple_tools' ),
+                'description' => '',
+                'type'        => 'text',
+                'default'     => '',
+                'icon' => get_template_directory_uri() . '/dt-assets/images/date-end.svg',
+            ];
+            $fields['repeat_day'] = [
+                'name'        => __( 'End Date', 'disciple_tools' ),
+                'description' => '',
+                'type'        => 'text',
+                'default'     => '',
+                'icon' => get_template_directory_uri() . '/dt-assets/images/date-end.svg',
+            ];
+
             // @todo end
 
 
@@ -404,113 +547,6 @@ class DT_Training_Base extends DT_Module_Base {
         return $fields;
     }
 
-    public function p2p_init(){
-        /**
-         * Training members field
-         */
-        p2p_register_connection_type(
-            [
-                'name'           => 'trainings_to_contacts',
-                'from'           => 'trainings',
-                'to'             => 'contacts',
-                'admin_box' => [
-                    'show' => false,
-                ],
-                'title'          => [
-                    'from' => __( 'Members', 'disciple_tools' ),
-                    'to'   => __( 'Contacts', 'disciple_tools' ),
-                ]
-            ]
-        );
-        /**
-         * Training to groups
-         */
-        p2p_register_connection_type(
-            [
-                'name'           => 'trainings_to_groups',
-                'from'           => 'trainings',
-                'to'             => 'groups',
-                'admin_box' => [
-                    'show' => false,
-                ],
-                'title'          => [
-                    'from' => __( 'Trainings', 'disciple_tools' ),
-                    'to'   => __( 'Groups', 'disciple_tools' ),
-                ]
-            ]
-        );
-        /**
-         * Training leaders field
-         */
-        p2p_register_connection_type(
-            [
-                'name'           => 'trainings_to_leaders',
-                'from'           => 'trainings',
-                'to'             => 'contacts',
-                'admin_box' => [
-                    'show' => false,
-                ],
-                'title'          => [
-                    'from' => __( 'Trainings', 'disciple_tools' ),
-                    'to'   => __( 'Leaders', 'disciple_tools' ),
-                ]
-            ]
-        );
-        /**
-         * Training coaches field
-         */
-        p2p_register_connection_type(
-            [
-                'name'           => 'trainings_to_coaches',
-                'from'           => 'trainings',
-                'to'             => 'contacts',
-                'admin_box' => [
-                    'show' => false,
-                ],
-                'title'          => [
-                    'from' => __( 'Trainings', 'disciple_tools' ),
-                    'to'   => __( 'Coaches', 'disciple_tools' ),
-                ]
-            ]
-        );
-        /**
-         * Parent and child trainings
-         */
-        p2p_register_connection_type(
-            [
-                'name'         => 'trainings_to_trainings',
-                'from'         => 'trainings',
-                'to'           => 'trainings',
-                'title'        => [
-                    'from' => __( 'Planted by', 'disciple_tools' ),
-                    'to'   => __( 'Planting', 'disciple_tools' ),
-                ],
-            ]
-        );
-        /**
-         * Peer trainings
-         */
-        p2p_register_connection_type( [
-            'name'         => 'trainings_to_peers',
-            'from'         => 'trainings',
-            'to'           => 'trainings',
-        ] );
-        /**
-         * Training People Groups field
-         */
-        p2p_register_connection_type(
-            [
-                'name'        => 'trainings_to_peoplegroups',
-                'from'        => 'trainings',
-                'to'          => 'peoplegroups',
-                'title'       => [
-                    'from' => __( 'People Groups', 'disciple_tools' ),
-                    'to'   => __( 'Trainings', 'disciple_tools' ),
-                ]
-            ]
-        );
-    }
-
     public function dt_details_additional_tiles( $tiles, $post_type = "" ){
         if ( $post_type === "trainings" ){
             $tiles["relationships"] = [ "label" => __( "Member List", 'disciple_tools' ) ];
@@ -565,6 +601,30 @@ class DT_Training_Base extends DT_Module_Base {
         <?php }
 
 
+        if ( $post_type === "trainings" && $section === "meeting_times" ){
+            $fields = DT_Posts::get_post_field_settings( $post_type );
+
+            $field_key = 'meeting_times';
+            if ( isset( $fields[$field_key] ) ) {
+                /* list */
+                ?>
+                <div class="section-subheader">
+                    <?php if ( isset( $fields[$field_key]["icon"] ) ) : ?>
+                        <img class="dt-icon" src="<?php echo esc_url( $fields[$field_key]["icon"] ) ?>">
+                    <?php endif;
+                    echo esc_html( $fields[$field_key]["name"] );
+                    ?> <span id="<?php echo esc_html( $field_key ); ?>-spinner" class="loading-spinner"></span>
+                    <button data-list-class="<?php echo esc_html( $field_key ); ?>" class="add-time-button" type="button">
+                        <img src="<?php echo esc_html( get_template_directory_uri() . '/dt-assets/images/small-add.svg' ) ?>"/>
+                    </button>
+                </div>
+                <div id="edit-<?php echo esc_html( $field_key ) ?>" ></div>
+            <?php
+                /* @todo add recurring times option */
+            }
+        }
+
+
         if ( $post_type === "trainings" && $section === "other" ) :
             $fields = DT_Posts::get_post_field_settings( $post_type );
             ?>
@@ -615,7 +675,6 @@ class DT_Training_Base extends DT_Module_Base {
             <div class="members-section" style="margin-bottom:10px">
                 <div id="empty-members-list-message"><?php esc_html_e( "To add new members, click on 'Create' or 'Select'.", 'disciple_tools' ) ?></div>
                 <div class="member-list">
-
                 </div>
             </div>
             <div class="reveal" id="add-new-group-member-modal" data-reveal style="min-height:500px">
@@ -641,7 +700,136 @@ class DT_Training_Base extends DT_Module_Base {
         <?php }
     }
 
-    //action when a post connection is added during create or update
+    public function scripts(){
+        if ( is_singular( "trainings" ) ){
+
+            wp_enqueue_script( 'dt_trainings', trailingslashit( plugin_dir_url( __FILE__ ) ) . 'trainings.js', [
+                'jquery',
+                'details',
+            ], filemtime( trailingslashit( plugin_dir_path( __FILE__ ) ) . 'trainings.js' ), true );
+        }
+    }
+
+    // hooks incoming
+
+    /**
+     * This filter catches the meeting_times field and keeps the up post update from processing the
+     * field as meeting_time, and instead ignores the post submit so that it can be handed by the dt_post_update_fields
+     * action later.
+     *
+     * @param array $field_types
+     * @param $post_type
+     * @return array
+     */
+    public function dt_post_updated_custom_handled_meta( array $field_types, $post_type ) : array {
+        if ( 'trainings' === $post_type ) {
+            $field_types[] = 'datetime_series';
+        }
+        return $field_types;
+    }
+
+    public function dt_post_update_fields( $fields, $post_type, $post_id, $existing_post ){
+        if ( 'trainings' === $post_type ){
+
+            // assigned_to
+            if ( isset( $fields["assigned_to"] ) ) {
+                if ( filter_var( $fields["assigned_to"], FILTER_VALIDATE_EMAIL ) ){
+                    $user = get_user_by( "email", $fields["assigned_to"] );
+                    if ( $user ) {
+                        $fields["assigned_to"] = $user->ID;
+                    } else {
+                        return new WP_Error( __FUNCTION__, "Unrecognized user", $fields["assigned_to"] );
+                    }
+                }
+                //make sure the assigned to is in the right format (user-1)
+                if ( is_numeric( $fields["assigned_to"] ) ||
+                    strpos( $fields["assigned_to"], "user" ) === false ){
+                    $fields["assigned_to"] = "user-" . $fields["assigned_to"];
+                }
+                $user_id = explode( '-', $fields["assigned_to"] )[1];
+                if ( $user_id ){
+                    DT_Posts::add_shared( "trainings", $post_id, $user_id, null, false, true, false );
+                }
+            }
+
+            // status
+            if ( isset( $fields["status"] ) && empty( $fields["end_date"] ) && empty( $existing_post["end_date"] ) && $fields["status"] === 'closed' ){
+                $fields["end_date"] = time();
+            }
+
+            // meeting_times (datetime_series field type)
+            if ( isset( $fields["meeting_times"] ) ) {
+
+                foreach( $fields["meeting_times"] ?? [] as $field ){
+                    // update
+                    if ( isset( $field['key'], $field['value'] ) ) {
+
+                    }
+                    // delete
+                    else if ( isset( $field['key'], $field['delete'] ) ) {
+                        delete_post_meta( $post_id, $field['key'] );
+                    }
+                    // new
+                    else if ( isset( $field['value'] ) ) {
+                        $new_meta_key = 'meeting_times_' . Disciple_tools_Posts::unique_hash();
+                        update_post_meta( $post_id, $new_meta_key, $field['value'] );
+                    }
+                }
+            }
+        }
+        return $fields;
+    }
+
+    public function dt_post_create_fields( $fields, $post_type ){
+        if ( $post_type === "trainings" ) {
+            if ( !isset( $fields["status"] ) ) {
+                $fields["status"] = "new";
+            }
+            if ( !isset( $fields["assigned_to"] ) ) {
+                $fields["assigned_to"] = sprintf( "user-%d", get_current_user_id() );
+            }
+            if ( !isset( $fields["start_date"] ) ) {
+                $fields["start_date"] = time();
+            }
+            if ( isset( $fields["assigned_to"] ) ) {
+                if ( filter_var( $fields["assigned_to"], FILTER_VALIDATE_EMAIL ) ){
+                    $user = get_user_by( "email", $fields["assigned_to"] );
+                    if ( $user ) {
+                        $fields["assigned_to"] = $user->ID;
+                    } else {
+                        return new WP_Error( __FUNCTION__, "Unrecognized user", $fields["assigned_to"] );
+                    }
+                }
+                //make sure the assigned to is in the right format (user-1)
+                if ( is_numeric( $fields["assigned_to"] ) ||
+                    strpos( $fields["assigned_to"], "user" ) === false ){
+                    $fields["assigned_to"] = "user-" . $fields["assigned_to"];
+                }
+            }
+        }
+        return $fields;
+    }
+
+    public function dt_post_created( $post_type, $post_id, $initial_fields ){
+        if ( $post_type === "trainings" ){
+            do_action( "dt_training_created", $post_id, $initial_fields );
+            $training = DT_Posts::get_post( 'trainings', $post_id, true, false );
+            if ( isset( $training["assigned_to"] )) {
+                if ( $training["assigned_to"]["id"] ) {
+                    DT_Posts::add_shared( "trainings", $post_id, $training["assigned_to"]["id"], null, false, false, false );
+                }
+            }
+        }
+    }
+
+    public function dt_comment_created( $post_type, $post_id, $comment_id, $type ){
+        if ( $post_type === "trainings" ){
+            if ( $type === "comment" ){
+                self::check_requires_update( $post_id );
+            }
+        }
+    }
+
     public function post_connection_added( $post_type, $post_id, $field_key, $value ){
         if ( $post_type === "trainings" ){
             if ( $field_key === "members" ){
@@ -679,7 +867,6 @@ class DT_Training_Base extends DT_Module_Base {
         }
     }
 
-    //action when a post connection is removed during create or update
     public function post_connection_removed( $post_type, $post_id, $field_key, $value ){
         if ( $post_type === "trainings" ){
             if ( $field_key === "members" ){
@@ -694,212 +881,45 @@ class DT_Training_Base extends DT_Module_Base {
         }
     }
 
-    //filter at the start of post update
-    public function dt_post_update_fields( $fields, $post_type, $post_id ){
-        if ( $post_type === "trainings" ){
-            if ( isset( $fields["assigned_to"] ) ) {
-                if ( filter_var( $fields["assigned_to"], FILTER_VALIDATE_EMAIL ) ){
-                    $user = get_user_by( "email", $fields["assigned_to"] );
-                    if ( $user ) {
-                        $fields["assigned_to"] = $user->ID;
-                    } else {
-                        return new WP_Error( __FUNCTION__, "Unrecognized user", $fields["assigned_to"] );
+    // hooks outgoing
+
+    public function dt_adjust_post_custom_fields( $fields, $post_type ) {
+        if ( $post_type === 'trainings' ){
+            foreach( $fields as $key => $value ){
+                if ( 'meeting_times' === substr( $key, 0, 13 ) ){
+                    if ( ! isset( $fields['meeting_times'] ) ) {
+                        $fields['meeting_times'] = [];
                     }
+                    $fields['meeting_times'][] = [
+                        "key" => $key,
+                        "timestamp" => is_numeric( $value ) ? $value : dt_format_date( $value, "U" ),
+                        "formatted" => dt_format_date(  $value, 'long' ),
+                    ];
+                    unset( $fields[$key] );
                 }
-                //make sure the assigned to is in the right format (user-1)
-                if ( is_numeric( $fields["assigned_to"] ) ||
-                    strpos( $fields["assigned_to"], "user" ) === false ){
-                    $fields["assigned_to"] = "user-" . $fields["assigned_to"];
-                }
-                $user_id = explode( '-', $fields["assigned_to"] )[1];
-                if ( $user_id ){
-                    DT_Posts::add_shared( "trainings", $post_id, $user_id, null, false, true, false );
-                }
-            }
-            $existing_training = DT_Posts::get_post( 'trainings', $post_id, true, false );
-            if ( isset( $fields["status"] ) && empty( $fields["end_date"] ) && empty( $existing_training["end_date"] ) && $fields["status"] === 'closed' ){
-                $fields["end_date"] = time();
             }
         }
         return $fields;
     }
 
-    public function render_datetime_field( $post, $field_type, $field_key, $required_tag ){
-        if ( $field_type === "datetime" ) :
+    public function dt_render_field_for_display_template( $post, $field_type, $field_key, $required_tag ){
+        if ( $field_type === "datetime_series" ) :
+            dt_write_log(__METHOD__);
             ?>
             <div class="<?php echo esc_html( $field_key ) ?> input-group">
-                <input id="<?php echo esc_html( $field_key ) ?>" class="input-group-field dt_datetime_picker" type="text" autocomplete="off" <?php echo esc_html( $required_tag ) ?>
-                       value="<?php echo esc_html( $post[$field_key]["timestamp"] ?? '' ) ?>" >
+                <input id="<?php echo esc_html( $field_key ) ?>" class="input-group-field dt-datetime-series-picker" type="text" autocomplete="off" <?php echo esc_html( $required_tag ) ?>
+                       value="<?php echo esc_html( $post[$field_key]["formatted"] ?? '' ) ?>" >
                 <div class="input-group-button">
+                    <!--                    <button class="button alert input-height delete-button-style datetime-series-delete-button delete-button new-${_.escape( field )}" data-key="new" data-field="${_.escape( field )}">&times;</button>-->
                     <button id="<?php echo esc_html( $field_key ) ?>-clear-button" class="button alert clear-date-button" data-inputid="<?php echo esc_html( $field_key ) ?>" title="Delete Date" type="button">x</button>
                 </div>
             </div>
-            <?php
+        <?php
         endif;
     }
 
-    //update the training member count when members are added or removed.
-    private static function update_training_member_count( $training_id, $action = "added" ){
-        $training = get_post( $training_id );
-        $args = [
-            'connected_type'   => "trainings_to_contacts",
-            'connected_direction' => 'from',
-            'connected_items'  => $training,
-            'nopaging'         => true,
-            'suppress_filters' => false,
-        ];
-        $members = get_posts( $args );
-        $member_count = get_post_meta( $training_id, 'member_count', true );
-        if ( sizeof( $members ) > intval( $member_count ) ){
-            update_post_meta( $training_id, 'member_count', sizeof( $members ) );
-        } elseif ( $action === "removed" ){
-            update_post_meta( $training_id, 'member_count', intval( $member_count ) - 1 );
-        }
-    }
+    // list
 
-    private static function update_training_leader_count( $training_id, $action = "added" ){
-        $training = get_post( $training_id );
-        $args = [
-            'connected_type'   => "trainings_to_leaders",
-            'connected_direction' => 'from',
-            'connected_items'  => $training,
-            'nopaging'         => true,
-            'suppress_filters' => false,
-        ];
-        $leaders = get_posts( $args );
-        $leader_count = get_post_meta( $training_id, 'leader_count', true );
-        if ( sizeof( $leaders ) > intval( $leader_count ) ){
-            update_post_meta( $training_id, 'leader_count', sizeof( $leaders ) );
-        } elseif ( $action === "removed" ){
-            update_post_meta( $training_id, 'leader_count', intval( $leader_count - 1 ) );
-        }
-    }
-
-
-    //check to see if the training is marked as needing an update
-    //if yes: mark as updated
-    private static function check_requires_update( $training_id ){
-        if ( get_current_user_id() ){
-            $requires_update = get_post_meta( $training_id, "requires_update", true );
-            if ( $requires_update == "yes" || $requires_update == true || $requires_update == "1"){
-                //don't remove update needed if the user is a dispatcher (and not assigned to the trainings.)
-                if ( DT_Posts::can_view_all( 'trainings' ) ){
-                    if ( dt_get_user_id_from_assigned_to( get_post_meta( $training_id, "assigned_to", true ) ) === get_current_user_id() ){
-                        update_post_meta( $training_id, "requires_update", false );
-                    }
-                } else {
-                    update_post_meta( $training_id, "requires_update", false );
-                }
-            }
-        }
-    }
-
-    //filter when a comment is created
-    public function dt_comment_created( $post_type, $post_id, $comment_id, $type ){
-        if ( $post_type === "trainings" ){
-            if ( $type === "comment" ){
-                self::check_requires_update( $post_id );
-            }
-        }
-    }
-
-    // filter at the start of post creation
-    public function dt_post_create_fields( $fields, $post_type ){
-        if ( $post_type === "trainings" ) {
-            if ( !isset( $fields["status"] ) ) {
-                $fields["status"] = "new";
-            }
-            if ( !isset( $fields["assigned_to"] ) ) {
-                $fields["assigned_to"] = sprintf( "user-%d", get_current_user_id() );
-            }
-            if ( !isset( $fields["start_date"] ) ) {
-                $fields["start_date"] = time();
-            }
-            if ( isset( $fields["assigned_to"] ) ) {
-                if ( filter_var( $fields["assigned_to"], FILTER_VALIDATE_EMAIL ) ){
-                    $user = get_user_by( "email", $fields["assigned_to"] );
-                    if ( $user ) {
-                        $fields["assigned_to"] = $user->ID;
-                    } else {
-                        return new WP_Error( __FUNCTION__, "Unrecognized user", $fields["assigned_to"] );
-                    }
-                }
-                //make sure the assigned to is in the right format (user-1)
-                if ( is_numeric( $fields["assigned_to"] ) ||
-                    strpos( $fields["assigned_to"], "user" ) === false ){
-                    $fields["assigned_to"] = "user-" . $fields["assigned_to"];
-                }
-            }
-        }
-        return $fields;
-    }
-
-    //action when a post has been created
-    public function dt_post_created( $post_type, $post_id, $initial_fields ){
-        if ( $post_type === "trainings" ){
-            do_action( "dt_training_created", $post_id, $initial_fields );
-            $training = DT_Posts::get_post( 'trainings', $post_id, true, false );
-            if ( isset( $training["assigned_to"] )) {
-                if ( $training["assigned_to"]["id"] ) {
-                    DT_Posts::add_shared( "trainings", $post_id, $training["assigned_to"]["id"], null, false, false, false );
-                }
-            }
-        }
-    }
-
-
-    //list page filters function
-    private static function get_my_trainings_status_type(){
-        global $wpdb;
-
-        $results = $wpdb->get_results( $wpdb->prepare( "
-            SELECT status.meta_value as status, count(pm.post_id) as count, count(un.post_id) as update_needed
-            FROM $wpdb->postmeta pm
-            INNER JOIN $wpdb->postmeta status ON( status.post_id = pm.post_id AND status.meta_key = 'status' )
-            INNER JOIN $wpdb->posts a ON( a.ID = pm.post_id AND a.post_type = 'trainings' and a.post_status = 'publish' )
-            INNER JOIN $wpdb->postmeta as assigned_to ON a.ID=assigned_to.post_id
-              AND assigned_to.meta_key = 'assigned_to'
-              AND assigned_to.meta_value = CONCAT( 'user-', %s )
-            LEFT JOIN $wpdb->postmeta un ON ( un.post_id = pm.post_id AND un.meta_key = 'requires_update' AND un.meta_value = '1' )
-            WHERE pm.meta_key = 'status'
-            GROUP BY status.meta_value, pm.meta_value
-        ", get_current_user_id() ), ARRAY_A);
-
-        return $results;
-    }
-
-    //list page filters function
-    private static function get_all_trainings_status_type(){
-        global $wpdb;
-        if ( current_user_can( 'view_any_trainings' ) ){
-            $results = $wpdb->get_results("
-                SELECT status.meta_value as status, count(pm.post_id) as count, count(un.post_id) as update_needed
-                FROM $wpdb->postmeta pm
-                INNER JOIN $wpdb->postmeta status ON( status.post_id = pm.post_id AND status.meta_key = 'status' )
-                INNER JOIN $wpdb->posts a ON( a.ID = pm.post_id AND a.post_type = 'trainings' and a.post_status = 'publish' )
-                LEFT JOIN $wpdb->postmeta un ON ( un.post_id = pm.post_id AND un.meta_key = 'requires_update' AND un.meta_value = '1' )
-                WHERE pm.meta_key = 'status'
-                GROUP BY status.meta_value, pm.meta_value
-            ", ARRAY_A);
-        } else {
-            $results = $wpdb->get_results($wpdb->prepare("
-                SELECT status.meta_value as status, count(pm.post_id) as count, count(un.post_id) as update_needed
-                FROM $wpdb->postmeta pm
-                INNER JOIN $wpdb->postmeta status ON( status.post_id = pm.post_id AND status.meta_key = 'status' )
-                INNER JOIN $wpdb->posts a ON( a.ID = pm.post_id AND a.post_type = 'trainings' and a.post_status = 'publish' )
-                LEFT JOIN $wpdb->dt_share AS shares ON ( shares.post_id = a.ID AND shares.user_id = %s )
-                LEFT JOIN $wpdb->postmeta assigned_to ON ( assigned_to.post_id = pm.post_id AND assigned_to.meta_key = 'assigned_to' && assigned_to.meta_value = %s )
-                LEFT JOIN $wpdb->postmeta un ON ( un.post_id = pm.post_id AND un.meta_key = 'requires_update' AND un.meta_value = '1' )
-                WHERE pm.meta_key = 'status' AND
-                      ( shares.user_id IS NOT NULL OR assigned_to.meta_value IS NOT NULL )
-                GROUP BY status.meta_value, pm.meta_value
-            ", get_current_user_id(), 'user-' . get_current_user_id() ), ARRAY_A);
-        }
-
-        return $results;
-    }
-
-    //build list page filters
     public static function dt_user_list_filters( $filters, $post_type ){
         if ( $post_type === 'trainings' ){
             $counts = self::get_my_trainings_status_type();
@@ -1038,16 +1058,6 @@ class DT_Training_Base extends DT_Module_Base {
         return $filters;
     }
 
-    public function scripts(){
-        if ( is_singular( "trainings" ) ){
-
-            wp_enqueue_script( 'dt_trainings', trailingslashit( plugin_dir_url( __FILE__ ) ) . 'trainings.js', [
-                'jquery',
-                'details',
-            ], filemtime( trailingslashit( plugin_dir_path( __FILE__ ) ) . 'trainings.js' ), true );
-        }
-    }
-
     public static function dt_filter_access_permissions( $permissions, $post_type ){
         if ( $post_type === "trainings" ){
             if ( DT_Posts::can_view_all( $post_type ) ){
@@ -1057,5 +1067,105 @@ class DT_Training_Base extends DT_Module_Base {
         return $permissions;
     }
 
+    private static function update_training_member_count( $training_id, $action = "added" ){
+        $training = get_post( $training_id );
+        $args = [
+            'connected_type'   => "trainings_to_contacts",
+            'connected_direction' => 'from',
+            'connected_items'  => $training,
+            'nopaging'         => true,
+            'suppress_filters' => false,
+        ];
+        $members = get_posts( $args );
+        $member_count = get_post_meta( $training_id, 'member_count', true );
+        if ( sizeof( $members ) > intval( $member_count ) ){
+            update_post_meta( $training_id, 'member_count', sizeof( $members ) );
+        } elseif ( $action === "removed" ){
+            update_post_meta( $training_id, 'member_count', intval( $member_count ) - 1 );
+        }
+    }
+
+    private static function update_training_leader_count( $training_id, $action = "added" ){
+        $training = get_post( $training_id );
+        $args = [
+            'connected_type'   => "trainings_to_leaders",
+            'connected_direction' => 'from',
+            'connected_items'  => $training,
+            'nopaging'         => true,
+            'suppress_filters' => false,
+        ];
+        $leaders = get_posts( $args );
+        $leader_count = get_post_meta( $training_id, 'leader_count', true );
+        if ( sizeof( $leaders ) > intval( $leader_count ) ){
+            update_post_meta( $training_id, 'leader_count', sizeof( $leaders ) );
+        } elseif ( $action === "removed" ){
+            update_post_meta( $training_id, 'leader_count', intval( $leader_count - 1 ) );
+        }
+    }
+
+    private static function check_requires_update( $training_id ){
+        if ( get_current_user_id() ){
+            $requires_update = get_post_meta( $training_id, "requires_update", true );
+            if ( $requires_update == "yes" || $requires_update == true || $requires_update == "1"){
+                //don't remove update needed if the user is a dispatcher (and not assigned to the trainings.)
+                if ( DT_Posts::can_view_all( 'trainings' ) ){
+                    if ( dt_get_user_id_from_assigned_to( get_post_meta( $training_id, "assigned_to", true ) ) === get_current_user_id() ){
+                        update_post_meta( $training_id, "requires_update", false );
+                    }
+                } else {
+                    update_post_meta( $training_id, "requires_update", false );
+                }
+            }
+        }
+    }
+
+    private static function get_my_trainings_status_type(){
+        global $wpdb;
+
+        $results = $wpdb->get_results( $wpdb->prepare( "
+            SELECT status.meta_value as status, count(pm.post_id) as count, count(un.post_id) as update_needed
+            FROM $wpdb->postmeta pm
+            INNER JOIN $wpdb->postmeta status ON( status.post_id = pm.post_id AND status.meta_key = 'status' )
+            INNER JOIN $wpdb->posts a ON( a.ID = pm.post_id AND a.post_type = 'trainings' and a.post_status = 'publish' )
+            INNER JOIN $wpdb->postmeta as assigned_to ON a.ID=assigned_to.post_id
+              AND assigned_to.meta_key = 'assigned_to'
+              AND assigned_to.meta_value = CONCAT( 'user-', %s )
+            LEFT JOIN $wpdb->postmeta un ON ( un.post_id = pm.post_id AND un.meta_key = 'requires_update' AND un.meta_value = '1' )
+            WHERE pm.meta_key = 'status'
+            GROUP BY status.meta_value, pm.meta_value
+        ", get_current_user_id() ), ARRAY_A);
+
+        return $results;
+    }
+
+    private static function get_all_trainings_status_type(){
+        global $wpdb;
+        if ( current_user_can( 'view_any_trainings' ) ){
+            $results = $wpdb->get_results("
+                SELECT status.meta_value as status, count(pm.post_id) as count, count(un.post_id) as update_needed
+                FROM $wpdb->postmeta pm
+                INNER JOIN $wpdb->postmeta status ON( status.post_id = pm.post_id AND status.meta_key = 'status' )
+                INNER JOIN $wpdb->posts a ON( a.ID = pm.post_id AND a.post_type = 'trainings' and a.post_status = 'publish' )
+                LEFT JOIN $wpdb->postmeta un ON ( un.post_id = pm.post_id AND un.meta_key = 'requires_update' AND un.meta_value = '1' )
+                WHERE pm.meta_key = 'status'
+                GROUP BY status.meta_value, pm.meta_value
+            ", ARRAY_A);
+        } else {
+            $results = $wpdb->get_results($wpdb->prepare("
+                SELECT status.meta_value as status, count(pm.post_id) as count, count(un.post_id) as update_needed
+                FROM $wpdb->postmeta pm
+                INNER JOIN $wpdb->postmeta status ON( status.post_id = pm.post_id AND status.meta_key = 'status' )
+                INNER JOIN $wpdb->posts a ON( a.ID = pm.post_id AND a.post_type = 'trainings' and a.post_status = 'publish' )
+                LEFT JOIN $wpdb->dt_share AS shares ON ( shares.post_id = a.ID AND shares.user_id = %s )
+                LEFT JOIN $wpdb->postmeta assigned_to ON ( assigned_to.post_id = pm.post_id AND assigned_to.meta_key = 'assigned_to' && assigned_to.meta_value = %s )
+                LEFT JOIN $wpdb->postmeta un ON ( un.post_id = pm.post_id AND un.meta_key = 'requires_update' AND un.meta_value = '1' )
+                WHERE pm.meta_key = 'status' AND
+                      ( shares.user_id IS NOT NULL OR assigned_to.meta_value IS NOT NULL )
+                GROUP BY status.meta_value, pm.meta_value
+            ", get_current_user_id(), 'user-' . get_current_user_id() ), ARRAY_A);
+        }
+
+        return $results;
+    }
 
 }

@@ -138,6 +138,8 @@ class DT_Training {
 
         // metrics
         require_once( 'metrics/mapbox-maps.php' );
+        require_once( 'metrics/mapbox-personal-maps.php' );
+        require_once( 'admin/enqueue.php' );
 
         // network support
         require_once( 'network/customize-site-linking.php' );
