@@ -50,7 +50,7 @@ class DT_Training_Base extends DT_Module_Base {
 
     public function after_setup_theme(){
         if ( class_exists( 'Disciple_Tools_Post_Type_Template' )) {
-            new Disciple_Tools_Post_Type_Template( "trainings", 'Training', 'Trainings' );
+            new Disciple_Tools_Post_Type_Template( "trainings", __( 'Training', 'disciple_tools' ), __( 'Trainings', 'disciple_tools' ) );
         }
     }
 
