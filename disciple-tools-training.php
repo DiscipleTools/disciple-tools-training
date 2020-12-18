@@ -137,15 +137,11 @@ class DT_Training {
         require_once( 'post-type/loader.php' );
 
         // metrics
-        if ( DT_Mapbox_API::get_key() ) {
-            require_once( 'metrics/metrics.php' );
-        }
-        require_once( 'metrics/enqueue.php' );
+        require_once( 'metrics/mapbox-maps.php' );
 
         // network support
         require_once( 'network/customize-site-linking.php' );
         require_once( 'network/network-dashboard-integration.php' );
-
     }
 
     /**
