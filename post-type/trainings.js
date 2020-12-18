@@ -273,9 +273,10 @@ jQuery(document).ready(function($) {
 
         $list.prepend(`<div class="input-group">
             <input type="text" data-field="${_.escape( field )}" class="dt-datetime-series-picker input-group-field" />
-            <div class="input-group-button">
-            <button class="button alert input-height delete-button-style datetime-series-delete-button delete-button new-${_.escape( field )}" data-key="new" data-field="${_.escape( field )}">&times;</button>
-            </div></div>`)
+                <div class="input-group-button">
+                    <button class="button alert input-height delete-button-style datetime-series-delete-button delete-button new-${_.escape( field )}" data-key="new" data-field="${_.escape( field )}">&times;</button>
+                </div>
+            </div>`)
 
         add_datetime_series_picker_listener()
         //leave at the end of this file
@@ -290,7 +291,12 @@ jQuery(document).ready(function($) {
         let key = $(this).data('key')
         let update = { delete:true }
         if ( key === 'new' ){
-            $(this).parent().remove()
+            $(this).parent().parent().remove()
+
+            masonGrid.masonry({
+                itemSelector: '.grid-item',
+                percentPosition: true
+            });
         } else if ( key ){
             $(`#${field}-spinner`).addClass('active')
             update["key"] = key;
@@ -342,7 +348,7 @@ jQuery(document).ready(function($) {
                 </div>`)
             }
             post = updatedContact
-            
+
             masonGrid.masonry({
                 itemSelector: '.grid-item',
                 percentPosition: true
