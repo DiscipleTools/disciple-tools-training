@@ -1,7 +1,7 @@
 <?php
 if ( !defined( 'ABSPATH' ) ) { exit; } // Exit if accessed directly.
 
-class DT_Training_Calendar extends DT_Module_Base
+class DT_Training_App_Calendar_Module extends DT_Module_Base
 {
     public $module = "trainings_calendar_module";
     public $post_type = 'streams';

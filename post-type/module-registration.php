@@ -1,7 +1,7 @@
 <?php
 if ( !defined( 'ABSPATH' ) ) { exit; } // Exit if accessed directly.
 
-class DT_Training_Apps extends DT_Module_Base {
+class DT_Training_App_Registration_Module extends DT_Module_Base {
     public $post_type = "trainings";
     public $module = "trainings_app_module";
     public $root = 'training_app';
@@ -43,7 +43,7 @@ class DT_Training_Apps extends DT_Module_Base {
             $types = $magic->list_types();
             ?>
             <div class="section-subheader">
-                <img class="dt-icon" src="<?php echo get_stylesheet_directory_uri() ?>/dt-assets/images/date-end.svg">
+                <img class="dt-icon" src="<?php echo esc_url( get_stylesheet_directory_uri() ) ?>/dt-assets/images/date-end.svg">
                 Registration
                 <span id="register-spinner" class="loading-spinner"></span>
             </div>
@@ -58,9 +58,9 @@ class DT_Training_Apps extends DT_Module_Base {
                                 /* copy link */
                                 ?><a class="button hollow small" href="<?php echo esc_url( site_url() ) . '/' . esc_attr( $type['root'] ) . '/' . esc_attr( $type['type'] ) . '/'. esc_attr( $record[$type['meta_key']] ) ?>"><?php echo esc_html__( 'copy link', 'disciple-tools' ) ?></a> <?php
                                 /* edit form */
-                                ?><a class="button hollow small" data-open="modal-large"><?php echo esc_html__( 'edit form', 'disciple-tools' ) ?></a> <?php
+?><a class="button hollow small" data-open="modal-large"><?php echo esc_html__( 'edit form', 'disciple-tools' ) ?></a> <?php
                                 /* show report */
-                                ?><a class="button hollow small" data-open="modal-small" ><?php echo esc_html__( 'report', 'disciple-tools' ) ?></a><?php
+?><a class="button hollow small" data-open="modal-small" ><?php echo esc_html__( 'report', 'disciple-tools' ) ?></a><?php
                             }
                             /* create link*/
                             else {
@@ -99,7 +99,7 @@ class DT_Training_Apps extends DT_Module_Base {
 
 
             <div class="section-subheader">
-                <img class="dt-icon" src="<?php echo get_stylesheet_directory_uri() ?>/dt-assets/images/date-end.svg">
+                <img class="dt-icon" src="<?php echo esc_url( get_stylesheet_directory_uri() ) ?>/dt-assets/images/date-end.svg">
                 Public Calendar
                 <span id="register-spinner" class="loading-spinner"></span>
             </div>
@@ -113,11 +113,9 @@ class DT_Training_Apps extends DT_Module_Base {
                             /* copy link */
                             ?><a class="button hollow small" href="<?php echo esc_url( site_url() ) . '/' . esc_attr( $type['root'] ) . '/' . esc_attr( $type['type'] ) . '/' ?>"><?php echo esc_html__( 'link', 'disciple-tools' ) ?></a> <?php
                             /* edit form */
-                            ?><a class="button hollow small" data-open="modal-large"><?php echo esc_html__( 'show on calendar', 'disciple-tools' ) ?></a> <?php
+?><a class="button hollow small" data-open="modal-large"><?php echo esc_html__( 'show on calendar', 'disciple-tools' ) ?></a> <?php
                             /* show report */
-                            ?><a class="button hollow small" data-open="modal-small" ><?php echo esc_html__( 'open registration ', 'disciple-tools' ) ?></a><?php
-                            ?>
-                        </div>
+?><a class="button hollow small" data-open="modal-small" ><?php echo esc_html__( 'open registration ', 'disciple-tools' ) ?></a>                        </div>
                         <?php
                     }
                 }
@@ -252,7 +250,7 @@ class DT_Training_Magic_Registration
         wp_enqueue_script( 'moment' );
         wp_enqueue_script( 'datepicker' );
 
-        wp_enqueue_script( 'mapbox-search-widget', trailingslashit( get_stylesheet_directory_uri() ) . 'dt-mapping/geocode-api/mapbox-search-widget.js', [ 'jquery', 'mapbox-gl' ], filemtime( get_template_directory() . '/dt-mapping/geocode-api/mapbox-search-widget.js' ), false );
+        wp_enqueue_script( 'mapbox-search-widget', trailingslashit( esc_url( get_stylesheet_directory_uri() ) ) . 'dt-mapping/geocode-api/mapbox-search-widget.js', [ 'jquery', 'mapbox-gl' ], filemtime( get_template_directory() . '/dt-mapping/geocode-api/mapbox-search-widget.js' ), false );
         wp_localize_script(
             "mapbox-search-widget", "dtMapbox", array(
                 'post_type' => get_post_type(),

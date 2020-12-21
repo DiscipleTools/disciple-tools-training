@@ -191,30 +191,8 @@ jQuery(document).ready(function($) {
                     }
 
                     window.API.update_post(post_type, post_id, data ).then((resp) => {
-                        console.log(resp)
                         post = resp
                         window.write_meeting_times_list()
-
-
-
-                        // let list = $(`#edit-${id}`)
-                        // list.empty()
-                        // $.each(resp.)
-                        // list.append(`<div class="input-group">
-                        //     <input type="text" data-field="${_.escape( field )}" class="dt-datetime-series-picker input-group-field" />
-                        //     <div class="input-group-button">
-                        //     <button class="button alert input-height delete-button-style datetime-series-delete-button delete-button new-${_.escape( field )}" data-key="new" data-field="${_.escape( field )}">&times;</button>
-                        //     </div></div>`)
-                        //
-                        // $(`#${id}-spinner`).removeClass('active')
-                        // $(this).val(resp[id]["formatted"]);
-                        // $(document).trigger("dt-datetime-series-picker-updated", [resp, id, resp[id]["formatted"]]);
-
-                        // masonGrid.masonry({
-                        //     itemSelector: '.grid-item',
-                        //     percentPosition: true
-                        // });
-
                     }).catch(handleAjaxError)
                 }
             })
@@ -234,6 +212,7 @@ jQuery(document).ready(function($) {
                         <input id="${v.key}"
                                type="text"
                                data-field="${field}"
+                               data-key="${v.key}"
                                value="${v.formatted}"
                                class="dt-datetime-series-picker input-group-field" />
                         <div class="input-group-button">
@@ -293,6 +272,10 @@ jQuery(document).ready(function($) {
         if ( key === 'new' ){
             $(this).parent().parent().remove()
 
+            add_starter_meeting_times_field( field )
+            add_datetime_series_picker_listener()
+
+            $(`#${field}-spinner`).removeClass('active')
             masonGrid.masonry({
                 itemSelector: '.grid-item',
                 percentPosition: true
@@ -301,19 +284,14 @@ jQuery(document).ready(function($) {
             $(`#${field}-spinner`).addClass('active')
             update["key"] = key;
             API.update_post(post_type, post_id, { [field]: [update]}).then((updatedContact)=>{
-                $(this).parent().parent().remove()
-                let list = $(`#edit-${field}`)
-                if ( list.children().length === 0 ){
-                    list.append(`<div class="input-group">
-                        <input type="text" data-field="${_.escape( field )}" class="dt-datetime-series-picker input-group-field" />
-                        <div class="input-group-button">
-                        <button class="button alert input-height delete-button-style datetime-series-delete-button delete-button new-${_.escape( field )}" data-key="new" data-field="${_.escape( field )}">&times;</button>
-                        </div></div>`)
-                }
-                $(`#${field}-spinner`).removeClass('active')
-                add_datetime_series_picker_listener()
                 post = updatedContact
 
+                $(this).parent().parent().remove()
+
+                add_starter_meeting_times_field( field )
+                add_datetime_series_picker_listener()
+
+                $(`#${field}-spinner`).removeClass('active')
                 masonGrid.masonry({
                     itemSelector: '.grid-item',
                     percentPosition: true
@@ -322,8 +300,20 @@ jQuery(document).ready(function($) {
             }).catch(handleAjaxError)
         }
 
-
     })
+
+    function add_starter_meeting_times_field( field ){
+        let list = $(`#edit-${field}`)
+        if ( list.children().length === 0 ){
+            list.append(`<div class="input-group">
+                        <input type="text" data-field="${_.escape( field )}" class="dt-datetime-series-picker input-group-field" />
+                        <div class="input-group-button">
+                        <button class="button alert input-height delete-button-style datetime-series-delete-button delete-button new-${_.escape( field )}" data-key="new" data-field="${_.escape( field )}">&times;</button>
+                        </div></div>`)
+
+            add_datetime_series_picker_listener()
+        }
+    }
 
     $(document).on('blur', 'input.dt-communication-channel', function(){
         let field_key = $(this).data('field')

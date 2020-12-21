@@ -30,15 +30,16 @@ class DT_Training_Base extends DT_Module_Base {
         add_action( 'wp_enqueue_scripts', [ $this, 'scripts' ], 99 );
 
         // hooks
-        add_filter( "dt_post_updated_custom_handled_meta", [$this, "dt_post_updated_custom_handled_meta"], 10, 2 );
+        add_filter( "dt_post_updated_custom_handled_meta", [ $this, "dt_post_updated_custom_handled_meta" ], 10, 2 );
         add_filter( "dt_post_update_fields", [ $this, "dt_post_update_fields" ], 10, 4 );
         add_filter( "dt_post_create_fields", [ $this, "dt_post_create_fields" ], 10, 2 );
         add_action( "dt_post_created", [ $this, "dt_post_created" ], 10, 3 );
         add_action( "dt_comment_created", [ $this, "dt_comment_created" ], 10, 4 );
         add_action( "post_connection_added", [ $this, "post_connection_added" ], 10, 4 );
         add_action( "post_connection_removed", [ $this, "post_connection_removed" ], 10, 4 );
+        add_filter( "dt_format_activity_message", [ $this, "dt_format_activity_message" ], 10, 2 );
 
-        add_filter( "dt_adjust_post_custom_fields", [ $this, 'dt_adjust_post_custom_fields'], 10, 2 );
+        add_filter( "dt_adjust_post_custom_fields", [ $this, 'dt_adjust_post_custom_fields' ], 10, 2 );
         add_action( 'dt_render_field_for_display_template', [ $this, 'dt_render_field_for_display_template' ], 10, 5 );
 
         //list
@@ -325,15 +326,6 @@ class DT_Training_Base extends DT_Module_Base {
                 'icon' => get_template_directory_uri() . '/dt-assets/images/edit.svg',
             ];
 
-            // @todo Add schedule section
-//            $fields["contact_times"] = [
-//                "name" => __( 'Times', 'disciple_tools' ),
-//                "icon" => get_template_directory_uri() . "/dt-assets/images/phone.svg",
-//                "type" => "communication_channel",
-//                "tile" => "meeting_times",
-//                "customizable" => false,
-//                "in_create_form" => true,
-//            ];
 
             $fields["meeting_times"] = [
                 "name" => __( 'Meeting Times', 'disciple_tools' ),
@@ -344,44 +336,42 @@ class DT_Training_Base extends DT_Module_Base {
                 "in_create_form" => true,
             ];
 
-
-            $fields['repeat_start'] = [
-                'name'        => __( 'End Date', 'disciple_tools' ),
-                'description' => _x( 'The date this training stopped meeting (if applicable).', 'Optional Documentation', 'disciple_tools' ),
-                'type'        => 'datetime',
-                'default'     => '',
-                'icon' => get_template_directory_uri() . '/dt-assets/images/date-end.svg',
-            ];
-            $fields['repeat_year'] = [
-                'name'        => __( 'End Date', 'disciple_tools' ),
-                'description' => '',
-                'type'        => 'text',
-                'default'     => '',
-                'icon' => get_template_directory_uri() . '/dt-assets/images/date-end.svg',
-            ];
-            $fields['repeat_month'] = [
-                'name'        => __( 'End Date', 'disciple_tools' ),
-                'description' => '',
-                'type'        => 'text',
-                'default'     => '',
-                'icon' => get_template_directory_uri() . '/dt-assets/images/date-end.svg',
-            ];
-            $fields['repeat_week'] = [
-                'name'        => __( 'End Date', 'disciple_tools' ),
-                'description' => '',
-                'type'        => 'text',
-                'default'     => '',
-                'icon' => get_template_directory_uri() . '/dt-assets/images/date-end.svg',
-            ];
-            $fields['repeat_day'] = [
-                'name'        => __( 'End Date', 'disciple_tools' ),
-                'description' => '',
-                'type'        => 'text',
-                'default'     => '',
-                'icon' => get_template_directory_uri() . '/dt-assets/images/date-end.svg',
-            ];
-
-            // @todo end
+            // @todo recurring fields
+//            $fields['repeat_start'] = [
+//                'name'        => __( 'End Date', 'disciple_tools' ),
+//                'description' => _x( 'The date this training stopped meeting (if applicable).', 'Optional Documentation', 'disciple_tools' ),
+//                'type'        => 'datetime',
+//                'default'     => '',
+//                'icon' => get_template_directory_uri() . '/dt-assets/images/date-end.svg',
+//            ];
+//            $fields['repeat_year'] = [
+//                'name'        => __( 'End Date', 'disciple_tools' ),
+//                'description' => '',
+//                'type'        => 'text',
+//                'default'     => '',
+//                'icon' => get_template_directory_uri() . '/dt-assets/images/date-end.svg',
+//            ];
+//            $fields['repeat_month'] = [
+//                'name'        => __( 'End Date', 'disciple_tools' ),
+//                'description' => '',
+//                'type'        => 'text',
+//                'default'     => '',
+//                'icon' => get_template_directory_uri() . '/dt-assets/images/date-end.svg',
+//            ];
+//            $fields['repeat_week'] = [
+//                'name'        => __( 'End Date', 'disciple_tools' ),
+//                'description' => '',
+//                'type'        => 'text',
+//                'default'     => '',
+//                'icon' => get_template_directory_uri() . '/dt-assets/images/date-end.svg',
+//            ];
+//            $fields['repeat_day'] = [
+//                'name'        => __( 'End Date', 'disciple_tools' ),
+//                'description' => '',
+//                'type'        => 'text',
+//                'default'     => '',
+//                'icon' => get_template_directory_uri() . '/dt-assets/images/date-end.svg',
+//            ];
 
 
             // location
@@ -619,7 +609,7 @@ class DT_Training_Base extends DT_Module_Base {
                     </button>
                 </div>
                 <div id="edit-<?php echo esc_html( $field_key ) ?>" ></div>
-            <?php
+                <?php
                 /* @todo add recurring times option */
             }
         }
@@ -760,10 +750,10 @@ class DT_Training_Base extends DT_Module_Base {
             // meeting_times (datetime_series field type)
             if ( isset( $fields["meeting_times"] ) ) {
 
-                foreach( $fields["meeting_times"] ?? [] as $field ){
+                foreach ( $fields["meeting_times"] ?? [] as $field ){
                     // update
                     if ( isset( $field['key'], $field['value'] ) ) {
-
+                        update_post_meta( $post_id, $field['key'], $field['value'] );
                     }
                     // delete
                     else if ( isset( $field['key'], $field['delete'] ) ) {
@@ -881,11 +871,32 @@ class DT_Training_Base extends DT_Module_Base {
         }
     }
 
+    public function dt_format_activity_message( $message, $activity ) {
+        if ( $activity->action === "field_update" && 'trainings' === $activity->object_type && 'meeting_times' === substr( $activity->meta_key, 0, 13 ) ) {
+
+            $post_type_settings = DT_Posts::get_post_field_settings( 'trainings' );
+            $fields = $post_type_settings;
+            if ( isset( $fields['meeting_times'] ) ) {
+                if ( $activity->meta_value === "value_deleted" ){
+                    $message = sprintf( __( 'Removed %1$s: %2$s', 'disciple_tools' ), $fields['meeting_times']["name"], dt_format_date( $activity->old_value, 'long' ) );
+                }
+                else if ( empty( $activity->old_value ) ) {
+                    $message = sprintf( __( 'Added %1$s: %2$s', 'disciple_tools' ), $fields['meeting_times']["name"], dt_format_date( $activity->meta_value, 'long' ) );
+                }
+                else {
+                    $message = sprintf( __( 'Updated %1$s: %2$s to %3$s', 'disciple_tools' ), $fields['meeting_times']["name"], dt_format_date( $activity->old_value, 'long' ), dt_format_date( $activity->meta_value, 'long' ) );
+                }
+            }
+        }
+
+        return $message;
+    }
+
     // hooks outgoing
 
     public function dt_adjust_post_custom_fields( $fields, $post_type ) {
         if ( $post_type === 'trainings' ){
-            foreach( $fields as $key => $value ){
+            foreach ( $fields as $key => $value ){
                 if ( 'meeting_times' === substr( $key, 0, 13 ) ){
                     if ( ! isset( $fields['meeting_times'] ) ) {
                         $fields['meeting_times'] = [];
@@ -893,7 +904,7 @@ class DT_Training_Base extends DT_Module_Base {
                     $fields['meeting_times'][] = [
                         "key" => $key,
                         "timestamp" => is_numeric( $value ) ? $value : dt_format_date( $value, "U" ),
-                        "formatted" => dt_format_date(  $value, 'long' ),
+                        "formatted" => dt_format_date( $value, 'long' ),
                     ];
                     unset( $fields[$key] );
                 }
@@ -904,7 +915,7 @@ class DT_Training_Base extends DT_Module_Base {
 
     public function dt_render_field_for_display_template( $post, $field_type, $field_key, $required_tag ){
         if ( $field_type === "datetime_series" ) :
-            dt_write_log(__METHOD__);
+            dt_write_log( __METHOD__ );
             ?>
             <div class="<?php echo esc_html( $field_key ) ?> input-group">
                 <input id="<?php echo esc_html( $field_key ) ?>" class="input-group-field dt-datetime-series-picker" type="text" autocomplete="off" <?php echo esc_html( $required_tag ) ?>
@@ -914,7 +925,7 @@ class DT_Training_Base extends DT_Module_Base {
                     <button id="<?php echo esc_html( $field_key ) ?>-clear-button" class="button alert clear-date-button" data-inputid="<?php echo esc_html( $field_key ) ?>" title="Delete Date" type="button">x</button>
                 </div>
             </div>
-        <?php
+            <?php
         endif;
     }
 
