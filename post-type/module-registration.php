@@ -844,7 +844,7 @@ class DT_Training_Magic_Registration
                 if ( empty( $time ) ) {
                     continue;
                 }
-                $year = date( 'Y', $time );
+                $year = gmdate( 'Y', $time );
                 if ( ! isset( $data[$year] ) ) {
                     $data[$year] = [];
                 }
@@ -891,7 +891,7 @@ class DT_Training_Magic_Registration
             if ( empty( $time ) ) {
                 continue;
             }
-            $year = date( 'Y', $time );
+            $year = gmdate( 'Y', $time );
             if ( ! isset( $data[$year] ) ) {
                 $data[$year] = [
                     'total_groups' => 0,
@@ -987,7 +987,7 @@ class DT_Training_Magic_Registration
             if ( empty( $time ) ) {
                 continue;
             }
-            $year = date( 'Y', $time );
+            $year = gmdate( 'Y', $time );
 
             // build feature
             $features[] = array(
