@@ -1,6 +1,6 @@
 <?php
 
-function dt_training_scripts() {
+add_action( 'wp_enqueue_scripts', function() {
     if ( function_exists( 'dt_get_url_path' ) ) {
 
         $url_path = dt_get_url_path();
@@ -22,5 +22,4 @@ function dt_training_scripts() {
             }
         }
     }
-}
-add_action( 'wp_enqueue_scripts', 'dt_training_scripts', 999 );
+}, 999 );

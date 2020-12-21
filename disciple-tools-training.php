@@ -3,7 +3,7 @@
  * Plugin Name: Disciple Tools - Training
  * Plugin URI: https://github.com/DiscipleTools/disciple-tools-training
  * Description: Disciple Tools Training Extension adds recording of trainings and cross reference them with contacts, groups, and locations.
- * Version:  1.1
+ * Version:  1.2
  * Author URI: https://github.com/DiscipleTools
  * GitHub Plugin URI: https://github.com/DiscipleTools/disciple-tools-training
  * Requires at least: 4.7.0
@@ -14,13 +14,15 @@
  * @link    https://github.com/DiscipleTools
  * @license GPL-2.0 or later
  *          https://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * @version 1.2 DT 1.0 version compatibility
  */
 
 
 if ( ! defined( 'ABSPATH' ) ) {
     exit; // Exit if accessed directly
 }
-$dt_training_required_dt_theme_version = '0.28.0';
+$dt_training_required_dt_theme_version = '1.0';
 
 /**
  * Gets the instance of the `DT_Training` class.
@@ -51,6 +53,19 @@ function dt_training() {
     if ( !defined( 'DT_FUNCTIONS_READY' ) ){
         require_once get_template_directory() . '/dt-core/global-functions.php';
     }
+
+    /**
+     * We want to make sure migrations are run on updates.
+     * @see https://www.sitepoint.com/wordpress-plugin-updates-right-way/
+     */
+    try {
+        require_once( plugin_dir_path( __FILE__ ) . '/admin/class-migration-engine.php' );
+        DT_Training_Migration_Engine::migrate( DT_Training_Migration_Engine::$migration_number );
+    } catch ( Throwable $e ) {
+        new WP_Error( 'migration_error', 'Migration engine failed to migrate.' );
+    }
+
+
     /*
      * Don't load the plugin on every rest request. Only those with the metrics namespace
      */
@@ -118,16 +133,17 @@ class DT_Training {
      * @return void
      */
     private function includes() {
-        if ( is_admin() ) {
-            require_once( 'includes/admin/admin-menu-and-tabs.php' );
-        }
-        require_once( 'includes/training-post-types.php' );
-        require_once( 'includes/customize-site-linking.php' );
-        require_once( 'includes/enqueue.php' );
-        if ( DT_Mapbox_API::get_key() ) {
-            require_once( 'includes/metrics.php' );
-        }
-        require_once ('includes/movement-log-training.php');
+        // post type
+        require_once( 'post-type/loader.php' );
+
+        // metrics
+        require_once( 'metrics/mapbox-maps.php' );
+        require_once( 'metrics/mapbox-personal-maps.php' );
+        require_once( 'admin/enqueue.php' );
+
+        // network support
+        require_once( 'network/customize-site-linking.php' );
+        require_once( 'network/network-dashboard-integration.php' );
     }
 
     /**
@@ -151,11 +167,8 @@ class DT_Training {
 
         // Admin and settings variables
         $this->token             = 'dt_training';
-        $this->version             = '1.1';
+        $this->version             = '1.2';
 
-        // rest api class
-//        require_once( 'includes/rest-api.php' );
-//        DT_Training_Endpoints::instance();
     }
 
     /**
@@ -172,13 +185,6 @@ class DT_Training {
             if ( ! class_exists( 'Puc_v4_Factory' ) ) {
                 require( get_template_directory() . '/dt-core/libraries/plugin-update-checker/plugin-update-checker.php' );
             }
-            /**
-             * Below is the publicly hosted .json file that carries the version information. This file can be hosted
-             * anywhere as long as it is publicly accessible. You can download the version file listed below and use it as
-             * a template.
-             * Also, see the instructions for version updating to understand the steps involved.
-             * @see https://github.com/DiscipleTools/disciple-tools-version-control/wiki/How-to-Update-the-Starter-Plugin
-             */
 
             $hosted_json = "https://raw.githubusercontent.com/DiscipleTools/disciple-tools-version-control/master/disciple-tools-training-version-control.json";
             Puc_v4_Factory::buildUpdateChecker(
@@ -207,7 +213,6 @@ class DT_Training {
         if ( !empty( $role ) ) {
             $role->add_cap( 'manage_dt' ); // gives access to dt plugin options
         }
-
     }
 
     /**
