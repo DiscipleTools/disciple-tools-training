@@ -779,9 +779,6 @@ class DT_Training_Base extends DT_Module_Base {
             if ( !isset( $fields["assigned_to"] ) ) {
                 $fields["assigned_to"] = sprintf( "user-%d", get_current_user_id() );
             }
-            if ( !isset( $fields["start_date"] ) ) {
-                $fields["start_date"] = time();
-            }
             if ( isset( $fields["assigned_to"] ) ) {
                 if ( filter_var( $fields["assigned_to"], FILTER_VALIDATE_EMAIL ) ){
                     $user = get_user_by( "email", $fields["assigned_to"] );

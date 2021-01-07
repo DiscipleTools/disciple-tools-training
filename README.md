@@ -2,4 +2,6 @@
 
 # Disciple Tools Training
 
-This extension adds a new post type which can track training events inside Disciple Tools and report on locations.
+This plugin adds simple training events tracking inside Disciple Tools. It has features to support sharing, tasks, meeting times, connnections to participants and leaders, and mapped locations.
+
+![screenshot](screenshot.png)
