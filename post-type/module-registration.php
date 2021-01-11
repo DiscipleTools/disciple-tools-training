@@ -115,7 +115,7 @@ class DT_Training_App_Registration_Module extends DT_Module_Base {
                             /* edit form */
 ?><a class="button hollow small" data-open="modal-large"><?php echo esc_html__( 'show on calendar', 'disciple-tools-training' ) ?></a> <?php
                             /* show report */
-?><a class="button hollow small" data-open="modal-small" ><?php echo esc_html__( 'open registration ', 'disciple-tools-training' ) ?></a>                        </div>
+?><a class="button hollow small" data-open="modal-small" ><?php echo esc_html__( 'open registration', 'disciple-tools-training' ) ?></a>                        </div>
                         <?php
                     }
                 }

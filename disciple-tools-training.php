@@ -33,7 +33,7 @@ $dt_training_required_dt_theme_version = '1.0';
  * @access public
  * @return object|bool;
  */
-function dt_training() {
+add_action( 'after_setup_theme', function() {
     global $dt_training_required_dt_theme_version;
     $wp_theme = wp_get_theme();
     $version = $wp_theme->version;
@@ -72,8 +72,7 @@ function dt_training() {
      * Don't load the plugin on every rest request. Only those with the metrics namespace
      */
     return DT_Training::get_instance();
-}
-add_action( 'after_setup_theme', 'disciple-tools-training', 20 );
+});
 
 /**
  * Singleton class for setting up the plugin.

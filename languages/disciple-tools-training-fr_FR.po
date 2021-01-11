@@ -424,8 +424,8 @@ msgid "show on calendar"
 msgstr "afficher sur le calendrier"
 
 #: post-type/module-registration.php:118
-msgid "open registration "
-msgstr "inscription ouverte "
+msgid "open registration"
+msgstr "inscription ouverte"
 
 #: metrics/network-maps-area.php:68
 msgid "add"

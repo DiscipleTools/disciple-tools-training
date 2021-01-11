@@ -494,8 +494,6 @@ class DT_Training_Base extends DT_Module_Base {
                 'default' => '',
                 'tile' => 'relationships',
             ];
-
-
         }
 
         if ( $post_type === 'contacts' ){

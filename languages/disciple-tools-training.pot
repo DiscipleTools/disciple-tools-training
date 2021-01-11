@@ -471,7 +471,7 @@ msgid "show on calendar"
 msgstr ""
 
 #: post-type/module-registration.php:118
-msgid "open registration "
+msgid "open registration"
 msgstr ""
 
 #: post-type/module-registration.php:265
