@@ -27,8 +27,8 @@ class DT_Metrics_Mapbox_Personal_Trainings_Maps extends DT_Metrics_Chart_Base
         if ( !$this->has_permission() ){
             return;
         }
-        $this->title = __( 'Trainings Maps', 'disciple_tools' );
-        $this->base_title = __( 'Trainings', 'disciple_tools' );
+        $this->title = __( 'Trainings Maps', 'disciple-tools-training' );
+        $this->base_title = __( 'Trainings', 'disciple-tools-training' );
 
         $url_path = dt_get_url_path();
         if ( "metrics/$this->base_slug/$this->slug" === $url_path ) {

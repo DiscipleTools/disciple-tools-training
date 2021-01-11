@@ -41,19 +41,19 @@ function dt_network_dashboard_register_training_actions( $actions ){
 
     $actions['training_new'] = [
         'key' => 'training_new',
-        'label' => 'New Training',
+        'label' => __('New Training', 'disciple-tools-training'),
         'message_pattern' => []
     ];
 
     $actions['training_in_progress'] = [
         'key' => 'training_in_progress',
-        'label' => 'Training Started',
+        'label' => __('Training Started', 'disciple-tools-training'),
         'message_pattern' => []
     ];
 
     $actions['training_completed'] = [
         'key' => 'training_completed',
-        'label' => 'Training Completed',
+        'label' => __('Training Completed', 'disciple-tools-training'),
         'message_pattern' => []
     ];
 

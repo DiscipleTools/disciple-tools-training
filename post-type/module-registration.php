@@ -28,7 +28,7 @@ class DT_Training_App_Registration_Module extends DT_Module_Base {
 
     public function dt_details_additional_tiles( $tiles, $post_type = "" ){
         if ( $post_type === 'trainings' ){
-            $tiles["apps"] = [ "label" => __( "Apps", 'disciple_tools' ) ];
+            $tiles["apps"] = [ "label" => __( "Apps", 'disciple-tools-training' ) ];
         }
         return $tiles;
     }
@@ -56,15 +56,15 @@ class DT_Training_App_Registration_Module extends DT_Module_Base {
                             <?php
                             if ( isset( $record[$type['meta_key']] ) ) {
                                 /* copy link */
-                                ?><a class="button hollow small" href="<?php echo esc_url( site_url() ) . '/' . esc_attr( $type['root'] ) . '/' . esc_attr( $type['type'] ) . '/'. esc_attr( $record[$type['meta_key']] ) ?>"><?php echo esc_html__( 'copy link', 'disciple-tools' ) ?></a> <?php
+                                ?><a class="button hollow small" href="<?php echo esc_url( site_url() ) . '/' . esc_attr( $type['root'] ) . '/' . esc_attr( $type['type'] ) . '/'. esc_attr( $record[$type['meta_key']] ) ?>"><?php echo esc_html__( 'copy link', 'disciple-tools-training' ) ?></a> <?php
                                 /* edit form */
-?><a class="button hollow small" data-open="modal-large"><?php echo esc_html__( 'edit form', 'disciple-tools' ) ?></a> <?php
+                                ?><a class="button hollow small" data-open="modal-large"><?php echo esc_html__( 'edit form', 'disciple-tools-training' ) ?></a> <?php
                                 /* show report */
-?><a class="button hollow small" data-open="modal-small" ><?php echo esc_html__( 'report', 'disciple-tools' ) ?></a><?php
+                                ?><a class="button hollow small" data-open="modal-small" ><?php echo esc_html__( 'report', 'disciple-tools-training' ) ?></a><?php
                             }
                             /* create link*/
                             else {
-                                ?><a class="create-magic-link button hollow small" data-meta_key_name="<?php echo esc_attr( $type['meta_key'] ) ?>" data-meta_key_value="<?php echo esc_attr( $magic->create_unique_key() ) ?>" ><?php echo esc_html__( 'create link', 'disciple-tools' ) ?></a><?php
+                                ?><a class="create-magic-link button hollow small" data-meta_key_name="<?php echo esc_attr( $type['meta_key'] ) ?>" data-meta_key_value="<?php echo esc_attr( $magic->create_unique_key() ) ?>" ><?php echo esc_html__( 'create link', 'disciple-tools-training' ) ?></a><?php
                             }
                             ?>
                         </div>
@@ -111,11 +111,11 @@ class DT_Training_App_Registration_Module extends DT_Module_Base {
                         <div class="cell small-12 medium-4">
                             <?php
                             /* copy link */
-                            ?><a class="button hollow small" href="<?php echo esc_url( site_url() ) . '/' . esc_attr( $type['root'] ) . '/' . esc_attr( $type['type'] ) . '/' ?>"><?php echo esc_html__( 'link', 'disciple-tools' ) ?></a> <?php
+                            ?><a class="button hollow small" href="<?php echo esc_url( site_url() ) . '/' . esc_attr( $type['root'] ) . '/' . esc_attr( $type['type'] ) . '/' ?>"><?php echo esc_html__( 'link', 'disciple-tools-training' ) ?></a> <?php
                             /* edit form */
-?><a class="button hollow small" data-open="modal-large"><?php echo esc_html__( 'show on calendar', 'disciple-tools' ) ?></a> <?php
+?><a class="button hollow small" data-open="modal-large"><?php echo esc_html__( 'show on calendar', 'disciple-tools-training' ) ?></a> <?php
                             /* show report */
-?><a class="button hollow small" data-open="modal-small" ><?php echo esc_html__( 'open registration ', 'disciple-tools' ) ?></a>                        </div>
+?><a class="button hollow small" data-open="modal-small" ><?php echo esc_html__( 'open registration ', 'disciple-tools-training' ) ?></a>                        </div>
                         <?php
                     }
                 }
@@ -262,12 +262,12 @@ class DT_Training_Magic_Registration
                 "spinner_url" => get_stylesheet_directory_uri() . '/spinner.svg',
                 "theme_uri" => get_stylesheet_directory_uri(),
                 "translations" => array(
-                    'add' => __( 'add', 'disciple-tools' ),
-                    'use' => __( 'Use', 'disciple-tools' ),
-                    'search_location' => __( 'Search Location', 'disciple-tools' ),
-                    'delete_location' => __( 'Delete Location', 'disciple-tools' ),
-                    'open_mapping' => __( 'Open Mapping', 'disciple-tools' ),
-                    'clear' => __( 'clear', 'disciple-tools' )
+                    'add' => __( 'add', 'disciple-tools-training' ),
+                    'use' => __( 'Use', 'disciple-tools-training' ),
+                    'search_location' => __( 'Search Location', 'disciple-tools-training' ),
+                    'delete_location' => __( 'Delete Location', 'disciple-tools-training' ),
+                    'open_mapping' => __( 'Open Mapping', 'disciple-tools-training' ),
+                    'clear' => __( 'clear', 'disciple-tools-training' )
                 )
             )
         );
@@ -381,10 +381,10 @@ class DT_Training_Magic_Registration
                 'nonce' => wp_create_nonce( 'wp_rest' ),
                 'parts' => $this->parts,
                 'translations' => [
-                    'title' => __( 'Register for Training', 'disciple-tools' ),
-                    'add' => __( 'Add', 'disciple-tools' ),
-                    'submit' => __( 'Join Training', 'disciple-tools' ),
-                    'submit_in' => __( 'Join in', 'disciple-tools' )
+                    'title' => __( 'Register for Training', 'disciple-tools-training' ),
+                    'add' => __( 'Add', 'disciple-tools-training' ),
+                    'submit' => __( 'Join Training', 'disciple-tools-training' ),
+                    'submit_in' => __( 'Join in', 'disciple-tools-training' )
                 ],
             ]) ?>][0]
 
@@ -692,12 +692,12 @@ class DT_Training_Magic_Registration
                                 Location <br>
                                 <div id="mapbox-wrapper">
                                     <div id="mapbox-autocomplete" class="mapbox-autocomplete input-group" data-autosubmit="false" data-add-address="false">
-                                        <input id="mapbox-search" type="text" name="mapbox_search" class="input-group-field" autocomplete="off" placeholder="<?php echo esc_html__( 'Search Location', 'disciple-tools' ) ?>" />
+                                        <input id="mapbox-search" type="text" name="mapbox_search" class="input-group-field" autocomplete="off" placeholder="<?php echo esc_html__( 'Search Location', 'disciple-tools-training' ) ?>" />
                                         <div class="input-group-button">
                                             <button id="mapbox-spinner-button" class="button hollow" style="display:none;border-color:lightgrey;">
                                                 <span class="" style="border-radius: 50%;width: 24px;height: 24px;border: 0.25rem solid lightgrey;border-top-color: black;animation: spin 1s infinite linear;display: inline-block;"></span>
                                             </button>
-                                            <button id="mapbox-clear-autocomplete" class="button alert input-height delete-button-style mapbox-delete-button" type="button" title="<?php echo esc_html__( 'Clear', 'disciple-tools' ) ?>" style="display:none;">&times;</button>
+                                            <button id="mapbox-clear-autocomplete" class="button alert input-height delete-button-style mapbox-delete-button" type="button" title="<?php echo esc_html__( 'Clear', 'disciple-tools-training' ) ?>" style="display:none;">&times;</button>
                                         </div>
                                         <div id="mapbox-autocomplete-list" class="mapbox-autocomplete-items"></div>
                                     </div>

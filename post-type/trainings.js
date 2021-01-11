@@ -200,7 +200,7 @@ jQuery(document).ready(function($) {
 
     window.write_meeting_times_list = () => {
         let field = 'meeting_times'
-        let list = $(`#edit-${field}`)
+        let list = $(`#edit-${_.escape( field )}`)
 
         list.empty()
 
@@ -209,14 +209,14 @@ jQuery(document).ready(function($) {
             $.each( _.orderBy(times, ['timestamp']), function(i,v){
                 list.append(`
                     <div class="input-group">
-                        <input id="${v.key}"
+                        <input id="${_.escape( v.key )}"
                                type="text"
-                               data-field="${field}"
-                               data-key="${v.key}"
-                               value="${v.formatted}"
+                               data-field="${_.escape( field )}"
+                               data-key="${_.escape( v.key )}"
+                               value="${_.escape( v.formatted )}"
                                class="dt-datetime-series-picker input-group-field" />
                         <div class="input-group-button">
-                            <button class="button alert input-height delete-button-style datetime-series-delete-button delete-button" data-field="${field}" data-key="${v.key}">&times;</button>
+                            <button class="button alert input-height delete-button-style datetime-series-delete-button delete-button" data-field="${_.escape( field )}" data-key="${_.escape( v.key )}">&times;</button>
                         </div>
                     </div>
                `)
@@ -248,7 +248,7 @@ jQuery(document).ready(function($) {
     // Clicking the plus sign next to the field label
     $('button.add-time-button').on('click', e => {
         const field = $(e.currentTarget).data('list-class')
-        const $list = $(`#edit-${field}`)
+        const $list = $(`#edit-${_.escape( field )}`)
 
         $list.prepend(`<div class="input-group">
             <input type="text" data-field="${_.escape( field )}" class="dt-datetime-series-picker input-group-field" />
@@ -303,7 +303,7 @@ jQuery(document).ready(function($) {
     })
 
     function add_starter_meeting_times_field( field ){
-        let list = $(`#edit-${field}`)
+        let list = $(`#edit-${_.escape( field )}`)
         if ( list.children().length === 0 ){
             list.append(`<div class="input-group">
                         <input type="text" data-field="${_.escape( field )}" class="dt-datetime-series-picker input-group-field" />

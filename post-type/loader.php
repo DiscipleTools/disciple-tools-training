@@ -3,7 +3,7 @@ if ( !defined( 'ABSPATH' ) ) { exit; } // Exit if accessed directly.
 
 add_filter( 'dt_post_type_modules', function( $modules ){
     $modules["trainings_base"] = [
-        "name" => __("Trainings", "dt_plugin"),
+        "name" => "Trainings",
         "enabled" => true,
         "locked" => true,
         "prerequisites" => [ "contacts_base" ],

@@ -51,34 +51,34 @@ class DT_Training_Base extends DT_Module_Base {
 
     public function after_setup_theme(){
         if ( class_exists( 'Disciple_Tools_Post_Type_Template' )) {
-            new Disciple_Tools_Post_Type_Template( "trainings", __( 'Training', 'disciple_tools' ), __( 'Trainings', 'disciple_tools' ) );
+            new Disciple_Tools_Post_Type_Template( "trainings", __( 'Training', 'disciple-tools-training' ), __( 'Trainings', 'disciple-tools-training' ) );
         }
     }
 
     public function dt_set_roles_and_permissions( $expected_roles ){
         if ( !isset( $expected_roles["multiplier"] ) ){
             $expected_roles["multiplier"] = [
-                "label" => __( 'Multiplier', 'disciple_tools' ),
+                "label" => __( 'Multiplier', 'disciple-tools-training' ),
                 "permissions" => []
             ];
         }
         if ( !isset( $expected_roles["dispatcher"] ) ){
             $expected_roles["dispatcher"] = [
-                "label" => __( 'Dispatcher', 'disciple_tools' ),
+                "label" => __( 'Dispatcher', 'disciple-tools-training' ),
                 "description" => "All D.T permissions",
                 "permissions" => []
             ];
         }
         if ( !isset( $expected_roles["dt_admin"] ) ){
             $expected_roles["dt_admin"] = [
-                "label" => __( 'Disciple.Tools Admin', 'disciple_tools' ),
+                "label" => __( 'Disciple.Tools Admin', 'disciple-tools-training' ),
                 "description" => "All D.T permissions",
                 "permissions" => []
             ];
         }
         if ( !isset( $expected_roles["administrator"] ) ){
             $expected_roles["administrator"] = [
-                "label" => __( 'Administrator', 'disciple_tools' ),
+                "label" => __( 'Administrator', 'disciple-tools-training' ),
                 "description" => "All D.T permissions plus the ability to manage plugins.",
                 "permissions" => []
             ];
@@ -113,8 +113,8 @@ class DT_Training_Base extends DT_Module_Base {
                     'show' => false,
                 ],
                 'title'          => [
-                    'from' => __( 'Members', 'disciple_tools' ),
-                    'to'   => __( 'Contacts', 'disciple_tools' ),
+                    'from' => __( 'Members', 'disciple-tools-training' ),
+                    'to'   => __( 'Contacts', 'disciple-tools-training' ),
                 ]
             ]
         );
@@ -130,8 +130,8 @@ class DT_Training_Base extends DT_Module_Base {
                     'show' => false,
                 ],
                 'title'          => [
-                    'from' => __( 'Trainings', 'disciple_tools' ),
-                    'to'   => __( 'Groups', 'disciple_tools' ),
+                    'from' => __( 'Trainings', 'disciple-tools-training' ),
+                    'to'   => __( 'Groups', 'disciple-tools-training' ),
                 ]
             ]
         );
@@ -147,8 +147,8 @@ class DT_Training_Base extends DT_Module_Base {
                     'show' => false,
                 ],
                 'title'          => [
-                    'from' => __( 'Trainings', 'disciple_tools' ),
-                    'to'   => __( 'Leaders', 'disciple_tools' ),
+                    'from' => __( 'Trainings', 'disciple-tools-training' ),
+                    'to'   => __( 'Leaders', 'disciple-tools-training' ),
                 ]
             ]
         );
@@ -164,8 +164,8 @@ class DT_Training_Base extends DT_Module_Base {
                     'show' => false,
                 ],
                 'title'          => [
-                    'from' => __( 'Trainings', 'disciple_tools' ),
-                    'to'   => __( 'Coaches', 'disciple_tools' ),
+                    'from' => __( 'Trainings', 'disciple-tools-training' ),
+                    'to'   => __( 'Coaches', 'disciple-tools-training' ),
                 ]
             ]
         );
@@ -178,8 +178,8 @@ class DT_Training_Base extends DT_Module_Base {
                 'from'         => 'trainings',
                 'to'           => 'trainings',
                 'title'        => [
-                    'from' => __( 'Planted by', 'disciple_tools' ),
-                    'to'   => __( 'Planting', 'disciple_tools' ),
+                    'from' => __( 'Planted by', 'disciple-tools-training' ),
+                    'to'   => __( 'Planting', 'disciple-tools-training' ),
                 ],
             ]
         );
@@ -200,8 +200,8 @@ class DT_Training_Base extends DT_Module_Base {
                 'from'        => 'trainings',
                 'to'          => 'peoplegroups',
                 'title'       => [
-                    'from' => __( 'People Groups', 'disciple_tools' ),
-                    'to'   => __( 'Trainings', 'disciple_tools' ),
+                    'from' => __( 'People Groups', 'disciple-tools-training' ),
+                    'to'   => __( 'Trainings', 'disciple-tools-training' ),
                 ]
             ]
         );
@@ -211,28 +211,28 @@ class DT_Training_Base extends DT_Module_Base {
         if ( $post_type === 'trainings' ){
             // framework fields
             $fields['tags'] = [
-                'name'        => __( 'Tags', 'disciple_tools' ),
-                'description' => _x( 'A useful way to training related items and can help training contacts associated with noteworthy characteristics. e.g. business owner, sports lover. The contacts can also be filtered using these tags.', 'Optional Documentation', 'disciple_tools' ),
+                'name'        => __( 'Tags', 'disciple-tools-training' ),
+                'description' => _x( 'A useful way to training related items and can help training contacts associated with noteworthy characteristics. e.g. business owner, sports lover. The contacts can also be filtered using these tags.', 'Optional Documentation', 'disciple-tools-training' ),
                 'type'        => 'multi_select',
                 'default'     => [],
                 'tile'        => 'other',
                 'custom_display' => true,
             ];
             $fields["follow"] = [
-                'name'        => __( 'Follow', 'disciple_tools' ),
+                'name'        => __( 'Follow', 'disciple-tools-training' ),
                 'type'        => 'multi_select',
                 'default'     => [],
                 'section'     => 'misc',
                 'hidden'      => true
             ];
             $fields["unfollow"] = [
-                'name'        => __( 'Un-Follow', 'disciple_tools' ),
+                'name'        => __( 'Un-Follow', 'disciple-tools-training' ),
                 'type'        => 'multi_select',
                 'default'     => [],
                 'hidden'      => true
             ];
             $fields['tasks'] = [
-                'name' => __( 'Tasks', 'disciple_tools' ),
+                'name' => __( 'Tasks', 'disciple-tools-training' ),
                 'type' => 'post_user_meta',
             ];
             $fields["duplicate_data"] = [
@@ -246,46 +246,46 @@ class DT_Training_Base extends DT_Module_Base {
                 "tile" => "",
                 'default' => [
                     'new'   => [
-                        "label" => _x( 'New', 'Training Status label', 'disciple_tools' ),
-                        "description" => _x( "New training added to the system", "Training Status field description", 'disciple_tools' ),
+                        "label" => _x( 'New', 'Training Status label', 'disciple-tools-training' ),
+                        "description" => _x( "New training added to the system", "Training Status field description", 'disciple-tools-training' ),
                         'color' => "#ff9800"
                     ],
                     'proposed'   => [
-                        "label" => _x( 'Proposed', 'Training Status label', 'disciple_tools' ),
-                        "description" => _x( "This training has been proposed and is in initial conversations", "Training Status field description", 'disciple_tools' ),
+                        "label" => _x( 'Proposed', 'Training Status label', 'disciple-tools-training' ),
+                        "description" => _x( "This training has been proposed and is in initial conversations", "Training Status field description", 'disciple-tools-training' ),
                         'color' => "#ff9800"
                     ],
                     'scheduled' => [
-                        "label" => _x( 'Scheduled', 'Training Status label', 'disciple_tools' ),
-                        "description" => _x( "This training is confirmed, on the calendar.", "Training Status field description", 'disciple_tools' ),
+                        "label" => _x( 'Scheduled', 'Training Status label', 'disciple-tools-training' ),
+                        "description" => _x( "This training is confirmed, on the calendar.", "Training Status field description", 'disciple-tools-training' ),
                         'color' => "#4CAF50"
                     ],
                     'in_progress' => [
-                        "label" => _x( 'In Progress', 'Training Status label', 'disciple_tools' ),
-                        "description" => _x( "This training is confirmed, on the calendar, or currently active.", "Training Status field description", 'disciple_tools' ),
+                        "label" => _x( 'In Progress', 'Training Status label', 'disciple-tools-training' ),
+                        "description" => _x( "This training is confirmed, on the calendar, or currently active.", "Training Status field description", 'disciple-tools-training' ),
                         'color' => "#4CAF50"
                     ],
                     'complete'     => [
-                        "label" => _x( "Complete", 'Training Status label', 'disciple_tools' ),
-                        "description" => _x( "This training has successfully completed", "Training Status field description", 'disciple_tools' ),
+                        "label" => _x( "Complete", 'Training Status label', 'disciple-tools-training' ),
+                        "description" => _x( "This training has successfully completed", "Training Status field description", 'disciple-tools-training' ),
                         'color' => "#4CAF50"
                     ],
                     'paused'       => [
-                        "label" => _x( 'Paused', 'Training Status label', 'disciple_tools' ),
-                        "description" => _x( "This contact is currently on hold. It has potential of getting scheduled in the future.", "Training Status field description", 'disciple_tools' ),
+                        "label" => _x( 'Paused', 'Training Status label', 'disciple-tools-training' ),
+                        "description" => _x( "This contact is currently on hold. It has potential of getting scheduled in the future.", "Training Status field description", 'disciple-tools-training' ),
                         'color' => "#ff9800"
                     ],
                     'closed'       => [
-                        "label" => _x( 'Closed', 'Training Status label', 'disciple_tools' ),
-                        "description" => _x( "This training is no longer going to happen.", "Training Status field description", 'disciple_tools' ),
+                        "label" => _x( 'Closed', 'Training Status label', 'disciple-tools-training' ),
+                        "description" => _x( "This training is no longer going to happen.", "Training Status field description", 'disciple-tools-training' ),
                         "color" => "#366184",
                     ],
                 ],
                 "default_color" => "#366184",
             ];
             $fields['assigned_to'] = [
-                'name'        => __( 'Assigned To', 'disciple_tools' ),
-                'description' => __( "Select the main person who is responsible for reporting on this training.", 'disciple_tools' ),
+                'name'        => __( 'Assigned To', 'disciple-tools-training' ),
+                'description' => __( "Select the main person who is responsible for reporting on this training.", 'disciple-tools-training' ),
                 'type'        => 'user_select',
                 'default'     => '',
                 'tile' => 'status',
@@ -293,8 +293,8 @@ class DT_Training_Base extends DT_Module_Base {
                 'custom_display' => true,
             ];
             $fields["coaches"] = [
-                "name" => __( 'Training Coach / Church Planter', 'disciple_tools' ),
-                'description' => _x( 'The person who planted and/or is coaching this training. Only one person can be assigned to a training while multiple people can be coaches / church planters of this training.', 'Optional Documentation', 'disciple_tools' ),
+                "name" => __( 'Training Coach / Church Planter', 'disciple-tools-training' ),
+                'description' => _x( 'The person who planted and/or is coaching this training. Only one person can be assigned to a training while multiple people can be coaches / church planters of this training.', 'Optional Documentation', 'disciple-tools-training' ),
                 "type" => "connection",
                 "post_type" => "contacts",
                 "p2p_direction" => "from",
@@ -304,22 +304,22 @@ class DT_Training_Base extends DT_Module_Base {
                 'create-icon' => get_template_directory_uri() . '/dt-assets/images/add-contact.svg',
             ];
             $fields["requires_update"] = [
-                'name'        => __( 'Requires Update', 'disciple_tools' ),
+                'name'        => __( 'Requires Update', 'disciple-tools-training' ),
                 'description' => '',
                 'type'        => 'boolean',
                 'default'     => false,
             ];
             $fields['video_link'] = [
-                'name'        => __( 'Video Link', 'disciple_tools' ),
-                'description' => _x( 'Link to video chat service', 'Optional Documentation', 'disciple_tools' ),
+                'name'        => __( 'Video Link', 'disciple-tools-training' ),
+                'description' => _x( 'Link to video chat service', 'Optional Documentation', 'disciple-tools-training' ),
                 'type'        => 'text',
                 'default'     => time(),
                 'tile' => 'details',
                 'icon' => get_template_directory_uri() . '/dt-assets/images/edit.svg',
             ];
             $fields['notes'] = [
-                'name'        => __( 'Notes', 'disciple_tools' ),
-                'description' => _x( 'Notes on when the trainings will happen', 'Optional Documentation', 'disciple_tools' ),
+                'name'        => __( 'Notes', 'disciple-tools-training' ),
+                'description' => _x( 'Notes on when the trainings will happen', 'Optional Documentation', 'disciple-tools-training' ),
                 'type'        => 'text',
                 'default'     => time(),
                 'tile' => 'details',
@@ -328,7 +328,7 @@ class DT_Training_Base extends DT_Module_Base {
 
 
             $fields["meeting_times"] = [
-                "name" => __( 'Meeting Times', 'disciple_tools' ),
+                "name" => __( 'Meeting Times', 'disciple-tools-training' ),
                 "icon" => get_template_directory_uri() . "/dt-assets/images/phone.svg",
                 "type" => "datetime_series",
                 "tile" => "meeting_times",
@@ -338,35 +338,35 @@ class DT_Training_Base extends DT_Module_Base {
 
             // @todo recurring fields
 //            $fields['repeat_start'] = [
-//                'name'        => __( 'End Date', 'disciple_tools' ),
-//                'description' => _x( 'The date this training stopped meeting (if applicable).', 'Optional Documentation', 'disciple_tools' ),
+//                'name'        => __( 'End Date', 'disciple-tools-training' ),
+//                'description' => _x( 'The date this training stopped meeting (if applicable).', 'Optional Documentation', 'disciple-tools-training' ),
 //                'type'        => 'datetime',
 //                'default'     => '',
 //                'icon' => get_template_directory_uri() . '/dt-assets/images/date-end.svg',
 //            ];
 //            $fields['repeat_year'] = [
-//                'name'        => __( 'End Date', 'disciple_tools' ),
+//                'name'        => __( 'End Date', 'disciple-tools-training' ),
 //                'description' => '',
 //                'type'        => 'text',
 //                'default'     => '',
 //                'icon' => get_template_directory_uri() . '/dt-assets/images/date-end.svg',
 //            ];
 //            $fields['repeat_month'] = [
-//                'name'        => __( 'End Date', 'disciple_tools' ),
+//                'name'        => __( 'End Date', 'disciple-tools-training' ),
 //                'description' => '',
 //                'type'        => 'text',
 //                'default'     => '',
 //                'icon' => get_template_directory_uri() . '/dt-assets/images/date-end.svg',
 //            ];
 //            $fields['repeat_week'] = [
-//                'name'        => __( 'End Date', 'disciple_tools' ),
+//                'name'        => __( 'End Date', 'disciple-tools-training' ),
 //                'description' => '',
 //                'type'        => 'text',
 //                'default'     => '',
 //                'icon' => get_template_directory_uri() . '/dt-assets/images/date-end.svg',
 //            ];
 //            $fields['repeat_day'] = [
-//                'name'        => __( 'End Date', 'disciple_tools' ),
+//                'name'        => __( 'End Date', 'disciple-tools-training' ),
 //                'description' => '',
 //                'type'        => 'text',
 //                'default'     => '',
@@ -376,8 +376,8 @@ class DT_Training_Base extends DT_Module_Base {
 
             // location
             $fields['location_grid'] = [
-                'name'        => __( 'Locations', 'disciple_tools' ),
-                'description' => _x( 'The general location where this contact is located.', 'Optional Documentation', 'disciple_tools' ),
+                'name'        => __( 'Locations', 'disciple-tools-training' ),
+                'description' => _x( 'The general location where this contact is located.', 'Optional Documentation', 'disciple-tools-training' ),
                 'type'        => 'location',
                 'mapbox'    => false,
                 "in_create_form" => true,
@@ -385,15 +385,15 @@ class DT_Training_Base extends DT_Module_Base {
                 "icon" => get_template_directory_uri() . "/dt-assets/images/location.svg",
             ];
             $fields['location_grid_meta'] = [
-                'name'        => __( 'Locations', 'disciple_tools' ), //system string does not need translation
-                'description' => _x( 'The general location where this contact is located.', 'Optional Documentation', 'disciple_tools' ),
+                'name'        => __( 'Locations', 'disciple-tools-training' ), //system string does not need translation
+                'description' => _x( 'The general location where this contact is located.', 'Optional Documentation', 'disciple-tools-training' ),
                 'type'        => 'location_meta',
                 "tile"      => "details",
                 'mapbox'    => false,
                 'hidden' => true
             ];
             $fields["contact_address"] = [
-                "name" => __( 'Address', 'disciple_tools' ),
+                "name" => __( 'Address', 'disciple-tools-training' ),
                 "icon" => get_template_directory_uri() . "/dt-assets/images/house.svg",
                 "type" => "communication_channel",
                 "tile" => "details",
@@ -410,8 +410,8 @@ class DT_Training_Base extends DT_Module_Base {
 
             // connection fields
             $fields["parent_trainings"] = [
-                "name" => __( 'Parent Training', 'disciple_tools' ),
-                'description' => _x( 'A training that launched this training.', 'Optional Documentation', 'disciple_tools' ),
+                "name" => __( 'Parent Training', 'disciple-tools-training' ),
+                'description' => _x( 'A training that launched this training.', 'Optional Documentation', 'disciple-tools-training' ),
                 "type" => "connection",
                 "post_type" => "trainings",
                 "p2p_direction" => "from",
@@ -421,8 +421,8 @@ class DT_Training_Base extends DT_Module_Base {
                 'create-icon' => get_template_directory_uri() . '/dt-assets/images/add-group.svg',
             ];
             $fields["peer_trainings"] = [
-                "name" => __( 'Peer Training', 'disciple_tools' ),
-                'description' => _x( "A related training that isn't a parent/child in relationship. It might indicate trainings that collaborate, are about to merge, recently split, etc.", 'Optional Documentation', 'disciple_tools' ),
+                "name" => __( 'Peer Training', 'disciple-tools-training' ),
+                'description' => _x( "A related training that isn't a parent/child in relationship. It might indicate trainings that collaborate, are about to merge, recently split, etc.", 'Optional Documentation', 'disciple-tools-training' ),
                 "type" => "connection",
                 "post_type" => "trainings",
                 "p2p_direction" => "any",
@@ -432,8 +432,8 @@ class DT_Training_Base extends DT_Module_Base {
                 'create-icon' => get_template_directory_uri() . '/dt-assets/images/add-group.svg',
             ];
             $fields["child_trainings"] = [
-                "name" => __( 'Child Training', 'disciple_tools' ),
-                'description' => _x( 'A training that has been birthed out of this training.', 'Optional Documentation', 'disciple_tools' ),
+                "name" => __( 'Child Training', 'disciple-tools-training' ),
+                'description' => _x( 'A training that has been birthed out of this training.', 'Optional Documentation', 'disciple-tools-training' ),
                 "type" => "connection",
                 "post_type" => "trainings",
                 "p2p_direction" => "to",
@@ -443,15 +443,15 @@ class DT_Training_Base extends DT_Module_Base {
                 'create-icon' => get_template_directory_uri() . '/dt-assets/images/add-group.svg',
             ];
             $fields["members"] = [
-                "name" => __( 'Member List', 'disciple_tools' ),
-                'description' => _x( 'The contacts who are members of this training.', 'Optional Documentation', 'disciple_tools' ),
+                "name" => __( 'Member List', 'disciple-tools-training' ),
+                'description' => _x( 'The contacts who are members of this training.', 'Optional Documentation', 'disciple-tools-training' ),
                 "type" => "connection",
                 "post_type" => "contacts",
                 "p2p_direction" => "from",
                 "p2p_key" => "trainings_to_contacts"
             ];
             $fields["leaders"] = [
-                "name" => __( 'Leaders', 'disciple_tools' ),
+                "name" => __( 'Leaders', 'disciple-tools-training' ),
                 'description' => '',
                 "type" => "connection",
                 "post_type" => "contacts",
@@ -460,8 +460,8 @@ class DT_Training_Base extends DT_Module_Base {
             ];
 
             $fields["peoplegroups"] = [
-                "name" => __( 'People Groups', 'disciple_tools' ),
-                'description' => _x( 'The people trainings represented by this training.', 'Optional Documentation', 'disciple_tools' ),
+                "name" => __( 'People Groups', 'disciple-tools-training' ),
+                'description' => _x( 'The people trainings represented by this training.', 'Optional Documentation', 'disciple-tools-training' ),
                 "type" => "connection",
                 'tile' => 'details',
                 "post_type" => "peoplegroups",
@@ -469,7 +469,7 @@ class DT_Training_Base extends DT_Module_Base {
                 "p2p_key" => "trainings_to_peoplegroups"
             ];
             $fields['groups'] = [
-                'name' => __( "Groups", 'disciple_tools' ),
+                'name' => __( "Groups", 'disciple-tools-training' ),
                 'type' => 'connection',
                 "post_type" => 'groups',
                 "p2p_direction" => "to",
@@ -481,15 +481,15 @@ class DT_Training_Base extends DT_Module_Base {
 
             // count fields
             $fields["member_count"] = [
-                'name' => __( 'Member Count', 'disciple_tools' ),
-                'description' => _x( 'The number of members in this training. It will automatically be updated when new members are added or removed in the member list. Change this number manually to included people who may not be in the system but are also members of the training.', 'Optional Documentation', 'disciple_tools' ),
+                'name' => __( 'Member Count', 'disciple-tools-training' ),
+                'description' => _x( 'The number of members in this training. It will automatically be updated when new members are added or removed in the member list. Change this number manually to included people who may not be in the system but are also members of the training.', 'Optional Documentation', 'disciple-tools-training' ),
                 'type' => 'number',
                 'default' => '',
                 'tile' => 'relationships',
             ];
             $fields["leader_count"] = [
-                'name' => __( 'Leader Count', 'disciple_tools' ),
-                'description' => _x( 'The number of members in this training. It will automatically be updated when new members are added or removed in the member list. Change this number manually to included people who may not be in the system but are also members of the training.', 'Optional Documentation', 'disciple_tools' ),
+                'name' => __( 'Leader Count', 'disciple-tools-training' ),
+                'description' => _x( 'The number of members in this training. It will automatically be updated when new members are added or removed in the member list. Change this number manually to included people who may not be in the system but are also members of the training.', 'Optional Documentation', 'disciple-tools-training' ),
                 'type' => 'number',
                 'default' => '',
                 'tile' => 'relationships',
@@ -500,8 +500,8 @@ class DT_Training_Base extends DT_Module_Base {
 
         if ( $post_type === 'contacts' ){
             $fields['training_leader'] = [
-                'name' => __( "Training as Leader", 'disciple_tools' ),
-                'description' => _x( 'Leader of a training', 'Optional Documentation', 'disciple_tools' ),
+                'name' => __( "Training as Leader", 'disciple-tools-training' ),
+                'description' => _x( 'Leader of a training', 'Optional Documentation', 'disciple-tools-training' ),
                 'type' => 'connection',
                 "post_type" => $this->post_type,
                 "p2p_direction" => "to",
@@ -511,8 +511,8 @@ class DT_Training_Base extends DT_Module_Base {
                 'create-icon' => get_template_directory_uri() . "/dt-assets/images/add-group.svg",
             ];
             $fields['training_participant'] = [
-                'name' => __( "Training as Participant", 'disciple_tools' ),
-                'description' => _x( 'Participant in a training.', 'Optional Documentation', 'disciple_tools' ),
+                'name' => __( "Training as Participant", 'disciple-tools-training' ),
+                'description' => _x( 'Participant in a training.', 'Optional Documentation', 'disciple-tools-training' ),
                 'type' => 'connection',
                 "post_type" => $this->post_type,
                 "p2p_direction" => "to",
@@ -524,7 +524,7 @@ class DT_Training_Base extends DT_Module_Base {
         }
         if ( $post_type === 'groups' ){
             $fields[$this->post_type] = [
-                'name' => __( "Trainings", 'disciple_tools' ),
+                'name' => __( "Trainings", 'disciple-tools-training' ),
                 'type' => 'connection',
                 "post_type" => $this->post_type,
                 "p2p_direction" => "to",
@@ -539,9 +539,9 @@ class DT_Training_Base extends DT_Module_Base {
 
     public function dt_details_additional_tiles( $tiles, $post_type = "" ){
         if ( $post_type === "trainings" ){
-            $tiles["relationships"] = [ "label" => __( "Member List", 'disciple_tools' ) ];
-            $tiles["meeting_times"] = [ "label" => __( "Meeting Times", 'disciple_tools' ) ];
-            $tiles["other"] = [ "label" => __( "Other", 'disciple_tools' ) ];
+            $tiles["relationships"] = [ "label" => __( "Member List", 'disciple-tools-training' ) ];
+            $tiles["meeting_times"] = [ "label" => __( "Meeting Times", 'disciple-tools-training' ) ];
+            $tiles["other"] = [ "label" => __( "Other", 'disciple-tools-training' ) ];
         }
         return $tiles;
     }
@@ -572,7 +572,7 @@ class DT_Training_Base extends DT_Module_Base {
                             <div class="typeahead__field">
                                     <span class="typeahead__query">
                                         <input class="js-typeahead-assigned_to input-height"
-                                               name="assigned_to[query]" placeholder="<?php echo esc_html_x( "Search Users", 'input field placeholder', 'disciple_tools' ) ?>"
+                                               name="assigned_to[query]" placeholder="<?php echo esc_html_x( "Search Users", 'input field placeholder', 'disciple-tools-training' ) ?>"
                                                autocomplete="off">
                                     </span>
                                 <span class="typeahead__button">
@@ -629,7 +629,7 @@ class DT_Training_Base extends DT_Module_Base {
                             <span class="typeahead__query">
                                 <input class="js-typeahead-tags input-height"
                                        name="tags[query]"
-                                       placeholder="<?php echo esc_html( sprintf( _x( "Search %s", "Search 'something'", 'disciple_tools' ), $fields["tags"]['name'] ) )?>"
+                                       placeholder="<?php echo esc_html( sprintf( _x( "Search %s", "Search 'something'", 'disciple-tools-training' ), $fields["tags"]['name'] ) )?>"
                                        autocomplete="off">
                             </span>
                             <span class="typeahead__button">
@@ -650,26 +650,26 @@ class DT_Training_Base extends DT_Module_Base {
             ?>
             <div class="section-subheader members-header" style="padding-top: 10px;">
                 <div style="padding-bottom: 5px; margin-right:10px; display: inline-block">
-                    <?php esc_html_e( "Member List", 'disciple_tools' ) ?>
+                    <?php esc_html_e( "Member List", 'disciple-tools-training' ) ?>
                 </div>
                 <button type="button" class="create-new-record" data-connection-key="members" style="height: 36px;">
-                    <?php echo esc_html__( 'Create', 'disciple_tools' )?>
+                    <?php echo esc_html__( 'Create', 'disciple-tools-training' )?>
                     <img style="height: 14px; width: 14px" src="<?php echo esc_html( get_template_directory_uri() . '/dt-assets/images/small-add.svg' ) ?>"/>
                 </button>
                 <button type="button"
                         class="add-new-member">
-                    <?php echo esc_html__( 'Select', 'disciple_tools' )?>
+                    <?php echo esc_html__( 'Select', 'disciple-tools-training' )?>
                     <img style="height: 16px; width: 16px" src="<?php echo esc_html( get_template_directory_uri() . '/dt-assets/images/add-group.svg' ) ?>"/>
                 </button>
             </div>
             <div class="members-section" style="margin-bottom:10px">
-                <div id="empty-members-list-message"><?php esc_html_e( "To add new members, click on 'Create' or 'Select'.", 'disciple_tools' ) ?></div>
+                <div id="empty-members-list-message"><?php esc_html_e( "To add new members, click on 'Create' or 'Select'.", 'disciple-tools-training' ) ?></div>
                 <div class="member-list">
                 </div>
             </div>
             <div class="reveal" id="add-new-group-member-modal" data-reveal style="min-height:500px">
-                <h3><?php echo esc_html_x( "Add members from existing contacts", 'Add members modal', 'disciple_tools' )?></h3>
-                <p><?php echo esc_html_x( "In the 'Member List' field, type the name of an existing contact to add them to this training.", 'Add members modal', 'disciple_tools' )?></p>
+                <h3><?php echo esc_html_x( "Add members from existing contacts", 'Add members modal', 'disciple-tools-training' )?></h3>
+                <p><?php echo esc_html_x( "In the 'Member List' field, type the name of an existing contact to add them to this training.", 'Add members modal', 'disciple-tools-training' )?></p>
 
                 <?php render_field_for_display( "members", $fields, $post, false ); ?>
 
@@ -678,7 +678,7 @@ class DT_Training_Base extends DT_Module_Base {
                         <hr>
                         <span style="float:right; bottom: 0;">
                     <button class="button" data-close aria-label="Close reveal" type="button">
-                        <?php echo esc_html__( 'Close', 'disciple_tools' )?>
+                        <?php echo esc_html__( 'Close', 'disciple-tools-training' )?>
                     </button>
                 </span>
                     </div>
@@ -876,13 +876,13 @@ class DT_Training_Base extends DT_Module_Base {
             $fields = $post_type_settings;
             if ( isset( $fields['meeting_times'] ) ) {
                 if ( $activity->meta_value === "value_deleted" ){
-                    $message = sprintf( __( 'Removed %1$s: %2$s', 'disciple_tools' ), $fields['meeting_times']["name"], dt_format_date( $activity->old_value, 'long' ) );
+                    $message = sprintf( __( 'Removed %1$s: %2$s', 'disciple-tools-training' ), $fields['meeting_times']["name"], dt_format_date( $activity->old_value, 'long' ) );
                 }
                 else if ( empty( $activity->old_value ) ) {
-                    $message = sprintf( __( 'Added %1$s: %2$s', 'disciple_tools' ), $fields['meeting_times']["name"], dt_format_date( $activity->meta_value, 'long' ) );
+                    $message = sprintf( __( 'Added %1$s: %2$s', 'disciple-tools-training' ), $fields['meeting_times']["name"], dt_format_date( $activity->meta_value, 'long' ) );
                 }
                 else {
-                    $message = sprintf( __( 'Updated %1$s: %2$s to %3$s', 'disciple_tools' ), $fields['meeting_times']["name"], dt_format_date( $activity->old_value, 'long' ), dt_format_date( $activity->meta_value, 'long' ) );
+                    $message = sprintf( __( 'Updated %1$s: %2$s to %3$s', 'disciple-tools-training' ), $fields['meeting_times']["name"], dt_format_date( $activity->old_value, 'long' ), dt_format_date( $activity->meta_value, 'long' ) );
                 }
             }
         }
@@ -954,7 +954,7 @@ class DT_Training_Base extends DT_Module_Base {
 
             $filters["tabs"][] = [
                 "key" => "assigned_to_me",
-                "label" => _x( "Assigned to me", 'List Filters', 'disciple_tools' ),
+                "label" => _x( "Assigned to me", 'List Filters', 'disciple-tools-training' ),
                 "count" => $total_my,
                 "order" => 20
             ];
@@ -962,7 +962,7 @@ class DT_Training_Base extends DT_Module_Base {
             $filters["filters"][] = [
                 'ID' => 'my_all',
                 'tab' => 'assigned_to_me',
-                'name' => _x( "All", 'List Filters', 'disciple_tools' ),
+                'name' => _x( "All", 'List Filters', 'disciple-tools-training' ),
                 'query' => [
                     'assigned_to' => [ 'me' ],
                     'sort' => '-post_date'
@@ -1019,7 +1019,7 @@ class DT_Training_Base extends DT_Module_Base {
             }
             $filters["tabs"][] = [
                 "key" => "all",
-                "label" => _x( "All", 'List Filters', 'disciple_tools' ),
+                "label" => _x( "All", 'List Filters', 'disciple-tools-training' ),
                 "count" => $total_all,
                 "order" => 10
             ];
@@ -1027,7 +1027,7 @@ class DT_Training_Base extends DT_Module_Base {
             $filters["filters"][] = [
                 'ID' => 'all',
                 'tab' => 'all',
-                'name' => _x( "All", 'List Filters', 'disciple_tools' ),
+                'name' => _x( "All", 'List Filters', 'disciple-tools-training' ),
                 'query' => [
                     'sort' => '-post_date'
                 ],

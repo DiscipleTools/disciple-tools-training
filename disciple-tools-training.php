@@ -3,6 +3,8 @@
  * Plugin Name: Disciple Tools - Training
  * Plugin URI: https://github.com/DiscipleTools/disciple-tools-training
  * Description: Disciple Tools Training Extension adds recording of trainings and cross reference them with contacts, groups, and locations.
+ * Text Domain: disciple-tools-training
+ * Domain Path: /languages
  * Version:  2.0
  * Author URI: https://github.com/DiscipleTools
  * GitHub Plugin URI: https://github.com/DiscipleTools/disciple-tools-training
@@ -71,7 +73,7 @@ function dt_training() {
      */
     return DT_Training::get_instance();
 }
-add_action( 'after_setup_theme', 'dt_training', 50 );
+add_action( 'after_setup_theme', 'disciple-tools-training', 20 );
 
 /**
  * Singleton class for setting up the plugin.
@@ -159,12 +161,6 @@ class DT_Training {
         $this->dir_path     = trailingslashit( plugin_dir_path( __FILE__ ) );
         $this->dir_uri      = trailingslashit( plugin_dir_url( __FILE__ ) );
 
-        // Plugin directory paths.
-        $this->includes_path      = trailingslashit( $this->dir_path . 'includes' );
-
-        // Plugin directory URIs.
-        $this->img_uri      = trailingslashit( $this->dir_uri . 'img' );
-
         // Admin and settings variables
         $this->token             = 'dt_training';
         $this->version             = '2.0';
@@ -195,7 +191,7 @@ class DT_Training {
         }
 
         // Internationalize the text strings used.
-        add_action( 'after_setup_theme', array( $this, 'i18n' ), 2 );
+        add_action( 'after_setup_theme', array( $this, 'i18n' ), 51 );
     }
 
     /**
@@ -234,7 +230,19 @@ class DT_Training {
      * @return void
      */
     public function i18n() {
-        load_plugin_textdomain( 'dt_training', false, trailingslashit( dirname( plugin_basename( __FILE__ ) ) ). 'languages' );
+        $domain = 'disciple-tools-training';
+        $locale = apply_filters(
+            'plugin_locale',
+            ( is_admin() && function_exists( 'get_user_locale' ) ) ? get_user_locale() : get_locale(),
+            $domain
+        );
+
+        $mo_file = $domain . '-' . $locale . '.mo';
+        $path = realpath( dirname( __FILE__ ) . '/languages' );
+
+        if ($path && file_exists( $path )) {
+            load_textdomain( $domain, $path . '/' . $mo_file );
+        }
     }
 
     /**
@@ -245,7 +253,7 @@ class DT_Training {
      * @return string
      */
     public function __toString() {
-        return 'dt_training';
+        return 'disciple-tools-training';
     }
 
     /**
@@ -256,7 +264,7 @@ class DT_Training {
      * @return void
      */
     public function __clone() {
-        _doing_it_wrong( __FUNCTION__, esc_html__( 'Whoah, partner!', 'dt_training' ), '0.1' );
+        _doing_it_wrong( __FUNCTION__, esc_html( 'Whoah, partner!' ), '0.1' );
     }
 
     /**
@@ -267,7 +275,7 @@ class DT_Training {
      * @return void
      */
     public function __wakeup() {
-        _doing_it_wrong( __FUNCTION__, esc_html__( 'Whoah, partner!', 'dt_training' ), '0.1' );
+        _doing_it_wrong( __FUNCTION__, esc_html( 'Whoah, partner!' ), '0.1' );
     }
 
     /**
@@ -279,7 +287,7 @@ class DT_Training {
      */
     public function __call( $method = '', $args = array() ) {
         // @codingStandardsIgnoreLine
-        _doing_it_wrong( "dt_training::{$method}", esc_html__( 'Method does not exist.', 'dt_training' ), '0.1' );
+        _doing_it_wrong( "dt_training::{$method}", esc_html( 'Method does not exist.'), '0.1' );
         unset( $method, $args );
         return null;
     }
