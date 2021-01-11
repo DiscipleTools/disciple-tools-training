@@ -294,9 +294,9 @@ function dt_training_hook_admin_notice() {
     global $dt_training_required_dt_theme_version;
     $wp_theme = wp_get_theme();
     $current_version = $wp_theme->version;
-    $message = __( "'Disciple Tools - Training' plugin requires 'Disciple Tools' theme to work. Please activate 'Disciple Tools' theme or make sure it is latest version.", "dt_training" );
+    $message = "'Disciple Tools - Training' plugin requires 'Disciple Tools' theme to work. Please activate 'Disciple Tools' theme or make sure it is latest version.";
     if ( $wp_theme->get_template() === "disciple-tools-theme" ){
-        $message .= ' ' . sprintf( esc_html__( 'Current Disciple Tools version: %1$s, required version: %2$s', 'dt_training' ), esc_html( $current_version ), esc_html( $dt_training_required_dt_theme_version ) );
+        $message .= ' ' . sprintf( esc_html( 'Current Disciple Tools version: %1$s, required version: %2$s' ), esc_html( $current_version ), esc_html( $dt_training_required_dt_theme_version ) );
     }
     // Check if it's been dismissed...
     if ( ! get_option( 'dismissed-dt-events', false ) ) { ?>
