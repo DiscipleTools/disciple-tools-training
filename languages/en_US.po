@@ -3,13 +3,9 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.4.2\n"
-"Project-Id-Version: Disciple Tools - Plugins\n"
+"X-Generator: POEditor.com\n"
+"Project-Id-Version: Disciple Tools Plugins\n"
 "Language: en\n"
-"POT-Creation-Date: \n"
-"PO-Revision-Date: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
 
 #: admin/menu-and-tabs.php:56 admin/menu-and-tabs.php:57
 msgid "Extensions (DT)"
@@ -421,18 +417,22 @@ msgid "Network Dashboard Site Profile"
 msgstr "Network Dashboard Site Profile"
 
 #. Plugin Name of the plugin/theme
+#: 
 msgid "Disciple Tools - Network Dashboard"
 msgstr "Disciple Tools - Network Dashboard"
 
 #. Plugin URI of the plugin/theme
+#: 
 msgid "https://github.com/DiscipleTools/disciple-tools-network-dashboard"
 msgstr "https://github.com/DiscipleTools/disciple-tools-network-dashboard"
 
 #. Description of the plugin/theme
+#: 
 msgid "Connect this Disciple Tools site to a larger network of sites. Adds security sensitive totals, mapping, activity logging."
 msgstr "Connect this Disciple Tools site to a larger network of sites. Adds security sensitive totals, mapping, activity logging."
 
 #. Author URI of the plugin/theme
+#: 
 msgid "https://github.com/DiscipleTools"
 msgstr "https://github.com/DiscipleTools"
 
@@ -885,13 +885,17 @@ msgid "Clear"
 msgstr "Clear"
 
 #. Plugin Name of the plugin/theme
+#: 
 msgid "Disciple Tools - Training"
 msgstr "Disciple Tools - Training"
 
 #. Plugin URI of the plugin/theme
+#: 
 msgid "https://github.com/DiscipleTools/disciple-tools-training"
 msgstr "https://github.com/DiscipleTools/disciple-tools-training"
 
 #. Description of the plugin/theme
+#: 
 msgid "Disciple Tools Training Extension adds recording of trainings and cross reference them with contacts, groups, and locations."
 msgstr "Disciple Tools Training Extension adds recording of trainings and cross reference them with contacts, groups, and locations."
+
