@@ -7,11 +7,11 @@ msgstr ""
 "Project-Id-Version: Disciple Tools Plugins\n"
 "Language: fr\n"
 
-#: disciple-tools-streams.php:261 disciple-tools-streams.php:272
+#: disciple-tools-dashboard.php:253 disciple-tools-dashboard.php:264
 msgid "Whoah, partner!"
 msgstr "Whoah, partenaire!"
 
-#: disciple-tools-streams.php:284
+#: disciple-tools-dashboard.php:276
 msgid "Method does not exist."
 msgstr "La méthode n'existe pas."
 
@@ -96,7 +96,7 @@ msgstr "Suivre"
 msgid "Un-Follow"
 msgstr "Annuler le suivi"
 
-#: post-type/module-base.php:124
+#: includes/template-dashboard.php:164
 msgid "Tasks"
 msgstr "Tâches"
 
@@ -469,7 +469,7 @@ msgstr "Clair"
 msgid "Disciple Tools - Training"
 msgstr "Outils de disciple - Formation"
 
-#: admin/menu-and-tabs.php:56 admin/menu-and-tabs.php:57
+#: includes/admin/admin-menu-and-tabs.php:62
 msgid "Extensions (DT)"
 msgstr "Extensions (DT)"
 
@@ -478,7 +478,7 @@ msgstr "Extensions (DT)"
 msgid "Network Dashboard"
 msgstr "Tableau de bord réseau"
 
-#: admin/menu-and-tabs.php:83
+#: includes/admin/admin-menu-and-tabs.php:79
 msgid "You do not have sufficient permissions to access this page."
 msgstr "Vous ne disposez pas des autorisations suffisantes pour accéder à cette page."
 
@@ -668,7 +668,7 @@ msgstr "Pays"
 msgid "State"
 msgstr "Etat"
 
-#: metrics/base.php:276
+#: includes/template-dashboard.php:23
 msgid "Active Contacts"
 msgstr "Contacts actifs"
 
@@ -1213,4 +1213,127 @@ msgstr "Total des groupes"
 #: post-type/module-base.php:348
 msgid "Trainings Total"
 msgstr "Total des formations"
+
+#: includes/admin/admin-menu-and-tabs.php:63
+msgid "Dashboard Plugin"
+msgstr "Plugin de tableau de bord"
+
+#: includes/admin/admin-menu-and-tabs.php:84 includes/functions.php:84
+msgid "Dashboard"
+msgstr "Tableau de bord"
+
+#: includes/rest-api.php:80
+msgid "%s days since last update"
+msgstr "% s jours depuis la dernière mise à jour"
+
+#: includes/rest-api.php:416
+msgid "Accept"
+msgstr "J'accepte"
+
+#: includes/rest-api.php:417
+msgid "Decline"
+msgstr "Déclin"
+
+#: includes/rest-api.php:418
+msgid "# Contacts Assigned"
+msgstr "# Contacts attribués"
+
+#: includes/rest-api.php:419
+msgid "# First Meetings"
+msgstr "# Premières réunions"
+
+#: includes/rest-api.php:420
+msgid "# Faith milestones"
+msgstr "# Jalons de foi"
+
+#: includes/rest-api.php:421
+msgid "Hurray! You are caught up."
+msgstr "Hourra! Vous êtes rattrapé."
+
+#: includes/rest-api.php:422
+msgid "remove"
+msgstr "retirer"
+
+#: includes/rest-api.php:423
+msgid "mark as complete"
+msgstr "marquer comme terminé"
+
+#: includes/rest-api.php:424
+msgid "No task created"
+msgstr "Aucune tâche créée"
+
+#: includes/rest-api.php:425
+msgid "Reminder"
+msgstr "Rappel"
+
+#: includes/rest-api.php:426
+msgid "No note set"
+msgstr "Aucun jeu de notes"
+
+#: includes/template-dashboard.php:30
+msgid "Add a contact"
+msgstr "Ajouter un contact"
+
+#: includes/template-dashboard.php:33
+msgid "View Contacts List"
+msgstr "Afficher la liste des contacts"
+
+#: includes/template-dashboard.php:47
+msgid "Pending Contacts"
+msgstr "Contacts en attente"
+
+#: includes/template-dashboard.php:52 includes/template-dashboard.php:70
+msgid "View All"
+msgstr "Voir tout"
+
+#: includes/template-dashboard.php:65
+msgid "Update Needed"
+msgstr "Mise à jour nécessaire"
+
+#: includes/template-dashboard.php:79
+msgid "Contact Workload"
+msgstr "Charge de travail de contact"
+
+#: includes/template-dashboard.php:83
+msgid "Choose an option to let the dispatcher(s) know if you are ready for new contacts"
+msgstr "Choisissez une option pour informer le (s) répartiteur (s) si vous êtes prêt pour de nouveaux contacts"
+
+#: includes/template-dashboard.php:93
+msgid "Set travel or dates unavailable"
+msgstr "Définir le voyage ou les dates indisponibles"
+
+#: includes/template-dashboard.php:106
+msgid "Personal Benchmarks"
+msgstr "Benchmarks personnels"
+
+#: includes/template-dashboard.php:135
+msgid "Faith Milestone Totals"
+msgstr "Totaux des jalons de foi"
+
+#: includes/template-dashboard.php:138
+msgid "Milestones on your active contacts"
+msgstr "Jalons sur vos contacts actifs"
+
+#: includes/template-dashboard.php:149
+msgid "Seeker Path Progress"
+msgstr "Progression du chemin du chercheur"
+
+#: includes/template-dashboard.php:152
+msgid "No data to show yet. You have no active contacts"
+msgstr "Aucune donnée à afficher pour le moment. Vous n'avez aucun contact actif"
+
+#. Plugin Name of the plugin/theme
+#: 
+msgid "Disciple Tools - Dashboard"
+msgstr "Outils de disciple - Tableau de bord"
+
+#. Plugin URI of the plugin/theme
+#: 
+msgid "https://github.com/DiscipleTools/disciple-tools-dashboard"
+msgstr "https://github.com/DiscipleTools/disciple-tools-dashboard"
+
+#. Description of the plugin/theme
+#: 
+msgid "The multiplier dashboard upgrades the multipliers experience as soon as they log into the system giving them a landing page with stats."
+msgstr "Le tableau de bord du multiplicateur améliore l'expérience des multiplicateurs dès qu'ils se connectent au système en leur donnant une page de destination avec des statistiques"
 
