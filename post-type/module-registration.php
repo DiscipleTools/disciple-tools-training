@@ -58,9 +58,9 @@ class DT_Training_App_Registration_Module extends DT_Module_Base {
                                 /* copy link */
                                 ?><a class="button hollow small" href="<?php echo esc_url( site_url() ) . '/' . esc_attr( $type['root'] ) . '/' . esc_attr( $type['type'] ) . '/'. esc_attr( $record[$type['meta_key']] ) ?>"><?php echo esc_html__( 'copy link', 'disciple-tools-training' ) ?></a> <?php
                                 /* edit form */
-                                ?><a class="button hollow small" data-open="modal-large"><?php echo esc_html__( 'edit form', 'disciple-tools-training' ) ?></a> <?php
+?><a class="button hollow small" data-open="modal-large"><?php echo esc_html__( 'edit form', 'disciple-tools-training' ) ?></a> <?php
                                 /* show report */
-                                ?><a class="button hollow small" data-open="modal-small" ><?php echo esc_html__( 'report', 'disciple-tools-training' ) ?></a><?php
+?><a class="button hollow small" data-open="modal-small" ><?php echo esc_html__( 'report', 'disciple-tools-training' ) ?></a><?php
                             }
                             /* create link*/
                             else {
