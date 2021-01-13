@@ -4,4 +4,4 @@
 
 This plugin adds simple training events tracking inside Disciple Tools. It has features to support sharing, tasks, meeting times, connnections to participants and leaders, and mapped locations.
 
-![screenshot](screenshot.png)
+![screenshot](https://raw.githubusercontent.com/DiscipleTools/disciple-tools-dashboard/master/screenshot.png)
