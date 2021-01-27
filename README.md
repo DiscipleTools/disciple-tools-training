@@ -48,8 +48,13 @@ system for git. For a more details on contribution see the
 
 ## Screenshots
 
+list view
+![list](https://raw.githubusercontent.com/DiscipleTools/disciple-tools-training/master/documentation/list-screen.png)
 
+details view
+![details](https://raw.githubusercontent.com/DiscipleTools/disciple-tools-training/master/documentation/details-screen.png)
 
+## Video Walk-Through
 [![Alt text](https://img.youtube.com/vi/d3lzo8mHxyQ/maxresdefault.jpg)](https://www.youtube.com/watch?v=d3lzo8mHxyQ)
 [View Video](https://www.youtube.com/watch?v=d3lzo8mHxyQ)
 
