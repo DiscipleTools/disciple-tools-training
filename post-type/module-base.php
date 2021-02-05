@@ -90,8 +90,11 @@ class DT_Training_Base extends DT_Module_Base {
                 $expected_roles[$role]["permissions"]['access_' . $this->post_type] = true;
                 $expected_roles[$role]["permissions"]['create_' . $this->post_type] = true;
             }
-            if ( in_array( $role, [ 'administrator', 'dispatcher', 'dt_admin' ] ) ) {
+            if ( in_array( $role, [ 'administrator', 'dispatcher', 'dt_admin' ], true ) ) {
                 $expected_roles[$role]["permissions"]['view_any_' . $this->post_type] = true;
+            }
+            if ( in_array( $role, [ 'administrator' ], true ) ) {
+                $expected_roles[$role]["permissions"][ 'dt_all_admin_' . $this->post_type] = true;
             }
         }
 
