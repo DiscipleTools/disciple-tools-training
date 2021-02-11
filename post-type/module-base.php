@@ -116,8 +116,8 @@ class DT_Training_Base extends DT_Module_Base {
                     'show' => false,
                 ],
                 'title'          => [
-                    'from' => __( 'Members', 'disciple-tools-training' ),
-                    'to'   => __( 'Contacts', 'disciple-tools-training' ),
+                    'from' => 'Members',
+                    'to'   => 'Contacts'
                 ]
             ]
         );
@@ -133,8 +133,8 @@ class DT_Training_Base extends DT_Module_Base {
                     'show' => false,
                 ],
                 'title'          => [
-                    'from' => __( 'Trainings', 'disciple-tools-training' ),
-                    'to'   => __( 'Groups', 'disciple-tools-training' ),
+                    'from' => 'Trainings',
+                    'to'   => 'Groups'
                 ]
             ]
         );
@@ -150,8 +150,8 @@ class DT_Training_Base extends DT_Module_Base {
                     'show' => false,
                 ],
                 'title'          => [
-                    'from' => __( 'Trainings', 'disciple-tools-training' ),
-                    'to'   => __( 'Leaders', 'disciple-tools-training' ),
+                    'from' => 'Trainings',
+                    'to'   => 'Leaders',
                 ]
             ]
         );
@@ -167,8 +167,8 @@ class DT_Training_Base extends DT_Module_Base {
                     'show' => false,
                 ],
                 'title'          => [
-                    'from' => __( 'Trainings', 'disciple-tools-training' ),
-                    'to'   => __( 'Coaches', 'disciple-tools-training' ),
+                    'from' => 'Trainings',
+                    'to'   => 'Coaches',
                 ]
             ]
         );
@@ -181,8 +181,8 @@ class DT_Training_Base extends DT_Module_Base {
                 'from'         => 'trainings',
                 'to'           => 'trainings',
                 'title'        => [
-                    'from' => __( 'Planted by', 'disciple-tools-training' ),
-                    'to'   => __( 'Planting', 'disciple-tools-training' ),
+                    'from' => 'Planted by',
+                    'to'   => 'Planting',
                 ],
             ]
         );
@@ -203,8 +203,8 @@ class DT_Training_Base extends DT_Module_Base {
                 'from'        => 'trainings',
                 'to'          => 'peoplegroups',
                 'title'       => [
-                    'from' => __( 'People Groups', 'disciple-tools-training' ),
-                    'to'   => __( 'Trainings', 'disciple-tools-training' ),
+                    'from' => 'People Groups',
+                    'to'   => 'Trainings',
                 ]
             ]
         );
