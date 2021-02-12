@@ -19,6 +19,10 @@ msgstr "ไม่มีเมธอด"
 msgid "Training Maps"
 msgstr "แผนที่การฝึกอบรม"
 
+#: metrics/mapbox-maps.php:31
+#: metrics/mapbox-personal-maps.php:31
+#: post-type/module-base.php:54
+#: post-type/module-base.php:528
 #: post-type/module-base.php:354
 msgid "Trainings"
 msgstr "การฝึกอบรม"
@@ -27,22 +31,26 @@ msgstr "การฝึกอบรม"
 msgid "Trainings Maps"
 msgstr "แผนที่การฝึกอบรม"
 
-#: network/customize-site-linking.php:10 post-type/module-base.php:54
+#: post-type/module-base.php:54
 msgid "Training"
 msgstr "การฝึกอบรม"
 
+#: post-type/module-base.php:61
 #: post-type/module-base.php:59
 msgid "Multiplier"
 msgstr "ตัวคูณ"
 
+#: post-type/module-base.php:67
 #: post-type/module-base.php:65
 msgid "Dispatcher"
 msgstr "Dispatcher"
 
+#: post-type/module-base.php:74
 #: post-type/module-base.php:72
 msgid "Disciple.Tools Admin"
 msgstr "ผู้ดูแลระบบ Disciple.Tools"
 
+#: post-type/module-base.php:81
 #: post-type/module-base.php:79
 msgid "Administrator"
 msgstr "ผู้ดูแลระบบ"
@@ -52,14 +60,34 @@ msgid "Members"
 msgstr "สมาชิก"
 
 #: post-type/module-base.php:433
+#: metrics/base.php:222
+#: metrics/base.php:249
+#: metrics/network-maps-area.php:72
+#: metrics/network-maps-area.php:115
+#: metrics/network-statistics-contacts.php:12
+#: metrics/network-statistics-contacts.php:13
+#: metrics/network-statistics-contacts.php:14
+#: metrics/network-statistics-contacts.php:51
 msgid "Contacts"
 msgstr "ผู้ติดต่อ"
 
-#: post-type/module-base.php:294 post-type/module-base.php:450
+#: post-type/module-base.php:475
+#: post-type/module-base.php:294
+#: post-type/module-base.php:450
+#: metrics/base.php:223
+#: metrics/base.php:252
+#: metrics/network-maps-area.php:81
+#: metrics/network-maps-area.php:121
+#: metrics/network-statistics-groups.php:12
+#: metrics/network-statistics-groups.php:13
+#: metrics/network-statistics-groups.php:14
+#: metrics/network-statistics-groups.php:50
 msgid "Groups"
 msgstr "กลุ่ม"
 
-#: post-type/module-base.php:259 post-type/module-base.php:467
+#: post-type/module-base.php:457
+#: post-type/module-base.php:259
+#: post-type/module-base.php:467
 msgid "Leaders"
 msgstr "ผู้นำ"
 
@@ -75,288 +103,315 @@ msgstr "ปลูกโดย"
 msgid "Planting"
 msgstr "การปลูก"
 
-#: post-type/module-base.php:203 post-type/module-base.php:519
+#: post-type/module-base.php:466
+#: post-type/module-base.php:203
+#: post-type/module-base.php:519
 msgid "People Groups"
 msgstr "กลุ่มคน"
 
+#: post-type/module-base.php:217
 #: post-type/module-base.php:102
 msgid "Tags"
 msgstr "แท็ก"
 
-#: post-type/module-base.php:215
+#: post-type/module-base.php:218
 msgctxt "Optional Documentation"
 msgid "A useful way to training related items and can help training contacts associated with noteworthy characteristics. e.g. business owner, sports lover. The contacts can also be filtered using these tags."
 msgstr "วิธีที่เป็นประโยชน์ในการฝึกอบรมรายการที่เกี่ยวข้องและสามารถช่วยฝึกอบรมผู้ติดต่อที่เกี่ยวข้องกับลักษณะสำคัญ เช่น. เจ้าของธุรกิจคนรักกีฬา นอกจากนี้ยังสามารถกรองผู้ติดต่อโดยใช้แท็กเหล่านี้"
 
+#: post-type/module-base.php:225
 #: post-type/module-base.php:111
 msgid "Follow"
 msgstr "ติดตาม"
 
+#: post-type/module-base.php:232
 #: post-type/module-base.php:118
 msgid "Un-Follow"
 msgstr "ยกเลิกการติดตาม"
 
 #: includes/template-dashboard.php:164
+#: post-type/module-base.php:238
+#: post-type/module-base.php:124
 msgid "Tasks"
 msgstr "งาน"
 
-#: post-type/module-base.php:249
+#: post-type/module-base.php:252
 msgctxt "Training Status label"
 msgid "New"
 msgstr "ใหม่"
 
-#: post-type/module-base.php:250
+#: post-type/module-base.php:253
 msgctxt "Training Status field description"
 msgid "New training added to the system"
 msgstr "เพิ่มการฝึกอบรมใหม่ในระบบ"
 
-#: post-type/module-base.php:254
+#: post-type/module-base.php:257
 msgctxt "Training Status label"
 msgid "Proposed"
 msgstr "เสนอ"
 
-#: post-type/module-base.php:255
+#: post-type/module-base.php:258
 msgctxt "Training Status field description"
 msgid "This training has been proposed and is in initial conversations"
 msgstr "การฝึกอบรมนี้ได้รับการเสนอและอยู่ในการสนทนาเบื้องต้น"
 
-#: post-type/module-base.php:259
+#: post-type/module-base.php:262
 msgctxt "Training Status label"
 msgid "Scheduled"
 msgstr "กำหนดเวลา"
 
-#: post-type/module-base.php:260
+#: post-type/module-base.php:263
 msgctxt "Training Status field description"
 msgid "This training is confirmed, on the calendar."
 msgstr "การฝึกอบรมนี้ได้รับการยืนยันบนปฏิทิน"
 
-#: post-type/module-base.php:264
+#: post-type/module-base.php:267
 msgctxt "Training Status label"
 msgid "In Progress"
 msgstr "กำลังดำเนินการ"
 
-#: post-type/module-base.php:265
+#: post-type/module-base.php:268
 msgctxt "Training Status field description"
 msgid "This training is confirmed, on the calendar, or currently active."
 msgstr "การฝึกอบรมนี้ได้รับการยืนยันบนปฏิทินหรือกำลังดำเนินการอยู่"
 
-#: post-type/module-base.php:269
+#: post-type/module-base.php:272
 msgctxt "Training Status label"
 msgid "Complete"
 msgstr "เสร็จสมบูรณ์"
 
-#: post-type/module-base.php:270
+#: post-type/module-base.php:273
 msgctxt "Training Status field description"
 msgid "This training has successfully completed"
 msgstr "การฝึกอบรมนี้สำเร็จแล้ว"
 
-#: post-type/module-base.php:274
+#: post-type/module-base.php:277
 msgctxt "Training Status label"
 msgid "Paused"
 msgstr "หยุดชั่วคราว"
 
-#: post-type/module-base.php:275
+#: post-type/module-base.php:278
 msgctxt "Training Status field description"
 msgid "This contact is currently on hold. It has potential of getting scheduled in the future."
 msgstr "ผู้ติดต่อนี้ถูกระงับอยู่ในขณะนี้ มีศักยภาพในการกำหนดเวลาในอนาคต"
 
-#: post-type/module-base.php:279
+#: post-type/module-base.php:282
 msgctxt "Training Status label"
 msgid "Closed"
 msgstr "ปิด"
 
-#: post-type/module-base.php:280
+#: post-type/module-base.php:283
 msgctxt "Training Status field description"
 msgid "This training is no longer going to happen."
 msgstr "การฝึกอบรมนี้จะไม่เกิดขึ้นอีกต่อไป"
 
+#: post-type/module-base.php:290
 #: post-type/module-base.php:176
 msgid "Assigned To"
 msgstr "ได้รับมอบหมายให้"
 
-#: post-type/module-base.php:288
+#: post-type/module-base.php:291
 msgid "Select the main person who is responsible for reporting on this training."
 msgstr "เลือกบุคคลหลักที่รับผิดชอบในการรายงานเกี่ยวกับการฝึกอบรมนี้"
 
-#: post-type/module-base.php:185
+#: post-type/module-base.php:299
 msgid "Training Coach / Church Planter"
 msgstr "โค้ชฝึกอบรม / ชาวไร่คริสตจักร"
 
-#: post-type/module-base.php:297
+#: post-type/module-base.php:300
 msgctxt "Optional Documentation"
 msgid "The person who planted and/or is coaching this training. Only one person can be assigned to a training while multiple people can be coaches / church planters of this training."
 msgstr "บุคคลที่ปลูกและ / หรือเป็นผู้ฝึกสอนการฝึกอบรมนี้ สามารถมอบหมายให้เข้าร่วมการฝึกอบรมได้เพียงคนเดียวในขณะที่หลายคนสามารถเป็นโค้ช / ผู้ปลูกในคริสตจักรของการฝึกอบรมนี้ได้"
 
+#: post-type/module-base.php:310
 #: post-type/module-base.php:196
 msgid "Requires Update"
 msgstr "ต้องมีการอัปเดต"
 
-#: post-type/module-base.php:313
+#: post-type/module-base.php:316
 msgid "Video Link"
 msgstr "ลิงค์วิดีโอ"
 
-#: post-type/module-base.php:314
+#: post-type/module-base.php:317
 msgctxt "Optional Documentation"
 msgid "Link to video chat service"
 msgstr "ลิงก์ไปยังบริการวิดีโอแชท"
 
-#: post-type/module-base.php:321
+#: post-type/module-base.php:324
 msgid "Notes"
 msgstr "หมายเหตุ"
 
-#: post-type/module-base.php:322
+#: post-type/module-base.php:325
 msgctxt "Optional Documentation"
 msgid "Notes on when the trainings will happen"
 msgstr "หมายเหตุเกี่ยวกับเวลาที่การฝึกอบรมจะเกิดขึ้น"
 
-#: post-type/module-base.php:331 post-type/module-base.php:543
+#: post-type/module-base.php:334
+#: post-type/module-base.php:544
 msgid "Meeting Times"
 msgstr "เวลาประชุม"
 
-#: post-type/module-base.php:219 post-type/module-base.php:228
+#: post-type/module-base.php:382
+#: post-type/module-base.php:391
+#: post-type/module-base.php:219
+#: post-type/module-base.php:228
 msgid "Locations"
 msgstr "สถานที่"
 
-#: post-type/module-base.php:220 post-type/module-base.php:229
+#: post-type/module-base.php:383
+#: post-type/module-base.php:392
+#: post-type/module-base.php:220
+#: post-type/module-base.php:229
 msgctxt "Optional Documentation"
 msgid "The general location where this contact is located."
 msgstr "ตำแหน่งทั่วไปที่ผู้ติดต่อนี้ตั้งอยู่"
 
+#: post-type/module-base.php:399
 #: post-type/module-base.php:236
 msgid "Address"
 msgstr "ที่อยู่"
 
-#: post-type/module-base.php:413
+#: post-type/module-base.php:416
 msgid "Parent Training"
 msgstr "การฝึกอบรมผู้ปกครอง"
 
-#: post-type/module-base.php:414
+#: post-type/module-base.php:417
 msgctxt "Optional Documentation"
 msgid "A training that launched this training."
 msgstr "การฝึกอบรมที่เปิดตัวการฝึกอบรมนี้"
 
-#: post-type/module-base.php:424
+#: post-type/module-base.php:427
 msgid "Peer Training"
 msgstr "การฝึกอบรมเพื่อน"
 
-#: post-type/module-base.php:425
+#: post-type/module-base.php:428
 msgctxt "Optional Documentation"
 msgid "A related training that isn't a parent/child in relationship. It might indicate trainings that collaborate, are about to merge, recently split, etc."
 msgstr "การฝึกอบรมที่เกี่ยวข้องซึ่งไม่ใช่ความสัมพันธ์ระหว่างพ่อแม่กับลูก อาจบ่งบอกถึงการฝึกอบรมที่ทำงานร่วมกันกำลังจะรวมแยกเมื่อเร็ว ๆ นี้ ฯลฯ"
 
-#: post-type/module-base.php:435
+#: post-type/module-base.php:438
 msgid "Child Training"
 msgstr "การฝึกอบรมเด็ก"
 
-#: post-type/module-base.php:436
+#: post-type/module-base.php:439
 msgctxt "Optional Documentation"
 msgid "A training that has been birthed out of this training."
 msgstr "การฝึกอบรมที่เกิดจากการฝึกอบรมนี้"
 
-#: post-type/module-base.php:446 post-type/module-base.php:542
-#: post-type/module-base.php:653
+#: post-type/module-base.php:449
+#: post-type/module-base.php:543
+#: post-type/module-base.php:654
 msgid "Member List"
 msgstr "รายชื่อสมาชิก"
 
-#: post-type/module-base.php:447
+#: post-type/module-base.php:450
 msgctxt "Optional Documentation"
 msgid "The contacts who are members of this training."
 msgstr "ผู้ติดต่อที่เป็นสมาชิกของการฝึกอบรมนี้"
 
-#: post-type/module-base.php:464
+#: post-type/module-base.php:467
 msgctxt "Optional Documentation"
 msgid "The people trainings represented by this training."
 msgstr "การฝึกอบรมผู้คนที่แสดงโดยการฝึกอบรมนี้"
 
-#: post-type/module-base.php:484
+#: post-type/module-base.php:487
 msgid "Member Count"
 msgstr "จำนวนสมาชิก"
 
-#: post-type/module-base.php:485 post-type/module-base.php:492
+#: post-type/module-base.php:488
+#: post-type/module-base.php:495
 msgctxt "Optional Documentation"
 msgid "The number of members in this training. It will automatically be updated when new members are added or removed in the member list. Change this number manually to included people who may not be in the system but are also members of the training."
 msgstr "จำนวนสมาชิกในการฝึกอบรมนี้ ระบบจะอัปเดตโดยอัตโนมัติเมื่อมีการเพิ่มหรือลบสมาชิกใหม่ในรายชื่อสมาชิก เปลี่ยนหมายเลขนี้ด้วยตนเองเพื่อรวมบุคคลที่อาจไม่ได้อยู่ในระบบ แต่เป็นสมาชิกของการฝึกอบรมด้วย"
 
-#: post-type/module-base.php:491
+#: post-type/module-base.php:494
 msgid "Leader Count"
 msgstr "จำนวนผู้นำ"
 
-#: post-type/module-base.php:503
+#: post-type/module-base.php:504
 msgid "Training as Leader"
 msgstr "การฝึกอบรมเป็นผู้นำ"
 
-#: post-type/module-base.php:504
+#: post-type/module-base.php:505
 msgctxt "Optional Documentation"
 msgid "Leader of a training"
 msgstr "ผู้นำการฝึกอบรม"
 
-#: post-type/module-base.php:514
+#: post-type/module-base.php:515
 msgid "Training as Participant"
 msgstr "การฝึกอบรมในฐานะผู้เข้าร่วม"
 
-#: post-type/module-base.php:515
+#: post-type/module-base.php:516
 msgctxt "Optional Documentation"
 msgid "Participant in a training."
 msgstr "ผู้เข้าร่วมการฝึกอบรม"
 
+#: post-type/module-base.php:545
 #: post-type/module-base.php:537
 msgid "Other"
 msgstr "อื่น ๆ"
 
+#: post-type/module-base.php:576
 #: post-type/module-base.php:568
 msgctxt "input field placeholder"
 msgid "Search Users"
 msgstr "ค้นหาผู้ใช้"
 
+#: post-type/module-base.php:633
 #: post-type/module-base.php:601
 msgctxt "Search 'something'"
 msgid "Search %s"
 msgstr "ค้นหา% s"
 
-#: post-type/module-base.php:656
+#: post-type/module-base.php:657
 msgid "Create"
 msgstr "สร้าง"
 
-#: post-type/module-base.php:661
+#: post-type/module-base.php:662
 msgid "Select"
 msgstr "เลือก"
 
-#: post-type/module-base.php:666
+#: post-type/module-base.php:667
 msgid "To add new members, click on 'Create' or 'Select'."
 msgstr "ในการเพิ่มสมาชิกใหม่ให้คลิกที่ 'สร้าง' หรือ 'เลือก'"
 
-#: post-type/module-base.php:671
+#: post-type/module-base.php:672
 msgctxt "Add members modal"
 msgid "Add members from existing contacts"
 msgstr "เพิ่มสมาชิกจากรายชื่อที่มีอยู่"
 
-#: post-type/module-base.php:672
+#: post-type/module-base.php:673
 msgctxt "Add members modal"
 msgid "In the 'Member List' field, type the name of an existing contact to add them to this training."
 msgstr "ในฟิลด์ 'รายชื่อสมาชิก' พิมพ์ชื่อผู้ติดต่อที่มีอยู่เพื่อเพิ่มพวกเขาในการฝึกอบรมนี้"
 
-#: post-type/module-base.php:681
+#: post-type/module-base.php:682
 msgid "Close"
 msgstr "ปิด"
 
-#: post-type/module-base.php:879
+#: post-type/module-base.php:880
 msgid "Removed %1$s: %2$s"
 msgstr "ลบ% 1 $ s:% 2 $ s"
 
-#: post-type/module-base.php:882
+#: post-type/module-base.php:883
 msgid "Added %1$s: %2$s"
 msgstr "เพิ่ม% 1 $ s:% 2 $ s"
 
-#: post-type/module-base.php:885
+#: post-type/module-base.php:886
 msgid "Updated %1$s: %2$s to %3$s"
 msgstr "อัปเดต% 1 $ s:% 2 $ s เป็น% 3 $ s"
 
+#: post-type/module-base.php:958
 #: post-type/module-base.php:942
 msgctxt "List Filters"
 msgid "Assigned to me"
 msgstr "มอบหมายให้ฉัน"
 
-#: post-type/module-base.php:950 post-type/module-base.php:1007
+#: post-type/module-base.php:966
+#: post-type/module-base.php:1023
+#: post-type/module-base.php:1031
+#: post-type/module-base.php:950
+#: post-type/module-base.php:1007
 #: post-type/module-base.php:1015
 msgctxt "List Filters"
 msgid "All"
@@ -375,6 +430,7 @@ msgid "Total Baptisms"
 msgstr "บัพติศมาทั้งหมด"
 
 #: post-type/module-reports.php:123
+#: metrics/base.php:312
 msgid "Countries"
 msgstr "ประเทศ"
 
@@ -423,7 +479,7 @@ msgstr "แสดงบนปฏิทิน"
 msgid "open registration"
 msgstr "เปิดการลงทะเบียน "
 
-#: post-type/module-registration.php:265
+#: metrics/network-maps-area.php:68
 msgid "add"
 msgstr "เพิ่ม"
 
@@ -477,7 +533,7 @@ msgstr "ส่วนขยาย (DT)"
 msgid "Network Dashboard"
 msgstr "แดชบอร์ดเครือข่าย"
 
-#: includes/admin/admin-menu-and-tabs.php:79
+#: includes/admin/admin-menu-and-tabs.php:78
 msgid "You do not have sufficient permissions to access this page."
 msgstr "คุณไม่มีสิทธิ์เพียงพอที่จะเข้าถึงหน้านี้"
 
@@ -494,12 +550,16 @@ msgstr "ผู้ดูแดชบอร์ดเครือข่าย"
 msgid "ID"
 msgstr "ID"
 
-#: metrics/base.php:221 metrics/base.php:255
+#: metrics/base.php:221
+#: metrics/base.php:255
 msgid "Site"
 msgstr "เว็บไซต์"
 
-#: metrics/base.php:224 metrics/base.php:254 metrics/network-maps-area.php:89
-#: metrics/network-maps-area.php:133 metrics/network-statistics-users.php:12
+#: metrics/base.php:224
+#: metrics/base.php:254
+#: metrics/network-maps-area.php:89
+#: metrics/network-maps-area.php:133
+#: metrics/network-statistics-users.php:12
 #: metrics/network-statistics-users.php:13
 #: metrics/network-statistics-users.php:14
 #: metrics/network-statistics-users.php:50
@@ -546,7 +606,8 @@ msgstr "รับบัพติศมา"
 msgid "Active Groups"
 msgstr "กลุ่มที่ใช้งานอยู่"
 
-#: metrics/base.php:236 metrics/base.php:258
+#: metrics/base.php:236
+#: metrics/base.php:258
 msgid "Church"
 msgstr "คริสตจักร"
 
@@ -606,7 +667,8 @@ msgstr "กลุ่ม"
 msgid "User"
 msgstr "ผู้ใช้"
 
-#: metrics/base.php:256 metrics/base.php:301
+#: metrics/base.php:256
+#: metrics/base.php:301
 msgid "Sites"
 msgstr "ไซต์"
 
@@ -614,7 +676,8 @@ msgstr "ไซต์"
 msgid "Baptisms"
 msgstr "บัพติศมา"
 
-#: metrics/base.php:259 metrics/network-maps-area.php:97
+#: metrics/base.php:259
+#: metrics/network-maps-area.php:97
 #: metrics/network-maps-area.php:127
 msgid "Churches"
 msgstr "คริสตจักร"
@@ -640,6 +703,7 @@ msgid "reset data"
 msgstr "รีเซ็ตข้อมูล"
 
 #: post-type/module-base.php:133
+#: metrics/base.php:267
 msgid "Status"
 msgstr "สถานะ"
 
@@ -668,6 +732,7 @@ msgid "State"
 msgstr "สถานะ"
 
 #: includes/template-dashboard.php:23
+#: metrics/base.php:276
 msgid "Active Contacts"
 msgstr "ผู้ติดต่อที่ใช้งานอยู่"
 
@@ -739,8 +804,10 @@ msgstr "ปีนี้"
 msgid "Activity Map"
 msgstr "แผนที่กิจกรรม"
 
-#: metrics/base.php:298 metrics/network-activity-stats.php:11
-#: metrics/network-activity-stats.php:12 metrics/network-activity-stats.php:13
+#: metrics/base.php:298
+#: metrics/network-activity-stats.php:11
+#: metrics/network-activity-stats.php:12
+#: metrics/network-activity-stats.php:13
 #: metrics/network-activity-stats.php:57
 msgid "Stats"
 msgstr "สถิติ"
@@ -785,8 +852,11 @@ msgstr "ขีด จำกัด ผลลัพธ์"
 msgid "uncheck"
 msgstr "ยกเลิกการเลือก"
 
-#: metrics/base.php:311 metrics/network-home.php:12 metrics/network-home.php:13
-#: metrics/network-home.php:14 metrics/network-home.php:48
+#: metrics/base.php:311
+#: metrics/network-home.php:12
+#: metrics/network-home.php:13
+#: metrics/network-home.php:14
+#: metrics/network-home.php:48
 msgid "Home"
 msgstr "บ้าน"
 
@@ -798,8 +868,10 @@ msgstr "กิจกรรม (30 วัน)"
 msgid "All Active/Inactive"
 msgstr "ใช้งานอยู่ / ไม่ใช้งานทั้งหมด"
 
-#: metrics/base.php:316 metrics/network-maps-hovermap.php:12
-#: metrics/network-maps-hovermap.php:13 metrics/network-maps-hovermap.php:14
+#: metrics/base.php:316
+#: metrics/network-maps-hovermap.php:12
+#: metrics/network-maps-hovermap.php:13
+#: metrics/network-maps-hovermap.php:14
 #: metrics/network-maps-hovermap.php:51
 msgid "Hover Map"
 msgstr "เลื่อนแผนที่"
@@ -808,8 +880,10 @@ msgstr "เลื่อนแผนที่"
 msgid "Network"
 msgstr "เครือข่าย"
 
-#: metrics/network-activity-map.php:15 metrics/network-activity-map.php:16
-#: metrics/network-activity-map.php:17 metrics/network-activity-map.php:63
+#: metrics/network-activity-map.php:15
+#: metrics/network-activity-map.php:16
+#: metrics/network-activity-map.php:17
+#: metrics/network-activity-map.php:63
 msgid "Map"
 msgstr "แผนที่"
 
@@ -820,13 +894,17 @@ msgstr "แผนที่"
 msgid "Log"
 msgstr "บันทึก"
 
-#: metrics/network-activity.php:12 metrics/network-activity.php:13
-#: metrics/network-activity.php:14 metrics/network-activity.php:25
+#: metrics/network-activity.php:12
+#: metrics/network-activity.php:13
+#: metrics/network-activity.php:14
+#: metrics/network-activity.php:25
 msgid "Activity"
 msgstr "กิจกรรม"
 
-#: metrics/network-maps-area.php:15 metrics/network-maps-area.php:16
-#: metrics/network-maps-area.php:17 metrics/network-maps-area.php:110
+#: metrics/network-maps-area.php:15
+#: metrics/network-maps-area.php:16
+#: metrics/network-maps-area.php:17
+#: metrics/network-maps-area.php:110
 msgid "Area Maps"
 msgstr "แผนที่พื้นที่"
 
@@ -837,18 +915,24 @@ msgstr "แผนที่พื้นที่"
 msgid "Location List"
 msgstr "รายการสถานที่"
 
-#: metrics/network-maps.php:12 metrics/network-maps.php:13
-#: metrics/network-maps.php:14 metrics/network-maps.php:25
+#: metrics/network-maps.php:12
+#: metrics/network-maps.php:13
+#: metrics/network-maps.php:14
+#: metrics/network-maps.php:25
 msgid "Maps"
 msgstr "แผนที่"
 
-#: metrics/network-sites.php:12 metrics/network-sites.php:13
-#: metrics/network-sites.php:14 metrics/network-sites.php:45
+#: metrics/network-sites.php:12
+#: metrics/network-sites.php:13
+#: metrics/network-sites.php:14
+#: metrics/network-sites.php:45
 msgid "Site Reports"
 msgstr "รายงานไซต์"
 
-#: metrics/network-statistics.php:12 metrics/network-statistics.php:13
-#: metrics/network-statistics.php:14 metrics/network-statistics.php:25
+#: metrics/network-statistics.php:12
+#: metrics/network-statistics.php:13
+#: metrics/network-statistics.php:14
+#: metrics/network-statistics.php:25
 msgid "Statistics"
 msgstr "สถิติ"
 
@@ -873,10 +957,14 @@ msgstr "โปรไฟล์ไซต์แดชบอร์ดเครือ
 msgid "Disciple Tools - Network Dashboard"
 msgstr "เครื่องมือสาวก - แดชบอร์ดเครือข่าย"
 
-#: admin/customize-site-linking.php:10 metrics/mapbox-maps.php:31
-#: metrics/mapbox-personal-maps.php:31 post-type/module-base.php:393
-#: post-type/module-base.php:405 post-type/module-base.php:449
-#: post-type/module-base.php:466 post-type/module-base.php:483
+#: metrics/mapbox-maps.php:31
+#: metrics/mapbox-personal-maps.php:31
+#: post-type/module-base.php:53
+#: post-type/module-base.php:393
+#: post-type/module-base.php:405
+#: post-type/module-base.php:449
+#: post-type/module-base.php:466
+#: post-type/module-base.php:483
 #: post-type/module-base.php:520
 msgid "Streams"
 msgstr "สตรีม"
@@ -1068,7 +1156,7 @@ msgstr "% s กำลังรายงานคริสตจักรรุ�
 msgid "%s is reporting a new leadership team generation."
 msgstr "% s กำลังรายงานการสร้างทีมผู้นำใหม่"
 
-#: logging/log-new-posts.php:11
+#: includes/charts/baptisms.php:81
 msgid "New Contact"
 msgstr "รายชื่อติดต่อใหม่"
 
@@ -1124,8 +1212,10 @@ msgstr "% s กำลังรายงานการรับบัพติ�
 msgid "%s is reporting an coaching relationship."
 msgstr "% s กำลังรายงานความสัมพันธ์ในการฝึกสอน"
 
-#: metrics/network-maps-area.php:74 metrics/network-maps-area.php:83
-#: metrics/network-maps-area.php:91 metrics/network-maps-area.php:99
+#: metrics/network-maps-area.php:74
+#: metrics/network-maps-area.php:83
+#: metrics/network-maps-area.php:91
+#: metrics/network-maps-area.php:99
 msgid "Active"
 msgstr "คล่องแคล่ว"
 
@@ -1137,7 +1227,8 @@ msgstr "หยุดชั่วคราว"
 msgid "Closed"
 msgstr "ปิด"
 
-#: metrics/network-maps-area.php:84 metrics/network-maps-area.php:92
+#: metrics/network-maps-area.php:84
+#: metrics/network-maps-area.php:92
 #: metrics/network-maps-area.php:100
 msgid "Inactive"
 msgstr "ไม่ได้ใช้งาน"
@@ -1217,55 +1308,55 @@ msgstr "รวมการฝึกอบรม"
 msgid "Dashboard Plugin"
 msgstr "ปลั๊กอินแดชบอร์ด"
 
-#: includes/admin/admin-menu-and-tabs.php:84 includes/functions.php:84
+#: includes/functions.php:85
 msgid "Dashboard"
 msgstr "แผงควบคุม"
 
-#: includes/rest-api.php:80
+#: includes/rest-api.php:86
 msgid "%s days since last update"
 msgstr "% s วันนับตั้งแต่การอัปเดตครั้งล่าสุด"
 
-#: includes/rest-api.php:416
+#: includes/rest-api.php:419
 msgid "Accept"
 msgstr "ยอมรับ"
 
-#: includes/rest-api.php:417
+#: includes/rest-api.php:420
 msgid "Decline"
 msgstr "ลดลง"
 
-#: includes/rest-api.php:418
+#: includes/rest-api.php:421
 msgid "# Contacts Assigned"
 msgstr "# ผู้ติดต่อที่ได้รับมอบหมาย"
 
-#: includes/rest-api.php:419
+#: includes/rest-api.php:422
 msgid "# First Meetings"
 msgstr "# การพบกันครั้งแรก"
 
-#: includes/rest-api.php:420
+#: includes/rest-api.php:423
 msgid "# Faith milestones"
 msgstr "# เหตุการณ์สำคัญทางศรัทธา"
 
-#: includes/rest-api.php:421
+#: includes/rest-api.php:424
 msgid "Hurray! You are caught up."
 msgstr "เย่! คุณถูกจับ"
 
-#: includes/rest-api.php:422
+#: includes/rest-api.php:425
 msgid "remove"
 msgstr "ลบ"
 
-#: includes/rest-api.php:423
+#: includes/rest-api.php:426
 msgid "mark as complete"
 msgstr "ทำเครื่องหมายว่าเสร็จสมบูรณ์"
 
-#: includes/rest-api.php:424
+#: includes/rest-api.php:427
 msgid "No task created"
 msgstr "ไม่มีการสร้างงาน"
 
-#: includes/rest-api.php:425
+#: includes/rest-api.php:428
 msgid "Reminder"
 msgstr "การแจ้งเตือน"
 
-#: includes/rest-api.php:426
+#: includes/rest-api.php:429
 msgid "No note set"
 msgstr "ไม่ได้ตั้งค่าหมายเหตุ"
 
@@ -1335,4 +1426,325 @@ msgstr "https://github.com/DiscipleTools/disciple-tools-dashboard"
 #: 
 msgid "The multiplier dashboard upgrades the multipliers experience as soon as they log into the system giving them a landing page with stats."
 msgstr "แดชบอร์ดตัวคูณอัพเกรดประสบการณ์ของตัวคูณทันทีที่พวกเขาเข้าสู่ระบบทำให้พวกเขามีหน้า Landing Page พร้อมสถิติ"
+
+#: includes/dt-hooks.php:10
+msgid "Reason Assigned To"
+msgstr "เหตุผลที่มอบหมายให้"
+
+#: includes/dt-hooks.php:14
+msgid "Follow-Up"
+msgstr "ติดตาม"
+
+#: includes/dt-hooks.php:20
+msgid "Digital Response"
+msgstr "การตอบสนองแบบดิจิทัล"
+
+#: includes/dt-hooks.php:26
+msgid "Dispatch"
+msgstr "ส่ง"
+
+#: includes/dt-hooks.php:34
+msgid "No Answer"
+msgstr "ไม่มีคำตอบ"
+
+#: includes/dt-hooks.php:38
+msgid "Talked"
+msgstr "พูดคุย"
+
+#: includes/dt-hooks.php:42
+msgid "Scheduled"
+msgstr "กำหนดเวลา"
+
+#: includes/dt-hooks.php:46
+msgid "Complete"
+msgstr "เสร็จสมบูรณ์"
+
+#: includes/dt-hooks.php:50
+msgid "No-Show"
+msgstr "ไม่แสดง"
+
+#: includes/rest-api.php:44
+msgid "No permission"
+msgstr "ไม่ได้รับอนุญาต"
+
+#: includes/tiles.php:28
+msgid "All"
+msgstr "ทั้งหมด"
+
+#: includes/tiles.php:29
+msgid "Ready"
+msgstr "พร้อม"
+
+#: includes/tiles.php:30
+msgid "Recent"
+msgstr "ล่าสุด"
+
+#: includes/tiles.php:32
+msgid "Assign"
+msgstr "กำหนด"
+
+#: includes/tiles.php:50
+msgid "Choose an option:"
+msgstr "เลือกตัวเลือก:"
+
+#: includes/tiles.php:64
+msgid "Cancel"
+msgstr "ยกเลิก"
+
+#: includes/tiles.php:77
+msgid "Assign For"
+msgstr "กำหนดสำหรับ"
+
+#: includes/tiles.php:127
+msgid "Search"
+msgstr "ค้นหา"
+
+#: includes/tiles.php:208
+msgid "Claim for follow-up"
+msgstr "อ้างสิทธิ์เพื่อติดตามผล"
+
+#: includes/tiles.php:214
+msgid "Ready for Dispatch"
+msgstr "พร้อมสำหรับการจัดส่ง"
+
+#. Plugin Name of the plugin/theme
+#: 
+msgid "Disciple Tools - Advanced M2M Tiles"
+msgstr "เครื่องมือสำหรับสาวก - กระเบื้อง M2M ขั้นสูง"
+
+#. Plugin URI of the plugin/theme
+#: 
+msgid "https://github.com/DiscipleTools/disciple-tools-advanced-m2m-tiles"
+msgstr "https://github.com/DiscipleTools/disciple-tools-advanced-m2m-tiles"
+
+#. Description of the plugin/theme
+#: 
+msgid "Disciple Tools - Advanced M2M Tiles adds specific supporting tiles for different roles."
+msgstr "Disciple Tools - Advanced M2M Tiles เพิ่มไทล์รองรับเฉพาะสำหรับบทบาทต่างๆ"
+
+#: network/network-dashboard-integration.php:44
+msgid "New Training"
+msgstr ""
+
+#: network/network-dashboard-integration.php:50
+msgid "Training Started"
+msgstr ""
+
+#: network/network-dashboard-integration.php:56
+msgid "Training Completed"
+msgstr ""
+
+#: post-type/module-base.php:53
+msgid "Stream"
+msgstr ""
+
+#: includes/charts/baptisms.php:78
+msgid "Baptism Generation Tree"
+msgstr ""
+
+#: includes/charts/baptisms.php:79
+msgid "Search for a specific contact or multiplier"
+msgstr ""
+
+#: includes/charts/baptisms.php:80
+#: includes/charts/groups.php:79
+msgid "Reset"
+msgstr ""
+
+#: includes/charts/groups.php:76
+msgid "Group Generation Tree"
+msgstr ""
+
+#: includes/charts/groups.php:77
+msgid "This tree only shows First Generation groups that have multiplied."
+msgstr ""
+
+#: includes/charts/groups.php:78
+msgid "See descendants of a specific group"
+msgstr ""
+
+#: includes/export-action.php:9
+msgid "List Exports"
+msgstr ""
+
+#: includes/export-action.php:21
+msgid "bcc email list"
+msgstr ""
+
+#: includes/export-action.php:22
+msgid "phone number list"
+msgstr ""
+
+#: includes/export-action.php:23
+msgid "csv list"
+msgstr ""
+
+#: includes/export-action.php:25
+msgid "map list"
+msgstr ""
+
+#: includes/export-action.php:40
+msgid "Mapped Locations"
+msgstr ""
+
+#: includes/export-action.php:40
+msgid "Contacts Without Locations"
+msgstr ""
+
+#: includes/export-action.php:52
+msgid "List Export Help"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:72
+msgid "Coaching Checklist"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:81
+msgctxt "Coaching Checklist Initial for: Heard"
+msgid "H"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:82
+msgctxt "Coaching Checklist Initial for: Obeyed"
+msgid "O"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:83
+msgctxt "Coaching Checklist Initial for: Shared"
+msgid "S"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:84
+msgctxt "Coaching Checklist Initial for: Trained"
+msgid "T"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:88
+msgctxt "coaching checklist"
+msgid "Duckling Discipleship"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:89
+msgctxt "coaching checklist"
+msgid "Tell Your Story (testimony)"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:90
+msgctxt "coaching checklist"
+msgid "Tell God's Story (gospel)"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:91
+msgctxt "coaching checklist"
+msgid "List of 100"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:92
+msgctxt "coaching checklist"
+msgid "Pace"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:93
+msgctxt "coaching checklist"
+msgid "Non-Sequential Ministry"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:94
+msgctxt "coaching checklist"
+msgid "3/3 Group Format"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:95
+msgctxt "coaching checklist"
+msgid "Simple Church"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:96
+msgctxt "coaching checklist"
+msgid "Being Part of Two Churches"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:97
+msgctxt "coaching checklist"
+msgid "Training Cycle"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:98
+msgctxt "coaching checklist"
+msgid "Accountability Groups"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:99
+msgctxt "coaching checklist"
+msgid "SOAPS"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:100
+msgctxt "coaching checklist"
+msgid "Prayer Wheel"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:101
+msgctxt "coaching checklist"
+msgid "Spiritual Breathing"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:102
+msgctxt "coaching checklist"
+msgid "Persecution & Suffering"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:103
+msgctxt "coaching checklist"
+msgid "Eyes to See Where the Kingdom Isn't"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:104
+msgctxt "coaching checklist"
+msgid "Person of Peace"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:105
+msgctxt "coaching checklist"
+msgid "Prayer Walking"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:106
+msgctxt "coaching checklist"
+msgid "Baptism"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:107
+msgctxt "coaching checklist"
+msgid "Lord's Supper"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:108
+msgctxt "coaching checklist"
+msgid "Coaching Checklist"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:109
+msgctxt "coaching checklist"
+msgid "Leadership Cells"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:110
+msgctxt "coaching checklist"
+msgid "Peer Mentoring Group"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:111
+msgctxt "coaching checklist"
+msgid "Four Fields Tool"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:112
+msgctxt "coaching checklist"
+msgid "Generational Mapping"
+msgstr ""
+
+#: disciple-tools-coaching-checklist.php:145
+msgid "Completed"
+msgstr ""
 
