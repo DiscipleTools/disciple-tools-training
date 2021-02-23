@@ -2,9 +2,16 @@
 if ( !defined( 'ABSPATH' ) ) { exit; } // Exit if accessed directly.
 
 class DT_Training_Base extends DT_Module_Base {
-    private static $_instance = null;
     public $post_type = "trainings";
     public $module = "trainings_base";
+    public $single_name = 'Prayer Subscription';
+    public $plural_name = 'Subscriptions';
+    public static function post_type(){
+        return 'prayers';
+    }
+
+
+    private static $_instance = null;
     public static function instance() {
         if ( is_null( self::$_instance ) ) {
             self::$_instance = new self();
@@ -17,6 +24,9 @@ class DT_Training_Base extends DT_Module_Base {
         if ( !self::check_enabled_and_prerequisites() ){
             return;
         }
+
+        $this->single_name = __( 'Training', 'disciple-tools-training' );
+        $this->plural_name = __( 'Trainings', 'disciple-tools-training' );
 
         //setup post type
         add_action( 'after_setup_theme', [ $this, 'after_setup_theme' ], 100 );
@@ -51,24 +61,24 @@ class DT_Training_Base extends DT_Module_Base {
 
     public function after_setup_theme(){
         if ( class_exists( 'Disciple_Tools_Post_Type_Template' )) {
-            new Disciple_Tools_Post_Type_Template( "trainings", __( 'Training', 'disciple-tools-training' ), __( 'Trainings', 'disciple-tools-training' ) );
+            new Disciple_Tools_Post_Type_Template( $this->post_type, $this->single_name, $this->plural_name );
         }
     }
 
     public function dt_set_roles_and_permissions( $expected_roles ){
+
+        $expected_roles["training_admin"] = [
+            "label" => __( 'Training Admin', 'disciple-tools-training' ),
+            "description" => __( 'Admin access to all trainings', 'disciple-tools-training' ),
+            "permissions" => []
+        ];
         if ( !isset( $expected_roles["multiplier"] ) ){
             $expected_roles["multiplier"] = [
                 "label" => __( 'Multiplier', 'disciple-tools-training' ),
                 "permissions" => []
             ];
         }
-        if ( !isset( $expected_roles["dispatcher"] ) ){
-            $expected_roles["dispatcher"] = [
-                "label" => __( 'Dispatcher', 'disciple-tools-training' ),
-                "description" => "All D.T permissions",
-                "permissions" => []
-            ];
-        }
+
         if ( !isset( $expected_roles["dt_admin"] ) ){
             $expected_roles["dt_admin"] = [
                 "label" => __( 'Disciple.Tools Admin', 'disciple-tools-training' ),
@@ -85,17 +95,23 @@ class DT_Training_Base extends DT_Module_Base {
         }
 
         foreach ( $expected_roles as $role => $role_value ){
-
             if ( isset( $expected_roles[$role]["permissions"]['access_contacts'] ) && $expected_roles[$role]["permissions"]['access_contacts'] ){
                 $expected_roles[$role]["permissions"]['access_' . $this->post_type] = true;
                 $expected_roles[$role]["permissions"]['create_' . $this->post_type] = true;
             }
-            if ( in_array( $role, [ 'administrator', 'dispatcher', 'dt_admin' ], true ) ) {
-                $expected_roles[$role]["permissions"]['view_any_' . $this->post_type] = true;
-            }
-            if ( in_array( $role, [ 'administrator' ], true ) ) {
-                $expected_roles[$role]["permissions"][ 'dt_all_admin_' . $this->post_type] = true;
-            }
+        }
+
+        if ( isset( $expected_roles["training_admin"] ) ){
+            $expected_roles["training_admin"]["permissions"]['view_any_'.$this->post_type ] = true;
+            $expected_roles["training_admin"]["permissions"][ 'dt_all_admin_' . $this->post_type] = true;
+        }
+        if ( isset( $expected_roles["administrator"] ) ){
+            $expected_roles["administrator"]["permissions"]['view_any_'.$this->post_type ] = true;
+            $expected_roles["administrator"]["permissions"][ 'dt_all_admin_' . $this->post_type] = true;
+        }
+        if ( isset( $expected_roles["dt_admin"] ) ){
+            $expected_roles["dt_admin"]["permissions"]['view_any_'.$this->post_type ] = true;
+            $expected_roles["dt_admin"]["permissions"][ 'dt_all_admin_' . $this->post_type] = true;
         }
 
         return $expected_roles;
@@ -1003,63 +1019,65 @@ class DT_Training_Base extends DT_Module_Base {
                 }
             }
 
-            $counts = self::get_all_trainings_status_type();
-            $active_counts = [];
-            $update_needed = 0;
-            $status_counts = [];
-            $total_all = 0;
-            foreach ( $counts as $count ){
-                $total_all += $count["count"];
-                dt_increment( $status_counts[$count["status"]], $count["count"] );
-                if ( $count["status"] === "new" ){
-                    if ( isset( $count["update_needed"] ) ) {
-                        $update_needed += (int) $count["update_needed"];
+            if ( current_user_can( 'view_any_trainings' ) ) {
+                $counts = self::get_all_trainings_status_type();
+                $active_counts = [];
+                $update_needed = 0;
+                $status_counts = [];
+                $total_all = 0;
+                foreach ( $counts as $count ){
+                    $total_all += $count["count"];
+                    dt_increment( $status_counts[$count["status"]], $count["count"] );
+                    if ( $count["status"] === "new" ){
+                        if ( isset( $count["update_needed"] ) ) {
+                            $update_needed += (int) $count["update_needed"];
+                        }
+                        dt_increment( $active_counts[$count["status"]], $count["count"] );
                     }
-                    dt_increment( $active_counts[$count["status"]], $count["count"] );
                 }
-            }
-            $filters["tabs"][] = [
-                "key" => "all",
-                "label" => _x( "All", 'List Filters', 'disciple-tools-training' ),
-                "count" => $total_all,
-                "order" => 10
-            ];
-            // add assigned to me filters
-            $filters["filters"][] = [
-                'ID' => 'all',
-                'tab' => 'all',
-                'name' => _x( "All", 'List Filters', 'disciple-tools-training' ),
-                'query' => [
-                    'sort' => '-post_date'
-                ],
-                "count" => $total_all
-            ];
+                $filters["tabs"][] = [
+                    "key" => "all",
+                    "label" => _x( "All", 'List Filters', 'disciple-tools-training' ),
+                    "count" => $total_all,
+                    "order" => 10
+                ];
+                // add assigned to me filters
+                $filters["filters"][] = [
+                    'ID' => 'all',
+                    'tab' => 'all',
+                    'name' => _x( "All", 'List Filters', 'disciple-tools-training' ),
+                    'query' => [
+                        'sort' => '-post_date'
+                    ],
+                    "count" => $total_all
+                ];
 
-            foreach ( $fields["status"]["default"] as $status_key => $status_value ) {
-                if ( isset( $status_counts[$status_key] ) ){
-                    $filters["filters"][] = [
-                        "ID" => 'all_' . $status_key,
-                        "tab" => 'all',
-                        "name" => $status_value["label"],
-                        "query" => [
-                            'status' => [ $status_key ],
-                            'sort' => '-post_date'
-                        ],
-                        "count" => $status_counts[$status_key]
-                    ];
-                    if ( $status_key === "new" ){
-                        if ( $update_needed > 0 ){
-                            $filters["filters"][] = [
-                                "ID" => 'all_update_needed',
-                                "tab" => 'all',
-                                "name" => $fields["requires_update"]["name"],
-                                "query" => [
-                                    'status' => [ 'new' ],
-                                    'requires_update' => [ true ],
-                                ],
-                                "count" => $update_needed,
-                                'subfilter' => true
-                            ];
+                foreach ( $fields["status"]["default"] as $status_key => $status_value ) {
+                    if ( isset( $status_counts[$status_key] ) ){
+                        $filters["filters"][] = [
+                            "ID" => 'all_' . $status_key,
+                            "tab" => 'all',
+                            "name" => $status_value["label"],
+                            "query" => [
+                                'status' => [ $status_key ],
+                                'sort' => '-post_date'
+                            ],
+                            "count" => $status_counts[$status_key]
+                        ];
+                        if ( $status_key === "new" ){
+                            if ( $update_needed > 0 ){
+                                $filters["filters"][] = [
+                                    "ID" => 'all_update_needed',
+                                    "tab" => 'all',
+                                    "name" => $fields["requires_update"]["name"],
+                                    "query" => [
+                                        'status' => [ 'new' ],
+                                        'requires_update' => [ true ],
+                                    ],
+                                    "count" => $update_needed,
+                                    'subfilter' => true
+                                ];
+                            }
                         }
                     }
                 }

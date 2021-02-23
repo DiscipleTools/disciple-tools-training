@@ -2,8 +2,6 @@
 declare(strict_types=1);
 if ( ! defined( 'ABSPATH' ) ) { exit; } // Exit if accessed directly
 
-require_once( 'abstract.php' );
-
 /**
  * Class DT_Training_Migration_0000
  */
