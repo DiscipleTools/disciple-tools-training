@@ -63,6 +63,7 @@ add_action( 'after_setup_theme', function() {
     try {
         require_once( plugin_dir_path( __FILE__ ) . '/admin/class-migration-engine.php' );
         DT_Training_Migration_Engine::migrate( DT_Training_Migration_Engine::$migration_number );
+        DT_Training_Migration_Engine::display_migration_and_lock();
     } catch ( Throwable $e ) {
         new WP_Error( 'migration_error', 'Migration engine failed to migrate.' );
     }

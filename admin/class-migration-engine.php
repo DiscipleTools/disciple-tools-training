@@ -136,6 +136,19 @@ class DT_Training_Migration_Engine
         }
     }
 
+    /**
+     * Display migration number and lock on utilities (DT) page.
+     */
+    public static function display_migration_and_lock(){
+        add_action( "dt_utilities_system_details", function () {
+            $lock = get_option( 'dt_training_migration_lock', 0 ); ?>
+            <tr>
+                <td>Trainings Plugin Migration Version: <?php echo esc_html( self::$migration_number ) ?>. Lock: <?php echo esc_html( $lock ); ?>  </td>
+                <td> <button name="reset_lock" value="dt_training_migration_lock">Reset Lock</button></td>
+            </tr>
+        <?php });
+    }
+
 }
 
 

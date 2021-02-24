@@ -14,6 +14,7 @@ jQuery(document).ready(function($) {
     let populateMembersList = ()=>{
         memberList.empty()
 
+        post.members = post.members || []
         post.members.forEach(m=>{
             if ( _.find( post.leaders || [], {ID: m.ID} ) ){
                 m.leader = true
