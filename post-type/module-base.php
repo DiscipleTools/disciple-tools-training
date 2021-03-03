@@ -262,7 +262,7 @@ class DT_Training_Base extends DT_Module_Base {
             $fields["status"] = [
                 'name' => "Status",
                 'type' => 'key_select',
-                "tile" => "",
+                "tile" => "status",
                 'default' => [
                     'new'   => [
                         "label" => _x( 'New', 'Training Status label', 'disciple-tools-training' ),
@@ -318,7 +318,7 @@ class DT_Training_Base extends DT_Module_Base {
                 "post_type" => "contacts",
                 "p2p_direction" => "from",
                 "p2p_key" => "trainings_to_coaches",
-                'tile' => '',
+                'tile' => 'status',
                 'icon' => get_template_directory_uri() . '/dt-assets/images/coach.svg',
                 'create-icon' => get_template_directory_uri() . '/dt-assets/images/add-contact.svg',
             ];
@@ -464,10 +464,12 @@ class DT_Training_Base extends DT_Module_Base {
             $fields["members"] = [
                 "name" => __( 'Member List', 'disciple-tools-training' ),
                 'description' => _x( 'The contacts who are members of this training.', 'Optional Documentation', 'disciple-tools-training' ),
+                "tile" => "relationships",
                 "type" => "connection",
                 "post_type" => "contacts",
                 "p2p_direction" => "from",
-                "p2p_key" => "trainings_to_contacts"
+                "p2p_key" => "trainings_to_contacts",
+                "custom_display" => true
             ];
             $fields["leaders"] = [
                 "name" => __( 'Leaders', 'disciple-tools-training' ),
@@ -565,61 +567,52 @@ class DT_Training_Base extends DT_Module_Base {
 
     public function dt_details_additional_section( $section, $post_type ){
 
-        if ( $post_type === "trainings" && $section === "status" ){
-            $training = DT_Posts::get_post( $post_type, get_the_ID() );
+        if ( $post_type === "trainings" ){
             $training_fields = DT_Posts::get_post_field_settings( $post_type );
-            ?>
+            $training = DT_Posts::get_post( $post_type, get_the_ID() );
 
-            <div class="cell small-12 medium-4">
-                <?php render_field_for_display( "status", $training_fields, $training, true ); ?>
-            </div>
-            <div class="cell small-12 medium-4">
-                <div class="section-subheader">
-                    <img src="<?php echo esc_url( get_template_directory_uri() ) . '/dt-assets/images/assigned-to.svg' ?>">
-                    <?php echo esc_html( $training_fields["assigned_to"]["name"] )?>
-                    <button class="help-button" data-section="assigned-to-help-text">
-                        <img class="help-icon" src="<?php echo esc_html( get_template_directory_uri() . '/dt-assets/images/help.svg' ) ?>"/>
-                    </button>
-                </div>
+            if ( isset( $training_fields["assigned_to"]["tile"] ) && $training_fields["assigned_to"]["tile"] === $section ) : ?>
 
-                <div class="assigned_to details">
-                    <var id="assigned_to-result-container" class="result-container assigned_to-result-container"></var>
-                    <div id="assigned_to_t" name="form-assigned_to" class="scrollable-typeahead">
-                        <div class="typeahead__container">
-                            <div class="typeahead__field">
-                                    <span class="typeahead__query">
-                                        <input class="js-typeahead-assigned_to input-height"
-                                               name="assigned_to[query]" placeholder="<?php echo esc_html_x( "Search Users", 'input field placeholder', 'disciple-tools-training' ) ?>"
-                                               autocomplete="off">
-                                    </span>
-                                <span class="typeahead__button">
-                                        <button type="button" class="search_assigned_to typeahead__image_button input-height" data-id="assigned_to_t">
-                                            <img src="<?php echo esc_html( get_template_directory_uri() . '/dt-assets/images/chevron_down.svg' ) ?>"/>
-                                        </button>
-                                    </span>
+                <div class="cell small-12 medium-4">
+                    <div class="section-subheader">
+                        <img src="<?php echo esc_url( get_template_directory_uri() ) . '/dt-assets/images/assigned-to.svg' ?>">
+                        <?php echo esc_html( $training_fields["assigned_to"]["name"] )?>
+                        <button class="help-button" data-section="assigned-to-help-text">
+                            <img class="help-icon" src="<?php echo esc_html( get_template_directory_uri() . '/dt-assets/images/help.svg' ) ?>"/>
+                        </button>
+                    </div>
+
+                    <div class="assigned_to details">
+                        <var id="assigned_to-result-container" class="result-container assigned_to-result-container"></var>
+                        <div id="assigned_to_t" name="form-assigned_to" class="scrollable-typeahead">
+                            <div class="typeahead__container">
+                                <div class="typeahead__field">
+                                        <span class="typeahead__query">
+                                            <input class="js-typeahead-assigned_to input-height"
+                                                   name="assigned_to[query]" placeholder="<?php echo esc_html_x( "Search Users", 'input field placeholder', 'disciple-tools-training' ) ?>"
+                                                   autocomplete="off">
+                                        </span>
+                                    <span class="typeahead__button">
+                                            <button type="button" class="search_assigned_to typeahead__image_button input-height" data-id="assigned_to_t">
+                                                <img src="<?php echo esc_html( get_template_directory_uri() . '/dt-assets/images/chevron_down.svg' ) ?>"/>
+                                            </button>
+                                        </span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="cell small-12 medium-4">
-                <?php render_field_for_display( "coaches", $training_fields, $training, true ); ?>
-            </div>
-        <?php }
+            <?php endif;
 
-
-        if ( $post_type === "trainings" && $section === "meeting_times" ){
-            $fields = DT_Posts::get_post_field_settings( $post_type );
-
-            $field_key = 'meeting_times';
-            if ( isset( $fields[$field_key] ) ) {
+            if ( isset( $training_fields["meeting_times"]["tile"] ) && $training_fields["meeting_times"]["tile"] === $section ) :
                 /* list */
+                $field_key = 'meeting_times';
                 ?>
                 <div class="section-subheader">
-                    <?php if ( isset( $fields[$field_key]["icon"] ) ) : ?>
-                        <img class="dt-icon" src="<?php echo esc_url( $fields[$field_key]["icon"] ) ?>">
+                    <?php if ( isset( $training_fields[$field_key]["icon"] ) ) : ?>
+                      <img class="dt-icon" src="<?php echo esc_url( $training_fields[$field_key]["icon"] ) ?>">
                     <?php endif;
-                    echo esc_html( $fields[$field_key]["name"] );
+                    echo esc_html( $training_fields[$field_key]["name"] );
                     ?> <span id="<?php echo esc_html( $field_key ); ?>-spinner" class="loading-spinner"></span>
                     <button data-list-class="<?php echo esc_html( $field_key ); ?>" class="add-time-button" type="button">
                         <img src="<?php echo esc_html( get_template_directory_uri() . '/dt-assets/images/small-add.svg' ) ?>"/>
@@ -628,83 +621,77 @@ class DT_Training_Base extends DT_Module_Base {
                 <div id="edit-<?php echo esc_html( $field_key ) ?>" ></div>
                 <?php
                 /* @todo add recurring times option */
-            }
-        }
+            endif;
 
-
-        if ( $post_type === "trainings" && $section === "other" ) :
-            $fields = DT_Posts::get_post_field_settings( $post_type );
-            ?>
-            <div class="section-subheader">
-                <?php echo esc_html( $fields["tags"]["name"] ) ?>
-            </div>
-            <div class="tags">
-                <var id="tags-result-container" class="result-container"></var>
-                <div id="tags_t" name="form-tags" class="scrollable-typeahead typeahead-margin-when-active">
-                    <div class="typeahead__container">
-                        <div class="typeahead__field">
-                            <span class="typeahead__query">
-                                <input class="js-typeahead-tags input-height"
-                                       name="tags[query]"
-                                       placeholder="<?php echo esc_html( sprintf( _x( "Search %s", "Search 'something'", 'disciple-tools-training' ), $fields["tags"]['name'] ) )?>"
-                                       autocomplete="off">
-                            </span>
-                            <span class="typeahead__button">
-                                <button type="button" data-open="create-tag-modal" class="create-new-tag typeahead__image_button input-height">
-                                    <img src="<?php echo esc_html( get_template_directory_uri() . '/dt-assets/images/tag-add.svg' ) ?>"/>
-                                </button>
-                            </span>
-                        </div>
+            if ( isset( $training_fields["tags"]["tile"] ) && $training_fields["tags"]["tile"] === $section ) : ?>
+                <div class="section-subheader">
+                    <?php echo esc_html( $training_fields["tags"]["name"] ) ?>
+                </div>
+                <div class="tags">
+                    <var id="tags-result-container" class="result-container"></var>
+                        <div id="tags_t" name="form-tags" class="scrollable-typeahead typeahead-margin-when-active">
+                            <div class="typeahead__container">
+                                <div class="typeahead__field">
+                                    <span class="typeahead__query">
+                                        <input class="js-typeahead-tags input-height"
+                                               name="tags[query]"
+                                               placeholder="<?php echo esc_html( sprintf( _x( "Search %s", "Search 'something'", 'disciple-tools-training' ), $training_fields["tags"]['name'] ) )?>"
+                                               autocomplete="off">
+                                    </span>
+                                    <span class="typeahead__button">
+                                        <button type="button" data-open="create-tag-modal" class="create-new-tag typeahead__image_button input-height">
+                                            <img src="<?php echo esc_html( get_template_directory_uri() . '/dt-assets/images/tag-add.svg' ) ?>"/>
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
                     </div>
                 </div>
-            </div>
-        <?php endif;
+            <?php endif;
 
-
-        if ( $post_type === "trainings" && $section === "relationships" ) {
-            $fields = DT_Posts::get_post_field_settings( $post_type );
-            $post = DT_Posts::get_post( "trainings", get_the_ID() );
-            ?>
-            <div class="section-subheader members-header" style="padding-top: 10px;">
-                <div style="padding-bottom: 5px; margin-right:10px; display: inline-block">
-                    <?php esc_html_e( "Member List", 'disciple-tools-training' ) ?>
+            if ( isset( $training_fields["members"]["tile"] ) && $training_fields["members"]["tile"] === $section ) : ?>
+                <div class="section-subheader members-header" style="padding-top: 10px;">
+                    <div style="padding-bottom: 5px; margin-right:10px; display: inline-block">
+                        <?php esc_html_e( "Member List", 'disciple-tools-training' ) ?>
+                    </div>
+                    <button type="button" class="create-new-record" data-connection-key="members" style="height: 36px;">
+                        <?php echo esc_html__( 'Create', 'disciple-tools-training' )?>
+                        <img style="height: 14px; width: 14px" src="<?php echo esc_html( get_template_directory_uri() . '/dt-assets/images/small-add.svg' ) ?>"/>
+                    </button>
+                    <button type="button"
+                            class="add-new-member">
+                        <?php echo esc_html__( 'Select', 'disciple-tools-training' )?>
+                        <img style="height: 16px; width: 16px" src="<?php echo esc_html( get_template_directory_uri() . '/dt-assets/images/add-group.svg' ) ?>"/>
+                    </button>
                 </div>
-                <button type="button" class="create-new-record" data-connection-key="members" style="height: 36px;">
-                    <?php echo esc_html__( 'Create', 'disciple-tools-training' )?>
-                    <img style="height: 14px; width: 14px" src="<?php echo esc_html( get_template_directory_uri() . '/dt-assets/images/small-add.svg' ) ?>"/>
-                </button>
-                <button type="button"
-                        class="add-new-member">
-                    <?php echo esc_html__( 'Select', 'disciple-tools-training' )?>
-                    <img style="height: 16px; width: 16px" src="<?php echo esc_html( get_template_directory_uri() . '/dt-assets/images/add-group.svg' ) ?>"/>
-                </button>
-            </div>
-            <div class="members-section" style="margin-bottom:10px">
-                <div id="empty-members-list-message"><?php esc_html_e( "To add new members, click on 'Create' or 'Select'.", 'disciple-tools-training' ) ?></div>
-                <div class="member-list">
+                <div class="members-section" style="margin-bottom:10px">
+                    <div id="empty-members-list-message"><?php esc_html_e( "To add new members, click on 'Create' or 'Select'.", 'disciple-tools-training' ) ?></div>
+                    <div class="member-list">
+                    </div>
                 </div>
-            </div>
-            <div class="reveal" id="add-new-group-member-modal" data-reveal style="min-height:500px">
-                <h3><?php echo esc_html_x( "Add members from existing contacts", 'Add members modal', 'disciple-tools-training' )?></h3>
-                <p><?php echo esc_html_x( "In the 'Member List' field, type the name of an existing contact to add them to this training.", 'Add members modal', 'disciple-tools-training' )?></p>
+                <div class="reveal" id="add-new-group-member-modal" data-reveal style="min-height:500px">
+                    <h3><?php echo esc_html_x( "Add members from existing contacts", 'Add members modal', 'disciple-tools-training' )?></h3>
+                    <p><?php echo esc_html_x( "In the 'Member List' field, type the name of an existing contact to add them to this training.", 'Add members modal', 'disciple-tools-training' )?></p>
 
-                <?php render_field_for_display( "members", $fields, $post, false ); ?>
+                    <?php render_field_for_display( "members", $training_fields, $training, false ); ?>
 
-                <div class="grid-x pin-to-bottom">
-                    <div class="cell">
-                        <hr>
-                        <span style="float:right; bottom: 0;">
+                    <div class="grid-x pin-to-bottom">
+                        <div class="cell">
+                            <hr>
+                            <span style="float:right; bottom: 0;">
                     <button class="button" data-close aria-label="Close reveal" type="button">
                         <?php echo esc_html__( 'Close', 'disciple-tools-training' )?>
                     </button>
                 </span>
+                        </div>
                     </div>
+                    <button class="close-button" data-close aria-label="Close modal" type="button">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
-                <button class="close-button" data-close aria-label="Close modal" type="button">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-        <?php }
+            <?php endif;
+        }
+
     }
 
     public function scripts(){
