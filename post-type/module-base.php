@@ -699,6 +699,7 @@ class DT_Training_Base extends DT_Module_Base {
 
             wp_enqueue_script( 'dt_trainings', trailingslashit( plugin_dir_url( __FILE__ ) ) . 'trainings.js', [
                 'jquery',
+                'shared-functions',
                 'details',
                 'typeahead-jquery'
             ], filemtime( trailingslashit( plugin_dir_path( __FILE__ ) ) . 'trainings.js' ), true );
