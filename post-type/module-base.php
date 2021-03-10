@@ -924,7 +924,7 @@ class DT_Training_Base extends DT_Module_Base {
                 <input id="<?php echo esc_html( $field_key ) ?>" class="input-group-field dt-datetime-series-picker" type="text" autocomplete="off" <?php echo esc_html( $required_tag ) ?>
                        value="<?php echo esc_html( $post[$field_key]["formatted"] ?? '' ) ?>" >
                 <div class="input-group-button">
-                    <!--                    <button class="button alert input-height delete-button-style datetime-series-delete-button delete-button new-${_.escape( field )}" data-key="new" data-field="${_.escape( field )}">&times;</button>-->
+                    <!--                    <button class="button alert input-height delete-button-style datetime-series-delete-button delete-button new-${window.lodash.escape( field )}" data-key="new" data-field="${window.lodash.escape( field )}">&times;</button>-->
                     <button id="<?php echo esc_html( $field_key ) ?>-clear-button" class="button alert clear-date-button" data-inputid="<?php echo esc_html( $field_key ) ?>" title="Delete Date" type="button">x</button>
                 </div>
             </div>

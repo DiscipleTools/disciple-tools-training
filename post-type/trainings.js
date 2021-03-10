@@ -16,26 +16,26 @@ jQuery(document).ready(function($) {
 
         post.members = post.members || []
         post.members.forEach(m=>{
-            if ( _.find( post.leaders || [], {ID: m.ID} ) ){
+            if ( window.lodash.find( post.leaders || [], {ID: m.ID} ) ){
                 m.leader = true
             }
         })
-        post.members = _.sortBy( post.members, ["leader"])
+        post.members = window.lodash.sortBy( post.members, ["leader"])
         post.members.forEach(member=>{
             let leaderHTML = '';
             if( member.leader ){
                 leaderHTML = `<i class="fi-foot small leader"></i>`
             }
-            let memberHTML = `<div class="member-row" style="" data-id="${_.escape( member.ID )}">
+            let memberHTML = `<div class="member-row" style="" data-id="${window.lodash.escape( member.ID )}">
           <div style="flex-grow: 1" class="member-status">
               <i class="fi-torso small"></i>
-              <a href="${_.escape(window.wpApiShare.site_url)}/contacts/${_.escape( member.ID )}">${_.escape(member.post_title)}</a>
+              <a href="${window.lodash.escape(window.wpApiShare.site_url)}/contacts/${window.lodash.escape( member.ID )}">${window.lodash.escape(member.post_title)}</a>
               ${leaderHTML}
           </div>
-          <button class="button clear make-leader member-row-actions" data-id="${_.escape( member.ID )}">
+          <button class="button clear make-leader member-row-actions" data-id="${window.lodash.escape( member.ID )}">
             <i class="fi-foot small"></i>
           </button>
-          <button class="button clear delete-member member-row-actions" data-id="${_.escape( member.ID )}">
+          <button class="button clear delete-member member-row-actions" data-id="${window.lodash.escape( member.ID )}">
             <i class="fi-x small"></i>
           </button>
         </div>`
@@ -66,7 +66,7 @@ jQuery(document).ready(function($) {
             populateMembersList()
             masonGrid.masonry('layout')
         })
-        if( _.find( post.leaders || [], {ID: id}) ) {
+        if( window.lodash.find( post.leaders || [], {ID: id}) ) {
             API.update_post( post_type, post_id, {'leaders': {values: [{value: id, delete: true}]}})
         }
     })
@@ -74,7 +74,7 @@ jQuery(document).ready(function($) {
         let id = $(this).data('id')
         let remove = false
         let existingLeaderIcon = $(`.member-row[data-id="${id}"] .leader`)
-        if( _.find( post.leaders || [], {ID: id}) || existingLeaderIcon.length !== 0){
+        if( window.lodash.find( post.leaders || [], {ID: id}) || existingLeaderIcon.length !== 0){
             remove = true
             existingLeaderIcon.remove()
         } else {
@@ -117,22 +117,22 @@ jQuery(document).ready(function($) {
               return `<div class="assigned-to-row" dir="auto">
           <span>
               <span class="avatar"><img style="vertical-align: text-bottom" src="{{avatar}}"/></span>
-              ${_.escape( item.name )}
+              ${window.lodash.escape( item.name )}
           </span>
-          ${ item.status_color ? `<span class="status-square" style="background-color: ${_.escape(item.status_color)};">&nbsp;</span>` : '' }
+          ${ item.status_color ? `<span class="status-square" style="background-color: ${window.lodash.escape(item.status_color)};">&nbsp;</span>` : '' }
           ${ item.update_needed && item.update_needed > 0 ? `<span>
-            <img style="height: 12px;" src="${_.escape( window.wpApiShare.template_dir )}/dt-assets/images/broken.svg"/>
-            <span style="font-size: 14px">${_.escape(item.update_needed)}</span>
+            <img style="height: 12px;" src="${window.lodash.escape( window.wpApiShare.template_dir )}/dt-assets/images/broken.svg"/>
+            <span style="font-size: 14px">${window.lodash.escape(item.update_needed)}</span>
           </span>` : '' }
         </div>`
           },
           dynamic: true,
           hint: true,
-          emptyTemplate: _.escape(window.wpApiShare.translations.no_records_found),
+          emptyTemplate: window.lodash.escape(window.wpApiShare.translations.no_records_found),
           callback: {
               onClick: function(node, a, item){
                   API.update_post( post_type, post_id, {assigned_to: 'user-' + item.ID}).then(function (response) {
-                      _.set(post, "assigned_to", response.assigned_to)
+                      window.lodash.set(post, "assigned_to", response.assigned_to)
                       assigned_to_input.val(post.assigned_to.display)
                       assigned_to_input.blur()
                   }).catch(err => { console.error(err) })
@@ -145,7 +145,7 @@ jQuery(document).ready(function($) {
                   $('.assigned_to-result-container').html("");
               },
               onReady: function () {
-                  if (_.get(post,  "assigned_to.display")){
+                  if (window.lodash.get(post,  "assigned_to.display")){
                       $('.js-typeahead-assigned_to').val(post.assigned_to.display)
                   }
               }
@@ -203,23 +203,23 @@ jQuery(document).ready(function($) {
 
     window.write_meeting_times_list = () => {
         let field = 'meeting_times'
-        let list = $(`#edit-${_.escape( field )}`)
+        let list = $(`#edit-${window.lodash.escape( field )}`)
 
         list.empty()
 
         if ( typeof post[field] !== 'undefined' ) {
             let times = post[field]
-            $.each( _.orderBy(times, ['timestamp']), function(i,v){
+            $.each( window.lodash.orderBy(times, ['timestamp']), function(i,v){
                 list.append(`
                     <div class="input-group">
-                        <input id="${_.escape( v.key )}"
+                        <input id="${window.lodash.escape( v.key )}"
                                type="text"
-                               data-field="${_.escape( field )}"
-                               data-key="${_.escape( v.key )}"
-                               value="${_.escape( v.formatted )}"
+                               data-field="${window.lodash.escape( field )}"
+                               data-key="${window.lodash.escape( v.key )}"
+                               value="${window.lodash.escape( v.formatted )}"
                                class="dt-datetime-series-picker input-group-field" />
                         <div class="input-group-button">
-                            <button class="button alert input-height delete-button-style datetime-series-delete-button delete-button" data-field="${_.escape( field )}" data-key="${_.escape( v.key )}">&times;</button>
+                            <button class="button alert input-height delete-button-style datetime-series-delete-button delete-button" data-field="${window.lodash.escape( field )}" data-key="${window.lodash.escape( v.key )}">&times;</button>
                         </div>
                     </div>
                `)
@@ -227,9 +227,9 @@ jQuery(document).ready(function($) {
         } else {
             list.append(`
             <div class="input-group">
-                <input type="text" data-field="${_.escape( field )}" class="dt-datetime-series-picker input-group-field" />
+                <input type="text" data-field="${window.lodash.escape( field )}" class="dt-datetime-series-picker input-group-field" />
                 <div class="input-group-button">
-                    <button class="button alert input-height delete-button-style datetime-series-delete-button delete-button new-${_.escape( field )}" data-key="new" data-field="${_.escape( field )}">&times;</button>
+                    <button class="button alert input-height delete-button-style datetime-series-delete-button delete-button new-${window.lodash.escape( field )}" data-key="new" data-field="${window.lodash.escape( field )}">&times;</button>
                 </div>
             </div>
             `)
@@ -251,12 +251,12 @@ jQuery(document).ready(function($) {
     // Clicking the plus sign next to the field label
     $('button.add-time-button').on('click', e => {
         const field = $(e.currentTarget).data('list-class')
-        const $list = $(`#edit-${_.escape( field )}`)
+        const $list = $(`#edit-${window.lodash.escape( field )}`)
 
         $list.prepend(`<div class="input-group">
-            <input type="text" data-field="${_.escape( field )}" class="dt-datetime-series-picker input-group-field" />
+            <input type="text" data-field="${window.lodash.escape( field )}" class="dt-datetime-series-picker input-group-field" />
                 <div class="input-group-button">
-                    <button class="button alert input-height delete-button-style datetime-series-delete-button delete-button new-${_.escape( field )}" data-key="new" data-field="${_.escape( field )}">&times;</button>
+                    <button class="button alert input-height delete-button-style datetime-series-delete-button delete-button new-${window.lodash.escape( field )}" data-key="new" data-field="${window.lodash.escape( field )}">&times;</button>
                 </div>
             </div>`)
 
@@ -306,12 +306,12 @@ jQuery(document).ready(function($) {
     })
 
     function add_starter_meeting_times_field( field ){
-        let list = $(`#edit-${_.escape( field )}`)
+        let list = $(`#edit-${window.lodash.escape( field )}`)
         if ( list.children().length === 0 ){
             list.append(`<div class="input-group">
-                        <input type="text" data-field="${_.escape( field )}" class="dt-datetime-series-picker input-group-field" />
+                        <input type="text" data-field="${window.lodash.escape( field )}" class="dt-datetime-series-picker input-group-field" />
                         <div class="input-group-button">
-                        <button class="button alert input-height delete-button-style datetime-series-delete-button delete-button new-${_.escape( field )}" data-key="new" data-field="${_.escape( field )}">&times;</button>
+                        <button class="button alert input-height delete-button-style datetime-series-delete-button delete-button new-${window.lodash.escape( field )}" data-key="new" data-field="${window.lodash.escape( field )}">&times;</button>
                         </div></div>`)
 
             add_datetime_series_picker_listener()
@@ -329,7 +329,7 @@ jQuery(document).ready(function($) {
         $(`#${field_key}-spinner`).addClass('active')
         API.update_post(post_type, post_id, { [field_key]: [update]}).then((updatedContact)=>{
             $(`#${field_key}-spinner`).removeClass('active')
-            let key = _.last(updatedContact[field_key]).key
+            let key = window.lodash.last(updatedContact[field_key]).key
             $(this).attr('id', key)
             if ( $(this).next('div.input-group-button').length === 1 ) {
                 console.log('present')
@@ -337,7 +337,7 @@ jQuery(document).ready(function($) {
             } else {
                 console.log('new x')
                 $(this).parent().append(`<div class="input-group-button">
-                    <button class="button alert delete-button-style input-height datetime-series-delete-button delete-button" data-key="${_.escape( key )}" data-field="${_.escape( field_key )}">&times;</button>
+                    <button class="button alert delete-button-style input-height datetime-series-delete-button delete-button" data-key="${window.lodash.escape( key )}" data-field="${window.lodash.escape( field_key )}">&times;</button>
                 </div>`)
             }
             post = updatedContact

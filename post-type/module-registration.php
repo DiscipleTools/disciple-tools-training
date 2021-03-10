@@ -413,7 +413,7 @@ class DT_Training_Magic_Registration
                 spinner.removeClass('active')
 
                 /* set title */
-                title.html( _.escape( trainingApp.translations.title ) )
+                title.html( window.lodash.escape( trainingApp.translations.title ) )
 
                 write_input_widget()
 
@@ -452,14 +452,14 @@ class DT_Training_Magic_Registration
                     $.each(data, function(i,v){
                         content.prepend(`
                                  <div class="cell">
-                                     <div class="center"><span class="title-year">${_.escape( i )}</span> </div>
-                                     <table class="hover"><tbody id="report-list-${_.escape( i )}"></tbody></table>
+                                     <div class="center"><span class="title-year">${window.lodash.escape( i )}</span> </div>
+                                     <table class="hover"><tbody id="report-list-${window.lodash.escape( i )}"></tbody></table>
                                  </div>
                              `)
-                        let list = $('#report-list-'+_.escape( i ))
+                        let list = $('#report-list-'+window.lodash.escape( i ))
                         $.each(v, function(ii,vv){
                             list.append(`
-                                <tr><td>${_.escape( vv.value )} total ${_.escape( vv.payload.type )} in ${_.escape( vv.label )}</td><td style="vertical-align: middle;"><button type="button" class="button small alert delete-report" data-id="${_.escape( vv.id )}" style="margin: 0;float:right;">&times;</button></td></tr>
+                                <tr><td>${window.lodash.escape( vv.value )} total ${window.lodash.escape( vv.payload.type )} in ${window.lodash.escape( vv.label )}</td><td style="vertical-align: middle;"><button type="button" class="button small alert delete-report" data-id="${window.lodash.escape( vv.id )}" style="margin: 0;float:right;">&times;</button></td></tr>
                             `)
                         })
                     })
@@ -534,7 +534,7 @@ class DT_Training_Magic_Registration
                     let e = n - 11
                     let ten_years = ''
                     for(var i = n; i>=e; i--){
-                        ten_years += `<option value="${_.escape( i )}-12-31 23:59:59">${_.escape( i )}</option>`.toString()
+                        ten_years += `<option value="${window.lodash.escape( i )}-12-31 23:59:59">${window.lodash.escape( i )}</option>`.toString()
                     }
 
                     $('#add-report-button').on('click', function(e){
@@ -552,10 +552,10 @@ class DT_Training_Magic_Registration
                                 <div class="cell">
                                     <div id="mapbox-wrapper">
                                         <div id="mapbox-autocomplete" class="mapbox-autocomplete input-group" data-autosubmit="false">
-                                            <input id="mapbox-search" type="text" name="mapbox_search" class="input-group-field" autocomplete="off" placeholder="${ _.escape( dtMapbox.translations.search_location ) /*Search Location*/ }" />
+                                            <input id="mapbox-search" type="text" name="mapbox_search" class="input-group-field" autocomplete="off" placeholder="${ window.lodash.escape( dtMapbox.translations.search_location ) /*Search Location*/ }" />
                                             <div class="input-group-button">
                                                 <button id="mapbox-spinner-button" class="button hollow" style="display:none;"><span class="loading-spinner active"></span></button>
-                                                <button id="mapbox-clear-autocomplete" class="button alert input-height delete-button-style mapbox-delete-button" type="button" title="${ _.escape( dtMapbox.translations.clear ) /*Delete Location*/}" style="display:none;">&times;</button>
+                                                <button id="mapbox-clear-autocomplete" class="button alert input-height delete-button-style mapbox-delete-button" type="button" title="${ window.lodash.escape( dtMapbox.translations.clear ) /*Delete Location*/}" style="display:none;">&times;</button>
                                             </div>
                                             <div id="mapbox-autocomplete-list" class="mapbox-autocomplete-items"></div>
                                         </div>
