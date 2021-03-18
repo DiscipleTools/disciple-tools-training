@@ -673,7 +673,11 @@ class DT_Training_Base extends DT_Module_Base {
                     <h3><?php echo esc_html_x( "Add members from existing contacts", 'Add members modal', 'disciple-tools-training' )?></h3>
                     <p><?php echo esc_html_x( "In the 'Member List' field, type the name of an existing contact to add them to this training.", 'Add members modal', 'disciple-tools-training' )?></p>
 
-                    <?php render_field_for_display( "members", $training_fields, $training, false ); ?>
+                    <?php 
+                    $training_member_list = $training_fields;
+                    $training_member_list["members"]['custom_display'] = false;
+                    
+                    render_field_for_display( "members", $training_member_list, $training, false ); ?>
 
                     <div class="grid-x pin-to-bottom">
                         <div class="cell">
