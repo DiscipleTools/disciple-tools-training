@@ -262,7 +262,7 @@ class DT_Training_Base extends DT_Module_Base {
             $fields["status"] = [
                 'name' => "Status",
                 'type' => 'key_select',
-                "tile" => "status",
+                "tile" => '',
                 'default' => [
                     'new'   => [
                         "label" => _x( 'New', 'Training Status label', 'disciple-tools-training' ),
@@ -307,9 +307,9 @@ class DT_Training_Base extends DT_Module_Base {
                 'description' => __( "Select the main person who is responsible for reporting on this training.", 'disciple-tools-training' ),
                 'type'        => 'user_select',
                 'default'     => '',
-                'tile' => 'status',
+                'tile' => '',
                 'icon' => get_template_directory_uri() . '/dt-assets/images/assigned-to.svg',
-                'custom_display' => true,
+
             ];
             $fields["coaches"] = [
                 "name" => __( 'Training Coach / Church Planter', 'disciple-tools-training' ),
@@ -318,10 +318,12 @@ class DT_Training_Base extends DT_Module_Base {
                 "post_type" => "contacts",
                 "p2p_direction" => "from",
                 "p2p_key" => "trainings_to_coaches",
-                'tile' => 'status',
+                'tile' => '',
                 'icon' => get_template_directory_uri() . '/dt-assets/images/coach.svg',
                 'create-icon' => get_template_directory_uri() . '/dt-assets/images/add-contact.svg',
             ];
+
+
             $fields["requires_update"] = [
                 'name'        => __( 'Requires Update', 'disciple-tools-training' ),
                 'description' => '',
@@ -573,8 +575,15 @@ class DT_Training_Base extends DT_Module_Base {
         if ( $post_type === "trainings" ){
             $training_fields = DT_Posts::get_post_field_settings( $post_type );
             $training = DT_Posts::get_post( $post_type, get_the_ID() );
+            dt_write_log( $training_fields );
+            dt_write_log( $training );
+            if ( 'status' === $section ) : ?>
 
-            if ( isset( $training_fields["assigned_to"]["tile"] ) && $training_fields["assigned_to"]["tile"] === $section ) : ?>
+
+                <div class="cell small-12 medium-4">
+
+                    <?php render_field_for_display( "status", $training_fields, $training, true ); ?>
+                </div>
 
                 <div class="cell small-12 medium-4">
                     <div class="section-subheader">
@@ -604,6 +613,10 @@ class DT_Training_Base extends DT_Module_Base {
                             </div>
                         </div>
                     </div>
+                </div>
+
+                <div class="cell small-12 medium-4">
+                    <?php render_field_for_display( "coaches", $training_fields, $training, true ); ?>
                 </div>
             <?php endif;
 
