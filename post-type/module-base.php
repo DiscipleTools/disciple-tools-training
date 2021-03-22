@@ -98,19 +98,23 @@ class DT_Training_Base extends DT_Module_Base {
             if ( isset( $expected_roles[$role]["permissions"]['access_contacts'] ) && $expected_roles[$role]["permissions"]['access_contacts'] ){
                 $expected_roles[$role]["permissions"]['access_' . $this->post_type] = true;
                 $expected_roles[$role]["permissions"]['create_' . $this->post_type] = true;
+                $expected_roles[$role]["permissions"]['update_' . $this->post_type] = true;
             }
         }
 
         if ( isset( $expected_roles["training_admin"] ) ){
             $expected_roles["training_admin"]["permissions"]['view_any_'.$this->post_type ] = true;
+            $expected_roles["training_admin"]["permissions"]['update_any_'.$this->post_type ] = true;
             $expected_roles["training_admin"]["permissions"][ 'dt_all_admin_' . $this->post_type] = true;
         }
         if ( isset( $expected_roles["administrator"] ) ){
             $expected_roles["administrator"]["permissions"]['view_any_'.$this->post_type ] = true;
+            $expected_roles["administrator"]["permissions"]['update_any_'.$this->post_type ] = true;
             $expected_roles["administrator"]["permissions"][ 'dt_all_admin_' . $this->post_type] = true;
         }
         if ( isset( $expected_roles["dt_admin"] ) ){
             $expected_roles["dt_admin"]["permissions"]['view_any_'.$this->post_type ] = true;
+            $expected_roles["dt_admin"]["permissions"]['update_any_'.$this->post_type ] = true;
             $expected_roles["dt_admin"]["permissions"][ 'dt_all_admin_' . $this->post_type] = true;
         }
 
