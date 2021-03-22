@@ -494,6 +494,7 @@ class DT_Training_Base extends DT_Module_Base {
                 "p2p_direction" => "from",
                 "p2p_key" => "trainings_to_peoplegroups"
             ];
+
             $fields['groups'] = [
                 'name' => __( "Groups", 'disciple-tools-training' ),
                 'type' => 'connection',
@@ -558,6 +559,19 @@ class DT_Training_Base extends DT_Module_Base {
                 'create-icon' => get_template_directory_uri() . "/dt-assets/images/add-group.svg",
             ];
         }
+        if ( $post_type === 'peoplegroups' ){
+            $fields[$this->post_type] = [
+                'name' => __( "Trainings", 'disciple-tools-training' ),
+                'type' => 'connection',
+                "post_type" => $this->post_type,
+                "p2p_direction" => "to",
+                "p2p_key" => "trainings_to_peoplegroups",
+                "tile" => "other",
+                'icon' => get_template_directory_uri() . "/dt-assets/images/socialmedia.svg",
+                'create-icon' => get_template_directory_uri() . "/dt-assets/images/add-group.svg",
+            ];
+        }
+
         return $fields;
     }
 
@@ -575,13 +589,11 @@ class DT_Training_Base extends DT_Module_Base {
         if ( $post_type === "trainings" ){
             $training_fields = DT_Posts::get_post_field_settings( $post_type );
             $training = DT_Posts::get_post( $post_type, get_the_ID() );
-            dt_write_log( $training_fields );
-            dt_write_log( $training );
+
             if ( 'status' === $section ) : ?>
 
 
                 <div class="cell small-12 medium-4">
-
                     <?php render_field_for_display( "status", $training_fields, $training, true ); ?>
                 </div>
 
