@@ -50,7 +50,7 @@ class DT_Training_Base extends DT_Module_Base {
         add_filter( "dt_format_activity_message", [ $this, "dt_format_activity_message" ], 10, 2 );
 
         add_filter( "dt_adjust_post_custom_fields", [ $this, 'dt_adjust_post_custom_fields' ], 10, 2 );
-        add_action( 'dt_render_field_for_display_template', [ $this, 'dt_render_field_for_display_template' ], 10, 5 );
+        add_action( 'dt_render_field_for_display_template', [ $this, 'dt_render_field_for_display_template' ], 20, 4 );
 
         //list
         add_filter( "dt_user_list_filters", [ $this, "dt_user_list_filters" ], 10, 2 );
@@ -68,7 +68,7 @@ class DT_Training_Base extends DT_Module_Base {
     public function dt_set_roles_and_permissions( $expected_roles ){
 
         $expected_roles["training_admin"] = [
-            "label" => __( 'Training Admin', 'disciple-tools-training' ),
+            "label" => __( 'Trainings Admin', 'disciple-tools-training' ),
             "description" => __( 'Admin access to all trainings', 'disciple-tools-training' ),
             "permissions" => []
         ];
@@ -98,19 +98,23 @@ class DT_Training_Base extends DT_Module_Base {
             if ( isset( $expected_roles[$role]["permissions"]['access_contacts'] ) && $expected_roles[$role]["permissions"]['access_contacts'] ){
                 $expected_roles[$role]["permissions"]['access_' . $this->post_type] = true;
                 $expected_roles[$role]["permissions"]['create_' . $this->post_type] = true;
+                $expected_roles[$role]["permissions"]['update_' . $this->post_type] = true;
             }
         }
 
         if ( isset( $expected_roles["training_admin"] ) ){
             $expected_roles["training_admin"]["permissions"]['view_any_'.$this->post_type ] = true;
+            $expected_roles["training_admin"]["permissions"]['update_any_'.$this->post_type ] = true;
             $expected_roles["training_admin"]["permissions"][ 'dt_all_admin_' . $this->post_type] = true;
         }
         if ( isset( $expected_roles["administrator"] ) ){
             $expected_roles["administrator"]["permissions"]['view_any_'.$this->post_type ] = true;
+            $expected_roles["administrator"]["permissions"]['update_any_'.$this->post_type ] = true;
             $expected_roles["administrator"]["permissions"][ 'dt_all_admin_' . $this->post_type] = true;
         }
         if ( isset( $expected_roles["dt_admin"] ) ){
             $expected_roles["dt_admin"]["permissions"]['view_any_'.$this->post_type ] = true;
+            $expected_roles["dt_admin"]["permissions"]['update_any_'.$this->post_type ] = true;
             $expected_roles["dt_admin"]["permissions"][ 'dt_all_admin_' . $this->post_type] = true;
         }
 
@@ -262,7 +266,7 @@ class DT_Training_Base extends DT_Module_Base {
             $fields["status"] = [
                 'name' => "Status",
                 'type' => 'key_select',
-                "tile" => '',
+                "tile" => 'status',
                 'default' => [
                     'new'   => [
                         "label" => _x( 'New', 'Training Status label', 'disciple-tools-training' ),
@@ -307,9 +311,9 @@ class DT_Training_Base extends DT_Module_Base {
                 'description' => __( "Select the main person who is responsible for reporting on this training.", 'disciple-tools-training' ),
                 'type'        => 'user_select',
                 'default'     => '',
-                'tile' => '',
+                'tile' => 'status',
                 'icon' => get_template_directory_uri() . '/dt-assets/images/assigned-to.svg',
-
+                'custom_display' => true
             ];
             $fields["coaches"] = [
                 "name" => __( 'Training Coach / Church Planter', 'disciple-tools-training' ),
@@ -318,7 +322,7 @@ class DT_Training_Base extends DT_Module_Base {
                 "post_type" => "contacts",
                 "p2p_direction" => "from",
                 "p2p_key" => "trainings_to_coaches",
-                'tile' => '',
+                'tile' => 'status',
                 'icon' => get_template_directory_uri() . '/dt-assets/images/coach.svg',
                 'create-icon' => get_template_directory_uri() . '/dt-assets/images/add-contact.svg',
             ];
@@ -355,6 +359,7 @@ class DT_Training_Base extends DT_Module_Base {
                 "tile" => "meeting_times",
                 "customizable" => false,
                 "in_create_form" => true,
+                "custom_display" => true
             ];
 
             // @todo recurring fields
@@ -585,52 +590,9 @@ class DT_Training_Base extends DT_Module_Base {
     }
 
     public function dt_details_additional_section( $section, $post_type ){
-
         if ( $post_type === "trainings" ){
             $training_fields = DT_Posts::get_post_field_settings( $post_type );
             $training = DT_Posts::get_post( $post_type, get_the_ID() );
-
-            if ( 'status' === $section ) : ?>
-
-
-                <div class="cell small-12 medium-4">
-                    <?php render_field_for_display( "status", $training_fields, $training, true ); ?>
-                </div>
-
-                <div class="cell small-12 medium-4">
-                    <div class="section-subheader">
-                        <img src="<?php echo esc_url( get_template_directory_uri() ) . '/dt-assets/images/assigned-to.svg' ?>">
-                        <?php echo esc_html( $training_fields["assigned_to"]["name"] )?>
-                        <button class="help-button" data-section="assigned-to-help-text">
-                            <img class="help-icon" src="<?php echo esc_html( get_template_directory_uri() . '/dt-assets/images/help.svg' ) ?>"/>
-                        </button>
-                    </div>
-
-                    <div class="assigned_to details">
-                        <var id="assigned_to-result-container" class="result-container assigned_to-result-container"></var>
-                        <div id="assigned_to_t" name="form-assigned_to" class="scrollable-typeahead">
-                            <div class="typeahead__container">
-                                <div class="typeahead__field">
-                                        <span class="typeahead__query">
-                                            <input class="js-typeahead-assigned_to input-height"
-                                                   name="assigned_to[query]" placeholder="<?php echo esc_html_x( "Search Users", 'input field placeholder', 'disciple-tools-training' ) ?>"
-                                                   autocomplete="off">
-                                        </span>
-                                    <span class="typeahead__button">
-                                            <button type="button" class="search_assigned_to typeahead__image_button input-height" data-id="assigned_to_t">
-                                                <img src="<?php echo esc_html( get_template_directory_uri() . '/dt-assets/images/chevron_down.svg' ) ?>"/>
-                                            </button>
-                                        </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="cell small-12 medium-4">
-                    <?php render_field_for_display( "coaches", $training_fields, $training, true ); ?>
-                </div>
-            <?php endif;
 
             if ( isset( $training_fields["meeting_times"]["tile"] ) && $training_fields["meeting_times"]["tile"] === $section ) :
                 /* list */
@@ -650,32 +612,6 @@ class DT_Training_Base extends DT_Module_Base {
                 <?php
                 /* @todo add recurring times option */
             endif;
-
-            if ( isset( $training_fields["tags"]["tile"] ) && $training_fields["tags"]["tile"] === $section ) : ?>
-                <div class="section-subheader">
-                    <?php echo esc_html( $training_fields["tags"]["name"] ) ?>
-                </div>
-                <div class="tags">
-                    <var id="tags-result-container" class="result-container"></var>
-                        <div id="tags_t" name="form-tags" class="scrollable-typeahead typeahead-margin-when-active">
-                            <div class="typeahead__container">
-                                <div class="typeahead__field">
-                                    <span class="typeahead__query">
-                                        <input class="js-typeahead-tags input-height"
-                                               name="tags[query]"
-                                               placeholder="<?php echo esc_html( sprintf( _x( "Search %s", "Search 'something'", 'disciple-tools-training' ), $training_fields["tags"]['name'] ) )?>"
-                                               autocomplete="off">
-                                    </span>
-                                    <span class="typeahead__button">
-                                        <button type="button" data-open="create-tag-modal" class="create-new-tag typeahead__image_button input-height">
-                                            <img src="<?php echo esc_html( get_template_directory_uri() . '/dt-assets/images/tag-add.svg' ) ?>"/>
-                                        </button>
-                                    </span>
-                                </div>
-                            </div>
-                    </div>
-                </div>
-            <?php endif;
 
             if ( isset( $training_fields["members"]["tile"] ) && $training_fields["members"]["tile"] === $section ) : ?>
                 <div class="section-subheader members-header" style="padding-top: 10px;">
@@ -948,19 +884,87 @@ class DT_Training_Base extends DT_Module_Base {
     }
 
     public function dt_render_field_for_display_template( $post, $field_type, $field_key, $required_tag ){
-        if ( $field_type === "datetime_series" ) :
-            dt_write_log( __METHOD__ );
-            ?>
-            <div class="<?php echo esc_html( $field_key ) ?> input-group">
-                <input id="<?php echo esc_html( $field_key ) ?>" class="input-group-field dt-datetime-series-picker" type="text" autocomplete="off" <?php echo esc_html( $required_tag ) ?>
-                       value="<?php echo esc_html( $post[$field_key]["formatted"] ?? '' ) ?>" >
-                <div class="input-group-button">
-                    <!--                    <button class="button alert input-height delete-button-style datetime-series-delete-button delete-button new-${window.lodash.escape( field )}" data-key="new" data-field="${window.lodash.escape( field )}">&times;</button>-->
-                    <button id="<?php echo esc_html( $field_key ) ?>-clear-button" class="button alert clear-date-button" data-inputid="<?php echo esc_html( $field_key ) ?>" title="Delete Date" type="button">x</button>
+        $post_type = $post["post_type"];
+        if ( $post_type === "trainings" ){
+            $training_fields = DT_Posts::get_post_field_settings( $post_type );
+
+            // leave if custom display is true and hidden is false
+            if ( !isset( $training_fields[$field_key] ) || empty( $training_fields[$field_key]["custom_display"] ) || !empty( $training_fields[$field_key]["hidden"] ) ){
+                return;
+            }
+
+
+            if ( $field_key === "assigned_to" ) { ?>
+                <div class="section-subheader">
+                    <img src="<?php echo esc_url( get_template_directory_uri() ) . '/dt-assets/images/assigned-to.svg' ?>">
+                    <?php echo esc_html( $training_fields["assigned_to"]["name"] )?>
+                    <button class="help-button" data-section="assigned-to-help-text">
+                        <img class="help-icon" src="<?php echo esc_html( get_template_directory_uri() . '/dt-assets/images/help.svg' ) ?>"/>
+                    </button>
                 </div>
-            </div>
-            <?php
-        endif;
+
+                <div class="assigned_to details">
+                    <var id="assigned_to-result-container" class="result-container assigned_to-result-container"></var>
+                    <div id="assigned_to_t" name="form-assigned_to" class="scrollable-typeahead">
+                        <div class="typeahead__container">
+                            <div class="typeahead__field">
+                                <span class="typeahead__query">
+                                    <input class="js-typeahead-assigned_to input-height"
+                                           name="assigned_to[query]" placeholder="<?php echo esc_html_x( "Search Users", 'input field placeholder', 'disciple-tools-training' ) ?>"
+                                           autocomplete="off">
+                                </span>
+                                <span class="typeahead__button">
+                                    <button type="button" class="search_assigned_to typeahead__image_button input-height" data-id="assigned_to_t">
+                                        <img src="<?php echo esc_html( get_template_directory_uri() . '/dt-assets/images/chevron_down.svg' ) ?>"/>
+                                    </button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <?php }
+
+
+            if ( $field_key === "tags" ) { ?>
+                <div class="section-subheader">
+                    <?php echo esc_html( $training_fields["tags"]["name"] ) ?>
+                </div>
+                <div class="tags">
+                    <var id="tags-result-container" class="result-container"></var>
+                    <div id="tags_t" name="form-tags" class="scrollable-typeahead typeahead-margin-when-active">
+                        <div class="typeahead__container">
+                            <div class="typeahead__field">
+                                <span class="typeahead__query">
+                                    <input class="js-typeahead-tags input-height"
+                                           name="tags[query]"
+                                           placeholder="<?php echo esc_html( sprintf( _x( "Search %s", "Search 'something'", 'disciple-tools-training' ), $training_fields["tags"]['name'] ) )?>"
+                                           autocomplete="off">
+                                </span>
+                                <span class="typeahead__button">
+                                    <button type="button" data-open="create-tag-modal" class="create-new-tag typeahead__image_button input-height">
+                                        <img src="<?php echo esc_html( get_template_directory_uri() . '/dt-assets/images/tag-add.svg' ) ?>"/>
+                                    </button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <?php }
+
+
+            if ( $field_key === "datetime_series" ) {
+                ?>
+                <div class="<?php echo esc_html( $field_key ) ?> input-group">
+                    <input id="<?php echo esc_html( $field_key ) ?>" class="input-group-field dt-datetime-series-picker" type="text" autocomplete="off" <?php echo esc_html( $required_tag ) ?>
+                           value="<?php echo esc_html( $post[$field_key]["formatted"] ?? '' ) ?>" >
+                    <div class="input-group-button">
+                        <!--                    <button class="button alert input-height delete-button-style datetime-series-delete-button delete-button new-${window.lodash.escape( field )}" data-key="new" data-field="${window.lodash.escape( field )}">&times;</button>-->
+                        <button id="<?php echo esc_html( $field_key ) ?>-clear-button" class="button alert clear-date-button" data-inputid="<?php echo esc_html( $field_key ) ?>" title="Delete Date" type="button">x</button>
+                    </div>
+                </div>
+                <?php
+            };
+        }
     }
 
     // list
