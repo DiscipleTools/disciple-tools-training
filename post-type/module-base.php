@@ -68,7 +68,7 @@ class DT_Training_Base extends DT_Module_Base {
     public function dt_set_roles_and_permissions( $expected_roles ){
 
         $expected_roles["training_admin"] = [
-            "label" => __( 'Training Admin', 'disciple-tools-training' ),
+            "label" => __( 'Trainings Admin', 'disciple-tools-training' ),
             "description" => __( 'Admin access to all trainings', 'disciple-tools-training' ),
             "permissions" => []
         ];
