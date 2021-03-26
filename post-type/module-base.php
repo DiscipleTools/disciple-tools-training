@@ -884,7 +884,7 @@ class DT_Training_Base extends DT_Module_Base {
     }
 
     public function dt_render_field_for_display_template( $post, $field_type, $field_key, $required_tag ){
-        $post_type = $post["post_type"];
+        $post_type = $post["post_type"] ?? '';
         if ( $post_type === "trainings" ){
             $training_fields = DT_Posts::get_post_field_settings( $post_type );
 
