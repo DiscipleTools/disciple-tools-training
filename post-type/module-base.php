@@ -662,7 +662,7 @@ class DT_Training_Base extends DT_Module_Base {
     }
 
     public function scripts(){
-        if ( is_singular( "trainings" ) ){
+        if ( is_singular( "trainings" ) && get_the_ID() && DT_Posts::can_view( $this->post_type, get_the_ID() ) ){
 
             wp_enqueue_script( 'dt_trainings', trailingslashit( plugin_dir_url( __FILE__ ) ) . 'trainings.js', [
                 'jquery',
