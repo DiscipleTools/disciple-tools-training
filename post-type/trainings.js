@@ -175,7 +175,7 @@ jQuery(document).ready(function($) {
                 if (document.querySelector('#group-details-edit-modal') && document.querySelector('#group-details-edit-modal').contains(this)) {
                     // do nothing
                 } else {
-                    let date = window.SHAREDFUNCTIONS.convertArabicToEnglishNumbers(picker.startDate.format('YYYY-MM-DD hh:mm:ss'));
+                    let date = window.SHAREDFUNCTIONS.convertArabicToEnglishNumbers(picker.startDate.format('YYYY-MM-DD hh:mm:ss a'));
 
                     if (!picker.startDate) {
                         date = " ";//null;
