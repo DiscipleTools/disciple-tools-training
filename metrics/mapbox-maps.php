@@ -67,7 +67,7 @@ class DT_Metrics_Mapbox_Trainings_Maps extends DT_Metrics_Chart_Base
                     'list_by_grid_rest_url' => 'get_list_by_grid_id',
                     'points_rest_url' => 'points_geojson',
 
-                    'split_by' => [ "group_status" => $field_settings["group_status"] ],
+                    'split_by' => [ "status" => $field_settings["status"] ],
                 ],
             ]
         );
