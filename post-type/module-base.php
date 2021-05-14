@@ -526,6 +526,12 @@ class DT_Training_Base extends DT_Module_Base {
                 'default' => '',
                 'tile' => 'relationships',
             ];
+            $fields['favorite'] = [
+                'name'        => __( 'Favorite', 'disciple_tools' ),
+                'type'        => 'boolean',
+                'default'     => false,
+                'private'     => true
+            ];
         }
 
         if ( $post_type === 'contacts' ){
