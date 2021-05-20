@@ -305,6 +305,7 @@ class DT_Training_Base extends DT_Module_Base {
                     ],
                 ],
                 "default_color" => "#366184",
+                "select_cannot_be_empty" => true
             ];
             $fields['assigned_to'] = [
                 'name'        => __( 'Assigned To', 'disciple-tools-training' ),
