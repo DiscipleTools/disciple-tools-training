@@ -239,7 +239,6 @@ class DT_Training_Base extends DT_Module_Base {
                 'type'        => 'multi_select',
                 'default'     => [],
                 'tile'        => 'other',
-                'custom_display' => true,
             ];
             $fields["follow"] = [
                 'name'        => __( 'Follow', 'disciple-tools-training' ),
@@ -256,7 +255,7 @@ class DT_Training_Base extends DT_Module_Base {
             ];
             $fields['tasks'] = [
                 'name' => __( 'Tasks', 'disciple-tools-training' ),
-                'type' => 'post_user_meta',
+                'type' => 'task',
             ];
             $fields["duplicate_data"] = [
                 "name" => 'Duplicates', //system string does not need translation
@@ -313,7 +312,6 @@ class DT_Training_Base extends DT_Module_Base {
                 'default'     => '',
                 'tile' => 'status',
                 'icon' => get_template_directory_uri() . '/dt-assets/images/assigned-to.svg',
-                'custom_display' => true
             ];
             $fields["coaches"] = [
                 "name" => __( 'Training Coach / Church Planter', 'disciple-tools-training' ),
@@ -748,24 +746,6 @@ class DT_Training_Base extends DT_Module_Base {
             if ( !isset( $fields["status"] ) ) {
                 $fields["status"] = "new";
             }
-            if ( !isset( $fields["assigned_to"] ) ) {
-                $fields["assigned_to"] = sprintf( "user-%d", get_current_user_id() );
-            }
-            if ( isset( $fields["assigned_to"] ) ) {
-                if ( filter_var( $fields["assigned_to"], FILTER_VALIDATE_EMAIL ) ){
-                    $user = get_user_by( "email", $fields["assigned_to"] );
-                    if ( $user ) {
-                        $fields["assigned_to"] = $user->ID;
-                    } else {
-                        return new WP_Error( __FUNCTION__, "Unrecognized user", $fields["assigned_to"] );
-                    }
-                }
-                //make sure the assigned to is in the right format (user-1)
-                if ( is_numeric( $fields["assigned_to"] ) ||
-                    strpos( $fields["assigned_to"], "user" ) === false ){
-                    $fields["assigned_to"] = "user-" . $fields["assigned_to"];
-                }
-            }
         }
         return $fields;
     }
@@ -894,63 +874,6 @@ class DT_Training_Base extends DT_Module_Base {
                 return;
             }
 
-
-            if ( $field_key === "assigned_to" ) { ?>
-                <div class="section-subheader">
-                    <img src="<?php echo esc_url( get_template_directory_uri() ) . '/dt-assets/images/assigned-to.svg' ?>">
-                    <?php echo esc_html( $training_fields["assigned_to"]["name"] )?>
-                    <button class="help-button" data-section="assigned-to-help-text">
-                        <img class="help-icon" src="<?php echo esc_html( get_template_directory_uri() . '/dt-assets/images/help.svg' ) ?>"/>
-                    </button>
-                </div>
-
-                <div class="assigned_to details">
-                    <var id="assigned_to-result-container" class="result-container assigned_to-result-container"></var>
-                    <div id="assigned_to_t" name="form-assigned_to" class="scrollable-typeahead">
-                        <div class="typeahead__container">
-                            <div class="typeahead__field">
-                                <span class="typeahead__query">
-                                    <input class="js-typeahead-assigned_to input-height"
-                                           name="assigned_to[query]" placeholder="<?php echo esc_html_x( "Search Users", 'input field placeholder', 'disciple-tools-training' ) ?>"
-                                           autocomplete="off">
-                                </span>
-                                <span class="typeahead__button">
-                                    <button type="button" class="search_assigned_to typeahead__image_button input-height" data-id="assigned_to_t">
-                                        <img src="<?php echo esc_html( get_template_directory_uri() . '/dt-assets/images/chevron_down.svg' ) ?>"/>
-                                    </button>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            <?php }
-
-
-            if ( $field_key === "tags" ) { ?>
-                <div class="section-subheader">
-                    <?php echo esc_html( $training_fields["tags"]["name"] ) ?>
-                </div>
-                <div class="tags">
-                    <var id="tags-result-container" class="result-container"></var>
-                    <div id="tags_t" name="form-tags" class="scrollable-typeahead typeahead-margin-when-active">
-                        <div class="typeahead__container">
-                            <div class="typeahead__field">
-                                <span class="typeahead__query">
-                                    <input class="js-typeahead-tags input-height"
-                                           name="tags[query]"
-                                           placeholder="<?php echo esc_html( sprintf( _x( "Search %s", "Search 'something'", 'disciple-tools-training' ), $training_fields["tags"]['name'] ) )?>"
-                                           autocomplete="off">
-                                </span>
-                                <span class="typeahead__button">
-                                    <button type="button" data-open="create-tag-modal" class="create-new-tag typeahead__image_button input-height">
-                                        <img src="<?php echo esc_html( get_template_directory_uri() . '/dt-assets/images/tag-add.svg' ) ?>"/>
-                                    </button>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            <?php }
 
 
             if ( $field_key === "datetime_series" ) {
