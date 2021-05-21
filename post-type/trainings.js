@@ -216,7 +216,7 @@ jQuery(document).ready(function($) {
                                type="text"
                                data-field="${window.lodash.escape( field )}"
                                data-key="${window.lodash.escape( v.key )}"
-                               value="${window.lodash.escape( v.formatted )}"
+                               value="${window.SHAREDFUNCTIONS.formatDate( window.lodash.escape( v.timestamp ) )}"
                                class="dt-datetime-series-picker input-group-field" />
                         <div class="input-group-button">
                             <button class="button alert input-height delete-button-style datetime-series-delete-button delete-button" data-field="${window.lodash.escape( field )}" data-key="${window.lodash.escape( v.key )}">&times;</button>
