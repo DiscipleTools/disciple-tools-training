@@ -692,26 +692,7 @@ class DT_Training_Base extends DT_Module_Base {
     public function dt_post_update_fields( $fields, $post_type, $post_id, $existing_post ){
         if ( 'trainings' === $post_type ){
 
-            // assigned_to
-            if ( isset( $fields["assigned_to"] ) ) {
-                if ( filter_var( $fields["assigned_to"], FILTER_VALIDATE_EMAIL ) ){
-                    $user = get_user_by( "email", $fields["assigned_to"] );
-                    if ( $user ) {
-                        $fields["assigned_to"] = $user->ID;
-                    } else {
-                        return new WP_Error( __FUNCTION__, "Unrecognized user", $fields["assigned_to"] );
-                    }
-                }
-                //make sure the assigned to is in the right format (user-1)
-                if ( is_numeric( $fields["assigned_to"] ) ||
-                    strpos( $fields["assigned_to"], "user" ) === false ){
-                    $fields["assigned_to"] = "user-" . $fields["assigned_to"];
-                }
-                $user_id = explode( '-', $fields["assigned_to"] )[1];
-                if ( $user_id ){
-                    DT_Posts::add_shared( "trainings", $post_id, $user_id, null, false, true, false );
-                }
-            }
+//            @todo, share with user with post assigned to user.
 
             // status
             if ( isset( $fields["status"] ) && empty( $fields["end_date"] ) && empty( $existing_post["end_date"] ) && $fields["status"] === 'closed' ){
