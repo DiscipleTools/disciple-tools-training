@@ -505,7 +505,7 @@ class DT_Training_Base extends DT_Module_Base {
                 'name' => __( "Groups", 'disciple-tools-training' ),
                 'type' => 'connection',
                 "post_type" => 'groups',
-                "p2p_direction" => "to",
+                "p2p_direction" => "from",
                 "p2p_key" => "trainings_to_groups",
                 "tile" => "other",
                 'icon' => get_template_directory_uri() . "/dt-assets/images/group-child.svg",
