@@ -172,32 +172,28 @@ jQuery(document).ready(function($) {
             .on('apply.daterangepicker', function (ev, picker) {
                 $(this).val(picker.startDate.format('YYYY-MM-DD hh:mm:ss a'));
 
-                if (document.querySelector('#group-details-edit-modal') && document.querySelector('#group-details-edit-modal').contains(this)) {
-                    // do nothing
-                } else {
-                    let date = window.SHAREDFUNCTIONS.convertArabicToEnglishNumbers(picker.startDate.format('YYYY-MM-DD hh:mm:ss a'));
+                let date = window.SHAREDFUNCTIONS.convertArabicToEnglishNumbers(picker.startDate.format('YYYY-MM-DD hh:mm:ss a'));
 
-                    if (!picker.startDate) {
-                        date = " ";//null;
-                    }
-                    let id = 'meeting_times'
-                    $(`#${id}-spinner`).addClass('active')
-
-                    let data = {}
-                    data.meeting_times = []
-
-                    let key = $(this).data('key')
-                    if ( key ) {
-                        data.meeting_times.push({ key: key, value: moment.utc(date).unix() })
-                    } else {
-                        data.meeting_times.push({ value: moment.utc(date).unix() })
-                    }
-
-                    window.API.update_post(post_type, post_id, data ).then((resp) => {
-                        post = resp
-                        window.write_meeting_times_list()
-                    }).catch(handleAjaxError)
+                if (!picker.startDate) {
+                    date = " ";//null;
                 }
+                let id = 'meeting_times'
+                $(`#${id}-spinner`).addClass('active')
+
+                let data = {}
+                data.meeting_times = []
+
+                let key = $(this).data('key')
+                if ( key ) {
+                    data.meeting_times.push({ key: key, value: moment.utc(date).unix() })
+                } else {
+                    data.meeting_times.push({ value: moment.utc(date).unix() })
+                }
+
+                window.API.update_post(post_type, post_id, data ).then((resp) => {
+                    post = resp
+                    window.write_meeting_times_list()
+                }).catch(handleAjaxError)
             })
     }
 
