@@ -975,6 +975,7 @@ class DT_Training_App_Calendar_Module extends DT_Module_Base
                 [
                     'methods'  => WP_REST_Server::CREATABLE,
                     'callback' => [ $this, 'endpoint' ],
+                    'permission_callback' => '__return_true',
                 ],
             ]
         );
@@ -983,6 +984,7 @@ class DT_Training_App_Calendar_Module extends DT_Module_Base
                 [
                     'methods'  => WP_REST_Server::CREATABLE,
                     'callback' => [ $this, 'endpoint_all' ],
+                    'permission_callback' => '__return_true',
                 ],
             ]
         );

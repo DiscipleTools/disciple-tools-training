@@ -745,6 +745,7 @@ class DT_Training_Magic_Registration
                 [
                     'methods'  => WP_REST_Server::CREATABLE,
                     'callback' => [ $this, 'endpoint' ],
+                    'permission_callback' => '__return_true',
                 ],
             ]
         );
