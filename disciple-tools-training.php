@@ -5,7 +5,7 @@
  * Description: Disciple Tools Training Extension adds recording of trainings and cross reference them with contacts, groups, and locations.
  * Text Domain: disciple-tools-training
  * Domain Path: /languages
- * Version:  2.3.8
+ * Version:  2.3.9
  * Author URI: https://github.com/DiscipleTools
  * GitHub Plugin URI: https://github.com/DiscipleTools/disciple-tools-training
  * Requires at least: 4.7.0
@@ -141,6 +141,7 @@ class DT_Training {
         // metrics
         require_once( 'metrics/mapbox-maps.php' );
         require_once( 'metrics/mapbox-personal-maps.php' );
+        require_once( 'metrics/tree.php' );
         require_once( 'admin/enqueue.php' );
 
         // network support
