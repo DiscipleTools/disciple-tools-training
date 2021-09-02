@@ -70,7 +70,7 @@ class DT_Training_Base extends DT_Module_Base {
         $expected_roles["training_admin"] = [
             "label" => __( 'Trainings Admin', 'disciple-tools-training' ),
             "description" => __( 'Admin access to all trainings', 'disciple-tools-training' ),
-            "permissions" => []
+            "permissions" => [ 'access_disciple_tools' => true ]
         ];
         if ( !isset( $expected_roles["multiplier"] ) ){
             $expected_roles["multiplier"] = [
