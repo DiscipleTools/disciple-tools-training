@@ -21,6 +21,7 @@
     "low": "https://raw.githubusercontent.com/DiscipleTools/disciple-tools-version-control/master/images/dt-placeholder-772x250.jpg",
     "high": "https://raw.githubusercontent.com/DiscipleTools/disciple-tools-version-control/master/images/dt-placeholder-1544x500.jpg"
   },
+  "icon": "https://raw.githubusercontent.com/DiscipleTools/disciple-tools-training/master/training-icon.png",
   "sections": {
     "description": "Adds simple training events tracking inside Disciple Tools. It has features to support \nsharing, tasks, meeting times, connections to participants and leaders, and mapped \nlocations.",
     "installation": "(Required) You must have Disciple.Tools Theme installed before using this plugin. Once Disciple.Tools is installed, you can use the normal Plugin system to install the plugin.",
