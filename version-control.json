@@ -1,8 +1,8 @@
 {
-  "name": "Disciple Tools - Training",
+  "name": "Disciple.Tools - Training",
   "version": "2.3.9",
   "last_updated": "2021-03",
-  "author": "Disciple Tools",
+  "author": "Disciple.Tools",
   "author_homepage": "https://disciple.tools",
   "git_owner": "DiscipleTools",
   "git_repo": "disciple-tools-training",
@@ -23,7 +23,7 @@
   },
   "icon": "https://raw.githubusercontent.com/DiscipleTools/disciple-tools-training/master/training-icon.png",
   "sections": {
-    "description": "Adds simple training events tracking inside Disciple Tools. It has features to support \nsharing, tasks, meeting times, connections to participants and leaders, and mapped \nlocations.",
+    "description": "Adds simple training events tracking inside Disciple.Tools. It has features to support \nsharing, tasks, meeting times, connections to participants and leaders, and mapped \nlocations.",
     "installation": "(Required) You must have Disciple.Tools Theme installed before using this plugin. Once Disciple.Tools is installed, you can use the normal Plugin system to install the plugin.",
     "changelog": ""
   }

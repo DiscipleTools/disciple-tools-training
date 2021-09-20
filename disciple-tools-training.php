@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: Disciple Tools - Training
+ *Plugin Name: Disciple.Tools - Training
  * Plugin URI: https://github.com/DiscipleTools/disciple-tools-training
  * Description: Disciple Tools Training Extension adds recording of trainings and cross reference them with contacts, groups, and locations.
  * Text Domain: disciple-tools-training
