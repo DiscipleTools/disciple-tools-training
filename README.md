@@ -1,9 +1,9 @@
 [![Build Status](https://travis-ci.com/DiscipleTools/disciple-tools-training.svg?branch=master)](https://travis-ci.com/DiscipleTools/disciple-tools-training)
 
 ![Training](https://raw.githubusercontent.com/DiscipleTools/disciple-tools-training/master/training-banner.png)
-# Disciple Tools - Training
+# Disciple.Tools - Training
 
-Adds simple training events tracking inside Disciple Tools. It has features to support 
+Adds simple training events tracking inside Disciple.Tools. It has features to support 
 sharing, tasks, meeting times, connections to participants and leaders, and mapped 
 locations.
 
@@ -30,7 +30,7 @@ locations, and things like video links and tags.
 
 ## Requirements
 
-- Disciple Tools Theme installed on a Wordpress Server
+- Disciple.Tools Theme installed on a Wordpress Server
 
 ## Installing
 
