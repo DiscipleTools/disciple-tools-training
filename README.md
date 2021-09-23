@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.com/DiscipleTools/disciple-tools-training.svg?branch=master)](https://travis-ci.com/DiscipleTools/disciple-tools-training)
 
-![Training](https://raw.githubusercontent.com/DiscipleTools/disciple-tools-training/master/training-banner.png)
+![Plugin Banner](https://raw.githubusercontent.com/DiscipleTools/disciple-tools-training/master/training-banner.png)
 # Disciple.Tools - Training
 
 Adds simple training events tracking inside Disciple.Tools. It has features to support 
