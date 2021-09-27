@@ -236,9 +236,10 @@ class DT_Training_Base extends DT_Module_Base {
             $fields['tags'] = [
                 'name'        => __( 'Tags', 'disciple-tools-training' ),
                 'description' => _x( 'A useful way to training related items and can help training contacts associated with noteworthy characteristics. e.g. business owner, sports lover. The contacts can also be filtered using these tags.', 'Optional Documentation', 'disciple-tools-training' ),
-                'type'        => 'multi_select',
+                'type'        => 'tags',
                 'default'     => [],
                 'tile'        => 'other',
+                'icon' => get_template_directory_uri() . "/dt-assets/images/tag.svg",
             ];
             $fields["follow"] = [
                 'name'        => __( 'Follow', 'disciple-tools-training' ),
