@@ -33,7 +33,6 @@ class DT_Training_Base extends DT_Module_Base {
         add_filter( 'dt_set_roles_and_permissions', [ $this, 'dt_set_roles_and_permissions' ], 20, 1 );
 
         //setup tiles and fields
-        add_action( 'p2p_init', [ $this, 'p2p_init' ] );
         add_filter( 'dt_custom_fields_settings', [ $this, 'dt_custom_fields_settings' ], 10, 2 );
         add_filter( 'dt_details_additional_tiles', [ $this, 'dt_details_additional_tiles' ], 10, 2 );
         add_action( 'dt_details_additional_section', [ $this, 'dt_details_additional_section' ], 20, 2 );
@@ -46,7 +45,6 @@ class DT_Training_Base extends DT_Module_Base {
         add_action( "dt_post_created", [ $this, "dt_post_created" ], 10, 3 );
         add_action( "dt_comment_created", [ $this, "dt_comment_created" ], 10, 4 );
         add_action( "post_connection_added", [ $this, "post_connection_added" ], 10, 4 );
-        add_action( "post_connection_removed", [ $this, "post_connection_removed" ], 10, 4 );
         add_filter( "dt_format_activity_message", [ $this, "dt_format_activity_message" ], 10, 2 );
 
         add_filter( "dt_adjust_post_custom_fields", [ $this, 'dt_adjust_post_custom_fields' ], 10, 2 );
@@ -119,115 +117,6 @@ class DT_Training_Base extends DT_Module_Base {
         }
 
         return $expected_roles;
-    }
-
-    // setup tiles
-
-    public function p2p_init(){
-        /**
-         * Training members field
-         */
-        p2p_register_connection_type(
-            [
-                'name'           => 'trainings_to_contacts',
-                'from'           => 'trainings',
-                'to'             => 'contacts',
-                'admin_box' => [
-                    'show' => false,
-                ],
-                'title'          => [
-                    'from' => 'Members',
-                    'to'   => 'Contacts'
-                ]
-            ]
-        );
-        /**
-         * Training to groups
-         */
-        p2p_register_connection_type(
-            [
-                'name'           => 'trainings_to_groups',
-                'from'           => 'trainings',
-                'to'             => 'groups',
-                'admin_box' => [
-                    'show' => false,
-                ],
-                'title'          => [
-                    'from' => 'Trainings',
-                    'to'   => 'Groups'
-                ]
-            ]
-        );
-        /**
-         * Training leaders field
-         */
-        p2p_register_connection_type(
-            [
-                'name'           => 'trainings_to_leaders',
-                'from'           => 'trainings',
-                'to'             => 'contacts',
-                'admin_box' => [
-                    'show' => false,
-                ],
-                'title'          => [
-                    'from' => 'Trainings',
-                    'to'   => 'Leaders',
-                ]
-            ]
-        );
-        /**
-         * Training coaches field
-         */
-        p2p_register_connection_type(
-            [
-                'name'           => 'trainings_to_coaches',
-                'from'           => 'trainings',
-                'to'             => 'contacts',
-                'admin_box' => [
-                    'show' => false,
-                ],
-                'title'          => [
-                    'from' => 'Trainings',
-                    'to'   => 'Coaches',
-                ]
-            ]
-        );
-        /**
-         * Parent and child trainings
-         */
-        p2p_register_connection_type(
-            [
-                'name'         => 'trainings_to_trainings',
-                'from'         => 'trainings',
-                'to'           => 'trainings',
-                'title'        => [
-                    'from' => 'Planted by',
-                    'to'   => 'Planting',
-                ],
-            ]
-        );
-        /**
-         * Peer trainings
-         */
-        p2p_register_connection_type( [
-            'name'         => 'trainings_to_peers',
-            'from'         => 'trainings',
-            'to'           => 'trainings',
-        ] );
-        /**
-         * Training People Groups field
-         */
-        p2p_register_connection_type(
-            [
-                'name'        => 'trainings_to_peoplegroups',
-                'from'        => 'trainings',
-                'to'          => 'peoplegroups',
-                'title'       => [
-                    'from' => 'People Groups',
-                    'to'   => 'Trainings',
-                ]
-            ]
-        );
     }
 
     public function dt_custom_fields_settings( $fields, $post_type ){
@@ -479,7 +368,8 @@ class DT_Training_Base extends DT_Module_Base {
                 "post_type" => "contacts",
                 "p2p_direction" => "from",
                 "p2p_key" => "trainings_to_contacts",
-                "custom_display" => true
+                "custom_display" => true,
+                "connection_count_field" => [ "post_type" => "trainings", "field_key" => "member_count", "connection_field" => "members" ]
             ];
             $fields["leaders"] = [
                 "name" => __( 'Leaders', 'disciple-tools-training' ),
@@ -488,6 +378,7 @@ class DT_Training_Base extends DT_Module_Base {
                 "post_type" => "contacts",
                 "p2p_direction" => "from",
                 "p2p_key" => "trainings_to_leaders",
+                "connection_count_field" => [ "post_type" => "trainings", "field_key" => "leader_count", "connection_field" => "leaders" ]
             ];
 
             $fields["peoplegroups"] = [
@@ -539,6 +430,7 @@ class DT_Training_Base extends DT_Module_Base {
                 "tile" => "other",
                 'icon' => get_template_directory_uri() . "/dt-assets/images/socialmedia.svg",
                 'create-icon' => get_template_directory_uri() . "/dt-assets/images/add-group.svg",
+                "connection_count_field" => [ "post_type" => "trainings", "field_key" => "leader_count", "connection_field" => "leaders" ]
             ];
             $fields['training_participant'] = [
                 'name' => __( "Training as Participant", 'disciple-tools-training' ),
@@ -550,6 +442,7 @@ class DT_Training_Base extends DT_Module_Base {
                 "tile" => "other",
                 'icon' => get_template_directory_uri() . "/dt-assets/images/socialmedia.svg",
                 'create-icon' => get_template_directory_uri() . "/dt-assets/images/add-group.svg",
+                "connection_count_field" => [ "post_type" => "trainings", "field_key" => "member_count", "connection_field" => "members" ]
             ];
         }
         if ( $post_type === 'groups' ){
@@ -764,10 +657,6 @@ class DT_Training_Base extends DT_Module_Base {
                         DT_Posts::add_shared( $post_type, $post_id, $user_id, null, false, false );
                     }
                 }
-                self::update_training_member_count( $post_id );
-            }
-            if ( $field_key === "leaders" ){
-                self::update_training_leader_count( $post_id );
             }
             if ( $field_key === "coaches" ){
                 // share the training with the coach when a coach is added.
@@ -778,7 +667,6 @@ class DT_Training_Base extends DT_Module_Base {
             }
         }
         if ( $post_type === "contacts" && $field_key === "trainings" ){
-            self::update_training_member_count( $value );
             // share the training with the owner of the contact.
             $assigned_to = get_post_meta( $post_id, "assigned_to", true );
             if ( $assigned_to && strpos( $assigned_to, "-" ) !== false ){
@@ -787,20 +675,6 @@ class DT_Training_Base extends DT_Module_Base {
                     DT_Posts::add_shared( "trainings", $value, $user_id, null, false, false );
                 }
             }
-        }
-    }
-
-    public function post_connection_removed( $post_type, $post_id, $field_key, $value ){
-        if ( $post_type === "trainings" ){
-            if ( $field_key === "members" ){
-                self::update_training_member_count( $post_id, "removed" );
-            }
-            if ( $field_key === "leaders" ){
-                self::update_training_leader_count( $post_id, "removed" );
-            }
-        }
-        if ( $post_type === "contacts" && $field_key === "trainings" ){
-            self::update_training_member_count( $value, "removed" );
         }
     }
 
@@ -1023,42 +897,6 @@ class DT_Training_Base extends DT_Module_Base {
             }
         }
         return $permissions;
-    }
-
-    private static function update_training_member_count( $training_id, $action = "added" ){
-        $training = get_post( $training_id );
-        $args = [
-            'connected_type'   => "trainings_to_contacts",
-            'connected_direction' => 'from',
-            'connected_items'  => $training,
-            'nopaging'         => true,
-            'suppress_filters' => false,
-        ];
-        $members = get_posts( $args );
-        $member_count = get_post_meta( $training_id, 'member_count', true );
-        if ( sizeof( $members ) > intval( $member_count ) ){
-            update_post_meta( $training_id, 'member_count', sizeof( $members ) );
-        } elseif ( $action === "removed" ){
-            update_post_meta( $training_id, 'member_count', intval( $member_count ) - 1 );
-        }
-    }
-
-    private static function update_training_leader_count( $training_id, $action = "added" ){
-        $training = get_post( $training_id );
-        $args = [
-            'connected_type'   => "trainings_to_leaders",
-            'connected_direction' => 'from',
-            'connected_items'  => $training,
-            'nopaging'         => true,
-            'suppress_filters' => false,
-        ];
-        $leaders = get_posts( $args );
-        $leader_count = get_post_meta( $training_id, 'leader_count', true );
-        if ( sizeof( $leaders ) > intval( $leader_count ) ){
-            update_post_meta( $training_id, 'leader_count', sizeof( $leaders ) );
-        } elseif ( $action === "removed" ){
-            update_post_meta( $training_id, 'leader_count', intval( $leader_count - 1 ) );
-        }
     }
 
     private static function check_requires_update( $training_id ){
