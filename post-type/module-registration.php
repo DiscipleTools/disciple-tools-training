@@ -317,8 +317,8 @@ class DT_Training_Magic_Registration
 
         global $wp_styles;
         if ( isset( $wp_styles ) ) {
-            foreach ($wp_styles->queue as $key => $item) {
-                if ( !in_array( $item, $allowed_css )) {
+            foreach ( $wp_styles->queue as $key => $item ) {
+                if ( !in_array( $item, $allowed_css ) ) {
                     unset( $wp_styles->queue[$key] );
                 }
             }
@@ -972,14 +972,14 @@ class DT_Training_Magic_Registration
             return $this->_empty_geojson();
         }
 
-        foreach ($results as $index => $result) {
+        foreach ( $results as $index => $result ) {
             $results[$index]['payload'] = maybe_unserialize( $result['payload'] );
         }
 
         // @todo sum multiple reports for same area
 
         $features = [];
-        foreach ($results as $result) {
+        foreach ( $results as $result ) {
             // get year
             $time = $result['time_end'];
             if ( empty( $time ) ) {

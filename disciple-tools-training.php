@@ -226,7 +226,7 @@ class DT_Training {
         $mo_file = $domain . '-' . $locale . '.mo';
         $path = realpath( dirname( __FILE__ ) . '/languages' );
 
-        if ($path && file_exists( $path )) {
+        if ( $path && file_exists( $path ) ) {
             load_textdomain( $domain, $path . '/' . $mo_file );
         }
     }
@@ -318,7 +318,7 @@ function dt_training_hook_admin_notice() {
 /**
  * AJAX handler to store the state of dismissible notices.
  */
-if ( !function_exists( "dt_hook_ajax_notice_handler" )){
+if ( !function_exists( "dt_hook_ajax_notice_handler" ) ){
     function dt_hook_ajax_notice_handler(){
         check_ajax_referer( 'wp_rest_dismiss', 'security' );
         if ( isset( $_POST["type"] ) ){
