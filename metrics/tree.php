@@ -120,7 +120,7 @@ class DT_Metrics_Trainings_Tree extends DT_Metrics_Chart_Base
         if ( empty( $query ) ) {
             $query = $this->query_multiplying_only();
         }
-        if ( is_wp_error( $query )){
+        if ( is_wp_error( $query ) ){
             return $this->_circular_structure_error( $query );
         }
         if ( empty( $query ) ) {
@@ -130,7 +130,7 @@ class DT_Metrics_Trainings_Tree extends DT_Metrics_Chart_Base
         return $this->build_training_tree( 0, $menu_data, 0 );
     }
 
-    public function prepare_menu_array( $query) {
+    public function prepare_menu_array( $query ) {
         // prepare special array with parent-child relations
         $menu_data = array(
             'items' => array(),
@@ -145,10 +145,10 @@ class DT_Metrics_Trainings_Tree extends DT_Metrics_Chart_Base
         return $menu_data;
     }
 
-    public function build_training_tree( $parent_id, $menu_data, $gen, $unique_check = []) {
+    public function build_training_tree( $parent_id, $menu_data, $gen, $unique_check = [] ) {
         $html = '';
 
-        if (isset( $menu_data['parents'][$parent_id] ))
+        if ( isset( $menu_data['parents'][$parent_id] ) )
         {
             $gen++;
 
@@ -158,7 +158,7 @@ class DT_Metrics_Trainings_Tree extends DT_Metrics_Chart_Base
             }
 
             $html = '<ul class="ul-gen-'.esc_html( $gen ).'">';
-            foreach ($menu_data['parents'][$parent_id] as $item_id)
+            foreach ( $menu_data['parents'][$parent_id] as $item_id )
             {
                 $html .= '<li class="gen-node li-gen-' . esc_html( $gen ) . ' ' . esc_attr( $first_section ) . '">';
                 $html .= '(' . esc_html( $gen ) . ') ';

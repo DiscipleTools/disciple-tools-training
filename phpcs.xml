@@ -139,6 +139,7 @@
     <exclude name="WordPress.Arrays.CommaAfterArrayItem.NoSpaceAfterComma" />
     <exclude name="WordPress.Arrays.CommaAfterArrayItem.SpaceAfterComma" />
     <exclude name="WordPress.Arrays.CommaAfterArrayItem.SpaceBeforeComma" />
+    <exclude name="WordPress.Arrays.ArrayDeclarationSpacing.AssociativeArrayFound" />
     <exclude name="WordPress.PHP.YodaConditions.NotYoda" />
     <!-- <exclude name="WordPress.WhiteSpace.CastStructureSpacing.NoSpaceBeforeOpenParenthesis" /> -->
     <!-- <exclude name="WordPress.WhiteSpace.ControlStructureSpacing.BlankLineAfterEnd" /> -->
@@ -147,9 +148,9 @@
     <!-- <exclude name="WordPress.WhiteSpace.ControlStructureSpacing.ExtraSpaceBeforeCloseParenthesis" /> -->
     <!-- <exclude name="WordPress.WhiteSpace.ControlStructureSpacing.ExtraSpaceBeforeOpenParenthesis" /> -->
     <exclude name="WordPress.WhiteSpace.ControlStructureSpacing.NoSpaceAfterCloseParenthesis" />
-    <exclude name="WordPress.WhiteSpace.ControlStructureSpacing.NoSpaceAfterOpenParenthesis" />
+    <!-- <exclude name="WordPress.WhiteSpace.ControlStructureSpacing.NoSpaceAfterOpenParenthesis" />-->
     <!-- <exclude name="WordPress.WhiteSpace.ControlStructureSpacing.NoSpaceAfterStructureOpen" /> -->
-    <exclude name="WordPress.WhiteSpace.ControlStructureSpacing.NoSpaceBeforeCloseParenthesis" />
+    <!-- <exclude name="WordPress.WhiteSpace.ControlStructureSpacing.NoSpaceBeforeCloseParenthesis" />-->
     <!-- <exclude name="WordPress.WhiteSpace.ControlStructureSpacing.NoSpaceBeforeOpenParenthesis" /> -->
     <exclude name="WordPress.WhiteSpace.ControlStructureSpacing.NoSpaceBetweenStructureColon" />
     <exclude name="WordPress.WhiteSpace.ControlStructureSpacing.OpenBraceNotSameLine" />

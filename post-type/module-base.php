@@ -58,7 +58,7 @@ class DT_Training_Base extends DT_Module_Base {
     // setup post type
 
     public function after_setup_theme(){
-        if ( class_exists( 'Disciple_Tools_Post_Type_Template' )) {
+        if ( class_exists( 'Disciple_Tools_Post_Type_Template' ) ) {
             new Disciple_Tools_Post_Type_Template( $this->post_type, $this->single_name, $this->plural_name );
         }
     }
@@ -630,7 +630,7 @@ class DT_Training_Base extends DT_Module_Base {
         if ( $post_type === "trainings" ){
             do_action( "dt_training_created", $post_id, $initial_fields );
             $training = DT_Posts::get_post( 'trainings', $post_id, true, false );
-            if ( isset( $training["assigned_to"] )) {
+            if ( isset( $training["assigned_to"] ) ) {
                 if ( $training["assigned_to"]["id"] ) {
                     DT_Posts::add_shared( "trainings", $post_id, $training["assigned_to"]["id"], null, false, false, false );
                 }
@@ -902,7 +902,7 @@ class DT_Training_Base extends DT_Module_Base {
     private static function check_requires_update( $training_id ){
         if ( get_current_user_id() ){
             $requires_update = get_post_meta( $training_id, "requires_update", true );
-            if ( $requires_update == "yes" || $requires_update == true || $requires_update == "1"){
+            if ( $requires_update == "yes" || $requires_update == true || $requires_update == "1" ){
                 //don't remove update needed if the user is a dispatcher (and not assigned to the trainings.)
                 if ( DT_Posts::can_view_all( 'trainings' ) ){
                     if ( dt_get_user_id_from_assigned_to( get_post_meta( $training_id, "assigned_to", true ) ) === get_current_user_id() ){
