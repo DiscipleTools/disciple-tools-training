@@ -305,7 +305,8 @@ class DT_Training_Base extends DT_Module_Base {
                 'type'        => 'location_meta',
                 "tile"      => "details",
                 'mapbox'    => false,
-                'hidden' => true
+                'hidden' => true,
+                "icon" => get_template_directory_uri() . "/dt-assets/images/location.svg?v=2",
             ];
             $fields["contact_address"] = [
                 "name" => __( 'Address', 'disciple-tools-training' ),
