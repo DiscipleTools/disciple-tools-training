@@ -445,6 +445,15 @@ class DT_Training_Base extends DT_Module_Base {
                 'create-icon' => get_template_directory_uri() . "/dt-assets/images/add-group.svg",
                 "connection_count_field" => [ "post_type" => "trainings", "field_key" => "member_count", "connection_field" => "members" ]
             ];
+            $fields["training_coach"] = [
+                "name" => __( "Coach of Training", 'disciple_tools' ),
+                "type" => "connection",
+                "p2p_direction" => "to",
+                "p2p_key" => "trainings_to_coaches",
+                "post_type" => "trainings",
+                "tile" => "no_tile",
+                'icon' => get_template_directory_uri() . '/dt-assets/images/coach.svg?v=2',
+            ];
         }
         if ( $post_type === 'groups' ){
             $fields[$this->post_type] = [
