@@ -4,8 +4,8 @@ if ( !defined( 'ABSPATH' ) ) { exit; } // Exit if accessed directly.
 class DT_Training_Base extends DT_Module_Base {
     public $post_type = "trainings";
     public $module = "trainings_base";
-    public $single_name = 'Prayer Subscription';
-    public $plural_name = 'Subscriptions';
+    public $single_name = 'Training';
+    public $plural_name = 'Trainings';
     public static function post_type(){
         return 'prayers';
     }
