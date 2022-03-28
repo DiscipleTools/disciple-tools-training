@@ -851,7 +851,7 @@ class DT_Training_Base extends DT_Module_Base {
                 }
                 $filters["tabs"][] = [
                     "key" => "all",
-                    "label" => _x( "All", 'List Filters', 'disciple-tools-training' ),
+                    "label" => _x( "Default Filters", 'List Filters', 'disciple-tools-training' ),
                     "count" => $total_all,
                     "order" => 10
                 ];
@@ -859,7 +859,7 @@ class DT_Training_Base extends DT_Module_Base {
                 $filters["filters"][] = [
                     'ID' => 'all',
                     'tab' => 'all',
-                    'name' => _x( "All", 'List Filters', 'disciple-tools-training' ),
+                    'name' => _x( "All Trainings", 'List Filters', 'disciple-tools-training' ),
                     'query' => [
                         'sort' => '-post_date'
                     ],
