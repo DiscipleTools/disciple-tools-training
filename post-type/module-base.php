@@ -7,7 +7,7 @@ class DT_Training_Base extends DT_Module_Base {
     public $single_name = 'Training';
     public $plural_name = 'Trainings';
     public static function post_type(){
-        return 'prayers';
+        return 'trainings';
     }
 
 
