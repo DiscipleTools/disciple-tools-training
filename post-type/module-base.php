@@ -859,7 +859,7 @@ class DT_Training_Base extends DT_Module_Base {
                 $filters["filters"][] = [
                     'ID' => 'all',
                     'tab' => 'all',
-                    'name' => _x( "All Trainings", 'List Filters', 'disciple-tools-training' ),
+                    'name' => sprintf( _x( "All %s", 'All records', 'disciple_tools' ), $post_label_plural ),
                     'query' => [
                         'sort' => '-post_date'
                     ],
