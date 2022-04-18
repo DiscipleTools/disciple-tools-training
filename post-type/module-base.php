@@ -764,6 +764,7 @@ class DT_Training_Base extends DT_Module_Base {
         if ( $post_type === 'trainings' ){
             $counts = self::get_my_trainings_status_type();
             $fields = DT_Posts::get_post_field_settings( $post_type );
+            $post_label_plural = DT_Posts::get_post_settings( $post_type )['label_plural'];
             /**
              * Setup my training filters
              */
