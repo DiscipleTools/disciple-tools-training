@@ -124,7 +124,7 @@ class DT_Training_Base extends DT_Module_Base {
             // framework fields
             $fields['tags'] = [
                 'name'        => __( 'Tags', 'disciple-tools-training' ),
-                'description' => _x( 'A useful way to training related items and can help training contacts associated with noteworthy characteristics. e.g. business owner, sports lover. The contacts can also be filtered using these tags.', 'Optional Documentation', 'disciple-tools-training' ),
+                'description' => _x( 'A useful way to group related items and can be used to filter the records', 'Optional Documentation', 'disciple-tools-training' ),
                 'type'        => 'tags',
                 'default'     => [],
                 'tile'        => 'other',
