@@ -527,6 +527,7 @@ class DT_Training_Base extends DT_Module_Base {
             if ( isset( $training_fields["members"]["tile"] ) && $training_fields["members"]["tile"] === $section ) : ?>
                 <div class="section-subheader members-header" style="padding-top: 10px;">
                     <div style="padding-bottom: 5px; margin-right:10px; display: inline-block">
+                        <img class="dt-icon" src="<?php echo esc_html( get_template_directory_uri() . '/dt-assets/icons/format-list-bulleted.svg?v=2' ) ?>"/>
                         <?php esc_html_e( "Member List", 'disciple-tools-training' ) ?>
                     </div>
                     <button type="button" class="create-new-record" data-connection-key="members" style="height: 36px;">
