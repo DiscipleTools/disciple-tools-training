@@ -229,7 +229,7 @@ class DT_Training_Base extends DT_Module_Base {
                 'type'        => 'text',
                 'default'     => time(),
                 'tile' => 'details',
-                'icon' => get_template_directory_uri() . '/dt-assets/images/edit.svg',
+                'icon' => plugin_dir_url( __DIR__ ) . '/assets/icons/video-image.svg',
             ];
             $fields['notes'] = [
                 'name'        => __( 'Notes', 'disciple-tools-training' ),
