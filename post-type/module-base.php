@@ -128,7 +128,7 @@ class DT_Training_Base extends DT_Module_Base {
                 'type'        => 'tags',
                 'default'     => [],
                 'tile'        => 'other',
-                'icon' => get_template_directory_uri() . "/dt-assets/images/tag.svg",
+                'icon' => plugin_dir_url( __DIR__ ) . '/assets/icons/tag-multiple.svg',
             ];
             $fields["follow"] = [
                 'name'        => __( 'Follow', 'disciple-tools-training' ),
@@ -146,6 +146,7 @@ class DT_Training_Base extends DT_Module_Base {
             $fields['tasks'] = [
                 'name' => __( 'Tasks', 'disciple-tools-training' ),
                 'type' => 'task',
+                'icon' => plugin_dir_url( __DIR__ ) . '/assets/icons/calendar-clock.svg',
             ];
             $fields["duplicate_data"] = [
                 "name" => 'Duplicates', //system string does not need translation
@@ -156,6 +157,7 @@ class DT_Training_Base extends DT_Module_Base {
                 'name' => "Status",
                 'type' => 'key_select',
                 "tile" => 'status',
+                'icon' => plugin_dir_url( __DIR__ ) . '/assets/icons/traffic-light.svg?v=2',
                 'default' => [
                     'new'   => [
                         "label" => _x( 'New', 'Training Status label', 'disciple-tools-training' ),
@@ -202,7 +204,7 @@ class DT_Training_Base extends DT_Module_Base {
                 'type'        => 'user_select',
                 'default'     => '',
                 'tile' => 'status',
-                'icon' => get_template_directory_uri() . '/dt-assets/images/assigned-to.svg',
+                'icon' => plugin_dir_url( __DIR__ ) . '/assets/icons/briefcase-account.svg',
             ];
             $fields["coaches"] = [
                 "name" => __( 'Training Coach / Church Planter', 'disciple-tools-training' ),
@@ -212,8 +214,8 @@ class DT_Training_Base extends DT_Module_Base {
                 "p2p_direction" => "from",
                 "p2p_key" => "trainings_to_coaches",
                 'tile' => 'status',
-                'icon' => get_template_directory_uri() . '/dt-assets/images/coach.svg',
-                'create-icon' => get_template_directory_uri() . '/dt-assets/images/add-contact.svg',
+                'icon' => plugin_dir_url( __DIR__ ) . '/assets/icons/human-male-board.svg',
+                'create-icon' => plugin_dir_url( __DIR__ ) . '/assets/icons/add-contact.svg',
             ];
 
 
@@ -222,6 +224,7 @@ class DT_Training_Base extends DT_Module_Base {
                 'description' => '',
                 'type'        => 'boolean',
                 'default'     => false,
+                'icon' => plugin_dir_url( __DIR__ ) . '/assets/icons/clock-alert.svg',
             ];
             $fields['video_link'] = [
                 'name'        => __( 'Video Link', 'disciple-tools-training' ),
@@ -237,13 +240,13 @@ class DT_Training_Base extends DT_Module_Base {
                 'type'        => 'text',
                 'default'     => time(),
                 'tile' => 'details',
-                'icon' => get_template_directory_uri() . '/dt-assets/images/edit.svg',
+                'icon' => plugin_dir_url( __DIR__ ) . '/assets/icons/text.svg',
             ];
 
 
             $fields["meeting_times"] = [
                 "name" => __( 'Meeting Times', 'disciple-tools-training' ),
-                "icon" => get_template_directory_uri() . "/dt-assets/images/phone.svg",
+                "icon" => plugin_dir_url( __DIR__ ) . '/assets/icons/calendar-clock.svg',
                 "type" => "datetime_series",
                 "tile" => "meeting_times",
                 "customizable" => false,
@@ -257,35 +260,35 @@ class DT_Training_Base extends DT_Module_Base {
 //                'description' => _x( 'The date this training stopped meeting (if applicable).', 'Optional Documentation', 'disciple-tools-training' ),
 //                'type'        => 'datetime',
 //                'default'     => '',
-//                'icon' => get_template_directory_uri() . '/dt-assets/images/date-end.svg',
+//                'icon' => plugin_dir_url( __DIR__ ) . '/assets/icons/calendar-remove.svg',
 //            ];
 //            $fields['repeat_year'] = [
 //                'name'        => __( 'End Date', 'disciple-tools-training' ),
 //                'description' => '',
 //                'type'        => 'text',
 //                'default'     => '',
-//                'icon' => get_template_directory_uri() . '/dt-assets/images/date-end.svg',
+//                'icon' => plugin_dir_url( __DIR__ ) . '/assets/icons/calendar-remove.svg',
 //            ];
 //            $fields['repeat_month'] = [
 //                'name'        => __( 'End Date', 'disciple-tools-training' ),
 //                'description' => '',
 //                'type'        => 'text',
 //                'default'     => '',
-//                'icon' => get_template_directory_uri() . '/dt-assets/images/date-end.svg',
+//                'icon' => plugin_dir_url( __DIR__ ) . '/assets/icons/calendar-remove.svg',
 //            ];
 //            $fields['repeat_week'] = [
 //                'name'        => __( 'End Date', 'disciple-tools-training' ),
 //                'description' => '',
 //                'type'        => 'text',
 //                'default'     => '',
-//                'icon' => get_template_directory_uri() . '/dt-assets/images/date-end.svg',
+//                'icon' => plugin_dir_url( __DIR__ ) . '/assets/icons/calendar-remove.svg',
 //            ];
 //            $fields['repeat_day'] = [
 //                'name'        => __( 'End Date', 'disciple-tools-training' ),
 //                'description' => '',
 //                'type'        => 'text',
 //                'default'     => '',
-//                'icon' => get_template_directory_uri() . '/dt-assets/images/date-end.svg',
+//                'icon' => plugin_dir_url( __DIR__ ) . '/assets/icons/calendar-remove.svg',
 //            ];
 
 
@@ -297,7 +300,7 @@ class DT_Training_Base extends DT_Module_Base {
                 'mapbox'    => false,
                 "in_create_form" => true,
                 "tile" => "details",
-                "icon" => get_template_directory_uri() . "/dt-assets/images/location.svg",
+                "icon" => plugin_dir_url( __DIR__ ) . '/assets/icons/map-marker.svg',
             ];
             $fields['location_grid_meta'] = [
                 'name'        => __( 'Locations', 'disciple-tools-training' ), //system string does not need translation
@@ -306,11 +309,11 @@ class DT_Training_Base extends DT_Module_Base {
                 "tile"      => "details",
                 'mapbox'    => false,
                 'hidden' => true,
-                "icon" => get_template_directory_uri() . "/dt-assets/images/location.svg?v=2",
+                "icon" => plugin_dir_url( __DIR__ ) . '/assets/icons/map-marker-multiple.svg',
             ];
             $fields["contact_address"] = [
                 "name" => __( 'Address', 'disciple-tools-training' ),
-                "icon" => get_template_directory_uri() . "/dt-assets/images/house.svg",
+                "icon" => plugin_dir_url( __DIR__ ) . '/assets/icons/map-marker-outline.svg',
                 "type" => "communication_channel",
                 "tile" => "details",
                 'mapbox'    => false,
@@ -336,8 +339,8 @@ class DT_Training_Base extends DT_Module_Base {
                 "p2p_direction" => "from",
                 "p2p_key" => "trainings_to_trainings",
                 'tile' => 'other',
-                'icon' => get_template_directory_uri() . '/dt-assets/images/group-parent.svg',
-                'create-icon' => get_template_directory_uri() . '/dt-assets/images/add-group.svg',
+                'icon' => plugin_dir_url( __DIR__ ) . '/assets/icons/parent.svg',
+                'create-icon' => plugin_dir_url( __DIR__ ) . '/assets/icons/add.svg',
             ];
             $fields["peer_trainings"] = [
                 "name" => __( 'Peer Training', 'disciple-tools-training' ),
@@ -347,8 +350,8 @@ class DT_Training_Base extends DT_Module_Base {
                 "p2p_direction" => "any",
                 "p2p_key" => "trainings_to_peers",
                 'tile' => 'other',
-                'icon' => get_template_directory_uri() . '/dt-assets/images/group-peer.svg',
-                'create-icon' => get_template_directory_uri() . '/dt-assets/images/add-group.svg',
+                'icon' => plugin_dir_url( __DIR__ ) . '/assets/icons/peer.svg',
+                'create-icon' => plugin_dir_url( __DIR__ ) . '/assets/icons/add.svg',
             ];
             $fields["child_trainings"] = [
                 "name" => __( 'Child Training', 'disciple-tools-training' ),
@@ -358,12 +361,13 @@ class DT_Training_Base extends DT_Module_Base {
                 "p2p_direction" => "to",
                 "p2p_key" => "trainings_to_trainings",
                 'tile' => 'other',
-                'icon' => get_template_directory_uri() . '/dt-assets/images/group-child.svg',
-                'create-icon' => get_template_directory_uri() . '/dt-assets/images/add-group.svg',
+                'icon' => plugin_dir_url( __DIR__ ) . '/assets/icons/child.svg',
+                'create-icon' => plugin_dir_url( __DIR__ ) . '/assets/icons/add.svg',
             ];
             $fields["members"] = [
                 "name" => __( 'Member List', 'disciple-tools-training' ),
                 'description' => _x( 'The contacts who are members of this training.', 'Optional Documentation', 'disciple-tools-training' ),
+                'icon' => plugin_dir_url( __DIR__ ) . '/assets/icons/format-list-bulleted.svg',
                 "tile" => "relationships",
                 "type" => "connection",
                 "post_type" => "contacts",
@@ -376,6 +380,7 @@ class DT_Training_Base extends DT_Module_Base {
                 "name" => __( 'Leaders', 'disciple-tools-training' ),
                 'description' => '',
                 "type" => "connection",
+                'icon' => plugin_dir_url( __DIR__ ) . '/assets/icons/foot-print.svg',
                 "post_type" => "contacts",
                 "p2p_direction" => "from",
                 "p2p_key" => "trainings_to_leaders",
@@ -387,6 +392,7 @@ class DT_Training_Base extends DT_Module_Base {
                 'description' => _x( 'The people trainings represented by this training.', 'Optional Documentation', 'disciple-tools-training' ),
                 "type" => "connection",
                 'tile' => 'details',
+                'icon' => plugin_dir_url( __DIR__ ) . '/assets/icons/people-groups.svg',
                 "post_type" => "peoplegroups",
                 "p2p_direction" => "from",
                 "p2p_key" => "trainings_to_peoplegroups"
@@ -399,8 +405,8 @@ class DT_Training_Base extends DT_Module_Base {
                 "p2p_direction" => "from",
                 "p2p_key" => "trainings_to_groups",
                 "tile" => "other",
-                'icon' => get_template_directory_uri() . "/dt-assets/images/group-child.svg",
-                'create-icon' => get_template_directory_uri() . "/dt-assets/images/add-group.svg",
+                'icon' => plugin_dir_url( __DIR__ ) . '/assets/icons/account-group.svg',
+                'create-icon' => plugin_dir_url( __DIR__ ) . '/assets/icons/add-group.svg',
             ];
 
             // count fields
@@ -410,6 +416,7 @@ class DT_Training_Base extends DT_Module_Base {
                 'type' => 'number',
                 'default' => '',
                 'tile' => 'relationships',
+                'icon' => plugin_dir_url( __DIR__ ) . '/assets/icons/pound-box-outline.svg',
             ];
             $fields["leader_count"] = [
                 'name' => __( 'Leader Count', 'disciple-tools-training' ),
@@ -417,6 +424,7 @@ class DT_Training_Base extends DT_Module_Base {
                 'type' => 'number',
                 'default' => '',
                 'tile' => 'relationships',
+                'icon' => plugin_dir_url( __DIR__ ) . '/assets/icons/pound-box.svg',
             ];
         }
 
@@ -429,8 +437,8 @@ class DT_Training_Base extends DT_Module_Base {
                 "p2p_direction" => "to",
                 "p2p_key" => "trainings_to_leaders",
                 "tile" => "other",
-                'icon' => get_template_directory_uri() . "/dt-assets/images/socialmedia.svg",
-                'create-icon' => get_template_directory_uri() . "/dt-assets/images/add-group.svg",
+                'icon' => plugin_dir_url( __DIR__ ) . '/assets/icons/shield-account.svg',
+                'create-icon' => plugin_dir_url( __DIR__ ) . '/assets/icons/add.svg',
                 "connection_count_field" => [ "post_type" => "trainings", "field_key" => "leader_count", "connection_field" => "leaders" ]
             ];
             $fields['training_participant'] = [
@@ -441,8 +449,8 @@ class DT_Training_Base extends DT_Module_Base {
                 "p2p_direction" => "to",
                 "p2p_key" => "trainings_to_contacts",
                 "tile" => "other",
-                'icon' => get_template_directory_uri() . "/dt-assets/images/socialmedia.svg",
-                'create-icon' => get_template_directory_uri() . "/dt-assets/images/add-group.svg",
+                'icon' => plugin_dir_url( __DIR__ ) . '/assets/icons/shield-account-outline.svg',
+                'create-icon' => plugin_dir_url( __DIR__ ) . '/assets/icons/add.svg',
                 "connection_count_field" => [ "post_type" => "trainings", "field_key" => "member_count", "connection_field" => "members" ]
             ];
             $fields["training_coach"] = [
@@ -452,7 +460,8 @@ class DT_Training_Base extends DT_Module_Base {
                 "p2p_key" => "trainings_to_coaches",
                 "post_type" => "trainings",
                 "tile" => "no_tile",
-                'icon' => get_template_directory_uri() . '/dt-assets/images/coach.svg?v=2',
+                'icon' => plugin_dir_url( __DIR__ ) . '/assets/icons/school-outline.svg',
+                'create-icon' => plugin_dir_url( __DIR__ ) . '/assets/icons/add.svg',
             ];
         }
         if ( $post_type === 'groups' ){
@@ -463,8 +472,8 @@ class DT_Training_Base extends DT_Module_Base {
                 "p2p_direction" => "to",
                 "p2p_key" => "trainings_to_groups",
                 "tile" => "other",
-                'icon' => get_template_directory_uri() . "/dt-assets/images/socialmedia.svg",
-                'create-icon' => get_template_directory_uri() . "/dt-assets/images/add-group.svg",
+                'icon' => plugin_dir_url( __DIR__ ) . '/assets/icons/school.svg',
+                'create-icon' => plugin_dir_url( __DIR__ ) . '/assets/icons/add-group.svg',
             ];
         }
         if ( $post_type === 'peoplegroups' ){
@@ -475,8 +484,8 @@ class DT_Training_Base extends DT_Module_Base {
                 "p2p_direction" => "to",
                 "p2p_key" => "trainings_to_peoplegroups",
                 "tile" => "other",
-                'icon' => get_template_directory_uri() . "/dt-assets/images/socialmedia.svg",
-                'create-icon' => get_template_directory_uri() . "/dt-assets/images/add-group.svg",
+                'icon' => plugin_dir_url( __DIR__ ) . '/assets/icons/people-groups.svg',
+                'create-icon' => plugin_dir_url( __DIR__ ) . '/assets/icons/add.svg',
             ];
         }
 
@@ -508,7 +517,7 @@ class DT_Training_Base extends DT_Module_Base {
                     echo esc_html( $training_fields[$field_key]["name"] );
                     ?> <span id="<?php echo esc_html( $field_key ); ?>-spinner" class="loading-spinner"></span>
                     <button data-list-class="<?php echo esc_html( $field_key ); ?>" class="add-time-button" type="button">
-                        <img src="<?php echo esc_html( get_template_directory_uri() . '/dt-assets/images/small-add.svg' ) ?>"/>
+                        <img src="<?php echo esc_html( plugin_dir_url( __DIR__ ) . '/assets/icons/small-add.svg' ) ?>"/>
                     </button>
                 </div>
                 <div id="edit-<?php echo esc_html( $field_key ) ?>" ></div>
@@ -519,16 +528,17 @@ class DT_Training_Base extends DT_Module_Base {
             if ( isset( $training_fields["members"]["tile"] ) && $training_fields["members"]["tile"] === $section ) : ?>
                 <div class="section-subheader members-header" style="padding-top: 10px;">
                     <div style="padding-bottom: 5px; margin-right:10px; display: inline-block">
+                        <img class="dt-icon" src="<?php echo esc_html( plugin_dir_url( __DIR__ ) . '/assets/icons/format-list-bulleted.svg?v=2' ) ?>"/>
                         <?php esc_html_e( "Member List", 'disciple-tools-training' ) ?>
                     </div>
                     <button type="button" class="create-new-record" data-connection-key="members" style="height: 36px;">
                         <?php echo esc_html__( 'Create', 'disciple-tools-training' )?>
-                        <img style="height: 14px; width: 14px" src="<?php echo esc_html( get_template_directory_uri() . '/dt-assets/images/small-add.svg' ) ?>"/>
+                        <img style="height: 14px; width: 14px" src="<?php echo esc_html( plugin_dir_url( __DIR__ ) . '/assets/icons/small-add.svg' ) ?>"/>
                     </button>
                     <button type="button"
                             class="add-new-member">
                         <?php echo esc_html__( 'Select', 'disciple-tools-training' )?>
-                        <img style="height: 16px; width: 16px" src="<?php echo esc_html( get_template_directory_uri() . '/dt-assets/images/add-group.svg' ) ?>"/>
+                        <img style="height: 16px; width: 16px" src="<?php echo esc_html( plugin_dir_url( __DIR__ ) . '/assets/icons/add-group.svg' ) ?>"/>
                     </button>
                 </div>
                 <div class="members-section" style="margin-bottom:10px">
