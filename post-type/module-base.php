@@ -34,6 +34,7 @@ class DT_Training_Base extends DT_Module_Base {
 
         //setup tiles and fields
         add_filter( 'dt_custom_fields_settings', [ $this, 'dt_custom_fields_settings' ], 10, 2 );
+        add_filter( 'dt_get_post_type_settings', [ $this, 'dt_get_post_type_settings' ], 20, 2 );
         add_filter( 'dt_details_additional_tiles', [ $this, 'dt_details_additional_tiles' ], 10, 2 );
         add_action( 'dt_details_additional_section', [ $this, 'dt_details_additional_section' ], 20, 2 );
         add_action( 'wp_enqueue_scripts', [ $this, 'scripts' ], 99 );
@@ -483,6 +484,25 @@ class DT_Training_Base extends DT_Module_Base {
         return $fields;
     }
 
+    /**
+     * Set the singular and plural translations for this post types settings
+     * The add_filter is set onto a higher priority than the one in Disciple_tools_Post_Type_Template
+     * so as to enable localisation changes. Otherwise the system translation passed in to the custom post type
+     * will prevail.
+     */
+    public function dt_get_post_type_settings( $settings, $post_type ){
+        if ( $post_type === $this->post_type ){
+            $settings['label_singular'] = __( 'Training', 'disciple-tools-training' );
+            $settings['label_plural'] = __( 'Trainings', 'disciple-tools-training' );
+            $settings['status_field'] = [
+                "status_key" => "status",
+                "archived_key" => "closed",
+            ];
+        }
+        return $settings;
+    }
+
+
     public function dt_details_additional_tiles( $tiles, $post_type = "" ){
         if ( $post_type === "trainings" ){
             $tiles["relationships"] = [ "label" => __( "Member List", 'disciple-tools-training' ) ];
@@ -797,7 +817,8 @@ class DT_Training_Base extends DT_Module_Base {
                 'name' => _x( "All", 'List Filters', 'disciple-tools-training' ),
                 'query' => [
                     'assigned_to' => [ 'me' ],
-                    'sort' => '-post_date'
+                    'sort' => '-post_date',
+                    'status' => [ '-closed' ]
                 ],
                 "count" => $total_my,
             ];
@@ -862,7 +883,8 @@ class DT_Training_Base extends DT_Module_Base {
                     'tab' => 'all',
                     'name' => sprintf( _x( "All %s", 'All records', 'disciple_tools' ), $post_label_plural ),
                     'query' => [
-                        'sort' => '-post_date'
+                        'sort' => '-post_date',
+                        'status' => [ '-closed' ]
                     ],
                     "count" => $total_all
                 ];
