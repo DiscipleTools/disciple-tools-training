@@ -619,11 +619,6 @@ class DT_Training_Base extends DT_Module_Base {
 
 //            @todo, share with user with post assigned to user.
 
-            // status
-            if ( isset( $fields["status"] ) && empty( $fields["end_date"] ) && empty( $existing_post["end_date"] ) && $fields["status"] === 'closed' ){
-                $fields["end_date"] = time();
-            }
-
             // meeting_times (datetime_series field type)
             if ( isset( $fields["meeting_times"] ) ) {
 
