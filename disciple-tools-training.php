@@ -75,6 +75,17 @@ add_action( 'after_setup_theme', function() {
     return DT_Training::get_instance();
 });
 
+//register the D.T Plugin
+add_filter( 'dt_plugins', function ( $plugins ){
+    $plugin_data = get_file_data( __FILE__, [ 'Version' => 'Version', 'Plugin Name' => 'Plugin Name' ], false );
+    $plugins['disciple-tools-trainings'] = [
+        'plugin_url' => trailingslashit( plugin_dir_url( __FILE__ ) ),
+        'version' => $plugin_data['Version'] ?? null,
+        'name' => $plugin_data['Plugin Name'] ?? null,
+    ];
+    return $plugins;
+});
+
 /**
  * Singleton class for setting up the plugin.
  *
