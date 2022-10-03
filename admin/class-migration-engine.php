@@ -16,7 +16,7 @@ class DT_Training_Migration_Engine
      * Current Migration number for the mapping system
      * @var int
      */
-    public static $migration_number = 1;
+    public static $migration_number = 2;
 
     protected static $migrations = null;
 
