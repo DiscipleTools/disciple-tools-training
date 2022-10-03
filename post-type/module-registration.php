@@ -2,8 +2,8 @@
 if ( !defined( 'ABSPATH' ) ) { exit; } // Exit if accessed directly.
 
 class DT_Training_App_Registration_Module extends DT_Module_Base {
-    public $post_type = "trainings";
-    public $module = "trainings_app_module";
+    public $post_type = 'trainings';
+    public $module = 'trainings_app_module';
     public $root = 'training_app';
 
     private static $_instance = null;
@@ -26,9 +26,9 @@ class DT_Training_App_Registration_Module extends DT_Module_Base {
         add_filter( 'dt_custom_fields_settings', [ $this, 'custom_fields' ], 10, 2 );
     }
 
-    public function dt_details_additional_tiles( $tiles, $post_type = "" ){
+    public function dt_details_additional_tiles( $tiles, $post_type = '' ){
         if ( $post_type === 'trainings' ){
-            $tiles["apps"] = [ "label" => __( "Apps", 'disciple-tools-training' ) ];
+            $tiles['apps'] = [ 'label' => __( 'Apps', 'disciple-tools-training' ) ];
         }
         return $tiles;
     }
@@ -37,7 +37,7 @@ class DT_Training_App_Registration_Module extends DT_Module_Base {
         return $fields;
     }
     public function dt_details_additional_section( $section, $post_type ) {
-        if ( $post_type === 'trainings' && $section === "apps" ){
+        if ( $post_type === 'trainings' && $section === 'apps' ){
             $record = DT_Posts::get_post( $post_type, get_the_ID() );
             $magic = new DT_Magic_URL( $this->root );
             $types = $magic->list_types();
@@ -252,16 +252,16 @@ class DT_Training_Magic_Registration
 
         wp_enqueue_script( 'mapbox-search-widget', trailingslashit( esc_url( get_stylesheet_directory_uri() ) ) . 'dt-mapping/geocode-api/mapbox-search-widget.js', [ 'jquery', 'mapbox-gl' ], filemtime( get_template_directory() . '/dt-mapping/geocode-api/mapbox-search-widget.js' ), false );
         wp_localize_script(
-            "mapbox-search-widget", "dtMapbox", array(
+            'mapbox-search-widget', 'dtMapbox', array(
                 'post_type' => get_post_type(),
-                "post_id" => $post->ID ?? 0,
-                "post" => $post_record ?? false,
-                "map_key" => DT_Mapbox_API::get_key(),
-                "mirror_source" => dt_get_location_grid_mirror( true ),
-                "google_map_key" => ( Disciple_Tools_Google_Geocode_API::get_key() ) ? Disciple_Tools_Google_Geocode_API::get_key() : false,
-                "spinner_url" => get_stylesheet_directory_uri() . '/spinner.svg',
-                "theme_uri" => get_stylesheet_directory_uri(),
-                "translations" => array(
+                'post_id' => $post->ID ?? 0,
+                'post' => $post_record ?? false,
+                'map_key' => DT_Mapbox_API::get_key(),
+                'mirror_source' => dt_get_location_grid_mirror( true ),
+                'google_map_key' => ( Disciple_Tools_Google_Geocode_API::get_key() ) ? Disciple_Tools_Google_Geocode_API::get_key() : false,
+                'spinner_url' => get_stylesheet_directory_uri() . '/spinner.svg',
+                'theme_uri' => get_stylesheet_directory_uri(),
+                'translations' => array(
                     'add' => __( 'add', 'disciple-tools-training' ),
                     'use' => __( 'Use', 'disciple-tools-training' ),
                     'search_location' => __( 'Search Location', 'disciple-tools-training' ),
@@ -755,7 +755,7 @@ class DT_Training_Magic_Registration
         $params = $request->get_params();
 
         if ( ! isset( $params['parts'], $params['parts']['meta_key'], $params['parts']['public_key'], $params['action'] ) ) {
-            return new WP_Error( __METHOD__, "Missing parameters", [ 'status' => 400 ] );
+            return new WP_Error( __METHOD__, 'Missing parameters', [ 'status' => 400 ] );
         }
 
         $params = dt_recursive_sanitize_array( $params );
@@ -765,7 +765,7 @@ class DT_Training_Magic_Registration
         $post_id = $magic->get_post_id( $params['parts']['meta_key'], $params['parts']['public_key'] );
 
         if ( ! $post_id ){
-            return new WP_Error( __METHOD__, "Missing post record", [ 'status' => 400 ] );
+            return new WP_Error( __METHOD__, 'Missing post record', [ 'status' => 400 ] );
         }
 
         $action = sanitize_text_field( wp_unslash( $params['action'] ) );
@@ -782,7 +782,7 @@ class DT_Training_Magic_Registration
             case 'statistics':
                 return $this->statistics_reports( $params, $post_id );
             default:
-                return new WP_Error( __METHOD__, "Missing valid action", [ 'status' => 400 ] );
+                return new WP_Error( __METHOD__, 'Missing valid action', [ 'status' => 400 ] );
         }
     }
 
@@ -824,7 +824,7 @@ class DT_Training_Magic_Registration
         $report_id = dt_report_insert( $args );
 
         if ( is_wp_error( $report_id ) || empty( $report_id ) ){
-            return new WP_Error( __METHOD__, "Failed to create report.", [ 'status' => 400 ] );
+            return new WP_Error( __METHOD__, 'Failed to create report.', [ 'status' => 400 ] );
         }
 
         return $this->retrieve_reports( $post_id );
@@ -959,7 +959,7 @@ class DT_Training_Magic_Registration
     public function delete_report( $params, $post_id ) {
         $result = Disciple_Tools_Reports::delete( $params['report_id'] );
         if ( ! $result ) {
-            return new WP_Error( __METHOD__, "Failed to delete report", [ 'status' => 400 ] );
+            return new WP_Error( __METHOD__, 'Failed to delete report', [ 'status' => 400 ] );
         }
         return $this->retrieve_reports( $post_id );
     }

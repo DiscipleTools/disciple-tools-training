@@ -2,13 +2,13 @@
 if ( !defined( 'ABSPATH' ) ) { exit; } // Exit if accessed directly.
 
 add_filter( 'dt_post_type_modules', function( $modules ){
-    $modules["trainings_base"] = [
-        "name" => "Trainings",
-        "enabled" => true,
-        "locked" => true,
-        "prerequisites" => [ "contacts_base" ],
-        "post_type" => "trainings",
-        "description" => "Default Trainings Module"
+    $modules['trainings_base'] = [
+        'name' => 'Trainings',
+        'enabled' => true,
+        'locked' => true,
+        'prerequisites' => [ 'contacts_base' ],
+        'post_type' => 'trainings',
+        'description' => 'Default Trainings Module'
     ];
     //@todo Add Registration Module
     //    $modules["trainings_app_registration_module"] = [

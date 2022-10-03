@@ -51,13 +51,13 @@ class DT_Metrics_Trainings_Tree extends DT_Metrics_Chart_Base
 
     public function tree( WP_REST_Request $request ) {
         if ( !$this->has_permission() ){
-            return new WP_Error( __METHOD__, "Missing Permissions", [ 'status' => 400 ] );
+            return new WP_Error( __METHOD__, 'Missing Permissions', [ 'status' => 400 ] );
         }
 
         $params = $request->get_params();
 
         if ( ! isset( $params['action'] ) ) {
-            return new WP_Error( __METHOD__, "Missing parameters", [ 'status' => 400 ] );
+            return new WP_Error( __METHOD__, 'Missing parameters', [ 'status' => 400 ] );
         }
 
         $action = sanitize_text_field( wp_unslash( $params['action'] ) );
@@ -105,11 +105,11 @@ class DT_Metrics_Trainings_Tree extends DT_Metrics_Chart_Base
                 'show_multiplying' => __( 'Show Multiplying Only', 'disciple_tools' ),
 
                 'members' => __( 'Members', 'disciple_tools' ),
-                'view_record' => __( "View Record", "disciple_tools" ),
-                'assigned_to' => __( "Assigned To", "disciple_tools" ),
-                'status' => __( "Status", "disciple_tools" ),
-                'total_members' => __( "Total Members", "disciple_tools" ),
-                'view_training' => __( "View Training", "disciple_tools" ),
+                'view_record' => __( 'View Record', 'disciple_tools' ),
+                'assigned_to' => __( 'Assigned To', 'disciple_tools' ),
+                'status' => __( 'Status', 'disciple_tools' ),
+                'total_members' => __( 'Total Members', 'disciple_tools' ),
+                'view_training' => __( 'View Training', 'disciple_tools' ),
 
             ],
             'training_generation_tree' => $this->get_training_generations_tree(),
@@ -162,7 +162,7 @@ class DT_Metrics_Trainings_Tree extends DT_Metrics_Chart_Base
             {
                 $html .= '<li class="gen-node li-gen-' . esc_html( $gen ) . ' ' . esc_attr( $first_section ) . '">';
                 $html .= '(' . esc_html( $gen ) . ') ';
-                $html .= '<strong><a href="' . esc_url( site_url( "/trainings/" ) ) . esc_html( $item_id ) . '">' . esc_html( $menu_data['items'][ $item_id ]['name'] ) . '</a></strong><br>';
+                $html .= '<strong><a href="' . esc_url( site_url( '/trainings/' ) ) . esc_html( $item_id ) . '">' . esc_html( $menu_data['items'][ $item_id ]['name'] ) . '</a></strong><br>';
 
                 // find child items recursively
                 if ( !in_array( $item_id, $unique_check ) ){

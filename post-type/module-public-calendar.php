@@ -3,12 +3,12 @@ if ( !defined( 'ABSPATH' ) ) { exit; } // Exit if accessed directly.
 
 class DT_Training_App_Calendar_Module extends DT_Module_Base
 {
-    public $module = "trainings_calendar_module";
+    public $module = 'trainings_calendar_module';
     public $post_type = 'streams';
 
     public $magic = false;
     public $parts = false;
-    public $root = "streams_app"; // define the root of the url {yoursite}/root/type/key/action
+    public $root = 'streams_app'; // define the root of the url {yoursite}/root/type/key/action
     public $type = 'calendar'; // define the type
 
 
@@ -80,9 +80,9 @@ class DT_Training_App_Calendar_Module extends DT_Module_Base
         }, 100, 1 );
     }
 
-    public function dt_details_additional_tiles( $tiles, $post_type = "" ){
+    public function dt_details_additional_tiles( $tiles, $post_type = '' ){
         if ( $post_type === 'streams' ){
-            $tiles["reports"] = [ "label" => __( "Reports", 'disciple-tools-training' ) ];
+            $tiles['reports'] = [ 'label' => __( 'Reports', 'disciple-tools-training' ) ];
         }
         return $tiles;
     }
@@ -92,7 +92,7 @@ class DT_Training_App_Calendar_Module extends DT_Module_Base
         if ( $post_type === 'streams' ) {
 
             // reports tile
-            if ( $section === "reports" ){
+            if ( $section === 'reports' ){
                 $magic = new DT_Magic_URL( 'streams_app' );
                 $types = $magic->list_types();
 
@@ -147,7 +147,7 @@ class DT_Training_App_Calendar_Module extends DT_Module_Base
     }
 
     public function tile_scripts(){
-        if ( is_singular( "streams" ) ){
+        if ( is_singular( 'streams' ) ){
             $magic = new DT_Magic_URL( 'streams_app' );
             $types = $magic->list_types();
             $report = $types['report'] ?? [];
@@ -994,7 +994,7 @@ class DT_Training_App_Calendar_Module extends DT_Module_Base
         $params = $request->get_params();
 
         if ( ! isset( $params['parts'], $params['parts']['meta_key'], $params['parts']['public_key'], $params['action'] ) ) {
-            return new WP_Error( __METHOD__, "Missing parameters", [ 'status' => 400 ] );
+            return new WP_Error( __METHOD__, 'Missing parameters', [ 'status' => 400 ] );
         }
 
         $params = dt_recursive_sanitize_array( $params );
@@ -1004,7 +1004,7 @@ class DT_Training_App_Calendar_Module extends DT_Module_Base
         $post_id = $magic->get_post_id( $params['parts']['meta_key'], $params['parts']['public_key'] );
 
         if ( ! $post_id ){
-            return new WP_Error( __METHOD__, "Missing post record", [ 'status' => 400 ] );
+            return new WP_Error( __METHOD__, 'Missing post record', [ 'status' => 400 ] );
         }
 
         $action = sanitize_text_field( wp_unslash( $params['action'] ) );
@@ -1028,7 +1028,7 @@ class DT_Training_App_Calendar_Module extends DT_Module_Base
                 $data['geojson'] = $this->geojson_reports( $post_id );
                 return $data;
             default:
-                return new WP_Error( __METHOD__, "Missing valid action", [ 'status' => 400 ] );
+                return new WP_Error( __METHOD__, 'Missing valid action', [ 'status' => 400 ] );
         }
     }
 
@@ -1036,13 +1036,13 @@ class DT_Training_App_Calendar_Module extends DT_Module_Base
         $params = $request->get_params();
 
         if ( ! isset( $params['post_id'] ) ) {
-            return new WP_Error( __METHOD__, "Missing parameters", [ 'status' => 400 ] );
+            return new WP_Error( __METHOD__, 'Missing parameters', [ 'status' => 400 ] );
         }
 
         $post_id =sanitize_text_field( wp_unslash( $params['post_id'] ) );
 
         if ( ! Disciple_Tools_Posts::can_view( 'streams', $post_id ) ) {
-            return new WP_Error( __METHOD__, "Do not have permission", [ 'status' => 401 ] );
+            return new WP_Error( __METHOD__, 'Do not have permission', [ 'status' => 401 ] );
         }
 
         $data = [];
@@ -1055,7 +1055,7 @@ class DT_Training_App_Calendar_Module extends DT_Module_Base
     public function insert_report( $params, $post_id ) {
 
         if ( ! isset( $params['parts']['root'], $params['parts']['type'], $params['type'], $post_id ) ){
-            return new WP_Error( __METHOD__, "Missing params", [ 'status' => 400 ] );
+            return new WP_Error( __METHOD__, 'Missing params', [ 'status' => 400 ] );
         }
 
         $params = dt_recursive_sanitize_array( $params );
@@ -1098,7 +1098,7 @@ class DT_Training_App_Calendar_Module extends DT_Module_Base
         $report_id = dt_report_insert( $args );
 
         if ( is_wp_error( $report_id ) || empty( $report_id ) ){
-            return new WP_Error( __METHOD__, "Failed to create report.", [ 'status' => 400 ] );
+            return new WP_Error( __METHOD__, 'Failed to create report.', [ 'status' => 400 ] );
         }
 
         update_post_meta( $post_id, 'report_last_modified', time() );
@@ -1240,7 +1240,7 @@ class DT_Training_App_Calendar_Module extends DT_Module_Base
     public function delete_report( $params, $post_id ) {
         $result = Disciple_Tools_Reports::delete( $params['report_id'] );
         if ( ! $result ) {
-            return new WP_Error( __METHOD__, "Failed to delete report", [ 'status' => 400 ] );
+            return new WP_Error( __METHOD__, 'Failed to delete report', [ 'status' => 400 ] );
         }
 
         update_post_meta( $post_id, 'report_last_modified', time() );
