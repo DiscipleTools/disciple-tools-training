@@ -475,7 +475,7 @@ class DT_Training_Base extends DT_Module_Base {
                 'post_type' => $this->post_type,
                 'p2p_direction' => 'to',
                 'p2p_key' => 'trainings_to_peoplegroups',
-                'tile' => 'other',
+                'tile' => 'connections',
                 'icon' => get_template_directory_uri() . '/dt-assets/images/socialmedia.svg',
                 'create-icon' => get_template_directory_uri() . '/dt-assets/images/add-group.svg',
             ];
