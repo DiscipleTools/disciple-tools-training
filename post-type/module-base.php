@@ -52,7 +52,7 @@ class DT_Training_Base extends DT_Module_Base {
         add_action( 'dt_render_field_for_display_template', [ $this, 'dt_render_field_for_display_template' ], 20, 4 );
 
         //list
-        add_filter( 'dt_user_list_filters', [ $this, 'dt_user_list_filters' ], 10, 2 );
+        add_filter( 'dt_user_list_filters', [ $this, 'dt_user_list_filters' ], 150, 2 );
         add_filter( 'dt_filter_access_permissions', [ $this, 'dt_filter_access_permissions' ], 20, 2 );
     }
 
@@ -866,23 +866,17 @@ class DT_Training_Base extends DT_Module_Base {
                         dt_increment( $active_counts[$count['status']], $count['count'] );
                     }
                 }
-                $filters['tabs'][] = [
-                    'key' => 'all',
-                    'label' => _x( 'Default Filters', 'List Filters', 'disciple-tools-training' ),
-                    'count' => $total_all,
-                    'order' => 10
-                ];
-                // add assigned to me filters
-                $filters['filters'][] = [
-                    'ID' => 'all',
-                    'tab' => 'all',
-                    'name' => sprintf( _x( 'All %s', 'All records', 'disciple_tools' ), $post_label_plural ),
-                    'query' => [
-                        'sort' => '-post_date',
-                        'status' => [ '-closed' ]
-                    ],
-                    'count' => $total_all
-                ];
+                foreach ( $filters['tabs'] as &$filter_tab ){
+                    if ( $filter_tab['key'] === 'all' ){
+                        $filter_tab['count'] = $total_all;
+                    }
+                }
+                foreach ( $filters['filters'] as &$filter_item ){
+                    if ( $filter_item['ID'] === 'all' ){
+                        $filter_item['count'] = $total_all;
+                        $filter_item['query']['status'] = [ '-closed' ];
+                    }
+                }
 
                 foreach ( $fields['status']['default'] as $status_key => $status_value ) {
                     if ( isset( $status_counts[$status_key] ) ){
