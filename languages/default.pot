@@ -2,29 +2,17 @@
 # This file is distributed under the same license as the Disciple.Tools - Training plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: Disciple.Tools - Training 2.5.2\n"
+"Project-Id-Version: Disciple.Tools - Training 2.6.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-training\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2022-11-23T13:14:48+00:00\n"
+"POT-Creation-Date: 2022-11-23T13:53:53+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP-CLI 2.6.0\n"
+"X-Generator: WP-CLI 2.7.1\n"
 "X-Domain: disciple-tools-training\n"
-
-#. Plugin Name of the plugin
-msgid "Disciple.Tools - Training"
-msgstr ""
-
-#. Plugin URI of the plugin
-msgid "https://github.com/DiscipleTools/disciple-tools-training"
-msgstr ""
-
-#. Description of the plugin
-msgid "Disciple.Tools Training Extension adds recording of trainings and cross reference them with contacts, groups, and locations."
-msgstr ""
 
 #: metrics/mapbox-maps.php:30
 msgid "Training Maps"
