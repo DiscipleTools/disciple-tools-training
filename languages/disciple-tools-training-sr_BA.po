@@ -3,34 +3,12 @@ msgstr ""
 "Project-Id-Version: Disciple Tools Plugins\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "training\n"
-"POT-Creation-Date: 2022-11-23T13:14:48+00:00\n"
+"POT-Creation-Date: 2022-11-23T13:53:53+00:00\n"
 "Language: sr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: POEditor.com\n"
-
-#. Plugin Name of the plugin
-#, fuzzy
-#| msgid "Disciple Tools - Training"
-msgid "Disciple.Tools - Training"
-msgstr "Алати за ученике - Обука"
-
-#. Plugin URI of the plugin
-msgid "https://github.com/DiscipleTools/disciple-tools-training"
-msgstr "хттпс://гитхуб.цом/ДисциплеТоолс/дисципле-тоолс-траининг"
-
-#. Description of the plugin
-#, fuzzy
-#| msgid ""
-#| "Disciple Tools Training Extension adds recording of trainings and cross "
-#| "reference them with contacts, groups, and locations."
-msgid ""
-"Disciple.Tools Training Extension adds recording of trainings and cross "
-"reference them with contacts, groups, and locations."
-msgstr ""
-"Проширење за обуку „Дисципле Тоолс“ додаје снимање обука и укрштање са "
-"контактима, групама и локацијама."
 
 #: metrics/mapbox-maps.php:30
 msgid "Training Maps"
@@ -502,6 +480,25 @@ msgstr "Прикључи се"
 #: post-type/module-registration.php:700
 msgid "Clear"
 msgstr "Јасно"
+
+#, fuzzy
+#~| msgid "Disciple Tools - Training"
+#~ msgid "Disciple.Tools - Training"
+#~ msgstr "Алати за ученике - Обука"
+
+#~ msgid "https://github.com/DiscipleTools/disciple-tools-training"
+#~ msgstr "хттпс://гитхуб.цом/ДисциплеТоолс/дисципле-тоолс-траининг"
+
+#, fuzzy
+#~| msgid ""
+#~| "Disciple Tools Training Extension adds recording of trainings and cross "
+#~| "reference them with contacts, groups, and locations."
+#~ msgid ""
+#~ "Disciple.Tools Training Extension adds recording of trainings and cross "
+#~ "reference them with contacts, groups, and locations."
+#~ msgstr ""
+#~ "Проширење за обуку „Дисципле Тоолс“ додаје снимање обука и укрштање са "
+#~ "контактима, групама и локацијама."
 
 #~ msgid "Whoah, partner!"
 #~ msgstr "Вхоах, партнеру!"
