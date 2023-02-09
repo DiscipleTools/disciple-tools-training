@@ -4,11 +4,16 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "training\n"
 "POT-Creation-Date: 2022-11-23T13:53:53+00:00\n"
-"Language: it\n"
+"PO-Revision-Date: 2023-01-05 17:13+0000\n"
+"Last-Translator: Kyle Koval <kyle.koval@gmail.com>\n"
+"Language-Team: Italian <https://translate.disciple.tools/projects/"
+"disciple-tools/disciple-tools-training/it_IT/>\n"
+"Language: it_IT\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: POEditor.com\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.14.1\n"
 
 #: metrics/mapbox-maps.php:30
 msgid "Training Maps"
@@ -26,32 +31,27 @@ msgstr "Mappe di formazione"
 
 #: network/network-dashboard-integration.php:44
 msgid "New Training"
-msgstr ""
+msgstr "Nuova Formazione"
 
 #: network/network-dashboard-integration.php:50
 msgid "Training Started"
-msgstr ""
+msgstr "Formazione Iniziata"
 
 #: network/network-dashboard-integration.php:56
 msgid "Training Completed"
-msgstr ""
+msgstr "Formazione Completata"
 
 #: post-type/module-base.php:28 post-type/module-base.php:495
 msgid "Training"
 msgstr "Formazione"
 
 #: post-type/module-base.php:70
-#, fuzzy
-#| msgid "Trainings"
 msgid "Trainings Admin"
-msgstr "Corsi di formazione"
+msgstr "Amministratore delle Formazioni"
 
 #: post-type/module-base.php:71
-#, fuzzy
-#| msgctxt "Optional Documentation"
-#| msgid "Leader of a training"
 msgid "Admin access to all trainings"
-msgstr "Leader di una formazione"
+msgstr "Accesso come amministratore a tutte le formazioni"
 
 #: post-type/module-base.php:76
 msgid "Multiplier"
@@ -59,7 +59,7 @@ msgstr "Moltiplicatore"
 
 #: post-type/module-base.php:83
 msgid "Disciple.Tools Admin"
-msgstr "Disciple.Tools Admin"
+msgstr "Amministratore di Disciple.Tools"
 
 #: post-type/module-base.php:90
 msgid "Administrator"
@@ -74,6 +74,8 @@ msgctxt "Optional Documentation"
 msgid ""
 "A useful way to group related items and can be used to filter the records"
 msgstr ""
+"Un modo utile di raggruppare voci correlati e può essere usato per filtrare "
+"i registri"
 
 #: post-type/module-base.php:135
 msgid "Follow"
@@ -81,7 +83,7 @@ msgstr "Seguire"
 
 #: post-type/module-base.php:142
 msgid "Un-Follow"
-msgstr "Un-Follow"
+msgstr "Non seguire più"
 
 #: post-type/module-base.php:148
 msgid "Tasks"
@@ -237,7 +239,7 @@ msgstr "Una formazione che ha lanciato questa formazione."
 
 #: post-type/module-base.php:344
 msgid "Peer Training"
-msgstr "Peer Training"
+msgstr "Formazione Alla Pari"
 
 #: post-type/module-base.php:345
 msgctxt "Optional Documentation"
@@ -270,7 +272,7 @@ msgstr "I contatti che sono membri di questa formazione."
 
 #: post-type/module-base.php:377
 msgid "Leaders"
-msgstr "Capi"
+msgstr "I leader"
 
 #: post-type/module-base.php:387
 msgid "People Groups"
@@ -334,11 +336,11 @@ msgstr "Creare"
 
 #: post-type/module-base.php:550
 msgid "Select"
-msgstr "Selezionare"
+msgstr "Seleziona"
 
 #: post-type/module-base.php:555
 msgid "To add new members, click on 'Create' or 'Select'."
-msgstr "Per aggiungere nuovi membri, fare clic su \"Crea\" o \"Seleziona\"."
+msgstr "Per aggiungere nuovi membri, clicca 'Crea' o 'Seleziona'."
 
 #: post-type/module-base.php:560
 msgctxt "Add members modal"
@@ -356,7 +358,7 @@ msgstr ""
 
 #: post-type/module-base.php:573
 msgid "Close"
-msgstr "Vicino"
+msgstr "Chiudi"
 
 #: post-type/module-base.php:713
 msgid "Removed %1$s: %2$s"
@@ -383,7 +385,7 @@ msgstr "Tutti"
 #: post-type/module-base.php:871
 msgctxt "List Filters"
 msgid "Default Filters"
-msgstr ""
+msgstr "Filtri Predefiniti"
 
 #: post-type/module-public-calendar.php:85
 msgid "Reports"
@@ -444,7 +446,7 @@ msgstr "mostra sul calendario"
 
 #: post-type/module-registration.php:118
 msgid "open registration"
-msgstr "registrazione aperta "
+msgstr "registrazione aperta"
 
 #: post-type/module-registration.php:265
 msgid "add"
@@ -456,7 +458,7 @@ msgstr "Uso"
 
 #: post-type/module-registration.php:267 post-type/module-registration.php:695
 msgid "Search Location"
-msgstr "Cerca posizione"
+msgstr "Cerca Località"
 
 #: post-type/module-registration.php:268
 msgid "Delete Location"

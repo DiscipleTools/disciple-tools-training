@@ -4,15 +4,21 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "training\n"
 "POT-Creation-Date: 2022-11-23T13:53:53+00:00\n"
-"Language: ru\n"
+"PO-Revision-Date: 2023-01-12 07:13+0000\n"
+"Last-Translator: Dmitry <dmitry_cherednikov@wycliffe.ru>\n"
+"Language-Team: Russian <https://translate.disciple.tools/projects/"
+"disciple-tools/disciple-tools-training/ru_RU/>\n"
+"Language: ru_RU\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: POEditor.com\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.14.1\n"
 
 #: metrics/mapbox-maps.php:30
 msgid "Training Maps"
-msgstr "Карты тренировок"
+msgstr "Карты тренинга"
 
 #: metrics/mapbox-maps.php:31 metrics/mapbox-personal-maps.php:31
 #: post-type/module-base.php:29 post-type/module-base.php:461
@@ -22,36 +28,31 @@ msgstr "Тренинги"
 
 #: metrics/mapbox-personal-maps.php:30
 msgid "Trainings Maps"
-msgstr "Карты тренировок"
+msgstr "Карты тренингов"
 
 #: network/network-dashboard-integration.php:44
 msgid "New Training"
-msgstr ""
+msgstr "Новый тренинг"
 
 #: network/network-dashboard-integration.php:50
 msgid "Training Started"
-msgstr ""
+msgstr "Тренинг начался"
 
 #: network/network-dashboard-integration.php:56
 msgid "Training Completed"
-msgstr ""
+msgstr "Тренинг завершен"
 
 #: post-type/module-base.php:28 post-type/module-base.php:495
 msgid "Training"
-msgstr "Тренировка"
+msgstr "Тренинг"
 
 #: post-type/module-base.php:70
-#, fuzzy
-#| msgid "Trainings"
 msgid "Trainings Admin"
-msgstr "Тренинги"
+msgstr "Администратор тренингов"
 
 #: post-type/module-base.php:71
-#, fuzzy
-#| msgctxt "Optional Documentation"
-#| msgid "Leader of a training"
 msgid "Admin access to all trainings"
-msgstr "Руководитель тренинга"
+msgstr "Доступ администратора ко всем тренингам"
 
 #: post-type/module-base.php:76
 msgid "Multiplier"
@@ -59,7 +60,7 @@ msgstr "Множитель"
 
 #: post-type/module-base.php:83
 msgid "Disciple.Tools Admin"
-msgstr "Disciple.Tools Admin"
+msgstr "Администратор Disciple.Tools"
 
 #: post-type/module-base.php:90
 msgid "Administrator"
@@ -74,18 +75,20 @@ msgctxt "Optional Documentation"
 msgid ""
 "A useful way to group related items and can be used to filter the records"
 msgstr ""
+"Удобный способ группировки связанных элементов, который можно использовать "
+"для фильтрации записей"
 
 #: post-type/module-base.php:135
 msgid "Follow"
-msgstr "следить"
+msgstr "Подписаться"
 
 #: post-type/module-base.php:142
 msgid "Un-Follow"
-msgstr "Отменить подписку"
+msgstr "Отписаться"
 
 #: post-type/module-base.php:148
 msgid "Tasks"
-msgstr "Задания"
+msgstr "Задачи"
 
 #: post-type/module-base.php:162
 msgctxt "Training Status label"
@@ -368,7 +371,7 @@ msgstr "Добавлен% 1 $ s:% 2 $ s"
 
 #: post-type/module-base.php:719
 msgid "Updated %1$s: %2$s to %3$s"
-msgstr "% 1 $ s:% 2 $ s обновлено до% 3 $ s."
+msgstr "Обновлено%1$s: %2$s до %3$s"
 
 #: post-type/module-base.php:804
 msgctxt "List Filters"
@@ -383,7 +386,7 @@ msgstr "Все"
 #: post-type/module-base.php:871
 msgctxt "List Filters"
 msgid "Default Filters"
-msgstr ""
+msgstr "Фильтры по умолчанию"
 
 #: post-type/module-public-calendar.php:85
 msgid "Reports"
@@ -444,7 +447,7 @@ msgstr "показать в календаре"
 
 #: post-type/module-registration.php:118
 msgid "open registration"
-msgstr "открытая регистрация "
+msgstr "открытая регистрация"
 
 #: post-type/module-registration.php:265
 msgid "add"

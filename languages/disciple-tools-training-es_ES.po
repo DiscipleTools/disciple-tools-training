@@ -4,11 +4,16 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "training\n"
 "POT-Creation-Date: 2022-11-23T13:53:53+00:00\n"
-"Language: es\n"
+"PO-Revision-Date: 2023-02-09 12:22+0000\n"
+"Last-Translator: Mike Allbutt <mikeallbutt@gmail.com>\n"
+"Language-Team: Spanish <https://translate.disciple.tools/projects/"
+"disciple-tools/disciple-tools-training/es_ES/>\n"
+"Language: es_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: POEditor.com\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.14.1\n"
 
 #: metrics/mapbox-maps.php:30
 msgid "Training Maps"
@@ -26,32 +31,27 @@ msgstr "Mapas de formación"
 
 #: network/network-dashboard-integration.php:44
 msgid "New Training"
-msgstr ""
+msgstr "Nuevo entrenamiento"
 
 #: network/network-dashboard-integration.php:50
 msgid "Training Started"
-msgstr ""
+msgstr "Entrenamiento iniciada"
 
 #: network/network-dashboard-integration.php:56
 msgid "Training Completed"
-msgstr ""
+msgstr "Entrenamiento completado"
 
 #: post-type/module-base.php:28 post-type/module-base.php:495
 msgid "Training"
-msgstr "Formación"
+msgstr "Entrenamiento"
 
 #: post-type/module-base.php:70
-#, fuzzy
-#| msgid "Trainings"
 msgid "Trainings Admin"
-msgstr "Entrenamientos"
+msgstr "Administración de Entrenamientos"
 
 #: post-type/module-base.php:71
-#, fuzzy
-#| msgctxt "Optional Documentation"
-#| msgid "Leader of a training"
 msgid "Admin access to all trainings"
-msgstr "Líder de una formación"
+msgstr "Acceso de administración a todos los entrenamientos"
 
 #: post-type/module-base.php:76
 msgid "Multiplier"
@@ -59,7 +59,7 @@ msgstr "Multiplicador"
 
 #: post-type/module-base.php:83
 msgid "Disciple.Tools Admin"
-msgstr "Administrador de Disciple.Tools"
+msgstr "Administración de Disciple.Tools"
 
 #: post-type/module-base.php:90
 msgid "Administrator"
@@ -74,6 +74,8 @@ msgctxt "Optional Documentation"
 msgid ""
 "A useful way to group related items and can be used to filter the records"
 msgstr ""
+"Una forma útil de agrupar elementos relacionados y se puede utilizar para "
+"filtrar los registros"
 
 #: post-type/module-base.php:135
 msgid "Follow"
@@ -105,7 +107,7 @@ msgstr "Propuesto"
 #: post-type/module-base.php:168
 msgctxt "Training Status field description"
 msgid "This training has been proposed and is in initial conversations"
-msgstr "Esta formación ha sido propuesta y está en conversaciones iniciales."
+msgstr "Esta formación ha sido propuesta y está en conversaciones iniciales"
 
 #: post-type/module-base.php:172
 msgctxt "Training Status label"
@@ -383,7 +385,7 @@ msgstr "Todos"
 #: post-type/module-base.php:871
 msgctxt "List Filters"
 msgid "Default Filters"
-msgstr ""
+msgstr "Filtros predeterminados"
 
 #: post-type/module-public-calendar.php:85
 msgid "Reports"
@@ -444,7 +446,7 @@ msgstr "mostrar en el calendario"
 
 #: post-type/module-registration.php:118
 msgid "open registration"
-msgstr "registro abierto "
+msgstr "registro abierto"
 
 #: post-type/module-registration.php:265
 msgid "add"
