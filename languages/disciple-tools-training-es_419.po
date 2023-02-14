@@ -4,7 +4,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "training\n"
 "POT-Creation-Date: 2022-11-23T13:53:53+00:00\n"
-"PO-Revision-Date: 2023-02-09 12:22+0000\n"
+"PO-Revision-Date: 2023-02-14 20:22+0000\n"
 "Last-Translator: Mike Allbutt <mikeallbutt@gmail.com>\n"
 "Language-Team: Spanish (Latin America) <https://translate.disciple.tools/"
 "projects/disciple-tools/disciple-tools-training/es_419/>\n"
@@ -446,7 +446,7 @@ msgstr "mostrar en el calendario"
 
 #: post-type/module-registration.php:118
 msgid "open registration"
-msgstr "registro abierto "
+msgstr "registro abierto"
 
 #: post-type/module-registration.php:265
 msgid "add"
@@ -486,7 +486,7 @@ msgstr "Participar"
 
 #: post-type/module-registration.php:700
 msgid "Clear"
-msgstr "Claro"
+msgstr "Borrar"
 
 #, fuzzy
 #~| msgid "Disciple Tools - Training"

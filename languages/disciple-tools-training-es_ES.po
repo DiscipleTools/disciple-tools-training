@@ -4,7 +4,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "training\n"
 "POT-Creation-Date: 2022-11-23T13:53:53+00:00\n"
-"PO-Revision-Date: 2023-02-09 12:22+0000\n"
+"PO-Revision-Date: 2023-02-14 20:22+0000\n"
 "Last-Translator: Mike Allbutt <mikeallbutt@gmail.com>\n"
 "Language-Team: Spanish <https://translate.disciple.tools/projects/"
 "disciple-tools/disciple-tools-training/es_ES/>\n"
@@ -340,7 +340,7 @@ msgstr "Seleccionar"
 
 #: post-type/module-base.php:555
 msgid "To add new members, click on 'Create' or 'Select'."
-msgstr "Para agregar nuevos miembros, haga click en 'Crear' or 'Seleccionar'."
+msgstr "Para agregar nuevos miembros, haga clic en 'Crear' o 'Seleccionar'."
 
 #: post-type/module-base.php:560
 msgctxt "Add members modal"
@@ -486,7 +486,7 @@ msgstr "Participar"
 
 #: post-type/module-registration.php:700
 msgid "Clear"
-msgstr "Claro"
+msgstr "Borrar"
 
 #, fuzzy
 #~| msgid "Disciple Tools - Training"
