@@ -73,7 +73,7 @@ add_action( 'after_setup_theme', function() {
      * Don't load the plugin on every rest request. Only those with the metrics namespace
      */
     return DT_Training::get_instance();
-});
+}, 10 );
 
 //register the D.T Plugin
 add_filter( 'dt_plugins', function ( $plugins ){
@@ -123,7 +123,6 @@ class DT_Training {
             $instance = new dt_training();
             $instance->setup();
             $instance->includes();
-            $instance->setup_actions();
         }
         return $instance;
     }
@@ -136,6 +135,7 @@ class DT_Training {
      * @return void
      */
     private function __construct() {
+        $this->i18n();
     }
 
     /**
@@ -179,17 +179,6 @@ class DT_Training {
 
     }
 
-    /**
-     * Sets up main plugin actions and filters.
-     *
-     * @since  0.1
-     * @access public
-     * @return void
-     */
-    private function setup_actions() {
-        // Internationalize the text strings used.
-        add_action( 'after_setup_theme', array( $this, 'i18n' ), 51 );
-    }
 
     /**
      * Method that runs only when the plugin is activated.
