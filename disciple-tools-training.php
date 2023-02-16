@@ -5,7 +5,7 @@
  * Description: Disciple.Tools Training Extension adds recording of trainings and cross reference them with contacts, groups, and locations.
  * Text Domain: disciple-tools-training
  * Domain Path: /languages
- * Version:  2.6.0
+ * Version:  2.6.1
  * Author URI: https://github.com/DiscipleTools
  * GitHub Plugin URI: https://github.com/DiscipleTools/disciple-tools-training
  * Requires at least: 4.7.0
