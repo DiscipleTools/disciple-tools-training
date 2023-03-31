@@ -28,7 +28,7 @@ class DT_Training_App_Registration_Module extends DT_Module_Base {
 
     public function dt_details_additional_tiles( $tiles, $post_type = '' ){
         if ( $post_type === 'trainings' ){
-            $tiles['apps'] = [ 'label' => __( 'Apps', 'disciple-tools-training' ) ];
+            $tiles['apps'] = [ 'label' => __( 'Magic Links', 'disciple-tools-training' ) ];
         }
         return $tiles;
     }
