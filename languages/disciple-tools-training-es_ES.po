@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Disciple Tools Plugins\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "training\n"
-"POT-Creation-Date: 2023-02-16T10:06:09+00:00\n"
+"POT-Creation-Date: 2023-04-13T09:31:30+00:00\n"
 "PO-Revision-Date: 2023-02-16 10:06+0000\n"
 "Last-Translator: Mike Allbutt <mikeallbutt@gmail.com>\n"
 "Language-Team: Spanish <https://translate.disciple.tools/projects/disciple-"
@@ -417,8 +417,8 @@ msgid "Add"
 msgstr "Agregar"
 
 #: post-type/module-registration.php:31
-msgid "Apps"
-msgstr "Aplicaciones"
+msgid "Magic Links"
+msgstr ""
 
 #: post-type/module-registration.php:59
 msgid "copy link"
@@ -487,6 +487,9 @@ msgstr "Participar"
 #: post-type/module-registration.php:700
 msgid "Clear"
 msgstr "Borrar"
+
+#~ msgid "Apps"
+#~ msgstr "Aplicaciones"
 
 #, fuzzy
 #~| msgid "Disciple Tools - Training"

@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Disciple Tools Plugins\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "training\n"
-"POT-Creation-Date: 2023-02-16T10:06:09+00:00\n"
+"POT-Creation-Date: 2023-04-13T09:31:30+00:00\n"
 "Language: hi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -407,8 +407,8 @@ msgid "Add"
 msgstr "जोड़ना"
 
 #: post-type/module-registration.php:31
-msgid "Apps"
-msgstr "ऐप्स"
+msgid "Magic Links"
+msgstr ""
 
 #: post-type/module-registration.php:59
 msgid "copy link"
@@ -477,6 +477,9 @@ msgstr "में शामिल हों"
 #: post-type/module-registration.php:700
 msgid "Clear"
 msgstr "स्पष्ट"
+
+#~ msgid "Apps"
+#~ msgstr "ऐप्स"
 
 #, fuzzy
 #~| msgid "Disciple Tools - Training"

@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Disciple Tools Plugins\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "training\n"
-"POT-Creation-Date: 2023-02-16T10:06:09+00:00\n"
+"POT-Creation-Date: 2023-04-13T09:31:30+00:00\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -414,8 +414,8 @@ msgid "Add"
 msgstr "Добавяне"
 
 #: post-type/module-registration.php:31
-msgid "Apps"
-msgstr "Приложения"
+msgid "Magic Links"
+msgstr ""
 
 #: post-type/module-registration.php:59
 msgid "copy link"
@@ -484,6 +484,9 @@ msgstr "Присъедини се"
 #: post-type/module-registration.php:700
 msgid "Clear"
 msgstr "Ясно"
+
+#~ msgid "Apps"
+#~ msgstr "Приложения"
 
 #, fuzzy
 #~| msgid "Disciple Tools - Training"
