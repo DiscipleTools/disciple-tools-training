@@ -4,8 +4,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "training\n"
 "POT-Creation-Date: 2023-04-13T09:31:30+00:00\n"
-"PO-Revision-Date: 2023-02-16 10:06+0000\n"
-"Last-Translator: Mike Allbutt <mikeallbutt@gmail.com>\n"
+"PO-Revision-Date: 2023-05-19 19:20+0000\n"
+"Last-Translator: Prykon <dario@gospelambition.org>\n"
 "Language-Team: Spanish (Latin America) <https://translate.disciple.tools/"
 "projects/disciple-tools/disciple-tools-training/es_419/>\n"
 "Language: es_419\n"
@@ -418,7 +418,7 @@ msgstr "Agregar"
 
 #: post-type/module-registration.php:31
 msgid "Magic Links"
-msgstr ""
+msgstr "Enlaces Mágicos"
 
 #: post-type/module-registration.php:59
 msgid "copy link"
