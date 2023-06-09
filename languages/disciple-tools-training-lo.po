@@ -351,15 +351,15 @@ msgstr "ປິດ"
 
 #: post-type/module-base.php:713
 msgid "Removed %1$s: %2$s"
-msgstr "ລຶບ% 1 $ s:% 2 $ s"
+msgstr "ລຶບ %1$s: %2$s"
 
 #: post-type/module-base.php:716
 msgid "Added %1$s: %2$s"
-msgstr "ເພີ່ມ% 1 $ s:% 2 $ s"
+msgstr "ເພີ່ມ %1$s: %2$s"
 
 #: post-type/module-base.php:719
 msgid "Updated %1$s: %2$s to %3$s"
-msgstr "ອັບເດດ% 1 $ s:% 2 $ s ກັບ% 3 $ s"
+msgstr "ອັບເດດ %1$s: %2$s ກັບ %3$s"
 
 #: post-type/module-base.php:804
 msgctxt "List Filters"
@@ -538,7 +538,7 @@ msgstr "ແຈ້ງ"
 
 #~ msgctxt "Search 'something'"
 #~ msgid "Search %s"
-#~ msgstr "ຄົ້ນຫາ% s"
+#~ msgstr "ຄົ້ນຫາ%s"
 
 #~ msgid "Extensions (DT)"
 #~ msgstr "ສ່ວນຂະຫຍາຍ (DT)"
@@ -980,16 +980,16 @@ msgstr "ແຈ້ງ"
 #~ msgstr "ລຸ້ນທີມ"
 
 #~ msgid "%s is reporting a new pre-group generation."
-#~ msgstr "% s ກຳ ລັງລາຍງານລຸ້ນລຸ້ນ ໃໝ່."
+#~ msgstr "%s ກຳ ລັງລາຍງານລຸ້ນລຸ້ນ ໃໝ່."
 
 #~ msgid "%s is reporting a new group generation."
-#~ msgstr "% s ກຳ ລັງລາຍງານການສ້າງກຸ່ມ ໃໝ່."
+#~ msgstr "%s ກຳ ລັງລາຍງານການສ້າງກຸ່ມ ໃໝ່."
 
 #~ msgid "%s is reporting a new church generation."
-#~ msgstr "% s ກຳ ລັງລາຍງານການຜະລິດໂບດ ໃໝ່."
+#~ msgstr "%s ກຳ ລັງລາຍງານການຜະລິດໂບດ ໃໝ່."
 
 #~ msgid "%s is reporting a new leadership team generation."
-#~ msgstr "% s ກຳ ລັງລາຍງານການສ້າງກຸ່ມຜູ້ ນຳ ໃໝ່."
+#~ msgstr "%s ກຳ ລັງລາຍງານການສ້າງກຸ່ມຜູ້ ນຳ ໃໝ່."
 
 #~ msgid "New Contact"
 #~ msgstr "ຕິດຕໍ່ ໃໝ່"
@@ -1013,25 +1013,25 @@ msgstr "ແຈ້ງ"
 #~ msgstr "ການຝຶກສອນ ໃໝ່"
 
 #~ msgid "%s is reporting a new contact."
-#~ msgstr "% s ກຳ ລັງລາຍງານລາຍຊື່ຜູ້ຕິດຕໍ່ ໃໝ່."
+#~ msgstr "%s ກຳ ລັງລາຍງານລາຍຊື່ຜູ້ຕິດຕໍ່ ໃໝ່."
 
 #~ msgid "%s is reporting a new pre-group formed."
-#~ msgstr "% s ກຳ ລັງລາຍງານກຸ່ມທີ່ສ້າງຕັ້ງຂຶ້ນກ່ອນ."
+#~ msgstr "%s ກຳ ລັງລາຍງານກຸ່ມທີ່ສ້າງຕັ້ງຂຶ້ນກ່ອນ."
 
 #~ msgid "%s is reporting a new group formed."
-#~ msgstr "% s ກຳ ລັງລາຍງານກຸ່ມ ໃໝ່ ທີ່ສ້າງຂຶ້ນ."
+#~ msgstr "%s ກຳ ລັງລາຍງານກຸ່ມ ໃໝ່ ທີ່ສ້າງຂຶ້ນ."
 
 #~ msgid "%s is reporting a new church."
-#~ msgstr "% s ກຳ ລັງລາຍງານສາດສະ ໜາ ຈັກ ໃໝ່."
+#~ msgstr "%s ກຳ ລັງລາຍງານສາດສະ ໜາ ຈັກ ໃໝ່."
 
 #~ msgid "%s is reporting a new leadership team formed."
-#~ msgstr "% s ກຳ ລັງລາຍງານທີມງານຜູ້ ນຳ ໃໝ່ ທີ່ສ້າງຕັ້ງຂຶ້ນ."
+#~ msgstr "%s ກຳ ລັງລາຍງານທີມງານຜູ້ ນຳ ໃໝ່ ທີ່ສ້າງຕັ້ງຂຶ້ນ."
 
 #~ msgid "%s is reporting a new baptism."
-#~ msgstr "% s ກຳ ລັງລາຍງານການບັບຕິສະມາ ໃໝ່."
+#~ msgstr "%s ກຳ ລັງລາຍງານການບັບຕິສະມາ ໃໝ່."
 
 #~ msgid "%s is reporting an coaching relationship."
-#~ msgstr "% s ກຳ ລັງລາຍງານຄວາມ ສຳ ພັນຂອງການເປັນຄູຝຶກ."
+#~ msgstr "%s ກຳ ລັງລາຍງານຄວາມ ສຳ ພັນຂອງການເປັນຄູຝຶກ."
 
 #~ msgid "Active"
 #~ msgstr "ຫ້າວຫັນ"
@@ -1077,7 +1077,7 @@ msgstr "ແຈ້ງ"
 #~ "ກະລຸນາກະຕຸ້ນຫົວຂໍ້ 'Disciple Tools' ຫຼືຮັບປະກັນວ່າມັນແມ່ນເວີຊັນລ້າສຸດ."
 
 #~ msgid "Current Disciple Tools version: %1$s, required version: %2$s"
-#~ msgstr "ຮຸ່ນເຄື່ອງມືສາວົກປັດຈຸບັນ:% 1 $ s, ລຸ້ນທີ່ຕ້ອງການ:% 2 $ s"
+#~ msgstr "ຮຸ່ນເຄື່ອງມືສາວົກປັດຈຸບັນ: %1$s, ລຸ້ນທີ່ຕ້ອງການ: %2$s"
 
 #~ msgid "Duplicates"
 #~ msgstr "ຊໍ້າກັນ"
@@ -1107,7 +1107,7 @@ msgstr "ແຈ້ງ"
 #~ msgstr "ແຜງຄວບຄຸມ"
 
 #~ msgid "%s days since last update"
-#~ msgstr "% s ມື້ນັບຕັ້ງແຕ່ການປັບປຸງຄັ້ງສຸດທ້າຍ"
+#~ msgstr "%s ມື້ນັບຕັ້ງແຕ່ການປັບປຸງຄັ້ງສຸດທ້າຍ"
 
 #~ msgid "Accept"
 #~ msgstr "ຍອມ​ຮັບ"

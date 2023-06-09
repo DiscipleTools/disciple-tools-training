@@ -350,15 +350,15 @@ msgstr "ገጠመ"
 
 #: post-type/module-base.php:713
 msgid "Removed %1$s: %2$s"
-msgstr "% 1 $ s ተወግዷል% 2 $ s"
+msgstr "%1$s ተወግዷል %2$s"
 
 #: post-type/module-base.php:716
 msgid "Added %1$s: %2$s"
-msgstr "% 1 $ s ታክሏል% 2 $ s"
+msgstr "%1$s ታክሏል %2$s"
 
 #: post-type/module-base.php:719
 msgid "Updated %1$s: %2$s to %3$s"
-msgstr "ከ% 1 $ s:% 2 $ s እስከ% 3 $ s ዘምኗል"
+msgstr "ከ %1$s: %2$s እስከ %3$s ዘምኗል"
 
 #: post-type/module-base.php:804
 msgctxt "List Filters"
@@ -538,7 +538,7 @@ msgstr "ግልጽ"
 
 #~ msgctxt "Search 'something'"
 #~ msgid "Search %s"
-#~ msgstr "% S ን ፈልግ"
+#~ msgstr "%s ን ፈልግ"
 
 #~ msgid "Extensions (DT)"
 #~ msgstr "ቅጥያዎች (ዲቲ)"
@@ -981,16 +981,16 @@ msgstr "ግልጽ"
 #~ msgstr "የቡድን ትውልዶች"
 
 #~ msgid "%s is reporting a new pre-group generation."
-#~ msgstr "% s አዲስ የቅድመ-ቡድን ትውልድ ሪፖርት እያደረገ ነው።"
+#~ msgstr "%s አዲስ የቅድመ-ቡድን ትውልድ ሪፖርት እያደረገ ነው።"
 
 #~ msgid "%s is reporting a new group generation."
-#~ msgstr "% s አዲስ የቡድን ትውልድ ሪፖርት እያደረገ ነው።"
+#~ msgstr "%s አዲስ የቡድን ትውልድ ሪፖርት እያደረገ ነው።"
 
 #~ msgid "%s is reporting a new church generation."
-#~ msgstr "% s አዲስ የቤተክርስቲያን ትውልድ ሪፖርት እያደረገ ነው።"
+#~ msgstr "%s አዲስ የቤተክርስቲያን ትውልድ ሪፖርት እያደረገ ነው።"
 
 #~ msgid "%s is reporting a new leadership team generation."
-#~ msgstr "% s አዲስ የአመራር ቡድን መፍጠርን ሪፖርት እያደረገ ነው።"
+#~ msgstr "%s አዲስ የአመራር ቡድን መፍጠርን ሪፖርት እያደረገ ነው።"
 
 #~ msgid "New Contact"
 #~ msgstr "አዲስ ዕውቂያ"
@@ -1014,25 +1014,25 @@ msgstr "ግልጽ"
 #~ msgstr "አዲስ ስልጠና"
 
 #~ msgid "%s is reporting a new contact."
-#~ msgstr "% s አዲስ እውቂያ ሪፖርት እያደረገ ነው።"
+#~ msgstr "%s አዲስ እውቂያ ሪፖርት እያደረገ ነው።"
 
 #~ msgid "%s is reporting a new pre-group formed."
-#~ msgstr "% s አዲስ የተቋቋመ ቡድንን ሪፖርት እያደረገ ነው።"
+#~ msgstr "%s አዲስ የተቋቋመ ቡድንን ሪፖርት እያደረገ ነው።"
 
 #~ msgid "%s is reporting a new group formed."
-#~ msgstr "% s አዲስ የተቋቋመ ቡድን ሪፖርት እያደረገ ነው።"
+#~ msgstr "%s አዲስ የተቋቋመ ቡድን ሪፖርት እያደረገ ነው።"
 
 #~ msgid "%s is reporting a new church."
-#~ msgstr "% s አዲስ ቤተክርስቲያንን ሪፖርት እያደረገ ነው።"
+#~ msgstr "%s አዲስ ቤተክርስቲያንን ሪፖርት እያደረገ ነው።"
 
 #~ msgid "%s is reporting a new leadership team formed."
-#~ msgstr "% s ለተቋቋመው አዲስ የአመራር ቡድን ሪፖርት እያደረገ ነው።"
+#~ msgstr "%s ለተቋቋመው አዲስ የአመራር ቡድን ሪፖርት እያደረገ ነው።"
 
 #~ msgid "%s is reporting a new baptism."
-#~ msgstr "% s አዲስ ጥምቀትን ሪፖርት እያደረገ ነው።"
+#~ msgstr "%s አዲስ ጥምቀትን ሪፖርት እያደረገ ነው።"
 
 #~ msgid "%s is reporting an coaching relationship."
-#~ msgstr "% s የአሰልጣኝነት ግንኙነትን ሪፖርት እያደረገ ነው።"
+#~ msgstr "%s የአሰልጣኝነት ግንኙነትን ሪፖርት እያደረገ ነው።"
 
 #~ msgid "Active"
 #~ msgstr "ንቁ"
@@ -1078,7 +1078,7 @@ msgstr "ግልጽ"
 #~ "‹የደቀ መዝሙር መሣሪያዎች› ገጽታ ያግብሩ ወይም የቅርብ ጊዜው ስሪት መሆኑን ያረጋግጡ ፡፡"
 
 #~ msgid "Current Disciple Tools version: %1$s, required version: %2$s"
-#~ msgstr "የአሁኑ የደቀመዝሙር መሳሪያዎች ስሪት% 1 $ s ፣ አስፈላጊ ስሪት% 2 $ s"
+#~ msgstr "የአሁኑ የደቀመዝሙር መሳሪያዎች ስሪት %1$s ፣ አስፈላጊ ስሪት %2$s"
 
 #~ msgid "Duplicates"
 #~ msgstr "ብዜቶች"
@@ -1108,7 +1108,7 @@ msgstr "ግልጽ"
 #~ msgstr "ዳሽቦርድ"
 
 #~ msgid "%s days since last update"
-#~ msgstr "ካለፈው ዝመና ጀምሮ% s ቀናት"
+#~ msgstr "ካለፈው ዝመና ጀምሮ%s ቀናት"
 
 #~ msgid "Accept"
 #~ msgstr "ተቀበል"

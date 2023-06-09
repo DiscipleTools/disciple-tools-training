@@ -358,15 +358,15 @@ msgstr "Xidh"
 
 #: post-type/module-base.php:713
 msgid "Removed %1$s: %2$s"
-msgstr "Laga saaray% 1 $ s:% 2 $ s"
+msgstr "Laga saaray %1$s: %2$s"
 
 #: post-type/module-base.php:716
 msgid "Added %1$s: %2$s"
-msgstr "Lagu daray% 1 $ s:% 2 $ s"
+msgstr "Lagu daray %1$s: %2$s"
 
 #: post-type/module-base.php:719
 msgid "Updated %1$s: %2$s to %3$s"
-msgstr "La cusbooneysiiyay% 1 $ s:% 2 $ s ilaa% 3 $ s"
+msgstr "La cusbooneysiiyay %1$s: %2$s ilaa %3$s"
 
 #: post-type/module-base.php:804
 msgctxt "List Filters"
@@ -547,7 +547,7 @@ msgstr "Cad"
 
 #~ msgctxt "Search 'something'"
 #~ msgid "Search %s"
-#~ msgstr "Raadi% s"
+#~ msgstr "Raad %s"
 
 #~ msgid "Extensions (DT)"
 #~ msgstr "Kordhinta (DT)"
@@ -997,16 +997,16 @@ msgstr "Cad"
 #~ msgstr "Jiilka Kooxda"
 
 #~ msgid "%s is reporting a new pre-group generation."
-#~ msgstr "% s waxay ka warbixineysaa jiil cusub oo koox-koox ah."
+#~ msgstr "%s waxay ka warbixineysaa jiil cusub oo koox-koox ah."
 
 #~ msgid "%s is reporting a new group generation."
-#~ msgstr "% s waxay ka warbixineysaa jiil cusub oo koox ah."
+#~ msgstr "%s waxay ka warbixineysaa jiil cusub oo koox ah."
 
 #~ msgid "%s is reporting a new church generation."
-#~ msgstr "% s waxay tabinaysaa jiil kaniisad cusub."
+#~ msgstr "%s waxay tabinaysaa jiil kaniisad cusub."
 
 #~ msgid "%s is reporting a new leadership team generation."
-#~ msgstr "% s waxay ka warbixineysaa jiil cusub oo kooxda hogaaminta ah."
+#~ msgstr "%s waxay ka warbixineysaa jiil cusub oo kooxda hogaaminta ah."
 
 #~ msgid "New Contact"
 #~ msgstr "Xiriir Cusub"
@@ -1030,25 +1030,25 @@ msgstr "Cad"
 #~ msgstr "Tababar cusub"
 
 #~ msgid "%s is reporting a new contact."
-#~ msgstr "% s waxay ka warbixineysaa xiriir cusub."
+#~ msgstr "%s waxay ka warbixineysaa xiriir cusub."
 
 #~ msgid "%s is reporting a new pre-group formed."
-#~ msgstr "% s waxay tabinaysaa koox cusub oo hore loo sameeyay."
+#~ msgstr "%s waxay tabinaysaa koox cusub oo hore loo sameeyay."
 
 #~ msgid "%s is reporting a new group formed."
-#~ msgstr "% s waxay tabinaysaa koox cusub oo la sameeyay."
+#~ msgstr "%s waxay tabinaysaa koox cusub oo la sameeyay."
 
 #~ msgid "%s is reporting a new church."
-#~ msgstr "% s waxay tabinaysaa kaniisad cusub."
+#~ msgstr "%s waxay tabinaysaa kaniisad cusub."
 
 #~ msgid "%s is reporting a new leadership team formed."
-#~ msgstr "% s waxay tabinaysaa koox hogaamineed oo cusub oo la sameeyay."
+#~ msgstr "%s waxay tabinaysaa koox hogaamineed oo cusub oo la sameeyay."
 
 #~ msgid "%s is reporting a new baptism."
-#~ msgstr "% s waxay tabineysaa baabtiis cusub."
+#~ msgstr "%s waxay tabineysaa baabtiis cusub."
 
 #~ msgid "%s is reporting an coaching relationship."
-#~ msgstr "% s waxay tabinaysaa xiriir tababarenimo."
+#~ msgstr "%s waxay tabinaysaa xiriir tababarenimo."
 
 #~ msgid "Active"
 #~ msgstr "Firfircoon"
@@ -1098,7 +1098,7 @@ msgstr "Cad"
 
 #~ msgid "Current Disciple Tools version: %1$s, required version: %2$s"
 #~ msgstr ""
-#~ "Nooca Qalabka Xerta ee Hadda:% 1 $ s, nooca loo baahan yahay:% 2 $ s"
+#~ "Nooca Qalabka Xerta ee Hadda: %1$s, nooca loo baahan yahay: %2$s"
 
 #~ msgid "Duplicates"
 #~ msgstr "Nuqullo"
@@ -1128,7 +1128,7 @@ msgstr "Cad"
 #~ msgstr "Dashboard"
 
 #~ msgid "%s days since last update"
-#~ msgstr "% s maalmood ilaa cusboonaysiintii ugu dambaysay"
+#~ msgstr "%s maalmood ilaa cusboonaysiintii ugu dambaysay"
 
 #~ msgid "Accept"
 #~ msgstr "Aqbal"

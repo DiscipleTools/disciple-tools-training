@@ -357,15 +357,15 @@ msgstr "Nêzîkî"
 
 #: post-type/module-base.php:713
 msgid "Removed %1$s: %2$s"
-msgstr "% 1 $ s hate rakirin:% 2 $ s"
+msgstr "%1$s hate rakirin: %2$s"
 
 #: post-type/module-base.php:716
 msgid "Added %1$s: %2$s"
-msgstr "% 1 $ s zêde kir:% 2 $ s"
+msgstr "%1$s zêde kir: %2$s"
 
 #: post-type/module-base.php:719
 msgid "Updated %1$s: %2$s to %3$s"
-msgstr "% 1 $ s nûvekirî:% 2 $ s heya% 3 $ s"
+msgstr "%1$s nûvekirî: %2$s heya %3$s"
 
 #: post-type/module-base.php:804
 msgctxt "List Filters"
@@ -546,7 +546,7 @@ msgstr "Zelal"
 
 #~ msgctxt "Search 'something'"
 #~ msgid "Search %s"
-#~ msgstr "Li% s bigerin"
+#~ msgstr "L %s bigerin"
 
 #~ msgid "Extensions (DT)"
 #~ msgstr "Extensions (DT)"
@@ -994,16 +994,16 @@ msgstr "Zelal"
 #~ msgstr "Nifşên Tîmê"
 
 #~ msgid "%s is reporting a new pre-group generation."
-#~ msgstr "% s nifşek pêş-komek nû radigihîne."
+#~ msgstr "%s nifşek pêş-komek nû radigihîne."
 
 #~ msgid "%s is reporting a new group generation."
-#~ msgstr "% s nifşek koma nû radigihîne."
+#~ msgstr "%s nifşek koma nû radigihîne."
 
 #~ msgid "%s is reporting a new church generation."
-#~ msgstr "% s nifşek dêrê ya nû radigihîne."
+#~ msgstr "%s nifşek dêrê ya nû radigihîne."
 
 #~ msgid "%s is reporting a new leadership team generation."
-#~ msgstr "% s nifşek tîmê serokatiyê ya nû radigihîne."
+#~ msgstr "%s nifşek tîmê serokatiyê ya nû radigihîne."
 
 #~ msgid "New Contact"
 #~ msgstr "Têkiliya Nû"
@@ -1027,25 +1027,25 @@ msgstr "Zelal"
 #~ msgstr "Coaching Nû"
 
 #~ msgid "%s is reporting a new contact."
-#~ msgstr "% s têkiliyek nû radigihîne."
+#~ msgstr "%s têkiliyek nû radigihîne."
 
 #~ msgid "%s is reporting a new pre-group formed."
-#~ msgstr "% s rapor dike ku pêş-komek nû hatî damezrandin."
+#~ msgstr "%s rapor dike ku pêş-komek nû hatî damezrandin."
 
 #~ msgid "%s is reporting a new group formed."
-#~ msgstr "% s rapor dike ku komek nû ava bûye."
+#~ msgstr "%s rapor dike ku komek nû ava bûye."
 
 #~ msgid "%s is reporting a new church."
-#~ msgstr "% s dêrek nû radigihîne."
+#~ msgstr "%s dêrek nû radigihîne."
 
 #~ msgid "%s is reporting a new leadership team formed."
-#~ msgstr "% s ragihand ku tîmek nû ya serokatiyê ava bûye."
+#~ msgstr "%s ragihand ku tîmek nû ya serokatiyê ava bûye."
 
 #~ msgid "%s is reporting a new baptism."
-#~ msgstr "% s ragihand ku vaftîzmek nû ye."
+#~ msgstr "%s ragihand ku vaftîzmek nû ye."
 
 #~ msgid "%s is reporting an coaching relationship."
-#~ msgstr "% s têkiliyek rahêneriyê radigihîne."
+#~ msgstr "%s têkiliyek rahêneriyê radigihîne."
 
 #~ msgid "Active"
 #~ msgstr "Jîr"
@@ -1092,7 +1092,7 @@ msgstr "Zelal"
 #~ "bikin ku ew guhertoya herî dawî ye."
 
 #~ msgid "Current Disciple Tools version: %1$s, required version: %2$s"
-#~ msgstr "Guhertoya Amûrên ipagirtê ya Naha:% 1 $ s, guhertoya hewce:% 2 $ s"
+#~ msgstr "Guhertoya Amûrên ipagirtê ya Naha: %1$s, guhertoya hewce: %2$s"
 
 #~ msgid "Duplicates"
 #~ msgstr "Duplicates"
@@ -1122,7 +1122,7 @@ msgstr "Zelal"
 #~ msgstr "Dashboard"
 
 #~ msgid "%s days since last update"
-#~ msgstr "Ji nûvekirina dawîn ve% s roj"
+#~ msgstr "Ji nûvekirina dawîn v %s roj"
 
 #~ msgid "Accept"
 #~ msgstr "Baweranîn"

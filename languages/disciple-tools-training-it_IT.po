@@ -362,15 +362,15 @@ msgstr "Chiudi"
 
 #: post-type/module-base.php:713
 msgid "Removed %1$s: %2$s"
-msgstr "Rimosso% 1 $ s:% 2 $ s"
+msgstr "Rimosso %1$s: %2$s"
 
 #: post-type/module-base.php:716
 msgid "Added %1$s: %2$s"
-msgstr "% 1 $ s aggiunto:% 2 $ s"
+msgstr "%1$s aggiunto: %2$s"
 
 #: post-type/module-base.php:719
 msgid "Updated %1$s: %2$s to %3$s"
-msgstr "Aggiornato% 1 $ s: da% 2 $ s a% 3 $ s"
+msgstr "Aggiornato %1$s: da %2$s a %3$s"
 
 #: post-type/module-base.php:804
 msgctxt "List Filters"
@@ -552,7 +552,7 @@ msgstr "Chiaro"
 
 #~ msgctxt "Search 'something'"
 #~ msgid "Search %s"
-#~ msgstr "Cerca% s"
+#~ msgstr "Cerc %s"
 
 #~ msgid "Extensions (DT)"
 #~ msgstr "Estensioni (DT)"
@@ -1003,16 +1003,16 @@ msgstr "Chiaro"
 #~ msgstr "Generazioni di squadra"
 
 #~ msgid "%s is reporting a new pre-group generation."
-#~ msgstr "% s sta segnalando una nuova generazione di pre-gruppo."
+#~ msgstr "%s sta segnalando una nuova generazione di pre-gruppo."
 
 #~ msgid "%s is reporting a new group generation."
-#~ msgstr "% s sta segnalando una nuova generazione di gruppo."
+#~ msgstr "%s sta segnalando una nuova generazione di gruppo."
 
 #~ msgid "%s is reporting a new church generation."
-#~ msgstr "% s sta segnalando una nuova generazione di chiese."
+#~ msgstr "%s sta segnalando una nuova generazione di chiese."
 
 #~ msgid "%s is reporting a new leadership team generation."
-#~ msgstr "% s sta segnalando una nuova generazione di team di leadership."
+#~ msgstr "%s sta segnalando una nuova generazione di team di leadership."
 
 #~ msgid "New Contact"
 #~ msgstr "Nuovo contatto"
@@ -1036,25 +1036,25 @@ msgstr "Chiaro"
 #~ msgstr "Nuovo coaching"
 
 #~ msgid "%s is reporting a new contact."
-#~ msgstr "% s sta segnalando un nuovo contatto."
+#~ msgstr "%s sta segnalando un nuovo contatto."
 
 #~ msgid "%s is reporting a new pre-group formed."
-#~ msgstr "% s sta segnalando la formazione di un nuovo pre-gruppo."
+#~ msgstr "%s sta segnalando la formazione di un nuovo pre-gruppo."
 
 #~ msgid "%s is reporting a new group formed."
-#~ msgstr "% s sta segnalando la formazione di un nuovo gruppo."
+#~ msgstr "%s sta segnalando la formazione di un nuovo gruppo."
 
 #~ msgid "%s is reporting a new church."
-#~ msgstr "% s sta segnalando una nuova chiesa."
+#~ msgstr "%s sta segnalando una nuova chiesa."
 
 #~ msgid "%s is reporting a new leadership team formed."
-#~ msgstr "% s sta segnalando la formazione di un nuovo team di leadership."
+#~ msgstr "%s sta segnalando la formazione di un nuovo team di leadership."
 
 #~ msgid "%s is reporting a new baptism."
-#~ msgstr "% s sta segnalando un nuovo battesimo."
+#~ msgstr "%s sta segnalando un nuovo battesimo."
 
 #~ msgid "%s is reporting an coaching relationship."
-#~ msgstr "% s sta segnalando una relazione di coaching."
+#~ msgstr "%s sta segnalando una relazione di coaching."
 
 #~ msgid "Active"
 #~ msgstr "Attivo"
@@ -1103,7 +1103,7 @@ msgstr "Chiaro"
 
 #~ msgid "Current Disciple Tools version: %1$s, required version: %2$s"
 #~ msgstr ""
-#~ "Versione corrente di Disciple Tools:% 1 $ s, versione richiesta:% 2 $ s"
+#~ "Versione corrente di Disciple Tools: %1$s, versione richiesta: %2$s"
 
 #~ msgid "Duplicates"
 #~ msgstr "Duplicati"
@@ -1133,7 +1133,7 @@ msgstr "Chiaro"
 #~ msgstr "Pannello di controllo"
 
 #~ msgid "%s days since last update"
-#~ msgstr "% s giorni dall'ultimo aggiornamento"
+#~ msgstr "%s giorni dall'ultimo aggiornamento"
 
 #~ msgid "Accept"
 #~ msgstr "Accettare"

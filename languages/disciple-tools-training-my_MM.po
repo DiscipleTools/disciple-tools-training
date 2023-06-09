@@ -349,15 +349,15 @@ msgstr "ပိတ်"
 
 #: post-type/module-base.php:713
 msgid "Removed %1$s: %2$s"
-msgstr "% 1 $ s ဖယ်ရှားပြီး% 2 $ s"
+msgstr "%1$s ဖယ်ရှားပြီး %2$s"
 
 #: post-type/module-base.php:716
 msgid "Added %1$s: %2$s"
-msgstr "% 1 $ s ထပ်တိုး% 1 $ s ထည့်သွင်းထားသည်"
+msgstr "%1$s ထပ်တိုး %1$s ထည့်သွင်းထားသည်"
 
 #: post-type/module-base.php:719
 msgid "Updated %1$s: %2$s to %3$s"
-msgstr "% 1 $ s မှ% 2 $ s မှ% 3 $ s သို့အဆင့်မြှင့်တင်ထားသည်"
+msgstr "%1$s မှ %2$s မှ %3$s သို့အဆင့်မြှင့်တင်ထားသည်"
 
 #: post-type/module-base.php:804
 msgctxt "List Filters"
@@ -536,7 +536,7 @@ msgstr "ရှင်းလင်းသော"
 
 #~ msgctxt "Search 'something'"
 #~ msgid "Search %s"
-#~ msgstr "% s ကိုရှာပါ"
+#~ msgstr "%s ကိုရှာပါ"
 
 #~ msgid "Extensions (DT)"
 #~ msgstr "Extensions (DT)"
@@ -979,16 +979,16 @@ msgstr "ရှင်းလင်းသော"
 #~ msgstr "အဖွဲ့မျိုးဆက်များ"
 
 #~ msgid "%s is reporting a new pre-group generation."
-#~ msgstr "% s သည်အုပ်စုမတိုင်မီမျိုးဆက်သစ်ကိုသတင်းပို့သည်။"
+#~ msgstr "%s သည်အုပ်စုမတိုင်မီမျိုးဆက်သစ်ကိုသတင်းပို့သည်။"
 
 #~ msgid "%s is reporting a new group generation."
-#~ msgstr "% s သည်အုပ်စုမျိုးဆက်သစ်တစ်ခုကိုအစီရင်ခံနေသည်။"
+#~ msgstr "%s သည်အုပ်စုမျိုးဆက်သစ်တစ်ခုကိုအစီရင်ခံနေသည်။"
 
 #~ msgid "%s is reporting a new church generation."
-#~ msgstr "% s သည်ဘုရားကျောင်းမျိုးဆက်သစ်တစ်ခုကိုအစီရင်ခံနေသည်။"
+#~ msgstr "%s သည်ဘုရားကျောင်းမျိုးဆက်သစ်တစ်ခုကိုအစီရင်ခံနေသည်။"
 
 #~ msgid "%s is reporting a new leadership team generation."
-#~ msgstr "% s သည်ခေါင်းဆောင်ပိုင်းမျိုးဆက်သစ်တစ်ခုကိုအစီရင်ခံနေသည်။"
+#~ msgstr "%s သည်ခေါင်းဆောင်ပိုင်းမျိုးဆက်သစ်တစ်ခုကိုအစီရင်ခံနေသည်။"
 
 #~ msgid "New Contact"
 #~ msgstr "ဆက်သွယ်ရန်"
@@ -1012,25 +1012,25 @@ msgstr "ရှင်းလင်းသော"
 #~ msgstr "နည်းပြအသစ်"
 
 #~ msgid "%s is reporting a new contact."
-#~ msgstr "% s သည်အဆက်အသွယ်အသစ်တစ်ခုကိုအစီရင်ခံနေသည်။"
+#~ msgstr "%s သည်အဆက်အသွယ်အသစ်တစ်ခုကိုအစီရင်ခံနေသည်။"
 
 #~ msgid "%s is reporting a new pre-group formed."
-#~ msgstr "% s သည်ဖွဲ့စည်းထားသည့် Pre- group အသစ်တစ်ခုကိုအစီရင်ခံနေသည်။"
+#~ msgstr "%s သည်ဖွဲ့စည်းထားသည့် Pre- group အသစ်တစ်ခုကိုအစီရင်ခံနေသည်။"
 
 #~ msgid "%s is reporting a new group formed."
-#~ msgstr "% s သည်ဖွဲ့စည်းသည့်အုပ်စုအသစ်တစ်ခုကိုအစီရင်ခံနေသည်။"
+#~ msgstr "%s သည်ဖွဲ့စည်းသည့်အုပ်စုအသစ်တစ်ခုကိုအစီရင်ခံနေသည်။"
 
 #~ msgid "%s is reporting a new church."
-#~ msgstr "% s သည်ဘုရားကျောင်းအသစ်တစ်ခုကိုအစီရင်ခံနေသည်။"
+#~ msgstr "%s သည်ဘုရားကျောင်းအသစ်တစ်ခုကိုအစီရင်ခံနေသည်။"
 
 #~ msgid "%s is reporting a new leadership team formed."
-#~ msgstr "% s သည်ဖွဲ့စည်းထားသည့်ခေါင်းဆောင်အဖွဲ့အသစ်တစ်ခုကိုအစီရင်ခံနေသည်။"
+#~ msgstr "%s သည်ဖွဲ့စည်းထားသည့်ခေါင်းဆောင်အဖွဲ့အသစ်တစ်ခုကိုအစီရင်ခံနေသည်။"
 
 #~ msgid "%s is reporting a new baptism."
-#~ msgstr "% s သည်နှစ်ခြင်းအသစ်ကိုအစီရင်ခံနေသည်။"
+#~ msgstr "%s သည်နှစ်ခြင်းအသစ်ကိုအစီရင်ခံနေသည်။"
 
 #~ msgid "%s is reporting an coaching relationship."
-#~ msgstr "% s သည်နည်းပြဆက်ဆံရေးကိုအစီရင်ခံနေသည်။"
+#~ msgstr "%s သည်နည်းပြဆက်ဆံရေးကိုအစီရင်ခံနေသည်။"
 
 #~ msgid "Active"
 #~ msgstr "တက်ကြွ"
@@ -1077,7 +1077,7 @@ msgstr "ရှင်းလင်းသော"
 #~ "အခင်းအကျင်းကိုဖွင့်ပါသို့မဟုတ်၎င်းသည်နောက်ဆုံးပေါ်ဗားရှင်းဖြစ်ကြောင်းသေချာပါစေ။"
 
 #~ msgid "Current Disciple Tools version: %1$s, required version: %2$s"
-#~ msgstr "လက်ရှိ Disciple Tools ဗားရှင်း -% 1 $ s၊ လိုအပ်သောမူကွဲ -% 2 $ s"
+#~ msgstr "လက်ရှိ Disciple Tools ဗားရှင်း - %1$s၊ လိုအပ်သောမူကွဲ - %2$s"
 
 #~ msgid "Duplicates"
 #~ msgstr "ပုံတူပွားများ"
@@ -1107,7 +1107,7 @@ msgstr "ရှင်းလင်းသော"
 #~ msgstr "ဒိုင်ခွက်"
 
 #~ msgid "%s days since last update"
-#~ msgstr "% s ရက်နောက်ဆုံးပြင်ဆင်မှု မှစ၍"
+#~ msgstr "%s ရက်နောက်ဆုံးပြင်ဆင်မှု မှစ၍"
 
 #~ msgid "Accept"
 #~ msgstr "လက်ခံသည်"

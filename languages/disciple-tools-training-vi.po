@@ -358,15 +358,15 @@ msgstr "Đóng"
 
 #: post-type/module-base.php:713
 msgid "Removed %1$s: %2$s"
-msgstr "Đã xóa% 1 $ s:% 2 $ s"
+msgstr "Đã xóa %1$s: %2$s"
 
 #: post-type/module-base.php:716
 msgid "Added %1$s: %2$s"
-msgstr "Đã thêm% 1 $ s:% 2 $ s"
+msgstr "Đã thêm %1$s: %2$s"
 
 #: post-type/module-base.php:719
 msgid "Updated %1$s: %2$s to %3$s"
-msgstr "Đã cập nhật% 1 $ s:% 2 $ s thành% 3 $ s"
+msgstr "Đã cập nhật %1$s: %2$s thành %3$s"
 
 #: post-type/module-base.php:804
 msgctxt "List Filters"
@@ -546,7 +546,7 @@ msgstr "Thông thoáng"
 
 #~ msgctxt "Search 'something'"
 #~ msgid "Search %s"
-#~ msgstr "Tìm kiếm% s"
+#~ msgstr "Tìm kiế %s"
 
 #~ msgid "Extensions (DT)"
 #~ msgstr "Phần mở rộng (DT)"
@@ -993,16 +993,16 @@ msgstr "Thông thoáng"
 #~ msgstr "Thế hệ nhóm"
 
 #~ msgid "%s is reporting a new pre-group generation."
-#~ msgstr "% s đang báo cáo tạo trước nhóm mới."
+#~ msgstr "%s đang báo cáo tạo trước nhóm mới."
 
 #~ msgid "%s is reporting a new group generation."
-#~ msgstr "% s đang báo cáo tạo nhóm mới."
+#~ msgstr "%s đang báo cáo tạo nhóm mới."
 
 #~ msgid "%s is reporting a new church generation."
-#~ msgstr "% s đang báo cáo một thế hệ nhà thờ mới."
+#~ msgstr "%s đang báo cáo một thế hệ nhà thờ mới."
 
 #~ msgid "%s is reporting a new leadership team generation."
-#~ msgstr "% s đang báo cáo một thế hệ nhóm lãnh đạo mới."
+#~ msgstr "%s đang báo cáo một thế hệ nhóm lãnh đạo mới."
 
 #~ msgid "New Contact"
 #~ msgstr "Địa chỉ liên lạc mới"
@@ -1026,25 +1026,25 @@ msgstr "Thông thoáng"
 #~ msgstr "Huấn luyện mới"
 
 #~ msgid "%s is reporting a new contact."
-#~ msgstr "% s đang báo cáo một địa chỉ liên hệ mới."
+#~ msgstr "%s đang báo cáo một địa chỉ liên hệ mới."
 
 #~ msgid "%s is reporting a new pre-group formed."
-#~ msgstr "% s đang báo cáo một nhóm trước mới được thành lập."
+#~ msgstr "%s đang báo cáo một nhóm trước mới được thành lập."
 
 #~ msgid "%s is reporting a new group formed."
-#~ msgstr "% s đang báo cáo một nhóm mới được thành lập."
+#~ msgstr "%s đang báo cáo một nhóm mới được thành lập."
 
 #~ msgid "%s is reporting a new church."
-#~ msgstr "% s đang báo cáo một nhà thờ mới."
+#~ msgstr "%s đang báo cáo một nhà thờ mới."
 
 #~ msgid "%s is reporting a new leadership team formed."
-#~ msgstr "% s đang báo cáo một nhóm lãnh đạo mới được thành lập."
+#~ msgstr "%s đang báo cáo một nhóm lãnh đạo mới được thành lập."
 
 #~ msgid "%s is reporting a new baptism."
-#~ msgstr "% s đang báo cáo một lễ rửa tội mới."
+#~ msgstr "%s đang báo cáo một lễ rửa tội mới."
 
 #~ msgid "%s is reporting an coaching relationship."
-#~ msgstr "% s đang báo cáo mối quan hệ huấn luyện."
+#~ msgstr "%s đang báo cáo mối quan hệ huấn luyện."
 
 #~ msgid "Active"
 #~ msgstr "Hoạt động"
@@ -1092,7 +1092,7 @@ msgstr "Thông thoáng"
 
 #~ msgid "Current Disciple Tools version: %1$s, required version: %2$s"
 #~ msgstr ""
-#~ "Phiên bản Công cụ Đệ tử Hiện tại:% 1 $ s, phiên bản bắt buộc:% 2 $ s"
+#~ "Phiên bản Công cụ Đệ tử Hiện tại: %1$s, phiên bản bắt buộc: %2$s"
 
 #~ msgid "Duplicates"
 #~ msgstr "Trùng lặp"
@@ -1122,7 +1122,7 @@ msgstr "Thông thoáng"
 #~ msgstr "bảng điều khiển"
 
 #~ msgid "%s days since last update"
-#~ msgstr "% s ngày kể từ lần cập nhật cuối cùng"
+#~ msgstr "%s ngày kể từ lần cập nhật cuối cùng"
 
 #~ msgid "Accept"
 #~ msgstr "Chấp nhận"

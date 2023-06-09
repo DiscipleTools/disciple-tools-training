@@ -369,15 +369,15 @@ msgstr "Fermer"
 
 #: post-type/module-base.php:713
 msgid "Removed %1$s: %2$s"
-msgstr "% 1 $ s supprimé:% 2 $ s"
+msgstr "%1$s supprimé: %2$s"
 
 #: post-type/module-base.php:716
 msgid "Added %1$s: %2$s"
-msgstr "% 1 $ s ajouté:% 2 $ s"
+msgstr "%1$s ajouté: %2$s"
 
 #: post-type/module-base.php:719
 msgid "Updated %1$s: %2$s to %3$s"
-msgstr "% 1 $ s mis à jour:% 2 $ s vers% 3 $ s"
+msgstr "%1$s mis à jour: %2$s vers %3$s"
 
 #: post-type/module-base.php:804
 msgctxt "List Filters"
@@ -559,7 +559,7 @@ msgstr "Effacer"
 
 #~ msgctxt "Search 'something'"
 #~ msgid "Search %s"
-#~ msgstr "Rechercher% s"
+#~ msgstr "Recherche %s"
 
 #~ msgid "Extensions (DT)"
 #~ msgstr "Extensions (DT)"
@@ -1011,16 +1011,16 @@ msgstr "Effacer"
 #~ msgstr "Générations d'équipe"
 
 #~ msgid "%s is reporting a new pre-group generation."
-#~ msgstr "% s signale une nouvelle génération pré-groupe."
+#~ msgstr "%s signale une nouvelle génération pré-groupe."
 
 #~ msgid "%s is reporting a new group generation."
-#~ msgstr "% s signale une nouvelle génération de groupe."
+#~ msgstr "%s signale une nouvelle génération de groupe."
 
 #~ msgid "%s is reporting a new church generation."
-#~ msgstr "% s rapporte une nouvelle génération d'églises."
+#~ msgstr "%s rapporte une nouvelle génération d'églises."
 
 #~ msgid "%s is reporting a new leadership team generation."
-#~ msgstr "% s rapporte une nouvelle génération d'équipe de direction."
+#~ msgstr "%s rapporte une nouvelle génération d'équipe de direction."
 
 #~ msgid "New Contact"
 #~ msgstr "Nouveau contact"
@@ -1044,25 +1044,25 @@ msgstr "Effacer"
 #~ msgstr "Nouveau coaching"
 
 #~ msgid "%s is reporting a new contact."
-#~ msgstr "% s signale un nouveau contact."
+#~ msgstr "%s signale un nouveau contact."
 
 #~ msgid "%s is reporting a new pre-group formed."
-#~ msgstr "% s signale la formation d'un nouveau pré-groupe."
+#~ msgstr "%s signale la formation d'un nouveau pré-groupe."
 
 #~ msgid "%s is reporting a new group formed."
-#~ msgstr "% s signale la formation d'un nouveau groupe."
+#~ msgstr "%s signale la formation d'un nouveau groupe."
 
 #~ msgid "%s is reporting a new church."
-#~ msgstr "% s signale une nouvelle église."
+#~ msgstr "%s signale une nouvelle église."
 
 #~ msgid "%s is reporting a new leadership team formed."
-#~ msgstr "% s signale la formation d'une nouvelle équipe de direction."
+#~ msgstr "%s signale la formation d'une nouvelle équipe de direction."
 
 #~ msgid "%s is reporting a new baptism."
-#~ msgstr "% s signale un nouveau baptême."
+#~ msgstr "%s signale un nouveau baptême."
 
 #~ msgid "%s is reporting an coaching relationship."
-#~ msgstr "% s signale une relation de coaching."
+#~ msgstr "%s signale une relation de coaching."
 
 #~ msgid "Active"
 #~ msgstr "actif"
@@ -1110,7 +1110,7 @@ msgstr "Effacer"
 #~ "vous qu'il s'agit de la dernière version."
 
 #~ msgid "Current Disciple Tools version: %1$s, required version: %2$s"
-#~ msgstr "Version actuelle de Disciple Tools:% 1 $ s, version requise:% 2 $ s"
+#~ msgstr "Version actuelle de Disciple Tools: %1$s, version requise: %2$s"
 
 #~ msgid "Duplicates"
 #~ msgstr "Doublons"
@@ -1140,7 +1140,7 @@ msgstr "Effacer"
 #~ msgstr "Tableau de bord"
 
 #~ msgid "%s days since last update"
-#~ msgstr "% s jours depuis la dernière mise à jour"
+#~ msgstr "%s jours depuis la dernière mise à jour"
 
 #~ msgid "Accept"
 #~ msgstr "J'accepte"

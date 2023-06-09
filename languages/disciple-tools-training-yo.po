@@ -356,15 +356,15 @@ msgstr "Pade"
 
 #: post-type/module-base.php:713
 msgid "Removed %1$s: %2$s"
-msgstr "Ti yọ% 1 $ s kuro:% 2 $ s"
+msgstr "Ti yọ %1$s kuro: %2$s"
 
 #: post-type/module-base.php:716
 msgid "Added %1$s: %2$s"
-msgstr "Ṣafikun% 1 $ s:% 2 $ s"
+msgstr "Ṣafikun %1$s: %2$s"
 
 #: post-type/module-base.php:719
 msgid "Updated %1$s: %2$s to %3$s"
-msgstr "Imudojuiwọn% 1 $ s:% 2 $ s si% 3 $ s"
+msgstr "Imudojuiwọn %1$s: %2$s si %3$s"
 
 #: post-type/module-base.php:804
 msgctxt "List Filters"
@@ -545,7 +545,7 @@ msgstr "Mu kuro"
 
 #~ msgctxt "Search 'something'"
 #~ msgid "Search %s"
-#~ msgstr "Wa% s"
+#~ msgstr "W %s"
 
 #~ msgid "Extensions (DT)"
 #~ msgstr "Awọn amugbooro (DT)"
@@ -992,16 +992,16 @@ msgstr "Mu kuro"
 #~ msgstr "Awọn iran Ẹgbẹ"
 
 #~ msgid "%s is reporting a new pre-group generation."
-#~ msgstr "% s n ṣe ijabọ iran-ẹgbẹ tuntun kan."
+#~ msgstr "%s n ṣe ijabọ iran-ẹgbẹ tuntun kan."
 
 #~ msgid "%s is reporting a new group generation."
-#~ msgstr "% s n ṣe ijabọ iran ẹgbẹ tuntun kan."
+#~ msgstr "%s n ṣe ijabọ iran ẹgbẹ tuntun kan."
 
 #~ msgid "%s is reporting a new church generation."
-#~ msgstr "% s n ṣe ijabọ iran ijo tuntun kan."
+#~ msgstr "%s n ṣe ijabọ iran ijo tuntun kan."
 
 #~ msgid "%s is reporting a new leadership team generation."
-#~ msgstr "% s n ṣe ijabọ iran ẹgbẹ olori tuntun kan."
+#~ msgstr "%s n ṣe ijabọ iran ẹgbẹ olori tuntun kan."
 
 #~ msgid "New Contact"
 #~ msgstr "Olubasọrọ Tuntun"
@@ -1025,25 +1025,25 @@ msgstr "Mu kuro"
 #~ msgstr "Ẹkọ Titun"
 
 #~ msgid "%s is reporting a new contact."
-#~ msgstr "% s n ṣe ijabọ olubasoro tuntun kan."
+#~ msgstr "%s n ṣe ijabọ olubasoro tuntun kan."
 
 #~ msgid "%s is reporting a new pre-group formed."
-#~ msgstr "% s n ṣe ijabọ ẹgbẹ tuntun ti o ṣẹda."
+#~ msgstr "%s n ṣe ijabọ ẹgbẹ tuntun ti o ṣẹda."
 
 #~ msgid "%s is reporting a new group formed."
-#~ msgstr "% s n ṣe ijabọ ẹgbẹ tuntun ti a ṣẹda."
+#~ msgstr "%s n ṣe ijabọ ẹgbẹ tuntun ti a ṣẹda."
 
 #~ msgid "%s is reporting a new church."
-#~ msgstr "% s n ṣe ijabọ ijo tuntun kan."
+#~ msgstr "%s n ṣe ijabọ ijo tuntun kan."
 
 #~ msgid "%s is reporting a new leadership team formed."
-#~ msgstr "% s n ṣe ijabọ ẹgbẹ oludari tuntun ti a ṣe."
+#~ msgstr "%s n ṣe ijabọ ẹgbẹ oludari tuntun ti a ṣe."
 
 #~ msgid "%s is reporting a new baptism."
-#~ msgstr "% s n ṣe ijabọ iribomi kan."
+#~ msgstr "%s n ṣe ijabọ iribomi kan."
 
 #~ msgid "%s is reporting an coaching relationship."
-#~ msgstr "% s n ṣe ijabọ ibasepọ olukọni."
+#~ msgstr "%s n ṣe ijabọ ibasepọ olukọni."
 
 #~ msgid "Active"
 #~ msgstr "Ti n ṣiṣẹ"
@@ -1090,7 +1090,7 @@ msgstr "Mu kuro"
 #~ "pe o jẹ ẹya tuntun."
 
 #~ msgid "Current Disciple Tools version: %1$s, required version: %2$s"
-#~ msgstr "Ẹya Awọn irinṣẹ Ọmọ-ẹgbẹ lọwọlọwọ:% 1 $ s, ẹya ti a beere:% 2 $ s"
+#~ msgstr "Ẹya Awọn irinṣẹ Ọmọ-ẹgbẹ lọwọlọwọ: %1$s, ẹya ti a beere: %2$s"
 
 #~ msgid "Duplicates"
 #~ msgstr "Awọn ẹda"
@@ -1120,7 +1120,7 @@ msgstr "Mu kuro"
 #~ msgstr "Dasibodu"
 
 #~ msgid "%s days since last update"
-#~ msgstr "% s ọjọ lati igba ti o kẹhin"
+#~ msgstr "%s ọjọ lati igba ti o kẹhin"
 
 #~ msgid "Accept"
 #~ msgstr "Gba"

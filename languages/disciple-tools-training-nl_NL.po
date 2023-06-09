@@ -360,15 +360,15 @@ msgstr "Dichtbij"
 
 #: post-type/module-base.php:713
 msgid "Removed %1$s: %2$s"
-msgstr "% 1 $ s verwijderd:% 2 $ s"
+msgstr "%1$s verwijderd: %2$s"
 
 #: post-type/module-base.php:716
 msgid "Added %1$s: %2$s"
-msgstr "% 1 $ s toegevoegd:% 2 $ s"
+msgstr "%1$s toegevoegd: %2$s"
 
 #: post-type/module-base.php:719
 msgid "Updated %1$s: %2$s to %3$s"
-msgstr "% 1 $ s:% 2 $ s bijgewerkt naar% 3 $ s"
+msgstr "%1$s: %2$s bijgewerkt naar %3$s"
 
 #: post-type/module-base.php:804
 msgctxt "List Filters"
@@ -549,7 +549,7 @@ msgstr "Doorzichtig"
 
 #~ msgctxt "Search 'something'"
 #~ msgid "Search %s"
-#~ msgstr "Zoek% s"
+#~ msgstr "Zoe %s"
 
 #~ msgid "Extensions (DT)"
 #~ msgstr "Extensies (DT)"
@@ -1000,16 +1000,16 @@ msgstr "Doorzichtig"
 #~ msgstr "Team generaties"
 
 #~ msgid "%s is reporting a new pre-group generation."
-#~ msgstr "% s rapporteert een nieuwe pre-group generatie."
+#~ msgstr "%s rapporteert een nieuwe pre-group generatie."
 
 #~ msgid "%s is reporting a new group generation."
-#~ msgstr "% s meldt een nieuwe groepsgeneratie."
+#~ msgstr "%s meldt een nieuwe groepsgeneratie."
 
 #~ msgid "%s is reporting a new church generation."
-#~ msgstr "% s meldt een nieuwe kerkgeneratie."
+#~ msgstr "%s meldt een nieuwe kerkgeneratie."
 
 #~ msgid "%s is reporting a new leadership team generation."
-#~ msgstr "% s rapporteert een nieuwe generatie van het leiderschapsteam."
+#~ msgstr "%s rapporteert een nieuwe generatie van het leiderschapsteam."
 
 #~ msgid "New Contact"
 #~ msgstr "Nieuw contact"
@@ -1033,25 +1033,25 @@ msgstr "Doorzichtig"
 #~ msgstr "Nieuwe coaching"
 
 #~ msgid "%s is reporting a new contact."
-#~ msgstr "% s meldt een nieuw contact."
+#~ msgstr "%s meldt een nieuw contact."
 
 #~ msgid "%s is reporting a new pre-group formed."
-#~ msgstr "% s meldt dat er een nieuwe pre-group is gevormd."
+#~ msgstr "%s meldt dat er een nieuwe pre-group is gevormd."
 
 #~ msgid "%s is reporting a new group formed."
-#~ msgstr "% s meldt dat er een nieuwe groep is gevormd."
+#~ msgstr "%s meldt dat er een nieuwe groep is gevormd."
 
 #~ msgid "%s is reporting a new church."
-#~ msgstr "% s meldt een nieuwe kerk."
+#~ msgstr "%s meldt een nieuwe kerk."
 
 #~ msgid "%s is reporting a new leadership team formed."
-#~ msgstr "% s meldt dat er een nieuw leiderschapsteam is gevormd."
+#~ msgstr "%s meldt dat er een nieuw leiderschapsteam is gevormd."
 
 #~ msgid "%s is reporting a new baptism."
-#~ msgstr "% s meldt een nieuwe doop."
+#~ msgstr "%s meldt een nieuwe doop."
 
 #~ msgid "%s is reporting an coaching relationship."
-#~ msgstr "% s meldt een coachingrelatie."
+#~ msgstr "%s meldt een coachingrelatie."
 
 #~ msgid "Active"
 #~ msgstr "Actief"
@@ -1098,7 +1098,7 @@ msgstr "Doorzichtig"
 #~ "de nieuwste versie is."
 
 #~ msgid "Current Disciple Tools version: %1$s, required version: %2$s"
-#~ msgstr "Huidige Disciple Tools-versie:% 1 $ s, vereiste versie:% 2 $ s"
+#~ msgstr "Huidige Disciple Tools-versie: %1$s, vereiste versie: %2$s"
 
 #~ msgid "Duplicates"
 #~ msgstr "Duplicaten"
@@ -1128,7 +1128,7 @@ msgstr "Doorzichtig"
 #~ msgstr "Dashboard"
 
 #~ msgid "%s days since last update"
-#~ msgstr "% s dagen sinds laatste update"
+#~ msgstr "%s dagen sinds laatste update"
 
 #~ msgid "Accept"
 #~ msgstr "Aanvaarden"

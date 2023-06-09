@@ -356,15 +356,15 @@ msgstr "Zatvoriti"
 
 #: post-type/module-base.php:713
 msgid "Removed %1$s: %2$s"
-msgstr "Uklonjeno% 1 $ s:% 2 $ s"
+msgstr "Uklonjeno %1$s: %2$s"
 
 #: post-type/module-base.php:716
 msgid "Added %1$s: %2$s"
-msgstr "Dodano% 1 $ s:% 2 $ s"
+msgstr "Dodano %1$s: %2$s"
 
 #: post-type/module-base.php:719
 msgid "Updated %1$s: %2$s to %3$s"
-msgstr "Ažurirano% 1 $ s:% 2 $ s na% 3 $ s"
+msgstr "Ažurirano %1$s: %2$s na %3$s"
 
 #: post-type/module-base.php:804
 msgctxt "List Filters"
@@ -544,7 +544,7 @@ msgstr "Čisto"
 
 #~ msgctxt "Search 'something'"
 #~ msgid "Search %s"
-#~ msgstr "Pretražite% s"
+#~ msgstr "Pretražit %s"
 
 #~ msgid "Extensions (DT)"
 #~ msgstr "Proširenja (DT)"
@@ -992,16 +992,16 @@ msgstr "Čisto"
 #~ msgstr "Timske generacije"
 
 #~ msgid "%s is reporting a new pre-group generation."
-#~ msgstr "% s prijavljuje novu generaciju predgrupe."
+#~ msgstr "%s prijavljuje novu generaciju predgrupe."
 
 #~ msgid "%s is reporting a new group generation."
-#~ msgstr "% s prijavljuje novu generaciju grupe."
+#~ msgstr "%s prijavljuje novu generaciju grupe."
 
 #~ msgid "%s is reporting a new church generation."
-#~ msgstr "% s prijavljuje novu crkvenu generaciju."
+#~ msgstr "%s prijavljuje novu crkvenu generaciju."
 
 #~ msgid "%s is reporting a new leadership team generation."
-#~ msgstr "% s izvještava o novoj generaciji voditeljskog tima."
+#~ msgstr "%s izvještava o novoj generaciji voditeljskog tima."
 
 #~ msgid "New Contact"
 #~ msgstr "Novi kontakt"
@@ -1025,25 +1025,25 @@ msgstr "Čisto"
 #~ msgstr "Novi Coaching"
 
 #~ msgid "%s is reporting a new contact."
-#~ msgstr "% s prijavljuje novi kontakt."
+#~ msgstr "%s prijavljuje novi kontakt."
 
 #~ msgid "%s is reporting a new pre-group formed."
-#~ msgstr "% s izvještava o formiranju nove predgrupe."
+#~ msgstr "%s izvještava o formiranju nove predgrupe."
 
 #~ msgid "%s is reporting a new group formed."
-#~ msgstr "% s izvještava o formiranoj novoj grupi."
+#~ msgstr "%s izvještava o formiranoj novoj grupi."
 
 #~ msgid "%s is reporting a new church."
-#~ msgstr "% s prijavljuje novu crkvu."
+#~ msgstr "%s prijavljuje novu crkvu."
 
 #~ msgid "%s is reporting a new leadership team formed."
-#~ msgstr "% s izvještava o formiranom novom voditeljskom timu."
+#~ msgstr "%s izvještava o formiranom novom voditeljskom timu."
 
 #~ msgid "%s is reporting a new baptism."
-#~ msgstr "% s prijavljuje novo krštenje."
+#~ msgstr "%s prijavljuje novo krštenje."
 
 #~ msgid "%s is reporting an coaching relationship."
-#~ msgstr "% s izvještava o trenerskom odnosu."
+#~ msgstr "%s izvještava o trenerskom odnosu."
 
 #~ msgid "Active"
 #~ msgstr "Aktivan"
@@ -1091,7 +1091,7 @@ msgstr "Čisto"
 #~ "najnovija verzija."
 
 #~ msgid "Current Disciple Tools version: %1$s, required version: %2$s"
-#~ msgstr "Trenutna verzija alata za učenike:% 1 $ s, potrebna verzija:% 2 $ s"
+#~ msgstr "Trenutna verzija alata za učenike: %1$s, potrebna verzija: %2$s"
 
 #~ msgid "Duplicates"
 #~ msgstr "Duplikati"
@@ -1121,7 +1121,7 @@ msgstr "Čisto"
 #~ msgstr "Nadzorna ploča"
 
 #~ msgid "%s days since last update"
-#~ msgstr "% s dana od zadnjeg ažuriranja"
+#~ msgstr "%s dana od zadnjeg ažuriranja"
 
 #~ msgid "Accept"
 #~ msgstr "Prihvatiti"

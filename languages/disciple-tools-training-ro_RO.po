@@ -360,15 +360,15 @@ msgstr "Închide"
 
 #: post-type/module-base.php:713
 msgid "Removed %1$s: %2$s"
-msgstr "Eliminat% 1 $ s:% 2 $ s"
+msgstr "Eliminat %1$s: %2$s"
 
 #: post-type/module-base.php:716
 msgid "Added %1$s: %2$s"
-msgstr "S-a adăugat% 1 $ s:% 2 $ s"
+msgstr "S-a adăugat %1$s: %2$s"
 
 #: post-type/module-base.php:719
 msgid "Updated %1$s: %2$s to %3$s"
-msgstr "Actualizat% 1 $ s:% 2 $ s până la% 3 $ s"
+msgstr "Actualizat %1$s: %2$s până la %3$s"
 
 #: post-type/module-base.php:804
 msgctxt "List Filters"
@@ -549,7 +549,7 @@ msgstr "clar"
 
 #~ msgctxt "Search 'something'"
 #~ msgid "Search %s"
-#~ msgstr "Căutați% s"
+#~ msgstr "Căutaț %s"
 
 #~ msgid "Extensions (DT)"
 #~ msgstr "Extensii (DT)"
@@ -999,16 +999,16 @@ msgstr "clar"
 #~ msgstr "Generatii de echipa"
 
 #~ msgid "%s is reporting a new pre-group generation."
-#~ msgstr "% s raportează o nouă generație pre-grup."
+#~ msgstr "%s raportează o nouă generație pre-grup."
 
 #~ msgid "%s is reporting a new group generation."
-#~ msgstr "% s raportează o nouă generație de grup."
+#~ msgstr "%s raportează o nouă generație de grup."
 
 #~ msgid "%s is reporting a new church generation."
-#~ msgstr "% s raportează o nouă generație bisericească."
+#~ msgstr "%s raportează o nouă generație bisericească."
 
 #~ msgid "%s is reporting a new leadership team generation."
-#~ msgstr "% s raportează o nouă generație de echipe de conducere."
+#~ msgstr "%s raportează o nouă generație de echipe de conducere."
 
 #~ msgid "New Contact"
 #~ msgstr "Contact nou"
@@ -1032,25 +1032,25 @@ msgstr "clar"
 #~ msgstr "Nou antrenor"
 
 #~ msgid "%s is reporting a new contact."
-#~ msgstr "% s raportează un contact nou."
+#~ msgstr "%s raportează un contact nou."
 
 #~ msgid "%s is reporting a new pre-group formed."
-#~ msgstr "% s raportează un nou pre-grup format."
+#~ msgstr "%s raportează un nou pre-grup format."
 
 #~ msgid "%s is reporting a new group formed."
-#~ msgstr "% s raportează un nou grup format."
+#~ msgstr "%s raportează un nou grup format."
 
 #~ msgid "%s is reporting a new church."
-#~ msgstr "% s raportează o nouă biserică."
+#~ msgstr "%s raportează o nouă biserică."
 
 #~ msgid "%s is reporting a new leadership team formed."
-#~ msgstr "% s raportează o nouă echipă de conducere formată."
+#~ msgstr "%s raportează o nouă echipă de conducere formată."
 
 #~ msgid "%s is reporting a new baptism."
-#~ msgstr "% s raportează un nou botez."
+#~ msgstr "%s raportează un nou botez."
 
 #~ msgid "%s is reporting an coaching relationship."
-#~ msgstr "% s raportează o relație de coaching."
+#~ msgstr "%s raportează o relație de coaching."
 
 #~ msgid "Active"
 #~ msgstr "Activ"
@@ -1099,7 +1099,7 @@ msgstr "clar"
 
 #~ msgid "Current Disciple Tools version: %1$s, required version: %2$s"
 #~ msgstr ""
-#~ "Versiunea actuală a Disciple Tools:% 1 $ s, versiunea necesară:% 2 $ s"
+#~ "Versiunea actuală a Disciple Tools: %1$s, versiunea necesară: %2$s"
 
 #~ msgid "Duplicates"
 #~ msgstr "Dubluri"
@@ -1129,7 +1129,7 @@ msgstr "clar"
 #~ msgstr "Bord"
 
 #~ msgid "%s days since last update"
-#~ msgstr "% s zile de la ultima actualizare"
+#~ msgstr "%s zile de la ultima actualizare"
 
 #~ msgid "Accept"
 #~ msgstr "Accept"

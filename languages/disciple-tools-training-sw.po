@@ -357,15 +357,15 @@ msgstr "Funga"
 
 #: post-type/module-base.php:713
 msgid "Removed %1$s: %2$s"
-msgstr "Imeondoa% 1 $ s:% 2 $ s"
+msgstr "Imeondoa %1$s: %2$s"
 
 #: post-type/module-base.php:716
 msgid "Added %1$s: %2$s"
-msgstr "Imeongeza% 1 $ s:% 2 $ s"
+msgstr "Imeongeza %1$s: %2$s"
 
 #: post-type/module-base.php:719
 msgid "Updated %1$s: %2$s to %3$s"
-msgstr "Imesasisha% 1 $ s:% 2 $ s hadi% 3 $ s"
+msgstr "Imesasisha %1$s: %2$s hadi %3$s"
 
 #: post-type/module-base.php:804
 msgctxt "List Filters"
@@ -545,7 +545,7 @@ msgstr "Wazi"
 
 #~ msgctxt "Search 'something'"
 #~ msgid "Search %s"
-#~ msgstr "Tafuta% s"
+#~ msgstr "Tafut %s"
 
 #~ msgid "Extensions (DT)"
 #~ msgstr "Viendelezi (DT)"
@@ -993,16 +993,16 @@ msgstr "Wazi"
 #~ msgstr "Vizazi vya Timu"
 
 #~ msgid "%s is reporting a new pre-group generation."
-#~ msgstr "% s inaripoti kizazi kipya cha kabla ya kikundi."
+#~ msgstr "%s inaripoti kizazi kipya cha kabla ya kikundi."
 
 #~ msgid "%s is reporting a new group generation."
-#~ msgstr "% s inaripoti kizazi kipya cha kikundi."
+#~ msgstr "%s inaripoti kizazi kipya cha kikundi."
 
 #~ msgid "%s is reporting a new church generation."
-#~ msgstr "% s inaripoti kizazi kipya cha kanisa."
+#~ msgstr "%s inaripoti kizazi kipya cha kanisa."
 
 #~ msgid "%s is reporting a new leadership team generation."
-#~ msgstr "% s inaripoti kizazi kipya cha timu ya uongozi."
+#~ msgstr "%s inaripoti kizazi kipya cha timu ya uongozi."
 
 #~ msgid "New Contact"
 #~ msgstr "Mawasiliano mpya"
@@ -1026,25 +1026,25 @@ msgstr "Wazi"
 #~ msgstr "Kufundisha mpya"
 
 #~ msgid "%s is reporting a new contact."
-#~ msgstr "% s inaripoti anwani mpya."
+#~ msgstr "%s inaripoti anwani mpya."
 
 #~ msgid "%s is reporting a new pre-group formed."
-#~ msgstr "% s inaripoti kikundi kipya cha mapema kilichoundwa."
+#~ msgstr "%s inaripoti kikundi kipya cha mapema kilichoundwa."
 
 #~ msgid "%s is reporting a new group formed."
-#~ msgstr "% s inaripoti kikundi kipya kilichoundwa."
+#~ msgstr "%s inaripoti kikundi kipya kilichoundwa."
 
 #~ msgid "%s is reporting a new church."
-#~ msgstr "% s inaripoti kanisa jipya."
+#~ msgstr "%s inaripoti kanisa jipya."
 
 #~ msgid "%s is reporting a new leadership team formed."
-#~ msgstr "% s inaripoti timu mpya ya uongozi iliyoundwa."
+#~ msgstr "%s inaripoti timu mpya ya uongozi iliyoundwa."
 
 #~ msgid "%s is reporting a new baptism."
-#~ msgstr "% s inaripoti ubatizo mpya."
+#~ msgstr "%s inaripoti ubatizo mpya."
 
 #~ msgid "%s is reporting an coaching relationship."
-#~ msgstr "% s inaripoti uhusiano wa ukocha."
+#~ msgstr "%s inaripoti uhusiano wa ukocha."
 
 #~ msgid "Active"
 #~ msgstr "Inatumika"
@@ -1092,7 +1092,7 @@ msgstr "Wazi"
 
 #~ msgid "Current Disciple Tools version: %1$s, required version: %2$s"
 #~ msgstr ""
-#~ "Toleo la Sasa la Zana za Wanafunzi:% 1 $ s, toleo linalohitajika:% 2 $ s"
+#~ "Toleo la Sasa la Zana za Wanafunzi: %1$s, toleo linalohitajika: %2$s"
 
 #~ msgid "Duplicates"
 #~ msgstr "Marudio"
@@ -1122,7 +1122,7 @@ msgstr "Wazi"
 #~ msgstr "Dashibodi"
 
 #~ msgid "%s days since last update"
-#~ msgstr "Siku% s tangu sasisho la mwisho"
+#~ msgstr "Sik %s tangu sasisho la mwisho"
 
 #~ msgid "Accept"
 #~ msgstr "Kubali"

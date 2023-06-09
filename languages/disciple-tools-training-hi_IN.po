@@ -352,15 +352,15 @@ msgstr "बंद करे"
 
 #: post-type/module-base.php:713
 msgid "Removed %1$s: %2$s"
-msgstr "% 1 $ s:% 2 $ s को निकाला गया"
+msgstr "%1$s: %2$s को निकाला गया"
 
 #: post-type/module-base.php:716
 msgid "Added %1$s: %2$s"
-msgstr "% 1 $ s:% 2 $ s जोड़ा गया"
+msgstr "%1$s: %2$s जोड़ा गया"
 
 #: post-type/module-base.php:719
 msgid "Updated %1$s: %2$s to %3$s"
-msgstr "% 1 $ s:% 2 $ s से% 3 $ s अपडेट किया गया"
+msgstr "%1$s: %2$s से %3$s अपडेट किया गया"
 
 #: post-type/module-base.php:804
 msgctxt "List Filters"
@@ -540,7 +540,7 @@ msgstr "स्पष्ट"
 
 #~ msgctxt "Search 'something'"
 #~ msgid "Search %s"
-#~ msgstr "% S खोजें"
+#~ msgstr "%s खोजें"
 
 #~ msgid "Extensions (DT)"
 #~ msgstr "एक्सटेंशन (DT)"
@@ -984,16 +984,16 @@ msgstr "स्पष्ट"
 #~ msgstr "टीम जनरेशन"
 
 #~ msgid "%s is reporting a new pre-group generation."
-#~ msgstr "% s एक नई पूर्व-समूह पीढ़ी की रिपोर्ट कर रहा है।"
+#~ msgstr "%s एक नई पूर्व-समूह पीढ़ी की रिपोर्ट कर रहा है।"
 
 #~ msgid "%s is reporting a new group generation."
-#~ msgstr "% s एक नई समूह पीढ़ी की रिपोर्ट कर रहा है।"
+#~ msgstr "%s एक नई समूह पीढ़ी की रिपोर्ट कर रहा है।"
 
 #~ msgid "%s is reporting a new church generation."
-#~ msgstr "% s एक नई चर्च पीढ़ी की रिपोर्ट कर रहा है।"
+#~ msgstr "%s एक नई चर्च पीढ़ी की रिपोर्ट कर रहा है।"
 
 #~ msgid "%s is reporting a new leadership team generation."
-#~ msgstr "% s एक नई नेतृत्व टीम पीढ़ी की रिपोर्ट कर रहा है।"
+#~ msgstr "%s एक नई नेतृत्व टीम पीढ़ी की रिपोर्ट कर रहा है।"
 
 #~ msgid "New Contact"
 #~ msgstr "नया कॉन्ट्रैक्ट"
@@ -1017,25 +1017,25 @@ msgstr "स्पष्ट"
 #~ msgstr "नई कोचिंग"
 
 #~ msgid "%s is reporting a new contact."
-#~ msgstr "% s एक नए संपर्क की रिपोर्ट कर रहा है।"
+#~ msgstr "%s एक नए संपर्क की रिपोर्ट कर रहा है।"
 
 #~ msgid "%s is reporting a new pre-group formed."
-#~ msgstr "% s एक नए पूर्व-समूह की रिपोर्ट कर रहा है।"
+#~ msgstr "%s एक नए पूर्व-समूह की रिपोर्ट कर रहा है।"
 
 #~ msgid "%s is reporting a new group formed."
-#~ msgstr "% s एक नए समूह के गठन की रिपोर्ट कर रहा है।"
+#~ msgstr "%s एक नए समूह के गठन की रिपोर्ट कर रहा है।"
 
 #~ msgid "%s is reporting a new church."
-#~ msgstr "% s एक नए चर्च की रिपोर्ट कर रहा है।"
+#~ msgstr "%s एक नए चर्च की रिपोर्ट कर रहा है।"
 
 #~ msgid "%s is reporting a new leadership team formed."
-#~ msgstr "% s एक नई नेतृत्व टीम गठित करने की रिपोर्ट कर रहा है।"
+#~ msgstr "%s एक नई नेतृत्व टीम गठित करने की रिपोर्ट कर रहा है।"
 
 #~ msgid "%s is reporting a new baptism."
-#~ msgstr "% s एक नए बपतिस्मा की रिपोर्ट कर रहा है।"
+#~ msgstr "%s एक नए बपतिस्मा की रिपोर्ट कर रहा है।"
 
 #~ msgid "%s is reporting an coaching relationship."
-#~ msgstr "% s एक कोचिंग संबंध की सूचना दे रहा है।"
+#~ msgstr "%s एक कोचिंग संबंध की सूचना दे रहा है।"
 
 #~ msgid "Active"
 #~ msgstr "सक्रिय"
@@ -1082,7 +1082,7 @@ msgstr "स्पष्ट"
 #~ "नवीनतम संस्करण है।"
 
 #~ msgid "Current Disciple Tools version: %1$s, required version: %2$s"
-#~ msgstr "वर्तमान शिष्य उपकरण संस्करण:% 1 $ s, आवश्यक संस्करण:% 2 $ s"
+#~ msgstr "वर्तमान शिष्य उपकरण संस्करण: %1$s, आवश्यक संस्करण: %2$s"
 
 #~ msgid "Duplicates"
 #~ msgstr "डुप्लिकेट"
@@ -1112,7 +1112,7 @@ msgstr "स्पष्ट"
 #~ msgstr "डैशबोर्ड"
 
 #~ msgid "%s days since last update"
-#~ msgstr "अंतिम अपडेट के बाद से% s दिन"
+#~ msgstr "अंतिम अपडेट के बाद से%s दिन"
 
 #~ msgid "Accept"
 #~ msgstr "स्वीकार करना"

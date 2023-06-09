@@ -351,15 +351,15 @@ msgstr "બંધ"
 
 #: post-type/module-base.php:713
 msgid "Removed %1$s: %2$s"
-msgstr "% 1 $ s દૂર કર્યું:% 2 $ s"
+msgstr "%1$s દૂર કર્યું: %2$s"
 
 #: post-type/module-base.php:716
 msgid "Added %1$s: %2$s"
-msgstr "% 1 $ s ઉમેરી:% 2 $ s"
+msgstr "%1$s ઉમેરી: %2$s"
 
 #: post-type/module-base.php:719
 msgid "Updated %1$s: %2$s to %3$s"
-msgstr "% 1 $ s:% 2 $ s થી% 3 $ s પર અપડેટ કર્યું"
+msgstr "%1$s: %2$s થી %3$s પર અપડેટ કર્યું"
 
 #: post-type/module-base.php:804
 msgctxt "List Filters"
@@ -539,7 +539,7 @@ msgstr "ચોખ્ખુ"
 
 #~ msgctxt "Search 'something'"
 #~ msgid "Search %s"
-#~ msgstr "% S શોધો"
+#~ msgstr "%s શોધો"
 
 #~ msgid "Extensions (DT)"
 #~ msgstr "એક્સ્ટેંશન (ડીટી)"
@@ -982,16 +982,16 @@ msgstr "ચોખ્ખુ"
 #~ msgstr "ટીમ જનરેશન"
 
 #~ msgid "%s is reporting a new pre-group generation."
-#~ msgstr "% s નવી પૂર્વ-જૂથ જનરેશનની જાણ કરી રહ્યું છે."
+#~ msgstr "%s નવી પૂર્વ-જૂથ જનરેશનની જાણ કરી રહ્યું છે."
 
 #~ msgid "%s is reporting a new group generation."
-#~ msgstr "% s નવી જૂથ પે generationીનો અહેવાલ આપે છે."
+#~ msgstr "%s નવી જૂથ પે generationીનો અહેવાલ આપે છે."
 
 #~ msgid "%s is reporting a new church generation."
-#~ msgstr "% s નવી ચર્ચ પે generationીની જાણ કરે છે."
+#~ msgstr "%s નવી ચર્ચ પે generationીની જાણ કરે છે."
 
 #~ msgid "%s is reporting a new leadership team generation."
-#~ msgstr "% s નવી નેતૃત્વ ટીમ બનાવટની જાણ કરે છે."
+#~ msgstr "%s નવી નેતૃત્વ ટીમ બનાવટની જાણ કરે છે."
 
 #~ msgid "New Contact"
 #~ msgstr "નવો સંપર્ક"
@@ -1015,25 +1015,25 @@ msgstr "ચોખ્ખુ"
 #~ msgstr "નવી કોચિંગ"
 
 #~ msgid "%s is reporting a new contact."
-#~ msgstr "% s નવા સંપર્કની જાણ કરી રહ્યું છે."
+#~ msgstr "%s નવા સંપર્કની જાણ કરી રહ્યું છે."
 
 #~ msgid "%s is reporting a new pre-group formed."
-#~ msgstr "% s રચિત નવા પૂર્વ જૂથની જાણ કરી રહ્યું છે."
+#~ msgstr "%s રચિત નવા પૂર્વ જૂથની જાણ કરી રહ્યું છે."
 
 #~ msgid "%s is reporting a new group formed."
-#~ msgstr "% s એ બનાવેલ નવા જૂથની જાણ કરી રહ્યાં છે."
+#~ msgstr "%s એ બનાવેલ નવા જૂથની જાણ કરી રહ્યાં છે."
 
 #~ msgid "%s is reporting a new church."
-#~ msgstr "% s નવા ચર્ચની જાણ કરે છે."
+#~ msgstr "%s નવા ચર્ચની જાણ કરે છે."
 
 #~ msgid "%s is reporting a new leadership team formed."
-#~ msgstr "% s રચિત નવી લીડરશીપ ટીમની રીપોર્ટ આપી રહ્યો છે."
+#~ msgstr "%s રચિત નવી લીડરશીપ ટીમની રીપોર્ટ આપી રહ્યો છે."
 
 #~ msgid "%s is reporting a new baptism."
-#~ msgstr "% s નવા બાપ્તિસ્માની જાણ કરે છે."
+#~ msgstr "%s નવા બાપ્તિસ્માની જાણ કરે છે."
 
 #~ msgid "%s is reporting an coaching relationship."
-#~ msgstr "% s કોચિંગના સંબંધની જાણ કરી રહ્યું છે."
+#~ msgstr "%s કોચિંગના સંબંધની જાણ કરી રહ્યું છે."
 
 #~ msgid "Active"
 #~ msgstr "સક્રિય"
@@ -1079,7 +1079,7 @@ msgstr "ચોખ્ખુ"
 #~ "કરીને 'શિષ્ય ટૂલ્સ' થીમ સક્રિય કરો અથવા ખાતરી કરો કે તે નવીનતમ સંસ્કરણ છે."
 
 #~ msgid "Current Disciple Tools version: %1$s, required version: %2$s"
-#~ msgstr "વર્તમાન શિષ્ય સાધનોનું સંસ્કરણ:% 1 $ s, આવશ્યક સંસ્કરણ:% 2 $ s"
+#~ msgstr "વર્તમાન શિષ્ય સાધનોનું સંસ્કરણ: %1$s, આવશ્યક સંસ્કરણ: %2$s"
 
 #~ msgid "Duplicates"
 #~ msgstr "ડુપ્લિકેટ્સ"
@@ -1109,7 +1109,7 @@ msgstr "ચોખ્ખુ"
 #~ msgstr "ડેશબોર્ડ"
 
 #~ msgid "%s days since last update"
-#~ msgstr "છેલ્લા અપડેટ પછી% s દિવસ"
+#~ msgstr "છેલ્લા અપડેટ પછી%s દિવસ"
 
 #~ msgid "Accept"
 #~ msgstr "સ્વીકારો"

@@ -355,15 +355,15 @@ msgstr "അടയ്‌ക്കുക"
 
 #: post-type/module-base.php:713
 msgid "Removed %1$s: %2$s"
-msgstr "% 1 $ s നീക്കംചെയ്തു:% 2 $ s"
+msgstr "%1$s നീക്കംചെയ്തു: %2$s"
 
 #: post-type/module-base.php:716
 msgid "Added %1$s: %2$s"
-msgstr "% 1 $ s ചേർത്തു:% 2 $ s"
+msgstr "%1$s ചേർത്തു: %2$s"
 
 #: post-type/module-base.php:719
 msgid "Updated %1$s: %2$s to %3$s"
-msgstr "% 1 $ s:% 2 $ s മുതൽ% 3 $ s വരെ അപ്‌ഡേറ്റുചെയ്‌തു"
+msgstr "%1$s: %2$s മുതൽ %3$s വരെ അപ്‌ഡേറ്റുചെയ്‌തു"
 
 #: post-type/module-base.php:804
 msgctxt "List Filters"
@@ -543,7 +543,7 @@ msgstr "മായ്‌ക്കുക"
 
 #~ msgctxt "Search 'something'"
 #~ msgid "Search %s"
-#~ msgstr "% S തിരയുക"
+#~ msgstr "%s തിരയുക"
 
 #~ msgid "Extensions (DT)"
 #~ msgstr "വിപുലീകരണങ്ങൾ (DT)"
@@ -987,16 +987,16 @@ msgstr "മായ്‌ക്കുക"
 #~ msgstr "ടീം തലമുറകൾ"
 
 #~ msgid "%s is reporting a new pre-group generation."
-#~ msgstr "% s ഒരു പുതിയ പ്രീ-ഗ്രൂപ്പ് ജനറേഷൻ റിപ്പോർട്ടുചെയ്യുന്നു."
+#~ msgstr "%s ഒരു പുതിയ പ്രീ-ഗ്രൂപ്പ് ജനറേഷൻ റിപ്പോർട്ടുചെയ്യുന്നു."
 
 #~ msgid "%s is reporting a new group generation."
-#~ msgstr "% s ഒരു പുതിയ ഗ്രൂപ്പ് തലമുറ റിപ്പോർട്ടുചെയ്യുന്നു."
+#~ msgstr "%s ഒരു പുതിയ ഗ്രൂപ്പ് തലമുറ റിപ്പോർട്ടുചെയ്യുന്നു."
 
 #~ msgid "%s is reporting a new church generation."
-#~ msgstr "% s ഒരു പുതിയ സഭാ തലമുറയെ റിപ്പോർട്ട് ചെയ്യുന്നു."
+#~ msgstr "%s ഒരു പുതിയ സഭാ തലമുറയെ റിപ്പോർട്ട് ചെയ്യുന്നു."
 
 #~ msgid "%s is reporting a new leadership team generation."
-#~ msgstr "% s ഒരു പുതിയ നേതൃത്വ ടീം ജനറേഷൻ റിപ്പോർട്ടുചെയ്യുന്നു."
+#~ msgstr "%s ഒരു പുതിയ നേതൃത്വ ടീം ജനറേഷൻ റിപ്പോർട്ടുചെയ്യുന്നു."
 
 #~ msgid "New Contact"
 #~ msgstr "പുതിയ കോൺ‌ടാക്റ്റ്"
@@ -1020,25 +1020,25 @@ msgstr "മായ്‌ക്കുക"
 #~ msgstr "പുതിയ കോച്ചിംഗ്"
 
 #~ msgid "%s is reporting a new contact."
-#~ msgstr "% s ഒരു പുതിയ കോൺ‌ടാക്റ്റ് റിപ്പോർ‌ട്ട് ചെയ്യുന്നു."
+#~ msgstr "%s ഒരു പുതിയ കോൺ‌ടാക്റ്റ് റിപ്പോർ‌ട്ട് ചെയ്യുന്നു."
 
 #~ msgid "%s is reporting a new pre-group formed."
-#~ msgstr "% s ഒരു പുതിയ പ്രീ-ഗ്രൂപ്പ് രൂപീകരിച്ചതായി റിപ്പോർട്ടുചെയ്യുന്നു."
+#~ msgstr "%s ഒരു പുതിയ പ്രീ-ഗ്രൂപ്പ് രൂപീകരിച്ചതായി റിപ്പോർട്ടുചെയ്യുന്നു."
 
 #~ msgid "%s is reporting a new group formed."
-#~ msgstr "% s ഒരു പുതിയ ഗ്രൂപ്പ് രൂപീകരിച്ചതായി റിപ്പോർട്ടുചെയ്യുന്നു."
+#~ msgstr "%s ഒരു പുതിയ ഗ്രൂപ്പ് രൂപീകരിച്ചതായി റിപ്പോർട്ടുചെയ്യുന്നു."
 
 #~ msgid "%s is reporting a new church."
-#~ msgstr "% s ഒരു പുതിയ സഭ റിപ്പോർട്ട് ചെയ്യുന്നു."
+#~ msgstr "%s ഒരു പുതിയ സഭ റിപ്പോർട്ട് ചെയ്യുന്നു."
 
 #~ msgid "%s is reporting a new leadership team formed."
-#~ msgstr "% s ഒരു പുതിയ നേതൃത്വ ടീം രൂപീകരിച്ചതായി റിപ്പോർട്ടുചെയ്യുന്നു."
+#~ msgstr "%s ഒരു പുതിയ നേതൃത്വ ടീം രൂപീകരിച്ചതായി റിപ്പോർട്ടുചെയ്യുന്നു."
 
 #~ msgid "%s is reporting a new baptism."
-#~ msgstr "% s ഒരു പുതിയ സ്നാനം റിപ്പോർട്ട് ചെയ്യുന്നു."
+#~ msgstr "%s ഒരു പുതിയ സ്നാനം റിപ്പോർട്ട് ചെയ്യുന്നു."
 
 #~ msgid "%s is reporting an coaching relationship."
-#~ msgstr "% s ഒരു കോച്ചിംഗ് ബന്ധം റിപ്പോർട്ടുചെയ്യുന്നു."
+#~ msgstr "%s ഒരു കോച്ചിംഗ് ബന്ധം റിപ്പോർട്ടുചെയ്യുന്നു."
 
 #~ msgid "Active"
 #~ msgstr "സജീവമാണ്"
@@ -1084,7 +1084,7 @@ msgstr "മായ്‌ക്കുക"
 #~ "'ശിഷ്യ ഉപകരണങ്ങൾ' തീം സജീവമാക്കുക അല്ലെങ്കിൽ അത് ഏറ്റവും പുതിയ പതിപ്പാണെന്ന് ഉറപ്പാക്കുക."
 
 #~ msgid "Current Disciple Tools version: %1$s, required version: %2$s"
-#~ msgstr "നിലവിലെ ശിഷ്യ ഉപകരണ പതിപ്പ്:% 1 $ s, ആവശ്യമായ പതിപ്പ്:% 2 $ s"
+#~ msgstr "നിലവിലെ ശിഷ്യ ഉപകരണ പതിപ്പ്: %1$s, ആവശ്യമായ പതിപ്പ്: %2$s"
 
 #~ msgid "Duplicates"
 #~ msgstr "തനിപ്പകർപ്പുകൾ"
@@ -1114,7 +1114,7 @@ msgstr "മായ്‌ക്കുക"
 #~ msgstr "ഡാഷ്ബോർഡ്"
 
 #~ msgid "%s days since last update"
-#~ msgstr "അവസാന അപ്‌ഡേറ്റ് മുതൽ% s ദിവസങ്ങൾ"
+#~ msgstr "അവസാന അപ്‌ഡേറ്റ് മുതൽ%s ദിവസങ്ങൾ"
 
 #~ msgid "Accept"
 #~ msgstr "അംഗീകരിക്കുക"
