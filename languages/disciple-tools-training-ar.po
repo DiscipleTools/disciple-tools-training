@@ -4,11 +4,17 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "training\n"
 "POT-Creation-Date: 2023-06-01T12:53:55+00:00\n"
+"PO-Revision-Date: 2023-08-18 11:48+0000\n"
+"Last-Translator: nesrine <nesrine0325@gmail.com>\n"
+"Language-Team: Arabic <https://translate.disciple.tools/projects/"
+"disciple-tools/disciple-tools-training/ar/>\n"
 "Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: POEditor.com\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+"X-Generator: Weblate 4.14.1\n"
 
 #: metrics/mapbox-maps.php:30
 msgid "Training Maps"
@@ -18,7 +24,7 @@ msgstr "خرائط التدريب"
 #: post-type/module-base.php:29 post-type/module-base.php:461
 #: post-type/module-base.php:473 post-type/module-base.php:496
 msgid "Trainings"
-msgstr "التدريبات"
+msgstr "الدورات التدريبية"
 
 #: metrics/mapbox-personal-maps.php:30
 msgid "Trainings Maps"
@@ -55,7 +61,7 @@ msgstr "قائد التدريب"
 
 #: post-type/module-base.php:76
 msgid "Multiplier"
-msgstr "مضاعف"
+msgstr "المضاعف"
 
 #: post-type/module-base.php:83
 msgid "Disciple.Tools Admin"
@@ -63,7 +69,7 @@ msgstr "مشرف Disciple.Tools"
 
 #: post-type/module-base.php:90
 msgid "Administrator"
-msgstr "مدير"
+msgstr "إداري"
 
 #: post-type/module-base.php:127
 msgid "Tags"
@@ -163,7 +169,7 @@ msgstr "لن يحدث هذا التدريب بعد الآن."
 
 #: post-type/module-base.php:201
 msgid "Assigned To"
-msgstr "المعينة لي"
+msgstr "مخصص ل"
 
 #: post-type/module-base.php:202
 msgid ""
@@ -217,7 +223,7 @@ msgstr "المواقع"
 #: post-type/module-base.php:296 post-type/module-base.php:305
 msgctxt "Optional Documentation"
 msgid "The general location where this contact is located."
-msgstr "من فضلك محاولة الاتصال مرة اخرى"
+msgstr "الموقع العام الذي توجد فيه جهة الاتصال هذه."
 
 #: post-type/module-base.php:313
 msgid "Address"
@@ -329,7 +335,7 @@ msgstr "إنشاء"
 
 #: post-type/module-base.php:550
 msgid "Select"
-msgstr "اختيار"
+msgstr "تحديد"
 
 #: post-type/module-base.php:555
 msgid "To add new members, click on 'Create' or 'Select'."
