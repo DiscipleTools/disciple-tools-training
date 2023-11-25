@@ -4,16 +4,16 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "training\n"
 "POT-Creation-Date: 2023-06-01T12:53:55+00:00\n"
-"PO-Revision-Date: 2023-02-16 10:06+0000\n"
+"PO-Revision-Date: 2023-11-25 12:57+0000\n"
 "Last-Translator: Kyle Koval <kyle.koval@gmail.com>\n"
-"Language-Team: Italian <https://translate.disciple.tools/projects/disciple-"
-"tools/disciple-tools-training/it_IT/>\n"
+"Language-Team: Italian <https://translate.disciple.tools/projects/"
+"disciple-tools/disciple-tools-training/it_IT/>\n"
 "Language: it_IT\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.14.1\n"
+"X-Generator: Weblate 5.2.1\n"
 
 #: metrics/mapbox-maps.php:30
 msgid "Training Maps"
@@ -332,7 +332,7 @@ msgstr "Altro"
 
 #: post-type/module-base.php:545
 msgid "Create"
-msgstr "Creare"
+msgstr "Crea"
 
 #: post-type/module-base.php:550
 msgid "Select"
@@ -414,11 +414,11 @@ msgstr "Contee/Province"
 #: post-type/module-public-calendar.php:432
 #: post-type/module-registration.php:385
 msgid "Add"
-msgstr "Inserisci"
+msgstr "Aggiungere"
 
 #: post-type/module-registration.php:31
 msgid "Magic Links"
-msgstr ""
+msgstr "Magic Link"
 
 #: post-type/module-registration.php:59
 msgid "copy link"
