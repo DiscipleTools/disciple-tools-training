@@ -125,11 +125,15 @@ jQuery(document).ready(function($) {
                 let data = {}
                 data.meeting_times = []
 
+                // Ensure date adopts required iso standard formatting.
+                let date_iso = ( !picker.startDate ) ? date : picker.startDate.toISOString();
+                let date_ts = isNaN( Date.parse( date_iso ) ) ? null : ( Date.parse( date_iso ) / 1000 );
+
                 let key = $(this).data('key')
                 if ( key ) {
-                    data.meeting_times.push({ key: key, value: moment.utc(date).unix() })
+                    data.meeting_times.push({ key: key, value: date_ts })
                 } else {
-                    data.meeting_times.push({ value: moment.utc(date).unix() })
+                    data.meeting_times.push({ value: date_ts })
                 }
 
                 window.API.update_post(post_type, post_id, data ).then((resp) => {
