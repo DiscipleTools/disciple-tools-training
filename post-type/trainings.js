@@ -127,7 +127,15 @@ jQuery(document).ready(function($) {
 
                 // Ensure date adopts required iso standard formatting.
                 let date_iso = ( !picker.startDate ) ? date : picker.startDate.toISOString();
-                let date_ts = isNaN( Date.parse( date_iso ) ) ? null : ( Date.parse( date_iso ) / 1000 );
+                let date_ts = isNaN( Date.parse( date_iso ) ) ? null : ( Date.parse( date_iso ) / 1000 ); // Work in seconds
+
+                // Ensure correct timezone offsets are maintained.
+                if ( date_ts ) {
+                    let offset = (new Date().getTimezoneOffset() * 60); // Work in seconds
+
+                    // Adjust timestamp to ensure it conforms with D.T's UTC standard.
+                    date_ts -= offset;
+                }
 
                 let key = $(this).data('key')
                 if ( key ) {
