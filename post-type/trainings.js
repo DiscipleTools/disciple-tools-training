@@ -112,10 +112,7 @@ jQuery(document).ready(function($) {
             }
         })
             .on('apply.daterangepicker', function (ev, picker) {
-                $(this).val(picker.startDate.format('YYYY-MM-DD hh:mm:ss a'));
-
-                let date = window.SHAREDFUNCTIONS.convertArabicToEnglishNumbers(picker.startDate.format('YYYY-MM-DD hh:mm:ss a'));
-
+                let timestamp = picker.startDate.unix();
                 if (!picker.startDate) {
                     date = " ";//null;
                 }
@@ -125,23 +122,11 @@ jQuery(document).ready(function($) {
                 let data = {}
                 data.meeting_times = []
 
-                // Ensure date adopts required iso standard formatting.
-                let date_iso = ( !picker.startDate ) ? date : picker.startDate.toISOString();
-                let date_ts = isNaN( Date.parse( date_iso ) ) ? null : ( Date.parse( date_iso ) / 1000 ); // Work in seconds
-
-                // Ensure correct timezone offsets are maintained.
-                if ( date_ts ) {
-                    let offset = (new Date().getTimezoneOffset() * 60); // Work in seconds
-
-                    // Adjust timestamp to ensure it conforms with D.T's UTC standard.
-                    date_ts -= offset;
-                }
-
                 let key = $(this).data('key')
                 if ( key ) {
-                    data.meeting_times.push({ key: key, value: date_ts })
+                    data.meeting_times.push({ key: key, value: timestamp })
                 } else {
-                    data.meeting_times.push({ value: date_ts })
+                    data.meeting_times.push({ value: timestamp })
                 }
 
                 window.API.update_post(post_type, post_id, data ).then((resp) => {
@@ -166,7 +151,7 @@ jQuery(document).ready(function($) {
                                type="text"
                                data-field="${window.lodash.escape( field )}"
                                data-key="${window.lodash.escape( v.key )}"
-                               value="${window.SHAREDFUNCTIONS.formatDate( window.lodash.escape( v.timestamp ) )}"
+                               value="${window.SHAREDFUNCTIONS.formatDate( window.lodash.escape( v.timestamp ), true)}"
                                class="dt-datetime-series-picker input-group-field" />
                         <div class="input-group-button">
                             <button class="button alert input-height delete-button-style datetime-series-delete-button delete-button" data-field="${window.lodash.escape( field )}" data-key="${window.lodash.escape( v.key )}">&times;</button>
