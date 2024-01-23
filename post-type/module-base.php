@@ -710,13 +710,13 @@ class DT_Training_Base extends DT_Module_Base {
             $fields = $post_type_settings;
             if ( isset( $fields['meeting_times'] ) ) {
                 if ( $activity->meta_value === 'value_deleted' ){
-                    $message = sprintf( __( 'Removed %1$s: %2$s', 'disciple-tools-training' ), $fields['meeting_times']['name'], dt_format_date( $activity->old_value, 'long' ) );
+                    $message = sprintf( __( 'Removed %1$s: {%2$s}', 'disciple-tools-training' ), $fields['meeting_times']['name'], $activity->old_value );
                 }
                 else if ( empty( $activity->old_value ) ) {
-                    $message = sprintf( __( 'Added %1$s: %2$s', 'disciple-tools-training' ), $fields['meeting_times']['name'], dt_format_date( $activity->meta_value, 'long' ) );
+                    $message = sprintf( __( 'Added %1$s: {%2$s}', 'disciple-tools-training' ), $fields['meeting_times']['name'], $activity->meta_value );
                 }
                 else {
-                    $message = sprintf( __( 'Updated %1$s: %2$s to %3$s', 'disciple-tools-training' ), $fields['meeting_times']['name'], dt_format_date( $activity->old_value, 'long' ), dt_format_date( $activity->meta_value, 'long' ) );
+                    $message = sprintf( __( 'Updated %1$s: {%2$s} to {%3$s}', 'disciple-tools-training' ), $fields['meeting_times']['name'], $activity->old_value, $activity->meta_value );
                 }
             }
         }
