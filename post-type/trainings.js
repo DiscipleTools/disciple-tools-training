@@ -112,10 +112,7 @@ jQuery(document).ready(function($) {
             }
         })
             .on('apply.daterangepicker', function (ev, picker) {
-                $(this).val(picker.startDate.format('YYYY-MM-DD hh:mm:ss a'));
-
-                let date = window.SHAREDFUNCTIONS.convertArabicToEnglishNumbers(picker.startDate.format('YYYY-MM-DD hh:mm:ss a'));
-
+                let timestamp = picker.startDate.unix();
                 if (!picker.startDate) {
                     date = " ";//null;
                 }
@@ -127,9 +124,9 @@ jQuery(document).ready(function($) {
 
                 let key = $(this).data('key')
                 if ( key ) {
-                    data.meeting_times.push({ key: key, value: moment.utc(date).unix() })
+                    data.meeting_times.push({ key: key, value: timestamp })
                 } else {
-                    data.meeting_times.push({ value: moment.utc(date).unix() })
+                    data.meeting_times.push({ value: timestamp })
                 }
 
                 window.API.update_post(post_type, post_id, data ).then((resp) => {
@@ -154,7 +151,7 @@ jQuery(document).ready(function($) {
                                type="text"
                                data-field="${window.lodash.escape( field )}"
                                data-key="${window.lodash.escape( v.key )}"
-                               value="${window.SHAREDFUNCTIONS.formatDate( window.lodash.escape( v.timestamp ) )}"
+                               value="${window.SHAREDFUNCTIONS.formatDate( window.lodash.escape( v.timestamp ), true)}"
                                class="dt-datetime-series-picker input-group-field" />
                         <div class="input-group-button">
                             <button class="button alert input-height delete-button-style datetime-series-delete-button delete-button" data-field="${window.lodash.escape( field )}" data-key="${window.lodash.escape( v.key )}">&times;</button>
