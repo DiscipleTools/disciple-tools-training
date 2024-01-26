@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Disciple Tools Plugins\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "training\n"
-"POT-Creation-Date: 2023-06-01T12:53:55+00:00\n"
+"POT-Creation-Date: 2024-01-26T10:01:09+00:00\n"
 "PO-Revision-Date: 2023-03-22 08:13+0000\n"
 "Last-Translator: Hanna Duhm <hde21@proton.me>\n"
 "Language-Team: German <https://translate.disciple.tools/projects/disciple-"
@@ -368,15 +368,21 @@ msgid "Close"
 msgstr "Schließen"
 
 #: post-type/module-base.php:713
-msgid "Removed %1$s: %2$s"
+#, fuzzy
+#| msgid "Removed %1$s: %2$s"
+msgid "Removed %1$s: {%2$s}"
 msgstr "%1$s entfernt: %2$s"
 
 #: post-type/module-base.php:716
-msgid "Added %1$s: %2$s"
+#, fuzzy
+#| msgid "Added %1$s: %2$s"
+msgid "Added %1$s: {%2$s}"
 msgstr "%1$s hinzugefügt: %2$s"
 
 #: post-type/module-base.php:719
-msgid "Updated %1$s: %2$s to %3$s"
+#, fuzzy
+#| msgid "Updated %1$s: %2$s to %3$s"
+msgid "Updated %1$s: {%2$s} to {%3$s}"
 msgstr "%1$s aktualisiert: %2$s auf %3$s"
 
 #: post-type/module-base.php:804
