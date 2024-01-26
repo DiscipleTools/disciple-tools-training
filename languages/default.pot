@@ -1,17 +1,17 @@
-# Copyright (C) 2023 
+# Copyright (C) 2024 
 # This file is distributed under the same license as the Disciple.Tools - Training plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: Disciple.Tools - Training 2.6.3\n"
+"Project-Id-Version: Disciple.Tools - Training 2.6.4\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-training\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2023-06-01T12:53:55+00:00\n"
+"POT-Creation-Date: 2024-01-26T10:01:09+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP-CLI 2.8.0\n"
+"X-Generator: WP-CLI 2.9.0\n"
 "X-Domain: disciple-tools-training\n"
 
 #: metrics/mapbox-maps.php:30
@@ -336,15 +336,15 @@ msgid "Close"
 msgstr ""
 
 #: post-type/module-base.php:713
-msgid "Removed %1$s: %2$s"
+msgid "Removed %1$s: {%2$s}"
 msgstr ""
 
 #: post-type/module-base.php:716
-msgid "Added %1$s: %2$s"
+msgid "Added %1$s: {%2$s}"
 msgstr ""
 
 #: post-type/module-base.php:719
-msgid "Updated %1$s: %2$s to %3$s"
+msgid "Updated %1$s: {%2$s} to {%3$s}"
 msgstr ""
 
 #: post-type/module-base.php:804
