@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Disciple Tools Plugins\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "training\n"
-"POT-Creation-Date: 2023-06-01T12:53:55+00:00\n"
+"POT-Creation-Date: 2024-01-26T10:01:09+00:00\n"
 "Language: ta\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -356,15 +356,21 @@ msgid "Close"
 msgstr "நெருக்கமான"
 
 #: post-type/module-base.php:713
-msgid "Removed %1$s: %2$s"
+#, fuzzy
+#| msgid "Removed %1$s: %2$s"
+msgid "Removed %1$s: {%2$s}"
 msgstr "%1$s: %2$s அகற்றப்பட்டது"
 
 #: post-type/module-base.php:716
-msgid "Added %1$s: %2$s"
+#, fuzzy
+#| msgid "Added %1$s: %2$s"
+msgid "Added %1$s: {%2$s}"
 msgstr "%1$s: %2$s சேர்க்கப்பட்டது"
 
 #: post-type/module-base.php:719
-msgid "Updated %1$s: %2$s to %3$s"
+#, fuzzy
+#| msgid "Updated %1$s: %2$s to %3$s"
+msgid "Updated %1$s: {%2$s} to {%3$s}"
 msgstr "%1$s: %2$s முதல் %3$s வரை புதுப்பிக்கப்பட்டது"
 
 #: post-type/module-base.php:804

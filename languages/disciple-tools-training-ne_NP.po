@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Disciple Tools Plugins\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "training\n"
-"POT-Creation-Date: 2023-06-01T12:53:55+00:00\n"
+"POT-Creation-Date: 2024-01-26T10:01:09+00:00\n"
 "PO-Revision-Date: 2023-02-21 11:22+0000\n"
 "Last-Translator: Mike Allbutt <mikeallbutt@gmail.com>\n"
 "Language-Team: Nepali <https://translate.disciple.tools/projects/disciple-"
@@ -357,15 +357,21 @@ msgid "Close"
 msgstr "बन्द"
 
 #: post-type/module-base.php:713
-msgid "Removed %1$s: %2$s"
+#, fuzzy
+#| msgid "Removed %1$s: %2$s"
+msgid "Removed %1$s: {%2$s}"
 msgstr "%1$s हटाईयो:% २ $ s"
 
 #: post-type/module-base.php:716
-msgid "Added %1$s: %2$s"
+#, fuzzy
+#| msgid "Added %1$s: %2$s"
+msgid "Added %1$s: {%2$s}"
 msgstr "%1$s थपियो:% २ $ s"
 
 #: post-type/module-base.php:719
-msgid "Updated %1$s: %2$s to %3$s"
+#, fuzzy
+#| msgid "Updated %1$s: %2$s to %3$s"
+msgid "Updated %1$s: {%2$s} to {%3$s}"
 msgstr "%1$s: %2$s %3$s मा अद्यावधिक गरियो"
 
 #: post-type/module-base.php:804
