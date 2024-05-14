@@ -883,6 +883,29 @@ class DT_Training_Base extends DT_Module_Base {
                     ],
                     'count' => $total_all
                 ];
+                $filters['filters'][] = [
+                    'ID' => 'favorite',
+                    'tab' => 'all',
+                    'name' => sprintf( _x( 'Favorite %s', 'Favorite Contacts', 'disciple_tools' ), $post_label_plural ),
+                    'query' => [
+                        'fields' => [ 'favorite' => [ '1' ] ],
+                        'sort' => 'name'
+                    ],
+                    'labels' => [
+                        [ 'id' => '1', 'name' => __( 'Favorite', 'disciple_tools' ) ]
+                    ]
+                ];
+                $filters['filters'][] = [
+                    'ID' => 'recent',
+                    'tab' => 'all',
+                    'name' => __( 'My Recently Viewed', 'disciple_tools' ),
+                    'query' => [
+                        'dt_recent' => true
+                    ],
+                    'labels' => [
+                        [ 'id' => 'recent', 'name' => __( 'Last 30 viewed', 'disciple_tools' ) ]
+                    ]
+                ];
 
                 foreach ( $fields['status']['default'] as $status_key => $status_value ) {
                     if ( isset( $status_counts[$status_key] ) ){
