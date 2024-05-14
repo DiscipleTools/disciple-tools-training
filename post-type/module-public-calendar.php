@@ -954,7 +954,7 @@ class DT_Training_App_Calendar_Module extends DT_Module_Base
 
     /**
      * Open default restrictions for access to registered endpoints
-     * @param $authorized
+     * @param bool $authorized
      * @return bool
      */
     public function authorize_url( $authorized ){

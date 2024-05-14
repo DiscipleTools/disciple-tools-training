@@ -724,7 +724,7 @@ class DT_Training_Magic_Registration
 
     /**
      * Open default restrictions for access to registered endpoints
-     * @param $authorized
+     * @param bool $authorized
      * @return bool
      */
     public function authorize_url( $authorized ){

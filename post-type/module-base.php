@@ -604,7 +604,7 @@ class DT_Training_Base extends DT_Module_Base {
      * action later.
      *
      * @param array $field_types
-     * @param $post_type
+     * @param string $post_type
      * @return array
      */
     public function dt_post_updated_custom_handled_meta( array $field_types, $post_type ) : array {
