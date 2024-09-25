@@ -3,12 +3,18 @@ msgstr ""
 "Project-Id-Version: Disciple Tools Plugins\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "training\n"
-"POT-Creation-Date: 2024-01-31T10:06:10+00:00\n"
+"POT-Creation-Date: 2024-05-14T09:08:35+00:00\n"
+"PO-Revision-Date: 2024-06-20 19:59+0000\n"
+"Last-Translator: Zlatko Celik <zlatko.celik@gmail.com>\n"
+"Language-Team: Croatian <https://translate.disciple.tools/projects/"
+"disciple-tools/disciple-tools-training/hr/>\n"
 "Language: hr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: POEditor.com\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 5.6\n"
 
 #: metrics/mapbox-maps.php:30
 msgid "Training Maps"
@@ -26,32 +32,27 @@ msgstr "Karte treninga"
 
 #: network/network-dashboard-integration.php:44
 msgid "New Training"
-msgstr ""
+msgstr "Novi trening"
 
 #: network/network-dashboard-integration.php:50
 msgid "Training Started"
-msgstr ""
+msgstr "Trening započet"
 
 #: network/network-dashboard-integration.php:56
 msgid "Training Completed"
-msgstr ""
+msgstr "Trening završen"
 
 #: post-type/module-base.php:28 post-type/module-base.php:495
 msgid "Training"
 msgstr "Trening"
 
 #: post-type/module-base.php:70
-#, fuzzy
-#| msgid "Trainings"
 msgid "Trainings Admin"
-msgstr "Treninzi"
+msgstr "Admin za treninge"
 
 #: post-type/module-base.php:71
-#, fuzzy
-#| msgctxt "Optional Documentation"
-#| msgid "Leader of a training"
 msgid "Admin access to all trainings"
-msgstr "Voditelj treninga"
+msgstr "Administratorski pristup svim treninzima"
 
 #: post-type/module-base.php:76
 msgid "Multiplier"
@@ -59,7 +60,7 @@ msgstr "Multiplikator"
 
 #: post-type/module-base.php:83
 msgid "Disciple.Tools Admin"
-msgstr "Učenik.Alat Admin"
+msgstr "Disciple.Tools admin"
 
 #: post-type/module-base.php:90
 msgid "Administrator"
@@ -74,6 +75,8 @@ msgctxt "Optional Documentation"
 msgid ""
 "A useful way to group related items and can be used to filter the records"
 msgstr ""
+"Koristan način za grupiranje povezanih stavki i može se koristiti za "
+"filtriranje zapisa"
 
 #: post-type/module-base.php:135
 msgid "Follow"
@@ -163,7 +166,7 @@ msgstr "Ovaj trening se više neće dogoditi."
 
 #: post-type/module-base.php:201
 msgid "Assigned To"
-msgstr "Dodijeljena"
+msgstr "Dodijeljen"
 
 #: post-type/module-base.php:202
 msgid ""
@@ -267,7 +270,7 @@ msgstr "Kontakti koji su članovi ovog treninga."
 
 #: post-type/module-base.php:377
 msgid "Leaders"
-msgstr "Vođe"
+msgstr "Voditelji"
 
 #: post-type/module-base.php:387
 msgid "People Groups"
@@ -326,7 +329,7 @@ msgstr "Ostalo"
 
 #: post-type/module-base.php:545
 msgid "Create"
-msgstr "Stvoriti"
+msgstr "Kreiraj"
 
 #: post-type/module-base.php:550
 msgid "Select"
@@ -334,7 +337,7 @@ msgstr "Odaberi"
 
 #: post-type/module-base.php:555
 msgid "To add new members, click on 'Create' or 'Select'."
-msgstr "Da biste dodali nove članove, kliknite \"Stvori\" ili \"Odaberi\"."
+msgstr "Da biste dodali nove članove, klikinte na 'Stvori' ili 'Odaberi'."
 
 #: post-type/module-base.php:560
 msgctxt "Add members modal"
@@ -355,22 +358,16 @@ msgid "Close"
 msgstr "Zatvoriti"
 
 #: post-type/module-base.php:713
-#, fuzzy
-#| msgid "Removed %1$s: %2$s"
 msgid "Removed %1$s: {%2$s}"
-msgstr "Uklonjeno %1$s: %2$s"
+msgstr "Uklonjeno %1$s: {%2$s}"
 
 #: post-type/module-base.php:716
-#, fuzzy
-#| msgid "Added %1$s: %2$s"
 msgid "Added %1$s: {%2$s}"
-msgstr "Dodano %1$s: %2$s"
+msgstr "Dodano %1$s: {%2$s}"
 
 #: post-type/module-base.php:719
-#, fuzzy
-#| msgid "Updated %1$s: %2$s to %3$s"
 msgid "Updated %1$s: {%2$s} to {%3$s}"
-msgstr "Ažurirano %1$s: %2$s na %3$s"
+msgstr "Ažurirano %1$s: {%2$s} to {%3$s}"
 
 #: post-type/module-base.php:804
 msgctxt "List Filters"
@@ -385,7 +382,7 @@ msgstr "svi"
 #: post-type/module-base.php:871
 msgctxt "List Filters"
 msgid "Default Filters"
-msgstr ""
+msgstr "Zadani filteri"
 
 #: post-type/module-public-calendar.php:85
 msgid "Reports"
@@ -418,7 +415,7 @@ msgstr "Dodati"
 
 #: post-type/module-registration.php:31
 msgid "Magic Links"
-msgstr ""
+msgstr "Magični linkovi"
 
 #: post-type/module-registration.php:59
 msgid "copy link"
@@ -446,7 +443,7 @@ msgstr "emisija na kalendaru"
 
 #: post-type/module-registration.php:118
 msgid "open registration"
-msgstr "otvorena registracija "
+msgstr "otvorena registracija"
 
 #: post-type/module-registration.php:265
 msgid "add"

@@ -3,12 +3,18 @@ msgstr ""
 "Project-Id-Version: Disciple Tools Plugins\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "training\n"
-"POT-Creation-Date: 2024-01-31T10:06:10+00:00\n"
-"Language: bs\n"
+"POT-Creation-Date: 2024-05-14T09:08:35+00:00\n"
+"PO-Revision-Date: 2024-05-26 11:21+0000\n"
+"Last-Translator: Dragana <celikdragana0@gmail.com>\n"
+"Language-Team: Bosnian <https://translate.disciple.tools/projects/"
+"disciple-tools/disciple-tools-training/bs_BA/>\n"
+"Language: bs_BA\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: POEditor.com\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 5.5.5\n"
 
 #: metrics/mapbox-maps.php:30
 msgid "Training Maps"
@@ -26,32 +32,27 @@ msgstr "Karte treninga"
 
 #: network/network-dashboard-integration.php:44
 msgid "New Training"
-msgstr ""
+msgstr "Nova obuka"
 
 #: network/network-dashboard-integration.php:50
 msgid "Training Started"
-msgstr ""
+msgstr "Kurs je započeo"
 
 #: network/network-dashboard-integration.php:56
 msgid "Training Completed"
-msgstr ""
+msgstr "Kurs je završen"
 
 #: post-type/module-base.php:28 post-type/module-base.php:495
 msgid "Training"
-msgstr "Trening"
+msgstr "Kurs"
 
 #: post-type/module-base.php:70
-#, fuzzy
-#| msgid "Trainings"
 msgid "Trainings Admin"
-msgstr "Treninzi"
+msgstr "Admin kursa"
 
 #: post-type/module-base.php:71
-#, fuzzy
-#| msgctxt "Optional Documentation"
-#| msgid "Leader of a training"
 msgid "Admin access to all trainings"
-msgstr "Voditelj treninga"
+msgstr "Administratorski pristup svim treninzima"
 
 #: post-type/module-base.php:76
 msgid "Multiplier"
@@ -59,7 +60,7 @@ msgstr "Množitelj"
 
 #: post-type/module-base.php:83
 msgid "Disciple.Tools Admin"
-msgstr "Disciple.Tools Admin"
+msgstr "Učenik. Admin Alata"
 
 #: post-type/module-base.php:90
 msgid "Administrator"
@@ -74,6 +75,8 @@ msgctxt "Optional Documentation"
 msgid ""
 "A useful way to group related items and can be used to filter the records"
 msgstr ""
+"Koristan način za grupisanje povezanih stavki i može se koristiti za "
+"filtriranje zapisa"
 
 #: post-type/module-base.php:135
 msgid "Follow"
@@ -209,7 +212,7 @@ msgstr "Napomene o tome kada će se održati treninzi"
 
 #: post-type/module-base.php:246 post-type/module-base.php:509
 msgid "Meeting Times"
-msgstr "Meeting Times"
+msgstr "Vrijeme sastanka"
 
 #: post-type/module-base.php:295 post-type/module-base.php:304
 msgid "Locations"
@@ -327,7 +330,7 @@ msgstr "Ostalo"
 
 #: post-type/module-base.php:545
 msgid "Create"
-msgstr "Stvoriti"
+msgstr "Kreiraj"
 
 #: post-type/module-base.php:550
 msgid "Select"
@@ -335,7 +338,7 @@ msgstr "Odaberite"
 
 #: post-type/module-base.php:555
 msgid "To add new members, click on 'Create' or 'Select'."
-msgstr "Da biste dodali nove članove, kliknite na 'Stvori' ili 'Odaberi'."
+msgstr "Da biste dodali nove članove, kliknite na 'Kreirajte' ili 'Odaberite'."
 
 #: post-type/module-base.php:560
 msgctxt "Add members modal"
@@ -353,25 +356,19 @@ msgstr ""
 
 #: post-type/module-base.php:573
 msgid "Close"
-msgstr "Zatvori"
+msgstr "Zatvorite"
 
 #: post-type/module-base.php:713
-#, fuzzy
-#| msgid "Removed %1$s: %2$s"
 msgid "Removed %1$s: {%2$s}"
-msgstr "Uklonjeno %1$s: %2$s"
+msgstr "Uklonjeno %1$s: {%2$s}"
 
 #: post-type/module-base.php:716
-#, fuzzy
-#| msgid "Added %1$s: %2$s"
 msgid "Added %1$s: {%2$s}"
-msgstr "Dodano %1$s: %2$s"
+msgstr "Dodano %1$s: {%2$s}"
 
 #: post-type/module-base.php:719
-#, fuzzy
-#| msgid "Updated %1$s: %2$s to %3$s"
 msgid "Updated %1$s: {%2$s} to {%3$s}"
-msgstr "Ažurirano %1$s: %2$s na %3$s"
+msgstr "Ažurirano %1$s: {%2$s} na {%3$s}"
 
 #: post-type/module-base.php:804
 msgctxt "List Filters"
@@ -386,7 +383,7 @@ msgstr "Sve"
 #: post-type/module-base.php:871
 msgctxt "List Filters"
 msgid "Default Filters"
-msgstr ""
+msgstr "Zadani filteri"
 
 #: post-type/module-public-calendar.php:85
 msgid "Reports"
@@ -415,11 +412,11 @@ msgstr "Županije"
 #: post-type/module-public-calendar.php:432
 #: post-type/module-registration.php:385
 msgid "Add"
-msgstr "Dodati"
+msgstr "Dodaj"
 
 #: post-type/module-registration.php:31
 msgid "Magic Links"
-msgstr ""
+msgstr "Magični link"
 
 #: post-type/module-registration.php:59
 msgid "copy link"
@@ -447,7 +444,7 @@ msgstr "prikaži na kalendaru"
 
 #: post-type/module-registration.php:118
 msgid "open registration"
-msgstr "otvorena registracija "
+msgstr "Otvorena registracija"
 
 #: post-type/module-registration.php:265
 msgid "add"
@@ -487,7 +484,7 @@ msgstr "Pridruži se"
 
 #: post-type/module-registration.php:700
 msgid "Clear"
-msgstr "Jasno"
+msgstr "Očisti"
 
 #~ msgid "Apps"
 #~ msgstr "Aplikacije"

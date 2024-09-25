@@ -3,12 +3,17 @@ msgstr ""
 "Project-Id-Version: Disciple Tools Plugins\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "training\n"
-"POT-Creation-Date: 2024-01-31T10:06:10+00:00\n"
+"POT-Creation-Date: 2024-05-14T09:08:35+00:00\n"
+"PO-Revision-Date: 2024-06-14 11:59+0000\n"
+"Last-Translator: Leila Mohamed <nevergvup.leila@gmail.com>\n"
+"Language-Team: Swahili <https://translate.disciple.tools/projects/"
+"disciple-tools/disciple-tools-training/sw/>\n"
 "Language: sw\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: POEditor.com\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.5.5\n"
 
 #: metrics/mapbox-maps.php:30
 msgid "Training Maps"
@@ -26,32 +31,27 @@ msgstr "Ramani za Mafunzo"
 
 #: network/network-dashboard-integration.php:44
 msgid "New Training"
-msgstr ""
+msgstr "Mafunzo Mapya"
 
 #: network/network-dashboard-integration.php:50
 msgid "Training Started"
-msgstr ""
+msgstr "Mafunzo Yameanza"
 
 #: network/network-dashboard-integration.php:56
 msgid "Training Completed"
-msgstr ""
+msgstr "Mafunzo Yamekamilika"
 
 #: post-type/module-base.php:28 post-type/module-base.php:495
 msgid "Training"
 msgstr "Mafunzo"
 
 #: post-type/module-base.php:70
-#, fuzzy
-#| msgid "Trainings"
 msgid "Trainings Admin"
-msgstr "Mafunzo"
+msgstr "Msimamizi wa Mafunzo"
 
 #: post-type/module-base.php:71
-#, fuzzy
-#| msgctxt "Optional Documentation"
-#| msgid "Leader of a training"
 msgid "Admin access to all trainings"
-msgstr "Kiongozi wa mafunzo"
+msgstr "Ufikiaji wa usimamizi kwa mafunzo yote"
 
 #: post-type/module-base.php:76
 msgid "Multiplier"
@@ -74,6 +74,7 @@ msgctxt "Optional Documentation"
 msgid ""
 "A useful way to group related items and can be used to filter the records"
 msgstr ""
+"Njia muhimu ya kupanga vitu vinavyohusiana na inaweza kutumika kuchuja rekodi"
 
 #: post-type/module-base.php:135
 msgid "Follow"
@@ -162,7 +163,7 @@ msgstr "Mafunzo haya hayatatokea tena."
 
 #: post-type/module-base.php:201
 msgid "Assigned To"
-msgstr "Iliyopewa Kwa"
+msgstr "Imekabidhiwa Kwa"
 
 #: post-type/module-base.php:202
 msgid ""
@@ -356,22 +357,16 @@ msgid "Close"
 msgstr "Funga"
 
 #: post-type/module-base.php:713
-#, fuzzy
-#| msgid "Removed %1$s: %2$s"
 msgid "Removed %1$s: {%2$s}"
-msgstr "Imeondoa %1$s: %2$s"
+msgstr "%1$s imeondolewa: {%2$s}"
 
 #: post-type/module-base.php:716
-#, fuzzy
-#| msgid "Added %1$s: %2$s"
 msgid "Added %1$s: {%2$s}"
-msgstr "Imeongeza %1$s: %2$s"
+msgstr "%1$s imeongezwa: {%2$s}"
 
 #: post-type/module-base.php:719
-#, fuzzy
-#| msgid "Updated %1$s: %2$s to %3$s"
 msgid "Updated %1$s: {%2$s} to {%3$s}"
-msgstr "Imesasisha %1$s: %2$s hadi %3$s"
+msgstr "Ilisasishwa %1$s: {%2$s} hadi {%3$s}"
 
 #: post-type/module-base.php:804
 msgctxt "List Filters"
@@ -386,7 +381,7 @@ msgstr "Wote"
 #: post-type/module-base.php:871
 msgctxt "List Filters"
 msgid "Default Filters"
-msgstr ""
+msgstr "Vichujio Chaguomsingi"
 
 #: post-type/module-public-calendar.php:85
 msgid "Reports"
@@ -419,7 +414,7 @@ msgstr "Ongeza"
 
 #: post-type/module-registration.php:31
 msgid "Magic Links"
-msgstr ""
+msgstr "Viungo vya Uchawi"
 
 #: post-type/module-registration.php:59
 msgid "copy link"
