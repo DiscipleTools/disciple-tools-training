@@ -3,12 +3,17 @@ msgstr ""
 "Project-Id-Version: Disciple Tools Plugins\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "training\n"
-"POT-Creation-Date: 2024-01-31T10:06:10+00:00\n"
-"Language: ko\n"
+"POT-Creation-Date: 2024-05-14T09:08:35+00:00\n"
+"PO-Revision-Date: 2024-09-14 07:59+0000\n"
+"Last-Translator: Zack Han <suburbanideal@gmail.com>\n"
+"Language-Team: Korean <https://translate.disciple.tools/projects/"
+"disciple-tools/disciple-tools-training/ko_KR/>\n"
+"Language: ko_KR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: POEditor.com\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.7.2\n"
 
 #: metrics/mapbox-maps.php:30
 msgid "Training Maps"
@@ -264,7 +269,7 @@ msgstr "이 교육의 구성원 인 연락처입니다."
 
 #: post-type/module-base.php:377
 msgid "Leaders"
-msgstr "리더"
+msgstr "지도자들"
 
 #: post-type/module-base.php:387
 msgid "People Groups"

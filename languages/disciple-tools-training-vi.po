@@ -3,12 +3,17 @@ msgstr ""
 "Project-Id-Version: Disciple Tools Plugins\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "training\n"
-"POT-Creation-Date: 2024-01-31T10:06:10+00:00\n"
+"POT-Creation-Date: 2024-05-14T09:08:35+00:00\n"
+"PO-Revision-Date: 2024-07-20 03:59+0000\n"
+"Last-Translator: Charlie Ritchie <ritchiecharlie@gmail.com>\n"
+"Language-Team: Vietnamese <https://translate.disciple.tools/projects/"
+"disciple-tools/disciple-tools-training/vi/>\n"
 "Language: vi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: POEditor.com\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.6.2\n"
 
 #: metrics/mapbox-maps.php:30
 msgid "Training Maps"
@@ -18,7 +23,7 @@ msgstr "Bản đồ đào tạo"
 #: post-type/module-base.php:29 post-type/module-base.php:461
 #: post-type/module-base.php:473 post-type/module-base.php:496
 msgid "Trainings"
-msgstr "Đào tạo"
+msgstr "Các khoá Đào tạo"
 
 #: metrics/mapbox-personal-maps.php:30
 msgid "Trainings Maps"
@@ -26,32 +31,27 @@ msgstr "Bản đồ đào tạo"
 
 #: network/network-dashboard-integration.php:44
 msgid "New Training"
-msgstr ""
+msgstr "Đào tạo mới"
 
 #: network/network-dashboard-integration.php:50
 msgid "Training Started"
-msgstr ""
+msgstr "Đào tạo đã bắt đầu"
 
 #: network/network-dashboard-integration.php:56
 msgid "Training Completed"
-msgstr ""
+msgstr "Đào tạo đã hoàn thành"
 
 #: post-type/module-base.php:28 post-type/module-base.php:495
 msgid "Training"
 msgstr "Đào tạo"
 
 #: post-type/module-base.php:70
-#, fuzzy
-#| msgid "Trainings"
 msgid "Trainings Admin"
-msgstr "Đào tạo"
+msgstr "Quản trị viên Đào tạo"
 
 #: post-type/module-base.php:71
-#, fuzzy
-#| msgctxt "Optional Documentation"
-#| msgid "Leader of a training"
 msgid "Admin access to all trainings"
-msgstr "Trưởng đoàn đào tạo"
+msgstr "Quản trị viên truy cập tất cả các khoá đào tạo"
 
 #: post-type/module-base.php:76
 msgid "Multiplier"
@@ -63,7 +63,7 @@ msgstr "Quản trị viên công cụ"
 
 #: post-type/module-base.php:90
 msgid "Administrator"
-msgstr "Người quản lý"
+msgstr "Quản trị viên"
 
 #: post-type/module-base.php:127
 msgid "Tags"
@@ -74,6 +74,8 @@ msgctxt "Optional Documentation"
 msgid ""
 "A useful way to group related items and can be used to filter the records"
 msgstr ""
+"Một cách hữu ích để nhóm các mục liên quan và có thể sử dụng để lọc các bản "
+"ghi"
 
 #: post-type/module-base.php:135
 msgid "Follow"
@@ -136,7 +138,7 @@ msgstr "Hoàn thành"
 #: post-type/module-base.php:183
 msgctxt "Training Status field description"
 msgid "This training has successfully completed"
-msgstr "Khóa đào tạo này đã hoàn thành thành công"
+msgstr "Khóa đào tạo này đã kết thúc thành công"
 
 #: post-type/module-base.php:187
 msgctxt "Training Status label"
@@ -148,22 +150,21 @@ msgctxt "Training Status field description"
 msgid ""
 "This contact is currently on hold. It has potential of getting scheduled in "
 "the future."
-msgstr ""
-"Liên hệ này hiện đang bị giữ. Nó có tiềm năng được lên lịch trong tương lai."
+msgstr "Liên hệ này hiện đang bị giữ. Nó có thể được lên lịch trong tương lai."
 
 #: post-type/module-base.php:192
 msgctxt "Training Status label"
 msgid "Closed"
-msgstr "Đóng cửa"
+msgstr "Đã đóng"
 
 #: post-type/module-base.php:193
 msgctxt "Training Status field description"
 msgid "This training is no longer going to happen."
-msgstr "Việc đào tạo này sẽ không còn diễn ra nữa."
+msgstr "Khoá đào tạo này sẽ không diễn ra nữa."
 
 #: post-type/module-base.php:201
 msgid "Assigned To"
-msgstr "Phân công"
+msgstr "Phân công cho"
 
 #: post-type/module-base.php:202
 msgid ""
@@ -172,7 +173,7 @@ msgstr "Chọn người chịu trách nhiệm báo cáo chính về khóa đào 
 
 #: post-type/module-base.php:209
 msgid "Training Coach / Church Planter"
-msgstr "Huấn luyện viên / Người trồng cây nhà thờ"
+msgstr "Huấn luyện viên / Người lập Hội thánh"
 
 #: post-type/module-base.php:210
 msgctxt "Optional Documentation"
@@ -181,9 +182,9 @@ msgid ""
 "be assigned to a training while multiple people can be coaches / church "
 "planters of this training."
 msgstr ""
-"Người đã trồng và / hoặc đang huấn luyện khóa đào tạo này. Chỉ một người có "
-"thể được chỉ định cho một khóa đào tạo trong khi nhiều người có thể là huấn "
-"luyện viên / người trồng nhà thờ của khóa đào tạo này."
+"Người đã tổ chức và / hoặc đang huấn luyện khóa đào tạo này. Chỉ một người "
+"có thể được chỉ định cho một khóa đào tạo trong khi nhiều người có thể là "
+"huấn luyện viên / người thành lập Hội thánh của khóa đào tạo này."
 
 #: post-type/module-base.php:222
 msgid "Requires Update"
@@ -191,7 +192,7 @@ msgstr "Yêu cầu cập nhật"
 
 #: post-type/module-base.php:228
 msgid "Video Link"
-msgstr "Liên kêt video"
+msgstr "Liên kết video"
 
 #: post-type/module-base.php:229
 msgctxt "Optional Documentation"
@@ -218,7 +219,7 @@ msgstr "Địa điểm"
 #: post-type/module-base.php:296 post-type/module-base.php:305
 msgctxt "Optional Documentation"
 msgid "The general location where this contact is located."
-msgstr "Vị trí chung nơi liên hệ này được đặt."
+msgstr "Vị trí nơi liên hệ này được đặt."
 
 #: post-type/module-base.php:313
 msgid "Address"
@@ -268,7 +269,7 @@ msgstr "Những người liên hệ là thành viên của khóa đào tạo nà
 
 #: post-type/module-base.php:377
 msgid "Leaders"
-msgstr "Các nhà lãnh đạo"
+msgstr "Lãnh đạo"
 
 #: post-type/module-base.php:387
 msgid "People Groups"
@@ -277,7 +278,7 @@ msgstr "Nhóm người"
 #: post-type/module-base.php:388
 msgctxt "Optional Documentation"
 msgid "The people trainings represented by this training."
-msgstr "Những người được đào tạo đại diện bởi khóa đào tạo này."
+msgstr "Đào tạo người đại diện bởi khóa đào tạo này."
 
 #: post-type/module-base.php:397
 msgid "Groups"
@@ -295,14 +296,14 @@ msgid ""
 "manually to included people who may not be in the system but are also "
 "members of the training."
 msgstr ""
-"Số lượng thành viên trong khóa đào tạo này. Nó sẽ tự động được cập nhật khi "
-"thành viên mới được thêm hoặc bớt trong danh sách thành viên. Thay đổi số "
-"này theo cách thủ công cho những người được bao gồm có thể không có trong hệ "
-"thống nhưng cũng là thành viên của khóa đào tạo."
+"Số lượng thành viên trong khóa đào tạo này. Sẽ tự động được cập nhật khi "
+"thành viên mới được thêm hoặc bớt trong danh sách thành viên. Có thể thay "
+"đổi số này theo cách thủ công cho những người không có trong hệ thống nhưng "
+"cũng là thành viên của khóa đào tạo."
 
 #: post-type/module-base.php:416
 msgid "Leader Count"
-msgstr "Đội trưởng"
+msgstr "Số Đội trưởng"
 
 #: post-type/module-base.php:426
 msgid "Training as Leader"
@@ -311,7 +312,7 @@ msgstr "Đào tạo như một nhà lãnh đạo"
 #: post-type/module-base.php:427
 msgctxt "Optional Documentation"
 msgid "Leader of a training"
-msgstr "Trưởng đoàn đào tạo"
+msgstr "Trưởng khoá đào tạo"
 
 #: post-type/module-base.php:438
 msgid "Training as Participant"
@@ -328,11 +329,11 @@ msgstr "Khác"
 
 #: post-type/module-base.php:545
 msgid "Create"
-msgstr "Tạo nên"
+msgstr "Tạo"
 
 #: post-type/module-base.php:550
 msgid "Select"
-msgstr "Lựa chọn"
+msgstr "Chọn"
 
 #: post-type/module-base.php:555
 msgid "To add new members, click on 'Create' or 'Select'."
@@ -357,27 +358,21 @@ msgid "Close"
 msgstr "Đóng"
 
 #: post-type/module-base.php:713
-#, fuzzy
-#| msgid "Removed %1$s: %2$s"
 msgid "Removed %1$s: {%2$s}"
-msgstr "Đã xóa %1$s: %2$s"
+msgstr "Đã gỡ bỏ%1$s: %2$s"
 
 #: post-type/module-base.php:716
-#, fuzzy
-#| msgid "Added %1$s: %2$s"
 msgid "Added %1$s: {%2$s}"
 msgstr "Đã thêm %1$s: %2$s"
 
 #: post-type/module-base.php:719
-#, fuzzy
-#| msgid "Updated %1$s: %2$s to %3$s"
 msgid "Updated %1$s: {%2$s} to {%3$s}"
 msgstr "Đã cập nhật %1$s: %2$s thành %3$s"
 
 #: post-type/module-base.php:804
 msgctxt "List Filters"
 msgid "Assigned to me"
-msgstr "Giao cho tôi"
+msgstr "Phân công cho tôi"
 
 #: post-type/module-base.php:812
 msgctxt "List Filters"
@@ -387,7 +382,7 @@ msgstr "Tất cả"
 #: post-type/module-base.php:871
 msgctxt "List Filters"
 msgid "Default Filters"
-msgstr ""
+msgstr "Bộ lọc mặc định"
 
 #: post-type/module-public-calendar.php:85
 msgid "Reports"
@@ -399,7 +394,7 @@ msgstr "Tổng số nhóm"
 
 #: post-type/module-public-calendar.php:122
 msgid "Total Baptisms"
-msgstr "Tổng số phép rửa tội"
+msgstr "Tổng số phép báp-têm"
 
 #: post-type/module-public-calendar.php:123
 msgid "Countries"
@@ -407,24 +402,24 @@ msgstr "Quốc gia"
 
 #: post-type/module-public-calendar.php:124
 msgid "States"
-msgstr "Những trạng thái"
+msgstr "Tỉnh"
 
 #: post-type/module-public-calendar.php:125
 msgid "Counties"
-msgstr "Hạt"
+msgstr "Huyện"
 
 #: post-type/module-public-calendar.php:432
 #: post-type/module-registration.php:385
 msgid "Add"
-msgstr "Thêm vào"
+msgstr "Thêm"
 
 #: post-type/module-registration.php:31
 msgid "Magic Links"
-msgstr ""
+msgstr "Gửi Liên kết nhanh"
 
 #: post-type/module-registration.php:59
 msgid "copy link"
-msgstr "sao chép đường dẫn"
+msgstr "Sao chép đường dẫn"
 
 #: post-type/module-registration.php:61
 msgid "edit form"
@@ -436,7 +431,7 @@ msgstr "báo cáo"
 
 #: post-type/module-registration.php:67
 msgid "create link"
-msgstr "tạo đường link"
+msgstr "tạo liên kết"
 
 #: post-type/module-registration.php:114
 msgid "link"
@@ -448,7 +443,7 @@ msgstr "hiển thị trên lịch"
 
 #: post-type/module-registration.php:118
 msgid "open registration"
-msgstr "mở đăng ký "
+msgstr "mở đăng ký"
 
 #: post-type/module-registration.php:265
 msgid "add"
@@ -472,7 +467,7 @@ msgstr "Mở bản đồ"
 
 #: post-type/module-registration.php:270
 msgid "clear"
-msgstr "thông thoáng"
+msgstr "Xoá"
 
 #: post-type/module-registration.php:384
 msgid "Register for Training"
@@ -488,7 +483,7 @@ msgstr "Tham gia vào"
 
 #: post-type/module-registration.php:700
 msgid "Clear"
-msgstr "Thông thoáng"
+msgstr "Xoá"
 
 #~ msgid "Apps"
 #~ msgstr "Ứng dụng"
