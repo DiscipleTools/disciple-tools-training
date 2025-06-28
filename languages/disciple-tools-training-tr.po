@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Disciple.Tools - Training 2.6.7\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "training\n"
-"POT-Creation-Date: 2024-11-14T11:03:58+00:00\n"
+"POT-Creation-Date: 2025-06-18T11:26:25+00:00\n"
 "PO-Revision-Date: 2024-11-07 15:00+0000\n"
 "Last-Translator: Cody Adams <izmirdeyabanci@gmail.com>\n"
 "Language-Team: Turkish <https://translate.disciple.tools/projects/disciple-"
@@ -346,14 +346,17 @@ msgid "Close"
 msgstr "Kapatın"
 
 #: post-type/module-base.php:713
+#, php-format
 msgid "Removed %1$s: {%2$s}"
 msgstr ""
 
 #: post-type/module-base.php:716
+#, php-format
 msgid "Added %1$s: {%2$s}"
 msgstr ""
 
 #: post-type/module-base.php:719
+#, php-format
 msgid "Updated %1$s: {%2$s} to {%3$s}"
 msgstr ""
 
