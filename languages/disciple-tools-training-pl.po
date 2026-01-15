@@ -15,7 +15,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: WP-CLI 2.8.0\n"
 "X-Domain: disciple-tools-training\n"
-"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 "
+"|| n%100>14) ? 1 : 2);\n"
 
 #: metrics/mapbox-maps.php:30
 msgid "Training Maps"
@@ -76,7 +77,8 @@ msgctxt "Optional Documentation"
 msgid ""
 "A useful way to group related items and can be used to filter the records"
 msgstr ""
-"Przydatny sposob grupowania powiazanych elementow, moze byc uzywany do filtrowania rekordow"
+"Przydatny sposob grupowania powiazanych elementow, moze byc uzywany do "
+"filtrowania rekordow"
 
 #: post-type/module-base.php:135
 msgid "Follow"
@@ -171,8 +173,7 @@ msgstr "Przypisane do"
 #: post-type/module-base.php:202
 msgid ""
 "Select the main person who is responsible for reporting on this training."
-msgstr ""
-"Wybierz glowna osobe odpowiedzialna za raportowanie tego szkolenia."
+msgstr "Wybierz glowna osobe odpowiedzialna za raportowanie tego szkolenia."
 
 #: post-type/module-base.php:209
 msgid "Training Coach / Church Planter"
@@ -248,7 +249,8 @@ msgid ""
 "indicate trainings that collaborate, are about to merge, recently split, etc."
 msgstr ""
 "Powiazane szkolenie, ktore nie jest w relacji nadrzedny/podrzedny. Moze "
-"oznaczac szkolenia wspolpracujace, planujace polaczenie, niedawno rozdzielone itp."
+"oznaczac szkolenia wspolpracujace, planujace polaczenie, niedawno "
+"rozdzielone itp."
 
 #: post-type/module-base.php:355
 msgid "Child Training"
@@ -298,9 +300,9 @@ msgid ""
 "manually to included people who may not be in the system but are also "
 "members of the training."
 msgstr ""
-"Liczba uczestnikow tego szkolenia. Bedzie automatycznie aktualizowana "
-"po dodaniu lub usunieciu uczestnikow z listy. Zmien te liczbe recznie, "
-"aby uwzglednic osoby, ktore nie sa w systemie, ale sa uczestnikami szkolenia."
+"Liczba uczestnikow tego szkolenia. Bedzie automatycznie aktualizowana po "
+"dodaniu lub usunieciu uczestnikow z listy. Zmien te liczbe recznie, aby "
+"uwzglednic osoby, ktore nie sa w systemie, ale sa uczestnikami szkolenia."
 
 #: post-type/module-base.php:416
 msgid "Leader Count"

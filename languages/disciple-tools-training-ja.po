@@ -69,8 +69,8 @@ msgctxt "Optional Documentation"
 msgid ""
 "A useful way to group related items and can be used to filter the records"
 msgstr ""
-"関連するアイテムをグループ化するのに便利な方法で、レコードのフィルタリングに使"
-"用できます"
+"関連するアイテムをグループ化するのに便利な方法で、レコードのフィルタリングに"
+"使用できます"
 
 #: post-type/module-base.php:135
 msgid "Follow"
@@ -344,8 +344,8 @@ msgid ""
 "In the 'Member List' field, type the name of an existing contact to add them "
 "to this training."
 msgstr ""
-"「メンバーリスト」フィールドに、既存の連絡先の名前を入力して、このトレーニング"
-"に追加します。"
+"「メンバーリスト」フィールドに、既存の連絡先の名前を入力して、このトレーニン"
+"グに追加します。"
 
 #: post-type/module-base.php:573
 msgid "Close"

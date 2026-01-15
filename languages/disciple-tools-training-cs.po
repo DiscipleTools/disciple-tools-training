@@ -171,8 +171,7 @@ msgstr "Prideleno"
 #: post-type/module-base.php:202
 msgid ""
 "Select the main person who is responsible for reporting on this training."
-msgstr ""
-"Vyberte hlavni osobu odpovednou za podavani zprav o tomto skoleni."
+msgstr "Vyberte hlavni osobu odpovednou za podavani zprav o tomto skoleni."
 
 #: post-type/module-base.php:209
 msgid "Training Coach / Church Planter"
@@ -185,8 +184,8 @@ msgid ""
 "be assigned to a training while multiple people can be coaches / church "
 "planters of this training."
 msgstr ""
-"Osoba, ktera zalozila a/nebo vede toto skoleni. Ke skoleni muze byt pridelena "
-"pouze jedna osoba, ale koucu / zakladatelu sboru muze byt vice."
+"Osoba, ktera zalozila a/nebo vede toto skoleni. Ke skoleni muze byt "
+"pridelena pouze jedna osoba, ale koucu / zakladatelu sboru muze byt vice."
 
 #: post-type/module-base.php:222
 msgid "Requires Update"

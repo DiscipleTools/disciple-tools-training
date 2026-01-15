@@ -69,7 +69,8 @@ msgctxt "Optional Documentation"
 msgid ""
 "A useful way to group related items and can be used to filter the records"
 msgstr ""
-"தொடர்புடைய உருப்படிகளை குழுவாக்க ஒரு பயனுள்ள வழி மற்றும் பதிவுகளை வடிகட்ட பயன்படுத்தலாம்"
+"தொடர்புடைய உருப்படிகளை குழுவாக்க ஒரு பயனுள்ள வழி மற்றும் பதிவுகளை வடிகட்ட "
+"பயன்படுத்தலாம்"
 
 #: post-type/module-base.php:135
 msgid "Follow"

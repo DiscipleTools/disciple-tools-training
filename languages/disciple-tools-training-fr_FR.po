@@ -250,8 +250,8 @@ msgid ""
 "indicate trainings that collaborate, are about to merge, recently split, etc."
 msgstr ""
 "Une formation connexe qui n'est pas dans une relation parent / enfant. Cela "
-"peut indiquer des formations qui collaborent, sont sur le point de fusionner, "
-"se sont récemment divisées, etc."
+"peut indiquer des formations qui collaborent, sont sur le point de "
+"fusionner, se sont récemment divisées, etc."
 
 #: post-type/module-base.php:355
 msgid "Child Training"

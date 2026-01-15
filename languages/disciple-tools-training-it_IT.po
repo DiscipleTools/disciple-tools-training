@@ -248,8 +248,8 @@ msgid ""
 "indicate trainings that collaborate, are about to merge, recently split, etc."
 msgstr ""
 "Una formazione correlata che non è in relazione principale/derivata. "
-"Potrebbe indicare formazioni che collaborano, stanno per fondersi, "
-"si sono recentemente separate, ecc."
+"Potrebbe indicare formazioni che collaborano, stanno per fondersi, si sono "
+"recentemente separate, ecc."
 
 #: post-type/module-base.php:355
 msgid "Child Training"

@@ -68,7 +68,8 @@ msgstr "ಟ್ಯಾಗ್ಗಳು"
 msgctxt "Optional Documentation"
 msgid ""
 "A useful way to group related items and can be used to filter the records"
-msgstr "ಸಂಬಂಧಿತ ಐಟಂಗಳನ್ನು ಗುಂಪು ಮಾಡಲು ಉಪಯುಕ್ತ ಮಾರ್ಗ ಮತ್ತು ದಾಖಲೆಗಳನ್ನು ಫಿಲ್ಟರ್ ಮಾಡಲು ಬಳಸಬಹುದು"
+msgstr ""
+"ಸಂಬಂಧಿತ ಐಟಂಗಳನ್ನು ಗುಂಪು ಮಾಡಲು ಉಪಯುಕ್ತ ಮಾರ್ಗ ಮತ್ತು ದಾಖಲೆಗಳನ್ನು ಫಿಲ್ಟರ್ ಮಾಡಲು ಬಳಸಬಹುದು"
 
 #: post-type/module-base.php:135
 msgid "Follow"

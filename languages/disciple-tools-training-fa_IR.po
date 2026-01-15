@@ -69,7 +69,8 @@ msgctxt "Optional Documentation"
 msgid ""
 "A useful way to group related items and can be used to filter the records"
 msgstr ""
-"روشی مفید برای گروه‌بندی موارد مرتبط که می‌تواند برای فیلتر کردن رکوردها استفاده شود"
+"روشی مفید برای گروه‌بندی موارد مرتبط که می‌تواند برای فیلتر کردن رکوردها "
+"استفاده شود"
 
 #: post-type/module-base.php:135
 msgid "Follow"
@@ -144,7 +145,8 @@ msgid ""
 "This contact is currently on hold. It has potential of getting scheduled in "
 "the future."
 msgstr ""
-"این آموزش در حال حاضر در حالت تعلیق است. امکان برنامه‌ریزی آن در آینده وجود دارد."
+"این آموزش در حال حاضر در حالت تعلیق است. امکان برنامه‌ریزی آن در آینده وجود "
+"دارد."
 
 #: post-type/module-base.php:192
 msgctxt "Training Status label"
@@ -177,8 +179,8 @@ msgid ""
 "planters of this training."
 msgstr ""
 "شخصی که این آموزش را بنیان‌گذاری کرده و/یا در حال مربیگری آن است. فقط یک نفر "
-"می‌تواند به یک آموزش اختصاص یابد در حالی که چندین نفر می‌توانند مربی / کلیساکار "
-"این آموزش باشند."
+"می‌تواند به یک آموزش اختصاص یابد در حالی که چندین نفر می‌توانند مربی / "
+"کلیساکار این آموزش باشند."
 
 #: post-type/module-base.php:222
 msgid "Requires Update"

@@ -75,7 +75,8 @@ msgctxt "Optional Documentation"
 msgid ""
 "A useful way to group related items and can be used to filter the records"
 msgstr ""
-"Hasznos módszer a kapcsolódó elemek csoportosítására, és a rekordok szűrésére használható"
+"Hasznos módszer a kapcsolódó elemek csoportosítására, és a rekordok "
+"szűrésére használható"
 
 #: post-type/module-base.php:135
 msgid "Follow"
@@ -183,9 +184,9 @@ msgid ""
 "be assigned to a training while multiple people can be coaches / church "
 "planters of this training."
 msgstr ""
-"Az a személy, aki elindította és/vagy coachként segíti ezt a képzést. Csak egy személy "
-"rendelhető egy képzéshez felelősként, míg több személy lehet ennek a képzésnek a "
-"coachja / gyülekezetplántálója."
+"Az a személy, aki elindította és/vagy coachként segíti ezt a képzést. Csak "
+"egy személy rendelhető egy képzéshez felelősként, míg több személy lehet "
+"ennek a képzésnek a coachja / gyülekezetplántálója."
 
 #: post-type/module-base.php:222
 msgid "Requires Update"
@@ -296,10 +297,10 @@ msgid ""
 "manually to included people who may not be in the system but are also "
 "members of the training."
 msgstr ""
-"A képzés tagjainak száma. Automatikusan frissül, amikor új tagokat adnak hozzá "
-"vagy távolítanak el a taglistából. Módosítsa ezt a számot manuálisan, ha olyan "
-"személyeket szeretne beleszámolni, akik nem szerepelnek a rendszerben, de szintén "
-"tagjai a képzésnek."
+"A képzés tagjainak száma. Automatikusan frissül, amikor új tagokat adnak "
+"hozzá vagy távolítanak el a taglistából. Módosítsa ezt a számot manuálisan, "
+"ha olyan személyeket szeretne beleszámolni, akik nem szerepelnek a "
+"rendszerben, de szintén tagjai a képzésnek."
 
 #: post-type/module-base.php:416
 msgid "Leader Count"
@@ -337,7 +338,8 @@ msgstr "Kiválasztás"
 
 #: post-type/module-base.php:555
 msgid "To add new members, click on 'Create' or 'Select'."
-msgstr "Új tagok hozzáadásához kattintson a 'Létrehozás' vagy 'Kiválasztás' gombra."
+msgstr ""
+"Új tagok hozzáadásához kattintson a 'Létrehozás' vagy 'Kiválasztás' gombra."
 
 #: post-type/module-base.php:560
 msgctxt "Add members modal"

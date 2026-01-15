@@ -108,7 +108,8 @@ msgstr "Запропоновано"
 #: post-type/module-base.php:168
 msgctxt "Training Status field description"
 msgid "This training has been proposed and is in initial conversations"
-msgstr "Це навчання було запропоновано і перебуває на стадії початкових обговорень"
+msgstr ""
+"Це навчання було запропоновано і перебуває на стадії початкових обговорень"
 
 #: post-type/module-base.php:172
 msgctxt "Training Status label"
@@ -151,8 +152,7 @@ msgid ""
 "This contact is currently on hold. It has potential of getting scheduled in "
 "the future."
 msgstr ""
-"Цей контакт наразі призупинено. Є можливість запланувати його в "
-"майбутньому."
+"Цей контакт наразі призупинено. Є можливість запланувати його в майбутньому."
 
 #: post-type/module-base.php:192
 msgctxt "Training Status label"
@@ -248,7 +248,8 @@ msgid ""
 "indicate trainings that collaborate, are about to merge, recently split, etc."
 msgstr ""
 "Пов'язане навчання, яке не є батьківським/дочірнім. Це може вказувати на "
-"навчання, які співпрацюють, збираються об'єднатися, нещодавно розділилися тощо."
+"навчання, які співпрацюють, збираються об'єднатися, нещодавно розділилися "
+"тощо."
 
 #: post-type/module-base.php:355
 msgid "Child Training"

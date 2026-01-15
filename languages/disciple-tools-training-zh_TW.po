@@ -179,8 +179,8 @@ msgid ""
 "be assigned to a training while multiple people can be coaches / church "
 "planters of this training."
 msgstr ""
-"植堂和/或指導此培訓的人員。只能將一人指派給培訓，但可以有多人擔任此培訓的"
-"教練/植堂者。"
+"植堂和/或指導此培訓的人員。只能將一人指派給培訓，但可以有多人擔任此培訓的教"
+"練/植堂者。"
 
 #: post-type/module-base.php:222
 msgid "Requires Update"
@@ -289,8 +289,8 @@ msgid ""
 "manually to included people who may not be in the system but are also "
 "members of the training."
 msgstr ""
-"此培訓的成員人數。在成員名單中新增或移除成員時會自動更新。可手動更改此數字"
-"以包含可能不在系統中但也是培訓成員的人員。"
+"此培訓的成員人數。在成員名單中新增或移除成員時會自動更新。可手動更改此數字以"
+"包含可能不在系統中但也是培訓成員的人員。"
 
 #: post-type/module-base.php:416
 msgid "Leader Count"

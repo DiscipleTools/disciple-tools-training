@@ -185,9 +185,9 @@ msgid ""
 "be assigned to a training while multiple people can be coaches / church "
 "planters of this training."
 msgstr ""
-"Osoba koja je osnovala i/ili vodi ovaj trening. Samo jedna osoba može "
-"biti dodijeljena treningu, dok više ljudi može biti treneri / osnivači crkve "
-"ovog treninga."
+"Osoba koja je osnovala i/ili vodi ovaj trening. Samo jedna osoba može biti "
+"dodijeljena treningu, dok više ljudi može biti treneri / osnivači crkve ovog "
+"treninga."
 
 #: post-type/module-base.php:222
 msgid "Requires Update"

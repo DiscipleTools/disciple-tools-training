@@ -129,7 +129,8 @@ msgstr "В процессе"
 #: post-type/module-base.php:178
 msgctxt "Training Status field description"
 msgid "This training is confirmed, on the calendar, or currently active."
-msgstr "Этот тренинг подтвержден, внесен в календарь или активен в данный момент."
+msgstr ""
+"Этот тренинг подтвержден, внесен в календарь или активен в данный момент."
 
 #: post-type/module-base.php:182
 msgctxt "Training Status label"
@@ -172,8 +173,7 @@ msgstr "Назначено"
 #: post-type/module-base.php:202
 msgid ""
 "Select the main person who is responsible for reporting on this training."
-msgstr ""
-"Выберите главного ответственного за отчетность по этому тренингу."
+msgstr "Выберите главного ответственного за отчетность по этому тренингу."
 
 #: post-type/module-base.php:209
 msgid "Training Coach / Church Planter"
@@ -187,8 +187,8 @@ msgid ""
 "planters of this training."
 msgstr ""
 "Человек, который основал и/или проводит этот тренинг. Только один человек "
-"может быть назначен на тренинг, в то время как несколько человек могут "
-"быть тренерами / насадниками церквей этого тренинга."
+"может быть назначен на тренинг, в то время как несколько человек могут быть "
+"тренерами / насадниками церквей этого тренинга."
 
 #: post-type/module-base.php:222
 msgid "Requires Update"
@@ -300,8 +300,8 @@ msgid ""
 "manually to included people who may not be in the system but are also "
 "members of the training."
 msgstr ""
-"Количество участников этого тренинга. Оно будет автоматически обновляться при "
-"добавлении или удалении участников в списке. Измените это число вручную, "
+"Количество участников этого тренинга. Оно будет автоматически обновляться "
+"при добавлении или удалении участников в списке. Измените это число вручную, "
 "чтобы включить людей, которых нет в системе, но которые также являются "
 "участниками тренинга."
 

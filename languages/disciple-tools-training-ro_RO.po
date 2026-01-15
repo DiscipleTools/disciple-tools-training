@@ -295,9 +295,9 @@ msgid ""
 "members of the training."
 msgstr ""
 "Numărul de membri în această instruire. Acesta va fi actualizat automat când "
-"membrii noi sunt adăugați sau eliminați din lista de membri. Schimbați manual "
-"acest număr pentru a include persoanele care ar putea să nu fie în sistem, "
-"dar care sunt, de asemenea, membri ai instruirii."
+"membrii noi sunt adăugați sau eliminați din lista de membri. Schimbați "
+"manual acest număr pentru a include persoanele care ar putea să nu fie în "
+"sistem, dar care sunt, de asemenea, membri ai instruirii."
 
 #: post-type/module-base.php:416
 msgid "Leader Count"

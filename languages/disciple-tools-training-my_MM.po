@@ -174,8 +174,8 @@ msgid ""
 "be assigned to a training while multiple people can be coaches / church "
 "planters of this training."
 msgstr ""
-"ဤသင်တန်းကိုစိုက်ပျိုးသူနှင့်/သို့မဟုတ် နည်းပြပေးနေသူ။ "
-"သင်တန်းတစ်ခုကိုလူတစ်ဦးသာတာဝန်ပေးနိုင်သော်လည်း နည်းပြများ/အသင်းတော်စိုက်ပျိုးသူများအနေဖြင့်လူအများပါဝင်နိုင်သည်။"
+"ဤသင်တန်းကိုစိုက်ပျိုးသူနှင့်/သို့မဟုတ် နည်းပြပေးနေသူ။ သင်တန်းတစ်ခုကိုလူတစ်ဦးသာတာဝန်ပေးနိုင်သော်လည်း နည်းပြများ/"
+"အသင်းတော်စိုက်ပျိုးသူများအနေဖြင့်လူအများပါဝင်နိုင်သည်။"
 
 #: post-type/module-base.php:222
 msgid "Requires Update"
@@ -234,7 +234,9 @@ msgctxt "Optional Documentation"
 msgid ""
 "A related training that isn't a parent/child in relationship. It might "
 "indicate trainings that collaborate, are about to merge, recently split, etc."
-msgstr "မူလ/ဆင်းသက်ဆက်နွယ်မှုမဟုတ်သောဆက်စပ်သင်တန်း။ ပူးပေါင်းဆောင်ရွက်သော၊ ပေါင်းစည်းတော့မည့်၊ မကြာသေးမီခွဲထွက်ခဲ့သောသင်တန်းများဖြစ်နိုင်သည်။"
+msgstr ""
+"မူလ/ဆင်းသက်ဆက်နွယ်မှုမဟုတ်သောဆက်စပ်သင်တန်း။ ပူးပေါင်းဆောင်ရွက်သော၊ ပေါင်းစည်းတော့မည့်၊ "
+"မကြာသေးမီခွဲထွက်ခဲ့သောသင်တန်းများဖြစ်နိုင်သည်။"
 
 #: post-type/module-base.php:355
 msgid "Child Training"

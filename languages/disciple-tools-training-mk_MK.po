@@ -145,8 +145,7 @@ msgid ""
 "This contact is currently on hold. It has potential of getting scheduled in "
 "the future."
 msgstr ""
-"Оваа обука моментално е во мирување. Има потенцијал за закажување во "
-"иднина."
+"Оваа обука моментално е во мирување. Има потенцијал за закажување во иднина."
 
 #: post-type/module-base.php:192
 msgctxt "Training Status label"
@@ -241,8 +240,8 @@ msgid ""
 "A related training that isn't a parent/child in relationship. It might "
 "indicate trainings that collaborate, are about to merge, recently split, etc."
 msgstr ""
-"Поврзана обука што не е во родител/дете врска. Тоа може да укажува на "
-"обуки кои соработуваат, се пред спојување, неодамна поделени, итн."
+"Поврзана обука што не е во родител/дете врска. Тоа може да укажува на обуки "
+"кои соработуваат, се пред спојување, неодамна поделени, итн."
 
 #: post-type/module-base.php:355
 msgid "Child Training"
@@ -346,8 +345,8 @@ msgid ""
 "In the 'Member List' field, type the name of an existing contact to add them "
 "to this training."
 msgstr ""
-"Во полето \"Листа на членови\", напишете го името на постојниот контакт за да "
-"ги додадете на оваа обука."
+"Во полето \"Листа на членови\", напишете го името на постојниот контакт за "
+"да ги додадете на оваа обука."
 
 #: post-type/module-base.php:573
 msgid "Close"

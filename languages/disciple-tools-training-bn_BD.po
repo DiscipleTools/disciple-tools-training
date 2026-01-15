@@ -68,7 +68,9 @@ msgstr "ট্যাগ"
 msgctxt "Optional Documentation"
 msgid ""
 "A useful way to group related items and can be used to filter the records"
-msgstr "সম্পর্কিত আইটেমগুলিকে গ্রুপ করার একটি কার্যকর উপায় এবং রেকর্ড ফিল্টার করতে ব্যবহার করা যেতে পারে"
+msgstr ""
+"সম্পর্কিত আইটেমগুলিকে গ্রুপ করার একটি কার্যকর উপায় এবং রেকর্ড ফিল্টার করতে ব্যবহার "
+"করা যেতে পারে"
 
 #: post-type/module-base.php:135
 msgid "Follow"
@@ -175,9 +177,8 @@ msgid ""
 "be assigned to a training while multiple people can be coaches / church "
 "planters of this training."
 msgstr ""
-"যে ব্যক্তি এই প্রশিক্ষণ লাগিয়েছে এবং/অথবা প্রশিক্ষণ দিচ্ছে। কেবলমাত্র একজনকে "
-"প্রশিক্ষণ দেওয়া যেতে পারে যখন একাধিক লোক এই প্রশিক্ষণের কোচ / চার্চ রোপনকারী "
-"হতে পারেন।"
+"যে ব্যক্তি এই প্রশিক্ষণ লাগিয়েছে এবং/অথবা প্রশিক্ষণ দিচ্ছে। কেবলমাত্র একজনকে প্রশিক্ষণ "
+"দেওয়া যেতে পারে যখন একাধিক লোক এই প্রশিক্ষণের কোচ / চার্চ রোপনকারী হতে পারেন।"
 
 #: post-type/module-base.php:222
 msgid "Requires Update"

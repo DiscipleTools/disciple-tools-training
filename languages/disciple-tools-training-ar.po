@@ -148,8 +148,7 @@ msgctxt "Training Status field description"
 msgid ""
 "This contact is currently on hold. It has potential of getting scheduled in "
 "the future."
-msgstr ""
-"هذا التدريب قيد الانتظار حاليًا. لديه إمكانية الجدولة في المستقبل."
+msgstr "هذا التدريب قيد الانتظار حاليًا. لديه إمكانية الجدولة في المستقبل."
 
 #: post-type/module-base.php:192
 msgctxt "Training Status label"
@@ -181,8 +180,8 @@ msgid ""
 "be assigned to a training while multiple people can be coaches / church "
 "planters of this training."
 msgstr ""
-"الشخص الذي زرع و/أو يوجه هذا التدريب. يمكن تعيين شخص واحد فقط للتدريب "
-"بينما يمكن لعدة أشخاص أن يكونوا مدربين/زارعي الكنيسة لهذا التدريب."
+"الشخص الذي زرع و/أو يوجه هذا التدريب. يمكن تعيين شخص واحد فقط للتدريب بينما "
+"يمكن لعدة أشخاص أن يكونوا مدربين/زارعي الكنيسة لهذا التدريب."
 
 #: post-type/module-base.php:222
 msgid "Requires Update"
@@ -242,8 +241,8 @@ msgid ""
 "A related training that isn't a parent/child in relationship. It might "
 "indicate trainings that collaborate, are about to merge, recently split, etc."
 msgstr ""
-"تدريب ذو صلة ليس في علاقة أصل/فرع. قد يشير إلى التدريبات التي تتعاون، "
-"أو على وشك الدمج، أو الانقسام مؤخرًا، إلخ."
+"تدريب ذو صلة ليس في علاقة أصل/فرع. قد يشير إلى التدريبات التي تتعاون، أو على "
+"وشك الدمج، أو الانقسام مؤخرًا، إلخ."
 
 #: post-type/module-base.php:355
 msgid "Child Training"

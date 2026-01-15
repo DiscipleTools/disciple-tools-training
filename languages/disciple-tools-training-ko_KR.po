@@ -73,7 +73,9 @@ msgstr "태그"
 msgctxt "Optional Documentation"
 msgid ""
 "A useful way to group related items and can be used to filter the records"
-msgstr "관련 항목을 그룹화하는 유용한 방법이며 기록을 필터링하는 데 사용할 수 있습니다"
+msgstr ""
+"관련 항목을 그룹화하는 유용한 방법이며 기록을 필터링하는 데 사용할 수 있습니"
+"다"
 
 #: post-type/module-base.php:135
 msgid "Follow"

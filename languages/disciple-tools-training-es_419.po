@@ -107,7 +107,8 @@ msgstr "Propuesto"
 #: post-type/module-base.php:168
 msgctxt "Training Status field description"
 msgid "This training has been proposed and is in initial conversations"
-msgstr "Este entrenamiento ha sido propuesto y está en conversaciones iniciales"
+msgstr ""
+"Este entrenamiento ha sido propuesto y está en conversaciones iniciales"
 
 #: post-type/module-base.php:172
 msgctxt "Training Status label"
@@ -127,7 +128,8 @@ msgstr "En progreso"
 #: post-type/module-base.php:178
 msgctxt "Training Status field description"
 msgid "This training is confirmed, on the calendar, or currently active."
-msgstr "Este entrenamiento está confirmado, en el calendario o actualmente activo."
+msgstr ""
+"Este entrenamiento está confirmado, en el calendario o actualmente activo."
 
 #: post-type/module-base.php:182
 msgctxt "Training Status label"

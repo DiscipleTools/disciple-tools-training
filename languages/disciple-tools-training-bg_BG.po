@@ -347,8 +347,8 @@ msgid ""
 "In the 'Member List' field, type the name of an existing contact to add them "
 "to this training."
 msgstr ""
-"В полето \"Списък на членовете\" въведете името на съществуващ контакт, за да "
-"го добавите към това обучение."
+"В полето \"Списък на членовете\" въведете името на съществуващ контакт, за "
+"да го добавите към това обучение."
 
 #: post-type/module-base.php:573
 msgid "Close"

@@ -74,8 +74,7 @@ msgstr "ටැග්"
 msgctxt "Optional Documentation"
 msgid ""
 "A useful way to group related items and can be used to filter the records"
-msgstr ""
-"අදාළ අයිතම සමූහගත කිරීමට ප්‍රයෝජනවත් ක්‍රමයක් වන අතර වාර්තා පෙරීමට භාවිතා කළ හැක"
+msgstr "අදාළ අයිතම සමූහගත කිරීමට ප්‍රයෝජනවත් ක්‍රමයක් වන අතර වාර්තා පෙරීමට භාවිතා කළ හැක"
 
 #: post-type/module-base.php:135
 msgid "Follow"
@@ -149,8 +148,7 @@ msgctxt "Training Status field description"
 msgid ""
 "This contact is currently on hold. It has potential of getting scheduled in "
 "the future."
-msgstr ""
-"මෙම සම්බන්ධතාවය දැනට රඳවා ඇත. අනාගතයේ කාලසටහන්ගත කිරීමේ හැකියාව ඇත."
+msgstr "මෙම සම්බන්ධතාවය දැනට රඳවා ඇත. අනාගතයේ කාලසටහන්ගත කිරීමේ හැකියාව ඇත."
 
 #: post-type/module-base.php:192
 msgctxt "Training Status label"
@@ -169,8 +167,7 @@ msgstr "පවරා ඇත්තේ"
 #: post-type/module-base.php:202
 msgid ""
 "Select the main person who is responsible for reporting on this training."
-msgstr ""
-"මෙම පුහුණුව පිළිබඳව වාර්තා කිරීමට වගකිව යුතු ප්‍රධාන පුද්ගලයා තෝරන්න."
+msgstr "මෙම පුහුණුව පිළිබඳව වාර්තා කිරීමට වගකිව යුතු ප්‍රධාන පුද්ගලයා තෝරන්න."
 
 #: post-type/module-base.php:209
 msgid "Training Coach / Church Planter"
@@ -183,8 +180,8 @@ msgid ""
 "be assigned to a training while multiple people can be coaches / church "
 "planters of this training."
 msgstr ""
-"මෙම පුහුණුව ආරම්භ කළ සහ/හෝ පුහුණු කරන පුද්ගලයා. පුහුණුවකට එක් පුද්ගලයෙකුට පමණක් "
-"පැවරිය හැකි අතර මෙම පුහුණුවේ පුහුණුකරුවන් / සභා ආරම්භකයන් කිහිප දෙනෙකු විය හැක."
+"මෙම පුහුණුව ආරම්භ කළ සහ/හෝ පුහුණු කරන පුද්ගලයා. පුහුණුවකට එක් පුද්ගලයෙකුට පමණක් පැවරිය හැකි අතර "
+"මෙම පුහුණුවේ පුහුණුකරුවන් / සභා ආරම්භකයන් කිහිප දෙනෙකු විය හැක."
 
 #: post-type/module-base.php:222
 msgid "Requires Update"
@@ -244,8 +241,8 @@ msgid ""
 "A related training that isn't a parent/child in relationship. It might "
 "indicate trainings that collaborate, are about to merge, recently split, etc."
 msgstr ""
-"මව්/දරු සම්බන්ධතාවයක් නොමැති අදාළ පුහුණුවක්. සහයෝගයෙන් කටයුතු කරන, "
-"ඒකාබද්ධ වීමට සූදානම්, මෑතකදී බෙදී ගිය පුහුණු ආදිය සඳහන් කළ හැක."
+"මව්/දරු සම්බන්ධතාවයක් නොමැති අදාළ පුහුණුවක්. සහයෝගයෙන් කටයුතු කරන, ඒකාබද්ධ වීමට සූදානම්, "
+"මෑතකදී බෙදී ගිය පුහුණු ආදිය සඳහන් කළ හැක."
 
 #: post-type/module-base.php:355
 msgid "Child Training"
@@ -295,9 +292,9 @@ msgid ""
 "manually to included people who may not be in the system but are also "
 "members of the training."
 msgstr ""
-"මෙම පුහුණුවේ සාමාජිකයින් සංඛ්‍යාව. සාමාජික ලැයිස්තුවට නව සාමාජිකයින් එකතු කරන විට හෝ "
-"ඉවත් කරන විට ස්වයංක්‍රීයව යාවත්කාලීන වේ. පද්ධතියේ නොමැති නමුත් පුහුණුවේ සාමාජිකයින් වන "
-"පුද්ගලයින් ඇතුළත් කිරීමට මෙම අංකය අතින් වෙනස් කරන්න."
+"මෙම පුහුණුවේ සාමාජිකයින් සංඛ්‍යාව. සාමාජික ලැයිස්තුවට නව සාමාජිකයින් එකතු කරන විට හෝ ඉවත් කරන "
+"විට ස්වයංක්‍රීයව යාවත්කාලීන වේ. පද්ධතියේ නොමැති නමුත් පුහුණුවේ සාමාජිකයින් වන පුද්ගලයින් ඇතුළත් කිරීමට "
+"මෙම අංකය අතින් වෙනස් කරන්න."
 
 #: post-type/module-base.php:416
 msgid "Leader Count"

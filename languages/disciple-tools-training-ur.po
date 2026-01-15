@@ -68,7 +68,9 @@ msgstr "ٹیگز"
 msgctxt "Optional Documentation"
 msgid ""
 "A useful way to group related items and can be used to filter the records"
-msgstr "متعلقہ اشیاء کو گروپ کرنے کا ایک مفید طریقہ اور ریکارڈز کو فلٹر کرنے کے لیے استعمال کیا جا سکتا ہے"
+msgstr ""
+"متعلقہ اشیاء کو گروپ کرنے کا ایک مفید طریقہ اور ریکارڈز کو فلٹر کرنے کے لیے "
+"استعمال کیا جا سکتا ہے"
 
 #: post-type/module-base.php:135
 msgid "Follow"

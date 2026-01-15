@@ -235,8 +235,8 @@ msgid ""
 "A related training that isn't a parent/child in relationship. It might "
 "indicate trainings that collaborate, are about to merge, recently split, etc."
 msgstr ""
-"በግንኙነት ውስጥ ወላጅ / ልጅ ያልሆነ ተዛማጅ ስልጠና። የሚተባበሩ፣ ሊዋሃዱ፣ በቅርቡ ሊከፋፈሉ የሚችሉ "
-"ስልጠናዎችን ሊያመለክት ይችላል።"
+"በግንኙነት ውስጥ ወላጅ / ልጅ ያልሆነ ተዛማጅ ስልጠና። የሚተባበሩ፣ ሊዋሃዱ፣ በቅርቡ ሊከፋፈሉ የሚችሉ ስልጠናዎችን "
+"ሊያመለክት ይችላል።"
 
 #: post-type/module-base.php:355
 msgid "Child Training"

@@ -171,8 +171,7 @@ msgstr "Asignado a"
 msgid ""
 "Select the main person who is responsible for reporting on this training."
 msgstr ""
-"Seleccione la persona principal responsable de informar sobre esta "
-"formación."
+"Seleccione la persona principal responsable de informar sobre esta formación."
 
 #: post-type/module-base.php:209
 msgid "Training Coach / Church Planter"
@@ -185,9 +184,9 @@ msgid ""
 "be assigned to a training while multiple people can be coaches / church "
 "planters of this training."
 msgstr ""
-"La persona que plantó y/o está entrenando esta formación. Solo se "
-"puede asignar una persona a una formación, mientras que varias personas "
-"pueden ser entrenadores / plantadores de iglesias de esta formación."
+"La persona que plantó y/o está entrenando esta formación. Solo se puede "
+"asignar una persona a una formación, mientras que varias personas pueden ser "
+"entrenadores / plantadores de iglesias de esta formación."
 
 #: post-type/module-base.php:222
 msgid "Requires Update"

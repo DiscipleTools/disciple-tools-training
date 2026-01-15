@@ -74,8 +74,8 @@ msgctxt "Optional Documentation"
 msgid ""
 "A useful way to group related items and can be used to filter the records"
 msgstr ""
-"Eine nützliche Möglichkeit, verwandte Elemente zu gruppieren und zum "
-"Filtern der Datensätze zu verwenden"
+"Eine nützliche Möglichkeit, verwandte Elemente zu gruppieren und zum Filtern "
+"der Datensätze zu verwenden"
 
 #: post-type/module-base.php:135
 msgid "Follow"
