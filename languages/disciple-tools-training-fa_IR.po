@@ -12,54 +12,49 @@ msgstr ""
 
 #: metrics/mapbox-maps.php:30
 msgid "Training Maps"
-msgstr "نقشه های آموزشی"
+msgstr "نقشه‌های آموزشی"
 
 #: metrics/mapbox-maps.php:31 metrics/mapbox-personal-maps.php:31
 #: post-type/module-base.php:29 post-type/module-base.php:461
 #: post-type/module-base.php:473 post-type/module-base.php:496
 msgid "Trainings"
-msgstr "آموزشها"
+msgstr "آموزش‌ها"
 
 #: metrics/mapbox-personal-maps.php:30
 msgid "Trainings Maps"
-msgstr "نقشه های آموزش"
+msgstr "نقشه‌های آموزش‌ها"
 
 #: network/network-dashboard-integration.php:44
 msgid "New Training"
-msgstr ""
+msgstr "آموزش جدید"
 
 #: network/network-dashboard-integration.php:50
 msgid "Training Started"
-msgstr ""
+msgstr "آموزش شروع شد"
 
 #: network/network-dashboard-integration.php:56
 msgid "Training Completed"
-msgstr ""
+msgstr "آموزش تکمیل شد"
 
 #: post-type/module-base.php:28 post-type/module-base.php:495
 msgid "Training"
 msgstr "آموزش"
 
 #: post-type/module-base.php:70
-#, fuzzy
-#| msgid "Trainings"
 msgid "Trainings Admin"
-msgstr "آموزشها"
+msgstr "مدیر آموزش‌ها"
 
 #: post-type/module-base.php:71
-#, fuzzy
-#| msgctxt "Optional Documentation"
-#| msgid "Leader of a training"
 msgid "Admin access to all trainings"
-msgstr "رهبر یک آموزش"
+msgstr "دسترسی مدیریتی به همه آموزش‌ها"
 
 #: post-type/module-base.php:76
 msgid "Multiplier"
-msgstr "ضرب"
+msgstr "ضرب‌کننده"
 
 #: post-type/module-base.php:83
 msgid "Disciple.Tools Admin"
-msgstr "سرپرست Disciple.Tools"
+msgstr "مدیر Disciple.Tools"
 
 #: post-type/module-base.php:90
 msgid "Administrator"
@@ -67,13 +62,14 @@ msgstr "مدیر"
 
 #: post-type/module-base.php:127
 msgid "Tags"
-msgstr "برچسب ها"
+msgstr "برچسب‌ها"
 
 #: post-type/module-base.php:128
 msgctxt "Optional Documentation"
 msgid ""
 "A useful way to group related items and can be used to filter the records"
 msgstr ""
+"روشی مفید برای گروه‌بندی موارد مرتبط که می‌تواند برای فیلتر کردن رکوردها استفاده شود"
 
 #: post-type/module-base.php:135
 msgid "Follow"
@@ -105,12 +101,12 @@ msgstr "پیشنهاد شده"
 #: post-type/module-base.php:168
 msgctxt "Training Status field description"
 msgid "This training has been proposed and is in initial conversations"
-msgstr "این آموزش پیشنهاد شده است و در مکالمات اولیه است"
+msgstr "این آموزش پیشنهاد شده و در مکالمات اولیه است"
 
 #: post-type/module-base.php:172
 msgctxt "Training Status label"
 msgid "Scheduled"
-msgstr "برنامه ریزی شده"
+msgstr "برنامه‌ریزی شده"
 
 #: post-type/module-base.php:173
 msgctxt "Training Status field description"
@@ -120,7 +116,7 @@ msgstr "این آموزش در تقویم تأیید شده است."
 #: post-type/module-base.php:177
 msgctxt "Training Status label"
 msgid "In Progress"
-msgstr "در حال پیش رفت"
+msgstr "در حال انجام"
 
 #: post-type/module-base.php:178
 msgctxt "Training Status field description"
@@ -130,7 +126,7 @@ msgstr "این آموزش در تقویم تأیید شده یا در حال ح�
 #: post-type/module-base.php:182
 msgctxt "Training Status label"
 msgid "Complete"
-msgstr "کامل"
+msgstr "کامل شده"
 
 #: post-type/module-base.php:183
 msgctxt "Training Status field description"
@@ -140,7 +136,7 @@ msgstr "این آموزش با موفقیت به پایان رسیده است"
 #: post-type/module-base.php:187
 msgctxt "Training Status label"
 msgid "Paused"
-msgstr "مکث"
+msgstr "متوقف شده"
 
 #: post-type/module-base.php:188
 msgctxt "Training Status field description"
@@ -148,18 +144,17 @@ msgid ""
 "This contact is currently on hold. It has potential of getting scheduled in "
 "the future."
 msgstr ""
-"این تماس در حال حاضر در حالت تعلیق است. این امکان وجود دارد که در آینده "
-"برنامه ریزی شود."
+"این آموزش در حال حاضر در حالت تعلیق است. امکان برنامه‌ریزی آن در آینده وجود دارد."
 
 #: post-type/module-base.php:192
 msgctxt "Training Status label"
 msgid "Closed"
-msgstr "بسته است"
+msgstr "بسته شده"
 
 #: post-type/module-base.php:193
 msgctxt "Training Status field description"
 msgid "This training is no longer going to happen."
-msgstr "این آموزش دیگر قرار نیست اتفاق بیفتد."
+msgstr "این آموزش دیگر برگزار نخواهد شد."
 
 #: post-type/module-base.php:201
 msgid "Assigned To"
@@ -168,11 +163,11 @@ msgstr "اختصاص یافته به"
 #: post-type/module-base.php:202
 msgid ""
 "Select the main person who is responsible for reporting on this training."
-msgstr "فرد اصلی را که مسئول گزارش دادن در این آموزش است انتخاب کنید."
+msgstr "فرد اصلی را که مسئول گزارش‌دهی این آموزش است انتخاب کنید."
 
 #: post-type/module-base.php:209
 msgid "Training Coach / Church Planter"
-msgstr "مربی آموزش / کاشت کلیسا"
+msgstr "مربی آموزش / کلیساکار"
 
 #: post-type/module-base.php:210
 msgctxt "Optional Documentation"
@@ -181,17 +176,17 @@ msgid ""
 "be assigned to a training while multiple people can be coaches / church "
 "planters of this training."
 msgstr ""
-"شخصی که این آموزش را کاشت و یا در حال مربیگری آن است. فقط یک نفر می تواند به "
-"یک آموزش اختصاص یابد در حالی که چندین نفر می توانند مربی / کاشت کنندگان "
-"کلیسا در این آموزش باشند."
+"شخصی که این آموزش را بنیان‌گذاری کرده و/یا در حال مربیگری آن است. فقط یک نفر "
+"می‌تواند به یک آموزش اختصاص یابد در حالی که چندین نفر می‌توانند مربی / کلیساکار "
+"این آموزش باشند."
 
 #: post-type/module-base.php:222
 msgid "Requires Update"
-msgstr "نیاز به بروزرسانی دارد"
+msgstr "نیاز به به‌روزرسانی دارد"
 
 #: post-type/module-base.php:228
 msgid "Video Link"
-msgstr "لینک ویدیو"
+msgstr "پیوند ویدیو"
 
 #: post-type/module-base.php:229
 msgctxt "Optional Documentation"
@@ -200,20 +195,20 @@ msgstr "پیوند به سرویس چت ویدیویی"
 
 #: post-type/module-base.php:236
 msgid "Notes"
-msgstr "یادداشت"
+msgstr "یادداشت‌ها"
 
 #: post-type/module-base.php:237
 msgctxt "Optional Documentation"
 msgid "Notes on when the trainings will happen"
-msgstr "یادداشت هایی درباره زمان وقوع آموزش ها"
+msgstr "یادداشت‌هایی درباره زمان برگزاری آموزش‌ها"
 
 #: post-type/module-base.php:246 post-type/module-base.php:509
 msgid "Meeting Times"
-msgstr "ملاقات ها"
+msgstr "زمان‌های جلسات"
 
 #: post-type/module-base.php:295 post-type/module-base.php:304
 msgid "Locations"
-msgstr "مکانها"
+msgstr "مکان‌ها"
 
 #: post-type/module-base.php:296 post-type/module-base.php:305
 msgctxt "Optional Documentation"
@@ -222,20 +217,20 @@ msgstr "مکان کلی که این مخاطب در آن قرار دارد."
 
 #: post-type/module-base.php:313
 msgid "Address"
-msgstr "نشانی"
+msgstr "آدرس"
 
 #: post-type/module-base.php:333
 msgid "Parent Training"
-msgstr "آموزش والدین"
+msgstr "آموزش مادر"
 
 #: post-type/module-base.php:334
 msgctxt "Optional Documentation"
 msgid "A training that launched this training."
-msgstr "آموزشی که این آموزش را راه اندازی کرده است."
+msgstr "آموزشی که این آموزش را راه‌اندازی کرده است."
 
 #: post-type/module-base.php:344
 msgid "Peer Training"
-msgstr "آموزش همسالان"
+msgstr "آموزش همتا"
 
 #: post-type/module-base.php:345
 msgctxt "Optional Documentation"
@@ -243,28 +238,27 @@ msgid ""
 "A related training that isn't a parent/child in relationship. It might "
 "indicate trainings that collaborate, are about to merge, recently split, etc."
 msgstr ""
-"یک آموزش مرتبط که والدین / فرزندان با هم رابطه ندارند. این ممکن است نشان "
-"دهنده آموزشهایی باشد که با هم همکاری می کنند ، در شرف ادغام هستند ، اخیراً "
-"تقسیم شده و غیره"
+"یک آموزش مرتبط که رابطه والد/فرزندی ندارد. این ممکن است نشان‌دهنده آموزش‌هایی "
+"باشد که با هم همکاری می‌کنند، در شرف ادغام هستند، اخیراً جدا شده‌اند و غیره."
 
 #: post-type/module-base.php:355
 msgid "Child Training"
-msgstr "آموزش کودک"
+msgstr "آموزش فرزند"
 
 #: post-type/module-base.php:356
 msgctxt "Optional Documentation"
 msgid "A training that has been birthed out of this training."
-msgstr "آموزشی که از این آموزش شروع شده است."
+msgstr "آموزشی که از این آموزش زاده شده است."
 
 #: post-type/module-base.php:366 post-type/module-base.php:508
 #: post-type/module-base.php:542
 msgid "Member List"
-msgstr "لیست اعضا"
+msgstr "فهرست اعضا"
 
 #: post-type/module-base.php:367
 msgctxt "Optional Documentation"
 msgid "The contacts who are members of this training."
-msgstr "مخاطبین عضو این آموزش."
+msgstr "مخاطبینی که عضو این آموزش هستند."
 
 #: post-type/module-base.php:377
 msgid "Leaders"
@@ -272,16 +266,16 @@ msgstr "رهبران"
 
 #: post-type/module-base.php:387
 msgid "People Groups"
-msgstr "گروه های افراد"
+msgstr "گروه‌های قومی"
 
 #: post-type/module-base.php:388
 msgctxt "Optional Documentation"
 msgid "The people trainings represented by this training."
-msgstr "آموزش های مردم توسط این آموزش نشان داده می شود."
+msgstr "گروه‌های قومی که توسط این آموزش نمایندگی می‌شوند."
 
 #: post-type/module-base.php:397
 msgid "Groups"
-msgstr "گروه ها"
+msgstr "گروه‌ها"
 
 #: post-type/module-base.php:409
 msgid "Member Count"
@@ -295,17 +289,17 @@ msgid ""
 "manually to included people who may not be in the system but are also "
 "members of the training."
 msgstr ""
-"تعداد اعضا در این آموزش. با افزودن یا حذف اعضای جدید در لیست اعضا ، به طور "
-"خودکار به روز می شود. این شماره را به صورت دستی تغییر دهید و به افرادی که "
-"ممکن است در سیستم نباشند اما عضو آموزش نیز هستند شامل شود."
+"تعداد اعضا در این آموزش. با افزودن یا حذف اعضای جدید در فهرست اعضا، به‌طور "
+"خودکار به‌روزرسانی می‌شود. این عدد را به‌صورت دستی تغییر دهید تا افرادی که ممکن "
+"است در سیستم نباشند اما عضو آموزش هستند را نیز شامل شود."
 
 #: post-type/module-base.php:416
 msgid "Leader Count"
-msgstr "تعداد رهبر"
+msgstr "تعداد رهبران"
 
 #: post-type/module-base.php:426
 msgid "Training as Leader"
-msgstr "به عنوان رهبر آموزش دهید"
+msgstr "آموزش به‌عنوان رهبر"
 
 #: post-type/module-base.php:427
 msgctxt "Optional Documentation"
@@ -314,33 +308,33 @@ msgstr "رهبر یک آموزش"
 
 #: post-type/module-base.php:438
 msgid "Training as Participant"
-msgstr "آموزش به عنوان شرکت کننده"
+msgstr "آموزش به‌عنوان شرکت‌کننده"
 
 #: post-type/module-base.php:439
 msgctxt "Optional Documentation"
 msgid "Participant in a training."
-msgstr "شرکت کننده در یک آموزش."
+msgstr "شرکت‌کننده در یک آموزش."
 
 #: post-type/module-base.php:510
 msgid "Other"
-msgstr "دیگر"
+msgstr "سایر"
 
 #: post-type/module-base.php:545
 msgid "Create"
-msgstr "ایجاد کردن"
+msgstr "ایجاد"
 
 #: post-type/module-base.php:550
 msgid "Select"
-msgstr "انتخاب کنید"
+msgstr "انتخاب"
 
 #: post-type/module-base.php:555
 msgid "To add new members, click on 'Create' or 'Select'."
-msgstr "برای افزودن اعضای جدید ، روی \"ایجاد\" یا \"انتخاب\" کلیک کنید."
+msgstr "برای افزودن اعضای جدید، روی «ایجاد» یا «انتخاب» کلیک کنید."
 
 #: post-type/module-base.php:560
 msgctxt "Add members modal"
 msgid "Add members from existing contacts"
-msgstr "اعضا را از مخاطبین موجود اضافه کنید"
+msgstr "افزودن اعضا از مخاطبین موجود"
 
 #: post-type/module-base.php:561
 msgctxt "Add members modal"
@@ -348,35 +342,29 @@ msgid ""
 "In the 'Member List' field, type the name of an existing contact to add them "
 "to this training."
 msgstr ""
-"در قسمت \"فهرست اعضا\" ، نام مخاطب موجود را تایپ کنید تا آنها را به این "
+"در قسمت «فهرست اعضا»، نام یک مخاطب موجود را تایپ کنید تا آن‌ها را به این "
 "آموزش اضافه کنید."
 
 #: post-type/module-base.php:573
 msgid "Close"
-msgstr "نزدیک"
+msgstr "بستن"
 
 #: post-type/module-base.php:713
-#, fuzzy
-#| msgid "Removed %1$s: %2$s"
 msgid "Removed %1$s: {%2$s}"
-msgstr "٪ 1 $ s حذف شد:٪ 2 $ s"
+msgstr "%1$s حذف شد: {%2$s}"
 
 #: post-type/module-base.php:716
-#, fuzzy
-#| msgid "Added %1$s: %2$s"
 msgid "Added %1$s: {%2$s}"
-msgstr "٪ 1 $ s اضافه شده:٪ 2 $ s"
+msgstr "%1$s اضافه شد: {%2$s}"
 
 #: post-type/module-base.php:719
-#, fuzzy
-#| msgid "Updated %1$s: %2$s to %3$s"
 msgid "Updated %1$s: {%2$s} to {%3$s}"
-msgstr "٪ 1 $ s به روز شده:٪ 2 $ s تا٪ 3 $ s"
+msgstr "%1$s به‌روزرسانی شد: {%2$s} به {%3$s}"
 
 #: post-type/module-base.php:804
 msgctxt "List Filters"
 msgid "Assigned to me"
-msgstr "به من اختصاص داده شده است"
+msgstr "اختصاص یافته به من"
 
 #: post-type/module-base.php:812
 msgctxt "List Filters"
@@ -386,19 +374,19 @@ msgstr "همه"
 #: post-type/module-base.php:871
 msgctxt "List Filters"
 msgid "Default Filters"
-msgstr ""
+msgstr "فیلترهای پیش‌فرض"
 
 #: post-type/module-public-calendar.php:85
 msgid "Reports"
-msgstr "گزارش ها"
+msgstr "گزارش‌ها"
 
 #: post-type/module-public-calendar.php:121
 msgid "Total Groups"
-msgstr "مجموع گروهها"
+msgstr "مجموع گروه‌ها"
 
 #: post-type/module-public-calendar.php:122
 msgid "Total Baptisms"
-msgstr "غسل تعمید"
+msgstr "مجموع تعمیدها"
 
 #: post-type/module-public-calendar.php:123
 msgid "Countries"
@@ -406,28 +394,28 @@ msgstr "کشورها"
 
 #: post-type/module-public-calendar.php:124
 msgid "States"
-msgstr "ایالت ها"
+msgstr "استان‌ها"
 
 #: post-type/module-public-calendar.php:125
 msgid "Counties"
-msgstr "شهرستانها"
+msgstr "شهرستان‌ها"
 
 #: post-type/module-public-calendar.php:432
 #: post-type/module-registration.php:385
 msgid "Add"
-msgstr "اضافه کردن"
+msgstr "افزودن"
 
 #: post-type/module-registration.php:31
 msgid "Magic Links"
-msgstr ""
+msgstr "پیوندهای جادویی"
 
 #: post-type/module-registration.php:59
 msgid "copy link"
-msgstr "پیوند کپی"
+msgstr "کپی پیوند"
 
 #: post-type/module-registration.php:61
 msgid "edit form"
-msgstr "فرم را ویرایش کنید"
+msgstr "ویرایش فرم"
 
 #: post-type/module-registration.php:63
 msgid "report"
@@ -439,7 +427,7 @@ msgstr "ایجاد پیوند"
 
 #: post-type/module-registration.php:114
 msgid "link"
-msgstr "ارتباط دادن"
+msgstr "پیوند"
 
 #: post-type/module-registration.php:116
 msgid "show on calendar"
@@ -447,23 +435,23 @@ msgstr "نمایش در تقویم"
 
 #: post-type/module-registration.php:118
 msgid "open registration"
-msgstr "ثبت نام باز "
+msgstr "ثبت‌نام باز"
 
 #: post-type/module-registration.php:265
 msgid "add"
-msgstr "اضافه کردن"
+msgstr "افزودن"
 
 #: post-type/module-registration.php:266
 msgid "Use"
-msgstr "استفاده کنید"
+msgstr "استفاده"
 
 #: post-type/module-registration.php:267 post-type/module-registration.php:695
 msgid "Search Location"
-msgstr "مکان جستجو"
+msgstr "جستجوی مکان"
 
 #: post-type/module-registration.php:268
 msgid "Delete Location"
-msgstr "مکان را حذف کنید"
+msgstr "حذف مکان"
 
 #: post-type/module-registration.php:269
 msgid "Open Mapping"
@@ -471,822 +459,20 @@ msgstr "باز کردن نقشه"
 
 #: post-type/module-registration.php:270
 msgid "clear"
-msgstr "روشن"
+msgstr "پاک کردن"
 
 #: post-type/module-registration.php:384
 msgid "Register for Training"
-msgstr "ثبت نام برای آموزش"
+msgstr "ثبت‌نام در آموزش"
 
 #: post-type/module-registration.php:386
 msgid "Join Training"
-msgstr "به آموزش بپیوندید"
+msgstr "پیوستن به آموزش"
 
 #: post-type/module-registration.php:387
 msgid "Join in"
-msgstr "پیوستن به"
+msgstr "پیوستن"
 
 #: post-type/module-registration.php:700
 msgid "Clear"
 msgstr "پاک کردن"
-
-#~ msgid "Apps"
-#~ msgstr "برنامه ها"
-
-#, fuzzy
-#~| msgid "Disciple Tools - Training"
-#~ msgid "Disciple.Tools - Training"
-#~ msgstr "ابزار مرید - آموزش"
-
-#~ msgid "https://github.com/DiscipleTools/disciple-tools-training"
-#~ msgstr "https://github.com/DiscipleTools/disciple-tools-training"
-
-#, fuzzy
-#~| msgid ""
-#~| "Disciple Tools Training Extension adds recording of trainings and cross "
-#~| "reference them with contacts, groups, and locations."
-#~ msgid ""
-#~ "Disciple.Tools Training Extension adds recording of trainings and cross "
-#~ "reference them with contacts, groups, and locations."
-#~ msgstr ""
-#~ "Disciple Tools Training Extension ضبط آموزش ها را اضافه می کند و آنها را "
-#~ "با مخاطبین ، گروه ها و مکانها ارجاع می دهد."
-
-#~ msgid "Whoah, partner!"
-#~ msgstr "وای ، شریک!"
-
-#~ msgid "Method does not exist."
-#~ msgstr "روش وجود ندارد"
-
-#~ msgid "Dispatcher"
-#~ msgstr "دیسپچر"
-
-#~ msgid "Members"
-#~ msgstr "اعضا"
-
-#~ msgid "Contacts"
-#~ msgstr "مخاطب"
-
-#~ msgid "Coaches"
-#~ msgstr "مربیان"
-
-#~ msgid "Planted by"
-#~ msgstr "کاشته شده توسط"
-
-#~ msgid "Planting"
-#~ msgstr "کاشتن"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid ""
-#~ "A useful way to training related items and can help training contacts "
-#~ "associated with noteworthy characteristics. e.g. business owner, sports "
-#~ "lover. The contacts can also be filtered using these tags."
-#~ msgstr ""
-#~ "یک روش مفید برای آموزش موارد مرتبط و می تواند به آموزش ارتباطات مرتبط با "
-#~ "ویژگی های قابل توجه کمک کند. به عنوان مثال، صاحب مشاغل ، عاشق ورزش. "
-#~ "مخاطبین همچنین می توانند با استفاده از این برچسب ها فیلتر شوند."
-
-#~ msgctxt "input field placeholder"
-#~ msgid "Search Users"
-#~ msgstr "کاربران را جستجو کنید"
-
-#~ msgctxt "Search 'something'"
-#~ msgid "Search %s"
-#~ msgstr "٪ s را جستجو کنید"
-
-#~ msgid "Extensions (DT)"
-#~ msgstr "برنامه های افزودنی (DT)"
-
-#~ msgid "Network Dashboard"
-#~ msgstr "داشبورد شبکه"
-
-#~ msgid "You do not have sufficient permissions to access this page."
-#~ msgstr "شما برای دسترسی به این صفحه مجوز کافی ندارید."
-
-#~ msgid "nav-tab-active"
-#~ msgstr "nav-tab-active"
-
-#~ msgid "Network Dashboard Viewer"
-#~ msgstr "نمایشگر صفحه داشبورد"
-
-#~ msgid "ID"
-#~ msgstr "شناسه"
-
-#~ msgid "Site"
-#~ msgstr "سایت"
-
-#~ msgid "Users"
-#~ msgstr "کاربران"
-
-#~ msgid "Timestamp"
-#~ msgstr "مهر زمان"
-
-#~ msgid "Visit"
-#~ msgstr "بازدید"
-
-#~ msgid "View"
-#~ msgstr "چشم انداز"
-
-#~ msgid "Active Snapshot"
-#~ msgstr "عکس فوری فعال"
-
-#~ msgid "Generations"
-#~ msgstr "نسل ها"
-
-#~ msgid "Follow-up Funnel"
-#~ msgstr "قیف پیگیری"
-
-#~ msgid "On-Going Meetings"
-#~ msgstr "جلسات در حال انجام"
-
-#~ msgid "Coaching"
-#~ msgstr "مربیگری"
-
-#~ msgid "Baptized"
-#~ msgstr "تعمید گرفته"
-
-#~ msgid "Active Groups"
-#~ msgstr "گروههای فعال"
-
-#~ msgid "Church"
-#~ msgstr "کلیسا"
-
-#~ msgid "Health Metrics"
-#~ msgstr "معیارهای سلامت"
-
-#~ msgid "Total Users"
-#~ msgstr "کل کاربران"
-
-#~ msgid "Responders"
-#~ msgstr "پاسخ دهندگان"
-
-#~ msgid "Dispatchers"
-#~ msgstr "توزیع کنندگان"
-
-#~ msgid "Multipliers"
-#~ msgstr "ضرب"
-
-#~ msgid "Admins"
-#~ msgstr "مدیرها"
-
-#~ msgid "User Login Activity"
-#~ msgstr "فعالیت ورود کاربر"
-
-#~ msgid "Users Active in the Last 30 Days"
-#~ msgstr "کاربران فعال در 30 روز گذشته"
-
-#~ msgid "Practicing"
-#~ msgstr "تمرین کردن"
-
-#~ msgid "Not Practicing"
-#~ msgstr "تمرین نکردن"
-
-#~ msgid "Chart Funnel"
-#~ msgstr "قیف نمودار"
-
-#~ msgid "Contact"
-#~ msgstr "مخاطب"
-
-#~ msgid "Group"
-#~ msgstr "گروه"
-
-#~ msgid "User"
-#~ msgstr "کاربر"
-
-#~ msgid "Sites"
-#~ msgstr "سایت های"
-
-#~ msgid "Baptisms"
-#~ msgstr "غسل تعمید"
-
-#~ msgid "Churches"
-#~ msgstr "کلیساها"
-
-#~ msgid "Location"
-#~ msgstr "محل"
-
-#~ msgid "Types"
-#~ msgstr "انواع"
-
-#~ msgid "modify filter"
-#~ msgstr "فیلتر را اصلاح کنید"
-
-#~ msgid "Filter List"
-#~ msgstr "لیست فیلترها"
-
-#~ msgid "reset data"
-#~ msgstr "تنظیم مجدد داده ها"
-
-#~ msgid "Status"
-#~ msgstr "وضعیت"
-
-#~ msgid "Status - All"
-#~ msgstr "وضعیت - همه"
-
-#~ msgid "Zoom Level"
-#~ msgstr "سطح بزرگنمایی"
-
-#~ msgid "Auto Zoom"
-#~ msgstr "بزرگنمایی خودکار"
-
-#~ msgid "World"
-#~ msgstr "جهان"
-
-#~ msgid "Country"
-#~ msgstr "کشور"
-
-#~ msgid "State"
-#~ msgstr "دولت"
-
-#~ msgid "Active Contacts"
-#~ msgstr "مخاطبین فعال"
-
-#~ msgid "Paused Contacts"
-#~ msgstr "مخاطبین موقتاً متوقف شده"
-
-#~ msgid "Closed Contacts"
-#~ msgstr "مخاطبین بسته"
-
-#~ msgid "Total Contacts"
-#~ msgstr "تعداد مخاطبین"
-
-#~ msgid "New Contacts"
-#~ msgstr "مخاطبین جدید"
-
-#~ msgid "New Baptisms"
-#~ msgstr "غسل تعمید"
-
-#~ msgid "Baptism Generations"
-#~ msgstr "نسل های غسل تعمید"
-
-#~ msgid "Select Location"
-#~ msgstr "مکان را انتخاب کنید"
-
-#~ msgid "New Groups"
-#~ msgstr "گروه های جدید"
-
-#~ msgid "Pre-Group"
-#~ msgstr "پیش گروهی"
-
-#~ msgid "Pre-Groups"
-#~ msgstr "پیش گروه ها"
-
-#~ msgid "Last 7 Days"
-#~ msgstr "7 روز گذشته"
-
-#~ msgid "Last 30 Days"
-#~ msgstr "30 روز گذشته"
-
-#~ msgid "Last 60 Days"
-#~ msgstr "60 روز گذشته"
-
-#~ msgid "Last 12 Months"
-#~ msgstr "12 ماه گذشته"
-
-#~ msgid "Last 24 Months"
-#~ msgstr "24 ماه گذشته"
-
-#~ msgid "This Year"
-#~ msgstr "امسال"
-
-#~ msgid "Activity Map"
-#~ msgstr "نقشه فعالیت"
-
-#~ msgid "Stats"
-#~ msgstr "آمار"
-
-#~ msgid "Activities"
-#~ msgstr "فعالیت ها"
-
-#~ msgid "Actions"
-#~ msgstr "اقدامات"
-
-#~ msgid "By Action Type"
-#~ msgstr "براساس نوع اقدام"
-
-#~ msgid "Key"
-#~ msgstr "کلید"
-
-#~ msgid "Name"
-#~ msgstr "نام"
-
-#~ msgid "Total Activities"
-#~ msgstr "کل فعالیتها"
-
-#~ msgid "Feed"
-#~ msgstr "خوراک"
-
-#~ msgid "Time"
-#~ msgstr "زمان"
-
-#~ msgid "Result Limit"
-#~ msgstr "محدودیت نتیجه"
-
-#~ msgid "uncheck"
-#~ msgstr "بردارید"
-
-#~ msgid "Home"
-#~ msgstr "خانه"
-
-#~ msgid "Events (30 Days)"
-#~ msgstr "رویدادها (30 روز)"
-
-#~ msgid "All Active/Inactive"
-#~ msgstr "همه فعال / غیرفعال"
-
-#~ msgid "Hover Map"
-#~ msgstr "نقشه شناور"
-
-#~ msgid "Network"
-#~ msgstr "شبکه"
-
-#~ msgid "Map"
-#~ msgstr "نقشه"
-
-#~ msgid "Log"
-#~ msgstr "ورود به سیستم"
-
-#~ msgid "Activity"
-#~ msgstr "فعالیت"
-
-#~ msgid "Area Maps"
-#~ msgstr "نقشه های منطقه"
-
-#~ msgid "Location List"
-#~ msgstr "لیست مکان"
-
-#~ msgid "Maps"
-#~ msgstr "نقشه ها"
-
-#~ msgid "Site Reports"
-#~ msgstr "گزارش سایت"
-
-#~ msgid "Statistics"
-#~ msgstr "آمار"
-
-#~ msgid "Network Dashboard Transfer Both Ways"
-#~ msgstr "انتقال داشبورد شبکه به هر دو روش"
-
-#~ msgid "Network Dashboard Receiving Only"
-#~ msgstr "فقط داشبورد شبکه"
-
-#~ msgid "Network Dashboard Sending Only"
-#~ msgstr "داشبورد شبکه فقط ارسال می شود"
-
-#~ msgid "Network Dashboard Site Profile"
-#~ msgstr "مشخصات سایت داشبورد شبکه"
-
-#~ msgid "Disciple Tools - Network Dashboard"
-#~ msgstr "ابزارهای شاگرد - داشبورد شبکه"
-
-#~ msgid "Streams"
-#~ msgstr "جریان ها"
-
-#~ msgid "Stream Maps"
-#~ msgstr "جریان نقشه ها"
-
-#~ msgid "Streams Maps"
-#~ msgstr "نقشه های جریان ها"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid ""
-#~ "A useful way to stream related items and can help stream contacts "
-#~ "associated with noteworthy characteristics. e.g. business owner, sports "
-#~ "lover. The contacts can also be filtered using these tags."
-#~ msgstr ""
-#~ "روشی مفید برای پخش جریانی موارد مرتبط و می تواند به مخاطبین مرتبط با "
-#~ "ویژگی های قابل توجه کمک کند. به عنوان مثال، صاحب مشاغل ، عاشق ورزش. "
-#~ "مخاطبین همچنین می توانند با استفاده از این برچسب ها فیلتر شوند."
-
-#~ msgctxt "Stream Status label"
-#~ msgid "New"
-#~ msgstr "جدید"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "New stream added to the system"
-#~ msgstr "جریان جدیدی به سیستم اضافه شد"
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Model"
-#~ msgstr "مدل"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "This stream has been proposed and is in initial conversations"
-#~ msgstr "این جریان پیشنهاد شده است و در مکالمات اولیه است"
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Assist"
-#~ msgstr "کمک کردن"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "This stream is confirmed, on the calendar."
-#~ msgstr "این جریان در تقویم تأیید شده است."
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Watch"
-#~ msgstr "تماشا کردن"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "This stream is confirmed, on the calendar, or currently active."
-#~ msgstr "این جریان در تقویم تأیید شده یا در حال حاضر فعال است."
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Leave"
-#~ msgstr "ترک کردن"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "This stream has successfully completed"
-#~ msgstr "این جریان با موفقیت انجام شد"
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Paused"
-#~ msgstr "مکث"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid ""
-#~ "This contact is currently on hold. It has potential of getting scheduled "
-#~ "in the future."
-#~ msgstr ""
-#~ "این تماس در حال حاضر در حالت تعلیق است. این امکان وجود دارد که در آینده "
-#~ "برنامه ریزی شود."
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Closed"
-#~ msgstr "بسته است"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "This stream is no longer going to happen."
-#~ msgstr "این جریان دیگر قرار نیست اتفاق بیفتد."
-
-#~ msgid ""
-#~ "Select the main person who is responsible for reporting on this stream."
-#~ msgstr "شخص اصلی را که مسئولیت گزارش دهی در این جریان را دارد انتخاب کنید."
-
-#~ msgctxt "Optional Documentation"
-#~ msgid ""
-#~ "The person who planted and/or is coaching this stream. Only one person "
-#~ "can be assigned to a stream while multiple people can be coaches / church "
-#~ "planters of this stream."
-#~ msgstr ""
-#~ "شخصی که این جریان را کاشت و یا در حال مربیگری آن است. فقط یک نفر می تواند "
-#~ "به یک جریان اختصاص یابد در حالی که چندین نفر می توانند مربی / کاشت "
-#~ "کنندگان کلیسا در این جریان باشند."
-
-#~ msgctxt "Optional Documentation"
-#~ msgid "The people streams represented by this stream."
-#~ msgstr "پخش جریانی افراد توسط این جریان پخش می شود."
-
-#~ msgid "Parent Stream"
-#~ msgstr "جریان والدین"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid "A stream that launched this stream."
-#~ msgstr "جریانی که این جریان را راه اندازی کرده است."
-
-#~ msgid "Peer Streams"
-#~ msgstr "جریان های همتا"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid ""
-#~ "A related stream that isn't a parent/child in relationship. It might "
-#~ "indicate streams that collaborate, are about to merge, recently split, "
-#~ "etc."
-#~ msgstr ""
-#~ "جریانی مرتبط که والدین / فرزندان در رابطه نیستند. این ممکن است جریانهایی "
-#~ "را نشان دهد که با هم همکاری می کنند ، در شرف ادغام هستند ، اخیراً جدا شده "
-#~ "و غیره"
-
-#~ msgid "Child Streams"
-#~ msgstr "جریان های کودک"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid "A stream that has been birthed out of this stream."
-#~ msgstr "جریانی که از این جریان زایمان شده است."
-
-#~ msgid "Leader in Stream"
-#~ msgstr "رهبر در جریان"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid "Leader of a stream"
-#~ msgstr "رهبر یک جریان"
-
-#~ msgid "Key Disciple in Stream"
-#~ msgstr "شاگرد کلیدی در جریان"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid "Disciple in a stream."
-#~ msgstr "در یک جریان شاگردی کنید."
-
-#~ msgid "Connections"
-#~ msgstr "اتصالات"
-
-#~ msgid "Add Report"
-#~ msgstr "افزودن گزارش"
-
-#~ msgid "Disciple Tools - Streams"
-#~ msgstr "ابزارهای مرید - جریان ها"
-
-#~ msgid "Pre-Group Generations"
-#~ msgstr "نسل های قبل از گروه"
-
-#~ msgid "Group Generations"
-#~ msgstr "نسل های گروهی"
-
-#~ msgid "Church Generations"
-#~ msgstr "نسل های کلیسا"
-
-#~ msgid "Team Generations"
-#~ msgstr "نسل های تیم"
-
-#~ msgid "%s is reporting a new pre-group generation."
-#~ msgstr "٪ s در حال گزارش نسل جدید قبل از گروه است."
-
-#~ msgid "%s is reporting a new group generation."
-#~ msgstr "٪ s نسل جدیدی از گروه را گزارش می دهد."
-
-#~ msgid "%s is reporting a new church generation."
-#~ msgstr "٪ s نسل جدید کلیسا را گزارش می دهد."
-
-#~ msgid "%s is reporting a new leadership team generation."
-#~ msgstr "٪ s نسل جدیدی از تیم رهبری را گزارش می دهد."
-
-#~ msgid "New Contact"
-#~ msgstr "تماس جدید"
-
-#~ msgid "New Pre-Group"
-#~ msgstr "پیش گروه جدید"
-
-#~ msgid "New Group"
-#~ msgstr "گروه جدید"
-
-#~ msgid "New Church"
-#~ msgstr "کلیسای جدید"
-
-#~ msgid "New Team"
-#~ msgstr "تیم جدید"
-
-#~ msgid "New Baptism"
-#~ msgstr "غسل تعمید"
-
-#~ msgid "New Coaching"
-#~ msgstr "مربیگری جدید"
-
-#~ msgid "%s is reporting a new contact."
-#~ msgstr "٪ s در حال گزارش تماس جدید است."
-
-#~ msgid "%s is reporting a new pre-group formed."
-#~ msgstr "٪ s در حال گزارش پیش گروه جدیدی است که تشکیل شده است."
-
-#~ msgid "%s is reporting a new group formed."
-#~ msgstr "٪ s در حال گزارش گروه جدیدی است که تشکیل شده است."
-
-#~ msgid "%s is reporting a new church."
-#~ msgstr "٪ s در حال گزارش یک کلیسای جدید است."
-
-#~ msgid "%s is reporting a new leadership team formed."
-#~ msgstr "٪ s در حال گزارش است که یک تیم رهبری جدید تشکیل شده است."
-
-#~ msgid "%s is reporting a new baptism."
-#~ msgstr "٪ s در حال گزارش تعمید جدید است."
-
-#~ msgid "%s is reporting an coaching relationship."
-#~ msgstr "٪ s در حال گزارش یک مربیگری است."
-
-#~ msgid "Active"
-#~ msgstr "فعال"
-
-#~ msgid "Paused"
-#~ msgstr "مکث"
-
-#~ msgid "Closed"
-#~ msgstr "بسته است"
-
-#~ msgid "Inactive"
-#~ msgstr "غیر فعال"
-
-#~ msgid "https://github.com/DiscipleTools/disciple-tools-network-dashboard"
-#~ msgstr "https://github.com/DiscipleTools/disciple-tools-network-dashboard"
-
-#~ msgid ""
-#~ "Connect this Disciple Tools site to a larger network of sites. Adds "
-#~ "security sensitive totals, mapping, activity logging."
-#~ msgstr ""
-#~ "این سایت Disciple Tools را به شبکه بزرگتری از سایتها متصل کنید. مجموع "
-#~ "حساسیت امنیتی ، نقشه برداری ، ثبت فعالیت را اضافه می کند."
-
-#~ msgid "https://github.com/DiscipleTools"
-#~ msgstr "https://github.com/DiscipleTools"
-
-#~ msgid "https://github.com/DiscipleTools/disciple-tools-streams"
-#~ msgstr "https://github.com/DiscipleTools/disciple-tools-streams"
-
-#~ msgid ""
-#~ "Disciple Tools Streams Extension adds recording of streams and cross "
-#~ "reference them with contacts, groups, and locations."
-#~ msgstr ""
-#~ "برنامه Disciple Tools Streams Extension ضبط جریان ها را اضافه می کند و "
-#~ "آنها را با مخاطبین ، گروه ها و مکانها ارجاع می دهد."
-
-#~ msgid ""
-#~ "'Disciple Tools - Training' plugin requires 'Disciple Tools' theme to "
-#~ "work. Please activate 'Disciple Tools' theme or make sure it is latest "
-#~ "version."
-#~ msgstr ""
-#~ "افزونه 'Disciple Tools - Training' برای کار کردن به تم 'Disciple Tools' "
-#~ "نیاز دارد. لطفاً تم \"Disciple Tools\" را فعال کنید یا مطمئن شوید آخرین "
-#~ "نسخه است."
-
-#~ msgid "Current Disciple Tools version: %1$s, required version: %2$s"
-#~ msgstr "نسخه فعلی ابزار مرید:٪ 1 $ s ، نسخه مورد نیاز:٪ 2 $ s"
-
-#~ msgid "Duplicates"
-#~ msgstr "تکراری"
-
-#~ msgid "Coach"
-#~ msgstr "مربی ورزشی"
-
-#~ msgid "Leaders Total"
-#~ msgstr "رهبران کل"
-
-#~ msgid "Disciples Total"
-#~ msgstr "شاگردان کل"
-
-#~ msgid "Key Disciples"
-#~ msgstr "مریدان کلیدی"
-
-#~ msgid "Groups Total"
-#~ msgstr "مجموع گروهها"
-
-#~ msgid "Trainings Total"
-#~ msgstr "کل آموزشها"
-
-#~ msgid "Dashboard Plugin"
-#~ msgstr "پلاگین داشبورد"
-
-#~ msgid "Dashboard"
-#~ msgstr "داشبورد"
-
-#~ msgid "%s days since last update"
-#~ msgstr "٪ s روز از آخرین به روزرسانی"
-
-#~ msgid "Accept"
-#~ msgstr "تایید کنید"
-
-#~ msgid "Decline"
-#~ msgstr "کاهش می یابد"
-
-#~ msgid "# Contacts Assigned"
-#~ msgstr "# مخاطب اختصاص داده شده است"
-
-#~ msgid "# First Meetings"
-#~ msgstr "# اولین جلسات"
-
-#~ msgid "# Faith milestones"
-#~ msgstr "# نقاط عطف ایمان"
-
-#~ msgid "Hurray! You are caught up."
-#~ msgstr "هورا گرفتار شدی"
-
-#~ msgid "remove"
-#~ msgstr "برداشتن"
-
-#~ msgid "mark as complete"
-#~ msgstr "علامت گذاری به عنوان کامل"
-
-#~ msgid "No task created"
-#~ msgstr "هیچ کاری ایجاد نشده است"
-
-#~ msgid "Reminder"
-#~ msgstr "یادآور"
-
-#~ msgid "No note set"
-#~ msgstr "هیچ یادداشتی تنظیم نشده است"
-
-#~ msgid "Add a contact"
-#~ msgstr "مخاطبی اضافه کنید"
-
-#~ msgid "View Contacts List"
-#~ msgstr "لیست مخاطبین را مشاهده کنید"
-
-#~ msgid "Pending Contacts"
-#~ msgstr "مخاطبین در انتظار"
-
-#~ msgid "View All"
-#~ msgstr "مشاهده همه"
-
-#~ msgid "Update Needed"
-#~ msgstr "به روزرسانی مورد نیاز"
-
-#~ msgid "Contact Workload"
-#~ msgstr "با حجم کار تماس بگیرید"
-
-#~ msgid ""
-#~ "Choose an option to let the dispatcher(s) know if you are ready for new "
-#~ "contacts"
-#~ msgstr ""
-#~ "اگر برای مخاطبین جدید آماده هستید ، گزینه ای را برای اطلاع دادن به توزیع "
-#~ "کنندگان (ها) انتخاب کنید"
-
-#~ msgid "Set travel or dates unavailable"
-#~ msgstr "سفر یا تاریخها را در دسترس قرار ندهید"
-
-#~ msgid "Personal Benchmarks"
-#~ msgstr "معیارهای شخصی"
-
-#~ msgid "Faith Milestone Totals"
-#~ msgstr "مجموع نقاط عطف ایمان"
-
-#~ msgid "Milestones on your active contacts"
-#~ msgstr "نقاط عطف مخاطبین فعال شما"
-
-#~ msgid "Seeker Path Progress"
-#~ msgstr "مسیر جستجوی پیشرفت"
-
-#~ msgid "No data to show yet. You have no active contacts"
-#~ msgstr "هنوز داده ای برای نمایش وجود ندارد شما هیچ مخاطب فعالی ندارید"
-
-#~ msgid "Disciple Tools - Dashboard"
-#~ msgstr "ابزار مرید - داشبورد"
-
-#~ msgid "https://github.com/DiscipleTools/disciple-tools-dashboard"
-#~ msgstr "https://github.com/DiscipleTools/disciple-tools-dashboard"
-
-#~ msgid ""
-#~ "The multiplier dashboard upgrades the multipliers experience as soon as "
-#~ "they log into the system giving them a landing page with stats."
-#~ msgstr ""
-#~ "داشبورد ضرب ، به محض ورود به سیستم ، یک صفحه مقصد را با آمار وارد می "
-#~ "کند ، تجربه ضرب را ارتقا می دهد."
-
-#~ msgid "Reason Assigned To"
-#~ msgstr "دلیل اختصاص داده شده به"
-
-#~ msgid "Follow-Up"
-#~ msgstr "پیگیری"
-
-#~ msgid "Digital Response"
-#~ msgstr "پاسخ دیجیتال"
-
-#~ msgid "Dispatch"
-#~ msgstr "ارسال"
-
-#~ msgid "No Answer"
-#~ msgstr "بدون پاسخ"
-
-#~ msgid "Talked"
-#~ msgstr "صحبت کرد"
-
-#~ msgid "Scheduled"
-#~ msgstr "برنامه ریزی شده"
-
-#~ msgid "Complete"
-#~ msgstr "کامل"
-
-#~ msgid "No-Show"
-#~ msgstr "بدون نمایش"
-
-#~ msgid "No permission"
-#~ msgstr "بدون مجوز و اجازه"
-
-#~ msgid "All"
-#~ msgstr "همه"
-
-#~ msgid "Ready"
-#~ msgstr "آماده"
-
-#~ msgid "Recent"
-#~ msgstr "اخیر"
-
-#~ msgid "Assign"
-#~ msgstr "اختصاص دادن"
-
-#~ msgid "Choose an option:"
-#~ msgstr "گزینه ای را انتخاب کنید:"
-
-#~ msgid "Cancel"
-#~ msgstr "لغو"
-
-#~ msgid "Assign For"
-#~ msgstr "اختصاص برای"
-
-#~ msgid "Search"
-#~ msgstr "جستجو کردن"
-
-#~ msgid "Claim for follow-up"
-#~ msgstr "ادعای پیگیری"
-
-#~ msgid "Ready for Dispatch"
-#~ msgstr "برای اعزام آماده است"
-
-#~ msgid "Disciple Tools - Advanced M2M Tiles"
-#~ msgstr "ابزارهای شاگرد - کاشی های پیشرفته M2M"
-
-#~ msgid "https://github.com/DiscipleTools/disciple-tools-advanced-m2m-tiles"
-#~ msgstr ""
-#~ "https://github.com/DiscipleTools/disciple-tools-ad Advanced-m2m-tiles"
-
-#~ msgid ""
-#~ "Disciple Tools - Advanced M2M Tiles adds specific supporting tiles for "
-#~ "different roles."
-#~ msgstr ""
-#~ "ابزارهای شاگرد - کاشی های پیشرفته M2M کاشی های پشتیبانی ویژه ای را برای "
-#~ "نقش های مختلف اضافه می کند."

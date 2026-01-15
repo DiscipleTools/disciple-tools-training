@@ -26,32 +26,27 @@ msgstr "പരിശീലന മാപ്പുകൾ"
 
 #: network/network-dashboard-integration.php:44
 msgid "New Training"
-msgstr ""
+msgstr "പുതിയ പരിശീലനം"
 
 #: network/network-dashboard-integration.php:50
 msgid "Training Started"
-msgstr ""
+msgstr "പരിശീലനം ആരംഭിച്ചു"
 
 #: network/network-dashboard-integration.php:56
 msgid "Training Completed"
-msgstr ""
+msgstr "പരിശീലനം പൂർത്തിയായി"
 
 #: post-type/module-base.php:28 post-type/module-base.php:495
 msgid "Training"
 msgstr "പരിശീലനം"
 
 #: post-type/module-base.php:70
-#, fuzzy
-#| msgid "Trainings"
 msgid "Trainings Admin"
-msgstr "പരിശീലനങ്ങൾ"
+msgstr "പരിശീലന അഡ്‌മിൻ"
 
 #: post-type/module-base.php:71
-#, fuzzy
-#| msgctxt "Optional Documentation"
-#| msgid "Leader of a training"
 msgid "Admin access to all trainings"
-msgstr "ഒരു പരിശീലനത്തിന്റെ നേതാവ്"
+msgstr "എല്ലാ പരിശീലനങ്ങളിലേക്കും അഡ്‌മിൻ ആക്‌സസ്"
 
 #: post-type/module-base.php:76
 msgid "Multiplier"
@@ -74,6 +69,7 @@ msgctxt "Optional Documentation"
 msgid ""
 "A useful way to group related items and can be used to filter the records"
 msgstr ""
+"ബന്ധപ്പെട്ട ഇനങ്ങളെ ഗ്രൂപ്പുചെയ്യാനുള്ള ഉപയോഗപ്രദമായ മാർഗം, റെക്കോർഡുകൾ ഫിൽട്ടർ ചെയ്യാൻ ഉപയോഗിക്കാം"
 
 #: post-type/module-base.php:135
 msgid "Follow"
@@ -120,7 +116,7 @@ msgstr "ഈ പരിശീലനം കലണ്ടറിൽ സ്ഥിരീ
 #: post-type/module-base.php:177
 msgctxt "Training Status label"
 msgid "In Progress"
-msgstr "പുരോഗതിയിൽ"
+msgstr "പുരോഗതിയിൽ"
 
 #: post-type/module-base.php:178
 msgctxt "Training Status field description"
@@ -161,7 +157,7 @@ msgstr "ഈ പരിശീലനം ഇനി നടക്കില്ല."
 
 #: post-type/module-base.php:201
 msgid "Assigned To"
-msgstr "നിയോഗിച്ചിട്ടുള്ള"
+msgstr "നിയോഗിച്ചിട്ടുള്ള"
 
 #: post-type/module-base.php:202
 msgid ""
@@ -354,22 +350,16 @@ msgid "Close"
 msgstr "അടയ്‌ക്കുക"
 
 #: post-type/module-base.php:713
-#, fuzzy
-#| msgid "Removed %1$s: %2$s"
 msgid "Removed %1$s: {%2$s}"
-msgstr "%1$s നീക്കംചെയ്തു: %2$s"
+msgstr "%1$s നീക്കംചെയ്തു: {%2$s}"
 
 #: post-type/module-base.php:716
-#, fuzzy
-#| msgid "Added %1$s: %2$s"
 msgid "Added %1$s: {%2$s}"
-msgstr "%1$s ചേർത്തു: %2$s"
+msgstr "%1$s ചേർത്തു: {%2$s}"
 
 #: post-type/module-base.php:719
-#, fuzzy
-#| msgid "Updated %1$s: %2$s to %3$s"
 msgid "Updated %1$s: {%2$s} to {%3$s}"
-msgstr "%1$s: %2$s മുതൽ %3$s വരെ അപ്‌ഡേറ്റുചെയ്‌തു"
+msgstr "%1$s അപ്‌ഡേറ്റുചെയ്‌തു: {%2$s} മുതൽ {%3$s} വരെ"
 
 #: post-type/module-base.php:804
 msgctxt "List Filters"
@@ -384,7 +374,7 @@ msgstr "എല്ലാം"
 #: post-type/module-base.php:871
 msgctxt "List Filters"
 msgid "Default Filters"
-msgstr ""
+msgstr "സ്ഥിരസ്ഥിതി ഫിൽട്ടറുകൾ"
 
 #: post-type/module-public-calendar.php:85
 msgid "Reports"
@@ -417,7 +407,7 @@ msgstr "ചേർക്കുക"
 
 #: post-type/module-registration.php:31
 msgid "Magic Links"
-msgstr ""
+msgstr "മാജിക് ലിങ്കുകൾ"
 
 #: post-type/module-registration.php:59
 msgid "copy link"
@@ -469,7 +459,7 @@ msgstr "ഓപ്പൺ മാപ്പിംഗ്"
 
 #: post-type/module-registration.php:270
 msgid "clear"
-msgstr "വ്യക്തമാണ്"
+msgstr "മായ്‌ക്കുക"
 
 #: post-type/module-registration.php:384
 msgid "Register for Training"
@@ -486,800 +476,3 @@ msgstr "പങ്കുചേരുക"
 #: post-type/module-registration.php:700
 msgid "Clear"
 msgstr "മായ്‌ക്കുക"
-
-#~ msgid "Apps"
-#~ msgstr "അപ്ലിക്കേഷനുകൾ"
-
-#, fuzzy
-#~| msgid "Disciple Tools - Training"
-#~ msgid "Disciple.Tools - Training"
-#~ msgstr "ശിഷ്യ ഉപകരണങ്ങൾ - പരിശീലനം"
-
-#~ msgid "https://github.com/DiscipleTools/disciple-tools-training"
-#~ msgstr "https://github.com/DiscipleTools/disciple-tools-training"
-
-#, fuzzy
-#~| msgid ""
-#~| "Disciple Tools Training Extension adds recording of trainings and cross "
-#~| "reference them with contacts, groups, and locations."
-#~ msgid ""
-#~ "Disciple.Tools Training Extension adds recording of trainings and cross "
-#~ "reference them with contacts, groups, and locations."
-#~ msgstr ""
-#~ "ശിഷ്യ ഉപകരണ പരിശീലന വിപുലീകരണം പരിശീലനത്തിന്റെ റെക്കോർഡിംഗും കോൺടാക്റ്റുകൾ, "
-#~ "ഗ്രൂപ്പുകൾ, ലൊക്കേഷനുകൾ എന്നിവ ഉപയോഗിച്ച് ക്രോസ് റഫറൻസും ചേർക്കുന്നു."
-
-#~ msgid "Whoah, partner!"
-#~ msgstr "ഓ, പങ്കാളി!"
-
-#~ msgid "Method does not exist."
-#~ msgstr "രീതി നിലവിലില്ല."
-
-#~ msgid "Dispatcher"
-#~ msgstr "ഡിസ്പാച്ചർ"
-
-#~ msgid "Members"
-#~ msgstr "അംഗങ്ങൾ"
-
-#~ msgid "Contacts"
-#~ msgstr "കോൺ‌ടാക്റ്റുകൾ"
-
-#~ msgid "Coaches"
-#~ msgstr "കോച്ചുകൾ"
-
-#~ msgid "Planted by"
-#~ msgstr "നട്ടുപിടിപ്പിച്ചു"
-
-#~ msgid "Planting"
-#~ msgstr "നടീൽ"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid ""
-#~ "A useful way to training related items and can help training contacts "
-#~ "associated with noteworthy characteristics. e.g. business owner, sports "
-#~ "lover. The contacts can also be filtered using these tags."
-#~ msgstr ""
-#~ "അനുബന്ധ ഇനങ്ങൾ‌ പരിശീലിപ്പിക്കുന്നതിനുള്ള ഒരു ഉപയോഗപ്രദമായ മാർ‌ഗ്ഗം കൂടാതെ ശ്രദ്ധേയമായ "
-#~ "സവിശേഷതകളുമായി ബന്ധപ്പെട്ട കോൺ‌ടാക്റ്റുകളെ പരിശീലിപ്പിക്കാൻ സഹായിക്കുന്നു. ഉദാ. ബിസിനസ്സ് "
-#~ "ഉടമ, കായിക പ്രേമികൾ. ഈ ടാഗുകൾ ഉപയോഗിച്ച് കോൺടാക്റ്റുകൾ ഫിൽട്ടർ ചെയ്യാനും കഴിയും."
-
-#~ msgctxt "input field placeholder"
-#~ msgid "Search Users"
-#~ msgstr "ഉപയോക്താക്കളെ തിരയുക"
-
-#~ msgctxt "Search 'something'"
-#~ msgid "Search %s"
-#~ msgstr "%s തിരയുക"
-
-#~ msgid "Extensions (DT)"
-#~ msgstr "വിപുലീകരണങ്ങൾ (DT)"
-
-#~ msgid "Network Dashboard"
-#~ msgstr "നെറ്റ്‌വർക്ക് ഡാഷ്‌ബോർഡ്"
-
-#~ msgid "You do not have sufficient permissions to access this page."
-#~ msgstr "ഈ പേജ് ആക്സസ് ചെയ്യുന്നതിന് നിങ്ങൾക്ക് മതിയായ അനുമതികളില്ല."
-
-#~ msgid "nav-tab-active"
-#~ msgstr "nav-tab-active"
-
-#~ msgid "Network Dashboard Viewer"
-#~ msgstr "നെറ്റ്‌വർക്ക് ഡാഷ്‌ബോർഡ് വ്യൂവർ"
-
-#~ msgid "ID"
-#~ msgstr "ID"
-
-#~ msgid "Site"
-#~ msgstr "സൈറ്റ്"
-
-#~ msgid "Users"
-#~ msgstr "ഉപയോക്താക്കൾ"
-
-#~ msgid "Timestamp"
-#~ msgstr "ടൈംസ്റ്റാമ്പ്"
-
-#~ msgid "Visit"
-#~ msgstr "സന്ദർശിക്കുക"
-
-#~ msgid "View"
-#~ msgstr "കാണുക"
-
-#~ msgid "Active Snapshot"
-#~ msgstr "സജീവ സ്നാപ്പ്ഷോട്ട്"
-
-#~ msgid "Generations"
-#~ msgstr "തലമുറകൾ"
-
-#~ msgid "Follow-up Funnel"
-#~ msgstr "ഫോളോ-അപ്പ് ഫണൽ"
-
-#~ msgid "On-Going Meetings"
-#~ msgstr "നടക്കുന്ന മീറ്റിംഗുകൾ"
-
-#~ msgid "Coaching"
-#~ msgstr "പരിശീലനം"
-
-#~ msgid "Baptized"
-#~ msgstr "സ്‌നാനമേറ്റു"
-
-#~ msgid "Active Groups"
-#~ msgstr "സജീവ ഗ്രൂപ്പുകൾ"
-
-#~ msgid "Church"
-#~ msgstr "ക്രിസ്ത്യൻ പള്ളി"
-
-#~ msgid "Health Metrics"
-#~ msgstr "ആരോഗ്യ അളവുകൾ"
-
-#~ msgid "Total Users"
-#~ msgstr "മൊത്തം ഉപയോക്താക്കൾ"
-
-#~ msgid "Responders"
-#~ msgstr "പ്രതികരിക്കുന്നവർ"
-
-#~ msgid "Dispatchers"
-#~ msgstr "ഡിസ്പാച്ചേഴ്സ്"
-
-#~ msgid "Multipliers"
-#~ msgstr "മൾട്ടിപ്ലയറുകൾ"
-
-#~ msgid "Admins"
-#~ msgstr "അഡ്‌മിനുകൾ"
-
-#~ msgid "User Login Activity"
-#~ msgstr "ഉപയോക്തൃ ലോഗിൻ പ്രവർത്തനം"
-
-#~ msgid "Users Active in the Last 30 Days"
-#~ msgstr "കഴിഞ്ഞ 30 ദിവസങ്ങളിൽ സജീവമായ ഉപയോക്താക്കൾ"
-
-#~ msgid "Practicing"
-#~ msgstr "പരിശീലിക്കുന്നു"
-
-#~ msgid "Not Practicing"
-#~ msgstr "പരിശീലിക്കുന്നില്ല"
-
-#~ msgid "Chart Funnel"
-#~ msgstr "ചാർട്ട് ഫണൽ"
-
-#~ msgid "Contact"
-#~ msgstr "ബന്ധപ്പെടുക"
-
-#~ msgid "Group"
-#~ msgstr "ഗ്രൂപ്പ്"
-
-#~ msgid "User"
-#~ msgstr "ഉപയോക്താവ്"
-
-#~ msgid "Sites"
-#~ msgstr "സൈറ്റുകൾ"
-
-#~ msgid "Baptisms"
-#~ msgstr "സ്നാനം"
-
-#~ msgid "Churches"
-#~ msgstr "പള്ളികൾ"
-
-#~ msgid "Location"
-#~ msgstr "സ്ഥാനം"
-
-#~ msgid "Types"
-#~ msgstr "തരങ്ങൾ"
-
-#~ msgid "modify filter"
-#~ msgstr "ഫിൽട്ടർ പരിഷ്‌ക്കരിക്കുക"
-
-#~ msgid "Filter List"
-#~ msgstr "ലിസ്റ്റ് ഫിൽട്ടർ ചെയ്യുക"
-
-#~ msgid "reset data"
-#~ msgstr "ഡാറ്റ പുന reset സജ്ജമാക്കുക"
-
-#~ msgid "Status"
-#~ msgstr "പദവി"
-
-#~ msgid "Status - All"
-#~ msgstr "നില - എല്ലാം"
-
-#~ msgid "Zoom Level"
-#~ msgstr "സൂം ലെവൽ"
-
-#~ msgid "Auto Zoom"
-#~ msgstr "യാന്ത്രിക സൂം"
-
-#~ msgid "World"
-#~ msgstr "ലോകം"
-
-#~ msgid "Country"
-#~ msgstr "രാജ്യം"
-
-#~ msgid "State"
-#~ msgstr "സംസ്ഥാനം"
-
-#~ msgid "Active Contacts"
-#~ msgstr "സജീവ കോൺടാക്റ്റുകൾ"
-
-#~ msgid "Paused Contacts"
-#~ msgstr "താൽക്കാലികമായി നിർത്തിയ കോൺടാക്റ്റുകൾ"
-
-#~ msgid "Closed Contacts"
-#~ msgstr "അടച്ച കോൺ‌ടാക്റ്റുകൾ"
-
-#~ msgid "Total Contacts"
-#~ msgstr "മൊത്തം കോൺ‌ടാക്റ്റുകൾ"
-
-#~ msgid "New Contacts"
-#~ msgstr "പുതിയ കോൺ‌ടാക്റ്റുകൾ"
-
-#~ msgid "New Baptisms"
-#~ msgstr "പുതിയ സ്നാനം"
-
-#~ msgid "Baptism Generations"
-#~ msgstr "സ്നാപന തലമുറകൾ"
-
-#~ msgid "Select Location"
-#~ msgstr "ലൊക്കേഷൻ തിരഞ്ഞെടുക്കുക"
-
-#~ msgid "New Groups"
-#~ msgstr "പുതിയ ഗ്രൂപ്പുകൾ"
-
-#~ msgid "Pre-Group"
-#~ msgstr "പ്രീ-ഗ്രൂപ്പ്"
-
-#~ msgid "Pre-Groups"
-#~ msgstr "പ്രീ-ഗ്രൂപ്പുകൾ"
-
-#~ msgid "Last 7 Days"
-#~ msgstr "അവസാന 7 ദിവസം"
-
-#~ msgid "Last 30 Days"
-#~ msgstr "അവസാന 30 ദിവസം"
-
-#~ msgid "Last 60 Days"
-#~ msgstr "അവസാന 60 ദിവസം"
-
-#~ msgid "Last 12 Months"
-#~ msgstr "കഴിഞ്ഞ 12 മാസം"
-
-#~ msgid "Last 24 Months"
-#~ msgstr "കഴിഞ്ഞ 24 മാസം"
-
-#~ msgid "This Year"
-#~ msgstr "ഈവർഷം"
-
-#~ msgid "Activity Map"
-#~ msgstr "പ്രവർത്തന മാപ്പ്"
-
-#~ msgid "Stats"
-#~ msgstr "സ്ഥിതിവിവരക്കണക്കുകൾ"
-
-#~ msgid "Activities"
-#~ msgstr "പ്രവർത്തനങ്ങൾ"
-
-#~ msgid "Actions"
-#~ msgstr "പ്രവർത്തനങ്ങൾ"
-
-#~ msgid "By Action Type"
-#~ msgstr "പ്രവർത്തന തരം പ്രകാരം"
-
-#~ msgid "Key"
-#~ msgstr "കീ"
-
-#~ msgid "Name"
-#~ msgstr "പേര്"
-
-#~ msgid "Total Activities"
-#~ msgstr "മൊത്തം പ്രവർത്തനങ്ങൾ"
-
-#~ msgid "Feed"
-#~ msgstr "ഫീഡ്"
-
-#~ msgid "Time"
-#~ msgstr "സമയം"
-
-#~ msgid "Result Limit"
-#~ msgstr "ഫല പരിധി"
-
-#~ msgid "uncheck"
-#~ msgstr "അൺചെക്ക് ചെയ്യുക"
-
-#~ msgid "Home"
-#~ msgstr "വീട്"
-
-#~ msgid "Events (30 Days)"
-#~ msgstr "ഇവന്റുകൾ (30 ദിവസം)"
-
-#~ msgid "All Active/Inactive"
-#~ msgstr "എല്ലാം സജീവ / നിഷ്‌ക്രിയം"
-
-#~ msgid "Hover Map"
-#~ msgstr "മാപ്പ് ഹോവർ ചെയ്യുക"
-
-#~ msgid "Network"
-#~ msgstr "നെറ്റ്‌വർക്ക്"
-
-#~ msgid "Map"
-#~ msgstr "മാപ്പ്"
-
-#~ msgid "Log"
-#~ msgstr "ലോഗ്"
-
-#~ msgid "Activity"
-#~ msgstr "പ്രവർത്തനം"
-
-#~ msgid "Area Maps"
-#~ msgstr "ഏരിയ മാപ്പുകൾ"
-
-#~ msgid "Location List"
-#~ msgstr "ലൊക്കേഷൻ ലിസ്റ്റ്"
-
-#~ msgid "Maps"
-#~ msgstr "മാപ്‌സ്"
-
-#~ msgid "Site Reports"
-#~ msgstr "സൈറ്റ് റിപ്പോർട്ടുകൾ"
-
-#~ msgid "Statistics"
-#~ msgstr "സ്ഥിതിവിവരക്കണക്കുകൾ"
-
-#~ msgid "Network Dashboard Transfer Both Ways"
-#~ msgstr "നെറ്റ്‌വർക്ക് ഡാഷ്‌ബോർഡ് കൈമാറ്റം രണ്ട് വഴികളും"
-
-#~ msgid "Network Dashboard Receiving Only"
-#~ msgstr "നെറ്റ്‌വർക്ക് ഡാഷ്‌ബോർഡ് സ്വീകരിക്കുന്നു"
-
-#~ msgid "Network Dashboard Sending Only"
-#~ msgstr "നെറ്റ്‌വർക്ക് ഡാഷ്‌ബോർഡ് അയയ്‌ക്കുന്നത് മാത്രം"
-
-#~ msgid "Network Dashboard Site Profile"
-#~ msgstr "നെറ്റ്‌വർക്ക് ഡാഷ്‌ബോർഡ് സൈറ്റ് പ്രൊഫൈൽ"
-
-#~ msgid "Disciple Tools - Network Dashboard"
-#~ msgstr "ശിഷ്യ ഉപകരണങ്ങൾ - നെറ്റ്‌വർക്ക് ഡാഷ്‌ബോർഡ്"
-
-#~ msgid "Streams"
-#~ msgstr "സ്ട്രീമുകൾ"
-
-#~ msgid "Stream Maps"
-#~ msgstr "സ്ട്രീം മാപ്പുകൾ"
-
-#~ msgid "Streams Maps"
-#~ msgstr "സ്ട്രീമുകൾ മാപ്പുകൾ"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid ""
-#~ "A useful way to stream related items and can help stream contacts "
-#~ "associated with noteworthy characteristics. e.g. business owner, sports "
-#~ "lover. The contacts can also be filtered using these tags."
-#~ msgstr ""
-#~ "അനുബന്ധ ഇനങ്ങൾ‌ സ്ട്രീം ചെയ്യുന്നതിനുള്ള ഒരു ഉപയോഗപ്രദമായ മാർ‌ഗ്ഗം കൂടാതെ ശ്രദ്ധേയമായ "
-#~ "സവിശേഷതകളുമായി ബന്ധപ്പെട്ട കോൺ‌ടാക്റ്റുകളെ സ്ട്രീം ചെയ്യാൻ സഹായിക്കുന്നു. ഉദാ. ബിസിനസ്സ് "
-#~ "ഉടമ, കായിക പ്രേമികൾ. ഈ ടാഗുകൾ ഉപയോഗിച്ച് കോൺടാക്റ്റുകൾ ഫിൽട്ടർ ചെയ്യാനും കഴിയും."
-
-#~ msgctxt "Stream Status label"
-#~ msgid "New"
-#~ msgstr "പുതിയത്"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "New stream added to the system"
-#~ msgstr "സിസ്റ്റത്തിലേക്ക് പുതിയ സ്ട്രീം ചേർത്തു"
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Model"
-#~ msgstr "മോഡൽ"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "This stream has been proposed and is in initial conversations"
-#~ msgstr "ഈ സ്ട്രീം നിർദ്ദേശിക്കപ്പെട്ടു കൂടാതെ പ്രാരംഭ സംഭാഷണങ്ങളിലുമാണ്"
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Assist"
-#~ msgstr "അസിസ്റ്റ്"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "This stream is confirmed, on the calendar."
-#~ msgstr "കലണ്ടറിൽ ഈ സ്ട്രീം സ്ഥിരീകരിച്ചു."
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Watch"
-#~ msgstr "കാവൽ"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "This stream is confirmed, on the calendar, or currently active."
-#~ msgstr "ഈ സ്ട്രീം സ്ഥിരീകരിച്ചു, കലണ്ടറിൽ അല്ലെങ്കിൽ നിലവിൽ സജീവമാണ്."
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Leave"
-#~ msgstr "വിട്ടേക്കുക"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "This stream has successfully completed"
-#~ msgstr "ഈ സ്ട്രീം വിജയകരമായി പൂർത്തിയാക്കി"
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Paused"
-#~ msgstr "താൽക്കാലികമായി നിർത്തി"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid ""
-#~ "This contact is currently on hold. It has potential of getting scheduled "
-#~ "in the future."
-#~ msgstr "ഈ കോൺ‌ടാക്റ്റ് നിലവിൽ തടഞ്ഞുവച്ചിരിക്കുന്നു. ഭാവിയിൽ ഷെഡ്യൂൾ ചെയ്യാനുള്ള സാധ്യതയുണ്ട്."
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Closed"
-#~ msgstr "അടച്ചു"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "This stream is no longer going to happen."
-#~ msgstr "ഈ സ്ട്രീം മേലിൽ സംഭവിക്കാൻ പോകുന്നില്ല."
-
-#~ msgid ""
-#~ "Select the main person who is responsible for reporting on this stream."
-#~ msgstr "ഈ സ്ട്രീമിൽ റിപ്പോർട്ടുചെയ്യാൻ ഉത്തരവാദിയായ പ്രധാന വ്യക്തിയെ തിരഞ്ഞെടുക്കുക."
-
-#~ msgctxt "Optional Documentation"
-#~ msgid ""
-#~ "The person who planted and/or is coaching this stream. Only one person "
-#~ "can be assigned to a stream while multiple people can be coaches / church "
-#~ "planters of this stream."
-#~ msgstr ""
-#~ "ഈ സ്ട്രീം നട്ടുപിടിപ്പിച്ച / അല്ലെങ്കിൽ പരിശീലിപ്പിക്കുന്ന വ്യക്തി. ഒരു സ്ട്രീമിലേക്ക് ഒരാളെ "
-#~ "മാത്രമേ നിയോഗിക്കാൻ കഴിയൂ, അതേസമയം ഒന്നിലധികം ആളുകൾക്ക് ഈ സ്ട്രീമിലെ കോച്ചുകൾ / ചർച്ച് "
-#~ "പ്ലാന്ററുകൾ ആകാം."
-
-#~ msgctxt "Optional Documentation"
-#~ msgid "The people streams represented by this stream."
-#~ msgstr "ഈ സ്ട്രീം പ്രതിനിധീകരിക്കുന്ന ആളുകളുടെ സ്ട്രീമുകൾ."
-
-#~ msgid "Parent Stream"
-#~ msgstr "രക്ഷാകർതൃ സ്ട്രീം"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid "A stream that launched this stream."
-#~ msgstr "ഈ സ്ട്രീം സമാരംഭിച്ച ഒരു സ്ട്രീം."
-
-#~ msgid "Peer Streams"
-#~ msgstr "പിയർ സ്ട്രീമുകൾ"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid ""
-#~ "A related stream that isn't a parent/child in relationship. It might "
-#~ "indicate streams that collaborate, are about to merge, recently split, "
-#~ "etc."
-#~ msgstr ""
-#~ "ബന്ധത്തിൽ ഒരു രക്ഷകർത്താവ് / കുട്ടി അല്ലാത്ത ഒരു അനുബന്ധ സ്ട്രീം. ഇത് സഹകരിക്കുന്ന, "
-#~ "ലയിപ്പിക്കാൻ പോകുന്ന, അടുത്തിടെ വിഭജിച്ച മുതലായ സ്ട്രീമുകളെ സൂചിപ്പിക്കാം."
-
-#~ msgid "Child Streams"
-#~ msgstr "കുട്ടികളുടെ അരുവികൾ"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid "A stream that has been birthed out of this stream."
-#~ msgstr "ഈ സ്ട്രീമിൽ നിന്ന് പുറന്തള്ളപ്പെട്ട ഒരു സ്ട്രീം."
-
-#~ msgid "Leader in Stream"
-#~ msgstr "സ്ട്രീമിലെ നേതാവ്"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid "Leader of a stream"
-#~ msgstr "ഒരു സ്ട്രീമിന്റെ നേതാവ്"
-
-#~ msgid "Key Disciple in Stream"
-#~ msgstr "സ്ട്രീമിലെ പ്രധാന ശിഷ്യൻ"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid "Disciple in a stream."
-#~ msgstr "ഒരു അരുവിയിൽ ശിഷ്യൻ."
-
-#~ msgid "Connections"
-#~ msgstr "കണക്ഷനുകൾ"
-
-#~ msgid "Add Report"
-#~ msgstr "റിപ്പോർട്ട് ചേർക്കുക"
-
-#~ msgid "Disciple Tools - Streams"
-#~ msgstr "ശിഷ്യ ഉപകരണങ്ങൾ - സ്ട്രീമുകൾ"
-
-#~ msgid "Pre-Group Generations"
-#~ msgstr "പ്രീ-ഗ്രൂപ്പ് തലമുറകൾ"
-
-#~ msgid "Group Generations"
-#~ msgstr "ഗ്രൂപ്പ് തലമുറകൾ"
-
-#~ msgid "Church Generations"
-#~ msgstr "ചർച്ച് തലമുറകൾ"
-
-#~ msgid "Team Generations"
-#~ msgstr "ടീം തലമുറകൾ"
-
-#~ msgid "%s is reporting a new pre-group generation."
-#~ msgstr "%s ഒരു പുതിയ പ്രീ-ഗ്രൂപ്പ് ജനറേഷൻ റിപ്പോർട്ടുചെയ്യുന്നു."
-
-#~ msgid "%s is reporting a new group generation."
-#~ msgstr "%s ഒരു പുതിയ ഗ്രൂപ്പ് തലമുറ റിപ്പോർട്ടുചെയ്യുന്നു."
-
-#~ msgid "%s is reporting a new church generation."
-#~ msgstr "%s ഒരു പുതിയ സഭാ തലമുറയെ റിപ്പോർട്ട് ചെയ്യുന്നു."
-
-#~ msgid "%s is reporting a new leadership team generation."
-#~ msgstr "%s ഒരു പുതിയ നേതൃത്വ ടീം ജനറേഷൻ റിപ്പോർട്ടുചെയ്യുന്നു."
-
-#~ msgid "New Contact"
-#~ msgstr "പുതിയ കോൺ‌ടാക്റ്റ്"
-
-#~ msgid "New Pre-Group"
-#~ msgstr "പുതിയ പ്രീ-ഗ്രൂപ്പ്"
-
-#~ msgid "New Group"
-#~ msgstr "പുതിയ ഗ്രൂപ്പ്"
-
-#~ msgid "New Church"
-#~ msgstr "പുതിയ പള്ളി"
-
-#~ msgid "New Team"
-#~ msgstr "പുതിയ ടീം"
-
-#~ msgid "New Baptism"
-#~ msgstr "പുതിയ സ്നാനം"
-
-#~ msgid "New Coaching"
-#~ msgstr "പുതിയ കോച്ചിംഗ്"
-
-#~ msgid "%s is reporting a new contact."
-#~ msgstr "%s ഒരു പുതിയ കോൺ‌ടാക്റ്റ് റിപ്പോർ‌ട്ട് ചെയ്യുന്നു."
-
-#~ msgid "%s is reporting a new pre-group formed."
-#~ msgstr "%s ഒരു പുതിയ പ്രീ-ഗ്രൂപ്പ് രൂപീകരിച്ചതായി റിപ്പോർട്ടുചെയ്യുന്നു."
-
-#~ msgid "%s is reporting a new group formed."
-#~ msgstr "%s ഒരു പുതിയ ഗ്രൂപ്പ് രൂപീകരിച്ചതായി റിപ്പോർട്ടുചെയ്യുന്നു."
-
-#~ msgid "%s is reporting a new church."
-#~ msgstr "%s ഒരു പുതിയ സഭ റിപ്പോർട്ട് ചെയ്യുന്നു."
-
-#~ msgid "%s is reporting a new leadership team formed."
-#~ msgstr "%s ഒരു പുതിയ നേതൃത്വ ടീം രൂപീകരിച്ചതായി റിപ്പോർട്ടുചെയ്യുന്നു."
-
-#~ msgid "%s is reporting a new baptism."
-#~ msgstr "%s ഒരു പുതിയ സ്നാനം റിപ്പോർട്ട് ചെയ്യുന്നു."
-
-#~ msgid "%s is reporting an coaching relationship."
-#~ msgstr "%s ഒരു കോച്ചിംഗ് ബന്ധം റിപ്പോർട്ടുചെയ്യുന്നു."
-
-#~ msgid "Active"
-#~ msgstr "സജീവമാണ്"
-
-#~ msgid "Paused"
-#~ msgstr "താൽക്കാലികമായി നിർത്തി"
-
-#~ msgid "Closed"
-#~ msgstr "അടച്ചു"
-
-#~ msgid "Inactive"
-#~ msgstr "നിഷ്‌ക്രിയം"
-
-#~ msgid "https://github.com/DiscipleTools/disciple-tools-network-dashboard"
-#~ msgstr "https://github.com/DiscipleTools/disciple-tools-network-dashboard"
-
-#~ msgid ""
-#~ "Connect this Disciple Tools site to a larger network of sites. Adds "
-#~ "security sensitive totals, mapping, activity logging."
-#~ msgstr ""
-#~ "സൈറ്റുകളുടെ ഒരു വലിയ നെറ്റ്‌വർക്കിലേക്ക് ഈ ശിഷ്യ ഉപകരണ സൈറ്റിനെ ബന്ധിപ്പിക്കുക. സുരക്ഷാ "
-#~ "സെൻ‌സിറ്റീവ് ടോട്ടലുകൾ‌, മാപ്പിംഗ്, ആക്റ്റിവിറ്റി ലോഗിംഗ് എന്നിവ ചേർക്കുന്നു."
-
-#~ msgid "https://github.com/DiscipleTools"
-#~ msgstr "https://github.com/DiscipleTools"
-
-#~ msgid "https://github.com/DiscipleTools/disciple-tools-streams"
-#~ msgstr "https://github.com/DiscipleTools/disciple-tools-streams"
-
-#~ msgid ""
-#~ "Disciple Tools Streams Extension adds recording of streams and cross "
-#~ "reference them with contacts, groups, and locations."
-#~ msgstr ""
-#~ "ശിഷ്യ ഉപകരണ സ്ട്രീമുകൾ വിപുലീകരണം സ്ട്രീമുകളുടെ റെക്കോർഡിംഗും കോൺടാക്റ്റുകൾ, ഗ്രൂപ്പുകൾ, "
-#~ "ലൊക്കേഷനുകൾ എന്നിവ ഉപയോഗിച്ച് ക്രോസ് റഫറൻസും ചേർക്കുന്നു."
-
-#~ msgid ""
-#~ "'Disciple Tools - Training' plugin requires 'Disciple Tools' theme to "
-#~ "work. Please activate 'Disciple Tools' theme or make sure it is latest "
-#~ "version."
-#~ msgstr ""
-#~ "'ശിഷ്യ ഉപകരണങ്ങൾ - പരിശീലനം' പ്ലഗിൻ പ്രവർത്തിക്കാൻ 'ശിഷ്യ ഉപകരണങ്ങൾ' തീം ആവശ്യമാണ്. "
-#~ "'ശിഷ്യ ഉപകരണങ്ങൾ' തീം സജീവമാക്കുക അല്ലെങ്കിൽ അത് ഏറ്റവും പുതിയ പതിപ്പാണെന്ന് ഉറപ്പാക്കുക."
-
-#~ msgid "Current Disciple Tools version: %1$s, required version: %2$s"
-#~ msgstr "നിലവിലെ ശിഷ്യ ഉപകരണ പതിപ്പ്: %1$s, ആവശ്യമായ പതിപ്പ്: %2$s"
-
-#~ msgid "Duplicates"
-#~ msgstr "തനിപ്പകർപ്പുകൾ"
-
-#~ msgid "Coach"
-#~ msgstr "കോച്ച്"
-
-#~ msgid "Leaders Total"
-#~ msgstr "നേതാക്കൾ ആകെ"
-
-#~ msgid "Disciples Total"
-#~ msgstr "ശിഷ്യന്മാർ ആകെ"
-
-#~ msgid "Key Disciples"
-#~ msgstr "പ്രധാന ശിഷ്യന്മാർ"
-
-#~ msgid "Groups Total"
-#~ msgstr "ഗ്രൂപ്പുകൾ ആകെ"
-
-#~ msgid "Trainings Total"
-#~ msgstr "പരിശീലനം ആകെ"
-
-#~ msgid "Dashboard Plugin"
-#~ msgstr "ഡാഷ്‌ബോർഡ് പ്ലഗിൻ"
-
-#~ msgid "Dashboard"
-#~ msgstr "ഡാഷ്ബോർഡ്"
-
-#~ msgid "%s days since last update"
-#~ msgstr "അവസാന അപ്‌ഡേറ്റ് മുതൽ%s ദിവസങ്ങൾ"
-
-#~ msgid "Accept"
-#~ msgstr "അംഗീകരിക്കുക"
-
-#~ msgid "Decline"
-#~ msgstr "നിരസിക്കുക"
-
-#~ msgid "# Contacts Assigned"
-#~ msgstr "# കോൺ‌ടാക്റ്റുകൾ നിയുക്തമാക്കി"
-
-#~ msgid "# First Meetings"
-#~ msgstr "# ആദ്യ മീറ്റിംഗുകൾ"
-
-#~ msgid "# Faith milestones"
-#~ msgstr "# വിശ്വാസ നാഴികക്കല്ലുകൾ"
-
-#~ msgid "Hurray! You are caught up."
-#~ msgstr "ഹുറേ! നിങ്ങൾ പിടിക്കപ്പെട്ടു."
-
-#~ msgid "remove"
-#~ msgstr "നീക്കംചെയ്യുക"
-
-#~ msgid "mark as complete"
-#~ msgstr "പൂർത്തിയായതായി അടയാളപ്പെടുത്തുക"
-
-#~ msgid "No task created"
-#~ msgstr "ഒരു ജോലിയും സൃഷ്ടിച്ചിട്ടില്ല"
-
-#~ msgid "Reminder"
-#~ msgstr "ഓർമ്മപ്പെടുത്തൽ"
-
-#~ msgid "No note set"
-#~ msgstr "കുറിപ്പ് സജ്ജമാക്കിയിട്ടില്ല"
-
-#~ msgid "Add a contact"
-#~ msgstr "ഒരു കോൺടാക്റ്റ് ചേർക്കുക"
-
-#~ msgid "View Contacts List"
-#~ msgstr "കോൺ‌ടാക്റ്റ് പട്ടിക കാണുക"
-
-#~ msgid "Pending Contacts"
-#~ msgstr "കോൺ‌ടാക്റ്റുകൾ തീർപ്പുകൽപ്പിച്ചിട്ടില്ല"
-
-#~ msgid "View All"
-#~ msgstr "എല്ലാം കാണുക"
-
-#~ msgid "Update Needed"
-#~ msgstr "അപ്‌ഡേറ്റ് ആവശ്യമാണ്"
-
-#~ msgid "Contact Workload"
-#~ msgstr "ജോലിഭാരവുമായി ബന്ധപ്പെടുക"
-
-#~ msgid ""
-#~ "Choose an option to let the dispatcher(s) know if you are ready for new "
-#~ "contacts"
-#~ msgstr ""
-#~ "നിങ്ങൾ പുതിയ കോൺടാക്റ്റുകൾക്ക് തയ്യാറാണോയെന്ന് ഡിസ്പാച്ചറെ (ങ്ങളെ) അറിയിക്കാൻ ഒരു ഓപ്ഷൻ "
-#~ "തിരഞ്ഞെടുക്കുക"
-
-#~ msgid "Set travel or dates unavailable"
-#~ msgstr "യാത്രയോ തീയതിയോ ലഭ്യമല്ല"
-
-#~ msgid "Personal Benchmarks"
-#~ msgstr "വ്യക്തിഗത ബെഞ്ച്മാർക്കുകൾ"
-
-#~ msgid "Faith Milestone Totals"
-#~ msgstr "വിശ്വാസം നാഴികക്കല്ലുകൾ ആകെ"
-
-#~ msgid "Milestones on your active contacts"
-#~ msgstr "നിങ്ങളുടെ സജീവ കോൺ‌ടാക്റ്റുകളിലെ നാഴികക്കല്ലുകൾ"
-
-#~ msgid "Seeker Path Progress"
-#~ msgstr "അന്വേഷകന്റെ പാത പുരോഗതി"
-
-#~ msgid "No data to show yet. You have no active contacts"
-#~ msgstr "ഇതുവരെ കാണിക്കാൻ ഡാറ്റയൊന്നുമില്ല. നിങ്ങൾക്ക് സജീവ കോൺടാക്റ്റുകളൊന്നുമില്ല"
-
-#~ msgid "Disciple Tools - Dashboard"
-#~ msgstr "ശിഷ്യ ഉപകരണങ്ങൾ - ഡാഷ്‌ബോർഡ്"
-
-#~ msgid "https://github.com/DiscipleTools/disciple-tools-dashboard"
-#~ msgstr "https://github.com/DiscipleTools/disciple-tools-dashboard"
-
-#~ msgid ""
-#~ "The multiplier dashboard upgrades the multipliers experience as soon as "
-#~ "they log into the system giving them a landing page with stats."
-#~ msgstr ""
-#~ "മൾട്ടിപ്ലയർ ഡാഷ്‌ബോർഡ് സിസ്റ്റത്തിലേക്ക് ലോഗിൻ ചെയ്‌തയുടനെ സ്ഥിതിവിവരക്കണക്കുകളുള്ള ഒരു "
-#~ "ലാൻഡിംഗ് പേജ് നൽകിക്കൊണ്ട് അനുഭവം അപ്‌ഗ്രേഡുചെയ്യുന്നു"
-
-#~ msgid "Reason Assigned To"
-#~ msgstr "നിയുക്തമാക്കിയ കാരണം"
-
-#~ msgid "Follow-Up"
-#~ msgstr "ഫോളോ അപ്പ്"
-
-#~ msgid "Digital Response"
-#~ msgstr "ഡിജിറ്റൽ പ്രതികരണം"
-
-#~ msgid "Dispatch"
-#~ msgstr "അയയ്‌ക്കുക"
-
-#~ msgid "No Answer"
-#~ msgstr "ഉത്തരമില്ല"
-
-#~ msgid "Talked"
-#~ msgstr "സംസാരിച്ചു"
-
-#~ msgid "Scheduled"
-#~ msgstr "ഷെഡ്യൂൾ ചെയ്തു"
-
-#~ msgid "Complete"
-#~ msgstr "പൂർത്തിയായി"
-
-#~ msgid "No-Show"
-#~ msgstr "പ്രദര്ശനം ഇല്ല"
-
-#~ msgid "No permission"
-#~ msgstr "അനുവാദമില്ല"
-
-#~ msgid "All"
-#~ msgstr "എല്ലാം"
-
-#~ msgid "Ready"
-#~ msgstr "തയ്യാറാണ്"
-
-#~ msgid "Recent"
-#~ msgstr "സമീപകാലം"
-
-#~ msgid "Assign"
-#~ msgstr "നിയോഗിക്കുക"
-
-#~ msgid "Choose an option:"
-#~ msgstr "ഒരു ഓപ്ഷൻ തിരഞ്ഞെടുക്കുക:"
-
-#~ msgid "Cancel"
-#~ msgstr "റദ്ദാക്കുക"
-
-#~ msgid "Assign For"
-#~ msgstr "ഇതിനായി നിയോഗിക്കുക"
-
-#~ msgid "Search"
-#~ msgstr "തിരയുക"
-
-#~ msgid "Claim for follow-up"
-#~ msgstr "ഫോളോ-അപ്പിനായി ക്ലെയിം ചെയ്യുക"
-
-#~ msgid "Ready for Dispatch"
-#~ msgstr "അയയ്‌ക്കാൻ തയ്യാറാണ്"
-
-#~ msgid "Disciple Tools - Advanced M2M Tiles"
-#~ msgstr "ശിഷ്യ ഉപകരണങ്ങൾ - നൂതന M2M ടൈലുകൾ"
-
-#~ msgid "https://github.com/DiscipleTools/disciple-tools-advanced-m2m-tiles"
-#~ msgstr "https://github.com/DiscipleTools/disciple-tools-advanced-m2m-tiles"
-
-#~ msgid ""
-#~ "Disciple Tools - Advanced M2M Tiles adds specific supporting tiles for "
-#~ "different roles."
-#~ msgstr ""
-#~ "ശിഷ്യ ഉപകരണങ്ങൾ - നൂതന M2M ടൈലുകൾ വ്യത്യസ്ത റോളുകൾക്കായി നിർദ്ദിഷ്ട പിന്തുണാ ടൈലുകൾ "
-#~ "ചേർക്കുന്നു."

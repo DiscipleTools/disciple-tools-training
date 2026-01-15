@@ -1,4 +1,4 @@
-# Copyright (C) 2023 
+# Copyright (C) 2023
 # This file is distributed under the same license as the Disciple.Tools - Training plugin.
 msgid ""
 msgstr ""
@@ -6,9 +6,9 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "training\n"
 "POT-Creation-Date: 2024-11-14T11:03:58+00:00\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2026-01-15 12:00+0000\n"
 "Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"Language-Team: Czech\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,130 +18,132 @@ msgstr ""
 
 #: metrics/mapbox-maps.php:30
 msgid "Training Maps"
-msgstr ""
+msgstr "Mapy skoleni"
 
 #: metrics/mapbox-maps.php:31 metrics/mapbox-personal-maps.php:31
 #: post-type/module-base.php:29 post-type/module-base.php:461
 #: post-type/module-base.php:473 post-type/module-base.php:496
 msgid "Trainings"
-msgstr ""
+msgstr "Skoleni"
 
 #: metrics/mapbox-personal-maps.php:30
 msgid "Trainings Maps"
-msgstr ""
+msgstr "Mapy skoleni"
 
 #: network/network-dashboard-integration.php:44
 msgid "New Training"
-msgstr ""
+msgstr "Nove skoleni"
 
 #: network/network-dashboard-integration.php:50
 msgid "Training Started"
-msgstr ""
+msgstr "Skoleni zahajeno"
 
 #: network/network-dashboard-integration.php:56
 msgid "Training Completed"
-msgstr ""
+msgstr "Skoleni dokonceno"
 
 #: post-type/module-base.php:28 post-type/module-base.php:495
 msgid "Training"
-msgstr ""
+msgstr "Skoleni"
 
 #: post-type/module-base.php:70
 msgid "Trainings Admin"
-msgstr ""
+msgstr "Spravce skoleni"
 
 #: post-type/module-base.php:71
 msgid "Admin access to all trainings"
-msgstr ""
+msgstr "Administratorsky pristup ke vsem skolenim"
 
 #: post-type/module-base.php:76
 msgid "Multiplier"
-msgstr ""
+msgstr "Multiplikator"
 
 #: post-type/module-base.php:83
 msgid "Disciple.Tools Admin"
-msgstr ""
+msgstr "Spravce Disciple.Tools"
 
 #: post-type/module-base.php:90
 msgid "Administrator"
-msgstr ""
+msgstr "Administrator"
 
 #: post-type/module-base.php:127
 msgid "Tags"
-msgstr ""
+msgstr "Stitky"
 
 #: post-type/module-base.php:128
 msgctxt "Optional Documentation"
 msgid ""
 "A useful way to group related items and can be used to filter the records"
 msgstr ""
+"Uzitecny zpusob seskupovani souvisejicich polozek, ktery lze pouzit k "
+"filtrovani zaznamu"
 
 #: post-type/module-base.php:135
 msgid "Follow"
-msgstr ""
+msgstr "Sledovat"
 
 #: post-type/module-base.php:142
 msgid "Un-Follow"
-msgstr ""
+msgstr "Prestat sledovat"
 
 #: post-type/module-base.php:148
 msgid "Tasks"
-msgstr ""
+msgstr "Ukoly"
 
 #: post-type/module-base.php:162
 msgctxt "Training Status label"
 msgid "New"
-msgstr ""
+msgstr "Nove"
 
 #: post-type/module-base.php:163
 msgctxt "Training Status field description"
 msgid "New training added to the system"
-msgstr ""
+msgstr "Nove skoleni pridane do systemu"
 
 #: post-type/module-base.php:167
 msgctxt "Training Status label"
 msgid "Proposed"
-msgstr ""
+msgstr "Navrhovane"
 
 #: post-type/module-base.php:168
 msgctxt "Training Status field description"
 msgid "This training has been proposed and is in initial conversations"
-msgstr ""
+msgstr "Toto skoleni bylo navrzeno a probiha uvodni diskuse"
 
 #: post-type/module-base.php:172
 msgctxt "Training Status label"
 msgid "Scheduled"
-msgstr ""
+msgstr "Naplanovane"
 
 #: post-type/module-base.php:173
 msgctxt "Training Status field description"
 msgid "This training is confirmed, on the calendar."
-msgstr ""
+msgstr "Toto skoleni je potvrzeno a zapsano v kalendari."
 
 #: post-type/module-base.php:177
 msgctxt "Training Status label"
 msgid "In Progress"
-msgstr ""
+msgstr "Probihajici"
 
 #: post-type/module-base.php:178
 msgctxt "Training Status field description"
 msgid "This training is confirmed, on the calendar, or currently active."
-msgstr ""
+msgstr "Toto skoleni je potvrzeno, v kalendari nebo prave probiha."
 
 #: post-type/module-base.php:182
 msgctxt "Training Status label"
 msgid "Complete"
-msgstr ""
+msgstr "Dokoncene"
 
 #: post-type/module-base.php:183
 msgctxt "Training Status field description"
 msgid "This training has successfully completed"
-msgstr ""
+msgstr "Toto skoleni bylo uspesne dokonceno"
 
 #: post-type/module-base.php:187
 msgctxt "Training Status label"
 msgid "Paused"
-msgstr ""
+msgstr "Pozastavene"
 
 #: post-type/module-base.php:188
 msgctxt "Training Status field description"
@@ -149,29 +151,32 @@ msgid ""
 "This contact is currently on hold. It has potential of getting scheduled in "
 "the future."
 msgstr ""
+"Toto skoleni je aktualne pozastaveno. Existuje moznost jeho budouciho "
+"naplanovani."
 
 #: post-type/module-base.php:192
 msgctxt "Training Status label"
 msgid "Closed"
-msgstr ""
+msgstr "Uzavrene"
 
 #: post-type/module-base.php:193
 msgctxt "Training Status field description"
 msgid "This training is no longer going to happen."
-msgstr ""
+msgstr "Toto skoleni se jiz neuskutecni."
 
 #: post-type/module-base.php:201
 msgid "Assigned To"
-msgstr ""
+msgstr "Prideleno"
 
 #: post-type/module-base.php:202
 msgid ""
 "Select the main person who is responsible for reporting on this training."
 msgstr ""
+"Vyberte hlavni osobu odpovednou za podavani zprav o tomto skoleni."
 
 #: post-type/module-base.php:209
 msgid "Training Coach / Church Planter"
-msgstr ""
+msgstr "Kouc skoleni / Zakladatel sboru"
 
 #: post-type/module-base.php:210
 msgctxt "Optional Documentation"
@@ -180,58 +185,60 @@ msgid ""
 "be assigned to a training while multiple people can be coaches / church "
 "planters of this training."
 msgstr ""
+"Osoba, ktera zalozila a/nebo vede toto skoleni. Ke skoleni muze byt pridelena "
+"pouze jedna osoba, ale koucu / zakladatelu sboru muze byt vice."
 
 #: post-type/module-base.php:222
 msgid "Requires Update"
-msgstr ""
+msgstr "Vyzaduje aktualizaci"
 
 #: post-type/module-base.php:228
 msgid "Video Link"
-msgstr ""
+msgstr "Odkaz na video"
 
 #: post-type/module-base.php:229
 msgctxt "Optional Documentation"
 msgid "Link to video chat service"
-msgstr ""
+msgstr "Odkaz na sluzbu videohovoru"
 
 #: post-type/module-base.php:236
 msgid "Notes"
-msgstr ""
+msgstr "Poznamky"
 
 #: post-type/module-base.php:237
 msgctxt "Optional Documentation"
 msgid "Notes on when the trainings will happen"
-msgstr ""
+msgstr "Poznamky o tom, kdy se skoleni uskutecni"
 
 #: post-type/module-base.php:246 post-type/module-base.php:509
 msgid "Meeting Times"
-msgstr ""
+msgstr "Casy setkani"
 
 #: post-type/module-base.php:295 post-type/module-base.php:304
 msgid "Locations"
-msgstr ""
+msgstr "Lokality"
 
 #: post-type/module-base.php:296 post-type/module-base.php:305
 msgctxt "Optional Documentation"
 msgid "The general location where this contact is located."
-msgstr ""
+msgstr "Obecna lokalita, kde se tento kontakt nachazi."
 
 #: post-type/module-base.php:313
 msgid "Address"
-msgstr ""
+msgstr "Adresa"
 
 #: post-type/module-base.php:333
 msgid "Parent Training"
-msgstr ""
+msgstr "Rodicovske skoleni"
 
 #: post-type/module-base.php:334
 msgctxt "Optional Documentation"
 msgid "A training that launched this training."
-msgstr ""
+msgstr "Skoleni, ktere dalo vzniknout tomuto skoleni."
 
 #: post-type/module-base.php:344
 msgid "Peer Training"
-msgstr ""
+msgstr "Partnerske skoleni"
 
 #: post-type/module-base.php:345
 msgctxt "Optional Documentation"
@@ -239,46 +246,48 @@ msgid ""
 "A related training that isn't a parent/child in relationship. It might "
 "indicate trainings that collaborate, are about to merge, recently split, etc."
 msgstr ""
+"Souvisejici skoleni, ktere neni ve vztahu rodic/potomek. Muze oznacovat "
+"skoleni, ktera spolupracuji, chystaji se slouciit, nedavno se rozdelila atd."
 
 #: post-type/module-base.php:355
 msgid "Child Training"
-msgstr ""
+msgstr "Potomkovske skoleni"
 
 #: post-type/module-base.php:356
 msgctxt "Optional Documentation"
 msgid "A training that has been birthed out of this training."
-msgstr ""
+msgstr "Skoleni, ktere vzeslo z tohoto skoleni."
 
 #: post-type/module-base.php:366 post-type/module-base.php:508
 #: post-type/module-base.php:542
 msgid "Member List"
-msgstr ""
+msgstr "Seznam clenu"
 
 #: post-type/module-base.php:367
 msgctxt "Optional Documentation"
 msgid "The contacts who are members of this training."
-msgstr ""
+msgstr "Kontakty, ktere jsou cleny tohoto skoleni."
 
 #: post-type/module-base.php:377
 msgid "Leaders"
-msgstr ""
+msgstr "Vedouci"
 
 #: post-type/module-base.php:387
 msgid "People Groups"
-msgstr ""
+msgstr "Etnické skupiny"
 
 #: post-type/module-base.php:388
 msgctxt "Optional Documentation"
 msgid "The people trainings represented by this training."
-msgstr ""
+msgstr "Etnicke skupiny zastoupene v tomto skoleni."
 
 #: post-type/module-base.php:397
 msgid "Groups"
-msgstr ""
+msgstr "Skupiny"
 
 #: post-type/module-base.php:409
 msgid "Member Count"
-msgstr ""
+msgstr "Pocet clenu"
 
 #: post-type/module-base.php:410 post-type/module-base.php:417
 msgctxt "Optional Documentation"
@@ -288,49 +297,52 @@ msgid ""
 "manually to included people who may not be in the system but are also "
 "members of the training."
 msgstr ""
+"Pocet clenu v tomto skoleni. Automaticky se aktualizuje pri pridani nebo "
+"odebrani clenu ze seznamu. Zmente toto cislo rucne pro zahrnutí osob, ktere "
+"nemusí byt v systemu, ale jsou take cleny skoleni."
 
 #: post-type/module-base.php:416
 msgid "Leader Count"
-msgstr ""
+msgstr "Pocet vedoucich"
 
 #: post-type/module-base.php:426
 msgid "Training as Leader"
-msgstr ""
+msgstr "Skoleni jako vedouci"
 
 #: post-type/module-base.php:427
 msgctxt "Optional Documentation"
 msgid "Leader of a training"
-msgstr ""
+msgstr "Vedouci skoleni"
 
 #: post-type/module-base.php:438
 msgid "Training as Participant"
-msgstr ""
+msgstr "Skoleni jako ucastnik"
 
 #: post-type/module-base.php:439
 msgctxt "Optional Documentation"
 msgid "Participant in a training."
-msgstr ""
+msgstr "Ucastnik skoleni."
 
 #: post-type/module-base.php:510
 msgid "Other"
-msgstr ""
+msgstr "Ostatni"
 
 #: post-type/module-base.php:545
 msgid "Create"
-msgstr ""
+msgstr "Vytvorit"
 
 #: post-type/module-base.php:550
 msgid "Select"
-msgstr ""
+msgstr "Vybrat"
 
 #: post-type/module-base.php:555
 msgid "To add new members, click on 'Create' or 'Select'."
-msgstr ""
+msgstr "Pro pridani novych clenu kliknete na 'Vytvorit' nebo 'Vybrat'."
 
 #: post-type/module-base.php:560
 msgctxt "Add members modal"
 msgid "Add members from existing contacts"
-msgstr ""
+msgstr "Pridat cleny z existujicich kontaktu"
 
 #: post-type/module-base.php:561
 msgctxt "Add members modal"
@@ -338,135 +350,137 @@ msgid ""
 "In the 'Member List' field, type the name of an existing contact to add them "
 "to this training."
 msgstr ""
+"Do pole 'Seznam clenu' zadejte jmeno existujiciho kontaktu, abyste jej "
+"pridali do tohoto skoleni."
 
 #: post-type/module-base.php:573
 msgid "Close"
-msgstr ""
+msgstr "Zavrit"
 
 #: post-type/module-base.php:713
 msgid "Removed %1$s: {%2$s}"
-msgstr ""
+msgstr "Odebrano %1$s: {%2$s}"
 
 #: post-type/module-base.php:716
 msgid "Added %1$s: {%2$s}"
-msgstr ""
+msgstr "Pridano %1$s: {%2$s}"
 
 #: post-type/module-base.php:719
 msgid "Updated %1$s: {%2$s} to {%3$s}"
-msgstr ""
+msgstr "Aktualizovano %1$s: {%2$s} na {%3$s}"
 
 #: post-type/module-base.php:804
 msgctxt "List Filters"
 msgid "Assigned to me"
-msgstr ""
+msgstr "Prideleno mne"
 
 #: post-type/module-base.php:812
 msgctxt "List Filters"
 msgid "All"
-msgstr ""
+msgstr "Vse"
 
 #: post-type/module-base.php:871
 msgctxt "List Filters"
 msgid "Default Filters"
-msgstr ""
+msgstr "Vychozi filtry"
 
 #: post-type/module-public-calendar.php:85
 msgid "Reports"
-msgstr ""
+msgstr "Zpravy"
 
 #: post-type/module-public-calendar.php:121
 msgid "Total Groups"
-msgstr ""
+msgstr "Celkem skupin"
 
 #: post-type/module-public-calendar.php:122
 msgid "Total Baptisms"
-msgstr ""
+msgstr "Celkem krtu"
 
 #: post-type/module-public-calendar.php:123
 msgid "Countries"
-msgstr ""
+msgstr "Zeme"
 
 #: post-type/module-public-calendar.php:124
 msgid "States"
-msgstr ""
+msgstr "Staty"
 
 #: post-type/module-public-calendar.php:125
 msgid "Counties"
-msgstr ""
+msgstr "Okresy"
 
 #: post-type/module-public-calendar.php:432
 #: post-type/module-registration.php:385
 msgid "Add"
-msgstr ""
+msgstr "Pridat"
 
 #: post-type/module-registration.php:31
 msgid "Magic Links"
-msgstr ""
+msgstr "Magicke odkazy"
 
 #: post-type/module-registration.php:59
 msgid "copy link"
-msgstr ""
+msgstr "kopirovat odkaz"
 
 #: post-type/module-registration.php:61
 msgid "edit form"
-msgstr ""
+msgstr "upravit formular"
 
 #: post-type/module-registration.php:63
 msgid "report"
-msgstr ""
+msgstr "zprava"
 
 #: post-type/module-registration.php:67
 msgid "create link"
-msgstr ""
+msgstr "vytvorit odkaz"
 
 #: post-type/module-registration.php:114
 msgid "link"
-msgstr ""
+msgstr "odkaz"
 
 #: post-type/module-registration.php:116
 msgid "show on calendar"
-msgstr ""
+msgstr "zobrazit v kalendari"
 
 #: post-type/module-registration.php:118
 msgid "open registration"
-msgstr ""
+msgstr "otevrena registrace"
 
 #: post-type/module-registration.php:265
 msgid "add"
-msgstr ""
+msgstr "pridat"
 
 #: post-type/module-registration.php:266
 msgid "Use"
-msgstr ""
+msgstr "Pouzit"
 
 #: post-type/module-registration.php:267 post-type/module-registration.php:695
 msgid "Search Location"
-msgstr ""
+msgstr "Vyhledat lokalitu"
 
 #: post-type/module-registration.php:268
 msgid "Delete Location"
-msgstr ""
+msgstr "Smazat lokalitu"
 
 #: post-type/module-registration.php:269
 msgid "Open Mapping"
-msgstr ""
+msgstr "Otevrit mapu"
 
 #: post-type/module-registration.php:270
 msgid "clear"
-msgstr ""
+msgstr "vymazat"
 
 #: post-type/module-registration.php:384
 msgid "Register for Training"
-msgstr ""
+msgstr "Registrovat se na skoleni"
 
 #: post-type/module-registration.php:386
 msgid "Join Training"
-msgstr ""
+msgstr "Pripojit se ke skoleni"
 
 #: post-type/module-registration.php:387
 msgid "Join in"
-msgstr ""
+msgstr "Pripojit se"
 
 #: post-type/module-registration.php:700
 msgid "Clear"
-msgstr ""
+msgstr "Vymazat"

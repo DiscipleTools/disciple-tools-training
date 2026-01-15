@@ -1,4 +1,4 @@
-# Copyright (C) 2023 
+# Copyright (C) 2023
 # This file is distributed under the same license as the Disciple.Tools - Training plugin.
 msgid ""
 msgstr ""
@@ -6,9 +6,9 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "training\n"
 "POT-Creation-Date: 2024-11-14T11:03:58+00:00\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2026-01-15 00:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: Ukrainian\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,130 +18,132 @@ msgstr ""
 
 #: metrics/mapbox-maps.php:30
 msgid "Training Maps"
-msgstr ""
+msgstr "Карти навчань"
 
 #: metrics/mapbox-maps.php:31 metrics/mapbox-personal-maps.php:31
 #: post-type/module-base.php:29 post-type/module-base.php:461
 #: post-type/module-base.php:473 post-type/module-base.php:496
 msgid "Trainings"
-msgstr ""
+msgstr "Навчання"
 
 #: metrics/mapbox-personal-maps.php:30
 msgid "Trainings Maps"
-msgstr ""
+msgstr "Карти навчань"
 
 #: network/network-dashboard-integration.php:44
 msgid "New Training"
-msgstr ""
+msgstr "Нове навчання"
 
 #: network/network-dashboard-integration.php:50
 msgid "Training Started"
-msgstr ""
+msgstr "Навчання розпочато"
 
 #: network/network-dashboard-integration.php:56
 msgid "Training Completed"
-msgstr ""
+msgstr "Навчання завершено"
 
 #: post-type/module-base.php:28 post-type/module-base.php:495
 msgid "Training"
-msgstr ""
+msgstr "Навчання"
 
 #: post-type/module-base.php:70
 msgid "Trainings Admin"
-msgstr ""
+msgstr "Адміністратор навчань"
 
 #: post-type/module-base.php:71
 msgid "Admin access to all trainings"
-msgstr ""
+msgstr "Адміністративний доступ до всіх навчань"
 
 #: post-type/module-base.php:76
 msgid "Multiplier"
-msgstr ""
+msgstr "Помножувач"
 
 #: post-type/module-base.php:83
 msgid "Disciple.Tools Admin"
-msgstr ""
+msgstr "Адміністратор Disciple.Tools"
 
 #: post-type/module-base.php:90
 msgid "Administrator"
-msgstr ""
+msgstr "Адміністратор"
 
 #: post-type/module-base.php:127
 msgid "Tags"
-msgstr ""
+msgstr "Теги"
 
 #: post-type/module-base.php:128
 msgctxt "Optional Documentation"
 msgid ""
 "A useful way to group related items and can be used to filter the records"
 msgstr ""
+"Зручний спосіб групування пов'язаних елементів, який можна використовувати "
+"для фільтрації записів"
 
 #: post-type/module-base.php:135
 msgid "Follow"
-msgstr ""
+msgstr "Стежити"
 
 #: post-type/module-base.php:142
 msgid "Un-Follow"
-msgstr ""
+msgstr "Не стежити"
 
 #: post-type/module-base.php:148
 msgid "Tasks"
-msgstr ""
+msgstr "Завдання"
 
 #: post-type/module-base.php:162
 msgctxt "Training Status label"
 msgid "New"
-msgstr ""
+msgstr "Нове"
 
 #: post-type/module-base.php:163
 msgctxt "Training Status field description"
 msgid "New training added to the system"
-msgstr ""
+msgstr "Нове навчання додано до системи"
 
 #: post-type/module-base.php:167
 msgctxt "Training Status label"
 msgid "Proposed"
-msgstr ""
+msgstr "Запропоновано"
 
 #: post-type/module-base.php:168
 msgctxt "Training Status field description"
 msgid "This training has been proposed and is in initial conversations"
-msgstr ""
+msgstr "Це навчання було запропоновано і перебуває на стадії початкових обговорень"
 
 #: post-type/module-base.php:172
 msgctxt "Training Status label"
 msgid "Scheduled"
-msgstr ""
+msgstr "Заплановано"
 
 #: post-type/module-base.php:173
 msgctxt "Training Status field description"
 msgid "This training is confirmed, on the calendar."
-msgstr ""
+msgstr "Це навчання підтверджено, внесено в календар."
 
 #: post-type/module-base.php:177
 msgctxt "Training Status label"
 msgid "In Progress"
-msgstr ""
+msgstr "В процесі"
 
 #: post-type/module-base.php:178
 msgctxt "Training Status field description"
 msgid "This training is confirmed, on the calendar, or currently active."
-msgstr ""
+msgstr "Це навчання підтверджено, внесено в календар або наразі активне."
 
 #: post-type/module-base.php:182
 msgctxt "Training Status label"
 msgid "Complete"
-msgstr ""
+msgstr "Завершено"
 
 #: post-type/module-base.php:183
 msgctxt "Training Status field description"
 msgid "This training has successfully completed"
-msgstr ""
+msgstr "Це навчання успішно завершено"
 
 #: post-type/module-base.php:187
 msgctxt "Training Status label"
 msgid "Paused"
-msgstr ""
+msgstr "Призупинено"
 
 #: post-type/module-base.php:188
 msgctxt "Training Status field description"
@@ -149,29 +151,32 @@ msgid ""
 "This contact is currently on hold. It has potential of getting scheduled in "
 "the future."
 msgstr ""
+"Цей контакт наразі призупинено. Є можливість запланувати його в "
+"майбутньому."
 
 #: post-type/module-base.php:192
 msgctxt "Training Status label"
 msgid "Closed"
-msgstr ""
+msgstr "Закрито"
 
 #: post-type/module-base.php:193
 msgctxt "Training Status field description"
 msgid "This training is no longer going to happen."
-msgstr ""
+msgstr "Це навчання більше не відбудеться."
 
 #: post-type/module-base.php:201
 msgid "Assigned To"
-msgstr ""
+msgstr "Призначено"
 
 #: post-type/module-base.php:202
 msgid ""
 "Select the main person who is responsible for reporting on this training."
 msgstr ""
+"Виберіть головну особу, відповідальну за звітність щодо цього навчання."
 
 #: post-type/module-base.php:209
 msgid "Training Coach / Church Planter"
-msgstr ""
+msgstr "Тренер / Засновник церкви"
 
 #: post-type/module-base.php:210
 msgctxt "Optional Documentation"
@@ -180,58 +185,61 @@ msgid ""
 "be assigned to a training while multiple people can be coaches / church "
 "planters of this training."
 msgstr ""
+"Особа, яка заснувала та/або керує цим навчанням. Лише одна особа може бути "
+"призначена відповідальною за навчання, тоді як кілька людей можуть бути "
+"тренерами / засновниками церкви для цього навчання."
 
 #: post-type/module-base.php:222
 msgid "Requires Update"
-msgstr ""
+msgstr "Потребує оновлення"
 
 #: post-type/module-base.php:228
 msgid "Video Link"
-msgstr ""
+msgstr "Посилання на відео"
 
 #: post-type/module-base.php:229
 msgctxt "Optional Documentation"
 msgid "Link to video chat service"
-msgstr ""
+msgstr "Посилання на сервіс відеочату"
 
 #: post-type/module-base.php:236
 msgid "Notes"
-msgstr ""
+msgstr "Нотатки"
 
 #: post-type/module-base.php:237
 msgctxt "Optional Documentation"
 msgid "Notes on when the trainings will happen"
-msgstr ""
+msgstr "Нотатки про те, коли відбуватимуться навчання"
 
 #: post-type/module-base.php:246 post-type/module-base.php:509
 msgid "Meeting Times"
-msgstr ""
+msgstr "Час зустрічей"
 
 #: post-type/module-base.php:295 post-type/module-base.php:304
 msgid "Locations"
-msgstr ""
+msgstr "Місцезнаходження"
 
 #: post-type/module-base.php:296 post-type/module-base.php:305
 msgctxt "Optional Documentation"
 msgid "The general location where this contact is located."
-msgstr ""
+msgstr "Загальне місцезнаходження цього контакту."
 
 #: post-type/module-base.php:313
 msgid "Address"
-msgstr ""
+msgstr "Адреса"
 
 #: post-type/module-base.php:333
 msgid "Parent Training"
-msgstr ""
+msgstr "Батьківське навчання"
 
 #: post-type/module-base.php:334
 msgctxt "Optional Documentation"
 msgid "A training that launched this training."
-msgstr ""
+msgstr "Навчання, яке започаткувало це навчання."
 
 #: post-type/module-base.php:344
 msgid "Peer Training"
-msgstr ""
+msgstr "Споріднене навчання"
 
 #: post-type/module-base.php:345
 msgctxt "Optional Documentation"
@@ -239,46 +247,48 @@ msgid ""
 "A related training that isn't a parent/child in relationship. It might "
 "indicate trainings that collaborate, are about to merge, recently split, etc."
 msgstr ""
+"Пов'язане навчання, яке не є батьківським/дочірнім. Це може вказувати на "
+"навчання, які співпрацюють, збираються об'єднатися, нещодавно розділилися тощо."
 
 #: post-type/module-base.php:355
 msgid "Child Training"
-msgstr ""
+msgstr "Дочірнє навчання"
 
 #: post-type/module-base.php:356
 msgctxt "Optional Documentation"
 msgid "A training that has been birthed out of this training."
-msgstr ""
+msgstr "Навчання, яке виникло з цього навчання."
 
 #: post-type/module-base.php:366 post-type/module-base.php:508
 #: post-type/module-base.php:542
 msgid "Member List"
-msgstr ""
+msgstr "Список учасників"
 
 #: post-type/module-base.php:367
 msgctxt "Optional Documentation"
 msgid "The contacts who are members of this training."
-msgstr ""
+msgstr "Контакти, які є учасниками цього навчання."
 
 #: post-type/module-base.php:377
 msgid "Leaders"
-msgstr ""
+msgstr "Лідери"
 
 #: post-type/module-base.php:387
 msgid "People Groups"
-msgstr ""
+msgstr "Групи людей"
 
 #: post-type/module-base.php:388
 msgctxt "Optional Documentation"
 msgid "The people trainings represented by this training."
-msgstr ""
+msgstr "Групи людей, представлені цим навчанням."
 
 #: post-type/module-base.php:397
 msgid "Groups"
-msgstr ""
+msgstr "Групи"
 
 #: post-type/module-base.php:409
 msgid "Member Count"
-msgstr ""
+msgstr "Кількість учасників"
 
 #: post-type/module-base.php:410 post-type/module-base.php:417
 msgctxt "Optional Documentation"
@@ -288,49 +298,52 @@ msgid ""
 "manually to included people who may not be in the system but are also "
 "members of the training."
 msgstr ""
+"Кількість учасників цього навчання. Вона автоматично оновлюється при "
+"додаванні або видаленні учасників зі списку. Змініть це число вручну, щоб "
+"включити людей, яких немає в системі, але які також є учасниками навчання."
 
 #: post-type/module-base.php:416
 msgid "Leader Count"
-msgstr ""
+msgstr "Кількість лідерів"
 
 #: post-type/module-base.php:426
 msgid "Training as Leader"
-msgstr ""
+msgstr "Навчання як лідер"
 
 #: post-type/module-base.php:427
 msgctxt "Optional Documentation"
 msgid "Leader of a training"
-msgstr ""
+msgstr "Лідер навчання"
 
 #: post-type/module-base.php:438
 msgid "Training as Participant"
-msgstr ""
+msgstr "Навчання як учасник"
 
 #: post-type/module-base.php:439
 msgctxt "Optional Documentation"
 msgid "Participant in a training."
-msgstr ""
+msgstr "Учасник навчання."
 
 #: post-type/module-base.php:510
 msgid "Other"
-msgstr ""
+msgstr "Інше"
 
 #: post-type/module-base.php:545
 msgid "Create"
-msgstr ""
+msgstr "Створити"
 
 #: post-type/module-base.php:550
 msgid "Select"
-msgstr ""
+msgstr "Вибрати"
 
 #: post-type/module-base.php:555
 msgid "To add new members, click on 'Create' or 'Select'."
-msgstr ""
+msgstr "Щоб додати нових учасників, натисніть 'Створити' або 'Вибрати'."
 
 #: post-type/module-base.php:560
 msgctxt "Add members modal"
 msgid "Add members from existing contacts"
-msgstr ""
+msgstr "Додати учасників з існуючих контактів"
 
 #: post-type/module-base.php:561
 msgctxt "Add members modal"
@@ -338,135 +351,137 @@ msgid ""
 "In the 'Member List' field, type the name of an existing contact to add them "
 "to this training."
 msgstr ""
+"У полі 'Список учасників' введіть ім'я існуючого контакту, щоб додати його "
+"до цього навчання."
 
 #: post-type/module-base.php:573
 msgid "Close"
-msgstr ""
+msgstr "Закрити"
 
 #: post-type/module-base.php:713
 msgid "Removed %1$s: {%2$s}"
-msgstr ""
+msgstr "Видалено %1$s: {%2$s}"
 
 #: post-type/module-base.php:716
 msgid "Added %1$s: {%2$s}"
-msgstr ""
+msgstr "Додано %1$s: {%2$s}"
 
 #: post-type/module-base.php:719
 msgid "Updated %1$s: {%2$s} to {%3$s}"
-msgstr ""
+msgstr "Оновлено %1$s: {%2$s} на {%3$s}"
 
 #: post-type/module-base.php:804
 msgctxt "List Filters"
 msgid "Assigned to me"
-msgstr ""
+msgstr "Призначено мені"
 
 #: post-type/module-base.php:812
 msgctxt "List Filters"
 msgid "All"
-msgstr ""
+msgstr "Усі"
 
 #: post-type/module-base.php:871
 msgctxt "List Filters"
 msgid "Default Filters"
-msgstr ""
+msgstr "Фільтри за замовчуванням"
 
 #: post-type/module-public-calendar.php:85
 msgid "Reports"
-msgstr ""
+msgstr "Звіти"
 
 #: post-type/module-public-calendar.php:121
 msgid "Total Groups"
-msgstr ""
+msgstr "Всього груп"
 
 #: post-type/module-public-calendar.php:122
 msgid "Total Baptisms"
-msgstr ""
+msgstr "Всього хрещень"
 
 #: post-type/module-public-calendar.php:123
 msgid "Countries"
-msgstr ""
+msgstr "Країни"
 
 #: post-type/module-public-calendar.php:124
 msgid "States"
-msgstr ""
+msgstr "Області"
 
 #: post-type/module-public-calendar.php:125
 msgid "Counties"
-msgstr ""
+msgstr "Райони"
 
 #: post-type/module-public-calendar.php:432
 #: post-type/module-registration.php:385
 msgid "Add"
-msgstr ""
+msgstr "Додати"
 
 #: post-type/module-registration.php:31
 msgid "Magic Links"
-msgstr ""
+msgstr "Магічні посилання"
 
 #: post-type/module-registration.php:59
 msgid "copy link"
-msgstr ""
+msgstr "копіювати посилання"
 
 #: post-type/module-registration.php:61
 msgid "edit form"
-msgstr ""
+msgstr "редагувати форму"
 
 #: post-type/module-registration.php:63
 msgid "report"
-msgstr ""
+msgstr "звіт"
 
 #: post-type/module-registration.php:67
 msgid "create link"
-msgstr ""
+msgstr "створити посилання"
 
 #: post-type/module-registration.php:114
 msgid "link"
-msgstr ""
+msgstr "посилання"
 
 #: post-type/module-registration.php:116
 msgid "show on calendar"
-msgstr ""
+msgstr "показати в календарі"
 
 #: post-type/module-registration.php:118
 msgid "open registration"
-msgstr ""
+msgstr "відкрита реєстрація"
 
 #: post-type/module-registration.php:265
 msgid "add"
-msgstr ""
+msgstr "додати"
 
 #: post-type/module-registration.php:266
 msgid "Use"
-msgstr ""
+msgstr "Використати"
 
 #: post-type/module-registration.php:267 post-type/module-registration.php:695
 msgid "Search Location"
-msgstr ""
+msgstr "Пошук місцезнаходження"
 
 #: post-type/module-registration.php:268
 msgid "Delete Location"
-msgstr ""
+msgstr "Видалити місцезнаходження"
 
 #: post-type/module-registration.php:269
 msgid "Open Mapping"
-msgstr ""
+msgstr "Відкрити карту"
 
 #: post-type/module-registration.php:270
 msgid "clear"
-msgstr ""
+msgstr "очистити"
 
 #: post-type/module-registration.php:384
 msgid "Register for Training"
-msgstr ""
+msgstr "Зареєструватися на навчання"
 
 #: post-type/module-registration.php:386
 msgid "Join Training"
-msgstr ""
+msgstr "Приєднатися до навчання"
 
 #: post-type/module-registration.php:387
 msgid "Join in"
-msgstr ""
+msgstr "Приєднатися"
 
 #: post-type/module-registration.php:700
 msgid "Clear"
-msgstr ""
+msgstr "Очистити"

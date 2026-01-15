@@ -1,4 +1,4 @@
-# Copyright (C) 2024 
+# Copyright (C) 2024
 # This file is distributed under the same license as the Disciple.Tools - Training plugin.
 msgid ""
 msgstr ""
@@ -20,130 +20,132 @@ msgstr ""
 
 #: metrics/mapbox-maps.php:30
 msgid "Training Maps"
-msgstr ""
+msgstr "Eğitim Haritaları"
 
 #: metrics/mapbox-maps.php:31 metrics/mapbox-personal-maps.php:31
 #: post-type/module-base.php:29 post-type/module-base.php:461
 #: post-type/module-base.php:473 post-type/module-base.php:496
 msgid "Trainings"
-msgstr ""
+msgstr "Eğitimler"
 
 #: metrics/mapbox-personal-maps.php:30
 msgid "Trainings Maps"
-msgstr ""
+msgstr "Eğitim Haritaları"
 
 #: network/network-dashboard-integration.php:44
 msgid "New Training"
-msgstr ""
+msgstr "Yeni Eğitim"
 
 #: network/network-dashboard-integration.php:50
 msgid "Training Started"
-msgstr ""
+msgstr "Eğitim Başladı"
 
 #: network/network-dashboard-integration.php:56
 msgid "Training Completed"
-msgstr ""
+msgstr "Eğitim Tamamlandı"
 
 #: post-type/module-base.php:28 post-type/module-base.php:495
 msgid "Training"
-msgstr ""
+msgstr "Eğitim"
 
 #: post-type/module-base.php:70
 msgid "Trainings Admin"
-msgstr ""
+msgstr "Eğitim Yöneticisi"
 
 #: post-type/module-base.php:71
 msgid "Admin access to all trainings"
-msgstr ""
+msgstr "Tüm eğitimlere yönetici erişimi"
 
 #: post-type/module-base.php:76
 msgid "Multiplier"
-msgstr ""
+msgstr "Çoğaltıcı"
 
 #: post-type/module-base.php:83
 msgid "Disciple.Tools Admin"
-msgstr ""
+msgstr "Disciple.Tools Yöneticisi"
 
 #: post-type/module-base.php:90
 msgid "Administrator"
-msgstr ""
+msgstr "Yönetici"
 
 #: post-type/module-base.php:127
 msgid "Tags"
-msgstr ""
+msgstr "Etiketler"
 
 #: post-type/module-base.php:128
 msgctxt "Optional Documentation"
 msgid ""
 "A useful way to group related items and can be used to filter the records"
 msgstr ""
+"İlgili öğeleri gruplandırmanın kullanışlı bir yolu ve kayıtları filtrelemek "
+"için kullanılabilir"
 
 #: post-type/module-base.php:135
 msgid "Follow"
-msgstr ""
+msgstr "Takip Et"
 
 #: post-type/module-base.php:142
 msgid "Un-Follow"
-msgstr ""
+msgstr "Takibi Bırak"
 
 #: post-type/module-base.php:148
 msgid "Tasks"
-msgstr ""
+msgstr "Görevler"
 
 #: post-type/module-base.php:162
 msgctxt "Training Status label"
 msgid "New"
-msgstr ""
+msgstr "Yeni"
 
 #: post-type/module-base.php:163
 msgctxt "Training Status field description"
 msgid "New training added to the system"
-msgstr ""
+msgstr "Sisteme yeni eğitim eklendi"
 
 #: post-type/module-base.php:167
 msgctxt "Training Status label"
 msgid "Proposed"
-msgstr ""
+msgstr "Önerilen"
 
 #: post-type/module-base.php:168
 msgctxt "Training Status field description"
 msgid "This training has been proposed and is in initial conversations"
-msgstr ""
+msgstr "Bu eğitim önerildi ve ilk görüşmeler yapılıyor"
 
 #: post-type/module-base.php:172
 msgctxt "Training Status label"
 msgid "Scheduled"
-msgstr ""
+msgstr "Planlandı"
 
 #: post-type/module-base.php:173
 msgctxt "Training Status field description"
 msgid "This training is confirmed, on the calendar."
-msgstr ""
+msgstr "Bu eğitim onaylandı ve takvime eklendi."
 
 #: post-type/module-base.php:177
 msgctxt "Training Status label"
 msgid "In Progress"
-msgstr ""
+msgstr "Devam Ediyor"
 
 #: post-type/module-base.php:178
 msgctxt "Training Status field description"
 msgid "This training is confirmed, on the calendar, or currently active."
-msgstr ""
+msgstr "Bu eğitim onaylandı, takvimde veya şu anda aktif."
 
 #: post-type/module-base.php:182
 msgctxt "Training Status label"
 msgid "Complete"
-msgstr ""
+msgstr "Tamamlandı"
 
 #: post-type/module-base.php:183
 msgctxt "Training Status field description"
 msgid "This training has successfully completed"
-msgstr ""
+msgstr "Bu eğitim başarıyla tamamlandı"
 
 #: post-type/module-base.php:187
 msgctxt "Training Status label"
 msgid "Paused"
-msgstr ""
+msgstr "Duraklatıldı"
 
 #: post-type/module-base.php:188
 msgctxt "Training Status field description"
@@ -151,29 +153,31 @@ msgid ""
 "This contact is currently on hold. It has potential of getting scheduled in "
 "the future."
 msgstr ""
+"Bu kayıt şu anda beklemede. Gelecekte planlanma potansiyeli var."
 
 #: post-type/module-base.php:192
 msgctxt "Training Status label"
 msgid "Closed"
-msgstr ""
+msgstr "Kapatıldı"
 
 #: post-type/module-base.php:193
 msgctxt "Training Status field description"
 msgid "This training is no longer going to happen."
-msgstr ""
+msgstr "Bu eğitim artık gerçekleşmeyecek."
 
 #: post-type/module-base.php:201
 msgid "Assigned To"
-msgstr ""
+msgstr "Atanan Kişi"
 
 #: post-type/module-base.php:202
 msgid ""
 "Select the main person who is responsible for reporting on this training."
 msgstr ""
+"Bu eğitim hakkında rapor vermekten sorumlu ana kişiyi seçin."
 
 #: post-type/module-base.php:209
 msgid "Training Coach / Church Planter"
-msgstr ""
+msgstr "Eğitim Koçu / Kilise Kurucu"
 
 #: post-type/module-base.php:210
 msgctxt "Optional Documentation"
@@ -182,58 +186,60 @@ msgid ""
 "be assigned to a training while multiple people can be coaches / church "
 "planters of this training."
 msgstr ""
+"Bu eğitimi kuran ve/veya koçluk yapan kişi. Bir eğitime yalnızca bir kişi "
+"atanabilirken, birden fazla kişi bu eğitimin koçu / kilise kurucusu olabilir."
 
 #: post-type/module-base.php:222
 msgid "Requires Update"
-msgstr ""
+msgstr "Güncelleme Gerekiyor"
 
 #: post-type/module-base.php:228
 msgid "Video Link"
-msgstr ""
+msgstr "Video Bağlantısı"
 
 #: post-type/module-base.php:229
 msgctxt "Optional Documentation"
 msgid "Link to video chat service"
-msgstr ""
+msgstr "Görüntülü sohbet hizmeti bağlantısı"
 
 #: post-type/module-base.php:236
 msgid "Notes"
-msgstr ""
+msgstr "Notlar"
 
 #: post-type/module-base.php:237
 msgctxt "Optional Documentation"
 msgid "Notes on when the trainings will happen"
-msgstr ""
+msgstr "Eğitimlerin ne zaman gerçekleşeceğine dair notlar"
 
 #: post-type/module-base.php:246 post-type/module-base.php:509
 msgid "Meeting Times"
-msgstr ""
+msgstr "Toplantı Saatleri"
 
 #: post-type/module-base.php:295 post-type/module-base.php:304
 msgid "Locations"
-msgstr ""
+msgstr "Konumlar"
 
 #: post-type/module-base.php:296 post-type/module-base.php:305
 msgctxt "Optional Documentation"
 msgid "The general location where this contact is located."
-msgstr ""
+msgstr "Bu kaydın bulunduğu genel konum."
 
 #: post-type/module-base.php:313
 msgid "Address"
-msgstr ""
+msgstr "Adres"
 
 #: post-type/module-base.php:333
 msgid "Parent Training"
-msgstr ""
+msgstr "Ana Eğitim"
 
 #: post-type/module-base.php:334
 msgctxt "Optional Documentation"
 msgid "A training that launched this training."
-msgstr ""
+msgstr "Bu eğitimi başlatan eğitim."
 
 #: post-type/module-base.php:344
 msgid "Peer Training"
-msgstr ""
+msgstr "Eş Eğitim"
 
 #: post-type/module-base.php:345
 msgctxt "Optional Documentation"
@@ -241,46 +247,48 @@ msgid ""
 "A related training that isn't a parent/child in relationship. It might "
 "indicate trainings that collaborate, are about to merge, recently split, etc."
 msgstr ""
+"Ana/alt ilişkisinde olmayan ilgili bir eğitim. İşbirliği yapan, birleşmek "
+"üzere olan, yakın zamanda ayrılan vb. eğitimleri gösterebilir."
 
 #: post-type/module-base.php:355
 msgid "Child Training"
-msgstr ""
+msgstr "Alt Eğitim"
 
 #: post-type/module-base.php:356
 msgctxt "Optional Documentation"
 msgid "A training that has been birthed out of this training."
-msgstr ""
+msgstr "Bu eğitimden doğan bir eğitim."
 
 #: post-type/module-base.php:366 post-type/module-base.php:508
 #: post-type/module-base.php:542
 msgid "Member List"
-msgstr ""
+msgstr "Üye Listesi"
 
 #: post-type/module-base.php:367
 msgctxt "Optional Documentation"
 msgid "The contacts who are members of this training."
-msgstr ""
+msgstr "Bu eğitimin üyesi olan kişiler."
 
 #: post-type/module-base.php:377
 msgid "Leaders"
-msgstr ""
+msgstr "Liderler"
 
 #: post-type/module-base.php:387
 msgid "People Groups"
-msgstr ""
+msgstr "Halk Grupları"
 
 #: post-type/module-base.php:388
 msgctxt "Optional Documentation"
 msgid "The people trainings represented by this training."
-msgstr ""
+msgstr "Bu eğitim tarafından temsil edilen halk grupları."
 
 #: post-type/module-base.php:397
 msgid "Groups"
-msgstr ""
+msgstr "Gruplar"
 
 #: post-type/module-base.php:409
 msgid "Member Count"
-msgstr ""
+msgstr "Üye Sayısı"
 
 #: post-type/module-base.php:410 post-type/module-base.php:417
 msgctxt "Optional Documentation"
@@ -290,49 +298,53 @@ msgid ""
 "manually to included people who may not be in the system but are also "
 "members of the training."
 msgstr ""
+"Bu eğitimdeki üye sayısı. Üye listesine yeni üyeler eklendiğinde veya "
+"çıkarıldığında otomatik olarak güncellenecektir. Sistemde olmayan ancak "
+"eğitimin üyesi olan kişileri dahil etmek için bu sayıyı manuel olarak "
+"değiştirin."
 
 #: post-type/module-base.php:416
 msgid "Leader Count"
-msgstr ""
+msgstr "Lider Sayısı"
 
 #: post-type/module-base.php:426
 msgid "Training as Leader"
-msgstr ""
+msgstr "Lider Olarak Eğitim"
 
 #: post-type/module-base.php:427
 msgctxt "Optional Documentation"
 msgid "Leader of a training"
-msgstr ""
+msgstr "Bir eğitimin lideri"
 
 #: post-type/module-base.php:438
 msgid "Training as Participant"
-msgstr ""
+msgstr "Katılımcı Olarak Eğitim"
 
 #: post-type/module-base.php:439
 msgctxt "Optional Documentation"
 msgid "Participant in a training."
-msgstr ""
+msgstr "Bir eğitime katılımcı."
 
 #: post-type/module-base.php:510
 msgid "Other"
-msgstr ""
+msgstr "Diğer"
 
 #: post-type/module-base.php:545
 msgid "Create"
-msgstr ""
+msgstr "Oluştur"
 
 #: post-type/module-base.php:550
 msgid "Select"
-msgstr ""
+msgstr "Seç"
 
 #: post-type/module-base.php:555
 msgid "To add new members, click on 'Create' or 'Select'."
-msgstr ""
+msgstr "Yeni üyeler eklemek için 'Oluştur' veya 'Seç' seçeneğine tıklayın."
 
 #: post-type/module-base.php:560
 msgctxt "Add members modal"
 msgid "Add members from existing contacts"
-msgstr ""
+msgstr "Mevcut kişilerden üye ekle"
 
 #: post-type/module-base.php:561
 msgctxt "Add members modal"
@@ -340,135 +352,136 @@ msgid ""
 "In the 'Member List' field, type the name of an existing contact to add them "
 "to this training."
 msgstr ""
+"'Üye Listesi' alanına, mevcut bir kişinin adını yazarak bu eğitime ekleyin."
 
 #: post-type/module-base.php:573
 msgid "Close"
-msgstr "Kapatın"
+msgstr "Kapat"
 
 #: post-type/module-base.php:713
 msgid "Removed %1$s: {%2$s}"
-msgstr ""
+msgstr "%1$s kaldırıldı: {%2$s}"
 
 #: post-type/module-base.php:716
 msgid "Added %1$s: {%2$s}"
-msgstr ""
+msgstr "%1$s eklendi: {%2$s}"
 
 #: post-type/module-base.php:719
 msgid "Updated %1$s: {%2$s} to {%3$s}"
-msgstr ""
+msgstr "%1$s güncellendi: {%2$s} -> {%3$s}"
 
 #: post-type/module-base.php:804
 msgctxt "List Filters"
 msgid "Assigned to me"
-msgstr ""
+msgstr "Bana atanan"
 
 #: post-type/module-base.php:812
 msgctxt "List Filters"
 msgid "All"
-msgstr ""
+msgstr "Tümü"
 
 #: post-type/module-base.php:871
 msgctxt "List Filters"
 msgid "Default Filters"
-msgstr ""
+msgstr "Varsayılan Filtreler"
 
 #: post-type/module-public-calendar.php:85
 msgid "Reports"
-msgstr ""
+msgstr "Raporlar"
 
 #: post-type/module-public-calendar.php:121
 msgid "Total Groups"
-msgstr ""
+msgstr "Toplam Grup"
 
 #: post-type/module-public-calendar.php:122
 msgid "Total Baptisms"
-msgstr ""
+msgstr "Toplam Vaftiz"
 
 #: post-type/module-public-calendar.php:123
 msgid "Countries"
-msgstr ""
+msgstr "Ülkeler"
 
 #: post-type/module-public-calendar.php:124
 msgid "States"
-msgstr ""
+msgstr "Eyaletler"
 
 #: post-type/module-public-calendar.php:125
 msgid "Counties"
-msgstr ""
+msgstr "İlçeler"
 
 #: post-type/module-public-calendar.php:432
 #: post-type/module-registration.php:385
 msgid "Add"
-msgstr ""
+msgstr "Ekle"
 
 #: post-type/module-registration.php:31
 msgid "Magic Links"
-msgstr ""
+msgstr "Sihirli Bağlantılar"
 
 #: post-type/module-registration.php:59
 msgid "copy link"
-msgstr ""
+msgstr "bağlantıyı kopyala"
 
 #: post-type/module-registration.php:61
 msgid "edit form"
-msgstr ""
+msgstr "formu düzenle"
 
 #: post-type/module-registration.php:63
 msgid "report"
-msgstr ""
+msgstr "rapor"
 
 #: post-type/module-registration.php:67
 msgid "create link"
-msgstr ""
+msgstr "bağlantı oluştur"
 
 #: post-type/module-registration.php:114
 msgid "link"
-msgstr ""
+msgstr "bağlantı"
 
 #: post-type/module-registration.php:116
 msgid "show on calendar"
-msgstr ""
+msgstr "takvimde göster"
 
 #: post-type/module-registration.php:118
 msgid "open registration"
-msgstr ""
+msgstr "kayıt aç"
 
 #: post-type/module-registration.php:265
 msgid "add"
-msgstr ""
+msgstr "ekle"
 
 #: post-type/module-registration.php:266
 msgid "Use"
-msgstr ""
+msgstr "Kullan"
 
 #: post-type/module-registration.php:267 post-type/module-registration.php:695
 msgid "Search Location"
-msgstr ""
+msgstr "Konum Ara"
 
 #: post-type/module-registration.php:268
 msgid "Delete Location"
-msgstr ""
+msgstr "Konumu Sil"
 
 #: post-type/module-registration.php:269
 msgid "Open Mapping"
-msgstr ""
+msgstr "Haritayı Aç"
 
 #: post-type/module-registration.php:270
 msgid "clear"
-msgstr ""
+msgstr "temizle"
 
 #: post-type/module-registration.php:384
 msgid "Register for Training"
-msgstr ""
+msgstr "Eğitime Kayıt Ol"
 
 #: post-type/module-registration.php:386
 msgid "Join Training"
-msgstr ""
+msgstr "Eğitime Katıl"
 
 #: post-type/module-registration.php:387
 msgid "Join in"
-msgstr ""
+msgstr "Katıl"
 
 #: post-type/module-registration.php:700
 msgid "Clear"
-msgstr "Temizleyin"
+msgstr "Temizle"

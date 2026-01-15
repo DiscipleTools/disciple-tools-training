@@ -17,7 +17,7 @@ msgstr ""
 
 #: metrics/mapbox-maps.php:30
 msgid "Training Maps"
-msgstr "訓練圖"
+msgstr "培訓地圖"
 
 #: metrics/mapbox-maps.php:31 metrics/mapbox-personal-maps.php:31
 #: post-type/module-base.php:29 post-type/module-base.php:461
@@ -31,31 +31,31 @@ msgstr "培訓地圖"
 
 #: network/network-dashboard-integration.php:44
 msgid "New Training"
-msgstr "新課程"
+msgstr "新培訓"
 
 #: network/network-dashboard-integration.php:50
 msgid "Training Started"
-msgstr "已開始的訓練"
+msgstr "培訓已開始"
 
 #: network/network-dashboard-integration.php:56
 msgid "Training Completed"
-msgstr "已完成的訓練"
+msgstr "培訓已完成"
 
 #: post-type/module-base.php:28 post-type/module-base.php:495
 msgid "Training"
-msgstr "訓練"
+msgstr "培訓"
 
 #: post-type/module-base.php:70
 msgid "Trainings Admin"
-msgstr "課程管理員"
+msgstr "培訓管理員"
 
 #: post-type/module-base.php:71
 msgid "Admin access to all trainings"
-msgstr "所有課程的管理員存取權限"
+msgstr "所有培訓的管理員存取權限"
 
 #: post-type/module-base.php:76
 msgid "Multiplier"
-msgstr "乘數"
+msgstr "倍增者"
 
 #: post-type/module-base.php:83
 msgid "Disciple.Tools Admin"
@@ -73,11 +73,11 @@ msgstr "標籤"
 msgctxt "Optional Documentation"
 msgid ""
 "A useful way to group related items and can be used to filter the records"
-msgstr "將相關項目分類並用於記錄篩選的好用方法"
+msgstr "將相關項目分類並用於篩選記錄的好用方法"
 
 #: post-type/module-base.php:135
 msgid "Follow"
-msgstr "跟隨"
+msgstr "關注"
 
 #: post-type/module-base.php:142
 msgid "Un-Follow"
@@ -90,32 +90,32 @@ msgstr "任務"
 #: post-type/module-base.php:162
 msgctxt "Training Status label"
 msgid "New"
-msgstr "新"
+msgstr "新增"
 
 #: post-type/module-base.php:163
 msgctxt "Training Status field description"
 msgid "New training added to the system"
-msgstr "系統新增了培訓"
+msgstr "系統中新增了培訓"
 
 #: post-type/module-base.php:167
 msgctxt "Training Status label"
 msgid "Proposed"
-msgstr "建議的"
+msgstr "已提議"
 
 #: post-type/module-base.php:168
 msgctxt "Training Status field description"
 msgid "This training has been proposed and is in initial conversations"
-msgstr "這項培訓已經提出並且正在初步對話中"
+msgstr "此培訓已提議並正在初步討論中"
 
 #: post-type/module-base.php:172
 msgctxt "Training Status label"
 msgid "Scheduled"
-msgstr "預定的"
+msgstr "已排程"
 
 #: post-type/module-base.php:173
 msgctxt "Training Status field description"
 msgid "This training is confirmed, on the calendar."
-msgstr "日曆上已確認此培訓。"
+msgstr "此培訓已確認，已列入日曆。"
 
 #: post-type/module-base.php:177
 msgctxt "Training Status label"
@@ -125,17 +125,17 @@ msgstr "進行中"
 #: post-type/module-base.php:178
 msgctxt "Training Status field description"
 msgid "This training is confirmed, on the calendar, or currently active."
-msgstr "該培訓已在日曆中確認，或當前處於活動狀態。"
+msgstr "此培訓已確認，已列入日曆，或正在進行中。"
 
 #: post-type/module-base.php:182
 msgctxt "Training Status label"
 msgid "Complete"
-msgstr "完成"
+msgstr "已完成"
 
 #: post-type/module-base.php:183
 msgctxt "Training Status field description"
 msgid "This training has successfully completed"
-msgstr "該培訓已成功完成"
+msgstr "此培訓已成功完成"
 
 #: post-type/module-base.php:187
 msgctxt "Training Status label"
@@ -147,21 +147,21 @@ msgctxt "Training Status field description"
 msgid ""
 "This contact is currently on hold. It has potential of getting scheduled in "
 "the future."
-msgstr "此聯繫人當前處於保留狀態。它有可能在將來安排。"
+msgstr "此培訓目前處於暫停狀態。將來有可能重新排程。"
 
 #: post-type/module-base.php:192
 msgctxt "Training Status label"
 msgid "Closed"
-msgstr "關閉"
+msgstr "已關閉"
 
 #: post-type/module-base.php:193
 msgctxt "Training Status field description"
 msgid "This training is no longer going to happen."
-msgstr "這項培訓將不再發生。"
+msgstr "此培訓將不再舉行。"
 
 #: post-type/module-base.php:201
 msgid "Assigned To"
-msgstr "分配給"
+msgstr "指派給"
 
 #: post-type/module-base.php:202
 msgid ""
@@ -170,7 +170,7 @@ msgstr "選擇負責報告此培訓的主要人員。"
 
 #: post-type/module-base.php:209
 msgid "Training Coach / Church Planter"
-msgstr "培訓教練/教會主持人"
+msgstr "培訓教練 / 植堂者"
 
 #: post-type/module-base.php:210
 msgctxt "Optional Documentation"
@@ -179,8 +179,8 @@ msgid ""
 "be assigned to a training while multiple people can be coaches / church "
 "planters of this training."
 msgstr ""
-"種植和/或指導該培訓的人。只能將一個人分配給一次培訓，而可以由多人擔任該培訓的"
-"教練/教會建立者。"
+"植堂和/或指導此培訓的人員。只能將一人指派給培訓，但可以有多人擔任此培訓的"
+"教練/植堂者。"
 
 #: post-type/module-base.php:222
 msgid "Requires Update"
@@ -193,20 +193,20 @@ msgstr "影片連結"
 #: post-type/module-base.php:229
 msgctxt "Optional Documentation"
 msgid "Link to video chat service"
-msgstr "鏈接到視頻聊天服務"
+msgstr "視訊聊天服務連結"
 
 #: post-type/module-base.php:236
 msgid "Notes"
-msgstr "筆記"
+msgstr "備註"
 
 #: post-type/module-base.php:237
 msgctxt "Optional Documentation"
 msgid "Notes on when the trainings will happen"
-msgstr "關於何時進行培訓的說明"
+msgstr "關於培訓舉辦時間的備註"
 
 #: post-type/module-base.php:246 post-type/module-base.php:509
 msgid "Meeting Times"
-msgstr "會議時間"
+msgstr "聚會時間"
 
 #: post-type/module-base.php:295 post-type/module-base.php:304
 msgid "Locations"
@@ -215,7 +215,7 @@ msgstr "地點"
 #: post-type/module-base.php:296 post-type/module-base.php:305
 msgctxt "Optional Documentation"
 msgid "The general location where this contact is located."
-msgstr "此聯繫人所在的常規位置。"
+msgstr "此聯繫人所在的一般位置。"
 
 #: post-type/module-base.php:313
 msgid "Address"
@@ -223,63 +223,63 @@ msgstr "地址"
 
 #: post-type/module-base.php:333
 msgid "Parent Training"
-msgstr "家長培訓"
+msgstr "母培訓"
 
 #: post-type/module-base.php:334
 msgctxt "Optional Documentation"
 msgid "A training that launched this training."
-msgstr "啟動此培訓的培訓。"
+msgstr "衍生出此培訓的源頭培訓。"
 
 #: post-type/module-base.php:344
 msgid "Peer Training"
-msgstr "同伴訓練"
+msgstr "同級培訓"
 
 #: post-type/module-base.php:345
 msgctxt "Optional Documentation"
 msgid ""
 "A related training that isn't a parent/child in relationship. It might "
 "indicate trainings that collaborate, are about to merge, recently split, etc."
-msgstr "並非親子關係中的相關培訓。它可能表明協作，即將合併，最近分裂的培訓等。"
+msgstr "非母子關係的相關培訓。可能表示合作、即將合併或最近分離的培訓等。"
 
 #: post-type/module-base.php:355
 msgid "Child Training"
-msgstr "兒童訓練"
+msgstr "子培訓"
 
 #: post-type/module-base.php:356
 msgctxt "Optional Documentation"
 msgid "A training that has been birthed out of this training."
-msgstr "從此培訓中誕生的一種培訓。"
+msgstr "從此培訓衍生出的培訓。"
 
 #: post-type/module-base.php:366 post-type/module-base.php:508
 #: post-type/module-base.php:542
 msgid "Member List"
-msgstr "會員名單"
+msgstr "成員名單"
 
 #: post-type/module-base.php:367
 msgctxt "Optional Documentation"
 msgid "The contacts who are members of this training."
-msgstr "參加此培訓的聯繫人。"
+msgstr "參加此培訓的聯繫人成員。"
 
 #: post-type/module-base.php:377
 msgid "Leaders"
-msgstr "領導者"
+msgstr "領袖"
 
 #: post-type/module-base.php:387
 msgid "People Groups"
-msgstr "人民團體"
+msgstr "族群"
 
 #: post-type/module-base.php:388
 msgctxt "Optional Documentation"
 msgid "The people trainings represented by this training."
-msgstr "此培訓代表的人員培訓。"
+msgstr "此培訓所服務的族群。"
 
 #: post-type/module-base.php:397
 msgid "Groups"
-msgstr "團體"
+msgstr "小組"
 
 #: post-type/module-base.php:409
 msgid "Member Count"
-msgstr "會員人數"
+msgstr "成員人數"
 
 #: post-type/module-base.php:410 post-type/module-base.php:417
 msgctxt "Optional Documentation"
@@ -289,30 +289,30 @@ msgid ""
 "manually to included people who may not be in the system but are also "
 "members of the training."
 msgstr ""
-"此培訓的成員人數。在成員列表中添加或刪除新成員時，它將自動更新。手動更改此數"
-"字，以包括可能不在系統中但也是培訓成員的人員。"
+"此培訓的成員人數。在成員名單中新增或移除成員時會自動更新。可手動更改此數字"
+"以包含可能不在系統中但也是培訓成員的人員。"
 
 #: post-type/module-base.php:416
 msgid "Leader Count"
-msgstr "領導者數"
+msgstr "領袖人數"
 
 #: post-type/module-base.php:426
 msgid "Training as Leader"
-msgstr "領導培訓"
+msgstr "以領袖身分參與的培訓"
 
 #: post-type/module-base.php:427
 msgctxt "Optional Documentation"
 msgid "Leader of a training"
-msgstr "培訓負責人"
+msgstr "培訓的領袖"
 
 #: post-type/module-base.php:438
 msgid "Training as Participant"
-msgstr "參加培訓"
+msgstr "以學員身分參與的培訓"
 
 #: post-type/module-base.php:439
 msgctxt "Optional Documentation"
 msgid "Participant in a training."
-msgstr "參加培訓。"
+msgstr "培訓的學員。"
 
 #: post-type/module-base.php:510
 msgid "Other"
@@ -320,7 +320,7 @@ msgstr "其他"
 
 #: post-type/module-base.php:545
 msgid "Create"
-msgstr "創造"
+msgstr "建立"
 
 #: post-type/module-base.php:550
 msgid "Select"
@@ -328,91 +328,91 @@ msgstr "選擇"
 
 #: post-type/module-base.php:555
 msgid "To add new members, click on 'Create' or 'Select'."
-msgstr "要添加新成員，請單擊“創建”或“選擇”。"
+msgstr "若要新增成員，請點擊「建立」或「選擇」。"
 
 #: post-type/module-base.php:560
 msgctxt "Add members modal"
 msgid "Add members from existing contacts"
-msgstr "從現有聯繫人添加成員"
+msgstr "從現有聯繫人新增成員"
 
 #: post-type/module-base.php:561
 msgctxt "Add members modal"
 msgid ""
 "In the 'Member List' field, type the name of an existing contact to add them "
 "to this training."
-msgstr "在“成員列表”字段中，鍵入現有聯繫人的姓名，以將其添加到此培訓中。"
+msgstr "在「成員名單」欄位中，輸入現有聯繫人的姓名，以將其新增至此培訓。"
 
 #: post-type/module-base.php:573
 msgid "Close"
-msgstr "關"
+msgstr "關閉"
 
 #: post-type/module-base.php:713
 msgid "Removed %1$s: {%2$s}"
-msgstr "已刪除 %1$s: {%2$s}"
+msgstr "已移除 %1$s：{%2$s}"
 
 #: post-type/module-base.php:716
 msgid "Added %1$s: {%2$s}"
-msgstr "新增了％1 $ s：％2 $ s"
+msgstr "已新增 %1$s：{%2$s}"
 
 #: post-type/module-base.php:719
 msgid "Updated %1$s: {%2$s} to {%3$s}"
-msgstr "已將 %1$s: {%2$s}更新為 {%3$s}"
+msgstr "已將 %1$s：{%2$s} 更新為 {%3$s}"
 
 #: post-type/module-base.php:804
 msgctxt "List Filters"
 msgid "Assigned to me"
-msgstr "分配給我"
+msgstr "指派給我"
 
 #: post-type/module-base.php:812
 msgctxt "List Filters"
 msgid "All"
-msgstr "所有"
+msgstr "全部"
 
 #: post-type/module-base.php:871
 msgctxt "List Filters"
 msgid "Default Filters"
-msgstr "預設篩選工具"
+msgstr "預設篩選器"
 
 #: post-type/module-public-calendar.php:85
 msgid "Reports"
-msgstr "報告書"
+msgstr "報告"
 
 #: post-type/module-public-calendar.php:121
 msgid "Total Groups"
-msgstr "總組數"
+msgstr "小組總數"
 
 #: post-type/module-public-calendar.php:122
 msgid "Total Baptisms"
-msgstr "總洗禮"
+msgstr "洗禮總數"
 
 #: post-type/module-public-calendar.php:123
 msgid "Countries"
-msgstr "國別"
+msgstr "國家"
 
 #: post-type/module-public-calendar.php:124
 msgid "States"
-msgstr "狀態"
+msgstr "州/省"
 
 #: post-type/module-public-calendar.php:125
 msgid "Counties"
-msgstr "縣"
+msgstr "縣/區"
 
 #: post-type/module-public-calendar.php:432
 #: post-type/module-registration.php:385
 msgid "Add"
-msgstr "加"
+msgstr "新增"
 
 #: post-type/module-registration.php:31
 msgid "Magic Links"
-msgstr "魔術連結"
+msgstr "神奇連結"
 
 #: post-type/module-registration.php:59
 msgid "copy link"
-msgstr "複製鏈接"
+msgstr "複製連結"
 
 #: post-type/module-registration.php:61
 msgid "edit form"
-msgstr "編輯表格"
+msgstr "編輯表單"
 
 #: post-type/module-registration.php:63
 msgid "report"
@@ -424,7 +424,7 @@ msgstr "建立連結"
 
 #: post-type/module-registration.php:114
 msgid "link"
-msgstr "鏈接"
+msgstr "連結"
 
 #: post-type/module-registration.php:116
 msgid "show on calendar"
@@ -432,31 +432,31 @@ msgstr "在日曆上顯示"
 
 #: post-type/module-registration.php:118
 msgid "open registration"
-msgstr "開放註冊"
+msgstr "開放報名"
 
 #: post-type/module-registration.php:265
 msgid "add"
-msgstr "加"
+msgstr "新增"
 
 #: post-type/module-registration.php:266
 msgid "Use"
-msgstr "採用"
+msgstr "使用"
 
 #: post-type/module-registration.php:267 post-type/module-registration.php:695
 msgid "Search Location"
-msgstr "搜索位置"
+msgstr "搜尋地點"
 
 #: post-type/module-registration.php:268
 msgid "Delete Location"
-msgstr "刪除位置"
+msgstr "刪除地點"
 
 #: post-type/module-registration.php:269
 msgid "Open Mapping"
-msgstr "打開映射"
+msgstr "開啟地圖"
 
 #: post-type/module-registration.php:270
 msgid "clear"
-msgstr "明確"
+msgstr "清除"
 
 #: post-type/module-registration.php:384
 msgid "Register for Training"
@@ -464,7 +464,7 @@ msgstr "報名參加培訓"
 
 #: post-type/module-registration.php:386
 msgid "Join Training"
-msgstr "參加培訓"
+msgstr "加入培訓"
 
 #: post-type/module-registration.php:387
 msgid "Join in"
@@ -472,789 +472,4 @@ msgstr "加入"
 
 #: post-type/module-registration.php:700
 msgid "Clear"
-msgstr "明確"
-
-#~ msgid "Apps"
-#~ msgstr "應用"
-
-#, fuzzy
-#~| msgid "Disciple Tools - Training"
-#~ msgid "Disciple.Tools - Training"
-#~ msgstr "門徒工具-培訓"
-
-#~ msgid "https://github.com/DiscipleTools/disciple-tools-training"
-#~ msgstr "https://github.com/DiscipleTools/disciple-tools-training"
-
-#, fuzzy
-#~| msgid ""
-#~| "Disciple Tools Training Extension adds recording of trainings and cross "
-#~| "reference them with contacts, groups, and locations."
-#~ msgid ""
-#~ "Disciple.Tools Training Extension adds recording of trainings and cross "
-#~ "reference them with contacts, groups, and locations."
-#~ msgstr "門徒工具培訓擴展添加了培訓記錄，並與聯繫人，組和位置進行交叉引用。"
-
-#~ msgid "Whoah, partner!"
-#~ msgstr "哇，夥伴！"
-
-#~ msgid "Method does not exist."
-#~ msgstr "方法不存在。"
-
-#~ msgid "Dispatcher"
-#~ msgstr "調度員"
-
-#~ msgid "Members"
-#~ msgstr "會員"
-
-#~ msgid "Contacts"
-#~ msgstr "聯絡人"
-
-#~ msgid "Coaches"
-#~ msgstr "教練員"
-
-#~ msgid "Planted by"
-#~ msgstr "種植者"
-
-#~ msgid "Planting"
-#~ msgstr "種植"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid ""
-#~ "A useful way to training related items and can help training contacts "
-#~ "associated with noteworthy characteristics. e.g. business owner, sports "
-#~ "lover. The contacts can also be filtered using these tags."
-#~ msgstr ""
-#~ "培訓相關項目的有用方法，可以幫助培訓與值得注意的特徵相關的聯繫人。例如企業"
-#~ "主，體育愛好者。也可以使用這些標籤過濾聯繫人。"
-
-#~ msgctxt "input field placeholder"
-#~ msgid "Search Users"
-#~ msgstr "搜索用戶"
-
-#~ msgctxt "Search 'something'"
-#~ msgid "Search %s"
-#~ msgstr "搜索％s"
-
-#~ msgid "Extensions (DT)"
-#~ msgstr "擴展名（DT）"
-
-#~ msgid "Network Dashboard"
-#~ msgstr "網絡儀表板"
-
-#~ msgid "You do not have sufficient permissions to access this page."
-#~ msgstr "您沒有足夠的權限訪問此頁面。"
-
-#~ msgid "nav-tab-active"
-#~ msgstr "導航選項卡"
-
-#~ msgid "Network Dashboard Viewer"
-#~ msgstr "網絡儀表板查看器"
-
-#~ msgid "ID"
-#~ msgstr "ID"
-
-#~ msgid "Site"
-#~ msgstr "現場"
-
-#~ msgid "Users"
-#~ msgstr "用戶數"
-
-#~ msgid "Timestamp"
-#~ msgstr "時間戳記"
-
-#~ msgid "Visit"
-#~ msgstr "訪問"
-
-#~ msgid "View"
-#~ msgstr "視圖"
-
-#~ msgid "Active Snapshot"
-#~ msgstr "活動快照"
-
-#~ msgid "Generations"
-#~ msgstr "世代"
-
-#~ msgid "Follow-up Funnel"
-#~ msgstr "後續程序"
-
-#~ msgid "On-Going Meetings"
-#~ msgstr "正在進行的會議"
-
-#~ msgid "Coaching"
-#~ msgstr "輔導課程"
-
-#~ msgid "Baptized"
-#~ msgstr "受洗"
-
-#~ msgid "Active Groups"
-#~ msgstr "活躍團體"
-
-#~ msgid "Church"
-#~ msgstr "教會"
-
-#~ msgid "Health Metrics"
-#~ msgstr "健康指標"
-
-#~ msgid "Total Users"
-#~ msgstr "總用戶"
-
-#~ msgid "Responders"
-#~ msgstr "回應者"
-
-#~ msgid "Dispatchers"
-#~ msgstr "調度員"
-
-#~ msgid "Multipliers"
-#~ msgstr "乘數"
-
-#~ msgid "Admins"
-#~ msgstr "管理員"
-
-#~ msgid "User Login Activity"
-#~ msgstr "用戶登錄活動"
-
-#~ msgid "Users Active in the Last 30 Days"
-#~ msgstr "最近30天活躍的用戶"
-
-#~ msgid "Practicing"
-#~ msgstr "練習"
-
-#~ msgid "Not Practicing"
-#~ msgstr "不練習"
-
-#~ msgid "Chart Funnel"
-#~ msgstr "圖表渠道"
-
-#~ msgid "Contact"
-#~ msgstr "聯繫"
-
-#~ msgid "Group"
-#~ msgstr "組"
-
-#~ msgid "User"
-#~ msgstr "用戶"
-
-#~ msgid "Sites"
-#~ msgstr "網站"
-
-#~ msgid "Baptisms"
-#~ msgstr "洗禮"
-
-#~ msgid "Churches"
-#~ msgstr "教堂"
-
-#~ msgid "Location"
-#~ msgstr "位置"
-
-#~ msgid "Types"
-#~ msgstr "種類"
-
-#~ msgid "modify filter"
-#~ msgstr "修改過濾器"
-
-#~ msgid "Filter List"
-#~ msgstr "篩選清單"
-
-#~ msgid "reset data"
-#~ msgstr "重置數據"
-
-#~ msgid "Status"
-#~ msgstr "狀態"
-
-#~ msgid "Status - All"
-#~ msgstr "狀態-全部"
-
-#~ msgid "Zoom Level"
-#~ msgstr "縮放等級"
-
-#~ msgid "Auto Zoom"
-#~ msgstr "自動縮放"
-
-#~ msgid "World"
-#~ msgstr "世界"
-
-#~ msgid "Country"
-#~ msgstr "國家"
-
-#~ msgid "State"
-#~ msgstr "州"
-
-#~ msgid "Active Contacts"
-#~ msgstr "活動聯繫人"
-
-#~ msgid "Paused Contacts"
-#~ msgstr "通訊錄已暫停"
-
-#~ msgid "Closed Contacts"
-#~ msgstr "封閉的聯繫人"
-
-#~ msgid "Total Contacts"
-#~ msgstr "總聯絡人"
-
-#~ msgid "New Contacts"
-#~ msgstr "新聯絡人"
-
-#~ msgid "New Baptisms"
-#~ msgstr "新洗禮"
-
-#~ msgid "Baptism Generations"
-#~ msgstr "洗禮世代"
-
-#~ msgid "Select Location"
-#~ msgstr "選擇位置"
-
-#~ msgid "New Groups"
-#~ msgstr "新組"
-
-#~ msgid "Pre-Group"
-#~ msgstr "小組前"
-
-#~ msgid "Pre-Groups"
-#~ msgstr "小組前"
-
-#~ msgid "Last 7 Days"
-#~ msgstr "最近7天"
-
-#~ msgid "Last 30 Days"
-#~ msgstr "最近30天"
-
-#~ msgid "Last 60 Days"
-#~ msgstr "最近60天"
-
-#~ msgid "Last 12 Months"
-#~ msgstr "最近12個月"
-
-#~ msgid "Last 24 Months"
-#~ msgstr "最近24個月"
-
-#~ msgid "This Year"
-#~ msgstr "今年"
-
-#~ msgid "Activity Map"
-#~ msgstr "活動地圖"
-
-#~ msgid "Stats"
-#~ msgstr "統計資料"
-
-#~ msgid "Activities"
-#~ msgstr "活動項目"
-
-#~ msgid "Actions"
-#~ msgstr "動作"
-
-#~ msgid "By Action Type"
-#~ msgstr "按動作類型"
-
-#~ msgid "Key"
-#~ msgstr "鍵"
-
-#~ msgid "Name"
-#~ msgstr "名稱"
-
-#~ msgid "Total Activities"
-#~ msgstr "活動總數"
-
-#~ msgid "Feed"
-#~ msgstr "飼料"
-
-#~ msgid "Time"
-#~ msgstr "時間"
-
-#~ msgid "Result Limit"
-#~ msgstr "結果限制"
-
-#~ msgid "uncheck"
-#~ msgstr "取消選中"
-
-#~ msgid "Home"
-#~ msgstr "家"
-
-#~ msgid "Events (30 Days)"
-#~ msgstr "活動（30天）"
-
-#~ msgid "All Active/Inactive"
-#~ msgstr "全部有效/無效"
-
-#~ msgid "Hover Map"
-#~ msgstr "懸停地圖"
-
-#~ msgid "Network"
-#~ msgstr "網絡"
-
-#~ msgid "Map"
-#~ msgstr "地圖"
-
-#~ msgid "Log"
-#~ msgstr "日誌記錄"
-
-#~ msgid "Activity"
-#~ msgstr "活動"
-
-#~ msgid "Area Maps"
-#~ msgstr "區域地圖"
-
-#~ msgid "Location List"
-#~ msgstr "位置清單"
-
-#~ msgid "Maps"
-#~ msgstr "地圖"
-
-#~ msgid "Site Reports"
-#~ msgstr "網站報告"
-
-#~ msgid "Statistics"
-#~ msgstr "統計"
-
-#~ msgid "Network Dashboard Transfer Both Ways"
-#~ msgstr "網絡儀表板雙向傳輸"
-
-#~ msgid "Network Dashboard Receiving Only"
-#~ msgstr "網絡儀表板僅接收"
-
-#~ msgid "Network Dashboard Sending Only"
-#~ msgstr "網絡儀表板僅發送"
-
-#~ msgid "Network Dashboard Site Profile"
-#~ msgstr "網絡儀表板站點配置文件"
-
-#~ msgid "Disciple Tools - Network Dashboard"
-#~ msgstr "門徒工具-網絡儀表板"
-
-#~ msgid "Streams"
-#~ msgstr "流"
-
-#~ msgid "Stream Maps"
-#~ msgstr "流圖"
-
-#~ msgid "Streams Maps"
-#~ msgstr "流地圖"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid ""
-#~ "A useful way to stream related items and can help stream contacts "
-#~ "associated with noteworthy characteristics. e.g. business owner, sports "
-#~ "lover. The contacts can also be filtered using these tags."
-#~ msgstr ""
-#~ "流式傳輸相關項目的一種有用方法，可以幫助流式傳輸與值得注意的特徵相關聯的聯"
-#~ "繫人。例如企業主，體育愛好者。也可以使用這些標籤過濾聯繫人。"
-
-#~ msgctxt "Stream Status label"
-#~ msgid "New"
-#~ msgstr "新"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "New stream added to the system"
-#~ msgstr "新流添加到系統"
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Model"
-#~ msgstr "模型"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "This stream has been proposed and is in initial conversations"
-#~ msgstr "該信息流已經提出，並且正在初步對話中"
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Assist"
-#~ msgstr "助攻"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "This stream is confirmed, on the calendar."
-#~ msgstr "在日曆上已確認此流。"
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Watch"
-#~ msgstr "看"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "This stream is confirmed, on the calendar, or currently active."
-#~ msgstr "此流已在日曆上確認，或當前處於活動狀態。"
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Leave"
-#~ msgstr "離開"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "This stream has successfully completed"
-#~ msgstr "此流已成功完成"
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Paused"
-#~ msgstr "已暫停"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid ""
-#~ "This contact is currently on hold. It has potential of getting scheduled "
-#~ "in the future."
-#~ msgstr "此聯繫人當前處於保留狀態。它有可能在將來安排。"
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Closed"
-#~ msgstr "關閉"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "This stream is no longer going to happen."
-#~ msgstr "此流將不再發生。"
-
-#~ msgid ""
-#~ "Select the main person who is responsible for reporting on this stream."
-#~ msgstr "選擇負責對此流進行報告的主要人員。"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid ""
-#~ "The person who planted and/or is coaching this stream. Only one person "
-#~ "can be assigned to a stream while multiple people can be coaches / church "
-#~ "planters of this stream."
-#~ msgstr ""
-#~ "種植和/或指導此信息流的人。只能將一個人分配到該流中，而可以將多個人指定為"
-#~ "該流的教練/教堂創建者。"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid "The people streams represented by this stream."
-#~ msgstr "此流代表的人員流。"
-
-#~ msgid "Parent Stream"
-#~ msgstr "父流"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid "A stream that launched this stream."
-#~ msgstr "啟動此流的流。"
-
-#~ msgid "Peer Streams"
-#~ msgstr "對等流"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid ""
-#~ "A related stream that isn't a parent/child in relationship. It might "
-#~ "indicate streams that collaborate, are about to merge, recently split, "
-#~ "etc."
-#~ msgstr "不是親子關係的相關流。它可能指示協作，即將合併，最近拆分等的流。"
-
-#~ msgid "Child Streams"
-#~ msgstr "子流"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid "A stream that has been birthed out of this stream."
-#~ msgstr "從此流中誕生的流。"
-
-#~ msgid "Leader in Stream"
-#~ msgstr "流媒體負責人"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid "Leader of a stream"
-#~ msgstr "流的領導"
-
-#~ msgid "Key Disciple in Stream"
-#~ msgstr "流中的關鍵門徒"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid "Disciple in a stream."
-#~ msgstr "流中的門徒。"
-
-#~ msgid "Connections"
-#~ msgstr "連接數"
-
-#~ msgid "Add Report"
-#~ msgstr "新增報告"
-
-#~ msgid "Disciple Tools - Streams"
-#~ msgstr "門徒工具-流"
-
-#~ msgid "Pre-Group Generations"
-#~ msgstr "小組前世代"
-
-#~ msgid "Group Generations"
-#~ msgstr "群體世代"
-
-#~ msgid "Church Generations"
-#~ msgstr "教會世代"
-
-#~ msgid "Team Generations"
-#~ msgstr "團隊世代"
-
-#~ msgid "%s is reporting a new pre-group generation."
-#~ msgstr "％s報告了新一代的分組前。"
-
-#~ msgid "%s is reporting a new group generation."
-#~ msgstr "％s報告了新一代的群組。"
-
-#~ msgid "%s is reporting a new church generation."
-#~ msgstr "％s報告了新一代的教會。"
-
-#~ msgid "%s is reporting a new leadership team generation."
-#~ msgstr "％s報告了新一代的領導團隊。"
-
-#~ msgid "New Contact"
-#~ msgstr "新聯繫人"
-
-#~ msgid "New Pre-Group"
-#~ msgstr "新預組"
-
-#~ msgid "New Group"
-#~ msgstr "新組"
-
-#~ msgid "New Church"
-#~ msgstr "新教堂"
-
-#~ msgid "New Team"
-#~ msgstr "新團隊"
-
-#~ msgid "New Baptism"
-#~ msgstr "新洗禮"
-
-#~ msgid "New Coaching"
-#~ msgstr "新教練"
-
-#~ msgid "%s is reporting a new contact."
-#~ msgstr "％s正在報告新聯繫人。"
-
-#~ msgid "%s is reporting a new pre-group formed."
-#~ msgstr "％s報告了一個新的預備組。"
-
-#~ msgid "%s is reporting a new group formed."
-#~ msgstr "％s報告了一個新的組。"
-
-#~ msgid "%s is reporting a new church."
-#~ msgstr "％s報告了一座新教堂。"
-
-#~ msgid "%s is reporting a new leadership team formed."
-#~ msgstr "％s報告了新成立的領導團隊。"
-
-#~ msgid "%s is reporting a new baptism."
-#~ msgstr "％s報告了新的洗禮。"
-
-#~ msgid "%s is reporting an coaching relationship."
-#~ msgstr "％s報告了教練關係。"
-
-#~ msgid "Active"
-#~ msgstr "活性"
-
-#~ msgid "Paused"
-#~ msgstr "已暫停"
-
-#~ msgid "Closed"
-#~ msgstr "關閉"
-
-#~ msgid "Inactive"
-#~ msgstr "不活躍"
-
-#~ msgid "https://github.com/DiscipleTools/disciple-tools-network-dashboard"
-#~ msgstr "https://github.com/DiscipleTools/disciple-tools-network-dashboard"
-
-#~ msgid ""
-#~ "Connect this Disciple Tools site to a larger network of sites. Adds "
-#~ "security sensitive totals, mapping, activity logging."
-#~ msgstr ""
-#~ "將此門徒工具站點連接到更大的站點網絡。添加安全性敏感的總計，映射，活動日誌"
-#~ "記錄。"
-
-#~ msgid "https://github.com/DiscipleTools"
-#~ msgstr "https://github.com/DiscipleTools"
-
-#~ msgid "https://github.com/DiscipleTools/disciple-tools-streams"
-#~ msgstr "https://github.com/DiscipleTools/disciple-tools-streams"
-
-#~ msgid ""
-#~ "Disciple Tools Streams Extension adds recording of streams and cross "
-#~ "reference them with contacts, groups, and locations."
-#~ msgstr ""
-#~ "門徒工具Streams Extension添加了流的記錄，並與聯繫人，組和位置進行交叉引"
-#~ "用。"
-
-#~ msgid ""
-#~ "'Disciple Tools - Training' plugin requires 'Disciple Tools' theme to "
-#~ "work. Please activate 'Disciple Tools' theme or make sure it is latest "
-#~ "version."
-#~ msgstr ""
-#~ "“培訓工具-培訓”插件需要使用“培訓工具”主題。請激活“門徒工具”主題或確保它是"
-#~ "最新版本。"
-
-#~ msgid "Current Disciple Tools version: %1$s, required version: %2$s"
-#~ msgstr "當前門徒工具版本：％1 $ s，必需版本：％2 $ s"
-
-#~ msgid "Duplicates"
-#~ msgstr "重複項"
-
-#~ msgid "Coach"
-#~ msgstr "教練"
-
-#~ msgid "Leaders Total"
-#~ msgstr "領導者合計"
-
-#~ msgid "Disciples Total"
-#~ msgstr "弟子總數"
-
-#~ msgid "Key Disciples"
-#~ msgstr "重點學科"
-
-#~ msgid "Groups Total"
-#~ msgstr "小組總數"
-
-#~ msgid "Trainings Total"
-#~ msgstr "培訓總數"
-
-#~ msgid "Dashboard Plugin"
-#~ msgstr "儀表板插件"
-
-#~ msgid "Dashboard"
-#~ msgstr "儀表板"
-
-#~ msgid "%s days since last update"
-#~ msgstr "自上次更新以來的％s天"
-
-#~ msgid "Accept"
-#~ msgstr "接受"
-
-#~ msgid "Decline"
-#~ msgstr "下降"
-
-#~ msgid "# Contacts Assigned"
-#~ msgstr "＃個已分配的聯繫人"
-
-#~ msgid "# First Meetings"
-#~ msgstr "＃第一次會議"
-
-#~ msgid "# Faith milestones"
-#~ msgstr "＃信念里程碑"
-
-#~ msgid "Hurray! You are caught up."
-#~ msgstr "歡呼！你被抓了。"
-
-#~ msgid "remove"
-#~ msgstr "去掉"
-
-#~ msgid "mark as complete"
-#~ msgstr "標記為完成"
-
-#~ msgid "No task created"
-#~ msgstr "未創建任務"
-
-#~ msgid "Reminder"
-#~ msgstr "提醒"
-
-#~ msgid "No note set"
-#~ msgstr "沒有音符集"
-
-#~ msgid "Add a contact"
-#~ msgstr "添加聯繫人"
-
-#~ msgid "View Contacts List"
-#~ msgstr "查看聯繫人列表"
-
-#~ msgid "Pending Contacts"
-#~ msgstr "待處理的聯絡人"
-
-#~ msgid "View All"
-#~ msgstr "查看全部"
-
-#~ msgid "Update Needed"
-#~ msgstr "需要更新"
-
-#~ msgid "Contact Workload"
-#~ msgstr "聯繫工作量"
-
-#~ msgid ""
-#~ "Choose an option to let the dispatcher(s) know if you are ready for new "
-#~ "contacts"
-#~ msgstr "選擇一個選項，讓調度員知道您是否準備好與新聯繫人聯繫"
-
-#~ msgid "Set travel or dates unavailable"
-#~ msgstr "設置旅行或日期不可用"
-
-#~ msgid "Personal Benchmarks"
-#~ msgstr "個人基準"
-
-#~ msgid "Faith Milestone Totals"
-#~ msgstr "信仰里程碑總計"
-
-#~ msgid "Milestones on your active contacts"
-#~ msgstr "活動聯繫人的里程碑"
-
-#~ msgid "Seeker Path Progress"
-#~ msgstr "尋求路徑進展"
-
-#~ msgid "No data to show yet. You have no active contacts"
-#~ msgstr "尚無數據顯示。您沒有活動的聯繫人"
-
-#~ msgid "Disciple Tools - Dashboard"
-#~ msgstr "門徒工具-儀表板"
-
-#~ msgid "https://github.com/DiscipleTools/disciple-tools-dashboard"
-#~ msgstr "https://github.com/DiscipleTools/disciple-tools-dashboard"
-
-#~ msgid ""
-#~ "The multiplier dashboard upgrades the multipliers experience as soon as "
-#~ "they log into the system giving them a landing page with stats."
-#~ msgstr ""
-#~ "乘數儀表板登錄系統後立即升級乘數體驗，從而為他們提供具有統計信息的登錄頁面"
-
-#~ msgid "Reason Assigned To"
-#~ msgstr "原因分配給"
-
-#~ msgid "Follow-Up"
-#~ msgstr "跟進"
-
-#~ msgid "Digital Response"
-#~ msgstr "數字反應"
-
-#~ msgid "Dispatch"
-#~ msgstr "調度"
-
-#~ msgid "No Answer"
-#~ msgstr "沒有答案"
-
-#~ msgid "Talked"
-#~ msgstr "說話了"
-
-#~ msgid "Scheduled"
-#~ msgstr "預定的"
-
-#~ msgid "Complete"
-#~ msgstr "完成"
-
-#~ msgid "No-Show"
-#~ msgstr "沒有出現"
-
-#~ msgid "No permission"
-#~ msgstr "沒有權限"
-
-#~ msgid "All"
-#~ msgstr "所有"
-
-#~ msgid "Ready"
-#~ msgstr "準備"
-
-#~ msgid "Recent"
-#~ msgstr "最近"
-
-#~ msgid "Assign"
-#~ msgstr "分配"
-
-#~ msgid "Choose an option:"
-#~ msgstr "選擇一個選項："
-
-#~ msgid "Cancel"
-#~ msgstr "取消"
-
-#~ msgid "Assign For"
-#~ msgstr "分配給"
-
-#~ msgid "Search"
-#~ msgstr "搜索"
-
-#~ msgid "Claim for follow-up"
-#~ msgstr "要求跟進"
-
-#~ msgid "Ready for Dispatch"
-#~ msgstr "準備派遣"
-
-#~ msgid "Disciple Tools - Advanced M2M Tiles"
-#~ msgstr "門徒工具-高級M2M磁貼"
-
-#~ msgid "https://github.com/DiscipleTools/disciple-tools-advanced-m2m-tiles"
-#~ msgstr "https://github.com/DiscipleTools/disciple-tools-advanced-m2m-tiles"
-
-#~ msgid ""
-#~ "Disciple Tools - Advanced M2M Tiles adds specific supporting tiles for "
-#~ "different roles."
-#~ msgstr "門徒工具-高級M2M磁貼為不同角色添加了特定的支持磁貼。"
+msgstr "清除"

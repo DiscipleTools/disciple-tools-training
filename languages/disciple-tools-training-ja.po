@@ -26,36 +26,31 @@ msgstr "トレーニングマップ"
 
 #: network/network-dashboard-integration.php:44
 msgid "New Training"
-msgstr ""
+msgstr "新しいトレーニング"
 
 #: network/network-dashboard-integration.php:50
 msgid "Training Started"
-msgstr ""
+msgstr "トレーニング開始"
 
 #: network/network-dashboard-integration.php:56
 msgid "Training Completed"
-msgstr ""
+msgstr "トレーニング完了"
 
 #: post-type/module-base.php:28 post-type/module-base.php:495
 msgid "Training"
 msgstr "トレーニング"
 
 #: post-type/module-base.php:70
-#, fuzzy
-#| msgid "Trainings"
 msgid "Trainings Admin"
-msgstr "トレーニング"
+msgstr "トレーニング管理者"
 
 #: post-type/module-base.php:71
-#, fuzzy
-#| msgctxt "Optional Documentation"
-#| msgid "Leader of a training"
 msgid "Admin access to all trainings"
-msgstr "トレーニングのリーダー"
+msgstr "すべてのトレーニングへの管理者アクセス"
 
 #: post-type/module-base.php:76
 msgid "Multiplier"
-msgstr "乗数"
+msgstr "マルチプライヤー"
 
 #: post-type/module-base.php:83
 msgid "Disciple.Tools Admin"
@@ -74,6 +69,8 @@ msgctxt "Optional Documentation"
 msgid ""
 "A useful way to group related items and can be used to filter the records"
 msgstr ""
+"関連するアイテムをグループ化するのに便利な方法で、レコードのフィルタリングに使"
+"用できます"
 
 #: post-type/module-base.php:135
 msgid "Follow"
@@ -130,7 +127,7 @@ msgstr "このトレーニングは、カレンダーで確認されているか
 #: post-type/module-base.php:182
 msgctxt "Training Status label"
 msgid "Complete"
-msgstr "コンプリート"
+msgstr "完了"
 
 #: post-type/module-base.php:183
 msgctxt "Training Status field description"
@@ -153,7 +150,7 @@ msgstr ""
 #: post-type/module-base.php:192
 msgctxt "Training Status label"
 msgid "Closed"
-msgstr "閉まっている"
+msgstr "終了"
 
 #: post-type/module-base.php:193
 msgctxt "Training Status field description"
@@ -162,7 +159,7 @@ msgstr "このトレーニングはもう行われません。"
 
 #: post-type/module-base.php:201
 msgid "Assigned To"
-msgstr "に割り当てられた"
+msgstr "担当者"
 
 #: post-type/module-base.php:202
 msgid ""
@@ -199,7 +196,7 @@ msgstr "ビデオチャットサービスへのリンク"
 
 #: post-type/module-base.php:236
 msgid "Notes"
-msgstr "ノート"
+msgstr "メモ"
 
 #: post-type/module-base.php:237
 msgctxt "Optional Documentation"
@@ -208,7 +205,7 @@ msgstr "トレーニングがいつ行われるかについてのメモ"
 
 #: post-type/module-base.php:246 post-type/module-base.php:509
 msgid "Meeting Times"
-msgstr "ミーティングタイム"
+msgstr "ミーティング時間"
 
 #: post-type/module-base.php:295 post-type/module-base.php:304
 msgid "Locations"
@@ -225,7 +222,7 @@ msgstr "住所"
 
 #: post-type/module-base.php:333
 msgid "Parent Training"
-msgstr "ペアレントトレーニング"
+msgstr "親トレーニング"
 
 #: post-type/module-base.php:334
 msgctxt "Optional Documentation"
@@ -248,7 +245,7 @@ msgstr ""
 
 #: post-type/module-base.php:355
 msgid "Child Training"
-msgstr "チャイルドトレーニング"
+msgstr "子トレーニング"
 
 #: post-type/module-base.php:356
 msgctxt "Optional Documentation"
@@ -284,7 +281,7 @@ msgstr "グループ"
 
 #: post-type/module-base.php:409
 msgid "Member Count"
-msgstr "会員数"
+msgstr "メンバー数"
 
 #: post-type/module-base.php:410 post-type/module-base.php:417
 msgctxt "Optional Documentation"
@@ -326,15 +323,15 @@ msgstr "その他"
 
 #: post-type/module-base.php:545
 msgid "Create"
-msgstr "作成する"
+msgstr "作成"
 
 #: post-type/module-base.php:550
 msgid "Select"
-msgstr "選択する"
+msgstr "選択"
 
 #: post-type/module-base.php:555
 msgid "To add new members, click on 'Create' or 'Select'."
-msgstr "新しいメンバーを追加するには、[作成]または[選択]をクリックします。"
+msgstr "新しいメンバーを追加するには、「作成」または「選択」をクリックします。"
 
 #: post-type/module-base.php:560
 msgctxt "Add members modal"
@@ -347,7 +344,7 @@ msgid ""
 "In the 'Member List' field, type the name of an existing contact to add them "
 "to this training."
 msgstr ""
-"[メンバーリスト]フィールドに、既存の連絡先の名前を入力して、このトレーニング"
+"「メンバーリスト」フィールドに、既存の連絡先の名前を入力して、このトレーニング"
 "に追加します。"
 
 #: post-type/module-base.php:573
@@ -355,22 +352,16 @@ msgid "Close"
 msgstr "閉じる"
 
 #: post-type/module-base.php:713
-#, fuzzy
-#| msgid "Removed %1$s: %2$s"
 msgid "Removed %1$s: {%2$s}"
-msgstr "％1 $ sを削除：％2 $ s"
+msgstr "%1$sを削除しました: {%2$s}"
 
 #: post-type/module-base.php:716
-#, fuzzy
-#| msgid "Added %1$s: %2$s"
 msgid "Added %1$s: {%2$s}"
-msgstr "追加された％1 $ s：％2 $ s"
+msgstr "%1$sを追加しました: {%2$s}"
 
 #: post-type/module-base.php:719
-#, fuzzy
-#| msgid "Updated %1$s: %2$s to %3$s"
 msgid "Updated %1$s: {%2$s} to {%3$s}"
-msgstr "％1 $ sを更新：％2 $ sから％3 $ s"
+msgstr "%1$sを更新しました: {%2$s}から{%3$s}へ"
 
 #: post-type/module-base.php:804
 msgctxt "List Filters"
@@ -385,7 +376,7 @@ msgstr "すべて"
 #: post-type/module-base.php:871
 msgctxt "List Filters"
 msgid "Default Filters"
-msgstr ""
+msgstr "デフォルトフィルター"
 
 #: post-type/module-public-calendar.php:85
 msgid "Reports"
@@ -397,7 +388,7 @@ msgstr "グループの合計"
 
 #: post-type/module-public-calendar.php:122
 msgid "Total Baptisms"
-msgstr "トータルバプテスマ"
+msgstr "バプテスマの合計"
 
 #: post-type/module-public-calendar.php:123
 msgid "Countries"
@@ -418,7 +409,7 @@ msgstr "追加"
 
 #: post-type/module-registration.php:31
 msgid "Magic Links"
-msgstr ""
+msgstr "マジックリンク"
 
 #: post-type/module-registration.php:59
 msgid "copy link"
@@ -426,11 +417,11 @@ msgstr "リンクをコピーする"
 
 #: post-type/module-registration.php:61
 msgid "edit form"
-msgstr "フォームの編集"
+msgstr "フォームを編集"
 
 #: post-type/module-registration.php:63
 msgid "report"
-msgstr "報告する"
+msgstr "レポート"
 
 #: post-type/module-registration.php:67
 msgid "create link"
@@ -446,7 +437,7 @@ msgstr "カレンダーに表示"
 
 #: post-type/module-registration.php:118
 msgid "open registration"
-msgstr "オープン登録 "
+msgstr "オープン登録"
 
 #: post-type/module-registration.php:265
 msgid "add"
@@ -458,7 +449,7 @@ msgstr "使用する"
 
 #: post-type/module-registration.php:267 post-type/module-registration.php:695
 msgid "Search Location"
-msgstr "検索場所"
+msgstr "場所を検索"
 
 #: post-type/module-registration.php:268
 msgid "Delete Location"
@@ -466,11 +457,11 @@ msgstr "場所を削除"
 
 #: post-type/module-registration.php:269
 msgid "Open Mapping"
-msgstr "オープンマッピング"
+msgstr "マッピングを開く"
 
 #: post-type/module-registration.php:270
 msgid "clear"
-msgstr "晴れ"
+msgstr "クリア"
 
 #: post-type/module-registration.php:384
 msgid "Register for Training"
@@ -486,807 +477,4 @@ msgstr "参加する"
 
 #: post-type/module-registration.php:700
 msgid "Clear"
-msgstr "晴れ"
-
-#~ msgid "Apps"
-#~ msgstr "アプリ"
-
-#, fuzzy
-#~| msgid "Disciple Tools - Training"
-#~ msgid "Disciple.Tools - Training"
-#~ msgstr "弟子ツール-トレーニング"
-
-#~ msgid "https://github.com/DiscipleTools/disciple-tools-training"
-#~ msgstr "https://github.com/DiscipleTools/disciple-tools-training"
-
-#, fuzzy
-#~| msgid ""
-#~| "Disciple Tools Training Extension adds recording of trainings and cross "
-#~| "reference them with contacts, groups, and locations."
-#~ msgid ""
-#~ "Disciple.Tools Training Extension adds recording of trainings and cross "
-#~ "reference them with contacts, groups, and locations."
-#~ msgstr ""
-#~ "Disciple Tools Training Extensionは、トレーニングの記録を追加し、連絡先、"
-#~ "グループ、および場所と相互参照します。"
-
-#~ msgid "Whoah, partner!"
-#~ msgstr "おっと、パートナー！"
-
-#~ msgid "Method does not exist."
-#~ msgstr "メソッドが存在しません。"
-
-#~ msgid "Dispatcher"
-#~ msgstr "発車係"
-
-#~ msgid "Members"
-#~ msgstr "メンバー"
-
-#~ msgid "Contacts"
-#~ msgstr "連絡先"
-
-#~ msgid "Coaches"
-#~ msgstr "コーチ"
-
-#~ msgid "Planted by"
-#~ msgstr "によって植えられた"
-
-#~ msgid "Planting"
-#~ msgstr "植付"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid ""
-#~ "A useful way to training related items and can help training contacts "
-#~ "associated with noteworthy characteristics. e.g. business owner, sports "
-#~ "lover. The contacts can also be filtered using these tags."
-#~ msgstr ""
-#~ "関連アイテムをトレーニングするための便利な方法であり、注目すべき特性に関連"
-#~ "する連絡先のトレーニングに役立ちます。例えば事業主、スポーツ愛好家。これら"
-#~ "のタグを使用して、連絡先をフィルタリングすることもできます。"
-
-#~ msgctxt "input field placeholder"
-#~ msgid "Search Users"
-#~ msgstr "ユーザーの検索"
-
-#~ msgctxt "Search 'something'"
-#~ msgid "Search %s"
-#~ msgstr "％sを検索"
-
-#~ msgid "Extensions (DT)"
-#~ msgstr "拡張機能（DT）"
-
-#~ msgid "Network Dashboard"
-#~ msgstr "ネットワークダッシュボード"
-
-#~ msgid "You do not have sufficient permissions to access this page."
-#~ msgstr "このページにアクセスするための十分な権限がありません。"
-
-#~ msgid "nav-tab-active"
-#~ msgstr "nav-tab-active"
-
-#~ msgid "Network Dashboard Viewer"
-#~ msgstr "ネットワークダッシュボードビューア"
-
-#~ msgid "ID"
-#~ msgstr "ID"
-
-#~ msgid "Site"
-#~ msgstr "地点"
-
-#~ msgid "Users"
-#~ msgstr "ユーザー"
-
-#~ msgid "Timestamp"
-#~ msgstr "タイムスタンプ"
-
-#~ msgid "Visit"
-#~ msgstr "訪問"
-
-#~ msgid "View"
-#~ msgstr "見る"
-
-#~ msgid "Active Snapshot"
-#~ msgstr "アクティブスナップショット"
-
-#~ msgid "Generations"
-#~ msgstr "世代"
-
-#~ msgid "Follow-up Funnel"
-#~ msgstr "フォローアップファネル"
-
-#~ msgid "On-Going Meetings"
-#~ msgstr "進行中の会議"
-
-#~ msgid "Coaching"
-#~ msgstr "コーチング"
-
-#~ msgid "Baptized"
-#~ msgstr "バプテスマを受けた"
-
-#~ msgid "Active Groups"
-#~ msgstr "アクティブグループ"
-
-#~ msgid "Church"
-#~ msgstr "教会"
-
-#~ msgid "Health Metrics"
-#~ msgstr "健康指標"
-
-#~ msgid "Total Users"
-#~ msgstr "総ユーザー数"
-
-#~ msgid "Responders"
-#~ msgstr "レスポンダー"
-
-#~ msgid "Dispatchers"
-#~ msgstr "コーディネーター"
-
-#~ msgid "Multipliers"
-#~ msgstr "乗数"
-
-#~ msgid "Admins"
-#~ msgstr "管理者"
-
-#~ msgid "User Login Activity"
-#~ msgstr "ユーザーログインアクティビティ"
-
-#~ msgid "Users Active in the Last 30 Days"
-#~ msgstr "過去30日間にアクティブなユーザー"
-
-#~ msgid "Practicing"
-#~ msgstr "練習"
-
-#~ msgid "Not Practicing"
-#~ msgstr "練習していない"
-
-#~ msgid "Chart Funnel"
-#~ msgstr "チャートファネル"
-
-#~ msgid "Contact"
-#~ msgstr "連絡先"
-
-#~ msgid "Group"
-#~ msgstr "グループ"
-
-#~ msgid "User"
-#~ msgstr "ユーザー"
-
-#~ msgid "Sites"
-#~ msgstr "サイト"
-
-#~ msgid "Baptisms"
-#~ msgstr "バプテスマ"
-
-#~ msgid "Churches"
-#~ msgstr "教会"
-
-#~ msgid "Location"
-#~ msgstr "ロケーション"
-
-#~ msgid "Types"
-#~ msgstr "タイプ"
-
-#~ msgid "modify filter"
-#~ msgstr "フィルタを変更する"
-
-#~ msgid "Filter List"
-#~ msgstr "フィルタリスト"
-
-#~ msgid "reset data"
-#~ msgstr "データをリセット"
-
-#~ msgid "Status"
-#~ msgstr "状態"
-
-#~ msgid "Status - All"
-#~ msgstr "ステータス-すべて"
-
-#~ msgid "Zoom Level"
-#~ msgstr "ズームレベル"
-
-#~ msgid "Auto Zoom"
-#~ msgstr "自動ズーム"
-
-#~ msgid "World"
-#~ msgstr "世界"
-
-#~ msgid "Country"
-#~ msgstr "国"
-
-#~ msgid "State"
-#~ msgstr "状態"
-
-#~ msgid "Active Contacts"
-#~ msgstr "アクティブな連絡先"
-
-#~ msgid "Paused Contacts"
-#~ msgstr "一時停止された連絡先"
-
-#~ msgid "Closed Contacts"
-#~ msgstr "クローズドコンタクト"
-
-#~ msgid "Total Contacts"
-#~ msgstr "総連絡先"
-
-#~ msgid "New Contacts"
-#~ msgstr "新しい連絡先"
-
-#~ msgid "New Baptisms"
-#~ msgstr "新しいバプテスマ"
-
-#~ msgid "Baptism Generations"
-#~ msgstr "バプテスマの世代"
-
-#~ msgid "Select Location"
-#~ msgstr "場所を選択"
-
-#~ msgid "New Groups"
-#~ msgstr "新しいグループ"
-
-#~ msgid "Pre-Group"
-#~ msgstr "プレグループ"
-
-#~ msgid "Pre-Groups"
-#~ msgstr "プレグループ"
-
-#~ msgid "Last 7 Days"
-#~ msgstr "過去7日間"
-
-#~ msgid "Last 30 Days"
-#~ msgstr "過去30日間"
-
-#~ msgid "Last 60 Days"
-#~ msgstr "過去60日間"
-
-#~ msgid "Last 12 Months"
-#~ msgstr "過去12か月"
-
-#~ msgid "Last 24 Months"
-#~ msgstr "過去24か月"
-
-#~ msgid "This Year"
-#~ msgstr "今年"
-
-#~ msgid "Activity Map"
-#~ msgstr "アクティビティマップ"
-
-#~ msgid "Stats"
-#~ msgstr "統計"
-
-#~ msgid "Activities"
-#~ msgstr "活動"
-
-#~ msgid "Actions"
-#~ msgstr "行動"
-
-#~ msgid "By Action Type"
-#~ msgstr "アクションタイプ別"
-
-#~ msgid "Key"
-#~ msgstr "キー"
-
-#~ msgid "Name"
-#~ msgstr "名前"
-
-#~ msgid "Total Activities"
-#~ msgstr "総活動"
-
-#~ msgid "Feed"
-#~ msgstr "フィード"
-
-#~ msgid "Time"
-#~ msgstr "時間"
-
-#~ msgid "Result Limit"
-#~ msgstr "結果の制限"
-
-#~ msgid "uncheck"
-#~ msgstr "チェックを外します"
-
-#~ msgid "Home"
-#~ msgstr "ホーム"
-
-#~ msgid "Events (30 Days)"
-#~ msgstr "イベント（30日）"
-
-#~ msgid "All Active/Inactive"
-#~ msgstr "すべてアクティブ/非アクティブ"
-
-#~ msgid "Hover Map"
-#~ msgstr "ホバーマップ"
-
-#~ msgid "Network"
-#~ msgstr "通信網"
-
-#~ msgid "Map"
-#~ msgstr "地図"
-
-#~ msgid "Log"
-#~ msgstr "ログ"
-
-#~ msgid "Activity"
-#~ msgstr "アクティビティ"
-
-#~ msgid "Area Maps"
-#~ msgstr "エリアマップ"
-
-#~ msgid "Location List"
-#~ msgstr "ロケーションリスト"
-
-#~ msgid "Maps"
-#~ msgstr "マップ"
-
-#~ msgid "Site Reports"
-#~ msgstr "サイトレポート"
-
-#~ msgid "Statistics"
-#~ msgstr "統計"
-
-#~ msgid "Network Dashboard Transfer Both Ways"
-#~ msgstr "ネットワークダッシュボード転送双方向"
-
-#~ msgid "Network Dashboard Receiving Only"
-#~ msgstr "ネットワークダッシュボード受信のみ"
-
-#~ msgid "Network Dashboard Sending Only"
-#~ msgstr "ネットワークダッシュボード送信のみ"
-
-#~ msgid "Network Dashboard Site Profile"
-#~ msgstr "ネットワークダッシュボードサイトプロファイル"
-
-#~ msgid "Disciple Tools - Network Dashboard"
-#~ msgstr "弟子ツール-ネットワークダッシュボード"
-
-#~ msgid "Streams"
-#~ msgstr "ストリーム"
-
-#~ msgid "Stream Maps"
-#~ msgstr "ストリームマップ"
-
-#~ msgid "Streams Maps"
-#~ msgstr "ストリームマップ"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid ""
-#~ "A useful way to stream related items and can help stream contacts "
-#~ "associated with noteworthy characteristics. e.g. business owner, sports "
-#~ "lover. The contacts can also be filtered using these tags."
-#~ msgstr ""
-#~ "関連アイテムをストリーミングするための便利な方法であり、注目すべき特性に関"
-#~ "連付けられた連絡先をストリーミングするのに役立ちます。例えば事業主、スポー"
-#~ "ツ愛好家。これらのタグを使用して、連絡先をフィルタリングすることもできま"
-#~ "す。"
-
-#~ msgctxt "Stream Status label"
-#~ msgid "New"
-#~ msgstr "新着"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "New stream added to the system"
-#~ msgstr "システムに追加された新しいストリーム"
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Model"
-#~ msgstr "モデル"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "This stream has been proposed and is in initial conversations"
-#~ msgstr "このストリームは提案されており、最初の会話中です"
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Assist"
-#~ msgstr "支援する"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "This stream is confirmed, on the calendar."
-#~ msgstr "このストリームは、カレンダーで確認されます。"
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Watch"
-#~ msgstr "見る"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "This stream is confirmed, on the calendar, or currently active."
-#~ msgstr ""
-#~ "このストリームは、カレンダーで確認されているか、現在アクティブです。"
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Leave"
-#~ msgstr "去る"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "This stream has successfully completed"
-#~ msgstr "このストリームは正常に完了しました"
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Paused"
-#~ msgstr "一時停止"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid ""
-#~ "This contact is currently on hold. It has potential of getting scheduled "
-#~ "in the future."
-#~ msgstr ""
-#~ "この連絡先は現在保留中です。将来的にスケジュールされる可能性があります。"
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Closed"
-#~ msgstr "閉まっている"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "This stream is no longer going to happen."
-#~ msgstr "このストリームはもう発生しません。"
-
-#~ msgid ""
-#~ "Select the main person who is responsible for reporting on this stream."
-#~ msgstr "このストリームのレポートを担当する主な担当者を選択します。"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid ""
-#~ "The person who planted and/or is coaching this stream. Only one person "
-#~ "can be assigned to a stream while multiple people can be coaches / church "
-#~ "planters of this stream."
-#~ msgstr ""
-#~ "この小川を植えたり、指導したりした人。ストリームに割り当てることができるの"
-#~ "は1人だけですが、このストリームのコーチ/教会のプランターになることができる"
-#~ "のは複数の人です。"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid "The people streams represented by this stream."
-#~ msgstr "このストリームによって表される人々のストリーム。"
-
-#~ msgid "Parent Stream"
-#~ msgstr "親ストリーム"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid "A stream that launched this stream."
-#~ msgstr "このストリームを開始したストリーム。"
-
-#~ msgid "Peer Streams"
-#~ msgstr "ピアストリーム"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid ""
-#~ "A related stream that isn't a parent/child in relationship. It might "
-#~ "indicate streams that collaborate, are about to merge, recently split, "
-#~ "etc."
-#~ msgstr ""
-#~ "関係の親/子ではない関連ストリーム。コラボレーションしているストリーム、"
-#~ "マージしようとしているストリーム、最近分割されたストリームなどを示している"
-#~ "可能性があります。"
-
-#~ msgid "Child Streams"
-#~ msgstr "子ストリーム"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid "A stream that has been birthed out of this stream."
-#~ msgstr "このストリームから生まれたストリーム。"
-
-#~ msgid "Leader in Stream"
-#~ msgstr "ストリームのリーダー"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid "Leader of a stream"
-#~ msgstr "ストリームのリーダー"
-
-#~ msgid "Key Disciple in Stream"
-#~ msgstr "ストリームの主な弟子"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid "Disciple in a stream."
-#~ msgstr "ストリームの弟子。"
-
-#~ msgid "Connections"
-#~ msgstr "接続"
-
-#~ msgid "Add Report"
-#~ msgstr "レポートを追加"
-
-#~ msgid "Disciple Tools - Streams"
-#~ msgstr "弟子ツール-ストリーム"
-
-#~ msgid "Pre-Group Generations"
-#~ msgstr "グループ前の世代"
-
-#~ msgid "Group Generations"
-#~ msgstr "グループ世代"
-
-#~ msgid "Church Generations"
-#~ msgstr "教会の世代"
-
-#~ msgid "Team Generations"
-#~ msgstr "チーム世代"
-
-#~ msgid "%s is reporting a new pre-group generation."
-#~ msgstr "％sは、新しいグループ前の生成を報告しています。"
-
-#~ msgid "%s is reporting a new group generation."
-#~ msgstr "％sは新しいグループ世代を報告しています。"
-
-#~ msgid "%s is reporting a new church generation."
-#~ msgstr "％sは新しい教会の世代を報告しています。"
-
-#~ msgid "%s is reporting a new leadership team generation."
-#~ msgstr "％sは新しいリーダーシップチームの世代を報告しています。"
-
-#~ msgid "New Contact"
-#~ msgstr "新しい連絡先"
-
-#~ msgid "New Pre-Group"
-#~ msgstr "新しいプレグループ"
-
-#~ msgid "New Group"
-#~ msgstr "新しい集団"
-
-#~ msgid "New Church"
-#~ msgstr "新しい教会"
-
-#~ msgid "New Team"
-#~ msgstr "新しいチーム"
-
-#~ msgid "New Baptism"
-#~ msgstr "新しいバプテスマ"
-
-#~ msgid "New Coaching"
-#~ msgstr "新しいコーチング"
-
-#~ msgid "%s is reporting a new contact."
-#~ msgstr "％sは新しい連絡先を報告しています。"
-
-#~ msgid "%s is reporting a new pre-group formed."
-#~ msgstr "％sは、形成された新しい事前グループを報告しています。"
-
-#~ msgid "%s is reporting a new group formed."
-#~ msgstr "％sは、新しいグループが形成されたことを報告しています。"
-
-#~ msgid "%s is reporting a new church."
-#~ msgstr "％sは新しい教会を報告しています。"
-
-#~ msgid "%s is reporting a new leadership team formed."
-#~ msgstr "％sは、新しいリーダーシップチームが結成されたことを報告しています。"
-
-#~ msgid "%s is reporting a new baptism."
-#~ msgstr "％sは新しいバプテスマを報告しています。"
-
-#~ msgid "%s is reporting an coaching relationship."
-#~ msgstr "％sはコーチング関係を報告しています。"
-
-#~ msgid "Active"
-#~ msgstr "アクティブ"
-
-#~ msgid "Paused"
-#~ msgstr "一時停止"
-
-#~ msgid "Closed"
-#~ msgstr "閉まっている"
-
-#~ msgid "Inactive"
-#~ msgstr "非活性"
-
-#~ msgid "https://github.com/DiscipleTools/disciple-tools-network-dashboard"
-#~ msgstr "https://github.com/DiscipleTools/disciple-tools-network-dashboard"
-
-#~ msgid ""
-#~ "Connect this Disciple Tools site to a larger network of sites. Adds "
-#~ "security sensitive totals, mapping, activity logging."
-#~ msgstr ""
-#~ "このDiscipleToolsサイトをより大きなサイトネットワークに接続します。セキュ"
-#~ "リティに敏感な合計、マッピング、アクティビティログを追加します。"
-
-#~ msgid "https://github.com/DiscipleTools"
-#~ msgstr "https://github.com/DiscipleTools"
-
-#~ msgid "https://github.com/DiscipleTools/disciple-tools-streams"
-#~ msgstr "https://github.com/DiscipleTools/disciple-tools-streams"
-
-#~ msgid ""
-#~ "Disciple Tools Streams Extension adds recording of streams and cross "
-#~ "reference them with contacts, groups, and locations."
-#~ msgstr ""
-#~ "Disciple Tools Streams Extensionは、ストリームの記録を追加し、連絡先、グ"
-#~ "ループ、および場所と相互参照します。"
-
-#~ msgid ""
-#~ "'Disciple Tools - Training' plugin requires 'Disciple Tools' theme to "
-#~ "work. Please activate 'Disciple Tools' theme or make sure it is latest "
-#~ "version."
-#~ msgstr ""
-#~ "「弟子ツール-トレーニング」プラグインが機能するには、「弟子ツール」テーマ"
-#~ "が必要です。 「弟子ツール」テーマをアクティブにするか、最新バージョンであ"
-#~ "ることを確認してください。"
-
-#~ msgid "Current Disciple Tools version: %1$s, required version: %2$s"
-#~ msgstr "現在の弟子ツールのバージョン：％1 $ s、必要なバージョン：％2 $ s"
-
-#~ msgid "Duplicates"
-#~ msgstr "重複"
-
-#~ msgid "Coach"
-#~ msgstr "コーチ"
-
-#~ msgid "Leaders Total"
-#~ msgstr "リーダー合計"
-
-#~ msgid "Disciples Total"
-#~ msgstr "弟子総数"
-
-#~ msgid "Key Disciples"
-#~ msgstr "主な弟子"
-
-#~ msgid "Groups Total"
-#~ msgstr "グループ合計"
-
-#~ msgid "Trainings Total"
-#~ msgstr "トレーニング合計"
-
-#~ msgid "Dashboard Plugin"
-#~ msgstr "ダッシュボードプラグイン"
-
-#~ msgid "Dashboard"
-#~ msgstr "ダッシュボード"
-
-#~ msgid "%s days since last update"
-#~ msgstr "最後の更新から％s日"
-
-#~ msgid "Accept"
-#~ msgstr "受け入れる"
-
-#~ msgid "Decline"
-#~ msgstr "低下"
-
-#~ msgid "# Contacts Assigned"
-#~ msgstr "＃割り当てられた連絡先"
-
-#~ msgid "# First Meetings"
-#~ msgstr "＃最初の会議"
-
-#~ msgid "# Faith milestones"
-#~ msgstr "＃信仰のマイルストーン"
-
-#~ msgid "Hurray! You are caught up."
-#~ msgstr "やあ！あなたは巻き込まれています。"
-
-#~ msgid "remove"
-#~ msgstr "削除する"
-
-#~ msgid "mark as complete"
-#~ msgstr "完了としてマーク"
-
-#~ msgid "No task created"
-#~ msgstr "タスクは作成されません"
-
-#~ msgid "Reminder"
-#~ msgstr "リマインダー"
-
-#~ msgid "No note set"
-#~ msgstr "ノートセットなし"
-
-#~ msgid "Add a contact"
-#~ msgstr "連絡先を追加"
-
-#~ msgid "View Contacts List"
-#~ msgstr "連絡先リストを表示"
-
-#~ msgid "Pending Contacts"
-#~ msgstr "保留中の連絡先"
-
-#~ msgid "View All"
-#~ msgstr "すべて表示"
-
-#~ msgid "Update Needed"
-#~ msgstr "更新が必要"
-
-#~ msgid "Contact Workload"
-#~ msgstr "ワークロードに連絡する"
-
-#~ msgid ""
-#~ "Choose an option to let the dispatcher(s) know if you are ready for new "
-#~ "contacts"
-#~ msgstr ""
-#~ "新しい連絡先の準備ができているかどうかをコーディネーターに知らせるオプショ"
-#~ "ンを選択します"
-
-#~ msgid "Set travel or dates unavailable"
-#~ msgstr "旅行や日付を設定できません"
-
-#~ msgid "Personal Benchmarks"
-#~ msgstr "個人のベンチマーク"
-
-#~ msgid "Faith Milestone Totals"
-#~ msgstr "信仰のマイルストーンの合計"
-
-#~ msgid "Milestones on your active contacts"
-#~ msgstr "アクティブな連絡先のマイルストーン"
-
-#~ msgid "Seeker Path Progress"
-#~ msgstr "シーカーパスの進捗状況"
-
-#~ msgid "No data to show yet. You have no active contacts"
-#~ msgstr "表示するデータはまだありません。アクティブな連絡先がありません"
-
-#~ msgid "Disciple Tools - Dashboard"
-#~ msgstr "弟子ツール-ダッシュボード"
-
-#~ msgid "https://github.com/DiscipleTools/disciple-tools-dashboard"
-#~ msgstr "https://github.com/DiscipleTools/disciple-tools-dashboard"
-
-#~ msgid ""
-#~ "The multiplier dashboard upgrades the multipliers experience as soon as "
-#~ "they log into the system giving them a landing page with stats."
-#~ msgstr ""
-#~ "マルチプライヤダッシュボードは、マルチプライヤがシステムにログインするとす"
-#~ "ぐにエクスペリエンスをアップグレードし、統計情報を含むランディングページを"
-#~ "提供します"
-
-#~ msgid "Reason Assigned To"
-#~ msgstr "割り当てられた理由"
-
-#~ msgid "Follow-Up"
-#~ msgstr "ファローアップ"
-
-#~ msgid "Digital Response"
-#~ msgstr "デジタル応答"
-
-#~ msgid "Dispatch"
-#~ msgstr "ディスパッチ"
-
-#~ msgid "No Answer"
-#~ msgstr "答えなし"
-
-#~ msgid "Talked"
-#~ msgstr "話しました"
-
-#~ msgid "Scheduled"
-#~ msgstr "予定"
-
-#~ msgid "Complete"
-#~ msgstr "コンプリート"
-
-#~ msgid "No-Show"
-#~ msgstr "全く見せない"
-
-#~ msgid "No permission"
-#~ msgstr "全く許可しません"
-
-#~ msgid "All"
-#~ msgstr "すべて"
-
-#~ msgid "Ready"
-#~ msgstr "準備完了"
-
-#~ msgid "Recent"
-#~ msgstr "最近"
-
-#~ msgid "Assign"
-#~ msgstr "割当"
-
-#~ msgid "Choose an option:"
-#~ msgstr "オプションを選択："
-
-#~ msgid "Cancel"
-#~ msgstr "キャンセル"
-
-#~ msgid "Assign For"
-#~ msgstr "割り当て"
-
-#~ msgid "Search"
-#~ msgstr "探す"
-
-#~ msgid "Claim for follow-up"
-#~ msgstr "フォローアップの請求"
-
-#~ msgid "Ready for Dispatch"
-#~ msgstr "発送の準備ができました"
-
-#~ msgid "Disciple Tools - Advanced M2M Tiles"
-#~ msgstr "弟子ツール-高度なM2Mタイル"
-
-#~ msgid "https://github.com/DiscipleTools/disciple-tools-advanced-m2m-tiles"
-#~ msgstr "https://github.com/DiscipleTools/disciple-tools-advanced-m2m-tiles"
-
-#~ msgid ""
-#~ "Disciple Tools - Advanced M2M Tiles adds specific supporting tiles for "
-#~ "different roles."
-#~ msgstr ""
-#~ "弟子ツール-高度なM2Mタイルは、さまざまな役割に特定のサポートタイルを追加し"
-#~ "ます。"
+msgstr "クリア"

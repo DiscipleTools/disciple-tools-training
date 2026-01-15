@@ -12,46 +12,41 @@ msgstr ""
 
 #: metrics/mapbox-maps.php:30
 msgid "Training Maps"
-msgstr "Hărți de antrenament"
+msgstr "Hărți de instruire"
 
 #: metrics/mapbox-maps.php:31 metrics/mapbox-personal-maps.php:31
 #: post-type/module-base.php:29 post-type/module-base.php:461
 #: post-type/module-base.php:473 post-type/module-base.php:496
 msgid "Trainings"
-msgstr "Antrenamente"
+msgstr "Instruiri"
 
 #: metrics/mapbox-personal-maps.php:30
 msgid "Trainings Maps"
-msgstr "Hărți de antrenamente"
+msgstr "Hărți de instruiri"
 
 #: network/network-dashboard-integration.php:44
 msgid "New Training"
-msgstr ""
+msgstr "Instruire nouă"
 
 #: network/network-dashboard-integration.php:50
 msgid "Training Started"
-msgstr ""
+msgstr "Instruire începută"
 
 #: network/network-dashboard-integration.php:56
 msgid "Training Completed"
-msgstr ""
+msgstr "Instruire finalizată"
 
 #: post-type/module-base.php:28 post-type/module-base.php:495
 msgid "Training"
 msgstr "Instruire"
 
 #: post-type/module-base.php:70
-#, fuzzy
-#| msgid "Trainings"
 msgid "Trainings Admin"
-msgstr "Antrenamente"
+msgstr "Administrator instruiri"
 
 #: post-type/module-base.php:71
-#, fuzzy
-#| msgctxt "Optional Documentation"
-#| msgid "Leader of a training"
 msgid "Admin access to all trainings"
-msgstr "Lider al unui antrenament"
+msgstr "Acces de administrator la toate instruirile"
 
 #: post-type/module-base.php:76
 msgid "Multiplier"
@@ -59,7 +54,7 @@ msgstr "Multiplicator"
 
 #: post-type/module-base.php:83
 msgid "Disciple.Tools Admin"
-msgstr "Disciple.Tools Administrator"
+msgstr "Administrator Disciple.Tools"
 
 #: post-type/module-base.php:90
 msgid "Administrator"
@@ -74,14 +69,16 @@ msgctxt "Optional Documentation"
 msgid ""
 "A useful way to group related items and can be used to filter the records"
 msgstr ""
+"O modalitate utilă de a grupa elemente conexe și poate fi folosită pentru a "
+"filtra înregistrările"
 
 #: post-type/module-base.php:135
 msgid "Follow"
-msgstr "Urma"
+msgstr "Urmărește"
 
 #: post-type/module-base.php:142
 msgid "Un-Follow"
-msgstr "Anulați urmărirea"
+msgstr "Anulează urmărirea"
 
 #: post-type/module-base.php:148
 msgid "Tasks"
@@ -95,7 +92,7 @@ msgstr "Nou"
 #: post-type/module-base.php:163
 msgctxt "Training Status field description"
 msgid "New training added to the system"
-msgstr "Nou antrenament adăugat la sistem"
+msgstr "Instruire nouă adăugată în sistem"
 
 #: post-type/module-base.php:167
 msgctxt "Training Status label"
@@ -115,27 +112,27 @@ msgstr "Programat"
 #: post-type/module-base.php:173
 msgctxt "Training Status field description"
 msgid "This training is confirmed, on the calendar."
-msgstr "Această pregătire este confirmată, în calendar."
+msgstr "Această instruire este confirmată, în calendar."
 
 #: post-type/module-base.php:177
 msgctxt "Training Status label"
 msgid "In Progress"
-msgstr "In progres"
+msgstr "În desfășurare"
 
 #: post-type/module-base.php:178
 msgctxt "Training Status field description"
 msgid "This training is confirmed, on the calendar, or currently active."
-msgstr "Acest antrenament este confirmat, în calendar, sau activ în prezent."
+msgstr "Această instruire este confirmată, în calendar, sau activă în prezent."
 
 #: post-type/module-base.php:182
 msgctxt "Training Status label"
 msgid "Complete"
-msgstr "Complet"
+msgstr "Finalizat"
 
 #: post-type/module-base.php:183
 msgctxt "Training Status field description"
 msgid "This training has successfully completed"
-msgstr "Acest training a fost finalizat cu succes"
+msgstr "Această instruire a fost finalizată cu succes"
 
 #: post-type/module-base.php:187
 msgctxt "Training Status label"
@@ -148,8 +145,8 @@ msgid ""
 "This contact is currently on hold. It has potential of getting scheduled in "
 "the future."
 msgstr ""
-"Acest contact este în prezent în așteptare. Are potențialul de a fi "
-"programat în viitor."
+"Această instruire este în prezent în așteptare. Are potențialul de a fi "
+"programată în viitor."
 
 #: post-type/module-base.php:192
 msgctxt "Training Status label"
@@ -159,22 +156,22 @@ msgstr "Închis"
 #: post-type/module-base.php:193
 msgctxt "Training Status field description"
 msgid "This training is no longer going to happen."
-msgstr "Acest antrenament nu se va mai întâmpla."
+msgstr "Această instruire nu se va mai desfășura."
 
 #: post-type/module-base.php:201
 msgid "Assigned To"
-msgstr "Atribuit"
+msgstr "Atribuit către"
 
 #: post-type/module-base.php:202
 msgid ""
 "Select the main person who is responsible for reporting on this training."
 msgstr ""
 "Selectați persoana principală care este responsabilă pentru raportarea "
-"acestui curs."
+"acestei instruiri."
 
 #: post-type/module-base.php:209
 msgid "Training Coach / Church Planter"
-msgstr "Antrenor de formare / plantator de biserici"
+msgstr "Antrenor de instruire / Plantator de biserici"
 
 #: post-type/module-base.php:210
 msgctxt "Optional Documentation"
@@ -183,9 +180,9 @@ msgid ""
 "be assigned to a training while multiple people can be coaches / church "
 "planters of this training."
 msgstr ""
-"Persoana care a plantat și / sau antrenează acest antrenament. O singură "
-"persoană poate fi alocată unui antrenament, în timp ce mai multe persoane "
-"pot fi antrenori / plantatori de biserici pentru acest antrenament."
+"Persoana care a plantat și/sau antrenează această instruire. O singură "
+"persoană poate fi atribuită unei instruiri, în timp ce mai multe persoane "
+"pot fi antrenori / plantatori de biserici pentru această instruire."
 
 #: post-type/module-base.php:222
 msgid "Requires Update"
@@ -207,11 +204,11 @@ msgstr "Note"
 #: post-type/module-base.php:237
 msgctxt "Optional Documentation"
 msgid "Notes on when the trainings will happen"
-msgstr "Note cu privire la momentul în care vor avea loc antrenamentele"
+msgstr "Note cu privire la momentul în care vor avea loc instruirile"
 
 #: post-type/module-base.php:246 post-type/module-base.php:509
 msgid "Meeting Times"
-msgstr "Timpuri de întâlnire"
+msgstr "Ore de întâlnire"
 
 #: post-type/module-base.php:295 post-type/module-base.php:304
 msgid "Locations"
@@ -224,20 +221,20 @@ msgstr "Locația generală în care se află acest contact."
 
 #: post-type/module-base.php:313
 msgid "Address"
-msgstr "Abordare"
+msgstr "Adresă"
 
 #: post-type/module-base.php:333
 msgid "Parent Training"
-msgstr "Pregătirea părinților"
+msgstr "Instruire părinte"
 
 #: post-type/module-base.php:334
 msgctxt "Optional Documentation"
 msgid "A training that launched this training."
-msgstr "Un training care a lansat acest training."
+msgstr "O instruire care a lansat această instruire."
 
 #: post-type/module-base.php:344
 msgid "Peer Training"
-msgstr "Pregătirea colegilor"
+msgstr "Instruire pereche"
 
 #: post-type/module-base.php:345
 msgctxt "Optional Documentation"
@@ -245,18 +242,18 @@ msgid ""
 "A related training that isn't a parent/child in relationship. It might "
 "indicate trainings that collaborate, are about to merge, recently split, etc."
 msgstr ""
-"O pregătire asociată care nu este un părinte / copil în relație. Ar putea "
-"indica instruiri care colaborează, sunt pe cale să fuzioneze, să fie "
-"divizate recent etc."
+"O instruire conexă care nu este într-o relație părinte/copil. Ar putea "
+"indica instruiri care colaborează, sunt pe cale să fuzioneze, s-au divizat "
+"recent, etc."
 
 #: post-type/module-base.php:355
 msgid "Child Training"
-msgstr "Instruirea copiilor"
+msgstr "Instruire copil"
 
 #: post-type/module-base.php:356
 msgctxt "Optional Documentation"
 msgid "A training that has been birthed out of this training."
-msgstr "Un antrenament care a fost născut din acest antrenament."
+msgstr "O instruire care a fost generată din această instruire."
 
 #: post-type/module-base.php:366 post-type/module-base.php:508
 #: post-type/module-base.php:542
@@ -266,7 +263,7 @@ msgstr "Lista membrilor"
 #: post-type/module-base.php:367
 msgctxt "Optional Documentation"
 msgid "The contacts who are members of this training."
-msgstr "Contactele care sunt membre ale acestui training."
+msgstr "Contactele care sunt membri ai acestei instruiri."
 
 #: post-type/module-base.php:377
 msgid "Leaders"
@@ -279,7 +276,7 @@ msgstr "Grupuri de oameni"
 #: post-type/module-base.php:388
 msgctxt "Optional Documentation"
 msgid "The people trainings represented by this training."
-msgstr "Instruirea oamenilor reprezentată de acest antrenament."
+msgstr "Grupurile de oameni reprezentate de această instruire."
 
 #: post-type/module-base.php:397
 msgid "Groups"
@@ -298,22 +295,22 @@ msgid ""
 "members of the training."
 msgstr ""
 "Numărul de membri în această instruire. Acesta va fi actualizat automat când "
-"membrii noi sunt adăugați sau eliminați în lista de membri. Schimbați manual "
+"membrii noi sunt adăugați sau eliminați din lista de membri. Schimbați manual "
 "acest număr pentru a include persoanele care ar putea să nu fie în sistem, "
-"dar care sunt, de asemenea, membre ale instruirii."
+"dar care sunt, de asemenea, membri ai instruirii."
 
 #: post-type/module-base.php:416
 msgid "Leader Count"
-msgstr "Conducător de lideri"
+msgstr "Număr de lideri"
 
 #: post-type/module-base.php:426
 msgid "Training as Leader"
-msgstr "Pregătirea ca lider"
+msgstr "Instruire ca lider"
 
 #: post-type/module-base.php:427
 msgctxt "Optional Documentation"
 msgid "Leader of a training"
-msgstr "Lider al unui antrenament"
+msgstr "Lider al unei instruiri"
 
 #: post-type/module-base.php:438
 msgid "Training as Participant"
@@ -322,23 +319,23 @@ msgstr "Instruire ca participant"
 #: post-type/module-base.php:439
 msgctxt "Optional Documentation"
 msgid "Participant in a training."
-msgstr "Participant la un training."
+msgstr "Participant la o instruire."
 
 #: post-type/module-base.php:510
 msgid "Other"
-msgstr "Alte"
+msgstr "Altele"
 
 #: post-type/module-base.php:545
 msgid "Create"
-msgstr "Crea"
+msgstr "Creează"
 
 #: post-type/module-base.php:550
 msgid "Select"
-msgstr "Selectați"
+msgstr "Selectează"
 
 #: post-type/module-base.php:555
 msgid "To add new members, click on 'Create' or 'Select'."
-msgstr "Pentru a adăuga noi membri, faceți clic pe „Creați” sau „Selectați”."
+msgstr "Pentru a adăuga noi membri, faceți clic pe 'Creează' sau 'Selectează'."
 
 #: post-type/module-base.php:560
 msgctxt "Add members modal"
@@ -351,35 +348,29 @@ msgid ""
 "In the 'Member List' field, type the name of an existing contact to add them "
 "to this training."
 msgstr ""
-"În câmpul „Listă de membri”, tastați numele unui contact existent pentru a "
-"le adăuga la acest curs."
+"În câmpul 'Lista membrilor', tastați numele unui contact existent pentru a-l "
+"adăuga la această instruire."
 
 #: post-type/module-base.php:573
 msgid "Close"
 msgstr "Închide"
 
 #: post-type/module-base.php:713
-#, fuzzy
-#| msgid "Removed %1$s: %2$s"
 msgid "Removed %1$s: {%2$s}"
-msgstr "Eliminat %1$s: %2$s"
+msgstr "Eliminat %1$s: {%2$s}"
 
 #: post-type/module-base.php:716
-#, fuzzy
-#| msgid "Added %1$s: %2$s"
 msgid "Added %1$s: {%2$s}"
-msgstr "S-a adăugat %1$s: %2$s"
+msgstr "Adăugat %1$s: {%2$s}"
 
 #: post-type/module-base.php:719
-#, fuzzy
-#| msgid "Updated %1$s: %2$s to %3$s"
 msgid "Updated %1$s: {%2$s} to {%3$s}"
-msgstr "Actualizat %1$s: %2$s până la %3$s"
+msgstr "Actualizat %1$s: {%2$s} la {%3$s}"
 
 #: post-type/module-base.php:804
 msgctxt "List Filters"
 msgid "Assigned to me"
-msgstr "Mi-a fost atribuit"
+msgstr "Atribuite mie"
 
 #: post-type/module-base.php:812
 msgctxt "List Filters"
@@ -389,7 +380,7 @@ msgstr "Toate"
 #: post-type/module-base.php:871
 msgctxt "List Filters"
 msgid "Default Filters"
-msgstr ""
+msgstr "Filtre implicite"
 
 #: post-type/module-public-calendar.php:85
 msgid "Reports"
@@ -401,7 +392,7 @@ msgstr "Total grupuri"
 
 #: post-type/module-public-calendar.php:122
 msgid "Total Baptisms"
-msgstr "Botezuri totale"
+msgstr "Total botezuri"
 
 #: post-type/module-public-calendar.php:123
 msgid "Countries"
@@ -418,19 +409,19 @@ msgstr "Județe"
 #: post-type/module-public-calendar.php:432
 #: post-type/module-registration.php:385
 msgid "Add"
-msgstr "Adăuga"
+msgstr "Adaugă"
 
 #: post-type/module-registration.php:31
 msgid "Magic Links"
-msgstr ""
+msgstr "Linkuri magice"
 
 #: post-type/module-registration.php:59
 msgid "copy link"
-msgstr "copiază legătură"
+msgstr "copiază link"
 
 #: post-type/module-registration.php:61
 msgid "edit form"
-msgstr "editați formularul"
+msgstr "editează formularul"
 
 #: post-type/module-registration.php:63
 msgid "report"
@@ -438,51 +429,51 @@ msgstr "raport"
 
 #: post-type/module-registration.php:67
 msgid "create link"
-msgstr "creați link"
+msgstr "creează link"
 
 #: post-type/module-registration.php:114
 msgid "link"
-msgstr "legătură"
+msgstr "link"
 
 #: post-type/module-registration.php:116
 msgid "show on calendar"
-msgstr "arată în calendar"
+msgstr "afișează în calendar"
 
 #: post-type/module-registration.php:118
 msgid "open registration"
-msgstr "înregistrare deschisă "
+msgstr "înregistrare deschisă"
 
 #: post-type/module-registration.php:265
 msgid "add"
-msgstr "adăuga"
+msgstr "adaugă"
 
 #: post-type/module-registration.php:266
 msgid "Use"
-msgstr "Utilizare"
+msgstr "Utilizează"
 
 #: post-type/module-registration.php:267 post-type/module-registration.php:695
 msgid "Search Location"
-msgstr "Căutați locația"
+msgstr "Caută locația"
 
 #: post-type/module-registration.php:268
 msgid "Delete Location"
-msgstr "Ștergeți locația"
+msgstr "Șterge locația"
 
 #: post-type/module-registration.php:269
 msgid "Open Mapping"
-msgstr "Deschideți cartografierea"
+msgstr "Deschide harta"
 
 #: post-type/module-registration.php:270
 msgid "clear"
-msgstr "clar"
+msgstr "șterge"
 
 #: post-type/module-registration.php:384
 msgid "Register for Training"
-msgstr "Înregistrați-vă pentru instruire"
+msgstr "Înregistrează-te pentru instruire"
 
-#: post-type/module-registration.php:386
+#: post-type/module-registration.php:385
 msgid "Join Training"
-msgstr "Alătură-te antrenamentului"
+msgstr "Alătură-te instruirii"
 
 #: post-type/module-registration.php:387
 msgid "Join in"
@@ -490,811 +481,4 @@ msgstr "Alătură-te"
 
 #: post-type/module-registration.php:700
 msgid "Clear"
-msgstr "clar"
-
-#~ msgid "Apps"
-#~ msgstr "Aplicații"
-
-#, fuzzy
-#~| msgid "Disciple Tools - Training"
-#~ msgid "Disciple.Tools - Training"
-#~ msgstr "Instrumente pentru discipoli - Instruire"
-
-#~ msgid "https://github.com/DiscipleTools/disciple-tools-training"
-#~ msgstr "https://github.com/DiscipleTools/disciple-tools-training"
-
-#, fuzzy
-#~| msgid ""
-#~| "Disciple Tools Training Extension adds recording of trainings and cross "
-#~| "reference them with contacts, groups, and locations."
-#~ msgid ""
-#~ "Disciple.Tools Training Extension adds recording of trainings and cross "
-#~ "reference them with contacts, groups, and locations."
-#~ msgstr ""
-#~ "Disciple Tools Training Extension adaugă înregistrarea antrenamentelor și "
-#~ "le face referință încrucișată cu contacte, grupuri și locații."
-
-#~ msgid "Whoah, partner!"
-#~ msgstr "Whoah, partener!"
-
-#~ msgid "Method does not exist."
-#~ msgstr "Metoda nu există."
-
-#~ msgid "Dispatcher"
-#~ msgstr "Dispecer"
-
-#~ msgid "Members"
-#~ msgstr "Membri"
-
-#~ msgid "Contacts"
-#~ msgstr "Contacte"
-
-#~ msgid "Coaches"
-#~ msgstr "Antrenori"
-
-#~ msgid "Planted by"
-#~ msgstr "Plantat de"
-
-#~ msgid "Planting"
-#~ msgstr "Plantarea"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid ""
-#~ "A useful way to training related items and can help training contacts "
-#~ "associated with noteworthy characteristics. e.g. business owner, sports "
-#~ "lover. The contacts can also be filtered using these tags."
-#~ msgstr ""
-#~ "O modalitate utilă de instruire a articolelor conexe și poate ajuta la "
-#~ "formarea contactelor asociate cu caracteristici demne de remarcat. de "
-#~ "exemplu. proprietar de afaceri, iubitor de sport. Contactele pot fi, de "
-#~ "asemenea, filtrate folosind aceste etichete."
-
-#~ msgctxt "input field placeholder"
-#~ msgid "Search Users"
-#~ msgstr "Căutați utilizatori"
-
-#~ msgctxt "Search 'something'"
-#~ msgid "Search %s"
-#~ msgstr "Căutaț %s"
-
-#~ msgid "Extensions (DT)"
-#~ msgstr "Extensii (DT)"
-
-#~ msgid "Network Dashboard"
-#~ msgstr "Tabloul de bord al rețelei"
-
-#~ msgid "You do not have sufficient permissions to access this page."
-#~ msgstr "Nu aveți suficiente permisiuni pentru a accesa această pagină."
-
-#~ msgid "nav-tab-active"
-#~ msgstr "nav-tab-active"
-
-#~ msgid "Network Dashboard Viewer"
-#~ msgstr "Network Dashboard Viewer"
-
-#~ msgid "ID"
-#~ msgstr "ID"
-
-#~ msgid "Site"
-#~ msgstr "Site"
-
-#~ msgid "Users"
-#~ msgstr "Utilizatori"
-
-#~ msgid "Timestamp"
-#~ msgstr "Timestamp-ul"
-
-#~ msgid "Visit"
-#~ msgstr "Vizita"
-
-#~ msgid "View"
-#~ msgstr "Vedere"
-
-#~ msgid "Active Snapshot"
-#~ msgstr "Instantaneu activ"
-
-#~ msgid "Generations"
-#~ msgstr "Generații"
-
-#~ msgid "Follow-up Funnel"
-#~ msgstr "Pâlnie de urmărire"
-
-#~ msgid "On-Going Meetings"
-#~ msgstr "Întâlniri în desfășurare"
-
-#~ msgid "Coaching"
-#~ msgstr "Antrenor"
-
-#~ msgid "Baptized"
-#~ msgstr "Botezat"
-
-#~ msgid "Active Groups"
-#~ msgstr "Grupuri active"
-
-#~ msgid "Church"
-#~ msgstr "Biserică"
-
-#~ msgid "Health Metrics"
-#~ msgstr "Valori de sănătate"
-
-#~ msgid "Total Users"
-#~ msgstr "Total utilizatori"
-
-#~ msgid "Responders"
-#~ msgstr "Răspunsuri"
-
-#~ msgid "Dispatchers"
-#~ msgstr "Dispecerii"
-
-#~ msgid "Multipliers"
-#~ msgstr "Multiplicatori"
-
-#~ msgid "Admins"
-#~ msgstr "Administratori"
-
-#~ msgid "User Login Activity"
-#~ msgstr "Activitate conectare utilizator"
-
-#~ msgid "Users Active in the Last 30 Days"
-#~ msgstr "Utilizatori activi în ultimele 30 de zile"
-
-#~ msgid "Practicing"
-#~ msgstr "Exersând"
-
-#~ msgid "Not Practicing"
-#~ msgstr "Nu exersează"
-
-#~ msgid "Chart Funnel"
-#~ msgstr "Pâlnie pentru diagrame"
-
-#~ msgid "Contact"
-#~ msgstr "a lua legatura"
-
-#~ msgid "Group"
-#~ msgstr "grup"
-
-#~ msgid "User"
-#~ msgstr "Utilizator"
-
-#~ msgid "Sites"
-#~ msgstr "Site-uri"
-
-#~ msgid "Baptisms"
-#~ msgstr "Botezuri"
-
-#~ msgid "Churches"
-#~ msgstr "Biserici"
-
-#~ msgid "Location"
-#~ msgstr "Locație"
-
-#~ msgid "Types"
-#~ msgstr "Tipuri"
-
-#~ msgid "modify filter"
-#~ msgstr "modificați filtrul"
-
-#~ msgid "Filter List"
-#~ msgstr "Lista de filtre"
-
-#~ msgid "reset data"
-#~ msgstr "resetați datele"
-
-#~ msgid "Status"
-#~ msgstr "stare"
-
-#~ msgid "Status - All"
-#~ msgstr "Stare - Toate"
-
-#~ msgid "Zoom Level"
-#~ msgstr "Nivel de zoom"
-
-#~ msgid "Auto Zoom"
-#~ msgstr "Zoom automat"
-
-#~ msgid "World"
-#~ msgstr "Lume"
-
-#~ msgid "Country"
-#~ msgstr "Țară"
-
-#~ msgid "State"
-#~ msgstr "Stat"
-
-#~ msgid "Active Contacts"
-#~ msgstr "Contacte active"
-
-#~ msgid "Paused Contacts"
-#~ msgstr "Contacte întrerupte"
-
-#~ msgid "Closed Contacts"
-#~ msgstr "Contacte închise"
-
-#~ msgid "Total Contacts"
-#~ msgstr "Total persoane de contact"
-
-#~ msgid "New Contacts"
-#~ msgstr "Contacte noi"
-
-#~ msgid "New Baptisms"
-#~ msgstr "Noi Botezuri"
-
-#~ msgid "Baptism Generations"
-#~ msgstr "Generațiile Botezului"
-
-#~ msgid "Select Location"
-#~ msgstr "Selectați Locație"
-
-#~ msgid "New Groups"
-#~ msgstr "Grupuri noi"
-
-#~ msgid "Pre-Group"
-#~ msgstr "Pre-grup"
-
-#~ msgid "Pre-Groups"
-#~ msgstr "Pre-grupuri"
-
-#~ msgid "Last 7 Days"
-#~ msgstr "Ultimele 7 zile"
-
-#~ msgid "Last 30 Days"
-#~ msgstr "Ultimele 30 de zile"
-
-#~ msgid "Last 60 Days"
-#~ msgstr "Ultimele 60 de zile"
-
-#~ msgid "Last 12 Months"
-#~ msgstr "Ultimele 12 luni"
-
-#~ msgid "Last 24 Months"
-#~ msgstr "Ultimele 24 de luni"
-
-#~ msgid "This Year"
-#~ msgstr "Anul acesta"
-
-#~ msgid "Activity Map"
-#~ msgstr "Harta de activitate"
-
-#~ msgid "Stats"
-#~ msgstr "Statistici"
-
-#~ msgid "Activities"
-#~ msgstr "Activități"
-
-#~ msgid "Actions"
-#~ msgstr "Acțiuni"
-
-#~ msgid "By Action Type"
-#~ msgstr "După tipul de acțiune"
-
-#~ msgid "Key"
-#~ msgstr "Cheie"
-
-#~ msgid "Name"
-#~ msgstr "Nume"
-
-#~ msgid "Total Activities"
-#~ msgstr "Activități totale"
-
-#~ msgid "Feed"
-#~ msgstr "A hrani"
-
-#~ msgid "Time"
-#~ msgstr "Timp"
-
-#~ msgid "Result Limit"
-#~ msgstr "Limita de rezultat"
-
-#~ msgid "uncheck"
-#~ msgstr "debifează"
-
-#~ msgid "Home"
-#~ msgstr "Acasă"
-
-#~ msgid "Events (30 Days)"
-#~ msgstr "Evenimente (30 de zile)"
-
-#~ msgid "All Active/Inactive"
-#~ msgstr "Toate active / inactive"
-
-#~ msgid "Hover Map"
-#~ msgstr "Plasați cursorul"
-
-#~ msgid "Network"
-#~ msgstr "Reţea"
-
-#~ msgid "Map"
-#~ msgstr "Hartă"
-
-#~ msgid "Log"
-#~ msgstr "Buturuga"
-
-#~ msgid "Activity"
-#~ msgstr "Activitate"
-
-#~ msgid "Area Maps"
-#~ msgstr "Hărți de zonă"
-
-#~ msgid "Location List"
-#~ msgstr "Lista de locații"
-
-#~ msgid "Maps"
-#~ msgstr "Hărți"
-
-#~ msgid "Site Reports"
-#~ msgstr "Rapoarte de site"
-
-#~ msgid "Statistics"
-#~ msgstr "Statistici"
-
-#~ msgid "Network Dashboard Transfer Both Ways"
-#~ msgstr "Transfer tablou de bord de rețea în ambele moduri"
-
-#~ msgid "Network Dashboard Receiving Only"
-#~ msgstr "Numai recepție tablou de bord rețea"
-
-#~ msgid "Network Dashboard Sending Only"
-#~ msgstr "Numai trimiterea tabloului de bord al rețelei"
-
-#~ msgid "Network Dashboard Site Profile"
-#~ msgstr "Profilul site-ului tabloul de bord al rețelei"
-
-#~ msgid "Disciple Tools - Network Dashboard"
-#~ msgstr "Instrumente pentru discipoli - Tabloul de bord pentru rețea"
-
-#~ msgid "Streams"
-#~ msgstr "Fluxuri"
-
-#~ msgid "Stream Maps"
-#~ msgstr "Stream Maps"
-
-#~ msgid "Streams Maps"
-#~ msgstr "Fluxuri Hărți"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid ""
-#~ "A useful way to stream related items and can help stream contacts "
-#~ "associated with noteworthy characteristics. e.g. business owner, sports "
-#~ "lover. The contacts can also be filtered using these tags."
-#~ msgstr ""
-#~ "O modalitate utilă de a transmite în flux articole conexe și poate ajuta "
-#~ "la transmiterea contactelor asociate cu caracteristici remarcabile. de "
-#~ "exemplu. proprietar de afaceri, iubitor de sport. Contactele pot fi, de "
-#~ "asemenea, filtrate folosind aceste etichete."
-
-#~ msgctxt "Stream Status label"
-#~ msgid "New"
-#~ msgstr "Nou"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "New stream added to the system"
-#~ msgstr "Flux nou adăugat la sistem"
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Model"
-#~ msgstr "Model"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "This stream has been proposed and is in initial conversations"
-#~ msgstr "Acest flux a fost propus și se află în conversațiile inițiale"
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Assist"
-#~ msgstr "Asista"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "This stream is confirmed, on the calendar."
-#~ msgstr "Acest flux este confirmat, în calendar."
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Watch"
-#~ msgstr "Ceas"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "This stream is confirmed, on the calendar, or currently active."
-#~ msgstr "Acest flux este confirmat, în calendar, sau activ în prezent."
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Leave"
-#~ msgstr "Părăsi"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "This stream has successfully completed"
-#~ msgstr "Acest flux a fost finalizat cu succes"
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Paused"
-#~ msgstr "Întrerupt"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid ""
-#~ "This contact is currently on hold. It has potential of getting scheduled "
-#~ "in the future."
-#~ msgstr ""
-#~ "Acest contact este în prezent în așteptare. Are potențialul de a fi "
-#~ "programat în viitor."
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Closed"
-#~ msgstr "Închis"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "This stream is no longer going to happen."
-#~ msgstr "Acest flux nu se va mai întâmpla."
-
-#~ msgid ""
-#~ "Select the main person who is responsible for reporting on this stream."
-#~ msgstr ""
-#~ "Selectați persoana principală care este responsabilă pentru raportarea "
-#~ "acestui flux."
-
-#~ msgctxt "Optional Documentation"
-#~ msgid ""
-#~ "The person who planted and/or is coaching this stream. Only one person "
-#~ "can be assigned to a stream while multiple people can be coaches / church "
-#~ "planters of this stream."
-#~ msgstr ""
-#~ "Persoana care a plantat și / sau antrenează acest flux. O singură "
-#~ "persoană poate fi alocată unui flux, în timp ce mai multe persoane pot fi "
-#~ "antrenori / plantatori de biserici pentru acest flux."
-
-#~ msgctxt "Optional Documentation"
-#~ msgid "The people streams represented by this stream."
-#~ msgstr "Fluxurile de oameni reprezentate de acest flux."
-
-#~ msgid "Parent Stream"
-#~ msgstr "Flux părinte"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid "A stream that launched this stream."
-#~ msgstr "Un flux care a lansat acest flux."
-
-#~ msgid "Peer Streams"
-#~ msgstr "Fluxuri de la egal la egal"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid ""
-#~ "A related stream that isn't a parent/child in relationship. It might "
-#~ "indicate streams that collaborate, are about to merge, recently split, "
-#~ "etc."
-#~ msgstr ""
-#~ "Un flux asociat care nu este un părinte / copil în relație. Ar putea "
-#~ "indica fluxuri care colaborează, sunt pe cale să fuzioneze, să fie "
-#~ "divizate recent etc."
-
-#~ msgid "Child Streams"
-#~ msgstr "Fluxuri pentru copii"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid "A stream that has been birthed out of this stream."
-#~ msgstr "Un flux care a fost născut din acest flux."
-
-#~ msgid "Leader in Stream"
-#~ msgstr "Lider în Stream"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid "Leader of a stream"
-#~ msgstr "Lider al unui flux"
-
-#~ msgid "Key Disciple in Stream"
-#~ msgstr "Discipolul cheie în flux"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid "Disciple in a stream."
-#~ msgstr "Discipol într-un flux."
-
-#~ msgid "Connections"
-#~ msgstr "Conexiuni"
-
-#~ msgid "Add Report"
-#~ msgstr "Adăugați un raport"
-
-#~ msgid "Disciple Tools - Streams"
-#~ msgstr "Instrumente pentru discipoli - Fluxuri"
-
-#~ msgid "Pre-Group Generations"
-#~ msgstr "Generații pre-grup"
-
-#~ msgid "Group Generations"
-#~ msgstr "Generatii de grup"
-
-#~ msgid "Church Generations"
-#~ msgstr "Generațiile Bisericii"
-
-#~ msgid "Team Generations"
-#~ msgstr "Generatii de echipa"
-
-#~ msgid "%s is reporting a new pre-group generation."
-#~ msgstr "%s raportează o nouă generație pre-grup."
-
-#~ msgid "%s is reporting a new group generation."
-#~ msgstr "%s raportează o nouă generație de grup."
-
-#~ msgid "%s is reporting a new church generation."
-#~ msgstr "%s raportează o nouă generație bisericească."
-
-#~ msgid "%s is reporting a new leadership team generation."
-#~ msgstr "%s raportează o nouă generație de echipe de conducere."
-
-#~ msgid "New Contact"
-#~ msgstr "Contact nou"
-
-#~ msgid "New Pre-Group"
-#~ msgstr "Noul pre-grup"
-
-#~ msgid "New Group"
-#~ msgstr "Grup nou"
-
-#~ msgid "New Church"
-#~ msgstr "Biserica Nouă"
-
-#~ msgid "New Team"
-#~ msgstr "Echipă nouă"
-
-#~ msgid "New Baptism"
-#~ msgstr "Noul Botez"
-
-#~ msgid "New Coaching"
-#~ msgstr "Nou antrenor"
-
-#~ msgid "%s is reporting a new contact."
-#~ msgstr "%s raportează un contact nou."
-
-#~ msgid "%s is reporting a new pre-group formed."
-#~ msgstr "%s raportează un nou pre-grup format."
-
-#~ msgid "%s is reporting a new group formed."
-#~ msgstr "%s raportează un nou grup format."
-
-#~ msgid "%s is reporting a new church."
-#~ msgstr "%s raportează o nouă biserică."
-
-#~ msgid "%s is reporting a new leadership team formed."
-#~ msgstr "%s raportează o nouă echipă de conducere formată."
-
-#~ msgid "%s is reporting a new baptism."
-#~ msgstr "%s raportează un nou botez."
-
-#~ msgid "%s is reporting an coaching relationship."
-#~ msgstr "%s raportează o relație de coaching."
-
-#~ msgid "Active"
-#~ msgstr "Activ"
-
-#~ msgid "Paused"
-#~ msgstr "Întrerupt"
-
-#~ msgid "Closed"
-#~ msgstr "Închis"
-
-#~ msgid "Inactive"
-#~ msgstr "Inactiv"
-
-#~ msgid "https://github.com/DiscipleTools/disciple-tools-network-dashboard"
-#~ msgstr "https://github.com/DiscipleTools/disciple-tools-network-dashboard"
-
-#~ msgid ""
-#~ "Connect this Disciple Tools site to a larger network of sites. Adds "
-#~ "security sensitive totals, mapping, activity logging."
-#~ msgstr ""
-#~ "Conectați acest site Instrumente Disciple la o rețea mai mare de site-"
-#~ "uri. Adaugă totaluri sensibile la securitate, mapare, înregistrare "
-#~ "activități."
-
-#~ msgid "https://github.com/DiscipleTools"
-#~ msgstr "https://github.com/DiscipleTools"
-
-#~ msgid "https://github.com/DiscipleTools/disciple-tools-streams"
-#~ msgstr "https://github.com/DiscipleTools/disciple-tools-streams"
-
-#~ msgid ""
-#~ "Disciple Tools Streams Extension adds recording of streams and cross "
-#~ "reference them with contacts, groups, and locations."
-#~ msgstr ""
-#~ "Disciple Tools Streams Extension adaugă înregistrarea fluxurilor și "
-#~ "referințe încrucișate cu contacte, grupuri și locații."
-
-#~ msgid ""
-#~ "'Disciple Tools - Training' plugin requires 'Disciple Tools' theme to "
-#~ "work. Please activate 'Disciple Tools' theme or make sure it is latest "
-#~ "version."
-#~ msgstr ""
-#~ "Pluginul „Disciple Tools - Training” necesită ca tema „Disciple Tools” să "
-#~ "funcționeze. Activați tema „Disciple Tools” sau asigurați-vă că este cea "
-#~ "mai recentă versiune."
-
-#~ msgid "Current Disciple Tools version: %1$s, required version: %2$s"
-#~ msgstr "Versiunea actuală a Disciple Tools: %1$s, versiunea necesară: %2$s"
-
-#~ msgid "Duplicates"
-#~ msgstr "Dubluri"
-
-#~ msgid "Coach"
-#~ msgstr "Antrenor"
-
-#~ msgid "Leaders Total"
-#~ msgstr "Lideri Total"
-
-#~ msgid "Disciples Total"
-#~ msgstr "Discipoli Total"
-
-#~ msgid "Key Disciples"
-#~ msgstr "Discipoli cheie"
-
-#~ msgid "Groups Total"
-#~ msgstr "Total grupuri"
-
-#~ msgid "Trainings Total"
-#~ msgstr "Total antrenamente"
-
-#~ msgid "Dashboard Plugin"
-#~ msgstr "Plugin pentru tabloul de bord"
-
-#~ msgid "Dashboard"
-#~ msgstr "Bord"
-
-#~ msgid "%s days since last update"
-#~ msgstr "%s zile de la ultima actualizare"
-
-#~ msgid "Accept"
-#~ msgstr "Accept"
-
-#~ msgid "Decline"
-#~ msgstr "Declin"
-
-#~ msgid "# Contacts Assigned"
-#~ msgstr "# Persoane de contact alocate"
-
-#~ msgid "# First Meetings"
-#~ msgstr "# Primele întâlniri"
-
-#~ msgid "# Faith milestones"
-#~ msgstr "# Repere ale credinței"
-
-#~ msgid "Hurray! You are caught up."
-#~ msgstr "Ura! Ești prins."
-
-#~ msgid "remove"
-#~ msgstr "elimina"
-
-#~ msgid "mark as complete"
-#~ msgstr "marcați ca complet"
-
-#~ msgid "No task created"
-#~ msgstr "Nicio sarcină creată"
-
-#~ msgid "Reminder"
-#~ msgstr "Aducere aminte"
-
-#~ msgid "No note set"
-#~ msgstr "Nicio notă setată"
-
-#~ msgid "Add a contact"
-#~ msgstr "Adaugă un contact"
-
-#~ msgid "View Contacts List"
-#~ msgstr "Vizualizați lista de contacte"
-
-#~ msgid "Pending Contacts"
-#~ msgstr "Contacte în așteptare"
-
-#~ msgid "View All"
-#~ msgstr "A vedea tot"
-
-#~ msgid "Update Needed"
-#~ msgstr "Actualizare necesară"
-
-#~ msgid "Contact Workload"
-#~ msgstr "Contactați volumul de lucru"
-
-#~ msgid ""
-#~ "Choose an option to let the dispatcher(s) know if you are ready for new "
-#~ "contacts"
-#~ msgstr ""
-#~ "Alegeți o opțiune pentru a anunța dispecerii (e) dacă sunteți gata pentru "
-#~ "noi contacte"
-
-#~ msgid "Set travel or dates unavailable"
-#~ msgstr "Setați călătoria sau datele indisponibile"
-
-#~ msgid "Personal Benchmarks"
-#~ msgstr "Repere personale"
-
-#~ msgid "Faith Milestone Totals"
-#~ msgstr "Totalul etapei credinței"
-
-#~ msgid "Milestones on your active contacts"
-#~ msgstr "Repere ale contactelor dvs. active"
-
-#~ msgid "Seeker Path Progress"
-#~ msgstr "Progresul Căii Căutătorului"
-
-#~ msgid "No data to show yet. You have no active contacts"
-#~ msgstr "Nu există date de afișat încă. Nu aveți contacte active"
-
-#~ msgid "Disciple Tools - Dashboard"
-#~ msgstr "Instrumente pentru discipoli - Tablou de bord"
-
-#~ msgid "https://github.com/DiscipleTools/disciple-tools-dashboard"
-#~ msgstr "https://github.com/DiscipleTools/disciple-tools-dashboard"
-
-#~ msgid ""
-#~ "The multiplier dashboard upgrades the multipliers experience as soon as "
-#~ "they log into the system giving them a landing page with stats."
-#~ msgstr ""
-#~ "Tabloul de bord multiplicator îmbunătățește experiența multiplicatorilor "
-#~ "imediat ce se conectează la sistem oferindu-le o pagină de destinație cu "
-#~ "statistici"
-
-#~ msgid "Reason Assigned To"
-#~ msgstr "Motivul atribuit"
-
-#~ msgid "Follow-Up"
-#~ msgstr "Urmare"
-
-#~ msgid "Digital Response"
-#~ msgstr "Răspuns digital"
-
-#~ msgid "Dispatch"
-#~ msgstr "Expediere"
-
-#~ msgid "No Answer"
-#~ msgstr "Nici un raspuns"
-
-#~ msgid "Talked"
-#~ msgstr "A vorbit"
-
-#~ msgid "Scheduled"
-#~ msgstr "Programat"
-
-#~ msgid "Complete"
-#~ msgstr "Complet"
-
-#~ msgid "No-Show"
-#~ msgstr "Neprezentare"
-
-#~ msgid "No permission"
-#~ msgstr "Fara permisiune"
-
-#~ msgid "All"
-#~ msgstr "Toate"
-
-#~ msgid "Ready"
-#~ msgstr "Gata"
-
-#~ msgid "Recent"
-#~ msgstr "Recent"
-
-#~ msgid "Assign"
-#~ msgstr "Atribui"
-
-#~ msgid "Choose an option:"
-#~ msgstr "Alege o opțiune:"
-
-#~ msgid "Cancel"
-#~ msgstr "Anulare"
-
-#~ msgid "Assign For"
-#~ msgstr "Alocați pentru"
-
-#~ msgid "Search"
-#~ msgstr "Căutare"
-
-#~ msgid "Claim for follow-up"
-#~ msgstr "Cerere de urmărire"
-
-#~ msgid "Ready for Dispatch"
-#~ msgstr "Gata de expediere"
-
-#~ msgid "Disciple Tools - Advanced M2M Tiles"
-#~ msgstr "Instrumente pentru discipoli - Plăci avansate M2M"
-
-#~ msgid "https://github.com/DiscipleTools/disciple-tools-advanced-m2m-tiles"
-#~ msgstr "https://github.com/DiscipleTools/disciple-tools-advanced-m2m-tiles"
-
-#~ msgid ""
-#~ "Disciple Tools - Advanced M2M Tiles adds specific supporting tiles for "
-#~ "different roles."
-#~ msgstr ""
-#~ "Instrumente pentru discipoli - Plăci avansate M2M adaugă plăci de "
-#~ "susținere specifice pentru diferite roluri."
+msgstr "Șterge"

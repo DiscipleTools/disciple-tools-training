@@ -26,32 +26,27 @@ msgstr "ስልጠናዎች ካርታዎች"
 
 #: network/network-dashboard-integration.php:44
 msgid "New Training"
-msgstr ""
+msgstr "አዲስ ስልጠና"
 
 #: network/network-dashboard-integration.php:50
 msgid "Training Started"
-msgstr ""
+msgstr "ስልጠና ተጀምሯል"
 
 #: network/network-dashboard-integration.php:56
 msgid "Training Completed"
-msgstr ""
+msgstr "ስልጠና ተጠናቅቋል"
 
 #: post-type/module-base.php:28 post-type/module-base.php:495
 msgid "Training"
 msgstr "ስልጠና"
 
 #: post-type/module-base.php:70
-#, fuzzy
-#| msgid "Trainings"
 msgid "Trainings Admin"
-msgstr "ስልጠናዎች"
+msgstr "የስልጠናዎች አስተዳዳሪ"
 
 #: post-type/module-base.php:71
-#, fuzzy
-#| msgctxt "Optional Documentation"
-#| msgid "Leader of a training"
 msgid "Admin access to all trainings"
-msgstr "የሥልጠና መሪ"
+msgstr "ለሁሉም ስልጠናዎች የአስተዳዳሪ መዳረሻ"
 
 #: post-type/module-base.php:76
 msgid "Multiplier"
@@ -59,7 +54,7 @@ msgstr "አባዢ"
 
 #: post-type/module-base.php:83
 msgid "Disciple.Tools Admin"
-msgstr "ደቀ መዝሙር"
+msgstr "የDisciple.Tools አስተዳዳሪ"
 
 #: post-type/module-base.php:90
 msgid "Administrator"
@@ -73,7 +68,7 @@ msgstr "መለያዎች"
 msgctxt "Optional Documentation"
 msgid ""
 "A useful way to group related items and can be used to filter the records"
-msgstr ""
+msgstr "ተዛማጅ ንጥሎችን ለመቧደን ጠቃሚ መንገድ ሲሆን መዝገቦችን ለማጣራት ሊያገለግል ይችላል"
 
 #: post-type/module-base.php:135
 msgid "Follow"
@@ -115,7 +110,7 @@ msgstr "መርሐግብር ተይዞለታል"
 #: post-type/module-base.php:173
 msgctxt "Training Status field description"
 msgid "This training is confirmed, on the calendar."
-msgstr "ይህ ስልጠና በቀን መቁጠሪያው ላይ ተረጋግጧል ፡፡"
+msgstr "ይህ ስልጠና በቀን መቁጠሪያው ላይ ተረጋግጧል።"
 
 #: post-type/module-base.php:177
 msgctxt "Training Status label"
@@ -147,7 +142,7 @@ msgctxt "Training Status field description"
 msgid ""
 "This contact is currently on hold. It has potential of getting scheduled in "
 "the future."
-msgstr "ይህ እውቂያ በአሁኑ ጊዜ በእረፍት ላይ ነው። ለወደፊቱ መርሃግብር የማድረግ አቅም አለው ፡፡"
+msgstr "ይህ እውቂያ በአሁኑ ጊዜ በእረፍት ላይ ነው። ለወደፊቱ መርሃግብር የማድረግ አቅም አለው።"
 
 #: post-type/module-base.php:192
 msgctxt "Training Status label"
@@ -157,7 +152,7 @@ msgstr "ዝግ"
 #: post-type/module-base.php:193
 msgctxt "Training Status field description"
 msgid "This training is no longer going to happen."
-msgstr "ይህ ስልጠና ከአሁን በኋላ አይከሰትም ፡፡"
+msgstr "ይህ ስልጠና ከአሁን በኋላ አይከሰትም።"
 
 #: post-type/module-base.php:201
 msgid "Assigned To"
@@ -166,7 +161,7 @@ msgstr "ተመድቧል ለ"
 #: post-type/module-base.php:202
 msgid ""
 "Select the main person who is responsible for reporting on this training."
-msgstr "በዚህ ስልጠና ላይ ሪፖርት የማድረግ ኃላፊነት ያለበት ዋናውን ሰው ይምረጡ ፡፡"
+msgstr "በዚህ ስልጠና ላይ ሪፖርት የማድረግ ኃላፊነት ያለበት ዋናውን ሰው ይምረጡ።"
 
 #: post-type/module-base.php:209
 msgid "Training Coach / Church Planter"
@@ -180,7 +175,7 @@ msgid ""
 "planters of this training."
 msgstr ""
 "ይህንን ስልጠና የተተከለው / ወይም አሰልጣኝ የሆነው ሰው። ብዙ ሰዎች የዚህ ስልጠና አሰልጣኞች / የቤተክርስቲያን "
-"ተከላዎች ሊሆኑ ሲችሉ አንድ ሰው ብቻ ለስልጠና ሊመደብ ይችላል ፡፡"
+"ተከላዎች ሊሆኑ ሲችሉ አንድ ሰው ብቻ ለስልጠና ሊመደብ ይችላል።"
 
 #: post-type/module-base.php:222
 msgid "Requires Update"
@@ -228,7 +223,7 @@ msgstr "የወላጅ ስልጠና"
 #: post-type/module-base.php:334
 msgctxt "Optional Documentation"
 msgid "A training that launched this training."
-msgstr "ይህንን ስልጠና የጀመረ ሥልጠና ፡፡"
+msgstr "ይህንን ስልጠና የጀመረ ስልጠና።"
 
 #: post-type/module-base.php:344
 msgid "Peer Training"
@@ -240,8 +235,8 @@ msgid ""
 "A related training that isn't a parent/child in relationship. It might "
 "indicate trainings that collaborate, are about to merge, recently split, etc."
 msgstr ""
-"በግንኙነት ውስጥ ወላጅ / ልጅ ያልሆነ ተዛማጅ ሥልጠና ፡፡ የሚተባበሩ ፣ ሊዋሃዱ ፣ በቅርቡ ሊከፋፈሉ ፣ ወዘተ ... "
-"ስልጠናዎችን ሊያመለክት ይችላል ፡፡"
+"በግንኙነት ውስጥ ወላጅ / ልጅ ያልሆነ ተዛማጅ ስልጠና። የሚተባበሩ፣ ሊዋሃዱ፣ በቅርቡ ሊከፋፈሉ የሚችሉ "
+"ስልጠናዎችን ሊያመለክት ይችላል።"
 
 #: post-type/module-base.php:355
 msgid "Child Training"
@@ -250,7 +245,7 @@ msgstr "የልጆች ስልጠና"
 #: post-type/module-base.php:356
 msgctxt "Optional Documentation"
 msgid "A training that has been birthed out of this training."
-msgstr "ከዚህ ሥልጠና የተወለደ ሥልጠና ፡፡"
+msgstr "ከዚህ ስልጠና የተወለደ ስልጠና።"
 
 #: post-type/module-base.php:366 post-type/module-base.php:508
 #: post-type/module-base.php:542
@@ -260,7 +255,7 @@ msgstr "የአባልነት ዝርዝር"
 #: post-type/module-base.php:367
 msgctxt "Optional Documentation"
 msgid "The contacts who are members of this training."
-msgstr "የዚህ ሥልጠና አባል የሆኑ ዕውቂያዎች ፡፡"
+msgstr "የዚህ ስልጠና አባል የሆኑ እውቂያዎች።"
 
 #: post-type/module-base.php:377
 msgid "Leaders"
@@ -273,7 +268,7 @@ msgstr "የህዝብ ቡድኖች"
 #: post-type/module-base.php:388
 msgctxt "Optional Documentation"
 msgid "The people trainings represented by this training."
-msgstr "በዚህ ስልጠና የተወከሉት የሰዎች ስልጠናዎች ፡፡"
+msgstr "በዚህ ስልጠና የተወከሉት የሰዎች ስልጠናዎች።"
 
 #: post-type/module-base.php:397
 msgid "Groups"
@@ -292,7 +287,7 @@ msgid ""
 "members of the training."
 msgstr ""
 "በዚህ ስልጠና ውስጥ የአባላት ብዛት። በአባላቱ ዝርዝር ውስጥ አዳዲስ አባላት ሲደመሩ ወይም ሲወገዱ በራስ-ሰር ይዘምናል። "
-"በስርዓቱ ውስጥ የሌሉ ነገር ግን የስልጠናው አባል የሆኑ ሰዎችን ለማካተት ይህንን ቁጥር በእጅ ይለውጡ ፡፡"
+"በስርዓቱ ውስጥ የሌሉ ነገር ግን የስልጠናው አባል የሆኑ ሰዎችን ለማካተት ይህንን ቁጥር በእጅ ይለውጡ።"
 
 #: post-type/module-base.php:416
 msgid "Leader Count"
@@ -305,7 +300,7 @@ msgstr "ስልጠና እንደ መሪ"
 #: post-type/module-base.php:427
 msgctxt "Optional Documentation"
 msgid "Leader of a training"
-msgstr "የሥልጠና መሪ"
+msgstr "የስልጠና መሪ"
 
 #: post-type/module-base.php:438
 msgid "Training as Participant"
@@ -330,7 +325,7 @@ msgstr "ይምረጡ"
 
 #: post-type/module-base.php:555
 msgid "To add new members, click on 'Create' or 'Select'."
-msgstr "አዲስ አባላትን ለማከል ‹ፍጠር› ወይም ‹ምረጥ› ላይ ጠቅ ያድርጉ ፡፡"
+msgstr "አዲስ አባላትን ለማከል 'ፍጠር' ወይም 'ይምረጡ' ላይ ጠቅ ያድርጉ።"
 
 #: post-type/module-base.php:560
 msgctxt "Add members modal"
@@ -342,34 +337,28 @@ msgctxt "Add members modal"
 msgid ""
 "In the 'Member List' field, type the name of an existing contact to add them "
 "to this training."
-msgstr "በ ‹አባል ዝርዝር› መስክ ውስጥ ወደዚህ ሥልጠና ለማከል ነባር የእውቂያ ስም ይተይቡ ፡፡"
+msgstr "በ 'የአባልነት ዝርዝር' መስክ ውስጥ ወደዚህ ስልጠና ለማከል ነባር የእውቂያ ስም ይተይቡ።"
 
 #: post-type/module-base.php:573
 msgid "Close"
-msgstr "ገጠመ"
+msgstr "ዝጋ"
 
 #: post-type/module-base.php:713
-#, fuzzy
-#| msgid "Removed %1$s: %2$s"
 msgid "Removed %1$s: {%2$s}"
-msgstr "%1$s ተወግዷል %2$s"
+msgstr "%1$s ተወግዷል: {%2$s}"
 
 #: post-type/module-base.php:716
-#, fuzzy
-#| msgid "Added %1$s: %2$s"
 msgid "Added %1$s: {%2$s}"
-msgstr "%1$s ታክሏል %2$s"
+msgstr "%1$s ታክሏል: {%2$s}"
 
 #: post-type/module-base.php:719
-#, fuzzy
-#| msgid "Updated %1$s: %2$s to %3$s"
 msgid "Updated %1$s: {%2$s} to {%3$s}"
-msgstr "ከ %1$s: %2$s እስከ %3$s ዘምኗል"
+msgstr "%1$s ከ {%2$s} ወደ {%3$s} ዘምኗል"
 
 #: post-type/module-base.php:804
 msgctxt "List Filters"
 msgid "Assigned to me"
-msgstr "ለእኔ ተመደብኩ"
+msgstr "ለእኔ ተመድቧል"
 
 #: post-type/module-base.php:812
 msgctxt "List Filters"
@@ -379,7 +368,7 @@ msgstr "ሁሉም"
 #: post-type/module-base.php:871
 msgctxt "List Filters"
 msgid "Default Filters"
-msgstr ""
+msgstr "ነባሪ ማጣሪያዎች"
 
 #: post-type/module-public-calendar.php:85
 msgid "Reports"
@@ -412,11 +401,11 @@ msgstr "አክል"
 
 #: post-type/module-registration.php:31
 msgid "Magic Links"
-msgstr ""
+msgstr "አስማታዊ አገናኞች"
 
 #: post-type/module-registration.php:59
 msgid "copy link"
-msgstr "የቅጅ አገናኝ"
+msgstr "አገናኝ ቅዳ"
 
 #: post-type/module-registration.php:61
 msgid "edit form"
@@ -428,7 +417,7 @@ msgstr "ሪፖርት"
 
 #: post-type/module-registration.php:67
 msgid "create link"
-msgstr "አገናኝ ይፍጠሩ"
+msgstr "አገናኝ ፍጠር"
 
 #: post-type/module-registration.php:114
 msgid "link"
@@ -440,7 +429,7 @@ msgstr "በቀን መቁጠሪያ ላይ አሳይ"
 
 #: post-type/module-registration.php:118
 msgid "open registration"
-msgstr "ክፍት ምዝገባ "
+msgstr "ክፍት ምዝገባ"
 
 #: post-type/module-registration.php:265
 msgid "add"
@@ -460,11 +449,11 @@ msgstr "አካባቢን ሰርዝ"
 
 #: post-type/module-registration.php:269
 msgid "Open Mapping"
-msgstr "ክፍት ካርታ"
+msgstr "ካርታ ክፈት"
 
 #: post-type/module-registration.php:270
 msgid "clear"
-msgstr "ግልፅ"
+msgstr "አጽዳ"
 
 #: post-type/module-registration.php:384
 msgid "Register for Training"
@@ -480,795 +469,4 @@ msgstr "ተቀላቀል"
 
 #: post-type/module-registration.php:700
 msgid "Clear"
-msgstr "ግልጽ"
-
-#~ msgid "Apps"
-#~ msgstr "መተግበሪያዎች"
-
-#, fuzzy
-#~| msgid "Disciple Tools - Training"
-#~ msgid "Disciple.Tools - Training"
-#~ msgstr "የደቀመዝሙር መሳሪያዎች - ስልጠና"
-
-#~ msgid "https://github.com/DiscipleTools/disciple-tools-training"
-#~ msgstr "https://github.com/DiscipleTools/disciple-tools- ስልጠና"
-
-#, fuzzy
-#~| msgid ""
-#~| "Disciple Tools Training Extension adds recording of trainings and cross "
-#~| "reference them with contacts, groups, and locations."
-#~ msgid ""
-#~ "Disciple.Tools Training Extension adds recording of trainings and cross "
-#~ "reference them with contacts, groups, and locations."
-#~ msgstr ""
-#~ "የደቀመዝሙርት መሳሪያዎች የሥልጠና ማራዘሚያ የሥልጠናዎችን ቀረፃ ያክላል እንዲሁም በመስቀሎች በኩል ከእውቂያዎች ፣ "
-#~ "ከቡድኖች እና አካባቢዎች ጋር ያጣቅሳሉ ፡፡"
-
-#~ msgid "Whoah, partner!"
-#~ msgstr "ዋህ ፣ አጋር!"
-
-#~ msgid "Method does not exist."
-#~ msgstr "ዘዴው የለም።"
-
-#~ msgid "Dispatcher"
-#~ msgstr "መላኪያ"
-
-#~ msgid "Members"
-#~ msgstr "አባላት"
-
-#~ msgid "Contacts"
-#~ msgstr "እውቂያዎች"
-
-#~ msgid "Coaches"
-#~ msgstr "አሰልጣኞች"
-
-#~ msgid "Planted by"
-#~ msgstr "የተተከለው በ"
-
-#~ msgid "Planting"
-#~ msgstr "መትከል"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid ""
-#~ "A useful way to training related items and can help training contacts "
-#~ "associated with noteworthy characteristics. e.g. business owner, sports "
-#~ "lover. The contacts can also be filtered using these tags."
-#~ msgstr ""
-#~ "ተዛማጅ ዕቃዎችን ለማሰልጠን ጠቃሚ መንገድ እና ከሚታወቁ ባህሪዎች ጋር የተዛመዱ እውቂያዎችን ለማሰልጠን ሊረዳ "
-#~ "ይችላል ፡፡ ለምሳሌ የንግድ ሥራ ባለቤት ፣ ስፖርት አፍቃሪ ፡፡ እነዚህን መለያዎች በመጠቀም እውቂያዎቹም ሊጣሩ "
-#~ "ይችላሉ ፡፡"
-
-#~ msgctxt "input field placeholder"
-#~ msgid "Search Users"
-#~ msgstr "የፍለጋ ተጠቃሚዎች"
-
-#~ msgctxt "Search 'something'"
-#~ msgid "Search %s"
-#~ msgstr "%s ን ፈልግ"
-
-#~ msgid "Extensions (DT)"
-#~ msgstr "ቅጥያዎች (ዲቲ)"
-
-#~ msgid "Network Dashboard"
-#~ msgstr "የአውታረ መረብ ዳሽቦርድ"
-
-#~ msgid "You do not have sufficient permissions to access this page."
-#~ msgstr "ይህንን ገጽ ለመድረስ በቂ ፈቃዶች የሉዎትም።"
-
-#~ msgid "nav-tab-active"
-#~ msgstr "nav-tab-ንቁ"
-
-#~ msgid "Network Dashboard Viewer"
-#~ msgstr "የአውታረ መረብ ዳሽቦርድ መመልከቻ"
-
-#~ msgid "ID"
-#~ msgstr "መታወቂያ"
-
-#~ msgid "Site"
-#~ msgstr "ጣቢያ"
-
-#~ msgid "Users"
-#~ msgstr "ተጠቃሚዎች"
-
-#~ msgid "Timestamp"
-#~ msgstr "የጊዜ ማህተም"
-
-#~ msgid "Visit"
-#~ msgstr "ጎብኝ"
-
-#~ msgid "View"
-#~ msgstr "አሳይ"
-
-#~ msgid "Active Snapshot"
-#~ msgstr "ገባሪ ቅጽበታዊ ገጽ እይታ"
-
-#~ msgid "Generations"
-#~ msgstr "ትውልዶች"
-
-#~ msgid "Follow-up Funnel"
-#~ msgstr "የክትትል መዝናኛ"
-
-#~ msgid "On-Going Meetings"
-#~ msgstr "በሂደት ላይ ያሉ ስብሰባዎች"
-
-#~ msgid "Coaching"
-#~ msgstr "ማሠልጠን"
-
-#~ msgid "Baptized"
-#~ msgstr "ተጠመቀ"
-
-#~ msgid "Active Groups"
-#~ msgstr "ንቁ ቡድኖች"
-
-#~ msgid "Church"
-#~ msgstr "ቤተክርስቲያን"
-
-#~ msgid "Health Metrics"
-#~ msgstr "የጤና መለኪያዎች"
-
-#~ msgid "Total Users"
-#~ msgstr "ጠቅላላ ተጠቃሚዎች"
-
-#~ msgid "Responders"
-#~ msgstr "ምላሽ ሰጭዎች"
-
-#~ msgid "Dispatchers"
-#~ msgstr "Dispatchers"
-
-#~ msgid "Multipliers"
-#~ msgstr "ማባዣዎች"
-
-#~ msgid "Admins"
-#~ msgstr "አስተዳዳሪዎች"
-
-#~ msgid "User Login Activity"
-#~ msgstr "የተጠቃሚ የመግቢያ እንቅስቃሴ"
-
-#~ msgid "Users Active in the Last 30 Days"
-#~ msgstr "ባለፉት 30 ቀናት ውስጥ ተጠቃሚዎች ንቁ"
-
-#~ msgid "Practicing"
-#~ msgstr "በመለማመድ ላይ"
-
-#~ msgid "Not Practicing"
-#~ msgstr "እየተለማመዱ አይደለም"
-
-#~ msgid "Chart Funnel"
-#~ msgstr "የገበታ ፈንገስ"
-
-#~ msgid "Contact"
-#~ msgstr "እውቂያ"
-
-#~ msgid "Group"
-#~ msgstr "ቡድን"
-
-#~ msgid "User"
-#~ msgstr "ተጠቃሚ"
-
-#~ msgid "Sites"
-#~ msgstr "ጣቢያዎች"
-
-#~ msgid "Baptisms"
-#~ msgstr "ጥምቀቶች"
-
-#~ msgid "Churches"
-#~ msgstr "አብያተ ክርስቲያናት"
-
-#~ msgid "Location"
-#~ msgstr "አካባቢ"
-
-#~ msgid "Types"
-#~ msgstr "ዓይነቶች"
-
-#~ msgid "modify filter"
-#~ msgstr "ማጣሪያን ቀይር"
-
-#~ msgid "Filter List"
-#~ msgstr "የማጣሪያ ዝርዝር"
-
-#~ msgid "reset data"
-#~ msgstr "ውሂብን ዳግም አስጀምር"
-
-#~ msgid "Status"
-#~ msgstr "ሁኔታ"
-
-#~ msgid "Status - All"
-#~ msgstr "ሁኔታ - ሁሉም"
-
-#~ msgid "Zoom Level"
-#~ msgstr "የማጉላት ደረጃ"
-
-#~ msgid "Auto Zoom"
-#~ msgstr "ራስ-አጉላ"
-
-#~ msgid "World"
-#~ msgstr "ዓለም"
-
-#~ msgid "Country"
-#~ msgstr "ሀገር"
-
-#~ msgid "State"
-#~ msgstr "ግዛት"
-
-#~ msgid "Active Contacts"
-#~ msgstr "ንቁ እውቂያዎች"
-
-#~ msgid "Paused Contacts"
-#~ msgstr "ለአፍታ ያቆዩ እውቂያዎች"
-
-#~ msgid "Closed Contacts"
-#~ msgstr "ዝግ እውቂያዎች"
-
-#~ msgid "Total Contacts"
-#~ msgstr "ጠቅላላ እውቂያዎች"
-
-#~ msgid "New Contacts"
-#~ msgstr "አዲስ እውቂያዎች"
-
-#~ msgid "New Baptisms"
-#~ msgstr "አዲስ ጥምቀቶች"
-
-#~ msgid "Baptism Generations"
-#~ msgstr "የጥምቀት ትውልዶች"
-
-#~ msgid "Select Location"
-#~ msgstr "አካባቢን ይምረጡ"
-
-#~ msgid "New Groups"
-#~ msgstr "አዲስ ቡድኖች"
-
-#~ msgid "Pre-Group"
-#~ msgstr "ቅድመ-ቡድን"
-
-#~ msgid "Pre-Groups"
-#~ msgstr "ቅድመ-ቡድኖች"
-
-#~ msgid "Last 7 Days"
-#~ msgstr "ያለፉት 7 ቀናት"
-
-#~ msgid "Last 30 Days"
-#~ msgstr "ያለፉት 30 ቀናት"
-
-#~ msgid "Last 60 Days"
-#~ msgstr "ያለፉት 60 ቀናት"
-
-#~ msgid "Last 12 Months"
-#~ msgstr "ያለፉት 12 ወሮች"
-
-#~ msgid "Last 24 Months"
-#~ msgstr "ያለፉት 24 ወሮች"
-
-#~ msgid "This Year"
-#~ msgstr "የህ አመት"
-
-#~ msgid "Activity Map"
-#~ msgstr "የእንቅስቃሴ ካርታ"
-
-#~ msgid "Stats"
-#~ msgstr "ስታትስቲክስ"
-
-#~ msgid "Activities"
-#~ msgstr "እንቅስቃሴዎች"
-
-#~ msgid "Actions"
-#~ msgstr "እርምጃዎች"
-
-#~ msgid "By Action Type"
-#~ msgstr "በድርጊት ዓይነት"
-
-#~ msgid "Key"
-#~ msgstr "ቁልፍ"
-
-#~ msgid "Name"
-#~ msgstr "ስም"
-
-#~ msgid "Total Activities"
-#~ msgstr "ጠቅላላ እንቅስቃሴዎች"
-
-#~ msgid "Feed"
-#~ msgstr "መመገብ"
-
-#~ msgid "Time"
-#~ msgstr "ጊዜ"
-
-#~ msgid "Result Limit"
-#~ msgstr "የውጤት ወሰን"
-
-#~ msgid "uncheck"
-#~ msgstr "ምልክት ያንሱ"
-
-#~ msgid "Home"
-#~ msgstr "ቤት"
-
-#~ msgid "Events (30 Days)"
-#~ msgstr "ክስተቶች (30 ቀናት)"
-
-#~ msgid "All Active/Inactive"
-#~ msgstr "ሁሉም ንቁ / እንቅስቃሴ-አልባ"
-
-#~ msgid "Hover Map"
-#~ msgstr "የማንዣበብ ካርታ"
-
-#~ msgid "Network"
-#~ msgstr "አውታረ መረብ"
-
-#~ msgid "Map"
-#~ msgstr "ካርታ"
-
-#~ msgid "Log"
-#~ msgstr "መዝገብ"
-
-#~ msgid "Activity"
-#~ msgstr "እንቅስቃሴ"
-
-#~ msgid "Area Maps"
-#~ msgstr "የአካባቢ ካርታዎች"
-
-#~ msgid "Location List"
-#~ msgstr "የአካባቢ ዝርዝር"
-
-#~ msgid "Maps"
-#~ msgstr "ካርታዎች"
-
-#~ msgid "Site Reports"
-#~ msgstr "የጣቢያ ሪፖርቶች"
-
-#~ msgid "Statistics"
-#~ msgstr "ስታትስቲክስ"
-
-#~ msgid "Network Dashboard Transfer Both Ways"
-#~ msgstr "የአውታረ መረብ ዳሽቦርድ ማስተላለፍ በሁለቱም መንገዶች"
-
-#~ msgid "Network Dashboard Receiving Only"
-#~ msgstr "የአውታረ መረብ ዳሽቦርድ መቀበል ብቻ"
-
-#~ msgid "Network Dashboard Sending Only"
-#~ msgstr "የአውታረ መረብ ዳሽቦርድ መላክ ብቻ"
-
-#~ msgid "Network Dashboard Site Profile"
-#~ msgstr "የአውታረ መረብ ዳሽቦርድ ጣቢያ መገለጫ"
-
-#~ msgid "Disciple Tools - Network Dashboard"
-#~ msgstr "የደቀመዝሙር መሳሪያዎች - የአውታረ መረብ ዳሽቦርድ"
-
-#~ msgid "Streams"
-#~ msgstr "ጅረቶች"
-
-#~ msgid "Stream Maps"
-#~ msgstr "የዥረት ካርታዎች"
-
-#~ msgid "Streams Maps"
-#~ msgstr "የዥረት ካርታዎች"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid ""
-#~ "A useful way to stream related items and can help stream contacts "
-#~ "associated with noteworthy characteristics. e.g. business owner, sports "
-#~ "lover. The contacts can also be filtered using these tags."
-#~ msgstr ""
-#~ "ተዛማጅ ዕቃዎችን በዥረት ለመልቀቅ ጠቃሚ መንገድ እና ከሚታወቁ ባህሪዎች ጋር የተዛመዱ እውቂያዎችን በዥረት መልቀቅ "
-#~ "ሊያግዝ ይችላል። ለምሳሌ የንግድ ሥራ ባለቤት ፣ ስፖርት አፍቃሪ ፡፡ እነዚህን መለያዎች በመጠቀም እውቂያዎቹም ሊጣሩ "
-#~ "ይችላሉ ፡፡"
-
-#~ msgctxt "Stream Status label"
-#~ msgid "New"
-#~ msgstr "አዲስ"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "New stream added to the system"
-#~ msgstr "አዲስ ዥረት ወደ ስርዓቱ ታክሏል"
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Model"
-#~ msgstr "ሞዴል"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "This stream has been proposed and is in initial conversations"
-#~ msgstr "ይህ ጅረት የታቀደ ሲሆን በመነሻ ውይይቶች ላይ ነው"
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Assist"
-#~ msgstr "ይርዱ"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "This stream is confirmed, on the calendar."
-#~ msgstr "ይህ ጅረት በቀን መቁጠሪያው ላይ ተረጋግጧል።"
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Watch"
-#~ msgstr "ይመልከቱ"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "This stream is confirmed, on the calendar, or currently active."
-#~ msgstr "ይህ ዥረት በቀን መቁጠሪያው ላይ ተረጋግጧል ወይም በአሁኑ ጊዜ ንቁ ነው።"
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Leave"
-#~ msgstr "ተወው"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "This stream has successfully completed"
-#~ msgstr "ይህ ዥረት በተሳካ ሁኔታ ተጠናቅቋል"
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Paused"
-#~ msgstr "ለአፍታ ቆሟል"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid ""
-#~ "This contact is currently on hold. It has potential of getting scheduled "
-#~ "in the future."
-#~ msgstr "ይህ እውቂያ በአሁኑ ጊዜ በእረፍት ላይ ነው። ለወደፊቱ መርሃግብር የማድረግ አቅም አለው ፡፡"
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Closed"
-#~ msgstr "ዝግ"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "This stream is no longer going to happen."
-#~ msgstr "ይህ ዥረት ከአሁን በኋላ አይከሰትም።"
-
-#~ msgid ""
-#~ "Select the main person who is responsible for reporting on this stream."
-#~ msgstr "በዚህ ዥረት ላይ ሪፖርት የማድረግ ኃላፊነት ያለበት ዋናውን ሰው ይምረጡ።"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid ""
-#~ "The person who planted and/or is coaching this stream. Only one person "
-#~ "can be assigned to a stream while multiple people can be coaches / church "
-#~ "planters of this stream."
-#~ msgstr ""
-#~ "ይህንን ዥረት የተከላ እና / ወይም አሰልጣኝ የሆነው ሰው። ብዙ ሰዎች የዚህ ዥረት አሰልጣኞች / የቤተክርስቲያን "
-#~ "ተከላዎች ሊሆኑ በሚችሉበት ጊዜ አንድ ሰው ብቻ ወደ ጅረት ሊመደብ ይችላል ፡፡"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid "The people streams represented by this stream."
-#~ msgstr "የሰዎች ጅረቶች በዚህ ዥረት የተወከሉ ናቸው።"
-
-#~ msgid "Parent Stream"
-#~ msgstr "የወላጅ ዥረት"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid "A stream that launched this stream."
-#~ msgstr "ይህንን ጅረት ያስጀመረ ጅረት ፡፡"
-
-#~ msgid "Peer Streams"
-#~ msgstr "የእኩዮች ዥረት"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid ""
-#~ "A related stream that isn't a parent/child in relationship. It might "
-#~ "indicate streams that collaborate, are about to merge, recently split, "
-#~ "etc."
-#~ msgstr ""
-#~ "በግንኙነት ውስጥ ወላጅ / ልጅ ያልሆነ ተዛማጅ ዥረት። ሊተባበሩ ፣ ሊዋሃዱ ፣ በቅርቡ ሊከፋፈሉ ፣ ወዘተ ዥረቶችን "
-#~ "ሊያመለክት ይችላል ፡፡"
-
-#~ msgid "Child Streams"
-#~ msgstr "የልጆች ጅረቶች"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid "A stream that has been birthed out of this stream."
-#~ msgstr "ከዚህ ጅረት የተወለደ ጅረት ፡፡"
-
-#~ msgid "Leader in Stream"
-#~ msgstr "መሪ በዥረት ውስጥ"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid "Leader of a stream"
-#~ msgstr "የአንድ ጅረት መሪ"
-
-#~ msgid "Key Disciple in Stream"
-#~ msgstr "ቁልፍ ደቀ መዝሙር በዥረት ውስጥ"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid "Disciple in a stream."
-#~ msgstr "ደቀ መዝሙር በዥረት ውስጥ ፡፡"
-
-#~ msgid "Connections"
-#~ msgstr "ግንኙነቶች"
-
-#~ msgid "Add Report"
-#~ msgstr "ሪፖርት አክል"
-
-#~ msgid "Disciple Tools - Streams"
-#~ msgstr "የደቀመዝሙር መሳሪያዎች - ጅረቶች"
-
-#~ msgid "Pre-Group Generations"
-#~ msgstr "የቅድመ-ቡድን ትውልዶች"
-
-#~ msgid "Group Generations"
-#~ msgstr "የቡድን ትውልዶች"
-
-#~ msgid "Church Generations"
-#~ msgstr "የቤተክርስቲያን ትውልዶች"
-
-#~ msgid "Team Generations"
-#~ msgstr "የቡድን ትውልዶች"
-
-#~ msgid "%s is reporting a new pre-group generation."
-#~ msgstr "%s አዲስ የቅድመ-ቡድን ትውልድ ሪፖርት እያደረገ ነው።"
-
-#~ msgid "%s is reporting a new group generation."
-#~ msgstr "%s አዲስ የቡድን ትውልድ ሪፖርት እያደረገ ነው።"
-
-#~ msgid "%s is reporting a new church generation."
-#~ msgstr "%s አዲስ የቤተክርስቲያን ትውልድ ሪፖርት እያደረገ ነው።"
-
-#~ msgid "%s is reporting a new leadership team generation."
-#~ msgstr "%s አዲስ የአመራር ቡድን መፍጠርን ሪፖርት እያደረገ ነው።"
-
-#~ msgid "New Contact"
-#~ msgstr "አዲስ ዕውቂያ"
-
-#~ msgid "New Pre-Group"
-#~ msgstr "አዲስ ቅድመ-ቡድን"
-
-#~ msgid "New Group"
-#~ msgstr "አዲስ ቡድን"
-
-#~ msgid "New Church"
-#~ msgstr "አዲስ ቤተክርስቲያን"
-
-#~ msgid "New Team"
-#~ msgstr "አዲስ ቡድን"
-
-#~ msgid "New Baptism"
-#~ msgstr "አዲስ ጥምቀት"
-
-#~ msgid "New Coaching"
-#~ msgstr "አዲስ ስልጠና"
-
-#~ msgid "%s is reporting a new contact."
-#~ msgstr "%s አዲስ እውቂያ ሪፖርት እያደረገ ነው።"
-
-#~ msgid "%s is reporting a new pre-group formed."
-#~ msgstr "%s አዲስ የተቋቋመ ቡድንን ሪፖርት እያደረገ ነው።"
-
-#~ msgid "%s is reporting a new group formed."
-#~ msgstr "%s አዲስ የተቋቋመ ቡድን ሪፖርት እያደረገ ነው።"
-
-#~ msgid "%s is reporting a new church."
-#~ msgstr "%s አዲስ ቤተክርስቲያንን ሪፖርት እያደረገ ነው።"
-
-#~ msgid "%s is reporting a new leadership team formed."
-#~ msgstr "%s ለተቋቋመው አዲስ የአመራር ቡድን ሪፖርት እያደረገ ነው።"
-
-#~ msgid "%s is reporting a new baptism."
-#~ msgstr "%s አዲስ ጥምቀትን ሪፖርት እያደረገ ነው።"
-
-#~ msgid "%s is reporting an coaching relationship."
-#~ msgstr "%s የአሰልጣኝነት ግንኙነትን ሪፖርት እያደረገ ነው።"
-
-#~ msgid "Active"
-#~ msgstr "ንቁ"
-
-#~ msgid "Paused"
-#~ msgstr "ለአፍታ ቆሟል"
-
-#~ msgid "Closed"
-#~ msgstr "ዝግ"
-
-#~ msgid "Inactive"
-#~ msgstr "እንቅስቃሴ-አልባ"
-
-#~ msgid "https://github.com/DiscipleTools/disciple-tools-network-dashboard"
-#~ msgstr "https://github.com/DiscipleTools/disciple-tools-network-dashboard"
-
-#~ msgid ""
-#~ "Connect this Disciple Tools site to a larger network of sites. Adds "
-#~ "security sensitive totals, mapping, activity logging."
-#~ msgstr ""
-#~ "ይህንን የደቀመዝሙር መሳሪያዎች ጣቢያ ከትልቅ የጣቢያዎች አውታረ መረብ ጋር ያገናኙ። የደህንነት ስሱ ድምርን ፣ "
-#~ "ካርታ ማውጣት ፣ የእንቅስቃሴ ምዝግብ ማስታወሻዎችን ይጨምራል።"
-
-#~ msgid "https://github.com/DiscipleTools"
-#~ msgstr "https://github.com/DiscipleTools"
-
-#~ msgid "https://github.com/DiscipleTools/disciple-tools-streams"
-#~ msgstr "https://github.com/DiscipleTools/disciple-tools-streams"
-
-#~ msgid ""
-#~ "Disciple Tools Streams Extension adds recording of streams and cross "
-#~ "reference them with contacts, groups, and locations."
-#~ msgstr ""
-#~ "የደቀመዝሙርት መሣሪያዎች ጅረቶች ቅጥያ የዥረቶችን መቅዳት ያክላል እና ከእውቂያዎች ፣ ቡድኖች እና አካባቢዎች ጋር "
-#~ "በማጣቀሻነት ያጣቅሳቸዋል ፡፡"
-
-#~ msgid ""
-#~ "'Disciple Tools - Training' plugin requires 'Disciple Tools' theme to "
-#~ "work. Please activate 'Disciple Tools' theme or make sure it is latest "
-#~ "version."
-#~ msgstr ""
-#~ "‹የደቀመዝሙር መሣሪያዎች - የሥልጠና› ተሰኪ ‹የደቀ መዛሙርት መሣሪያዎች› ገጽታ እንዲሠራ ይፈልጋል ፡፡ እባክዎ "
-#~ "‹የደቀ መዝሙር መሣሪያዎች› ገጽታ ያግብሩ ወይም የቅርብ ጊዜው ስሪት መሆኑን ያረጋግጡ ፡፡"
-
-#~ msgid "Current Disciple Tools version: %1$s, required version: %2$s"
-#~ msgstr "የአሁኑ የደቀመዝሙር መሳሪያዎች ስሪት %1$s ፣ አስፈላጊ ስሪት %2$s"
-
-#~ msgid "Duplicates"
-#~ msgstr "ብዜቶች"
-
-#~ msgid "Coach"
-#~ msgstr "አሰልጣኝ"
-
-#~ msgid "Leaders Total"
-#~ msgstr "መሪዎች ድምር"
-
-#~ msgid "Disciples Total"
-#~ msgstr "ደቀመዛሙርት ድምር"
-
-#~ msgid "Key Disciples"
-#~ msgstr "ቁልፍ ደቀመዛሙርት"
-
-#~ msgid "Groups Total"
-#~ msgstr "የቡድኖች ድምር"
-
-#~ msgid "Trainings Total"
-#~ msgstr "ስልጠናዎች ድምር"
-
-#~ msgid "Dashboard Plugin"
-#~ msgstr "የዳሽቦርድ ተሰኪ"
-
-#~ msgid "Dashboard"
-#~ msgstr "ዳሽቦርድ"
-
-#~ msgid "%s days since last update"
-#~ msgstr "ካለፈው ዝመና ጀምሮ%s ቀናት"
-
-#~ msgid "Accept"
-#~ msgstr "ተቀበል"
-
-#~ msgid "Decline"
-#~ msgstr "ውድቅ አድርግ"
-
-#~ msgid "# Contacts Assigned"
-#~ msgstr "# እውቂያዎች ተመድበዋል"
-
-#~ msgid "# First Meetings"
-#~ msgstr "# የመጀመሪያ ስብሰባዎች"
-
-#~ msgid "# Faith milestones"
-#~ msgstr "# የእምነት ችልታዎች"
-
-#~ msgid "Hurray! You are caught up."
-#~ msgstr "በፍጥነት! ተይዘዋል ፡፡"
-
-#~ msgid "remove"
-#~ msgstr "አስወግድ"
-
-#~ msgid "mark as complete"
-#~ msgstr "እንደ ተጠናቀቀ ምልክት ያድርጉ"
-
-#~ msgid "No task created"
-#~ msgstr "ምንም ተግባር አልተፈጠረም"
-
-#~ msgid "Reminder"
-#~ msgstr "አስታዋሽ"
-
-#~ msgid "No note set"
-#~ msgstr "ማስታወሻ አልተዘጋጀም"
-
-#~ msgid "Add a contact"
-#~ msgstr "ዕውቂያ ያክሉ"
-
-#~ msgid "View Contacts List"
-#~ msgstr "የእውቂያዎች ዝርዝርን ይመልከቱ"
-
-#~ msgid "Pending Contacts"
-#~ msgstr "ተጠባባቂ እውቂያዎች"
-
-#~ msgid "View All"
-#~ msgstr "ሁሉንም ይመልከቱ"
-
-#~ msgid "Update Needed"
-#~ msgstr "ማዘመን ያስፈልጋል"
-
-#~ msgid "Contact Workload"
-#~ msgstr "የእውቂያ የሥራ ጭነት"
-
-#~ msgid ""
-#~ "Choose an option to let the dispatcher(s) know if you are ready for new "
-#~ "contacts"
-#~ msgstr "ለአዳዲስ እውቂያዎች ዝግጁ ከሆኑ ለተላኪው (ሎች) ለማሳወቅ አንድ አማራጭ ይምረጡ"
-
-#~ msgid "Set travel or dates unavailable"
-#~ msgstr "ጉዞን ወይም ቀኖችን አይዘጋጁ"
-
-#~ msgid "Personal Benchmarks"
-#~ msgstr "የግል ማመሳከሪያዎች"
-
-#~ msgid "Faith Milestone Totals"
-#~ msgstr "የእምነት ክምር ድምር"
-
-#~ msgid "Milestones on your active contacts"
-#~ msgstr "በንቁ እውቂያዎችዎ ላይ ትናንሽ ድንጋዮች"
-
-#~ msgid "Seeker Path Progress"
-#~ msgstr "ፈላጊ ዱካ እድገት"
-
-#~ msgid "No data to show yet. You have no active contacts"
-#~ msgstr "ገና ለማሳየት ምንም ውሂብ የለም። ምንም ንቁ እውቂያዎች የሉዎትም"
-
-#~ msgid "Disciple Tools - Dashboard"
-#~ msgstr "የደቀመዝሙር መሳሪያዎች - ዳሽቦርድ"
-
-#~ msgid "https://github.com/DiscipleTools/disciple-tools-dashboard"
-#~ msgstr "https://github.com/DiscipleTools/disciple-tools-dashboard"
-
-#~ msgid ""
-#~ "The multiplier dashboard upgrades the multipliers experience as soon as "
-#~ "they log into the system giving them a landing page with stats."
-#~ msgstr ""
-#~ "ባለብዙ ዳሽቦርዱ የስታቲስቲክስ ማረፊያ ቦታ ሲሰጣቸው ወደ ስርዓቱ እንደገቡ ወዲያውኑ የብዙዎቹን ተሞክሮ ያሻሽላል"
-
-#~ msgid "Reason Assigned To"
-#~ msgstr "የተመደበበት ምክንያት"
-
-#~ msgid "Follow-Up"
-#~ msgstr "ክትትል"
-
-#~ msgid "Digital Response"
-#~ msgstr "ዲጂታል ምላሽ"
-
-#~ msgid "Dispatch"
-#~ msgstr "መላኪያ"
-
-#~ msgid "No Answer"
-#~ msgstr "መልስ የለም"
-
-#~ msgid "Talked"
-#~ msgstr "ተነጋግሯል"
-
-#~ msgid "Scheduled"
-#~ msgstr "መርሐግብር ተይዞለታል"
-
-#~ msgid "Complete"
-#~ msgstr "ተጠናቀቀ"
-
-#~ msgid "No-Show"
-#~ msgstr "አልመጣም"
-
-#~ msgid "No permission"
-#~ msgstr "ፈቃድ የለም"
-
-#~ msgid "All"
-#~ msgstr "ሁሉም"
-
-#~ msgid "Ready"
-#~ msgstr "ዝግጁ"
-
-#~ msgid "Recent"
-#~ msgstr "የቅርብ ጊዜ"
-
-#~ msgid "Assign"
-#~ msgstr "ይመድቡ"
-
-#~ msgid "Choose an option:"
-#~ msgstr "አንድ አማራጭ ይምረጡ"
-
-#~ msgid "Cancel"
-#~ msgstr "ሰርዝ"
-
-#~ msgid "Assign For"
-#~ msgstr "ይመድቡ ለ"
-
-#~ msgid "Search"
-#~ msgstr "ፈልግ"
-
-#~ msgid "Claim for follow-up"
-#~ msgstr "ለመከታተል የይገባኛል ጥያቄ"
-
-#~ msgid "Ready for Dispatch"
-#~ msgstr "ለመልቀቅ ዝግጁ"
-
-#~ msgid "Disciple Tools - Advanced M2M Tiles"
-#~ msgstr "የደቀመዝሙር መሳሪያዎች - የላቀ የ M2M ሰቆች"
-
-#~ msgid "https://github.com/DiscipleTools/disciple-tools-advanced-m2m-tiles"
-#~ msgstr "https://github.com/DiscipleTools/disciple-tools-advanced-m2m-tiles"
-
-#~ msgid ""
-#~ "Disciple Tools - Advanced M2M Tiles adds specific supporting tiles for "
-#~ "different roles."
-#~ msgstr "የደቀመዝሙር መሳሪያዎች - የላቀ የ M2M ሰቆች ለተለያዩ ሚናዎች የተወሰኑ የድጋፍ ሰድሮችን ያክላል ፡፡"
+msgstr "አጽዳ"

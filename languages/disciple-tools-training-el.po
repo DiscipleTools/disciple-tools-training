@@ -1,4 +1,4 @@
-# Copyright (C) 2023 
+# Copyright (C) 2023
 # This file is distributed under the same license as the Disciple.Tools - Training plugin.
 msgid ""
 msgstr ""
@@ -6,7 +6,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "training\n"
 "POT-Creation-Date: 2024-11-14T11:03:58+00:00\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2026-01-15 12:00+0000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: el\n"
@@ -18,130 +18,132 @@ msgstr ""
 
 #: metrics/mapbox-maps.php:30
 msgid "Training Maps"
-msgstr ""
+msgstr "Χάρτες Εκπαιδεύσεων"
 
 #: metrics/mapbox-maps.php:31 metrics/mapbox-personal-maps.php:31
 #: post-type/module-base.php:29 post-type/module-base.php:461
 #: post-type/module-base.php:473 post-type/module-base.php:496
 msgid "Trainings"
-msgstr ""
+msgstr "Εκπαιδεύσεις"
 
 #: metrics/mapbox-personal-maps.php:30
 msgid "Trainings Maps"
-msgstr ""
+msgstr "Χάρτες Εκπαιδεύσεων"
 
 #: network/network-dashboard-integration.php:44
 msgid "New Training"
-msgstr ""
+msgstr "Νέα Εκπαίδευση"
 
 #: network/network-dashboard-integration.php:50
 msgid "Training Started"
-msgstr ""
+msgstr "Η Εκπαίδευση Ξεκίνησε"
 
 #: network/network-dashboard-integration.php:56
 msgid "Training Completed"
-msgstr ""
+msgstr "Η Εκπαίδευση Ολοκληρώθηκε"
 
 #: post-type/module-base.php:28 post-type/module-base.php:495
 msgid "Training"
-msgstr ""
+msgstr "Εκπαίδευση"
 
 #: post-type/module-base.php:70
 msgid "Trainings Admin"
-msgstr ""
+msgstr "Διαχειριστής Εκπαιδεύσεων"
 
 #: post-type/module-base.php:71
 msgid "Admin access to all trainings"
-msgstr ""
+msgstr "Διαχειριστική πρόσβαση σε όλες τις εκπαιδεύσεις"
 
 #: post-type/module-base.php:76
 msgid "Multiplier"
-msgstr ""
+msgstr "Πολλαπλασιαστής"
 
 #: post-type/module-base.php:83
 msgid "Disciple.Tools Admin"
-msgstr ""
+msgstr "Διαχειριστής Disciple.Tools"
 
 #: post-type/module-base.php:90
 msgid "Administrator"
-msgstr ""
+msgstr "Διαχειριστής"
 
 #: post-type/module-base.php:127
 msgid "Tags"
-msgstr ""
+msgstr "Ετικέτες"
 
 #: post-type/module-base.php:128
 msgctxt "Optional Documentation"
 msgid ""
 "A useful way to group related items and can be used to filter the records"
 msgstr ""
+"Ένας χρήσιμος τρόπος για να ομαδοποιήσετε σχετικά στοιχεία και μπορεί να "
+"χρησιμοποιηθεί για φιλτράρισμα των εγγραφών"
 
 #: post-type/module-base.php:135
 msgid "Follow"
-msgstr ""
+msgstr "Ακολουθήστε"
 
 #: post-type/module-base.php:142
 msgid "Un-Follow"
-msgstr ""
+msgstr "Διακοπή Παρακολούθησης"
 
 #: post-type/module-base.php:148
 msgid "Tasks"
-msgstr ""
+msgstr "Εργασίες"
 
 #: post-type/module-base.php:162
 msgctxt "Training Status label"
 msgid "New"
-msgstr ""
+msgstr "Νέα"
 
 #: post-type/module-base.php:163
 msgctxt "Training Status field description"
 msgid "New training added to the system"
-msgstr ""
+msgstr "Νέα εκπαίδευση προστέθηκε στο σύστημα"
 
 #: post-type/module-base.php:167
 msgctxt "Training Status label"
 msgid "Proposed"
-msgstr ""
+msgstr "Προτεινόμενη"
 
 #: post-type/module-base.php:168
 msgctxt "Training Status field description"
 msgid "This training has been proposed and is in initial conversations"
-msgstr ""
+msgstr "Αυτή η εκπαίδευση έχει προταθεί και βρίσκεται σε αρχικές συζητήσεις"
 
 #: post-type/module-base.php:172
 msgctxt "Training Status label"
 msgid "Scheduled"
-msgstr ""
+msgstr "Προγραμματισμένη"
 
 #: post-type/module-base.php:173
 msgctxt "Training Status field description"
 msgid "This training is confirmed, on the calendar."
-msgstr ""
+msgstr "Αυτή η εκπαίδευση είναι επιβεβαιωμένη, στο ημερολόγιο."
 
 #: post-type/module-base.php:177
 msgctxt "Training Status label"
 msgid "In Progress"
-msgstr ""
+msgstr "Σε Εξέλιξη"
 
 #: post-type/module-base.php:178
 msgctxt "Training Status field description"
 msgid "This training is confirmed, on the calendar, or currently active."
-msgstr ""
+msgstr "Αυτή η εκπαίδευση είναι επιβεβαιωμένη, στο ημερολόγιο ή ενεργή αυτή τη στιγμή."
 
 #: post-type/module-base.php:182
 msgctxt "Training Status label"
 msgid "Complete"
-msgstr ""
+msgstr "Ολοκληρωμένη"
 
 #: post-type/module-base.php:183
 msgctxt "Training Status field description"
 msgid "This training has successfully completed"
-msgstr ""
+msgstr "Αυτή η εκπαίδευση ολοκληρώθηκε επιτυχώς"
 
 #: post-type/module-base.php:187
 msgctxt "Training Status label"
 msgid "Paused"
-msgstr ""
+msgstr "Σε Παύση"
 
 #: post-type/module-base.php:188
 msgctxt "Training Status field description"
@@ -149,29 +151,32 @@ msgid ""
 "This contact is currently on hold. It has potential of getting scheduled in "
 "the future."
 msgstr ""
+"Αυτή η επαφή είναι προσωρινά σε αναμονή. Υπάρχει δυνατότητα προγραμματισμού "
+"στο μέλλον."
 
 #: post-type/module-base.php:192
 msgctxt "Training Status label"
 msgid "Closed"
-msgstr ""
+msgstr "Κλειστή"
 
 #: post-type/module-base.php:193
 msgctxt "Training Status field description"
 msgid "This training is no longer going to happen."
-msgstr ""
+msgstr "Αυτή η εκπαίδευση δεν πρόκειται πλέον να πραγματοποιηθεί."
 
 #: post-type/module-base.php:201
 msgid "Assigned To"
-msgstr ""
+msgstr "Ανατεθειμένο Σε"
 
 #: post-type/module-base.php:202
 msgid ""
 "Select the main person who is responsible for reporting on this training."
 msgstr ""
+"Επιλέξτε το κύριο άτομο που είναι υπεύθυνο για την αναφορά αυτής της εκπαίδευσης."
 
 #: post-type/module-base.php:209
 msgid "Training Coach / Church Planter"
-msgstr ""
+msgstr "Προπονητής Εκπαίδευσης / Ιδρυτής Εκκλησίας"
 
 #: post-type/module-base.php:210
 msgctxt "Optional Documentation"
@@ -180,58 +185,61 @@ msgid ""
 "be assigned to a training while multiple people can be coaches / church "
 "planters of this training."
 msgstr ""
+"Το άτομο που ίδρυσε ή/και προπονεί αυτή την εκπαίδευση. Μόνο ένα άτομο μπορεί "
+"να ανατεθεί σε μια εκπαίδευση ενώ πολλά άτομα μπορούν να είναι προπονητές / "
+"ιδρυτές εκκλησίας αυτής της εκπαίδευσης."
 
 #: post-type/module-base.php:222
 msgid "Requires Update"
-msgstr ""
+msgstr "Απαιτείται Ενημέρωση"
 
 #: post-type/module-base.php:228
 msgid "Video Link"
-msgstr ""
+msgstr "Σύνδεσμος Βίντεο"
 
 #: post-type/module-base.php:229
 msgctxt "Optional Documentation"
 msgid "Link to video chat service"
-msgstr ""
+msgstr "Σύνδεσμος για υπηρεσία βιντεοκλήσης"
 
 #: post-type/module-base.php:236
 msgid "Notes"
-msgstr ""
+msgstr "Σημειώσεις"
 
 #: post-type/module-base.php:237
 msgctxt "Optional Documentation"
 msgid "Notes on when the trainings will happen"
-msgstr ""
+msgstr "Σημειώσεις για το πότε θα γίνουν οι εκπαιδεύσεις"
 
 #: post-type/module-base.php:246 post-type/module-base.php:509
 msgid "Meeting Times"
-msgstr ""
+msgstr "Ώρες Συναντήσεων"
 
 #: post-type/module-base.php:295 post-type/module-base.php:304
 msgid "Locations"
-msgstr ""
+msgstr "Τοποθεσίες"
 
 #: post-type/module-base.php:296 post-type/module-base.php:305
 msgctxt "Optional Documentation"
 msgid "The general location where this contact is located."
-msgstr ""
+msgstr "Η γενική τοποθεσία όπου βρίσκεται αυτή η επαφή."
 
 #: post-type/module-base.php:313
 msgid "Address"
-msgstr ""
+msgstr "Διεύθυνση"
 
 #: post-type/module-base.php:333
 msgid "Parent Training"
-msgstr ""
+msgstr "Γονική Εκπαίδευση"
 
 #: post-type/module-base.php:334
 msgctxt "Optional Documentation"
 msgid "A training that launched this training."
-msgstr ""
+msgstr "Μια εκπαίδευση που ξεκίνησε αυτή την εκπαίδευση."
 
 #: post-type/module-base.php:344
 msgid "Peer Training"
-msgstr ""
+msgstr "Αδελφική Εκπαίδευση"
 
 #: post-type/module-base.php:345
 msgctxt "Optional Documentation"
@@ -239,46 +247,48 @@ msgid ""
 "A related training that isn't a parent/child in relationship. It might "
 "indicate trainings that collaborate, are about to merge, recently split, etc."
 msgstr ""
+"Μια σχετική εκπαίδευση που δεν είναι σε σχέση γονέα/παιδιού. Μπορεί να υποδηλώνει "
+"εκπαιδεύσεις που συνεργάζονται, πρόκειται να συγχωνευθούν, διαχωρίστηκαν πρόσφατα, κλπ."
 
 #: post-type/module-base.php:355
 msgid "Child Training"
-msgstr ""
+msgstr "Θυγατρική Εκπαίδευση"
 
 #: post-type/module-base.php:356
 msgctxt "Optional Documentation"
 msgid "A training that has been birthed out of this training."
-msgstr ""
+msgstr "Μια εκπαίδευση που γεννήθηκε από αυτή την εκπαίδευση."
 
 #: post-type/module-base.php:366 post-type/module-base.php:508
 #: post-type/module-base.php:542
 msgid "Member List"
-msgstr ""
+msgstr "Λίστα Μελών"
 
 #: post-type/module-base.php:367
 msgctxt "Optional Documentation"
 msgid "The contacts who are members of this training."
-msgstr ""
+msgstr "Οι επαφές που είναι μέλη αυτής της εκπαίδευσης."
 
 #: post-type/module-base.php:377
 msgid "Leaders"
-msgstr ""
+msgstr "Ηγέτες"
 
 #: post-type/module-base.php:387
 msgid "People Groups"
-msgstr ""
+msgstr "Εθνοτικές Ομάδες"
 
 #: post-type/module-base.php:388
 msgctxt "Optional Documentation"
 msgid "The people trainings represented by this training."
-msgstr ""
+msgstr "Οι εθνοτικές ομάδες που εκπροσωπούνται σε αυτή την εκπαίδευση."
 
 #: post-type/module-base.php:397
 msgid "Groups"
-msgstr ""
+msgstr "Ομάδες"
 
 #: post-type/module-base.php:409
 msgid "Member Count"
-msgstr ""
+msgstr "Αριθμός Μελών"
 
 #: post-type/module-base.php:410 post-type/module-base.php:417
 msgctxt "Optional Documentation"
@@ -288,49 +298,53 @@ msgid ""
 "manually to included people who may not be in the system but are also "
 "members of the training."
 msgstr ""
+"Ο αριθμός των μελών σε αυτή την εκπαίδευση. Θα ενημερώνεται αυτόματα "
+"όταν προστίθενται ή αφαιρούνται μέλη από τη λίστα μελών. Αλλάξτε αυτόν τον αριθμό "
+"χειροκίνητα για να συμπεριλάβετε άτομα που μπορεί να μην είναι στο σύστημα αλλά είναι "
+"επίσης μέλη της εκπαίδευσης."
 
 #: post-type/module-base.php:416
 msgid "Leader Count"
-msgstr ""
+msgstr "Αριθμός Ηγετών"
 
 #: post-type/module-base.php:426
 msgid "Training as Leader"
-msgstr ""
+msgstr "Εκπαίδευση ως Ηγέτης"
 
 #: post-type/module-base.php:427
 msgctxt "Optional Documentation"
 msgid "Leader of a training"
-msgstr ""
+msgstr "Ηγέτης μιας εκπαίδευσης"
 
 #: post-type/module-base.php:438
 msgid "Training as Participant"
-msgstr ""
+msgstr "Εκπαίδευση ως Συμμετέχων"
 
 #: post-type/module-base.php:439
 msgctxt "Optional Documentation"
 msgid "Participant in a training."
-msgstr ""
+msgstr "Συμμετέχων σε μια εκπαίδευση."
 
 #: post-type/module-base.php:510
 msgid "Other"
-msgstr ""
+msgstr "Άλλο"
 
 #: post-type/module-base.php:545
 msgid "Create"
-msgstr ""
+msgstr "Δημιουργία"
 
 #: post-type/module-base.php:550
 msgid "Select"
-msgstr ""
+msgstr "Επιλογή"
 
 #: post-type/module-base.php:555
 msgid "To add new members, click on 'Create' or 'Select'."
-msgstr ""
+msgstr "Για να προσθέσετε νέα μέλη, κάντε κλικ στο 'Δημιουργία' ή 'Επιλογή'."
 
 #: post-type/module-base.php:560
 msgctxt "Add members modal"
 msgid "Add members from existing contacts"
-msgstr ""
+msgstr "Προσθήκη μελών από υπάρχουσες επαφές"
 
 #: post-type/module-base.php:561
 msgctxt "Add members modal"
@@ -338,135 +352,137 @@ msgid ""
 "In the 'Member List' field, type the name of an existing contact to add them "
 "to this training."
 msgstr ""
+"Στο πεδίο 'Λίστα Μελών', πληκτρολογήστε το όνομα μιας υπάρχουσας επαφής για να την "
+"προσθέσετε σε αυτή την εκπαίδευση."
 
 #: post-type/module-base.php:573
 msgid "Close"
-msgstr ""
+msgstr "Κλείσιμο"
 
 #: post-type/module-base.php:713
 msgid "Removed %1$s: {%2$s}"
-msgstr ""
+msgstr "Αφαιρέθηκε %1$s: {%2$s}"
 
 #: post-type/module-base.php:716
 msgid "Added %1$s: {%2$s}"
-msgstr ""
+msgstr "Προστέθηκε %1$s: {%2$s}"
 
 #: post-type/module-base.php:719
 msgid "Updated %1$s: {%2$s} to {%3$s}"
-msgstr ""
+msgstr "Ενημερώθηκε %1$s: {%2$s} σε {%3$s}"
 
 #: post-type/module-base.php:804
 msgctxt "List Filters"
 msgid "Assigned to me"
-msgstr ""
+msgstr "Ανατεθειμένα σε εμένα"
 
 #: post-type/module-base.php:812
 msgctxt "List Filters"
 msgid "All"
-msgstr ""
+msgstr "Όλα"
 
 #: post-type/module-base.php:871
 msgctxt "List Filters"
 msgid "Default Filters"
-msgstr ""
+msgstr "Προεπιλεγμένα Φίλτρα"
 
 #: post-type/module-public-calendar.php:85
 msgid "Reports"
-msgstr ""
+msgstr "Αναφορές"
 
 #: post-type/module-public-calendar.php:121
 msgid "Total Groups"
-msgstr ""
+msgstr "Συνολικές Ομάδες"
 
 #: post-type/module-public-calendar.php:122
 msgid "Total Baptisms"
-msgstr ""
+msgstr "Συνολικές Βαπτίσεις"
 
 #: post-type/module-public-calendar.php:123
 msgid "Countries"
-msgstr ""
+msgstr "Χώρες"
 
 #: post-type/module-public-calendar.php:124
 msgid "States"
-msgstr ""
+msgstr "Πολιτείες"
 
 #: post-type/module-public-calendar.php:125
 msgid "Counties"
-msgstr ""
+msgstr "Κομητείες"
 
 #: post-type/module-public-calendar.php:432
 #: post-type/module-registration.php:385
 msgid "Add"
-msgstr ""
+msgstr "Προσθήκη"
 
 #: post-type/module-registration.php:31
 msgid "Magic Links"
-msgstr ""
+msgstr "Μαγικοί Σύνδεσμοι"
 
 #: post-type/module-registration.php:59
 msgid "copy link"
-msgstr ""
+msgstr "αντιγραφή συνδέσμου"
 
 #: post-type/module-registration.php:61
 msgid "edit form"
-msgstr ""
+msgstr "επεξεργασία φόρμας"
 
 #: post-type/module-registration.php:63
 msgid "report"
-msgstr ""
+msgstr "αναφορά"
 
 #: post-type/module-registration.php:67
 msgid "create link"
-msgstr ""
+msgstr "δημιουργία συνδέσμου"
 
 #: post-type/module-registration.php:114
 msgid "link"
-msgstr ""
+msgstr "σύνδεσμος"
 
 #: post-type/module-registration.php:116
 msgid "show on calendar"
-msgstr ""
+msgstr "εμφάνιση στο ημερολόγιο"
 
 #: post-type/module-registration.php:118
 msgid "open registration"
-msgstr ""
+msgstr "ανοιχτή εγγραφή"
 
 #: post-type/module-registration.php:265
 msgid "add"
-msgstr ""
+msgstr "προσθήκη"
 
 #: post-type/module-registration.php:266
 msgid "Use"
-msgstr ""
+msgstr "Χρήση"
 
 #: post-type/module-registration.php:267 post-type/module-registration.php:695
 msgid "Search Location"
-msgstr ""
+msgstr "Αναζήτηση Τοποθεσίας"
 
 #: post-type/module-registration.php:268
 msgid "Delete Location"
-msgstr ""
+msgstr "Διαγραφή Τοποθεσίας"
 
 #: post-type/module-registration.php:269
 msgid "Open Mapping"
-msgstr ""
+msgstr "Άνοιγμα Χάρτη"
 
 #: post-type/module-registration.php:270
 msgid "clear"
-msgstr ""
+msgstr "καθαρισμός"
 
 #: post-type/module-registration.php:384
 msgid "Register for Training"
-msgstr ""
+msgstr "Εγγραφή για Εκπαίδευση"
 
 #: post-type/module-registration.php:386
 msgid "Join Training"
-msgstr ""
+msgstr "Συμμετοχή σε Εκπαίδευση"
 
 #: post-type/module-registration.php:387
 msgid "Join in"
-msgstr ""
+msgstr "Συμμετοχή"
 
 #: post-type/module-registration.php:700
 msgid "Clear"
-msgstr ""
+msgstr "Καθαρισμός"

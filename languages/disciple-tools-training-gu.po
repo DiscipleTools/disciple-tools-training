@@ -26,32 +26,27 @@ msgstr "તાલીમ નકશા"
 
 #: network/network-dashboard-integration.php:44
 msgid "New Training"
-msgstr ""
+msgstr "નવી તાલીમ"
 
 #: network/network-dashboard-integration.php:50
 msgid "Training Started"
-msgstr ""
+msgstr "તાલીમ શરૂ થઈ"
 
 #: network/network-dashboard-integration.php:56
 msgid "Training Completed"
-msgstr ""
+msgstr "તાલીમ પૂર્ણ થઈ"
 
 #: post-type/module-base.php:28 post-type/module-base.php:495
 msgid "Training"
 msgstr "તાલીમ"
 
 #: post-type/module-base.php:70
-#, fuzzy
-#| msgid "Trainings"
 msgid "Trainings Admin"
-msgstr "તાલીમ"
+msgstr "તાલીમ સંચાલક"
 
 #: post-type/module-base.php:71
-#, fuzzy
-#| msgctxt "Optional Documentation"
-#| msgid "Leader of a training"
 msgid "Admin access to all trainings"
-msgstr "એક તાલીમ નેતા"
+msgstr "બધી તાલીમ માટે સંચાલક પ્રવેશ"
 
 #: post-type/module-base.php:76
 msgid "Multiplier"
@@ -67,13 +62,14 @@ msgstr "સંચાલક"
 
 #: post-type/module-base.php:127
 msgid "Tags"
-msgstr "ટ Tagsગ્સ"
+msgstr "ટૅગ્સ"
 
 #: post-type/module-base.php:128
 msgctxt "Optional Documentation"
 msgid ""
 "A useful way to group related items and can be used to filter the records"
 msgstr ""
+"સંબંધિત વસ્તુઓને જૂથબદ્ધ કરવાની એક ઉપયોગી રીત અને રેકોર્ડ્સને ફિલ્ટર કરવા માટે વાપરી શકાય છે"
 
 #: post-type/module-base.php:135
 msgid "Follow"
@@ -95,7 +91,7 @@ msgstr "નવું"
 #: post-type/module-base.php:163
 msgctxt "Training Status field description"
 msgid "New training added to the system"
-msgstr "સિસ્ટમમાં નવી તાલીમ ઉમેરવામાં"
+msgstr "સિસ્ટમમાં નવી તાલીમ ઉમેરવામાં આવી"
 
 #: post-type/module-base.php:167
 msgctxt "Training Status label"
@@ -115,7 +111,7 @@ msgstr "સુનિશ્ચિત"
 #: post-type/module-base.php:173
 msgctxt "Training Status field description"
 msgid "This training is confirmed, on the calendar."
-msgstr "આ તાલીમ ક confirmedલેન્ડર પર પુષ્ટિ મળી છે."
+msgstr "આ તાલીમ કેલેન્ડર પર પુષ્ટિ થયેલ છે."
 
 #: post-type/module-base.php:177
 msgctxt "Training Status label"
@@ -125,7 +121,7 @@ msgstr "પ્રગતિમાં"
 #: post-type/module-base.php:178
 msgctxt "Training Status field description"
 msgid "This training is confirmed, on the calendar, or currently active."
-msgstr "આ તાલીમની પુષ્ટિ, કેલેન્ડર પર અથવા હાલમાં સક્રિય છે."
+msgstr "આ તાલીમની પુષ્ટિ થયેલ છે, કેલેન્ડર પર અથવા હાલમાં સક્રિય છે."
 
 #: post-type/module-base.php:182
 msgctxt "Training Status label"
@@ -350,22 +346,16 @@ msgid "Close"
 msgstr "બંધ"
 
 #: post-type/module-base.php:713
-#, fuzzy
-#| msgid "Removed %1$s: %2$s"
 msgid "Removed %1$s: {%2$s}"
-msgstr "%1$s દૂર કર્યું: %2$s"
+msgstr "%1$s દૂર કર્યું: {%2$s}"
 
 #: post-type/module-base.php:716
-#, fuzzy
-#| msgid "Added %1$s: %2$s"
 msgid "Added %1$s: {%2$s}"
-msgstr "%1$s ઉમેરી: %2$s"
+msgstr "%1$s ઉમેર્યું: {%2$s}"
 
 #: post-type/module-base.php:719
-#, fuzzy
-#| msgid "Updated %1$s: %2$s to %3$s"
 msgid "Updated %1$s: {%2$s} to {%3$s}"
-msgstr "%1$s: %2$s થી %3$s પર અપડેટ કર્યું"
+msgstr "%1$s અપડેટ કર્યું: {%2$s} થી {%3$s}"
 
 #: post-type/module-base.php:804
 msgctxt "List Filters"
@@ -380,7 +370,7 @@ msgstr "બધા"
 #: post-type/module-base.php:871
 msgctxt "List Filters"
 msgid "Default Filters"
-msgstr ""
+msgstr "ડિફોલ્ટ ફિલ્ટર્સ"
 
 #: post-type/module-public-calendar.php:85
 msgid "Reports"
@@ -413,15 +403,15 @@ msgstr "ઉમેરો"
 
 #: post-type/module-registration.php:31
 msgid "Magic Links"
-msgstr ""
+msgstr "મેજિક લિંક્સ"
 
 #: post-type/module-registration.php:59
 msgid "copy link"
-msgstr "કડી કડી"
+msgstr "લિંક કૉપી કરો"
 
 #: post-type/module-registration.php:61
 msgid "edit form"
-msgstr "ફેરફાર કરો ફોર્મ"
+msgstr "ફોર્મ સંપાદિત કરો"
 
 #: post-type/module-registration.php:63
 msgid "report"
@@ -429,19 +419,19 @@ msgstr "અહેવાલ"
 
 #: post-type/module-registration.php:67
 msgid "create link"
-msgstr "કડી બનાવો"
+msgstr "લિંક બનાવો"
 
 #: post-type/module-registration.php:114
 msgid "link"
-msgstr "કડી"
+msgstr "લિંક"
 
 #: post-type/module-registration.php:116
 msgid "show on calendar"
-msgstr "ક calendarલેન્ડર પર બતાવો"
+msgstr "કેલેન્ડર પર બતાવો"
 
 #: post-type/module-registration.php:118
 msgid "open registration"
-msgstr "ખુલ્લી નોંધણી "
+msgstr "ખુલ્લી નોંધણી"
 
 #: post-type/module-registration.php:265
 msgid "add"
@@ -449,23 +439,23 @@ msgstr "ઉમેરો"
 
 #: post-type/module-registration.php:266
 msgid "Use"
-msgstr "વાપરવુ"
+msgstr "વાપરો"
 
 #: post-type/module-registration.php:267 post-type/module-registration.php:695
 msgid "Search Location"
-msgstr "શોધ સ્થાન"
+msgstr "સ્થાન શોધો"
 
 #: post-type/module-registration.php:268
 msgid "Delete Location"
-msgstr "સ્થાન કા Deleteી નાખો"
+msgstr "સ્થાન કાઢી નાખો"
 
 #: post-type/module-registration.php:269
 msgid "Open Mapping"
-msgstr "ઓપન મેપિંગ"
+msgstr "મેપિંગ ખોલો"
 
 #: post-type/module-registration.php:270
 msgid "clear"
-msgstr "ચોખ્ખુ"
+msgstr "સાફ કરો"
 
 #: post-type/module-registration.php:384
 msgid "Register for Training"
@@ -473,807 +463,12 @@ msgstr "તાલીમ માટે નોંધણી કરો"
 
 #: post-type/module-registration.php:386
 msgid "Join Training"
-msgstr "તાલીમ જોડાઓ"
+msgstr "તાલીમમાં જોડાઓ"
 
 #: post-type/module-registration.php:387
 msgid "Join in"
-msgstr "માં જોડાવા"
+msgstr "જોડાઓ"
 
 #: post-type/module-registration.php:700
 msgid "Clear"
-msgstr "ચોખ્ખુ"
-
-#~ msgid "Apps"
-#~ msgstr "એપ્લિકેશન્સ"
-
-#, fuzzy
-#~| msgid "Disciple Tools - Training"
-#~ msgid "Disciple.Tools - Training"
-#~ msgstr "શિષ્ય સાધનો - તાલીમ"
-
-#~ msgid "https://github.com/DiscipleTools/disciple-tools-training"
-#~ msgstr "https://github.com/DiscipleTools/disciple-tools-training"
-
-#, fuzzy
-#~| msgid ""
-#~| "Disciple Tools Training Extension adds recording of trainings and cross "
-#~| "reference them with contacts, groups, and locations."
-#~ msgid ""
-#~ "Disciple.Tools Training Extension adds recording of trainings and cross "
-#~ "reference them with contacts, groups, and locations."
-#~ msgstr ""
-#~ "શિષ્ય સાધનો તાલીમ વિસ્તરણ, તાલીમના રેકોર્ડિંગને જોડે છે અને તેમને સંપર્કો, જૂથો અને "
-#~ "સ્થાનો સાથે સંદર્ભમાં સંદર્ભ આપે છે."
-
-#~ msgid "Whoah, partner!"
-#~ msgstr "વહુ, ભાગીદાર!"
-
-#~ msgid "Method does not exist."
-#~ msgstr "પદ્ધતિ અસ્તિત્વમાં નથી."
-
-#~ msgid "Dispatcher"
-#~ msgstr "રવાનગી"
-
-#~ msgid "Members"
-#~ msgstr "સભ્યો"
-
-#~ msgid "Contacts"
-#~ msgstr "સંપર્કો"
-
-#~ msgid "Coaches"
-#~ msgstr "કોચ"
-
-#~ msgid "Planted by"
-#~ msgstr "દ્વારા વાવેતર કર્યુ"
-
-#~ msgid "Planting"
-#~ msgstr "વાવેતર"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid ""
-#~ "A useful way to training related items and can help training contacts "
-#~ "associated with noteworthy characteristics. e.g. business owner, sports "
-#~ "lover. The contacts can also be filtered using these tags."
-#~ msgstr ""
-#~ "સંબંધિત વસ્તુઓને તાલીમ આપવાની એક ઉપયોગી રીત અને નોંધપાત્ર લાક્ષણિકતાઓ સાથે સંકળાયેલા "
-#~ "સંપર્કને તાલીમ આપવામાં સહાય કરી શકે છે. દા.ત. વ્યવસાય માલિક, રમતો પ્રેમી. આ ટsગ્સનો "
-#~ "ઉપયોગ કરીને સંપર્કોને પણ ફિલ્ટર કરી શકાય છે."
-
-#~ msgctxt "input field placeholder"
-#~ msgid "Search Users"
-#~ msgstr "વપરાશકર્તાઓ શોધો"
-
-#~ msgctxt "Search 'something'"
-#~ msgid "Search %s"
-#~ msgstr "%s શોધો"
-
-#~ msgid "Extensions (DT)"
-#~ msgstr "એક્સ્ટેંશન (ડીટી)"
-
-#~ msgid "Network Dashboard"
-#~ msgstr "નેટવર્ક ડેશબોર્ડ"
-
-#~ msgid "You do not have sufficient permissions to access this page."
-#~ msgstr "તમારી પાસે આ પૃષ્ઠને toક્સેસ કરવા માટે પૂરતી પરવાનગી નથી."
-
-#~ msgid "nav-tab-active"
-#~ msgstr "એનએવી-ટ tabબ-સક્રિય"
-
-#~ msgid "Network Dashboard Viewer"
-#~ msgstr "નેટવર્ક ડેશબોર્ડ દર્શક"
-
-#~ msgid "ID"
-#~ msgstr "આઈ.ડી."
-
-#~ msgid "Site"
-#~ msgstr "સાઇટ"
-
-#~ msgid "Users"
-#~ msgstr "વપરાશકર્તાઓ"
-
-#~ msgid "Timestamp"
-#~ msgstr "ટાઇમસ્ટેમ્પ"
-
-#~ msgid "Visit"
-#~ msgstr "મુલાકાત લો"
-
-#~ msgid "View"
-#~ msgstr "જુઓ"
-
-#~ msgid "Active Snapshot"
-#~ msgstr "સક્રિય સ્નેપશોટ"
-
-#~ msgid "Generations"
-#~ msgstr "પે Geneીઓ"
-
-#~ msgid "Follow-up Funnel"
-#~ msgstr "ફોલો-અપ ફનલ"
-
-#~ msgid "On-Going Meetings"
-#~ msgstr "ચાલુ બેઠકો"
-
-#~ msgid "Coaching"
-#~ msgstr "કોચિંગ"
-
-#~ msgid "Baptized"
-#~ msgstr "બાપ્તિસ્મા"
-
-#~ msgid "Active Groups"
-#~ msgstr "સક્રિય જૂથો"
-
-#~ msgid "Church"
-#~ msgstr "ચર્ચ"
-
-#~ msgid "Health Metrics"
-#~ msgstr "આરોગ્ય મેટ્રિક્સ"
-
-#~ msgid "Total Users"
-#~ msgstr "કુલ વપરાશકર્તાઓ"
-
-#~ msgid "Responders"
-#~ msgstr "જવાબો"
-
-#~ msgid "Dispatchers"
-#~ msgstr "રવાનગી"
-
-#~ msgid "Multipliers"
-#~ msgstr "ગુણાકાર"
-
-#~ msgid "Admins"
-#~ msgstr "સંચાલકો"
-
-#~ msgid "User Login Activity"
-#~ msgstr "વપરાશકર્તા લ Loginગિન પ્રવૃત્તિ"
-
-#~ msgid "Users Active in the Last 30 Days"
-#~ msgstr "છેલ્લા 30 દિવસમાં સક્રિય વપરાશકર્તાઓ"
-
-#~ msgid "Practicing"
-#~ msgstr "પ્રેક્ટિસ"
-
-#~ msgid "Not Practicing"
-#~ msgstr "પ્રેક્ટિસ નહીં"
-
-#~ msgid "Chart Funnel"
-#~ msgstr "ચાર્ટ ફનલ"
-
-#~ msgid "Contact"
-#~ msgstr "સંપર્ક કરો"
-
-#~ msgid "Group"
-#~ msgstr "જૂથ"
-
-#~ msgid "User"
-#~ msgstr "વપરાશકર્તા"
-
-#~ msgid "Sites"
-#~ msgstr "સાઇટ્સ"
-
-#~ msgid "Baptisms"
-#~ msgstr "બાપ્તિસ્મા"
-
-#~ msgid "Churches"
-#~ msgstr "ચર્ચો"
-
-#~ msgid "Location"
-#~ msgstr "સ્થાન"
-
-#~ msgid "Types"
-#~ msgstr "પ્રકારો"
-
-#~ msgid "modify filter"
-#~ msgstr "ફિલ્ટર સુધારો"
-
-#~ msgid "Filter List"
-#~ msgstr "ફિલ્ટર સૂચિ"
-
-#~ msgid "reset data"
-#~ msgstr "ડેટા ફરીથી સેટ કરો"
-
-#~ msgid "Status"
-#~ msgstr "સ્થિતિ"
-
-#~ msgid "Status - All"
-#~ msgstr "સ્થિતિ - બધા"
-
-#~ msgid "Zoom Level"
-#~ msgstr "ઝૂમ લેવલ"
-
-#~ msgid "Auto Zoom"
-#~ msgstr "Autoટો ઝૂમ"
-
-#~ msgid "World"
-#~ msgstr "દુનિયા"
-
-#~ msgid "Country"
-#~ msgstr "દેશ"
-
-#~ msgid "State"
-#~ msgstr "રાજ્ય"
-
-#~ msgid "Active Contacts"
-#~ msgstr "સક્રિય સંપર્કો"
-
-#~ msgid "Paused Contacts"
-#~ msgstr "સંપર્કો થોભાવ્યા"
-
-#~ msgid "Closed Contacts"
-#~ msgstr "સંપર્કો બંધ"
-
-#~ msgid "Total Contacts"
-#~ msgstr "કુલ સંપર્કો"
-
-#~ msgid "New Contacts"
-#~ msgstr "નવા સંપર્કો"
-
-#~ msgid "New Baptisms"
-#~ msgstr "નવી બાપ્તિસ્મા"
-
-#~ msgid "Baptism Generations"
-#~ msgstr "બાપ્તિસ્મા પેrationsી"
-
-#~ msgid "Select Location"
-#~ msgstr "સ્થાન પસંદ કરો"
-
-#~ msgid "New Groups"
-#~ msgstr "નવા જૂથો"
-
-#~ msgid "Pre-Group"
-#~ msgstr "પૂર્વ જૂથ"
-
-#~ msgid "Pre-Groups"
-#~ msgstr "પૂર્વ જૂથો"
-
-#~ msgid "Last 7 Days"
-#~ msgstr "છેલ્લા 7 દિવસો"
-
-#~ msgid "Last 30 Days"
-#~ msgstr "છેલ્લા 30 દિવસો"
-
-#~ msgid "Last 60 Days"
-#~ msgstr "છેલ્લા 60 દિવસો"
-
-#~ msgid "Last 12 Months"
-#~ msgstr "છેલ્લા 12 મહિના"
-
-#~ msgid "Last 24 Months"
-#~ msgstr "છેલ્લા 24 મહિના"
-
-#~ msgid "This Year"
-#~ msgstr "આ વર્ષ"
-
-#~ msgid "Activity Map"
-#~ msgstr "પ્રવૃત્તિ નકશો"
-
-#~ msgid "Stats"
-#~ msgstr "આંકડા"
-
-#~ msgid "Activities"
-#~ msgstr "પ્રવૃત્તિઓ"
-
-#~ msgid "Actions"
-#~ msgstr "ક્રિયાઓ"
-
-#~ msgid "By Action Type"
-#~ msgstr "ક્રિયા પ્રકાર દ્વારા"
-
-#~ msgid "Key"
-#~ msgstr "કી"
-
-#~ msgid "Name"
-#~ msgstr "નામ"
-
-#~ msgid "Total Activities"
-#~ msgstr "કુલ પ્રવૃત્તિઓ"
-
-#~ msgid "Feed"
-#~ msgstr "ફીડ"
-
-#~ msgid "Time"
-#~ msgstr "સમય"
-
-#~ msgid "Result Limit"
-#~ msgstr "પરિણામની મર્યાદા"
-
-#~ msgid "uncheck"
-#~ msgstr "અનચેક"
-
-#~ msgid "Home"
-#~ msgstr "ખેર"
-
-#~ msgid "Events (30 Days)"
-#~ msgstr "ઇવેન્ટ્સ (30 દિવસ)"
-
-#~ msgid "All Active/Inactive"
-#~ msgstr "બધા સક્રિય / નિષ્ક્રિય"
-
-#~ msgid "Hover Map"
-#~ msgstr "નકશો હoverવર"
-
-#~ msgid "Network"
-#~ msgstr "નેટવર્ક"
-
-#~ msgid "Map"
-#~ msgstr "નકશો"
-
-#~ msgid "Log"
-#~ msgstr "લ Logગ"
-
-#~ msgid "Activity"
-#~ msgstr "પ્રવૃત્તિ"
-
-#~ msgid "Area Maps"
-#~ msgstr "ક્ષેત્ર નકશા"
-
-#~ msgid "Location List"
-#~ msgstr "સ્થાન સૂચિ"
-
-#~ msgid "Maps"
-#~ msgstr "નકશા"
-
-#~ msgid "Site Reports"
-#~ msgstr "સાઇટ અહેવાલો"
-
-#~ msgid "Statistics"
-#~ msgstr "આંકડા"
-
-#~ msgid "Network Dashboard Transfer Both Ways"
-#~ msgstr "નેટવર્ક ડેશબોર્ડ બંને રીતે સ્થાનાંતરિત કરે છે"
-
-#~ msgid "Network Dashboard Receiving Only"
-#~ msgstr "ફક્ત નેટવર્ક ડેશબોર્ડ પ્રાપ્ત થાય છે"
-
-#~ msgid "Network Dashboard Sending Only"
-#~ msgstr "નેટવર્ક ડેશબોર્ડ ફક્ત મોકલી રહ્યું છે"
-
-#~ msgid "Network Dashboard Site Profile"
-#~ msgstr "નેટવર્ક ડેશબોર્ડ સાઇટ પ્રોફાઇલ"
-
-#~ msgid "Disciple Tools - Network Dashboard"
-#~ msgstr "શિષ્ય સાધનો - નેટવર્ક ડેશબોર્ડ"
-
-#~ msgid "Streams"
-#~ msgstr "સ્ટ્રીમ્સ"
-
-#~ msgid "Stream Maps"
-#~ msgstr "પ્રવાહ નકશા"
-
-#~ msgid "Streams Maps"
-#~ msgstr "સ્ટ્રીમ્સ નકશા"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid ""
-#~ "A useful way to stream related items and can help stream contacts "
-#~ "associated with noteworthy characteristics. e.g. business owner, sports "
-#~ "lover. The contacts can also be filtered using these tags."
-#~ msgstr ""
-#~ "સંબંધિત વસ્તુઓને સ્ટ્રીમ કરવાની એક ઉપયોગી રીત અને નોંધપાત્ર લાક્ષણિકતાઓ સાથે સંકળાયેલા "
-#~ "સંપર્કોને સ્ટ્રીમ કરવામાં સહાય કરી શકે છે. દા.ત. વ્યવસાય માલિક, રમતો પ્રેમી. આ "
-#~ "ટsગ્સનો ઉપયોગ કરીને સંપર્કોને પણ ફિલ્ટર કરી શકાય છે."
-
-#~ msgctxt "Stream Status label"
-#~ msgid "New"
-#~ msgstr "નવું"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "New stream added to the system"
-#~ msgstr "સિસ્ટમમાં નવો પ્રવાહ ઉમેર્યો"
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Model"
-#~ msgstr "મોડેલ"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "This stream has been proposed and is in initial conversations"
-#~ msgstr "આ પ્રવાહની દરખાસ્ત કરવામાં આવી છે અને પ્રારંભિક વાતચીતમાં છે"
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Assist"
-#~ msgstr "સહાય કરો"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "This stream is confirmed, on the calendar."
-#~ msgstr "આ પ્રવાહની પુષ્ટિ, કેલેન્ડર પર છે."
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Watch"
-#~ msgstr "જુઓ"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "This stream is confirmed, on the calendar, or currently active."
-#~ msgstr "આ પ્રવાહની પુષ્ટિ, કેલેન્ડર પર અથવા હાલમાં સક્રિય છે."
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Leave"
-#~ msgstr "રજા"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "This stream has successfully completed"
-#~ msgstr "આ પ્રવાહ સફળતાપૂર્વક પૂર્ણ થયો છે"
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Paused"
-#~ msgstr "થોભાવ્યું"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid ""
-#~ "This contact is currently on hold. It has potential of getting scheduled "
-#~ "in the future."
-#~ msgstr "આ સંપર્ક હાલમાં પકડી રાખ્યો છે. તે ભવિષ્યમાં સુનિશ્ચિત થવાની સંભાવના છે."
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Closed"
-#~ msgstr "બંધ"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "This stream is no longer going to happen."
-#~ msgstr "આ પ્રવાહ હવે થવાનો નથી."
-
-#~ msgid ""
-#~ "Select the main person who is responsible for reporting on this stream."
-#~ msgstr "આ પ્રવાહ પર જાણ કરવા માટે જવાબદાર મુખ્ય વ્યક્તિ પસંદ કરો."
-
-#~ msgctxt "Optional Documentation"
-#~ msgid ""
-#~ "The person who planted and/or is coaching this stream. Only one person "
-#~ "can be assigned to a stream while multiple people can be coaches / church "
-#~ "planters of this stream."
-#~ msgstr ""
-#~ "જે વ્યક્તિએ આ પ્રવાહ વાવ્યો અને / અથવા કોચિંગ આપી રહ્યો છે. ફક્ત એક જ વ્યક્તિને "
-#~ "પ્રવાહમાં સોંપવામાં આવી શકે છે જ્યારે ઘણા લોકો આ પ્રવાહના કોચ / ચર્ચ વાવેતર કરી શકે છે."
-
-#~ msgctxt "Optional Documentation"
-#~ msgid "The people streams represented by this stream."
-#~ msgstr "લોકો આ પ્રવાહ દ્વારા રજૂ કરે છે."
-
-#~ msgid "Parent Stream"
-#~ msgstr "પિતૃ પ્રવાહ"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid "A stream that launched this stream."
-#~ msgstr "એક પ્રવાહ કે જેણે આ પ્રવાહનો પ્રારંભ કર્યો."
-
-#~ msgid "Peer Streams"
-#~ msgstr "પીઅર સ્ટ્રીમ્સ"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid ""
-#~ "A related stream that isn't a parent/child in relationship. It might "
-#~ "indicate streams that collaborate, are about to merge, recently split, "
-#~ "etc."
-#~ msgstr ""
-#~ "સંબંધિત સ્ટ્રીમ જે સંબંધમાં માતાપિતા / બાળક નથી. તે સ્ટ્રીમ્સને સંકેત આપી શકે છે જે સહયોગ "
-#~ "કરે છે, મર્જ થવાના છે, તાજેતરમાં વિભાજિત થાય છે, વગેરે."
-
-#~ msgid "Child Streams"
-#~ msgstr "બાળ પ્રવાહો"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid "A stream that has been birthed out of this stream."
-#~ msgstr "એક પ્રવાહ કે જે આ પ્રવાહમાંથી નીકળી ગયો છે."
-
-#~ msgid "Leader in Stream"
-#~ msgstr "પ્રવાહમાં નેતા"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid "Leader of a stream"
-#~ msgstr "એક પ્રવાહનો નેતા"
-
-#~ msgid "Key Disciple in Stream"
-#~ msgstr "પ્રવાહમાં કી શિષ્ય"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid "Disciple in a stream."
-#~ msgstr "એક પ્રવાહમાં શિષ્ય."
-
-#~ msgid "Connections"
-#~ msgstr "જોડાણો"
-
-#~ msgid "Add Report"
-#~ msgstr "રિપોર્ટ ઉમેરો"
-
-#~ msgid "Disciple Tools - Streams"
-#~ msgstr "શિષ્ય સાધનો - સ્ટ્રીમ્સ"
-
-#~ msgid "Pre-Group Generations"
-#~ msgstr "પૂર્વ જૂથ પે Geneીઓ"
-
-#~ msgid "Group Generations"
-#~ msgstr "જૂથ પેrationsી"
-
-#~ msgid "Church Generations"
-#~ msgstr "ચર્ચ પેrationsી"
-
-#~ msgid "Team Generations"
-#~ msgstr "ટીમ જનરેશન"
-
-#~ msgid "%s is reporting a new pre-group generation."
-#~ msgstr "%s નવી પૂર્વ-જૂથ જનરેશનની જાણ કરી રહ્યું છે."
-
-#~ msgid "%s is reporting a new group generation."
-#~ msgstr "%s નવી જૂથ પે generationીનો અહેવાલ આપે છે."
-
-#~ msgid "%s is reporting a new church generation."
-#~ msgstr "%s નવી ચર્ચ પે generationીની જાણ કરે છે."
-
-#~ msgid "%s is reporting a new leadership team generation."
-#~ msgstr "%s નવી નેતૃત્વ ટીમ બનાવટની જાણ કરે છે."
-
-#~ msgid "New Contact"
-#~ msgstr "નવો સંપર્ક"
-
-#~ msgid "New Pre-Group"
-#~ msgstr "નવું પૂર્વ જૂથ"
-
-#~ msgid "New Group"
-#~ msgstr "નવું જૂથ"
-
-#~ msgid "New Church"
-#~ msgstr "ન્યુ ચર્ચ"
-
-#~ msgid "New Team"
-#~ msgstr "નવી ટીમ"
-
-#~ msgid "New Baptism"
-#~ msgstr "નવો બાપ્તિસ્મા"
-
-#~ msgid "New Coaching"
-#~ msgstr "નવી કોચિંગ"
-
-#~ msgid "%s is reporting a new contact."
-#~ msgstr "%s નવા સંપર્કની જાણ કરી રહ્યું છે."
-
-#~ msgid "%s is reporting a new pre-group formed."
-#~ msgstr "%s રચિત નવા પૂર્વ જૂથની જાણ કરી રહ્યું છે."
-
-#~ msgid "%s is reporting a new group formed."
-#~ msgstr "%s એ બનાવેલ નવા જૂથની જાણ કરી રહ્યાં છે."
-
-#~ msgid "%s is reporting a new church."
-#~ msgstr "%s નવા ચર્ચની જાણ કરે છે."
-
-#~ msgid "%s is reporting a new leadership team formed."
-#~ msgstr "%s રચિત નવી લીડરશીપ ટીમની રીપોર્ટ આપી રહ્યો છે."
-
-#~ msgid "%s is reporting a new baptism."
-#~ msgstr "%s નવા બાપ્તિસ્માની જાણ કરે છે."
-
-#~ msgid "%s is reporting an coaching relationship."
-#~ msgstr "%s કોચિંગના સંબંધની જાણ કરી રહ્યું છે."
-
-#~ msgid "Active"
-#~ msgstr "સક્રિય"
-
-#~ msgid "Paused"
-#~ msgstr "થોભાવ્યું"
-
-#~ msgid "Closed"
-#~ msgstr "બંધ"
-
-#~ msgid "Inactive"
-#~ msgstr "નિષ્ક્રિય"
-
-#~ msgid "https://github.com/DiscipleTools/disciple-tools-network-dashboard"
-#~ msgstr "https://github.com/DiscipleTools/disciple-tools-network-dashboard"
-
-#~ msgid ""
-#~ "Connect this Disciple Tools site to a larger network of sites. Adds "
-#~ "security sensitive totals, mapping, activity logging."
-#~ msgstr ""
-#~ "આ શિષ્ય ટૂલ્સ સાઇટને સાઇટ્સના મોટા નેટવર્કથી કનેક્ટ કરો. સુરક્ષા સંવેદનશીલ સરેરાશ, "
-#~ "મેપિંગ, પ્રવૃત્તિ લgingગિંગને ઉમેરો."
-
-#~ msgid "https://github.com/DiscipleTools"
-#~ msgstr "https://github.com/DiscipleTools"
-
-#~ msgid "https://github.com/DiscipleTools/disciple-tools-streams"
-#~ msgstr "https://github.com/DiscipleTools/disciple-tools-streams"
-
-#~ msgid ""
-#~ "Disciple Tools Streams Extension adds recording of streams and cross "
-#~ "reference them with contacts, groups, and locations."
-#~ msgstr ""
-#~ "શિષ્ય ટૂલ્સ સ્ટ્રીમ્સ એક્સ્ટેંશન, સ્ટ્રીમ્સનું રેકોર્ડિંગ ઉમેર્યું છે અને સંપર્કો, જૂથો અને સ્થાનો સાથે "
-#~ "તેમને ક્રોસ સંદર્ભ આપશે."
-
-#~ msgid ""
-#~ "'Disciple Tools - Training' plugin requires 'Disciple Tools' theme to "
-#~ "work. Please activate 'Disciple Tools' theme or make sure it is latest "
-#~ "version."
-#~ msgstr ""
-#~ "'શિષ્ય સાધનો - તાલીમ' પ્લગઇનને કાર્ય કરવા માટે 'શિષ્ય સાધનો' થીમની જરૂર છે. કૃપા "
-#~ "કરીને 'શિષ્ય ટૂલ્સ' થીમ સક્રિય કરો અથવા ખાતરી કરો કે તે નવીનતમ સંસ્કરણ છે."
-
-#~ msgid "Current Disciple Tools version: %1$s, required version: %2$s"
-#~ msgstr "વર્તમાન શિષ્ય સાધનોનું સંસ્કરણ: %1$s, આવશ્યક સંસ્કરણ: %2$s"
-
-#~ msgid "Duplicates"
-#~ msgstr "ડુપ્લિકેટ્સ"
-
-#~ msgid "Coach"
-#~ msgstr "કોચ"
-
-#~ msgid "Leaders Total"
-#~ msgstr "કુલ નેતાઓ"
-
-#~ msgid "Disciples Total"
-#~ msgstr "શિષ્ય કુલ"
-
-#~ msgid "Key Disciples"
-#~ msgstr "કી શિષ્યો"
-
-#~ msgid "Groups Total"
-#~ msgstr "જૂથો કુલ"
-
-#~ msgid "Trainings Total"
-#~ msgstr "કુલ તાલીમ"
-
-#~ msgid "Dashboard Plugin"
-#~ msgstr "ડેશબોર્ડ પ્લગઇન"
-
-#~ msgid "Dashboard"
-#~ msgstr "ડેશબોર્ડ"
-
-#~ msgid "%s days since last update"
-#~ msgstr "છેલ્લા અપડેટ પછી%s દિવસ"
-
-#~ msgid "Accept"
-#~ msgstr "સ્વીકારો"
-
-#~ msgid "Decline"
-#~ msgstr "ઘટી"
-
-#~ msgid "# Contacts Assigned"
-#~ msgstr "# સંપર્કો સોંપેલ"
-
-#~ msgid "# First Meetings"
-#~ msgstr "# પ્રથમ સભાઓ"
-
-#~ msgid "# Faith milestones"
-#~ msgstr "# વિશ્વાસ સીમાચિહ્નો"
-
-#~ msgid "Hurray! You are caught up."
-#~ msgstr "હુરે! તમે પકડાઈ ગયા છો."
-
-#~ msgid "remove"
-#~ msgstr "દૂર કરો"
-
-#~ msgid "mark as complete"
-#~ msgstr "સંપૂર્ણ તરીકે ચિહ્નિત કરો"
-
-#~ msgid "No task created"
-#~ msgstr "કોઈ કાર્ય બનાવ્યું નથી"
-
-#~ msgid "Reminder"
-#~ msgstr "રીમાઇન્ડર"
-
-#~ msgid "No note set"
-#~ msgstr "કોઈ નોંધ સેટ નથી"
-
-#~ msgid "Add a contact"
-#~ msgstr "સંપર્ક ઉમેરો"
-
-#~ msgid "View Contacts List"
-#~ msgstr "સંપર્કોની સૂચિ જુઓ"
-
-#~ msgid "Pending Contacts"
-#~ msgstr "બાકી સંપર્કો"
-
-#~ msgid "View All"
-#~ msgstr "બધુજ જુઓ"
-
-#~ msgid "Update Needed"
-#~ msgstr "અપડેટ આવશ્યક છે"
-
-#~ msgid "Contact Workload"
-#~ msgstr "વર્કલોડનો સંપર્ક કરો"
-
-#~ msgid ""
-#~ "Choose an option to let the dispatcher(s) know if you are ready for new "
-#~ "contacts"
-#~ msgstr ""
-#~ "જો તમે નવા સંપર્કો માટે તૈયાર છો તો રવાનગીને જાણ કરવા માટે કોઈ વિકલ્પ પસંદ કરો"
-
-#~ msgid "Set travel or dates unavailable"
-#~ msgstr "મુસાફરી સેટ કરો અથવા તારીખો અનુપલબ્ધ છે"
-
-#~ msgid "Personal Benchmarks"
-#~ msgstr "વ્યક્તિગત બેંચમાર્ક્સ"
-
-#~ msgid "Faith Milestone Totals"
-#~ msgstr "વિશ્વાસ માઇલસ્ટોન કુલ"
-
-#~ msgid "Milestones on your active contacts"
-#~ msgstr "તમારા સક્રિય સંપર્કો પર માઇલ સ્ટોન્સ"
-
-#~ msgid "Seeker Path Progress"
-#~ msgstr "સિકર પથ પ્રગતિ"
-
-#~ msgid "No data to show yet. You have no active contacts"
-#~ msgstr "હજી બતાવવા માટે કોઈ ડેટા નથી. તમારી પાસે કોઈ સક્રિય સંપર્કો નથી"
-
-#~ msgid "Disciple Tools - Dashboard"
-#~ msgstr "શિષ્ય સાધનો - ડેશબોર્ડ"
-
-#~ msgid "https://github.com/DiscipleTools/disciple-tools-dashboard"
-#~ msgstr "https://github.com/DiscipleTools/disciple-tools-dashboard"
-
-#~ msgid ""
-#~ "The multiplier dashboard upgrades the multipliers experience as soon as "
-#~ "they log into the system giving them a landing page with stats."
-#~ msgstr ""
-#~ "મલ્ટીપ્લાયર ડેશબોર્ડ મલ્ટીપ્લાયર્સના અનુભવને અપગ્રેડ કરે છે જલદી તેઓ સિસ્ટમમાં લ logગ ઇન "
-#~ "કરે છે જ્યારે તેમને આંકડા સાથે લેન્ડિંગ પૃષ્ઠ આપે છે."
-
-#~ msgid "Reason Assigned To"
-#~ msgstr "કારણ સોંપ્યું"
-
-#~ msgid "Follow-Up"
-#~ msgstr "ફોલો-અપ"
-
-#~ msgid "Digital Response"
-#~ msgstr "ડિજિટલ પ્રતિસાદ"
-
-#~ msgid "Dispatch"
-#~ msgstr "રવાનગી"
-
-#~ msgid "No Answer"
-#~ msgstr "કોઇ જવાબ નથિ"
-
-#~ msgid "Talked"
-#~ msgstr "વાત કરી"
-
-#~ msgid "Scheduled"
-#~ msgstr "સુનિશ્ચિત"
-
-#~ msgid "Complete"
-#~ msgstr "પૂર્ણ"
-
-#~ msgid "No-Show"
-#~ msgstr "નો-શો"
-
-#~ msgid "No permission"
-#~ msgstr "કોઈ પરવાનગી નથી"
-
-#~ msgid "All"
-#~ msgstr "બધા"
-
-#~ msgid "Ready"
-#~ msgstr "તૈયાર છે"
-
-#~ msgid "Recent"
-#~ msgstr "તાજેતરના"
-
-#~ msgid "Assign"
-#~ msgstr "સોંપો"
-
-#~ msgid "Choose an option:"
-#~ msgstr "કોઈ વિકલ્પ પસંદ કરો:"
-
-#~ msgid "Cancel"
-#~ msgstr "રદ કરો"
-
-#~ msgid "Assign For"
-#~ msgstr "માટે સોંપો"
-
-#~ msgid "Search"
-#~ msgstr "શોધો"
-
-#~ msgid "Claim for follow-up"
-#~ msgstr "ફોલો-અપ માટે દાવો કરો"
-
-#~ msgid "Ready for Dispatch"
-#~ msgstr "રવાનગી માટે તૈયાર"
-
-#~ msgid "Disciple Tools - Advanced M2M Tiles"
-#~ msgstr "શિષ્ય સાધનો - અદ્યતન એમ 2 એમ ટાઇલ્સ"
-
-#~ msgid "https://github.com/DiscipleTools/disciple-tools-advanced-m2m-tiles"
-#~ msgstr "https://github.com/DiscipleTools/disciple-tools-advanced-m2m-tiles"
-
-#~ msgid ""
-#~ "Disciple Tools - Advanced M2M Tiles adds specific supporting tiles for "
-#~ "different roles."
-#~ msgstr ""
-#~ "શિષ્ય સાધનો - અદ્યતન એમ 2 એમ ટાઇલ્સ વિવિધ ભૂમિકાઓ માટે વિશિષ્ટ સહાયક ટાઇલ્સ ઉમેરે "
-#~ "છે."
+msgstr "સાફ કરો"

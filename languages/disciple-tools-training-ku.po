@@ -22,36 +22,31 @@ msgstr "Perwerde"
 
 #: metrics/mapbox-personal-maps.php:30
 msgid "Trainings Maps"
-msgstr "Nexşeyên Hînkariyê"
+msgstr "Nexşeyên Perwerdehiyê"
 
 #: network/network-dashboard-integration.php:44
 msgid "New Training"
-msgstr ""
+msgstr "Perwerdehiya Nû"
 
 #: network/network-dashboard-integration.php:50
 msgid "Training Started"
-msgstr ""
+msgstr "Perwerde Dest Pê Kir"
 
 #: network/network-dashboard-integration.php:56
 msgid "Training Completed"
-msgstr ""
+msgstr "Perwerde Qediya"
 
 #: post-type/module-base.php:28 post-type/module-base.php:495
 msgid "Training"
-msgstr "Hîndarî"
-
-#: post-type/module-base.php:70
-#, fuzzy
-#| msgid "Trainings"
-msgid "Trainings Admin"
 msgstr "Perwerde"
 
+#: post-type/module-base.php:70
+msgid "Trainings Admin"
+msgstr "Rêveberê Perwerdeyan"
+
 #: post-type/module-base.php:71
-#, fuzzy
-#| msgctxt "Optional Documentation"
-#| msgid "Leader of a training"
 msgid "Admin access to all trainings"
-msgstr "Rêberê perwerdehiyek"
+msgstr "Gihîştina rêveberiyê ji bo hemû perwerdeyan"
 
 #: post-type/module-base.php:76
 msgid "Multiplier"
@@ -59,7 +54,7 @@ msgstr "Pirjimar"
 
 #: post-type/module-base.php:83
 msgid "Disciple.Tools Admin"
-msgstr "Ipagirt.Tools Admin"
+msgstr "Rêveberê Disciple.Tools"
 
 #: post-type/module-base.php:90
 msgid "Administrator"
@@ -67,30 +62,32 @@ msgstr "Birêvebir"
 
 #: post-type/module-base.php:127
 msgid "Tags"
-msgstr "Tags"
+msgstr "Etîket"
 
 #: post-type/module-base.php:128
 msgctxt "Optional Documentation"
 msgid ""
 "A useful way to group related items and can be used to filter the records"
 msgstr ""
+"Rêyek bikêrhatî ji bo komkirina tiştên têkildar û dikare ji bo fîlterkirina "
+"qeydan were bikar anîn"
 
 #: post-type/module-base.php:135
 msgid "Follow"
-msgstr "Pêketin"
+msgstr "Bişopîne"
 
 #: post-type/module-base.php:142
 msgid "Un-Follow"
-msgstr "Un-Follow"
+msgstr "Neşopîne"
 
 #: post-type/module-base.php:148
 msgid "Tasks"
-msgstr "Erkên"
+msgstr "Peywir"
 
 #: post-type/module-base.php:162
 msgctxt "Training Status label"
 msgid "New"
-msgstr "Nşh"
+msgstr "Nû"
 
 #: post-type/module-base.php:163
 msgctxt "Training Status field description"
@@ -120,17 +117,17 @@ msgstr "Ev perwerde, li ser salnameyê tê pejirandin."
 #: post-type/module-base.php:177
 msgctxt "Training Status label"
 msgid "In Progress"
-msgstr "Ez teslîm nabim"
+msgstr "Di Pêvajoyê de"
 
 #: post-type/module-base.php:178
 msgctxt "Training Status field description"
 msgid "This training is confirmed, on the calendar, or currently active."
-msgstr "Ev perwerde tête pejirandin, li ser salnameyê, an jî aniha çalak e."
+msgstr "Ev perwerde tê pejirandin, li ser salnameyê, an jî niha çalak e."
 
 #: post-type/module-base.php:182
 msgctxt "Training Status label"
 msgid "Complete"
-msgstr "Tevî"
+msgstr "Qediyayî"
 
 #: post-type/module-base.php:183
 msgctxt "Training Status field description"
@@ -140,7 +137,7 @@ msgstr "Ev perwerde bi serfirazî qediya"
 #: post-type/module-base.php:187
 msgctxt "Training Status label"
 msgid "Paused"
-msgstr "Rawestandin"
+msgstr "Rawestandî"
 
 #: post-type/module-base.php:188
 msgctxt "Training Status field description"
@@ -148,7 +145,7 @@ msgid ""
 "This contact is currently on hold. It has potential of getting scheduled in "
 "the future."
 msgstr ""
-"Vê têkiliyê niha li bendê ye. Potansiyela wê heye ku di pêşerojê de were "
+"Ev têkilî niha li bendê ye. Potansiyela wê heye ku di pêşerojê de were "
 "plansaz kirin."
 
 #: post-type/module-base.php:192
@@ -159,7 +156,7 @@ msgstr "Girtî"
 #: post-type/module-base.php:193
 msgctxt "Training Status field description"
 msgid "This training is no longer going to happen."
-msgstr "Ev perwerde êdî dê pêk were."
+msgstr "Ev perwerde êdî pêk nayê."
 
 #: post-type/module-base.php:201
 msgid "Assigned To"
@@ -172,7 +169,7 @@ msgstr "Kesê sereke yê berpirsiyarê ragihandina vê perwerdehiyê hilbijêrin
 
 #: post-type/module-base.php:209
 msgid "Training Coach / Church Planter"
-msgstr "Rahênerê Hînkariyê / Çandiniyê Dêrê"
+msgstr "Rahênerê Perwerdehiyê / Damezrînerê Dêrê"
 
 #: post-type/module-base.php:210
 msgctxt "Optional Documentation"
@@ -181,17 +178,17 @@ msgid ""
 "be assigned to a training while multiple people can be coaches / church "
 "planters of this training."
 msgstr ""
-"Kesê / a ku vê perwerdehiyê çandiye û / an jî rahêner e. Tenê yek kes dikare "
-"were perwerdekirin ku gelek kes dikarin bibin rahêner / nebatên dêrê yên vê "
-"perwerdehiyê."
+"Kesê ku vê perwerdehiyê damezrandiye û/an jî rahêneriyê dike. Tenê yek kes "
+"dikare ji bo perwerdehiyê were tayîn kirin lê gelek kes dikarin bibin "
+"rahêner / damezrînerên dêrê yên vê perwerdehiyê."
 
 #: post-type/module-base.php:222
 msgid "Requires Update"
-msgstr "Pêdivî ye Rojanekirin"
+msgstr "Nûvekirinê Pêwîst Dike"
 
 #: post-type/module-base.php:228
 msgid "Video Link"
-msgstr "Video Link"
+msgstr "Girêdana Vîdyoyê"
 
 #: post-type/module-base.php:229
 msgctxt "Optional Documentation"
@@ -235,7 +232,7 @@ msgstr "Perwerdehiyek ku vê perwerdehiyê da dest pê kirin."
 
 #: post-type/module-base.php:344
 msgid "Peer Training"
-msgstr "Perwerdehiya Peer"
+msgstr "Perwerdehiya Hevsal"
 
 #: post-type/module-base.php:345
 msgctxt "Optional Documentation"
@@ -243,8 +240,8 @@ msgid ""
 "A related training that isn't a parent/child in relationship. It might "
 "indicate trainings that collaborate, are about to merge, recently split, etc."
 msgstr ""
-"Perwerdehiyek pêwendîdar ku dêûbav / zarok di têkiliyê de ne. Dibe ku ew "
-"perwerdehiyên ku hevkar in, li ber yekbûnê ne, vê dawiyê veqetandî, hwd."
+"Perwerdehiyek têkildar ku di têkiliyê de dêûbav/zarok nîne. Dibe ku ew "
+"perwerdehiyên ku hevkar in, li ber yekbûnê ne, vê dawiyê veqetiyane, hwd."
 
 #: post-type/module-base.php:355
 msgid "Child Training"
@@ -253,7 +250,7 @@ msgstr "Perwerdehiya Zarokan"
 #: post-type/module-base.php:356
 msgctxt "Optional Documentation"
 msgid "A training that has been birthed out of this training."
-msgstr "Perwerdehiyek ku ji vê perwerdehiyê hatiye dayin."
+msgstr "Perwerdehiyek ku ji vê perwerdehiyê derketiye."
 
 #: post-type/module-base.php:366 post-type/module-base.php:508
 #: post-type/module-base.php:542
@@ -280,11 +277,11 @@ msgstr "Perwerdeyên gel ên ku ji hêla vê perwerdehiyê ve têne temsîl kiri
 
 #: post-type/module-base.php:397
 msgid "Groups"
-msgstr "Koman"
+msgstr "Kom"
 
 #: post-type/module-base.php:409
 msgid "Member Count"
-msgstr "Count Count"
+msgstr "Hejmara Endaman"
 
 #: post-type/module-base.php:410 post-type/module-base.php:417
 msgctxt "Optional Documentation"
@@ -294,14 +291,14 @@ msgid ""
 "manually to included people who may not be in the system but are also "
 "members of the training."
 msgstr ""
-"Di vê perwerdehiyê de hejmara endaman. Dema ku endamên nû di lîsteya endaman "
+"Hejmara endamên di vê perwerdehiyê de. Dema ku endamên nû di lîsteya endaman "
 "de werin zêdekirin an ji holê werin rakirin dê bixweber were nûve kirin. Vê "
-"hejmarê bi destan biguhezînin nav kesên ku dibe ku di pergalê de ne lê "
-"endamên perwerdehiyê ne jî tê de ne."
+"hejmarê bi destan biguhezînin da ku kesên ku dibe ku di pergalê de nebin lê "
+"endamên perwerdehiyê ne jî tê de bin."
 
 #: post-type/module-base.php:416
 msgid "Leader Count"
-msgstr "Count Count"
+msgstr "Hejmara Rêberan"
 
 #: post-type/module-base.php:426
 msgid "Training as Leader"
@@ -310,7 +307,7 @@ msgstr "Perwerdehiya wekî Rêber"
 #: post-type/module-base.php:427
 msgctxt "Optional Documentation"
 msgid "Leader of a training"
-msgstr "Rêberê perwerdehiyek"
+msgstr "Rêberê perwerdehiyekê"
 
 #: post-type/module-base.php:438
 msgid "Training as Participant"
@@ -319,7 +316,7 @@ msgstr "Perwerde wekî Beşdar"
 #: post-type/module-base.php:439
 msgctxt "Optional Documentation"
 msgid "Participant in a training."
-msgstr "Beşdarê perwerdekirinê."
+msgstr "Beşdarê perwerdehiyekê."
 
 #: post-type/module-base.php:510
 msgid "Other"
@@ -327,11 +324,11 @@ msgstr "Yên din"
 
 #: post-type/module-base.php:545
 msgid "Create"
-msgstr "Xûliqandin"
+msgstr "Afirandin"
 
 #: post-type/module-base.php:550
 msgid "Select"
-msgstr "Neqandin"
+msgstr "Hilbijêre"
 
 #: post-type/module-base.php:555
 msgid "To add new members, click on 'Create' or 'Select'."
@@ -353,25 +350,19 @@ msgstr ""
 
 #: post-type/module-base.php:573
 msgid "Close"
-msgstr "Nêzîkî"
+msgstr "Bigire"
 
 #: post-type/module-base.php:713
-#, fuzzy
-#| msgid "Removed %1$s: %2$s"
 msgid "Removed %1$s: {%2$s}"
-msgstr "%1$s hate rakirin: %2$s"
+msgstr "%1$s hate rakirin: {%2$s}"
 
 #: post-type/module-base.php:716
-#, fuzzy
-#| msgid "Added %1$s: %2$s"
 msgid "Added %1$s: {%2$s}"
-msgstr "%1$s zêde kir: %2$s"
+msgstr "%1$s hate zêdekirin: {%2$s}"
 
 #: post-type/module-base.php:719
-#, fuzzy
-#| msgid "Updated %1$s: %2$s to %3$s"
 msgid "Updated %1$s: {%2$s} to {%3$s}"
-msgstr "%1$s nûvekirî: %2$s heya %3$s"
+msgstr "%1$s hate nûvekirin: {%2$s} bo {%3$s}"
 
 #: post-type/module-base.php:804
 msgctxt "List Filters"
@@ -381,12 +372,12 @@ msgstr "Ji min re tayîn kirin"
 #: post-type/module-base.php:812
 msgctxt "List Filters"
 msgid "All"
-msgstr "Gişt"
+msgstr "Hemû"
 
 #: post-type/module-base.php:871
 msgctxt "List Filters"
 msgid "Default Filters"
-msgstr ""
+msgstr "Fîlterên Bingeh"
 
 #: post-type/module-public-calendar.php:85
 msgid "Reports"
@@ -394,11 +385,11 @@ msgstr "Rapor"
 
 #: post-type/module-public-calendar.php:121
 msgid "Total Groups"
-msgstr "Total Groups"
+msgstr "Giştî Kom"
 
 #: post-type/module-public-calendar.php:122
 msgid "Total Baptisms"
-msgstr "Temam Batizmî"
+msgstr "Giştî Vaftîz"
 
 #: post-type/module-public-calendar.php:123
 msgid "Countries"
@@ -406,11 +397,11 @@ msgstr "Welat"
 
 #: post-type/module-public-calendar.php:124
 msgid "States"
-msgstr "Dewletan"
+msgstr "Dewlet"
 
 #: post-type/module-public-calendar.php:125
 msgid "Counties"
-msgstr "Counties"
+msgstr "Navçe"
 
 #: post-type/module-public-calendar.php:432
 #: post-type/module-registration.php:385
@@ -419,11 +410,11 @@ msgstr "Lêzêdekirin"
 
 #: post-type/module-registration.php:31
 msgid "Magic Links"
-msgstr ""
+msgstr "Girêdanên Sêrbaz"
 
 #: post-type/module-registration.php:59
 msgid "copy link"
-msgstr "girêdana kopî bikin"
+msgstr "girêdanê kopî bike"
 
 #: post-type/module-registration.php:61
 msgid "edit form"
@@ -431,15 +422,15 @@ msgstr "formê biguherîne"
 
 #: post-type/module-registration.php:63
 msgid "report"
-msgstr "nûçe"
+msgstr "rapor"
 
 #: post-type/module-registration.php:67
 msgid "create link"
-msgstr "girêdanê çêbikin"
+msgstr "girêdanê çêbike"
 
 #: post-type/module-registration.php:114
 msgid "link"
-msgstr "pêvek"
+msgstr "girêdan"
 
 #: post-type/module-registration.php:116
 msgid "show on calendar"
@@ -447,7 +438,7 @@ msgstr "li ser salnameyê nîşan bide"
 
 #: post-type/module-registration.php:118
 msgid "open registration"
-msgstr "qeydkirina vekirî "
+msgstr "qeydkirina vekirî"
 
 #: post-type/module-registration.php:265
 msgid "add"
@@ -455,31 +446,31 @@ msgstr "lêzêdekirin"
 
 #: post-type/module-registration.php:266
 msgid "Use"
-msgstr "Bikaranîn"
+msgstr "Bikar bîne"
 
 #: post-type/module-registration.php:267 post-type/module-registration.php:695
 msgid "Search Location"
-msgstr "Cihê lêgerînê"
+msgstr "Li Cihî Bigere"
 
 #: post-type/module-registration.php:268
 msgid "Delete Location"
-msgstr "Ciyê jêbirin"
+msgstr "Cihê Jêbibe"
 
 #: post-type/module-registration.php:269
 msgid "Open Mapping"
-msgstr "Nexşeya Vekirinê"
+msgstr "Nexşeyê Veke"
 
 #: post-type/module-registration.php:270
 msgid "clear"
-msgstr "zelal"
+msgstr "paqij bike"
 
 #: post-type/module-registration.php:384
 msgid "Register for Training"
-msgstr "Register ji bo Training"
+msgstr "Ji bo Perwerdehiyê Tomar Bibe"
 
 #: post-type/module-registration.php:386
 msgid "Join Training"
-msgstr "Tevlî Perwerdehiyê bibin"
+msgstr "Tevlî Perwerdehiyê Bibe"
 
 #: post-type/module-registration.php:387
 msgid "Join in"
@@ -487,808 +478,4 @@ msgstr "Beşdar bibe"
 
 #: post-type/module-registration.php:700
 msgid "Clear"
-msgstr "Zelal"
-
-#~ msgid "Apps"
-#~ msgstr "Apps"
-
-#, fuzzy
-#~| msgid "Disciple Tools - Training"
-#~ msgid "Disciple.Tools - Training"
-#~ msgstr "Amûrên ipagirt - Perwerde"
-
-#~ msgid "https://github.com/DiscipleTools/disciple-tools-training"
-#~ msgstr "https://github.com/DiscipleTools/disciple-tools-training"
-
-#, fuzzy
-#~| msgid ""
-#~| "Disciple Tools Training Extension adds recording of trainings and cross "
-#~| "reference them with contacts, groups, and locations."
-#~ msgid ""
-#~ "Disciple.Tools Training Extension adds recording of trainings and cross "
-#~ "reference them with contacts, groups, and locations."
-#~ msgstr ""
-#~ "Disciple Tools Training Extension tomara rahênanan zêde dike û wan bi "
-#~ "têkilî, kom, û deveran re referansa xaç dike."
-
-#~ msgid "Whoah, partner!"
-#~ msgstr "Wey, heval!"
-
-#~ msgid "Method does not exist."
-#~ msgstr "Rêbaz tune."
-
-#~ msgid "Dispatcher"
-#~ msgstr "Dispatcher"
-
-#~ msgid "Members"
-#~ msgstr "Endam"
-
-#~ msgid "Contacts"
-#~ msgstr "Têkilî"
-
-#~ msgid "Coaches"
-#~ msgstr "Rahêner"
-
-#~ msgid "Planted by"
-#~ msgstr "Ji hêla ve hatî çandin"
-
-#~ msgid "Planting"
-#~ msgstr "Çandinî"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid ""
-#~ "A useful way to training related items and can help training contacts "
-#~ "associated with noteworthy characteristics. e.g. business owner, sports "
-#~ "lover. The contacts can also be filtered using these tags."
-#~ msgstr ""
-#~ "Awayek kêrhatî ji bo perwerdekirina hêmanên têkildar e û dikare alîkariya "
-#~ "têkiliyên perwerdehiyê bike ku bi taybetmendiyên berbiçav ve girêdayî ne. "
-#~ "mînak xwediyê karsaziyê, evîndarê sporê. Her weha têkilî dikarin bi "
-#~ "karanîna van tagan werin parzûn kirin."
-
-#~ msgctxt "input field placeholder"
-#~ msgid "Search Users"
-#~ msgstr "Bikarhênerên Bigerin"
-
-#~ msgctxt "Search 'something'"
-#~ msgid "Search %s"
-#~ msgstr "L %s bigerin"
-
-#~ msgid "Extensions (DT)"
-#~ msgstr "Extensions (DT)"
-
-#~ msgid "Network Dashboard"
-#~ msgstr "Desteya Torê"
-
-#~ msgid "You do not have sufficient permissions to access this page."
-#~ msgstr "Destûrên we yên têra gihîştina vê rûpelê tune."
-
-#~ msgid "nav-tab-active"
-#~ msgstr "nav-tab-çalak"
-
-#~ msgid "Network Dashboard Viewer"
-#~ msgstr "Dîmendera Dashboardê ya Torê"
-
-#~ msgid "ID"
-#~ msgstr "Nasname"
-
-#~ msgid "Site"
-#~ msgstr "Malper"
-
-#~ msgid "Users"
-#~ msgstr "Bikarhêner"
-
-#~ msgid "Timestamp"
-#~ msgstr "Mohra demê"
-
-#~ msgid "Visit"
-#~ msgstr "Serdan"
-
-#~ msgid "View"
-#~ msgstr "Dîtinî"
-
-#~ msgid "Active Snapshot"
-#~ msgstr "Çalak Snapshot"
-
-#~ msgid "Generations"
-#~ msgstr "Nifş"
-
-#~ msgid "Follow-up Funnel"
-#~ msgstr "Fena şopandinê"
-
-#~ msgid "On-Going Meetings"
-#~ msgstr "Civînên Çûyîn"
-
-#~ msgid "Coaching"
-#~ msgstr "Coaching"
-
-#~ msgid "Baptized"
-#~ msgstr "Imad kirin"
-
-#~ msgid "Active Groups"
-#~ msgstr "Komên Çalak"
-
-#~ msgid "Church"
-#~ msgstr "Dêr"
-
-#~ msgid "Health Metrics"
-#~ msgstr "Metrîkên Tenduristî"
-
-#~ msgid "Total Users"
-#~ msgstr "Tev Bikarhêner"
-
-#~ msgid "Responders"
-#~ msgstr "Bersivdar"
-
-#~ msgid "Dispatchers"
-#~ msgstr "Dispatchers"
-
-#~ msgid "Multipliers"
-#~ msgstr "Pirjimar"
-
-#~ msgid "Admins"
-#~ msgstr "Admins"
-
-#~ msgid "User Login Activity"
-#~ msgstr "Çalakiya Têketina Bikarhêner"
-
-#~ msgid "Users Active in the Last 30 Days"
-#~ msgstr "Di 30 Rojên Dawîn de Bikarhênerên Çalak"
-
-#~ msgid "Practicing"
-#~ msgstr "Pratîk kirin"
-
-#~ msgid "Not Practicing"
-#~ msgstr "Ne Pratîk kirin"
-
-#~ msgid "Chart Funnel"
-#~ msgstr "Chart Funnel"
-
-#~ msgid "Contact"
-#~ msgstr "Têkelî"
-
-#~ msgid "Group"
-#~ msgstr "Kom"
-
-#~ msgid "User"
-#~ msgstr "Bikaranîvan"
-
-#~ msgid "Sites"
-#~ msgstr "Sites"
-
-#~ msgid "Baptisms"
-#~ msgstr "Vaftîzm"
-
-#~ msgid "Churches"
-#~ msgstr "Dêr"
-
-#~ msgid "Location"
-#~ msgstr "Cîh"
-
-#~ msgid "Types"
-#~ msgstr "Cûre"
-
-#~ msgid "modify filter"
-#~ msgstr "parzûnê biguherîne"
-
-#~ msgid "Filter List"
-#~ msgstr "Lîsteya Parzûnê"
-
-#~ msgid "reset data"
-#~ msgstr "daneyê nûve bikin"
-
-#~ msgid "Status"
-#~ msgstr "Cî"
-
-#~ msgid "Status - All"
-#~ msgstr "Rewş - Hemî"
-
-#~ msgid "Zoom Level"
-#~ msgstr "Asta Zoomê"
-
-#~ msgid "Auto Zoom"
-#~ msgstr "Zûtirkirina Xweser"
-
-#~ msgid "World"
-#~ msgstr "Dinya"
-
-#~ msgid "Country"
-#~ msgstr "Welat"
-
-#~ msgid "State"
-#~ msgstr "Rewş"
-
-#~ msgid "Active Contacts"
-#~ msgstr "Têkiliyên Çalak"
-
-#~ msgid "Paused Contacts"
-#~ msgstr "Têkiliyên rawestandî"
-
-#~ msgid "Closed Contacts"
-#~ msgstr "Têkiliyên Girtî"
-
-#~ msgid "Total Contacts"
-#~ msgstr "Total Têkilî"
-
-#~ msgid "New Contacts"
-#~ msgstr "Têkiliyên Nû"
-
-#~ msgid "New Baptisms"
-#~ msgstr "Vaftîzmên Nû"
-
-#~ msgid "Baptism Generations"
-#~ msgstr "Nifşên Batizmiyê"
-
-#~ msgid "Select Location"
-#~ msgstr "Cih hilbijêrin"
-
-#~ msgid "New Groups"
-#~ msgstr "Komên Nû"
-
-#~ msgid "Pre-Group"
-#~ msgstr "Pêş-Kom"
-
-#~ msgid "Pre-Groups"
-#~ msgstr "Pêş-Kom"
-
-#~ msgid "Last 7 Days"
-#~ msgstr "7 Rojên Dawîn"
-
-#~ msgid "Last 30 Days"
-#~ msgstr "30 Rojên Dawîn"
-
-#~ msgid "Last 60 Days"
-#~ msgstr "60 Rojên Dawîn"
-
-#~ msgid "Last 12 Months"
-#~ msgstr "12 Mehên Dawîn"
-
-#~ msgid "Last 24 Months"
-#~ msgstr "24 Mehên Dawîn"
-
-#~ msgid "This Year"
-#~ msgstr "Yearsal"
-
-#~ msgid "Activity Map"
-#~ msgstr "Nexşeya Çalakiyê"
-
-#~ msgid "Stats"
-#~ msgstr "Statîstîk"
-
-#~ msgid "Activities"
-#~ msgstr "Çalakî"
-
-#~ msgid "Actions"
-#~ msgstr "Çalakî"
-
-#~ msgid "By Action Type"
-#~ msgstr "Bi Tîpa Çalakiyê"
-
-#~ msgid "Key"
-#~ msgstr "Qûfle"
-
-#~ msgid "Name"
-#~ msgstr "Nav"
-
-#~ msgid "Total Activities"
-#~ msgstr "Tev Çalakî"
-
-#~ msgid "Feed"
-#~ msgstr "Êm"
-
-#~ msgid "Time"
-#~ msgstr "Dem"
-
-#~ msgid "Result Limit"
-#~ msgstr "Sînora Encamê"
-
-#~ msgid "uncheck"
-#~ msgstr "veneşêrin"
-
-#~ msgid "Home"
-#~ msgstr "Xane"
-
-#~ msgid "Events (30 Days)"
-#~ msgstr "Bûyer (30 Roj)"
-
-#~ msgid "All Active/Inactive"
-#~ msgstr "Hemî Çalak / Neçalak"
-
-#~ msgid "Hover Map"
-#~ msgstr "Nexşeya Hover"
-
-#~ msgid "Network"
-#~ msgstr "Torgilok"
-
-#~ msgid "Map"
-#~ msgstr "Qert"
-
-#~ msgid "Log"
-#~ msgstr "Rojname"
-
-#~ msgid "Activity"
-#~ msgstr "Çalakî"
-
-#~ msgid "Area Maps"
-#~ msgstr "Nexşeyên herêmê"
-
-#~ msgid "Location List"
-#~ msgstr "Lîsteya Cihê"
-
-#~ msgid "Maps"
-#~ msgstr "Nexşe"
-
-#~ msgid "Site Reports"
-#~ msgstr "Raporên Malperê"
-
-#~ msgid "Statistics"
-#~ msgstr "Jimare"
-
-#~ msgid "Network Dashboard Transfer Both Ways"
-#~ msgstr "Torgiloka Torgilokê Herdu Rê Veguhestin"
-
-#~ msgid "Network Dashboard Receiving Only"
-#~ msgstr "Torgiloka Torgilokê Tenê Bistîne"
-
-#~ msgid "Network Dashboard Sending Only"
-#~ msgstr "Tora Dashboard Tenê Tenê ingandin"
-
-#~ msgid "Network Dashboard Site Profile"
-#~ msgstr "Torgiloka Malperê ya Dashboard Torgilokê"
-
-#~ msgid "Disciple Tools - Network Dashboard"
-#~ msgstr "Amûrên ipagirt - Desteya Torê"
-
-#~ msgid "Streams"
-#~ msgstr "Streams"
-
-#~ msgid "Stream Maps"
-#~ msgstr "Nexşeyên Stream"
-
-#~ msgid "Streams Maps"
-#~ msgstr "Nexşeyên streams"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid ""
-#~ "A useful way to stream related items and can help stream contacts "
-#~ "associated with noteworthy characteristics. e.g. business owner, sports "
-#~ "lover. The contacts can also be filtered using these tags."
-#~ msgstr ""
-#~ "Awayek bikêrhatî ye ku ji bo tiştên pêwendîdar biherike û dikare "
-#~ "alîkariya têkiliyên bi taybetmendiyên berbiçav re têkildar dike bike. "
-#~ "mînak xwediyê karsaziyê, evîndarê sporê. Her weha têkilî dikarin bi "
-#~ "karanîna van tagan werin parzûn kirin."
-
-#~ msgctxt "Stream Status label"
-#~ msgid "New"
-#~ msgstr "Nşh"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "New stream added to the system"
-#~ msgstr "Çemek nû li pergalê zêde kir"
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Model"
-#~ msgstr "Cins"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "This stream has been proposed and is in initial conversations"
-#~ msgstr "Ev herik hatiye pêşniyar kirin û di axaftinên destpêkê de ye"
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Assist"
-#~ msgstr "Alîkirin"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "This stream is confirmed, on the calendar."
-#~ msgstr "Ev herik, li ser salnameyê tê pejirandin."
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Watch"
-#~ msgstr "Seet"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "This stream is confirmed, on the calendar, or currently active."
-#~ msgstr "Vê gavê, li ser salnameyê, an jî aniha çalak tête pejirandin."
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Leave"
-#~ msgstr "Terikandin"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "This stream has successfully completed"
-#~ msgstr "Vê rûbar bi serfirazî qediya"
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Paused"
-#~ msgstr "Rawestandin"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid ""
-#~ "This contact is currently on hold. It has potential of getting scheduled "
-#~ "in the future."
-#~ msgstr ""
-#~ "Vê têkiliyê niha li bendê ye. Potansiyela wê heye ku di pêşerojê de were "
-#~ "plansaz kirin."
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Closed"
-#~ msgstr "Girtî"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "This stream is no longer going to happen."
-#~ msgstr "Streamdî ev çem naqewime."
-
-#~ msgid ""
-#~ "Select the main person who is responsible for reporting on this stream."
-#~ msgstr ""
-#~ "Kesê sereke yê ku ji ragihandina li ser vê çemê berpirsiyar e hilbijêrin."
-
-#~ msgctxt "Optional Documentation"
-#~ msgid ""
-#~ "The person who planted and/or is coaching this stream. Only one person "
-#~ "can be assigned to a stream while multiple people can be coaches / church "
-#~ "planters of this stream."
-#~ msgstr ""
-#~ "Kesê / a ku vê çemê çandiye û / an jî rahêner e. Tenê yek kes dikare li "
-#~ "ser çemek were peywirdarkirin dema ku gelek kes dikarin bibin rahêner / "
-#~ "çandiniyên dêrê yên vê çemê."
-
-#~ msgctxt "Optional Documentation"
-#~ msgid "The people streams represented by this stream."
-#~ msgstr "Çemên gel ên ku bi vê çemê têne temsîl kirin."
-
-#~ msgid "Parent Stream"
-#~ msgstr "Dêra Dêûbavan"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid "A stream that launched this stream."
-#~ msgstr "Çemek ku ev herik destpêkir."
-
-#~ msgid "Peer Streams"
-#~ msgstr "Çemên Peer"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid ""
-#~ "A related stream that isn't a parent/child in relationship. It might "
-#~ "indicate streams that collaborate, are about to merge, recently split, "
-#~ "etc."
-#~ msgstr ""
-#~ "Çemek pêwendîdar ku dêûbav / zarok di têkiliyê de ne. Ew dikare herikên "
-#~ "ku hevkariyê dikin, li ber hev dibin, vê dawiyê veqetandî, hwd."
-
-#~ msgid "Child Streams"
-#~ msgstr "Çemên Zarokan"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid "A stream that has been birthed out of this stream."
-#~ msgstr "Çemek ku ji vî çemî hatî dinyayê."
-
-#~ msgid "Leader in Stream"
-#~ msgstr "Rêberê li Stream"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid "Leader of a stream"
-#~ msgstr "Rêberê çemek"
-
-#~ msgid "Key Disciple in Stream"
-#~ msgstr ".Agirtê / a Key in Stream"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid "Disciple in a stream."
-#~ msgstr "Di çemekî de şagirt bikin."
-
-#~ msgid "Connections"
-#~ msgstr "Girêdanan"
-
-#~ msgid "Add Report"
-#~ msgstr "Raporê zêde bikin"
-
-#~ msgid "Disciple Tools - Streams"
-#~ msgstr "Amûrên ipagirt - Çem"
-
-#~ msgid "Pre-Group Generations"
-#~ msgstr "Nifşên Pêş-Kom"
-
-#~ msgid "Group Generations"
-#~ msgstr "Nifşên Koma"
-
-#~ msgid "Church Generations"
-#~ msgstr "Nifşên Dêrê"
-
-#~ msgid "Team Generations"
-#~ msgstr "Nifşên Tîmê"
-
-#~ msgid "%s is reporting a new pre-group generation."
-#~ msgstr "%s nifşek pêş-komek nû radigihîne."
-
-#~ msgid "%s is reporting a new group generation."
-#~ msgstr "%s nifşek koma nû radigihîne."
-
-#~ msgid "%s is reporting a new church generation."
-#~ msgstr "%s nifşek dêrê ya nû radigihîne."
-
-#~ msgid "%s is reporting a new leadership team generation."
-#~ msgstr "%s nifşek tîmê serokatiyê ya nû radigihîne."
-
-#~ msgid "New Contact"
-#~ msgstr "Têkiliya Nû"
-
-#~ msgid "New Pre-Group"
-#~ msgstr "Pêş-Koma Nû"
-
-#~ msgid "New Group"
-#~ msgstr "Koma Nû"
-
-#~ msgid "New Church"
-#~ msgstr "Dêra Nû"
-
-#~ msgid "New Team"
-#~ msgstr "Tîma Nû"
-
-#~ msgid "New Baptism"
-#~ msgstr "Vaftîzma Nû"
-
-#~ msgid "New Coaching"
-#~ msgstr "Coaching Nû"
-
-#~ msgid "%s is reporting a new contact."
-#~ msgstr "%s têkiliyek nû radigihîne."
-
-#~ msgid "%s is reporting a new pre-group formed."
-#~ msgstr "%s rapor dike ku pêş-komek nû hatî damezrandin."
-
-#~ msgid "%s is reporting a new group formed."
-#~ msgstr "%s rapor dike ku komek nû ava bûye."
-
-#~ msgid "%s is reporting a new church."
-#~ msgstr "%s dêrek nû radigihîne."
-
-#~ msgid "%s is reporting a new leadership team formed."
-#~ msgstr "%s ragihand ku tîmek nû ya serokatiyê ava bûye."
-
-#~ msgid "%s is reporting a new baptism."
-#~ msgstr "%s ragihand ku vaftîzmek nû ye."
-
-#~ msgid "%s is reporting an coaching relationship."
-#~ msgstr "%s têkiliyek rahêneriyê radigihîne."
-
-#~ msgid "Active"
-#~ msgstr "Jîr"
-
-#~ msgid "Paused"
-#~ msgstr "Rawestandin"
-
-#~ msgid "Closed"
-#~ msgstr "Girtî"
-
-#~ msgid "Inactive"
-#~ msgstr "Bêkar"
-
-#~ msgid "https://github.com/DiscipleTools/disciple-tools-network-dashboard"
-#~ msgstr "https://github.com/DiscipleTools/disciple-tools-network-dashboard"
-
-#~ msgid ""
-#~ "Connect this Disciple Tools site to a larger network of sites. Adds "
-#~ "security sensitive totals, mapping, activity logging."
-#~ msgstr ""
-#~ "Vê malpera Amûrên ipagirt bi toreyek mezin a malperan ve girêdin. "
-#~ "Tevahîyên hesas ên ewlehiyê, nexşekirin, tomarkirina çalakiyê zêde dike."
-
-#~ msgid "https://github.com/DiscipleTools"
-#~ msgstr "https://github.com/DiscipleTools"
-
-#~ msgid "https://github.com/DiscipleTools/disciple-tools-streams"
-#~ msgstr "https://github.com/DiscipleTools/disciple-tools-streams"
-
-#~ msgid ""
-#~ "Disciple Tools Streams Extension adds recording of streams and cross "
-#~ "reference them with contacts, groups, and locations."
-#~ msgstr ""
-#~ "Amûrên ipagirt Streams Extension tomara herikan zêde dike û wan bi "
-#~ "têkilî, kom, û deveran re referansa xaç dike."
-
-#~ msgid ""
-#~ "'Disciple Tools - Training' plugin requires 'Disciple Tools' theme to "
-#~ "work. Please activate 'Disciple Tools' theme or make sure it is latest "
-#~ "version."
-#~ msgstr ""
-#~ "Pêveka 'Amûrên ipagirt - Perwerde' pêdivî ye ku mijara 'Amûrên ipagirt' "
-#~ "bixebite. Ji kerema xwe mijara 'Amûrên ipagirt' aktîf bikin an jî bawer "
-#~ "bikin ku ew guhertoya herî dawî ye."
-
-#~ msgid "Current Disciple Tools version: %1$s, required version: %2$s"
-#~ msgstr "Guhertoya Amûrên ipagirtê ya Naha: %1$s, guhertoya hewce: %2$s"
-
-#~ msgid "Duplicates"
-#~ msgstr "Duplicates"
-
-#~ msgid "Coach"
-#~ msgstr "Otobus"
-
-#~ msgid "Leaders Total"
-#~ msgstr "Rêber Bi tevahî"
-
-#~ msgid "Disciples Total"
-#~ msgstr "Discagirtên Tevahî"
-
-#~ msgid "Key Disciples"
-#~ msgstr "Discagirtên Key"
-
-#~ msgid "Groups Total"
-#~ msgstr "Komên Bi tevahî"
-
-#~ msgid "Trainings Total"
-#~ msgstr "Perwerde Bi tevahî"
-
-#~ msgid "Dashboard Plugin"
-#~ msgstr "Plugin Dashboard"
-
-#~ msgid "Dashboard"
-#~ msgstr "Dashboard"
-
-#~ msgid "%s days since last update"
-#~ msgstr "Ji nûvekirina dawîn v %s roj"
-
-#~ msgid "Accept"
-#~ msgstr "Baweranîn"
-
-#~ msgid "Decline"
-#~ msgstr "Paşvegerrî"
-
-#~ msgid "# Contacts Assigned"
-#~ msgstr "# Têkilî Dabeş kirin"
-
-#~ msgid "# First Meetings"
-#~ msgstr "# Civînên Yekem"
-
-#~ msgid "# Faith milestones"
-#~ msgstr "# Gavên baweriyê"
-
-#~ msgid "Hurray! You are caught up."
-#~ msgstr "Hurray! Hûn têne girtin."
-
-#~ msgid "remove"
-#~ msgstr "dûrxistin"
-
-#~ msgid "mark as complete"
-#~ msgstr "wekî temam nîşankirin"
-
-#~ msgid "No task created"
-#~ msgstr "Tu peywir nehat afirandin"
-
-#~ msgid "Reminder"
-#~ msgstr "Bîranîn"
-
-#~ msgid "No note set"
-#~ msgstr "No not danîn"
-
-#~ msgid "Add a contact"
-#~ msgstr "Têkiliyek zêde bikin"
-
-#~ msgid "View Contacts List"
-#~ msgstr "Lîsteya Têkiliyan Bibînin"
-
-#~ msgid "Pending Contacts"
-#~ msgstr "Têkiliyên bendewar"
-
-#~ msgid "View All"
-#~ msgstr "Hemiyan Bibîne"
-
-#~ msgid "Update Needed"
-#~ msgstr "Rojanekirin Pêdivî ye"
-
-#~ msgid "Contact Workload"
-#~ msgstr "Têkiliya Karûbarê Têkilî"
-
-#~ msgid ""
-#~ "Choose an option to let the dispatcher(s) know if you are ready for new "
-#~ "contacts"
-#~ msgstr ""
-#~ "Vebijarkek hilbijêrin da ku bila ji şandêr (ên) re bizanin ka hûn ji "
-#~ "têkiliyên nû re amade ne"
-
-#~ msgid "Set travel or dates unavailable"
-#~ msgstr "Rêwîtiyê an tarîxên ne diyar saz bikin"
-
-#~ msgid "Personal Benchmarks"
-#~ msgstr "Benchmarks Kesane"
-
-#~ msgid "Faith Milestone Totals"
-#~ msgstr "Baweriyên Gişt Milestone"
-
-#~ msgid "Milestones on your active contacts"
-#~ msgstr "Mîhengên li ser têkiliyên weyên çalak"
-
-#~ msgid "Seeker Path Progress"
-#~ msgstr "Pêşveçûna Riya Lêgerînê"
-
-#~ msgid "No data to show yet. You have no active contacts"
-#~ msgstr "Hîn daneyek tune ku nîşan bide. Têkiliyên we yên çalak tune"
-
-#~ msgid "Disciple Tools - Dashboard"
-#~ msgstr "Amûrên ipagirt - Dashboard"
-
-#~ msgid "https://github.com/DiscipleTools/disciple-tools-dashboard"
-#~ msgstr "https://github.com/DiscipleTools/disciple-tools-dashboard"
-
-#~ msgid ""
-#~ "The multiplier dashboard upgrades the multipliers experience as soon as "
-#~ "they log into the system giving them a landing page with stats."
-#~ msgstr ""
-#~ "Dashboard-a pirrjimar zûka ku ew dikevin nav pergalê rûpelê daxistinê yê "
-#~ "bi statîstîkan nû dike ezmûna pirjimaran nûve dike."
-
-#~ msgid "Reason Assigned To"
-#~ msgstr "Sedem Ji Bo Wezîfe kirin"
-
-#~ msgid "Follow-Up"
-#~ msgstr "Şopandin"
-
-#~ msgid "Digital Response"
-#~ msgstr "Bersiva Dîjîtal"
-
-#~ msgid "Dispatch"
-#~ msgstr "Andin"
-
-#~ msgid "No Answer"
-#~ msgstr "Bersiv tune"
-
-#~ msgid "Talked"
-#~ msgstr "Axaftin"
-
-#~ msgid "Scheduled"
-#~ msgstr "Plansaz kirin"
-
-#~ msgid "Complete"
-#~ msgstr "Tevî"
-
-#~ msgid "No-Show"
-#~ msgstr "Pêşanî tune"
-
-#~ msgid "No permission"
-#~ msgstr "Destûr tune"
-
-#~ msgid "All"
-#~ msgstr "Gişt"
-
-#~ msgid "Ready"
-#~ msgstr "Amade"
-
-#~ msgid "Recent"
-#~ msgstr "Demek berê"
-
-#~ msgid "Assign"
-#~ msgstr "Cîrêdan"
-
-#~ msgid "Choose an option:"
-#~ msgstr "Vebijarek hilbijêrin:"
-
-#~ msgid "Cancel"
-#~ msgstr "Bişûndekirin"
-
-#~ msgid "Assign For"
-#~ msgstr "Assign For"
-
-#~ msgid "Search"
-#~ msgstr "Gerr"
-
-#~ msgid "Claim for follow-up"
-#~ msgstr "Daxwaza şopandinê"
-
-#~ msgid "Ready for Dispatch"
-#~ msgstr "Ji bo pandin amade ye"
-
-#~ msgid "Disciple Tools - Advanced M2M Tiles"
-#~ msgstr "Amûrên ipagirt - Pelên M2M yên Pêşkeftî"
-
-#~ msgid "https://github.com/DiscipleTools/disciple-tools-advanced-m2m-tiles"
-#~ msgstr ""
-#~ "https://github.com/DiscipleTools/disciple-tools-ad Advanced-m2m-tiles"
-
-#~ msgid ""
-#~ "Disciple Tools - Advanced M2M Tiles adds specific supporting tiles for "
-#~ "different roles."
-#~ msgstr ""
-#~ "Amûrên ipagirt - Pelên Pêşkeftî yên M2M ji bo rolên cihêreng piştgiriyên "
-#~ "taybetî zêde dike."
+msgstr "Paqij Bike"
