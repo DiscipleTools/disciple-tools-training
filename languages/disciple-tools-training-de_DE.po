@@ -31,32 +31,27 @@ msgstr "Trainingskarten"
 
 #: network/network-dashboard-integration.php:44
 msgid "New Training"
-msgstr ""
+msgstr "Neue Schulung"
 
 #: network/network-dashboard-integration.php:50
 msgid "Training Started"
-msgstr ""
+msgstr "Schulung gestartet"
 
 #: network/network-dashboard-integration.php:56
 msgid "Training Completed"
-msgstr ""
+msgstr "Schulung abgeschlossen"
 
 #: post-type/module-base.php:28 post-type/module-base.php:495
 msgid "Training"
-msgstr "Ausbildung"
+msgstr "Schulung"
 
 #: post-type/module-base.php:70
-#, fuzzy
-#| msgid "Trainings"
 msgid "Trainings Admin"
-msgstr "Schulungen"
+msgstr "Schulungen-Administrator"
 
 #: post-type/module-base.php:71
-#, fuzzy
-#| msgctxt "Optional Documentation"
-#| msgid "Leader of a training"
 msgid "Admin access to all trainings"
-msgstr "Leiter einer Ausbildung"
+msgstr "Administratorzugriff auf alle Schulungen"
 
 #: post-type/module-base.php:76
 msgid "Multiplier"
@@ -79,6 +74,8 @@ msgctxt "Optional Documentation"
 msgid ""
 "A useful way to group related items and can be used to filter the records"
 msgstr ""
+"Eine nützliche Möglichkeit, verwandte Elemente zu gruppieren und zum Filtern "
+"der Datensätze zu verwenden"
 
 #: post-type/module-base.php:135
 msgid "Follow"
@@ -100,7 +97,7 @@ msgstr "Neu"
 #: post-type/module-base.php:163
 msgctxt "Training Status field description"
 msgid "New training added to the system"
-msgstr "Neues Training zum System hinzugefügt"
+msgstr "Neue Schulung zum System hinzugefügt"
 
 #: post-type/module-base.php:167
 msgctxt "Training Status label"
@@ -121,7 +118,7 @@ msgstr "Geplant"
 #: post-type/module-base.php:173
 msgctxt "Training Status field description"
 msgid "This training is confirmed, on the calendar."
-msgstr "Diese Schulung wird im Kalender bestätigt."
+msgstr "Diese Schulung ist bestätigt und im Kalender eingetragen."
 
 #: post-type/module-base.php:177
 msgctxt "Training Status label"
@@ -136,7 +133,7 @@ msgstr "Diese Schulung ist bestätigt, im Kalender oder derzeit aktiv."
 #: post-type/module-base.php:182
 msgctxt "Training Status label"
 msgid "Complete"
-msgstr "Komplett"
+msgstr "Abgeschlossen"
 
 #: post-type/module-base.php:183
 msgctxt "Training Status field description"
@@ -146,7 +143,7 @@ msgstr "Diese Schulung wurde erfolgreich abgeschlossen"
 #: post-type/module-base.php:187
 msgctxt "Training Status label"
 msgid "Paused"
-msgstr "Pause"
+msgstr "Pausiert"
 
 #: post-type/module-base.php:188
 msgctxt "Training Status field description"
@@ -154,8 +151,8 @@ msgid ""
 "This contact is currently on hold. It has potential of getting scheduled in "
 "the future."
 msgstr ""
-"Dieser Kontakt wird derzeit gehalten. Es hat das Potenzial, in Zukunft "
-"geplant zu werden."
+"Diese Schulung ist derzeit pausiert. Sie kann in Zukunft möglicherweise "
+"geplant werden."
 
 #: post-type/module-base.php:192
 msgctxt "Training Status label"
@@ -165,7 +162,7 @@ msgstr "Geschlossen"
 #: post-type/module-base.php:193
 msgctxt "Training Status field description"
 msgid "This training is no longer going to happen."
-msgstr "Dieses Training wird nicht mehr stattfinden."
+msgstr "Diese Schulung wird nicht mehr stattfinden."
 
 #: post-type/module-base.php:201
 msgid "Assigned To"
@@ -189,13 +186,13 @@ msgid ""
 "be assigned to a training while multiple people can be coaches / church "
 "planters of this training."
 msgstr ""
-"Die Person, die dieses Training gepflanzt hat und / oder trainiert. Einem "
-"Training kann nur eine Person zugeordnet werden, während mehrere Personen "
-"Trainer / Gemeindegründer dieses Trainings sein können."
+"Die Person, die diese Schulung gegründet hat und/oder betreut. Einer "
+"Schulung kann nur eine Person zugewiesen werden, während mehrere Personen "
+"Trainer / Gemeindegründer dieser Schulung sein können."
 
 #: post-type/module-base.php:222
 msgid "Requires Update"
-msgstr "Erfordert ein Update"
+msgstr "Erfordert Aktualisierung"
 
 #: post-type/module-base.php:228
 msgid "Video Link"
@@ -208,12 +205,12 @@ msgstr "Link zum Video-Chat-Dienst"
 
 #: post-type/module-base.php:236
 msgid "Notes"
-msgstr "Anmerkungen"
+msgstr "Notizen"
 
 #: post-type/module-base.php:237
 msgctxt "Optional Documentation"
 msgid "Notes on when the trainings will happen"
-msgstr "Hinweise zum Zeitpunkt der Schulungen"
+msgstr "Notizen zum Zeitpunkt der Schulungen"
 
 #: post-type/module-base.php:246 post-type/module-base.php:509
 msgid "Meeting Times"
@@ -234,16 +231,16 @@ msgstr "Adresse"
 
 #: post-type/module-base.php:333
 msgid "Parent Training"
-msgstr "Elterntraining"
+msgstr "Elternschulung"
 
 #: post-type/module-base.php:334
 msgctxt "Optional Documentation"
 msgid "A training that launched this training."
-msgstr "Ein Training, das dieses Training gestartet hat."
+msgstr "Eine Schulung, die diese Schulung gestartet hat."
 
 #: post-type/module-base.php:344
 msgid "Peer Training"
-msgstr "Peer-Training"
+msgstr "Partnerschulung"
 
 #: post-type/module-base.php:345
 msgctxt "Optional Documentation"
@@ -251,18 +248,18 @@ msgid ""
 "A related training that isn't a parent/child in relationship. It might "
 "indicate trainings that collaborate, are about to merge, recently split, etc."
 msgstr ""
-"Ein verwandtes Training, das kein Elternteil / Kind in einer Beziehung ist. "
-"Dies kann auf Schulungen hinweisen, die zusammenarbeiten, kurz vor dem "
-"Zusammenschluss stehen, kürzlich aufgeteilt wurden usw."
+"Eine verwandte Schulung, die nicht in einer Eltern-Kind-Beziehung steht. "
+"Dies kann auf Schulungen hinweisen, die zusammenarbeiten, kurz vor einer "
+"Zusammenlegung stehen, sich kürzlich getrennt haben usw."
 
 #: post-type/module-base.php:355
 msgid "Child Training"
-msgstr "Kindertraining"
+msgstr "Tochterschulung"
 
 #: post-type/module-base.php:356
 msgctxt "Optional Documentation"
 msgid "A training that has been birthed out of this training."
-msgstr "Ein Training, das aus diesem Training hervorgegangen ist."
+msgstr "Eine Schulung, die aus dieser Schulung hervorgegangen ist."
 
 #: post-type/module-base.php:366 post-type/module-base.php:508
 #: post-type/module-base.php:542
@@ -276,16 +273,16 @@ msgstr "Die Kontakte, die Mitglieder dieser Schulung sind."
 
 #: post-type/module-base.php:377
 msgid "Leaders"
-msgstr "Führer"
+msgstr "Leiter"
 
 #: post-type/module-base.php:387
 msgid "People Groups"
-msgstr "Personengruppen"
+msgstr "Volksgruppen"
 
 #: post-type/module-base.php:388
 msgctxt "Optional Documentation"
 msgid "The people trainings represented by this training."
-msgstr "Die von dieser Schulung vertretenen Personentrainings."
+msgstr "Die Volksgruppen, die durch diese Schulung vertreten werden."
 
 #: post-type/module-base.php:397
 msgid "Groups"
@@ -303,28 +300,28 @@ msgid ""
 "manually to included people who may not be in the system but are also "
 "members of the training."
 msgstr ""
-"Die Anzahl der Mitglieder in dieser Schulung. Es wird automatisch "
+"Die Anzahl der Mitglieder in dieser Schulung. Sie wird automatisch "
 "aktualisiert, wenn neue Mitglieder zur Mitgliederliste hinzugefügt oder "
-"daraus entfernt werden. Ändern Sie diese Nummer manuell in eingeschlossene "
-"Personen, die möglicherweise nicht im System sind, aber auch Mitglieder der "
-"Schulung sind."
+"daraus entfernt werden. Ändern Sie diese Zahl manuell, um Personen "
+"einzuschließen, die möglicherweise nicht im System sind, aber auch "
+"Mitglieder der Schulung sind."
 
 #: post-type/module-base.php:416
 msgid "Leader Count"
-msgstr "Anzahl der Anführer"
+msgstr "Anzahl der Leiter"
 
 #: post-type/module-base.php:426
 msgid "Training as Leader"
-msgstr "Ausbildung zum Leader"
+msgstr "Schulung als Leiter"
 
 #: post-type/module-base.php:427
 msgctxt "Optional Documentation"
 msgid "Leader of a training"
-msgstr "Leiter einer Ausbildung"
+msgstr "Leiter einer Schulung"
 
 #: post-type/module-base.php:438
 msgid "Training as Participant"
-msgstr "Ausbildung zum Teilnehmer"
+msgstr "Schulung als Teilnehmer"
 
 #: post-type/module-base.php:439
 msgctxt "Optional Documentation"
@@ -333,7 +330,7 @@ msgstr "Teilnehmer an einer Schulung."
 
 #: post-type/module-base.php:510
 msgid "Other"
-msgstr "Andere"
+msgstr "Sonstiges"
 
 #: post-type/module-base.php:545
 msgid "Create"
@@ -352,7 +349,7 @@ msgstr ""
 #: post-type/module-base.php:560
 msgctxt "Add members modal"
 msgid "Add members from existing contacts"
-msgstr "Fügen Sie Mitglieder aus vorhandenen Kontakten hinzu"
+msgstr "Mitglieder aus vorhandenen Kontakten hinzufügen"
 
 #: post-type/module-base.php:561
 msgctxt "Add members modal"
@@ -368,22 +365,16 @@ msgid "Close"
 msgstr "Schließen"
 
 #: post-type/module-base.php:713
-#, fuzzy
-#| msgid "Removed %1$s: %2$s"
 msgid "Removed %1$s: {%2$s}"
-msgstr "%1$s entfernt: %2$s"
+msgstr "%1$s entfernt: {%2$s}"
 
 #: post-type/module-base.php:716
-#, fuzzy
-#| msgid "Added %1$s: %2$s"
 msgid "Added %1$s: {%2$s}"
-msgstr "%1$s hinzugefügt: %2$s"
+msgstr "%1$s hinzugefügt: {%2$s}"
 
 #: post-type/module-base.php:719
-#, fuzzy
-#| msgid "Updated %1$s: %2$s to %3$s"
 msgid "Updated %1$s: {%2$s} to {%3$s}"
-msgstr "%1$s aktualisiert: %2$s auf %3$s"
+msgstr "%1$s aktualisiert: {%2$s} auf {%3$s}"
 
 #: post-type/module-base.php:804
 msgctxt "List Filters"
@@ -398,7 +389,7 @@ msgstr "Alle"
 #: post-type/module-base.php:871
 msgctxt "List Filters"
 msgid "Default Filters"
-msgstr ""
+msgstr "Standardfilter"
 
 #: post-type/module-public-calendar.php:85
 msgid "Reports"
@@ -410,7 +401,7 @@ msgstr "Gruppen insgesamt"
 
 #: post-type/module-public-calendar.php:122
 msgid "Total Baptisms"
-msgstr "Totale Taufen"
+msgstr "Taufen insgesamt"
 
 #: post-type/module-public-calendar.php:123
 msgid "Countries"
@@ -418,11 +409,11 @@ msgstr "Länder"
 
 #: post-type/module-public-calendar.php:124
 msgid "States"
-msgstr "Zustände"
+msgstr "Bundesländer"
 
 #: post-type/module-public-calendar.php:125
 msgid "Counties"
-msgstr "Grafschaften"
+msgstr "Landkreise"
 
 #: post-type/module-public-calendar.php:432
 #: post-type/module-registration.php:385
@@ -431,7 +422,7 @@ msgstr "Hinzufügen"
 
 #: post-type/module-registration.php:31
 msgid "Magic Links"
-msgstr ""
+msgstr "Magische Links"
 
 #: post-type/module-registration.php:59
 msgid "copy link"
@@ -451,7 +442,7 @@ msgstr "Link erstellen"
 
 #: post-type/module-registration.php:114
 msgid "link"
-msgstr "Verknüpfung"
+msgstr "Link"
 
 #: post-type/module-registration.php:116
 msgid "show on calendar"
@@ -459,7 +450,7 @@ msgstr "im Kalender anzeigen"
 
 #: post-type/module-registration.php:118
 msgid "open registration"
-msgstr "offene Registrierung "
+msgstr "offene Registrierung"
 
 #: post-type/module-registration.php:265
 msgid "add"
@@ -475,840 +466,28 @@ msgstr "Ort suchen"
 
 #: post-type/module-registration.php:268
 msgid "Delete Location"
-msgstr "Speicherort löschen"
+msgstr "Standort löschen"
 
 #: post-type/module-registration.php:269
 msgid "Open Mapping"
-msgstr "Öffnen Sie die Zuordnung"
+msgstr "Karte öffnen"
 
 #: post-type/module-registration.php:270
 msgid "clear"
-msgstr "klar"
+msgstr "leeren"
 
 #: post-type/module-registration.php:384
 msgid "Register for Training"
-msgstr "Registrieren Sie sich für das Training"
+msgstr "Für Schulung anmelden"
 
 #: post-type/module-registration.php:386
 msgid "Join Training"
-msgstr "Nehmen Sie am Training teil"
+msgstr "An Schulung teilnehmen"
 
 #: post-type/module-registration.php:387
 msgid "Join in"
-msgstr "Dazu kommen"
+msgstr "Teilnehmen"
 
 #: post-type/module-registration.php:700
 msgid "Clear"
-msgstr "klar"
-
-#~ msgid "Apps"
-#~ msgstr "Apps"
-
-#, fuzzy
-#~| msgid "Disciple Tools - Training"
-#~ msgid "Disciple.Tools - Training"
-#~ msgstr "Schülerwerkzeuge - Training"
-
-#~ msgid "https://github.com/DiscipleTools/disciple-tools-training"
-#~ msgstr "https://github.com/DiscipleTools/disciple-tools-training"
-
-#, fuzzy
-#~| msgid ""
-#~| "Disciple Tools Training Extension adds recording of trainings and cross "
-#~| "reference them with contacts, groups, and locations."
-#~ msgid ""
-#~ "Disciple.Tools Training Extension adds recording of trainings and cross "
-#~ "reference them with contacts, groups, and locations."
-#~ msgstr ""
-#~ "Die Disciple Tools Training Extension fügt die Aufzeichnung von "
-#~ "Schulungen hinzu und vergleicht sie mit Kontakten, Gruppen und Standorten."
-
-#~ msgid "Whoah, partner!"
-#~ msgstr "Whoah, Partner!"
-
-#~ msgid "Method does not exist."
-#~ msgstr "Methode existiert nicht."
-
-#~ msgid "Dispatcher"
-#~ msgstr "Dispatcher"
-
-#~ msgid "Members"
-#~ msgstr "Mitglieder"
-
-#~ msgid "Contacts"
-#~ msgstr "Kontakte"
-
-#~ msgid "Coaches"
-#~ msgstr "Trainer"
-
-#~ msgid "Planted by"
-#~ msgstr "Gepflanzt von"
-
-#~ msgid "Planting"
-#~ msgstr "Pflanzen"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid ""
-#~ "A useful way to training related items and can help training contacts "
-#~ "associated with noteworthy characteristics. e.g. business owner, sports "
-#~ "lover. The contacts can also be filtered using these tags."
-#~ msgstr ""
-#~ "Eine nützliche Methode zum Trainieren verwandter Elemente und zum "
-#~ "Trainieren von Kontakten, die mit bemerkenswerten Merkmalen verbunden "
-#~ "sind. z.B. Geschäftsinhaber, Sportliebhaber. Die Kontakte können auch mit "
-#~ "diesen Tags gefiltert werden."
-
-#~ msgctxt "input field placeholder"
-#~ msgid "Search Users"
-#~ msgstr "Benutzer suchen"
-
-#~ msgctxt "Search 'something'"
-#~ msgid "Search %s"
-#~ msgstr "Such %s"
-
-#~ msgid "Extensions (DT)"
-#~ msgstr "Erweiterungen (DT)"
-
-#~ msgid "Network Dashboard"
-#~ msgstr "Netzwerk-Dashboard"
-
-#~ msgid "You do not have sufficient permissions to access this page."
-#~ msgstr ""
-#~ "Sie haben nicht genügend Berechtigungen, um auf diese Seite zuzugreifen."
-
-#~ msgid "nav-tab-active"
-#~ msgstr "nav-tab-active"
-
-#~ msgid "Network Dashboard Viewer"
-#~ msgstr "Netzwerk-Dashboard-Viewer"
-
-#~ msgid "ID"
-#~ msgstr "ICH WÜRDE"
-
-#~ msgid "Site"
-#~ msgstr "Seite? ˅"
-
-#~ msgid "Users"
-#~ msgstr "Benutzer"
-
-#~ msgid "Timestamp"
-#~ msgstr "Zeitstempel"
-
-#~ msgid "Visit"
-#~ msgstr "Besuch"
-
-#~ msgid "View"
-#~ msgstr "Aussicht"
-
-#~ msgid "Active Snapshot"
-#~ msgstr "Aktiver Schnappschuss"
-
-#~ msgid "Generations"
-#~ msgstr "Generationen"
-
-#~ msgid "Follow-up Funnel"
-#~ msgstr "Follow-up-Trichter"
-
-#~ msgid "On-Going Meetings"
-#~ msgstr "Laufende Treffen"
-
-#~ msgid "Coaching"
-#~ msgstr "Coaching"
-
-#~ msgid "Baptized"
-#~ msgstr "Getauft"
-
-#~ msgid "Active Groups"
-#~ msgstr "Aktive Gruppen"
-
-#~ msgid "Church"
-#~ msgstr "Kirche"
-
-#~ msgid "Health Metrics"
-#~ msgstr "Gesundheitsmetriken"
-
-#~ msgid "Total Users"
-#~ msgstr "Benutzer insgesamt"
-
-#~ msgid "Responders"
-#~ msgstr "Antwortende"
-
-#~ msgid "Dispatchers"
-#~ msgstr "Dispatcher"
-
-#~ msgid "Multipliers"
-#~ msgstr "Multiplikatoren"
-
-#~ msgid "Admins"
-#~ msgstr "Admins"
-
-#~ msgid "User Login Activity"
-#~ msgstr "Benutzeranmeldeaktivität"
-
-#~ msgid "Users Active in the Last 30 Days"
-#~ msgstr "Benutzer, die in den letzten 30 Tagen aktiv waren"
-
-#~ msgid "Practicing"
-#~ msgstr "Üben"
-
-#~ msgid "Not Practicing"
-#~ msgstr "Nicht üben"
-
-#~ msgid "Chart Funnel"
-#~ msgstr "Kartentrichter"
-
-#~ msgid "Contact"
-#~ msgstr "Kontakt"
-
-#~ msgid "Group"
-#~ msgstr "Gruppe"
-
-#~ msgid "User"
-#~ msgstr "Nutzer"
-
-#~ msgid "Sites"
-#~ msgstr "Websites"
-
-#~ msgid "Baptisms"
-#~ msgstr "Taufen"
-
-#~ msgid "Churches"
-#~ msgstr "Kirchen"
-
-#~ msgid "Location"
-#~ msgstr "Ort"
-
-#~ msgid "Types"
-#~ msgstr "Typen"
-
-#~ msgid "modify filter"
-#~ msgstr "Filter ändern"
-
-#~ msgid "Filter List"
-#~ msgstr "Filterliste"
-
-#~ msgid "reset data"
-#~ msgstr "Daten zurücksetzen"
-
-#~ msgid "Status"
-#~ msgstr "Status"
-
-#~ msgid "Status - All"
-#~ msgstr "Status - Alle"
-
-#~ msgid "Zoom Level"
-#~ msgstr "Zoomstufe"
-
-#~ msgid "Auto Zoom"
-#~ msgstr "Automatischer Zoom"
-
-#~ msgid "World"
-#~ msgstr "Welt"
-
-#~ msgid "Country"
-#~ msgstr "Land"
-
-#~ msgid "State"
-#~ msgstr "Zustand"
-
-#~ msgid "Active Contacts"
-#~ msgstr "Aktive Kontakte"
-
-#~ msgid "Paused Contacts"
-#~ msgstr "Angehaltene Kontakte"
-
-#~ msgid "Closed Contacts"
-#~ msgstr "Geschlossene Kontakte"
-
-#~ msgid "Total Contacts"
-#~ msgstr "Kontakte insgesamt"
-
-#~ msgid "New Contacts"
-#~ msgstr "Neue Kontakte"
-
-#~ msgid "New Baptisms"
-#~ msgstr "Neue Taufen"
-
-#~ msgid "Baptism Generations"
-#~ msgstr "Taufgenerationen"
-
-#~ msgid "Select Location"
-#~ msgstr "Ort auswählen"
-
-#~ msgid "New Groups"
-#~ msgstr "Neue Gruppen"
-
-#~ msgid "Pre-Group"
-#~ msgstr "Vorgruppe"
-
-#~ msgid "Pre-Groups"
-#~ msgstr "Vorgruppen"
-
-#~ msgid "Last 7 Days"
-#~ msgstr "Letzten 7 Tage"
-
-#~ msgid "Last 30 Days"
-#~ msgstr "Letzte 30 Tage"
-
-#~ msgid "Last 60 Days"
-#~ msgstr "Letzte 60 Tage"
-
-#~ msgid "Last 12 Months"
-#~ msgstr "Letzte 12 Monate"
-
-#~ msgid "Last 24 Months"
-#~ msgstr "Letzte 24 Monate"
-
-#~ msgid "This Year"
-#~ msgstr "Dieses Jahr"
-
-#~ msgid "Activity Map"
-#~ msgstr "Aktivitätskarte"
-
-#~ msgid "Stats"
-#~ msgstr "Statistiken"
-
-#~ msgid "Activities"
-#~ msgstr "Aktivitäten"
-
-#~ msgid "Actions"
-#~ msgstr "Aktionen"
-
-#~ msgid "By Action Type"
-#~ msgstr "Nach Aktionstyp"
-
-#~ msgid "Key"
-#~ msgstr "Schlüssel"
-
-#~ msgid "Name"
-#~ msgstr "Name"
-
-#~ msgid "Total Activities"
-#~ msgstr "Gesamtaktivitäten"
-
-#~ msgid "Feed"
-#~ msgstr "Futter"
-
-#~ msgid "Time"
-#~ msgstr "Zeit"
-
-#~ msgid "Result Limit"
-#~ msgstr "Ergebnisgrenze"
-
-#~ msgid "uncheck"
-#~ msgstr "Deaktivieren Sie das Kontrollkästchen"
-
-#~ msgid "Home"
-#~ msgstr "Zuhause"
-
-#~ msgid "Events (30 Days)"
-#~ msgstr "Veranstaltungen (30 Tage)"
-
-#~ msgid "All Active/Inactive"
-#~ msgstr "Alle aktiv / inaktiv"
-
-#~ msgid "Hover Map"
-#~ msgstr "Hover Map"
-
-#~ msgid "Network"
-#~ msgstr "Netzwerk"
-
-#~ msgid "Map"
-#~ msgstr "Karte"
-
-#~ msgid "Log"
-#~ msgstr "Log"
-
-#~ msgid "Activity"
-#~ msgstr "Aktivität"
-
-#~ msgid "Area Maps"
-#~ msgstr "Gebietskarten"
-
-#~ msgid "Location List"
-#~ msgstr "Standortliste"
-
-#~ msgid "Maps"
-#~ msgstr "Karten"
-
-#~ msgid "Site Reports"
-#~ msgstr "Site-Berichte"
-
-#~ msgid "Statistics"
-#~ msgstr "Statistiken"
-
-#~ msgid "Network Dashboard Transfer Both Ways"
-#~ msgstr "Netzwerk-Dashboard-Übertragung auf beide Arten"
-
-#~ msgid "Network Dashboard Receiving Only"
-#~ msgstr "Nur Netzwerk-Dashboard empfangen"
-
-#~ msgid "Network Dashboard Sending Only"
-#~ msgstr "Nur Netzwerk-Dashboard senden"
-
-#~ msgid "Network Dashboard Site Profile"
-#~ msgstr "Site-Profil des Netzwerk-Dashboards"
-
-#~ msgid "Disciple Tools - Network Dashboard"
-#~ msgstr "Jünger-Tools - Netzwerk-Dashboard"
-
-#~ msgid "Streams"
-#~ msgstr "Streams"
-
-#~ msgid "Stream Maps"
-#~ msgstr "Stream-Karten"
-
-#~ msgid "Streams Maps"
-#~ msgstr "Streams Karten"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid ""
-#~ "A useful way to stream related items and can help stream contacts "
-#~ "associated with noteworthy characteristics. e.g. business owner, sports "
-#~ "lover. The contacts can also be filtered using these tags."
-#~ msgstr ""
-#~ "Eine nützliche Methode zum Streamen verwandter Elemente und zum Streamen "
-#~ "von Kontakten, die mit bemerkenswerten Merkmalen verknüpft sind. z.B. "
-#~ "Geschäftsinhaber, Sportliebhaber. Die Kontakte können auch mit diesen "
-#~ "Tags gefiltert werden."
-
-#~ msgctxt "Stream Status label"
-#~ msgid "New"
-#~ msgstr "Neu"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "New stream added to the system"
-#~ msgstr "Neuer Stream zum System hinzugefügt"
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Model"
-#~ msgstr "Modell"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "This stream has been proposed and is in initial conversations"
-#~ msgstr ""
-#~ "Dieser Stream wurde vorgeschlagen und befindet sich in ersten Gesprächen"
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Assist"
-#~ msgstr "Helfen"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "This stream is confirmed, on the calendar."
-#~ msgstr "Dieser Stream wird im Kalender bestätigt."
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Watch"
-#~ msgstr "Uhr"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "This stream is confirmed, on the calendar, or currently active."
-#~ msgstr ""
-#~ "Dieser Stream wird bestätigt, im Kalender angezeigt oder ist derzeit "
-#~ "aktiv."
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Leave"
-#~ msgstr "Verlassen"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "This stream has successfully completed"
-#~ msgstr "Dieser Stream wurde erfolgreich abgeschlossen"
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Paused"
-#~ msgstr "Pause"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid ""
-#~ "This contact is currently on hold. It has potential of getting scheduled "
-#~ "in the future."
-#~ msgstr ""
-#~ "Dieser Kontakt wird derzeit gehalten. Es hat das Potenzial, in Zukunft "
-#~ "geplant zu werden."
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Closed"
-#~ msgstr "Geschlossen"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "This stream is no longer going to happen."
-#~ msgstr "Dieser Stream wird nicht mehr passieren."
-
-#~ msgid ""
-#~ "Select the main person who is responsible for reporting on this stream."
-#~ msgstr ""
-#~ "Wählen Sie die Hauptperson aus, die für die Berichterstellung in diesem "
-#~ "Stream verantwortlich ist."
-
-#~ msgctxt "Optional Documentation"
-#~ msgid ""
-#~ "The person who planted and/or is coaching this stream. Only one person "
-#~ "can be assigned to a stream while multiple people can be coaches / church "
-#~ "planters of this stream."
-#~ msgstr ""
-#~ "Die Person, die diesen Stream gepflanzt hat und / oder trainiert. Einem "
-#~ "Stream kann nur eine Person zugewiesen werden, während mehrere Personen "
-#~ "Trainer / Gemeindegründer dieses Streams sein können."
-
-#~ msgctxt "Optional Documentation"
-#~ msgid "The people streams represented by this stream."
-#~ msgstr "Die von diesem Stream repräsentierten Personenströme."
-
-#~ msgid "Parent Stream"
-#~ msgstr "Übergeordneter Stream"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid "A stream that launched this stream."
-#~ msgstr "Ein Stream, der diesen Stream gestartet hat."
-
-#~ msgid "Peer Streams"
-#~ msgstr "Peer-Streams"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid ""
-#~ "A related stream that isn't a parent/child in relationship. It might "
-#~ "indicate streams that collaborate, are about to merge, recently split, "
-#~ "etc."
-#~ msgstr ""
-#~ "Ein verwandter Stream, der kein Elternteil / Kind in einer Beziehung ist. "
-#~ "Dies kann auf Streams hinweisen, die zusammenarbeiten, kurz vor dem "
-#~ "Zusammenführen stehen, kürzlich aufgeteilt wurden usw."
-
-#~ msgid "Child Streams"
-#~ msgstr "Untergeordnete Streams"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid "A stream that has been birthed out of this stream."
-#~ msgstr "Ein Stream, der aus diesem Stream geboren wurde."
-
-#~ msgid "Leader in Stream"
-#~ msgstr "Leader in Stream"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid "Leader of a stream"
-#~ msgstr "Anführer eines Baches"
-
-#~ msgid "Key Disciple in Stream"
-#~ msgstr "Schlüsseljünger im Strom"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid "Disciple in a stream."
-#~ msgstr "Schüler in einem Strom."
-
-#~ msgid "Connections"
-#~ msgstr "Verbindungen"
-
-#~ msgid "Add Report"
-#~ msgstr "Bericht hinzufügen"
-
-#~ msgid "Disciple Tools - Streams"
-#~ msgstr "Schülerwerkzeuge - Streams"
-
-#~ msgid "Pre-Group Generations"
-#~ msgstr "Generationen vor der Gruppe"
-
-#~ msgid "Group Generations"
-#~ msgstr "Gruppengenerierungen"
-
-#~ msgid "Church Generations"
-#~ msgstr "Kirchengenerationen"
-
-#~ msgid "Team Generations"
-#~ msgstr "Teamgenerationen"
-
-#~ msgid "%s is reporting a new pre-group generation."
-#~ msgstr "%s meldet eine neue Generation vor der Gruppe."
-
-#~ msgid "%s is reporting a new group generation."
-#~ msgstr "%s meldet eine neue Gruppengeneration."
-
-#~ msgid "%s is reporting a new church generation."
-#~ msgstr "%s meldet eine neue Kirchengeneration."
-
-#~ msgid "%s is reporting a new leadership team generation."
-#~ msgstr "%s meldet eine neue Generation von Führungsteams."
-
-#~ msgid "New Contact"
-#~ msgstr "Neuer Kontakt"
-
-#~ msgid "New Pre-Group"
-#~ msgstr "Neue Vorgruppe"
-
-#~ msgid "New Group"
-#~ msgstr "Neue Gruppe"
-
-#~ msgid "New Church"
-#~ msgstr "Neue Kirche"
-
-#~ msgid "New Team"
-#~ msgstr "Neues Team"
-
-#~ msgid "New Baptism"
-#~ msgstr "Neue Taufe"
-
-#~ msgid "New Coaching"
-#~ msgstr "Neues Coaching"
-
-#~ msgid "%s is reporting a new contact."
-#~ msgstr "%s meldet einen neuen Kontakt."
-
-#~ msgid "%s is reporting a new pre-group formed."
-#~ msgstr "%s meldet eine neu gebildete Vorgruppe."
-
-#~ msgid "%s is reporting a new group formed."
-#~ msgstr "%s meldet eine neu gebildete Gruppe."
-
-#~ msgid "%s is reporting a new church."
-#~ msgstr "%s meldet eine neue Kirche."
-
-#~ msgid "%s is reporting a new leadership team formed."
-#~ msgstr "%s meldet die Bildung eines neuen Führungsteams."
-
-#~ msgid "%s is reporting a new baptism."
-#~ msgstr "%s meldet eine neue Taufe."
-
-#~ msgid "%s is reporting an coaching relationship."
-#~ msgstr "%s meldet eine Coaching-Beziehung."
-
-#~ msgid "Active"
-#~ msgstr "Aktiv"
-
-#~ msgid "Paused"
-#~ msgstr "Pause"
-
-#~ msgid "Closed"
-#~ msgstr "Geschlossen"
-
-#~ msgid "Inactive"
-#~ msgstr "Inaktiv"
-
-#~ msgid "https://github.com/DiscipleTools/disciple-tools-network-dashboard"
-#~ msgstr "https://github.com/DiscipleTools/disciple-tools-network-dashboard"
-
-#~ msgid ""
-#~ "Connect this Disciple Tools site to a larger network of sites. Adds "
-#~ "security sensitive totals, mapping, activity logging."
-#~ msgstr ""
-#~ "Verbinden Sie diese Disciple Tools-Site mit einem größeren Netzwerk von "
-#~ "Sites. Fügt sicherheitsrelevante Summen, Zuordnung und "
-#~ "Aktivitätsprotokollierung hinzu."
-
-#~ msgid "https://github.com/DiscipleTools"
-#~ msgstr "https://github.com/DiscipleTools"
-
-#~ msgid "https://github.com/DiscipleTools/disciple-tools-streams"
-#~ msgstr "https://github.com/DiscipleTools/disciple-tools-streams"
-
-#~ msgid ""
-#~ "Disciple Tools Streams Extension adds recording of streams and cross "
-#~ "reference them with contacts, groups, and locations."
-#~ msgstr ""
-#~ "Disciple Tools Streams Extension fügt die Aufzeichnung von Streams hinzu "
-#~ "und vergleicht sie mit Kontakten, Gruppen und Standorten."
-
-#~ msgid ""
-#~ "'Disciple Tools - Training' plugin requires 'Disciple Tools' theme to "
-#~ "work. Please activate 'Disciple Tools' theme or make sure it is latest "
-#~ "version."
-#~ msgstr ""
-#~ "Für das Plugin \"Disciple Tools - Training\" ist das Thema \"Disciple "
-#~ "Tools\" erforderlich. Bitte aktivieren Sie das Thema \"Disciple Tools\" "
-#~ "oder stellen Sie sicher, dass es sich um die neueste Version handelt."
-
-#~ msgid "Current Disciple Tools version: %1$s, required version: %2$s"
-#~ msgstr ""
-#~ "Aktuelle Version von Disciple Tools: %1$s, erforderliche Version: %2$s"
-
-#~ msgid "Duplicates"
-#~ msgstr "Duplikate"
-
-#~ msgid "Coach"
-#~ msgstr "Trainer"
-
-#~ msgid "Leaders Total"
-#~ msgstr "Führungskräfte insgesamt"
-
-#~ msgid "Disciples Total"
-#~ msgstr "Jünger insgesamt"
-
-#~ msgid "Key Disciples"
-#~ msgstr "Schlüsseljünger"
-
-#~ msgid "Groups Total"
-#~ msgstr "Gruppen insgesamt"
-
-#~ msgid "Trainings Total"
-#~ msgstr "Schulungen insgesamt"
-
-#~ msgid "Dashboard Plugin"
-#~ msgstr "Dashboard Plugin"
-
-#~ msgid "Dashboard"
-#~ msgstr "Instrumententafel"
-
-#~ msgid "%s days since last update"
-#~ msgstr "%s Tage seit dem letzten Update"
-
-#~ msgid "Accept"
-#~ msgstr "Akzeptieren"
-
-#~ msgid "Decline"
-#~ msgstr "Ablehnen"
-
-#~ msgid "# Contacts Assigned"
-#~ msgstr "# Zugewiesene Kontakte"
-
-#~ msgid "# First Meetings"
-#~ msgstr "# Erste Treffen"
-
-#~ msgid "# Faith milestones"
-#~ msgstr "# Glaubensmeilensteine"
-
-#~ msgid "Hurray! You are caught up."
-#~ msgstr "Hurra! Du bist eingeholt."
-
-#~ msgid "remove"
-#~ msgstr "entfernen"
-
-#~ msgid "mark as complete"
-#~ msgstr "als vollständig markieren"
-
-#~ msgid "No task created"
-#~ msgstr "Keine Aufgabe erstellt"
-
-#~ msgid "Reminder"
-#~ msgstr "Erinnerung"
-
-#~ msgid "No note set"
-#~ msgstr "Kein Notensatz"
-
-#~ msgid "Add a contact"
-#~ msgstr "Einen Kontakt hinzufügen"
-
-#~ msgid "View Contacts List"
-#~ msgstr "Kontaktliste anzeigen"
-
-#~ msgid "Pending Contacts"
-#~ msgstr "Ausstehende Kontakte"
-
-#~ msgid "View All"
-#~ msgstr "Alle ansehen"
-
-#~ msgid "Update Needed"
-#~ msgstr "Update erforderlich"
-
-#~ msgid "Contact Workload"
-#~ msgstr "Wenden Sie sich an Workload"
-
-#~ msgid ""
-#~ "Choose an option to let the dispatcher(s) know if you are ready for new "
-#~ "contacts"
-#~ msgstr ""
-#~ "Wählen Sie eine Option, um den / die Dispatcher zu informieren, ob Sie "
-#~ "für neue Kontakte bereit sind"
-
-#~ msgid "Set travel or dates unavailable"
-#~ msgstr "Legen Sie fest, dass Reisen oder Daten nicht verfügbar sind"
-
-#~ msgid "Personal Benchmarks"
-#~ msgstr "Persönliche Benchmarks"
-
-#~ msgid "Faith Milestone Totals"
-#~ msgstr "Glaube Meilenstein Summen"
-
-#~ msgid "Milestones on your active contacts"
-#~ msgstr "Meilensteine Ihrer aktiven Kontakte"
-
-#~ msgid "Seeker Path Progress"
-#~ msgstr "Fortschritt des Sucherpfades"
-
-#~ msgid "No data to show yet. You have no active contacts"
-#~ msgstr "Noch keine Daten zu zeigen. Sie haben keine aktiven Kontakte"
-
-#~ msgid "Disciple Tools - Dashboard"
-#~ msgstr "Jünger-Tools - Dashboard"
-
-#~ msgid "https://github.com/DiscipleTools/disciple-tools-dashboard"
-#~ msgstr "https://github.com/DiscipleTools/disciple-tools-dashboard"
-
-#~ msgid ""
-#~ "The multiplier dashboard upgrades the multipliers experience as soon as "
-#~ "they log into the system giving them a landing page with stats."
-#~ msgstr ""
-#~ "Das Multiplikator-Dashboard verbessert die Multiplikator-Erfahrung, "
-#~ "sobald sie sich beim System anmelden, und gibt ihnen eine Zielseite mit "
-#~ "Statistiken"
-
-#~ msgid "Reason Assigned To"
-#~ msgstr "Grund zugewiesen an"
-
-#~ msgid "Follow-Up"
-#~ msgstr "Nachverfolgen"
-
-#~ msgid "Digital Response"
-#~ msgstr "Digitale Antwort"
-
-#~ msgid "Dispatch"
-#~ msgstr "Versand"
-
-#~ msgid "No Answer"
-#~ msgstr "Keine Antwort"
-
-#~ msgid "Talked"
-#~ msgstr "Redete"
-
-#~ msgid "Scheduled"
-#~ msgstr "Geplant"
-
-#~ msgid "Complete"
-#~ msgstr "Komplett"
-
-#~ msgid "No-Show"
-#~ msgstr "No-Show"
-
-#~ msgid "No permission"
-#~ msgstr "Keine Erlaubnis"
-
-#~ msgid "All"
-#~ msgstr "Alle"
-
-#~ msgid "Ready"
-#~ msgstr "Bereit"
-
-#~ msgid "Recent"
-#~ msgstr "Kürzlich"
-
-#~ msgid "Assign"
-#~ msgstr "Zuordnen"
-
-#~ msgid "Choose an option:"
-#~ msgstr "Wähle eine Option:"
-
-#~ msgid "Cancel"
-#~ msgstr "Stornieren"
-
-#~ msgid "Assign For"
-#~ msgstr "Zuweisen für"
-
-#~ msgid "Search"
-#~ msgstr "Suche"
-
-#~ msgid "Claim for follow-up"
-#~ msgstr "Anspruch auf Folgemaßnahmen"
-
-#~ msgid "Ready for Dispatch"
-#~ msgstr "Versandbereit"
-
-#~ msgid "Disciple Tools - Advanced M2M Tiles"
-#~ msgstr "Schülerwerkzeuge - Erweiterte M2M-Kacheln"
-
-#~ msgid "https://github.com/DiscipleTools/disciple-tools-advanced-m2m-tiles"
-#~ msgstr "https://github.com/DiscipleTools/disciple-tools-advanced-m2m-tiles"
-
-#~ msgid ""
-#~ "Disciple Tools - Advanced M2M Tiles adds specific supporting tiles for "
-#~ "different roles."
-#~ msgstr ""
-#~ "Disciple Tools - Advanced M2M Tiles fügt spezifische unterstützende "
-#~ "Kacheln für verschiedene Rollen hinzu."
+msgstr "Leeren"

@@ -26,32 +26,27 @@ msgstr "Мапи за обуки"
 
 #: network/network-dashboard-integration.php:44
 msgid "New Training"
-msgstr ""
+msgstr "Нова обука"
 
 #: network/network-dashboard-integration.php:50
 msgid "Training Started"
-msgstr ""
+msgstr "Обуката започна"
 
 #: network/network-dashboard-integration.php:56
 msgid "Training Completed"
-msgstr ""
+msgstr "Обуката е завршена"
 
 #: post-type/module-base.php:28 post-type/module-base.php:495
 msgid "Training"
 msgstr "Обука"
 
 #: post-type/module-base.php:70
-#, fuzzy
-#| msgid "Trainings"
 msgid "Trainings Admin"
-msgstr "Обуки"
+msgstr "Администратор на обуки"
 
 #: post-type/module-base.php:71
-#, fuzzy
-#| msgctxt "Optional Documentation"
-#| msgid "Leader of a training"
 msgid "Admin access to all trainings"
-msgstr "Водач на обука"
+msgstr "Администраторски пристап до сите обуки"
 
 #: post-type/module-base.php:76
 msgid "Multiplier"
@@ -59,7 +54,7 @@ msgstr "Множител"
 
 #: post-type/module-base.php:83
 msgid "Disciple.Tools Admin"
-msgstr "Ученик.Администратор на алатки"
+msgstr "Disciple.Tools Администратор"
 
 #: post-type/module-base.php:90
 msgid "Administrator"
@@ -74,6 +69,8 @@ msgctxt "Optional Documentation"
 msgid ""
 "A useful way to group related items and can be used to filter the records"
 msgstr ""
+"Корисен начин за групирање на поврзани ставки и може да се користи за "
+"филтрирање на записите"
 
 #: post-type/module-base.php:135
 msgid "Follow"
@@ -81,7 +78,7 @@ msgstr "Следи"
 
 #: post-type/module-base.php:142
 msgid "Un-Follow"
-msgstr "Не-Следете"
+msgstr "Откажи следење"
 
 #: post-type/module-base.php:148
 msgid "Tasks"
@@ -110,7 +107,7 @@ msgstr "Оваа обука е предложена и е во почетни р
 #: post-type/module-base.php:172
 msgctxt "Training Status label"
 msgid "Scheduled"
-msgstr "Закажан"
+msgstr "Закажано"
 
 #: post-type/module-base.php:173
 msgctxt "Training Status field description"
@@ -130,7 +127,7 @@ msgstr "Оваа обука е потврдена, во календарот, и
 #: post-type/module-base.php:182
 msgctxt "Training Status label"
 msgid "Complete"
-msgstr "Заврши"
+msgstr "Завршено"
 
 #: post-type/module-base.php:183
 msgctxt "Training Status field description"
@@ -140,7 +137,7 @@ msgstr "Оваа обука е успешно завршена"
 #: post-type/module-base.php:187
 msgctxt "Training Status label"
 msgid "Paused"
-msgstr "Паузиран"
+msgstr "Паузирано"
 
 #: post-type/module-base.php:188
 msgctxt "Training Status field description"
@@ -148,8 +145,7 @@ msgid ""
 "This contact is currently on hold. It has potential of getting scheduled in "
 "the future."
 msgstr ""
-"Овој контакт моментално е во мирување. Има потенцијал за закажување во "
-"иднина."
+"Оваа обука моментално е во мирување. Има потенцијал за закажување во иднина."
 
 #: post-type/module-base.php:192
 msgctxt "Training Status label"
@@ -163,7 +159,7 @@ msgstr "Оваа обука веќе нема да се случува."
 
 #: post-type/module-base.php:201
 msgid "Assigned To"
-msgstr "Доделен"
+msgstr "Доделено на"
 
 #: post-type/module-base.php:202
 msgid ""
@@ -173,7 +169,7 @@ msgstr ""
 
 #: post-type/module-base.php:209
 msgid "Training Coach / Church Planter"
-msgstr "Тренер за обука / Црвен жардиниер"
+msgstr "Тренер за обука / Црковен садач"
 
 #: post-type/module-base.php:210
 msgctxt "Optional Documentation"
@@ -182,9 +178,9 @@ msgid ""
 "be assigned to a training while multiple people can be coaches / church "
 "planters of this training."
 msgstr ""
-"Лицето кое ја засадило и / или ја тренира оваа обука. Само една личност може "
+"Лицето кое ја засадило и/или ја тренира оваа обука. Само една личност може "
 "да биде доделена на обука, додека повеќе луѓе можат да бидат тренери / "
-"црковни садници на оваа обука."
+"црковни садачи на оваа обука."
 
 #: post-type/module-base.php:222
 msgid "Requires Update"
@@ -210,7 +206,7 @@ msgstr "Белешки за тоа кога ќе се случат обукит�
 
 #: post-type/module-base.php:246 post-type/module-base.php:509
 msgid "Meeting Times"
-msgstr "Тајмс на состаноците"
+msgstr "Термини за состаноци"
 
 #: post-type/module-base.php:295 post-type/module-base.php:304
 msgid "Locations"
@@ -227,7 +223,7 @@ msgstr "Адреса"
 
 #: post-type/module-base.php:333
 msgid "Parent Training"
-msgstr "Обука за родители"
+msgstr "Матична обука"
 
 #: post-type/module-base.php:334
 msgctxt "Optional Documentation"
@@ -236,7 +232,7 @@ msgstr "Обука што ја започна оваа обука."
 
 #: post-type/module-base.php:344
 msgid "Peer Training"
-msgstr "Обука за врсници"
+msgstr "Партнерска обука"
 
 #: post-type/module-base.php:345
 msgctxt "Optional Documentation"
@@ -244,12 +240,12 @@ msgid ""
 "A related training that isn't a parent/child in relationship. It might "
 "indicate trainings that collaborate, are about to merge, recently split, etc."
 msgstr ""
-"Поврзана обука што не е родител / дете во врска. Тоа може да укажува на "
-"обуки кои соработуваат, се пред спојување, неодамна поделени, итн."
+"Поврзана обука што не е во родител/дете врска. Тоа може да укажува на обуки "
+"кои соработуваат, се пред спојување, неодамна поделени, итн."
 
 #: post-type/module-base.php:355
 msgid "Child Training"
-msgstr "Обука за деца"
+msgstr "Дете обука"
 
 #: post-type/module-base.php:356
 msgctxt "Optional Documentation"
@@ -272,12 +268,12 @@ msgstr "Лидери"
 
 #: post-type/module-base.php:387
 msgid "People Groups"
-msgstr "Групи на луѓе"
+msgstr "Народни групи"
 
 #: post-type/module-base.php:388
 msgctxt "Optional Documentation"
 msgid "The people trainings represented by this training."
-msgstr "Обуките за луѓе претставени со оваа обука."
+msgstr "Народните групи претставени со оваа обука."
 
 #: post-type/module-base.php:397
 msgid "Groups"
@@ -285,7 +281,7 @@ msgstr "Групи"
 
 #: post-type/module-base.php:409
 msgid "Member Count"
-msgstr "Грофот на членот"
+msgstr "Број на членови"
 
 #: post-type/module-base.php:410 post-type/module-base.php:417
 msgctxt "Optional Documentation"
@@ -297,12 +293,12 @@ msgid ""
 msgstr ""
 "Бројот на членови на оваа обука. Тој автоматски ќе се ажурира кога ќе се "
 "додадат или отстранат нови членови во списокот со членови. Променете го овој "
-"број рачно во вклучени лица кои можеби не се во системот, но исто така се и "
+"број рачно за да вклучите лица кои можеби не се во системот, но исто така се "
 "членови на обуката."
 
 #: post-type/module-base.php:416
 msgid "Leader Count"
-msgstr "Грофот на водачот"
+msgstr "Број на лидери"
 
 #: post-type/module-base.php:426
 msgid "Training as Leader"
@@ -311,7 +307,7 @@ msgstr "Обука како лидер"
 #: post-type/module-base.php:427
 msgctxt "Optional Documentation"
 msgid "Leader of a training"
-msgstr "Водач на обука"
+msgstr "Лидер на обука"
 
 #: post-type/module-base.php:438
 msgid "Training as Participant"
@@ -332,7 +328,7 @@ msgstr "Креирај"
 
 #: post-type/module-base.php:550
 msgid "Select"
-msgstr "Изберете"
+msgstr "Избери"
 
 #: post-type/module-base.php:555
 msgid "To add new members, click on 'Create' or 'Select'."
@@ -349,35 +345,29 @@ msgid ""
 "In the 'Member List' field, type the name of an existing contact to add them "
 "to this training."
 msgstr ""
-"Во полето „Листа на членови“, напишете го името на постојниот контакт за да "
-"ги додадете на оваа обука."
+"Во полето \"Листа на членови\", напишете го името на постојниот контакт за "
+"да ги додадете на оваа обука."
 
 #: post-type/module-base.php:573
 msgid "Close"
 msgstr "Затвори"
 
 #: post-type/module-base.php:713
-#, fuzzy
-#| msgid "Removed %1$s: %2$s"
 msgid "Removed %1$s: {%2$s}"
-msgstr "Отстранети %1$s: %2$s"
+msgstr "Отстрането %1$s: {%2$s}"
 
 #: post-type/module-base.php:716
-#, fuzzy
-#| msgid "Added %1$s: %2$s"
 msgid "Added %1$s: {%2$s}"
-msgstr "Додадено е %1$s: %2$s"
+msgstr "Додадено %1$s: {%2$s}"
 
 #: post-type/module-base.php:719
-#, fuzzy
-#| msgid "Updated %1$s: %2$s to %3$s"
 msgid "Updated %1$s: {%2$s} to {%3$s}"
-msgstr "Ажурирано %1$s: %2$s до %3$s"
+msgstr "Ажурирано %1$s: {%2$s} во {%3$s}"
 
 #: post-type/module-base.php:804
 msgctxt "List Filters"
 msgid "Assigned to me"
-msgstr "Назначен за мене"
+msgstr "Доделено на мене"
 
 #: post-type/module-base.php:812
 msgctxt "List Filters"
@@ -387,7 +377,7 @@ msgstr "Сите"
 #: post-type/module-base.php:871
 msgctxt "List Filters"
 msgid "Default Filters"
-msgstr ""
+msgstr "Стандардни филтри"
 
 #: post-type/module-public-calendar.php:85
 msgid "Reports"
@@ -399,7 +389,7 @@ msgstr "Вкупно групи"
 
 #: post-type/module-public-calendar.php:122
 msgid "Total Baptisms"
-msgstr "Тотални крштевки"
+msgstr "Вкупно крштевки"
 
 #: post-type/module-public-calendar.php:123
 msgid "Countries"
@@ -416,19 +406,19 @@ msgstr "Окрузи"
 #: post-type/module-public-calendar.php:432
 #: post-type/module-registration.php:385
 msgid "Add"
-msgstr "Додади"
+msgstr "Додај"
 
 #: post-type/module-registration.php:31
 msgid "Magic Links"
-msgstr ""
+msgstr "Магични врски"
 
 #: post-type/module-registration.php:59
 msgid "copy link"
-msgstr "копирај ја врската"
+msgstr "копирај врска"
 
 #: post-type/module-registration.php:61
 msgid "edit form"
-msgstr "форма за уредување"
+msgstr "уреди форма"
 
 #: post-type/module-registration.php:63
 msgid "report"
@@ -444,27 +434,27 @@ msgstr "врска"
 
 #: post-type/module-registration.php:116
 msgid "show on calendar"
-msgstr "покажуваат на календарот"
+msgstr "прикажи на календар"
 
 #: post-type/module-registration.php:118
 msgid "open registration"
-msgstr "отворена регистрација "
+msgstr "отворена регистрација"
 
 #: post-type/module-registration.php:265
 msgid "add"
-msgstr "додаде"
+msgstr "додај"
 
 #: post-type/module-registration.php:266
 msgid "Use"
-msgstr "Користете"
+msgstr "Користи"
 
 #: post-type/module-registration.php:267 post-type/module-registration.php:695
 msgid "Search Location"
-msgstr "Пребарувајте ја локацијата"
+msgstr "Пребарај локација"
 
 #: post-type/module-registration.php:268
 msgid "Delete Location"
-msgstr "Избришете ја локацијата"
+msgstr "Избриши локација"
 
 #: post-type/module-registration.php:269
 msgid "Open Mapping"
@@ -472,7 +462,7 @@ msgstr "Отвори мапирање"
 
 #: post-type/module-registration.php:270
 msgid "clear"
-msgstr "јасен"
+msgstr "исчисти"
 
 #: post-type/module-registration.php:384
 msgid "Register for Training"
@@ -480,819 +470,12 @@ msgstr "Регистрирај се за обука"
 
 #: post-type/module-registration.php:386
 msgid "Join Training"
-msgstr "Придружете се на обука"
+msgstr "Приклучи се на обука"
 
 #: post-type/module-registration.php:387
 msgid "Join in"
-msgstr "Придружи се"
+msgstr "Приклучи се"
 
 #: post-type/module-registration.php:700
 msgid "Clear"
-msgstr "Јасно"
-
-#~ msgid "Apps"
-#~ msgstr "Апликации"
-
-#, fuzzy
-#~| msgid "Disciple Tools - Training"
-#~ msgid "Disciple.Tools - Training"
-#~ msgstr "Алатки за ученици - Обука"
-
-#~ msgid "https://github.com/DiscipleTools/disciple-tools-training"
-#~ msgstr "https://github.com/DiscipleTools/disciple-tools-training"
-
-#, fuzzy
-#~| msgid ""
-#~| "Disciple Tools Training Extension adds recording of trainings and cross "
-#~| "reference them with contacts, groups, and locations."
-#~ msgid ""
-#~ "Disciple.Tools Training Extension adds recording of trainings and cross "
-#~ "reference them with contacts, groups, and locations."
-#~ msgstr ""
-#~ "Продолжување на обуката за ученици и додатоци додава снимање обуки и "
-#~ "вкрстено упатување на нив со контакти, групи и локации."
-
-#~ msgid "Whoah, partner!"
-#~ msgstr "Ау, партнер!"
-
-#~ msgid "Method does not exist."
-#~ msgstr "Метод не постои."
-
-#~ msgid "Dispatcher"
-#~ msgstr "Диспечер"
-
-#~ msgid "Members"
-#~ msgstr "Членови"
-
-#~ msgid "Contacts"
-#~ msgstr "Контакти"
-
-#~ msgid "Coaches"
-#~ msgstr "Тренери"
-
-#~ msgid "Planted by"
-#~ msgstr "Засадени од"
-
-#~ msgid "Planting"
-#~ msgstr "Садење"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid ""
-#~ "A useful way to training related items and can help training contacts "
-#~ "associated with noteworthy characteristics. e.g. business owner, sports "
-#~ "lover. The contacts can also be filtered using these tags."
-#~ msgstr ""
-#~ "Корисен начин за обука на поврзани предмети и може да помогне во обука на "
-#~ "контакти поврзани со значајни карактеристики. на пр. сопственик на "
-#~ "деловна активност, sportsубител на спортот. Контактите исто така може да "
-#~ "се филтрираат користејќи ги овие ознаки."
-
-#~ msgctxt "input field placeholder"
-#~ msgid "Search Users"
-#~ msgstr "Пребарувајте корисници"
-
-#~ msgctxt "Search 'something'"
-#~ msgid "Search %s"
-#~ msgstr "Пребарувајте%s"
-
-#~ msgid "Extensions (DT)"
-#~ msgstr "Екстензии (ДТ)"
-
-#~ msgid "Network Dashboard"
-#~ msgstr "Мрежна табла"
-
-#~ msgid "You do not have sufficient permissions to access this page."
-#~ msgstr "Немате доволно дозволи за пристап до оваа страница."
-
-#~ msgid "nav-tab-active"
-#~ msgstr "nav-tab-активен"
-
-#~ msgid "Network Dashboard Viewer"
-#~ msgstr "Прегледувач на мрежна табла"
-
-#~ msgid "ID"
-#~ msgstr "Лична карта"
-
-#~ msgid "Site"
-#~ msgstr "Веб-страница"
-
-#~ msgid "Users"
-#~ msgstr "Корисници"
-
-#~ msgid "Timestamp"
-#~ msgstr "Временски печат"
-
-#~ msgid "Visit"
-#~ msgstr "Посета"
-
-#~ msgid "View"
-#~ msgstr "Преглед"
-
-#~ msgid "Active Snapshot"
-#~ msgstr "Активна слика"
-
-#~ msgid "Generations"
-#~ msgstr "Генерации"
-
-#~ msgid "Follow-up Funnel"
-#~ msgstr "Инка за следење"
-
-#~ msgid "On-Going Meetings"
-#~ msgstr "Тековни состаноци"
-
-#~ msgid "Coaching"
-#~ msgstr "Тренирање"
-
-#~ msgid "Baptized"
-#~ msgstr "Крстен"
-
-#~ msgid "Active Groups"
-#~ msgstr "Активни групи"
-
-#~ msgid "Church"
-#~ msgstr "Црква"
-
-#~ msgid "Health Metrics"
-#~ msgstr "Метрика на здравјето"
-
-#~ msgid "Total Users"
-#~ msgstr "Вкупно корисници"
-
-#~ msgid "Responders"
-#~ msgstr "Одговорите"
-
-#~ msgid "Dispatchers"
-#~ msgstr "Диспечери"
-
-#~ msgid "Multipliers"
-#~ msgstr "Множители"
-
-#~ msgid "Admins"
-#~ msgstr "Администратори"
-
-#~ msgid "User Login Activity"
-#~ msgstr "Активност за најавување на корисникот"
-
-#~ msgid "Users Active in the Last 30 Days"
-#~ msgstr "Корисници активни во последните 30 дена"
-
-#~ msgid "Practicing"
-#~ msgstr "Вежбање"
-
-#~ msgid "Not Practicing"
-#~ msgstr "Не вежбање"
-
-#~ msgid "Chart Funnel"
-#~ msgstr "Инка на графикони"
-
-#~ msgid "Contact"
-#~ msgstr "Контакт"
-
-#~ msgid "Group"
-#~ msgstr "Група"
-
-#~ msgid "User"
-#~ msgstr "Корисник"
-
-#~ msgid "Sites"
-#~ msgstr "Сајтови"
-
-#~ msgid "Baptisms"
-#~ msgstr "Крштевки"
-
-#~ msgid "Churches"
-#~ msgstr "Цркви"
-
-#~ msgid "Location"
-#~ msgstr "Локација"
-
-#~ msgid "Types"
-#~ msgstr "Видови"
-
-#~ msgid "modify filter"
-#~ msgstr "измени филтер"
-
-#~ msgid "Filter List"
-#~ msgstr "Список на филтри"
-
-#~ msgid "reset data"
-#~ msgstr "ресетирање на податоци"
-
-#~ msgid "Status"
-#~ msgstr "Статус"
-
-#~ msgid "Status - All"
-#~ msgstr "Статус - сите"
-
-#~ msgid "Zoom Level"
-#~ msgstr "Ниво на зумирање"
-
-#~ msgid "Auto Zoom"
-#~ msgstr "Автоматско зумирање"
-
-#~ msgid "World"
-#~ msgstr "Светски"
-
-#~ msgid "Country"
-#~ msgstr "Земја"
-
-#~ msgid "State"
-#~ msgstr "Држава"
-
-#~ msgid "Active Contacts"
-#~ msgstr "Активни контакти"
-
-#~ msgid "Paused Contacts"
-#~ msgstr "Паузирани контакти"
-
-#~ msgid "Closed Contacts"
-#~ msgstr "Затворени контакти"
-
-#~ msgid "Total Contacts"
-#~ msgstr "Вкупно контакти"
-
-#~ msgid "New Contacts"
-#~ msgstr "Нови контакти"
-
-#~ msgid "New Baptisms"
-#~ msgstr "Нови крштевки"
-
-#~ msgid "Baptism Generations"
-#~ msgstr "Генерации на крштевањето"
-
-#~ msgid "Select Location"
-#~ msgstr "Изберете Локација"
-
-#~ msgid "New Groups"
-#~ msgstr "Нови групи"
-
-#~ msgid "Pre-Group"
-#~ msgstr "Предгрупа"
-
-#~ msgid "Pre-Groups"
-#~ msgstr "Предгрупи"
-
-#~ msgid "Last 7 Days"
-#~ msgstr "Последни 7 дена"
-
-#~ msgid "Last 30 Days"
-#~ msgstr "Последни 30 дена"
-
-#~ msgid "Last 60 Days"
-#~ msgstr "Последни 60 дена"
-
-#~ msgid "Last 12 Months"
-#~ msgstr "Последни 12 месеци"
-
-#~ msgid "Last 24 Months"
-#~ msgstr "Последни 24 месеци"
-
-#~ msgid "This Year"
-#~ msgstr "Оваа година"
-
-#~ msgid "Activity Map"
-#~ msgstr "Мапа на активности"
-
-#~ msgid "Stats"
-#~ msgstr "Статистика"
-
-#~ msgid "Activities"
-#~ msgstr "Активности"
-
-#~ msgid "Actions"
-#~ msgstr "Дејства"
-
-#~ msgid "By Action Type"
-#~ msgstr "Според типот на акција"
-
-#~ msgid "Key"
-#~ msgstr "Клуч"
-
-#~ msgid "Name"
-#~ msgstr "Име"
-
-#~ msgid "Total Activities"
-#~ msgstr "Вкупни активности"
-
-#~ msgid "Feed"
-#~ msgstr "Хранат"
-
-#~ msgid "Time"
-#~ msgstr "Време"
-
-#~ msgid "Result Limit"
-#~ msgstr "Ограничување на резултатите"
-
-#~ msgid "uncheck"
-#~ msgstr "одштиклирај"
-
-#~ msgid "Home"
-#~ msgstr "Дома"
-
-#~ msgid "Events (30 Days)"
-#~ msgstr "Настани (30 дена)"
-
-#~ msgid "All Active/Inactive"
-#~ msgstr "Сите активни / неактивни"
-
-#~ msgid "Hover Map"
-#~ msgstr "Лебди мапа"
-
-#~ msgid "Network"
-#~ msgstr "Мрежа"
-
-#~ msgid "Map"
-#~ msgstr "Мапа"
-
-#~ msgid "Log"
-#~ msgstr "Дневник"
-
-#~ msgid "Activity"
-#~ msgstr "Активност"
-
-#~ msgid "Area Maps"
-#~ msgstr "Мапи со област"
-
-#~ msgid "Location List"
-#~ msgstr "Список на локации"
-
-#~ msgid "Maps"
-#~ msgstr "Мапи"
-
-#~ msgid "Site Reports"
-#~ msgstr "Извештаи за страницата"
-
-#~ msgid "Statistics"
-#~ msgstr "Статистика"
-
-#~ msgid "Network Dashboard Transfer Both Ways"
-#~ msgstr "Трансфер на мрежна табла и на двата начина"
-
-#~ msgid "Network Dashboard Receiving Only"
-#~ msgstr "Само мрежно примање табла"
-
-#~ msgid "Network Dashboard Sending Only"
-#~ msgstr "Само мрежно испраќање табла"
-
-#~ msgid "Network Dashboard Site Profile"
-#~ msgstr "Профил на страницата на мрежната табла"
-
-#~ msgid "Disciple Tools - Network Dashboard"
-#~ msgstr "Алатки за ученици - мрежна табла"
-
-#~ msgid "Streams"
-#~ msgstr "Потоци"
-
-#~ msgid "Stream Maps"
-#~ msgstr "Поточни мапи"
-
-#~ msgid "Streams Maps"
-#~ msgstr "Потоци мапи"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid ""
-#~ "A useful way to stream related items and can help stream contacts "
-#~ "associated with noteworthy characteristics. e.g. business owner, sports "
-#~ "lover. The contacts can also be filtered using these tags."
-#~ msgstr ""
-#~ "Корисен начин за проследување на поврзани предмети и може да помогне во "
-#~ "пренесување контакти поврзани со забележителни карактеристики. на пр. "
-#~ "сопственик на деловна активност, sportsубител на спортот. Контактите исто "
-#~ "така може да се филтрираат користејќи ги овие ознаки."
-
-#~ msgctxt "Stream Status label"
-#~ msgid "New"
-#~ msgstr "Ново"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "New stream added to the system"
-#~ msgstr "Нов поток е додаден во системот"
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Model"
-#~ msgstr "Модел"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "This stream has been proposed and is in initial conversations"
-#~ msgstr "Овој проток е предложен и е во почетни разговори"
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Assist"
-#~ msgstr "Асистенција"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "This stream is confirmed, on the calendar."
-#~ msgstr "Овој пренос е потврден, на календарот."
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Watch"
-#~ msgstr "Гледај"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "This stream is confirmed, on the calendar, or currently active."
-#~ msgstr "Овој пренос е потврден, на календарот или моментално активен."
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Leave"
-#~ msgstr "Остави"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "This stream has successfully completed"
-#~ msgstr "Овој пренос е успешно завршен"
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Paused"
-#~ msgstr "Паузиран"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid ""
-#~ "This contact is currently on hold. It has potential of getting scheduled "
-#~ "in the future."
-#~ msgstr ""
-#~ "Овој контакт моментално е во мирување. Има потенцијал за закажување во "
-#~ "иднина."
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Closed"
-#~ msgstr "Затворено"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "This stream is no longer going to happen."
-#~ msgstr "Овој проток веќе нема да се случува."
-
-#~ msgid ""
-#~ "Select the main person who is responsible for reporting on this stream."
-#~ msgstr ""
-#~ "Изберете ја главната личност која е одговорна за известување за овој "
-#~ "проток."
-
-#~ msgctxt "Optional Documentation"
-#~ msgid ""
-#~ "The person who planted and/or is coaching this stream. Only one person "
-#~ "can be assigned to a stream while multiple people can be coaches / church "
-#~ "planters of this stream."
-#~ msgstr ""
-#~ "Лицето кое го засадило и / или го тренира овој поток. Само едно лице може "
-#~ "да биде доделено на поток, додека повеќе луѓе можат да бидат тренери / "
-#~ "црковни садници на овој поток."
-
-#~ msgctxt "Optional Documentation"
-#~ msgid "The people streams represented by this stream."
-#~ msgstr "Преносите на луѓе претставени од овој проток."
-
-#~ msgid "Parent Stream"
-#~ msgstr "Родителски тек"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid "A stream that launched this stream."
-#~ msgstr "Поток што го започна овој поток."
-
-#~ msgid "Peer Streams"
-#~ msgstr "Врсници на врсници"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid ""
-#~ "A related stream that isn't a parent/child in relationship. It might "
-#~ "indicate streams that collaborate, are about to merge, recently split, "
-#~ "etc."
-#~ msgstr ""
-#~ "Поврзан тек што не е родител / дете во врска. Тоа може да означува струи "
-#~ "што соработуваат, се пред спојување, неодамна се поделени, итн."
-
-#~ msgid "Child Streams"
-#~ msgstr "Детски потоци"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid "A stream that has been birthed out of this stream."
-#~ msgstr "Поток кој е роден од овој проток."
-
-#~ msgid "Leader in Stream"
-#~ msgstr "Лидер во тек"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid "Leader of a stream"
-#~ msgstr "Водач на поток"
-
-#~ msgid "Key Disciple in Stream"
-#~ msgstr "Клучен ученик во тек"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid "Disciple in a stream."
-#~ msgstr "Ученик во поток."
-
-#~ msgid "Connections"
-#~ msgstr "Врски"
-
-#~ msgid "Add Report"
-#~ msgstr "Додај извештај"
-
-#~ msgid "Disciple Tools - Streams"
-#~ msgstr "Алатки за ученици - потоци"
-
-#~ msgid "Pre-Group Generations"
-#~ msgstr "Генерации пред група"
-
-#~ msgid "Group Generations"
-#~ msgstr "Генерации на групи"
-
-#~ msgid "Church Generations"
-#~ msgstr "Генерации на црквите"
-
-#~ msgid "Team Generations"
-#~ msgstr "Генерации на тимот"
-
-#~ msgid "%s is reporting a new pre-group generation."
-#~ msgstr "%s известува за нова генерација пред-група."
-
-#~ msgid "%s is reporting a new group generation."
-#~ msgstr "%s известува за нова групна генерација."
-
-#~ msgid "%s is reporting a new church generation."
-#~ msgstr "%s известува за нова црковна генерација."
-
-#~ msgid "%s is reporting a new leadership team generation."
-#~ msgstr "%s известува за нова генерација на лидерски тим."
-
-#~ msgid "New Contact"
-#~ msgstr "Нов контакт"
-
-#~ msgid "New Pre-Group"
-#~ msgstr "Нова предгрупа"
-
-#~ msgid "New Group"
-#~ msgstr "Нова група"
-
-#~ msgid "New Church"
-#~ msgstr "Нова црква"
-
-#~ msgid "New Team"
-#~ msgstr "Нов тим"
-
-#~ msgid "New Baptism"
-#~ msgstr "Ново крштевање"
-
-#~ msgid "New Coaching"
-#~ msgstr "Нов тренер"
-
-#~ msgid "%s is reporting a new contact."
-#~ msgstr "%s пријавува нов контакт."
-
-#~ msgid "%s is reporting a new pre-group formed."
-#~ msgstr "%s известува за формирана нова пред-група."
-
-#~ msgid "%s is reporting a new group formed."
-#~ msgstr "%s известува за формирана нова група."
-
-#~ msgid "%s is reporting a new church."
-#~ msgstr "%s известува за нова црква."
-
-#~ msgid "%s is reporting a new leadership team formed."
-#~ msgstr "%s известува за формиран нов лидерски тим."
-
-#~ msgid "%s is reporting a new baptism."
-#~ msgstr "%s известува за ново крштевање."
-
-#~ msgid "%s is reporting an coaching relationship."
-#~ msgstr "%s известува за тренерска врска."
-
-#~ msgid "Active"
-#~ msgstr "Активни"
-
-#~ msgid "Paused"
-#~ msgstr "Паузиран"
-
-#~ msgid "Closed"
-#~ msgstr "Затворено"
-
-#~ msgid "Inactive"
-#~ msgstr "Неактивен"
-
-#~ msgid "https://github.com/DiscipleTools/disciple-tools-network-dashboard"
-#~ msgstr "https://github.com/DiscipleTools/disciple-tools-network-dashboard"
-
-#~ msgid ""
-#~ "Connect this Disciple Tools site to a larger network of sites. Adds "
-#~ "security sensitive totals, mapping, activity logging."
-#~ msgstr ""
-#~ "Поврзете ја оваа страница на Алатки за ученици со поголема мрежа на "
-#~ "страници. Додава вкупно чувствителни на безбедноста, мапирање, најавување "
-#~ "активност."
-
-#~ msgid "https://github.com/DiscipleTools"
-#~ msgstr "https://github.com/DiscipleTools"
-
-#~ msgid "https://github.com/DiscipleTools/disciple-tools-streams"
-#~ msgstr "https://github.com/DiscipleTools/disciple-tools-streams"
-
-#~ msgid ""
-#~ "Disciple Tools Streams Extension adds recording of streams and cross "
-#~ "reference them with contacts, groups, and locations."
-#~ msgstr ""
-#~ "Екстензијата на потоците на алатки за ученици додава снимање на потоци и "
-#~ "нивно вкрстување со контакти, групи и локации."
-
-#~ msgid ""
-#~ "'Disciple Tools - Training' plugin requires 'Disciple Tools' theme to "
-#~ "work. Please activate 'Disciple Tools' theme or make sure it is latest "
-#~ "version."
-#~ msgstr ""
-#~ "Приклучокот „Алатки за ученици - Обука“ бара да работи темата „Алатки за "
-#~ "ученици“. Активирајте ја темата „Алатки за ученици“ или проверете дали е "
-#~ "најновата верзија."
-
-#~ msgid "Current Disciple Tools version: %1$s, required version: %2$s"
-#~ msgstr "Тековна верзија на Алатки за ученици: %1$s, потребна верзија: %2$s"
-
-#~ msgid "Duplicates"
-#~ msgstr "Двојници"
-
-#~ msgid "Coach"
-#~ msgstr "Тренер"
-
-#~ msgid "Leaders Total"
-#~ msgstr "Водачи Вкупно"
-
-#~ msgid "Disciples Total"
-#~ msgstr "Ученици Вкупно"
-
-#~ msgid "Key Disciples"
-#~ msgstr "Клучни ученици"
-
-#~ msgid "Groups Total"
-#~ msgstr "Вкупно групи"
-
-#~ msgid "Trainings Total"
-#~ msgstr "Вкупно обуки"
-
-#~ msgid "Dashboard Plugin"
-#~ msgstr "Приклучок за табла"
-
-#~ msgid "Dashboard"
-#~ msgstr "Табла"
-
-#~ msgid "%s days since last update"
-#~ msgstr "%s дена од последното ажурирање"
-
-#~ msgid "Accept"
-#~ msgstr "Прифати"
-
-#~ msgid "Decline"
-#~ msgstr "Пад"
-
-#~ msgid "# Contacts Assigned"
-#~ msgstr "# Контакти доделени"
-
-#~ msgid "# First Meetings"
-#~ msgstr "# Први состаноци"
-
-#~ msgid "# Faith milestones"
-#~ msgstr "# Точки на верата"
-
-#~ msgid "Hurray! You are caught up."
-#~ msgstr "Ура! Фатени сте"
-
-#~ msgid "remove"
-#~ msgstr "отстрани"
-
-#~ msgid "mark as complete"
-#~ msgstr "означи како завршена"
-
-#~ msgid "No task created"
-#~ msgstr "Не е создадена задача"
-
-#~ msgid "Reminder"
-#~ msgstr "Потсетување"
-
-#~ msgid "No note set"
-#~ msgstr "Нема поставено белешка"
-
-#~ msgid "Add a contact"
-#~ msgstr "Додадете контакт"
-
-#~ msgid "View Contacts List"
-#~ msgstr "Погледнете го списокот со контакти"
-
-#~ msgid "Pending Contacts"
-#~ msgstr "Контакти во очекување"
-
-#~ msgid "View All"
-#~ msgstr "Види се"
-
-#~ msgid "Update Needed"
-#~ msgstr "Потребно е ажурирање"
-
-#~ msgid "Contact Workload"
-#~ msgstr "Контакт обем на работа"
-
-#~ msgid ""
-#~ "Choose an option to let the dispatcher(s) know if you are ready for new "
-#~ "contacts"
-#~ msgstr ""
-#~ "Изберете опција за да ги известите диспечер (те) дали сте подготвени за "
-#~ "нови контакти"
-
-#~ msgid "Set travel or dates unavailable"
-#~ msgstr "Поставете патување или датуми недостапни"
-
-#~ msgid "Personal Benchmarks"
-#~ msgstr "Лични репери"
-
-#~ msgid "Faith Milestone Totals"
-#~ msgstr "Вкупни пресвртници на верата"
-
-#~ msgid "Milestones on your active contacts"
-#~ msgstr "Пресвртници на вашите активни контакти"
-
-#~ msgid "Seeker Path Progress"
-#~ msgstr "Напредок на патот на трагачите"
-
-#~ msgid "No data to show yet. You have no active contacts"
-#~ msgstr "Сè уште нема податоци за прикажување. Немате активни контакти"
-
-#~ msgid "Disciple Tools - Dashboard"
-#~ msgstr "Алатки за ученици - табла"
-
-#~ msgid "https://github.com/DiscipleTools/disciple-tools-dashboard"
-#~ msgstr "https://github.com/DiscipleTools/disciple-tools-dashboard"
-
-#~ msgid ""
-#~ "The multiplier dashboard upgrades the multipliers experience as soon as "
-#~ "they log into the system giving them a landing page with stats."
-#~ msgstr ""
-#~ "Таблата за мултипликатор го надградува искуството со мултипликатори "
-#~ "веднаш штом се најават во системот, давајќи им целна страница со "
-#~ "статистички податоци"
-
-#~ msgid "Reason Assigned To"
-#~ msgstr "Причина доделена на"
-
-#~ msgid "Follow-Up"
-#~ msgstr "Следење"
-
-#~ msgid "Digital Response"
-#~ msgstr "Дигитален одговор"
-
-#~ msgid "Dispatch"
-#~ msgstr "Испраќање"
-
-#~ msgid "No Answer"
-#~ msgstr "Нема одговор"
-
-#~ msgid "Talked"
-#~ msgstr "Зборуваше"
-
-#~ msgid "Scheduled"
-#~ msgstr "Закажан"
-
-#~ msgid "Complete"
-#~ msgstr "Заврши"
-
-#~ msgid "No-Show"
-#~ msgstr "Нема шоу"
-
-#~ msgid "No permission"
-#~ msgstr "Нема дозвола"
-
-#~ msgid "All"
-#~ msgstr "Сите"
-
-#~ msgid "Ready"
-#~ msgstr "Спремен"
-
-#~ msgid "Recent"
-#~ msgstr "Неодамна"
-
-#~ msgid "Assign"
-#~ msgstr "Додели"
-
-#~ msgid "Choose an option:"
-#~ msgstr "Изберете опција:"
-
-#~ msgid "Cancel"
-#~ msgstr "Откажи"
-
-#~ msgid "Assign For"
-#~ msgstr "Доделете за"
-
-#~ msgid "Search"
-#~ msgstr "Пребарување"
-
-#~ msgid "Claim for follow-up"
-#~ msgstr "Барање за следење"
-
-#~ msgid "Ready for Dispatch"
-#~ msgstr "Подготвени за испраќање"
-
-#~ msgid "Disciple Tools - Advanced M2M Tiles"
-#~ msgstr "Алатки за ученици - напредни плочки M2M"
-
-#~ msgid "https://github.com/DiscipleTools/disciple-tools-advanced-m2m-tiles"
-#~ msgstr ""
-#~ "https://github.com/DiscipleTools/disciple-tools-ad Advanced-m2m-tiles"
-
-#~ msgid ""
-#~ "Disciple Tools - Advanced M2M Tiles adds specific supporting tiles for "
-#~ "different roles."
-#~ msgstr ""
-#~ "Алатки за ученици - Напредните плочки M2M додаваат специфични потпорни "
-#~ "плочки за различни улоги."
+msgstr "Исчисти"

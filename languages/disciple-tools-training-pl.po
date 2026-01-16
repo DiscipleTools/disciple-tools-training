@@ -1,4 +1,4 @@
-# Copyright (C) 2023 
+# Copyright (C) 2023
 # This file is distributed under the same license as the Disciple.Tools - Training plugin.
 msgid ""
 msgstr ""
@@ -6,142 +6,146 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "training\n"
 "POT-Creation-Date: 2024-11-14T11:03:58+00:00\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2026-01-15 12:00+0000\n"
 "Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"Language-Team: Polish\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: WP-CLI 2.8.0\n"
 "X-Domain: disciple-tools-training\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 "
+"|| n%100>14) ? 1 : 2);\n"
 
 #: metrics/mapbox-maps.php:30
 msgid "Training Maps"
-msgstr ""
+msgstr "Mapy szkolen"
 
 #: metrics/mapbox-maps.php:31 metrics/mapbox-personal-maps.php:31
 #: post-type/module-base.php:29 post-type/module-base.php:461
 #: post-type/module-base.php:473 post-type/module-base.php:496
 msgid "Trainings"
-msgstr ""
+msgstr "Szkolenia"
 
 #: metrics/mapbox-personal-maps.php:30
 msgid "Trainings Maps"
-msgstr ""
+msgstr "Mapy szkolen"
 
 #: network/network-dashboard-integration.php:44
 msgid "New Training"
-msgstr ""
+msgstr "Nowe szkolenie"
 
 #: network/network-dashboard-integration.php:50
 msgid "Training Started"
-msgstr ""
+msgstr "Szkolenie rozpoczete"
 
 #: network/network-dashboard-integration.php:56
 msgid "Training Completed"
-msgstr ""
+msgstr "Szkolenie zakonczone"
 
 #: post-type/module-base.php:28 post-type/module-base.php:495
 msgid "Training"
-msgstr ""
+msgstr "Szkolenie"
 
 #: post-type/module-base.php:70
 msgid "Trainings Admin"
-msgstr ""
+msgstr "Administrator szkolen"
 
 #: post-type/module-base.php:71
 msgid "Admin access to all trainings"
-msgstr ""
+msgstr "Dostep administratora do wszystkich szkolen"
 
 #: post-type/module-base.php:76
 msgid "Multiplier"
-msgstr ""
+msgstr "Multiplikator"
 
 #: post-type/module-base.php:83
 msgid "Disciple.Tools Admin"
-msgstr ""
+msgstr "Administrator Disciple.Tools"
 
 #: post-type/module-base.php:90
 msgid "Administrator"
-msgstr ""
+msgstr "Administrator"
 
 #: post-type/module-base.php:127
 msgid "Tags"
-msgstr ""
+msgstr "Tagi"
 
 #: post-type/module-base.php:128
 msgctxt "Optional Documentation"
 msgid ""
 "A useful way to group related items and can be used to filter the records"
 msgstr ""
+"Przydatny sposob grupowania powiazanych elementow, moze byc uzywany do "
+"filtrowania rekordow"
 
 #: post-type/module-base.php:135
 msgid "Follow"
-msgstr ""
+msgstr "Obserwuj"
 
 #: post-type/module-base.php:142
 msgid "Un-Follow"
-msgstr ""
+msgstr "Przestan obserwowac"
 
 #: post-type/module-base.php:148
 msgid "Tasks"
-msgstr ""
+msgstr "Zadania"
 
 #: post-type/module-base.php:162
 msgctxt "Training Status label"
 msgid "New"
-msgstr ""
+msgstr "Nowe"
 
 #: post-type/module-base.php:163
 msgctxt "Training Status field description"
 msgid "New training added to the system"
-msgstr ""
+msgstr "Nowe szkolenie dodane do systemu"
 
 #: post-type/module-base.php:167
 msgctxt "Training Status label"
 msgid "Proposed"
-msgstr ""
+msgstr "Proponowane"
 
 #: post-type/module-base.php:168
 msgctxt "Training Status field description"
 msgid "This training has been proposed and is in initial conversations"
-msgstr ""
+msgstr "To szkolenie zostalo zaproponowane i jest w fazie wstepnych rozmow"
 
 #: post-type/module-base.php:172
 msgctxt "Training Status label"
 msgid "Scheduled"
-msgstr ""
+msgstr "Zaplanowane"
 
 #: post-type/module-base.php:173
 msgctxt "Training Status field description"
 msgid "This training is confirmed, on the calendar."
-msgstr ""
+msgstr "To szkolenie jest potwierdzone i znajduje sie w kalendarzu."
 
 #: post-type/module-base.php:177
 msgctxt "Training Status label"
 msgid "In Progress"
-msgstr ""
+msgstr "W trakcie"
 
 #: post-type/module-base.php:178
 msgctxt "Training Status field description"
 msgid "This training is confirmed, on the calendar, or currently active."
-msgstr ""
+msgstr "To szkolenie jest potwierdzone, w kalendarzu lub aktualnie trwa."
 
 #: post-type/module-base.php:182
 msgctxt "Training Status label"
 msgid "Complete"
-msgstr ""
+msgstr "Zakonczone"
 
 #: post-type/module-base.php:183
 msgctxt "Training Status field description"
 msgid "This training has successfully completed"
-msgstr ""
+msgstr "To szkolenie zostalo pomyslnie zakonczone"
 
 #: post-type/module-base.php:187
 msgctxt "Training Status label"
 msgid "Paused"
-msgstr ""
+msgstr "Wstrzymane"
 
 #: post-type/module-base.php:188
 msgctxt "Training Status field description"
@@ -149,29 +153,31 @@ msgid ""
 "This contact is currently on hold. It has potential of getting scheduled in "
 "the future."
 msgstr ""
+"To szkolenie jest obecnie wstrzymane. Istnieje mozliwosc zaplanowania go w "
+"przyszlosci."
 
 #: post-type/module-base.php:192
 msgctxt "Training Status label"
 msgid "Closed"
-msgstr ""
+msgstr "Zamkniete"
 
 #: post-type/module-base.php:193
 msgctxt "Training Status field description"
 msgid "This training is no longer going to happen."
-msgstr ""
+msgstr "To szkolenie nie odbedzie sie."
 
 #: post-type/module-base.php:201
 msgid "Assigned To"
-msgstr ""
+msgstr "Przypisane do"
 
 #: post-type/module-base.php:202
 msgid ""
 "Select the main person who is responsible for reporting on this training."
-msgstr ""
+msgstr "Wybierz glowna osobe odpowiedzialna za raportowanie tego szkolenia."
 
 #: post-type/module-base.php:209
 msgid "Training Coach / Church Planter"
-msgstr ""
+msgstr "Trener szkolenia / Zakladajacy kosciol"
 
 #: post-type/module-base.php:210
 msgctxt "Optional Documentation"
@@ -180,58 +186,61 @@ msgid ""
 "be assigned to a training while multiple people can be coaches / church "
 "planters of this training."
 msgstr ""
+"Osoba, ktora zalozylo i/lub prowadzi to szkolenie. Tylko jedna osoba moze "
+"byc przypisana do szkolenia, natomiast wielu moze byc trenerami / "
+"zakladajacymi kosciol tego szkolenia."
 
 #: post-type/module-base.php:222
 msgid "Requires Update"
-msgstr ""
+msgstr "Wymaga aktualizacji"
 
 #: post-type/module-base.php:228
 msgid "Video Link"
-msgstr ""
+msgstr "Link do wideo"
 
 #: post-type/module-base.php:229
 msgctxt "Optional Documentation"
 msgid "Link to video chat service"
-msgstr ""
+msgstr "Link do uslug wideokonferencyjnej"
 
 #: post-type/module-base.php:236
 msgid "Notes"
-msgstr ""
+msgstr "Notatki"
 
 #: post-type/module-base.php:237
 msgctxt "Optional Documentation"
 msgid "Notes on when the trainings will happen"
-msgstr ""
+msgstr "Notatki o terminach szkolen"
 
 #: post-type/module-base.php:246 post-type/module-base.php:509
 msgid "Meeting Times"
-msgstr ""
+msgstr "Terminy spotkan"
 
 #: post-type/module-base.php:295 post-type/module-base.php:304
 msgid "Locations"
-msgstr ""
+msgstr "Lokalizacje"
 
 #: post-type/module-base.php:296 post-type/module-base.php:305
 msgctxt "Optional Documentation"
 msgid "The general location where this contact is located."
-msgstr ""
+msgstr "Ogolna lokalizacja, w ktorej znajduje sie ten kontakt."
 
 #: post-type/module-base.php:313
 msgid "Address"
-msgstr ""
+msgstr "Adres"
 
 #: post-type/module-base.php:333
 msgid "Parent Training"
-msgstr ""
+msgstr "Szkolenie nadrzedne"
 
 #: post-type/module-base.php:334
 msgctxt "Optional Documentation"
 msgid "A training that launched this training."
-msgstr ""
+msgstr "Szkolenie, ktore zapoczatkowalo to szkolenie."
 
 #: post-type/module-base.php:344
 msgid "Peer Training"
-msgstr ""
+msgstr "Szkolenie rownorzedne"
 
 #: post-type/module-base.php:345
 msgctxt "Optional Documentation"
@@ -239,46 +248,49 @@ msgid ""
 "A related training that isn't a parent/child in relationship. It might "
 "indicate trainings that collaborate, are about to merge, recently split, etc."
 msgstr ""
+"Powiazane szkolenie, ktore nie jest w relacji nadrzedny/podrzedny. Moze "
+"oznaczac szkolenia wspolpracujace, planujace polaczenie, niedawno "
+"rozdzielone itp."
 
 #: post-type/module-base.php:355
 msgid "Child Training"
-msgstr ""
+msgstr "Szkolenie podrzedne"
 
 #: post-type/module-base.php:356
 msgctxt "Optional Documentation"
 msgid "A training that has been birthed out of this training."
-msgstr ""
+msgstr "Szkolenie, ktore powstalo z tego szkolenia."
 
 #: post-type/module-base.php:366 post-type/module-base.php:508
 #: post-type/module-base.php:542
 msgid "Member List"
-msgstr ""
+msgstr "Lista uczestnikow"
 
 #: post-type/module-base.php:367
 msgctxt "Optional Documentation"
 msgid "The contacts who are members of this training."
-msgstr ""
+msgstr "Kontakty, ktore sa uczestnikami tego szkolenia."
 
 #: post-type/module-base.php:377
 msgid "Leaders"
-msgstr ""
+msgstr "Liderzy"
 
 #: post-type/module-base.php:387
 msgid "People Groups"
-msgstr ""
+msgstr "Grupy etniczne"
 
 #: post-type/module-base.php:388
 msgctxt "Optional Documentation"
 msgid "The people trainings represented by this training."
-msgstr ""
+msgstr "Grupy etniczne reprezentowane przez to szkolenie."
 
 #: post-type/module-base.php:397
 msgid "Groups"
-msgstr ""
+msgstr "Grupy"
 
 #: post-type/module-base.php:409
 msgid "Member Count"
-msgstr ""
+msgstr "Liczba uczestnikow"
 
 #: post-type/module-base.php:410 post-type/module-base.php:417
 msgctxt "Optional Documentation"
@@ -288,49 +300,52 @@ msgid ""
 "manually to included people who may not be in the system but are also "
 "members of the training."
 msgstr ""
+"Liczba uczestnikow tego szkolenia. Bedzie automatycznie aktualizowana po "
+"dodaniu lub usunieciu uczestnikow z listy. Zmien te liczbe recznie, aby "
+"uwzglednic osoby, ktore nie sa w systemie, ale sa uczestnikami szkolenia."
 
 #: post-type/module-base.php:416
 msgid "Leader Count"
-msgstr ""
+msgstr "Liczba liderow"
 
 #: post-type/module-base.php:426
 msgid "Training as Leader"
-msgstr ""
+msgstr "Szkolenie jako lider"
 
 #: post-type/module-base.php:427
 msgctxt "Optional Documentation"
 msgid "Leader of a training"
-msgstr ""
+msgstr "Lider szkolenia"
 
 #: post-type/module-base.php:438
 msgid "Training as Participant"
-msgstr ""
+msgstr "Szkolenie jako uczestnik"
 
 #: post-type/module-base.php:439
 msgctxt "Optional Documentation"
 msgid "Participant in a training."
-msgstr ""
+msgstr "Uczestnik szkolenia."
 
 #: post-type/module-base.php:510
 msgid "Other"
-msgstr ""
+msgstr "Inne"
 
 #: post-type/module-base.php:545
 msgid "Create"
-msgstr ""
+msgstr "Utworz"
 
 #: post-type/module-base.php:550
 msgid "Select"
-msgstr ""
+msgstr "Wybierz"
 
 #: post-type/module-base.php:555
 msgid "To add new members, click on 'Create' or 'Select'."
-msgstr ""
+msgstr "Aby dodac nowych uczestnikow, kliknij 'Utworz' lub 'Wybierz'."
 
 #: post-type/module-base.php:560
 msgctxt "Add members modal"
 msgid "Add members from existing contacts"
-msgstr ""
+msgstr "Dodaj uczestnikow z istniejacych kontaktow"
 
 #: post-type/module-base.php:561
 msgctxt "Add members modal"
@@ -338,135 +353,137 @@ msgid ""
 "In the 'Member List' field, type the name of an existing contact to add them "
 "to this training."
 msgstr ""
+"W polu 'Lista uczestnikow' wpisz nazwe istniejacego kontaktu, aby dodac go "
+"do tego szkolenia."
 
 #: post-type/module-base.php:573
 msgid "Close"
-msgstr ""
+msgstr "Zamknij"
 
 #: post-type/module-base.php:713
 msgid "Removed %1$s: {%2$s}"
-msgstr ""
+msgstr "Usunieto %1$s: {%2$s}"
 
 #: post-type/module-base.php:716
 msgid "Added %1$s: {%2$s}"
-msgstr ""
+msgstr "Dodano %1$s: {%2$s}"
 
 #: post-type/module-base.php:719
 msgid "Updated %1$s: {%2$s} to {%3$s}"
-msgstr ""
+msgstr "Zaktualizowano %1$s: {%2$s} na {%3$s}"
 
 #: post-type/module-base.php:804
 msgctxt "List Filters"
 msgid "Assigned to me"
-msgstr ""
+msgstr "Przypisane do mnie"
 
 #: post-type/module-base.php:812
 msgctxt "List Filters"
 msgid "All"
-msgstr ""
+msgstr "Wszystkie"
 
 #: post-type/module-base.php:871
 msgctxt "List Filters"
 msgid "Default Filters"
-msgstr ""
+msgstr "Domyslne filtry"
 
 #: post-type/module-public-calendar.php:85
 msgid "Reports"
-msgstr ""
+msgstr "Raporty"
 
 #: post-type/module-public-calendar.php:121
 msgid "Total Groups"
-msgstr ""
+msgstr "Laczna liczba grup"
 
 #: post-type/module-public-calendar.php:122
 msgid "Total Baptisms"
-msgstr ""
+msgstr "Laczna liczba chrztow"
 
 #: post-type/module-public-calendar.php:123
 msgid "Countries"
-msgstr ""
+msgstr "Kraje"
 
 #: post-type/module-public-calendar.php:124
 msgid "States"
-msgstr ""
+msgstr "Stany/Wojewodztwa"
 
 #: post-type/module-public-calendar.php:125
 msgid "Counties"
-msgstr ""
+msgstr "Powiaty"
 
 #: post-type/module-public-calendar.php:432
 #: post-type/module-registration.php:385
 msgid "Add"
-msgstr ""
+msgstr "Dodaj"
 
 #: post-type/module-registration.php:31
 msgid "Magic Links"
-msgstr ""
+msgstr "Magiczne linki"
 
 #: post-type/module-registration.php:59
 msgid "copy link"
-msgstr ""
+msgstr "kopiuj link"
 
 #: post-type/module-registration.php:61
 msgid "edit form"
-msgstr ""
+msgstr "edytuj formularz"
 
 #: post-type/module-registration.php:63
 msgid "report"
-msgstr ""
+msgstr "raport"
 
 #: post-type/module-registration.php:67
 msgid "create link"
-msgstr ""
+msgstr "utworz link"
 
 #: post-type/module-registration.php:114
 msgid "link"
-msgstr ""
+msgstr "link"
 
 #: post-type/module-registration.php:116
 msgid "show on calendar"
-msgstr ""
+msgstr "pokaz w kalendarzu"
 
 #: post-type/module-registration.php:118
 msgid "open registration"
-msgstr ""
+msgstr "otwarta rejestracja"
 
 #: post-type/module-registration.php:265
 msgid "add"
-msgstr ""
+msgstr "dodaj"
 
 #: post-type/module-registration.php:266
 msgid "Use"
-msgstr ""
+msgstr "Uzyj"
 
 #: post-type/module-registration.php:267 post-type/module-registration.php:695
 msgid "Search Location"
-msgstr ""
+msgstr "Szukaj lokalizacji"
 
 #: post-type/module-registration.php:268
 msgid "Delete Location"
-msgstr ""
+msgstr "Usun lokalizacje"
 
 #: post-type/module-registration.php:269
 msgid "Open Mapping"
-msgstr ""
+msgstr "Otworz mape"
 
 #: post-type/module-registration.php:270
 msgid "clear"
-msgstr ""
+msgstr "wyczysc"
 
 #: post-type/module-registration.php:384
 msgid "Register for Training"
-msgstr ""
+msgstr "Zarejestruj sie na szkolenie"
 
 #: post-type/module-registration.php:386
 msgid "Join Training"
-msgstr ""
+msgstr "Dolacz do szkolenia"
 
 #: post-type/module-registration.php:387
 msgid "Join in"
-msgstr ""
+msgstr "Dolacz"
 
 #: post-type/module-registration.php:700
 msgid "Clear"
-msgstr ""
+msgstr "Wyczysc"

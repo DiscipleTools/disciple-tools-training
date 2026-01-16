@@ -98,12 +98,12 @@ msgstr "Новый"
 #: post-type/module-base.php:163
 msgctxt "Training Status field description"
 msgid "New training added to the system"
-msgstr "В систему добавлено новое обучение"
+msgstr "В систему добавлен новый тренинг"
 
 #: post-type/module-base.php:167
 msgctxt "Training Status label"
 msgid "Proposed"
-msgstr "Предложил"
+msgstr "Предложенный"
 
 #: post-type/module-base.php:168
 msgctxt "Training Status field description"
@@ -114,32 +114,33 @@ msgstr ""
 #: post-type/module-base.php:172
 msgctxt "Training Status label"
 msgid "Scheduled"
-msgstr "Запланированное"
+msgstr "Запланировано"
 
 #: post-type/module-base.php:173
 msgctxt "Training Status field description"
 msgid "This training is confirmed, on the calendar."
-msgstr "Это обучение подтверждено в календаре."
+msgstr "Этот тренинг подтвержден и внесен в календарь."
 
 #: post-type/module-base.php:177
 msgctxt "Training Status label"
 msgid "In Progress"
-msgstr "В ходе выполнения"
+msgstr "В процессе"
 
 #: post-type/module-base.php:178
 msgctxt "Training Status field description"
 msgid "This training is confirmed, on the calendar, or currently active."
-msgstr "Это обучение подтверждено, в календаре или активно в данный момент."
+msgstr ""
+"Этот тренинг подтвержден, внесен в календарь или активен в данный момент."
 
 #: post-type/module-base.php:182
 msgctxt "Training Status label"
 msgid "Complete"
-msgstr "Завершить"
+msgstr "Завершено"
 
 #: post-type/module-base.php:183
 msgctxt "Training Status field description"
 msgid "This training has successfully completed"
-msgstr "Это обучение успешно завершено"
+msgstr "Этот тренинг успешно завершен"
 
 #: post-type/module-base.php:187
 msgctxt "Training Status label"
@@ -152,7 +153,7 @@ msgid ""
 "This contact is currently on hold. It has potential of getting scheduled in "
 "the future."
 msgstr ""
-"Этот контакт в настоящее время заблокирован. Это может быть запланировано в "
+"Этот тренинг в настоящее время приостановлен. Он может быть запланирован в "
 "будущем."
 
 #: post-type/module-base.php:192
@@ -163,7 +164,7 @@ msgstr "Закрыто"
 #: post-type/module-base.php:193
 msgctxt "Training Status field description"
 msgid "This training is no longer going to happen."
-msgstr "Такого обучения больше не будет."
+msgstr "Этот тренинг больше не состоится."
 
 #: post-type/module-base.php:201
 msgid "Assigned To"
@@ -172,12 +173,11 @@ msgstr "Назначено"
 #: post-type/module-base.php:202
 msgid ""
 "Select the main person who is responsible for reporting on this training."
-msgstr ""
-"Выберите главного человека, который будет отчитываться об этом обучении."
+msgstr "Выберите главного ответственного за отчетность по этому тренингу."
 
 #: post-type/module-base.php:209
 msgid "Training Coach / Church Planter"
-msgstr "Тренер по обучению / Насадник церквей"
+msgstr "Тренер / Насадник церквей"
 
 #: post-type/module-base.php:210
 msgctxt "Optional Documentation"
@@ -186,9 +186,9 @@ msgid ""
 "be assigned to a training while multiple people can be coaches / church "
 "planters of this training."
 msgstr ""
-"Человек, который сажал и / или проводит эту тренировку. Только один человек "
-"может быть назначен на тренировку, в то время как несколько человек могут "
-"быть тренерами / организаторами этого тренинга."
+"Человек, который основал и/или проводит этот тренинг. Только один человек "
+"может быть назначен на тренинг, в то время как несколько человек могут быть "
+"тренерами / насадниками церквей этого тренинга."
 
 #: post-type/module-base.php:222
 msgid "Requires Update"
@@ -205,12 +205,12 @@ msgstr "Ссылка на сервис видеочата"
 
 #: post-type/module-base.php:236
 msgid "Notes"
-msgstr "Ноты"
+msgstr "Заметки"
 
 #: post-type/module-base.php:237
 msgctxt "Optional Documentation"
 msgid "Notes on when the trainings will happen"
-msgstr "Примечания о том, когда будут проводиться тренировки"
+msgstr "Заметки о том, когда будут проводиться тренинги"
 
 #: post-type/module-base.php:246 post-type/module-base.php:509
 msgid "Meeting Times"
@@ -218,7 +218,7 @@ msgstr "Время встреч"
 
 #: post-type/module-base.php:295 post-type/module-base.php:304
 msgid "Locations"
-msgstr "Локации"
+msgstr "Местоположения"
 
 #: post-type/module-base.php:296 post-type/module-base.php:305
 msgctxt "Optional Documentation"
@@ -231,16 +231,16 @@ msgstr "Адрес"
 
 #: post-type/module-base.php:333
 msgid "Parent Training"
-msgstr "Обучение родителей"
+msgstr "Родительский тренинг"
 
 #: post-type/module-base.php:334
 msgctxt "Optional Documentation"
 msgid "A training that launched this training."
-msgstr "Тренинг, с которого начался этот тренинг."
+msgstr "Тренинг, из которого возник этот тренинг."
 
 #: post-type/module-base.php:344
 msgid "Peer Training"
-msgstr "Равное обучение"
+msgstr "Связанный тренинг"
 
 #: post-type/module-base.php:345
 msgctxt "Optional Documentation"
@@ -248,23 +248,23 @@ msgid ""
 "A related training that isn't a parent/child in relationship. It might "
 "indicate trainings that collaborate, are about to merge, recently split, etc."
 msgstr ""
-"Связанное обучение, которое не связано с отношениями родитель / ребенок. Это "
-"может указывать на совместные тренинги, которые собираются объединиться, "
-"недавно разделены и т. Д."
+"Связанный тренинг, который не находится в отношениях родитель/дочерний. Это "
+"может указывать на тренинги, которые сотрудничают, собираются объединиться, "
+"недавно разделились и т. д."
 
 #: post-type/module-base.php:355
 msgid "Child Training"
-msgstr "Обучение детей"
+msgstr "Дочерний тренинг"
 
 #: post-type/module-base.php:356
 msgctxt "Optional Documentation"
 msgid "A training that has been birthed out of this training."
-msgstr "Тренинг, рожденный в результате этого тренинга."
+msgstr "Тренинг, который возник из этого тренинга."
 
 #: post-type/module-base.php:366 post-type/module-base.php:508
 #: post-type/module-base.php:542
 msgid "Member List"
-msgstr "Список членов"
+msgstr "Список участников"
 
 #: post-type/module-base.php:367
 msgctxt "Optional Documentation"
@@ -282,7 +282,7 @@ msgstr "Группы людей"
 #: post-type/module-base.php:388
 msgctxt "Optional Documentation"
 msgid "The people trainings represented by this training."
-msgstr "Тренинги людей представлены этим тренингом."
+msgstr "Группы людей, представленные этим тренингом."
 
 #: post-type/module-base.php:397
 msgid "Groups"
@@ -300,10 +300,10 @@ msgid ""
 "manually to included people who may not be in the system but are also "
 "members of the training."
 msgstr ""
-"Количество участников этого тренинга. Он будет автоматически обновляться при "
-"добавлении или удалении новых участников в списке участников. Измените этот "
-"номер вручную, чтобы включить людей, которые могут не быть в системе, но "
-"также являются участниками обучения."
+"Количество участников этого тренинга. Оно будет автоматически обновляться "
+"при добавлении или удалении участников в списке. Измените это число вручную, "
+"чтобы включить людей, которых нет в системе, но которые также являются "
+"участниками тренинга."
 
 #: post-type/module-base.php:416
 msgid "Leader Count"
@@ -311,7 +311,7 @@ msgstr "Количество лидеров"
 
 #: post-type/module-base.php:426
 msgid "Training as Leader"
-msgstr "Обучение в качестве лидера"
+msgstr "Тренинг в качестве лидера"
 
 #: post-type/module-base.php:427
 msgctxt "Optional Documentation"
@@ -320,7 +320,7 @@ msgstr "Руководитель тренинга"
 
 #: post-type/module-base.php:438
 msgid "Training as Participant"
-msgstr "Обучение в качестве участника"
+msgstr "Тренинг в качестве участника"
 
 #: post-type/module-base.php:439
 msgctxt "Optional Documentation"
@@ -329,11 +329,11 @@ msgstr "Участник тренинга."
 
 #: post-type/module-base.php:510
 msgid "Other"
-msgstr "разное"
+msgstr "Другое"
 
 #: post-type/module-base.php:545
 msgid "Create"
-msgstr "Создайте"
+msgstr "Создать"
 
 #: post-type/module-base.php:550
 msgid "Select"
@@ -355,29 +355,23 @@ msgid ""
 "to this training."
 msgstr ""
 "В поле «Список участников» введите имя существующего контакта, чтобы "
-"добавить его в это обучение."
+"добавить его в этот тренинг."
 
 #: post-type/module-base.php:573
 msgid "Close"
 msgstr "Закрыть"
 
 #: post-type/module-base.php:713
-#, fuzzy
-#| msgid "Removed %1$s: %2$s"
 msgid "Removed %1$s: {%2$s}"
-msgstr "Удалено %1$s: %2$s"
+msgstr "Удалено %1$s: {%2$s}"
 
 #: post-type/module-base.php:716
-#, fuzzy
-#| msgid "Added %1$s: %2$s"
 msgid "Added %1$s: {%2$s}"
-msgstr "Добавлен %1$s: %2$s"
+msgstr "Добавлено %1$s: {%2$s}"
 
 #: post-type/module-base.php:719
-#, fuzzy
-#| msgid "Updated %1$s: %2$s to %3$s"
 msgid "Updated %1$s: {%2$s} to {%3$s}"
-msgstr "Обновлено%1$s: %2$s до %3$s"
+msgstr "Обновлено %1$s: {%2$s} до {%3$s}"
 
 #: post-type/module-base.php:804
 msgctxt "List Filters"
@@ -404,7 +398,7 @@ msgstr "Всего групп"
 
 #: post-type/module-public-calendar.php:122
 msgid "Total Baptisms"
-msgstr "Полное крещение"
+msgstr "Всего крещений"
 
 #: post-type/module-public-calendar.php:123
 msgid "Countries"
@@ -412,7 +406,7 @@ msgstr "Страны"
 
 #: post-type/module-public-calendar.php:124
 msgid "States"
-msgstr "состояния"
+msgstr "Штаты"
 
 #: post-type/module-public-calendar.php:125
 msgid "Counties"
@@ -425,7 +419,7 @@ msgstr "Добавить"
 
 #: post-type/module-registration.php:31
 msgid "Magic Links"
-msgstr ""
+msgstr "Волшебные ссылки"
 
 #: post-type/module-registration.php:59
 msgid "copy link"
@@ -433,7 +427,7 @@ msgstr "копировать ссылку"
 
 #: post-type/module-registration.php:61
 msgid "edit form"
-msgstr "форма редактирования"
+msgstr "редактировать форму"
 
 #: post-type/module-registration.php:63
 msgid "report"
@@ -457,7 +451,7 @@ msgstr "открытая регистрация"
 
 #: post-type/module-registration.php:265
 msgid "add"
-msgstr "Добавить"
+msgstr "добавить"
 
 #: post-type/module-registration.php:266
 msgid "Use"
@@ -473,828 +467,24 @@ msgstr "Удалить местоположение"
 
 #: post-type/module-registration.php:269
 msgid "Open Mapping"
-msgstr "Открытое картографирование"
+msgstr "Открыть карту"
 
 #: post-type/module-registration.php:270
 msgid "clear"
-msgstr "Чисто"
+msgstr "очистить"
 
 #: post-type/module-registration.php:384
 msgid "Register for Training"
-msgstr "Зарегистрироваться на обучение"
+msgstr "Зарегистрироваться на тренинг"
 
 #: post-type/module-registration.php:386
 msgid "Join Training"
-msgstr "Присоединяйтесь к обучению"
+msgstr "Присоединиться к тренингу"
 
 #: post-type/module-registration.php:387
 msgid "Join in"
-msgstr "Присоединяйся"
+msgstr "Присоединиться"
 
 #: post-type/module-registration.php:700
 msgid "Clear"
 msgstr "Очистить"
-
-#~ msgid "Apps"
-#~ msgstr "Программы"
-
-#, fuzzy
-#~| msgid "Disciple Tools - Training"
-#~ msgid "Disciple.Tools - Training"
-#~ msgstr "Инструменты ученика - обучение"
-
-#~ msgid "https://github.com/DiscipleTools/disciple-tools-training"
-#~ msgstr "https://github.com/DiscipleTools/disciple-tools-training"
-
-#, fuzzy
-#~| msgid ""
-#~| "Disciple Tools Training Extension adds recording of trainings and cross "
-#~| "reference them with contacts, groups, and locations."
-#~ msgid ""
-#~ "Disciple.Tools Training Extension adds recording of trainings and cross "
-#~ "reference them with contacts, groups, and locations."
-#~ msgstr ""
-#~ "Расширение Disciple Tools Training Extension добавляет записи тренировок "
-#~ "и перекрестные ссылки на них с контактами, группами и местоположениями."
-
-#~ msgid "Whoah, partner!"
-#~ msgstr "Ого, партнер!"
-
-#~ msgid "Method does not exist."
-#~ msgstr "Метод не существует."
-
-#~ msgid "Dispatcher"
-#~ msgstr "Диспетчер"
-
-#~ msgid "Members"
-#~ msgstr "Члены"
-
-#~ msgid "Contacts"
-#~ msgstr "Контакты"
-
-#~ msgid "Coaches"
-#~ msgstr "Тренеры"
-
-#~ msgid "Planted by"
-#~ msgstr "Посажено"
-
-#~ msgid "Planting"
-#~ msgstr "Посадка"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid ""
-#~ "A useful way to training related items and can help training contacts "
-#~ "associated with noteworthy characteristics. e.g. business owner, sports "
-#~ "lover. The contacts can also be filtered using these tags."
-#~ msgstr ""
-#~ "Полезный способ обучения связанным предметам и может помочь в обучении "
-#~ "контактов, связанных с заслуживающими внимания характеристиками. например "
-#~ "Владелец бизнеса, любитель спорта. Контакты также можно фильтровать с "
-#~ "помощью этих тегов."
-
-#~ msgctxt "input field placeholder"
-#~ msgid "Search Users"
-#~ msgstr "Поиск пользователей"
-
-#~ msgctxt "Search 'something'"
-#~ msgid "Search %s"
-#~ msgstr "Искать%s"
-
-#~ msgid "Extensions (DT)"
-#~ msgstr "Расширения (DT)"
-
-#~ msgid "Network Dashboard"
-#~ msgstr "Сетевая панель"
-
-#~ msgid "You do not have sufficient permissions to access this page."
-#~ msgstr "У вас недостаточно прав для доступа к этой странице."
-
-#~ msgid "nav-tab-active"
-#~ msgstr "nav-tab-active"
-
-#~ msgid "Network Dashboard Viewer"
-#~ msgstr "Средство просмотра сетевой панели мониторинга"
-
-#~ msgid "ID"
-#~ msgstr "Я БЫ"
-
-#~ msgid "Site"
-#~ msgstr "Сайт"
-
-#~ msgid "Users"
-#~ msgstr "Пользователи"
-
-#~ msgid "Timestamp"
-#~ msgstr "Отметка времени"
-
-#~ msgid "Visit"
-#~ msgstr "Визит"
-
-#~ msgid "View"
-#~ msgstr "Посмотреть"
-
-#~ msgid "Active Snapshot"
-#~ msgstr "Активный снимок"
-
-#~ msgid "Generations"
-#~ msgstr "Поколения"
-
-#~ msgid "Follow-up Funnel"
-#~ msgstr "Последующая воронка"
-
-#~ msgid "On-Going Meetings"
-#~ msgstr "Текущие встречи"
-
-#~ msgid "Coaching"
-#~ msgstr "Коучинг"
-
-#~ msgid "Baptized"
-#~ msgstr "Крестился"
-
-#~ msgid "Active Groups"
-#~ msgstr "Активные группы"
-
-#~ msgid "Church"
-#~ msgstr "Церковь"
-
-#~ msgid "Health Metrics"
-#~ msgstr "Показатели здоровья"
-
-#~ msgid "Total Users"
-#~ msgstr "Всего пользователей"
-
-#~ msgid "Responders"
-#~ msgstr "Ответчики"
-
-#~ msgid "Dispatchers"
-#~ msgstr "Диспетчеры"
-
-#~ msgid "Multipliers"
-#~ msgstr "Множители"
-
-#~ msgid "Admins"
-#~ msgstr "Админы"
-
-#~ msgid "User Login Activity"
-#~ msgstr "Активность пользователя при входе"
-
-#~ msgid "Users Active in the Last 30 Days"
-#~ msgstr "Пользователи, активные за последние 30 дней"
-
-#~ msgid "Practicing"
-#~ msgstr "Практика"
-
-#~ msgid "Not Practicing"
-#~ msgstr "Не практикуется"
-
-#~ msgid "Chart Funnel"
-#~ msgstr "Воронка диаграммы"
-
-#~ msgid "Contact"
-#~ msgstr "Связаться с нами"
-
-#~ msgid "Group"
-#~ msgstr "Группа"
-
-#~ msgid "User"
-#~ msgstr "Пользователь"
-
-#~ msgid "Sites"
-#~ msgstr "Места"
-
-#~ msgid "Baptisms"
-#~ msgstr "Крещения"
-
-#~ msgid "Churches"
-#~ msgstr "Церкви"
-
-#~ msgid "Location"
-#~ msgstr "Расположение"
-
-#~ msgid "Types"
-#~ msgstr "Типы"
-
-#~ msgid "modify filter"
-#~ msgstr "изменить фильтр"
-
-#~ msgid "Filter List"
-#~ msgstr "Список фильтров"
-
-#~ msgid "reset data"
-#~ msgstr "сбросить данные"
-
-#~ msgid "Status"
-#~ msgstr "Положение дел"
-
-#~ msgid "Status - All"
-#~ msgstr "Статус - Все"
-
-#~ msgid "Zoom Level"
-#~ msgstr "Уровень масштабирования"
-
-#~ msgid "Auto Zoom"
-#~ msgstr "Авто зум"
-
-#~ msgid "World"
-#~ msgstr "Мир"
-
-#~ msgid "Country"
-#~ msgstr "Страна"
-
-#~ msgid "State"
-#~ msgstr "состояние"
-
-#~ msgid "Active Contacts"
-#~ msgstr "Активные контакты"
-
-#~ msgid "Paused Contacts"
-#~ msgstr "Приостановленные контакты"
-
-#~ msgid "Closed Contacts"
-#~ msgstr "Закрытые контакты"
-
-#~ msgid "Total Contacts"
-#~ msgstr "Всего контактов"
-
-#~ msgid "New Contacts"
-#~ msgstr "Новые контакты"
-
-#~ msgid "New Baptisms"
-#~ msgstr "Новые крещения"
-
-#~ msgid "Baptism Generations"
-#~ msgstr "Крещение Поколения"
-
-#~ msgid "Select Location"
-#~ msgstr "Выберите место"
-
-#~ msgid "New Groups"
-#~ msgstr "Новые группы"
-
-#~ msgid "Pre-Group"
-#~ msgstr "Предварительная группа"
-
-#~ msgid "Pre-Groups"
-#~ msgstr "Предварительные группы"
-
-#~ msgid "Last 7 Days"
-#~ msgstr "Последние 7 дней"
-
-#~ msgid "Last 30 Days"
-#~ msgstr "Последние 30 дней"
-
-#~ msgid "Last 60 Days"
-#~ msgstr "Последние 60 дней"
-
-#~ msgid "Last 12 Months"
-#~ msgstr "Последние 12 месяцев"
-
-#~ msgid "Last 24 Months"
-#~ msgstr "Последние 24 месяца"
-
-#~ msgid "This Year"
-#~ msgstr "В этом году"
-
-#~ msgid "Activity Map"
-#~ msgstr "Карта деятельности"
-
-#~ msgid "Stats"
-#~ msgstr "Статистика"
-
-#~ msgid "Activities"
-#~ msgstr "мероприятия"
-
-#~ msgid "Actions"
-#~ msgstr "Действия"
-
-#~ msgid "By Action Type"
-#~ msgstr "По типу действия"
-
-#~ msgid "Key"
-#~ msgstr "Ключ"
-
-#~ msgid "Name"
-#~ msgstr "имя"
-
-#~ msgid "Total Activities"
-#~ msgstr "Всего мероприятий"
-
-#~ msgid "Feed"
-#~ msgstr "Подача"
-
-#~ msgid "Time"
-#~ msgstr "Время"
-
-#~ msgid "Result Limit"
-#~ msgstr "Предел результата"
-
-#~ msgid "uncheck"
-#~ msgstr "снимите отметку"
-
-#~ msgid "Home"
-#~ msgstr "Главная"
-
-#~ msgid "Events (30 Days)"
-#~ msgstr "События (30 дней)"
-
-#~ msgid "All Active/Inactive"
-#~ msgstr "Все активные / неактивные"
-
-#~ msgid "Hover Map"
-#~ msgstr "Карта наведения"
-
-#~ msgid "Network"
-#~ msgstr "Сеть"
-
-#~ msgid "Map"
-#~ msgstr "карта"
-
-#~ msgid "Log"
-#~ msgstr "Журнал"
-
-#~ msgid "Activity"
-#~ msgstr "Деятельность"
-
-#~ msgid "Area Maps"
-#~ msgstr "Карты местности"
-
-#~ msgid "Location List"
-#~ msgstr "Список мест"
-
-#~ msgid "Maps"
-#~ msgstr "Карты"
-
-#~ msgid "Site Reports"
-#~ msgstr "Отчеты по сайту"
-
-#~ msgid "Statistics"
-#~ msgstr "Статистика"
-
-#~ msgid "Network Dashboard Transfer Both Ways"
-#~ msgstr "Сетевая панель передачи данных в обоих направлениях"
-
-#~ msgid "Network Dashboard Receiving Only"
-#~ msgstr "Только прием с сетевой панели инструментов"
-
-#~ msgid "Network Dashboard Sending Only"
-#~ msgstr "Только отправка с сетевой панели инструментов"
-
-#~ msgid "Network Dashboard Site Profile"
-#~ msgstr "Профиль сайта сетевой панели управления"
-
-#~ msgid "Disciple Tools - Network Dashboard"
-#~ msgstr "Инструменты ученика - Сетевая панель управления"
-
-#~ msgid "Streams"
-#~ msgstr "Потоки"
-
-#~ msgid "Stream Maps"
-#~ msgstr "Карты потоков"
-
-#~ msgid "Streams Maps"
-#~ msgstr "Карты потоков"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid ""
-#~ "A useful way to stream related items and can help stream contacts "
-#~ "associated with noteworthy characteristics. e.g. business owner, sports "
-#~ "lover. The contacts can also be filtered using these tags."
-#~ msgstr ""
-#~ "Полезный способ потоковой передачи связанных элементов и может помочь в "
-#~ "потоковой передаче контактов, связанных с заслуживающими внимания "
-#~ "характеристиками. например Владелец бизнеса, любитель спорта. Контакты "
-#~ "также можно фильтровать с помощью этих тегов."
-
-#~ msgctxt "Stream Status label"
-#~ msgid "New"
-#~ msgstr "Новый"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "New stream added to the system"
-#~ msgstr "В систему добавлен новый поток"
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Model"
-#~ msgstr "Модель"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "This stream has been proposed and is in initial conversations"
-#~ msgstr "Этот поток был предложен и находится в предварительном обсуждении"
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Assist"
-#~ msgstr "Помощь"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "This stream is confirmed, on the calendar."
-#~ msgstr "Этот поток подтвержден в календаре."
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Watch"
-#~ msgstr "Часы"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "This stream is confirmed, on the calendar, or currently active."
-#~ msgstr "Этот поток подтвержден, в календаре или активен в данный момент."
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Leave"
-#~ msgstr "Покинуть"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "This stream has successfully completed"
-#~ msgstr "Этот поток успешно завершен"
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Paused"
-#~ msgstr "Приостановлено"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid ""
-#~ "This contact is currently on hold. It has potential of getting scheduled "
-#~ "in the future."
-#~ msgstr ""
-#~ "Этот контакт в настоящее время заблокирован. Это может быть запланировано "
-#~ "в будущем."
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Closed"
-#~ msgstr "Закрыто"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "This stream is no longer going to happen."
-#~ msgstr "Этого стрима больше не будет."
-
-#~ msgid ""
-#~ "Select the main person who is responsible for reporting on this stream."
-#~ msgstr ""
-#~ "Выберите главного человека, ответственного за отчетность в этой ленте."
-
-#~ msgctxt "Optional Documentation"
-#~ msgid ""
-#~ "The person who planted and/or is coaching this stream. Only one person "
-#~ "can be assigned to a stream while multiple people can be coaches / church "
-#~ "planters of this stream."
-#~ msgstr ""
-#~ "Человек, который посадил и / или тренирует этот поток. Только один "
-#~ "человек может быть назначен на поток, в то время как несколько человек "
-#~ "могут быть тренерами / организаторами церквей этого потока."
-
-#~ msgctxt "Optional Documentation"
-#~ msgid "The people streams represented by this stream."
-#~ msgstr "Потоки людей, представленные этим потоком."
-
-#~ msgid "Parent Stream"
-#~ msgstr "Родительский поток"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid "A stream that launched this stream."
-#~ msgstr "Поток, запустивший этот поток."
-
-#~ msgid "Peer Streams"
-#~ msgstr "Одноранговые потоки"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid ""
-#~ "A related stream that isn't a parent/child in relationship. It might "
-#~ "indicate streams that collaborate, are about to merge, recently split, "
-#~ "etc."
-#~ msgstr ""
-#~ "Связанный поток, который не находится в отношениях между родителями и "
-#~ "потомками. Это может указывать на потоки, которые сотрудничают, "
-#~ "собираются объединиться, недавно разделены и т. Д."
-
-#~ msgid "Child Streams"
-#~ msgstr "Дочерние потоки"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid "A stream that has been birthed out of this stream."
-#~ msgstr "Поток, рожденный из этого потока."
-
-#~ msgid "Leader in Stream"
-#~ msgstr "Лидер в потоке"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid "Leader of a stream"
-#~ msgstr "Лидер потока"
-
-#~ msgid "Key Disciple in Stream"
-#~ msgstr "Ключевой ученик в потоке"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid "Disciple in a stream."
-#~ msgstr "Ученик в потоке."
-
-#~ msgid "Connections"
-#~ msgstr "Подключения"
-
-#~ msgid "Add Report"
-#~ msgstr "Добавить отчет"
-
-#~ msgid "Disciple Tools - Streams"
-#~ msgstr "Инструменты ученика - потоки"
-
-#~ msgid "Pre-Group Generations"
-#~ msgstr "Предгрупповые поколения"
-
-#~ msgid "Group Generations"
-#~ msgstr "Групповые поколения"
-
-#~ msgid "Church Generations"
-#~ msgstr "Поколения церкви"
-
-#~ msgid "Team Generations"
-#~ msgstr "Поколения команд"
-
-#~ msgid "%s is reporting a new pre-group generation."
-#~ msgstr "%s сообщает о новом предгрупповом поколении."
-
-#~ msgid "%s is reporting a new group generation."
-#~ msgstr "%s сообщает о новом поколении группы."
-
-#~ msgid "%s is reporting a new church generation."
-#~ msgstr "%s сообщает о новом церковном поколении."
-
-#~ msgid "%s is reporting a new leadership team generation."
-#~ msgstr "%s сообщает о новом поколении команды лидеров."
-
-#~ msgid "New Contact"
-#~ msgstr "Новый контакт"
-
-#~ msgid "New Pre-Group"
-#~ msgstr "Новая предварительная группа"
-
-#~ msgid "New Group"
-#~ msgstr "Новая группа"
-
-#~ msgid "New Church"
-#~ msgstr "Новая Церковь"
-
-#~ msgid "New Team"
-#~ msgstr "Новая команда"
-
-#~ msgid "New Baptism"
-#~ msgstr "Новое крещение"
-
-#~ msgid "New Coaching"
-#~ msgstr "Новый коучинг"
-
-#~ msgid "%s is reporting a new contact."
-#~ msgstr "%s сообщает о новом контакте."
-
-#~ msgid "%s is reporting a new pre-group formed."
-#~ msgstr "%s сообщает о формировании новой предварительной группы."
-
-#~ msgid "%s is reporting a new group formed."
-#~ msgstr "%s сообщает о создании новой группы."
-
-#~ msgid "%s is reporting a new church."
-#~ msgstr "%s сообщает о новой церкви."
-
-#~ msgid "%s is reporting a new leadership team formed."
-#~ msgstr "%s сообщает о формировании новой команды руководителей."
-
-#~ msgid "%s is reporting a new baptism."
-#~ msgstr "%s сообщает о новом крещении."
-
-#~ msgid "%s is reporting an coaching relationship."
-#~ msgstr "%s сообщает о наставнических отношениях."
-
-#~ msgid "Active"
-#~ msgstr "Активный"
-
-#~ msgid "Paused"
-#~ msgstr "Приостановлено"
-
-#~ msgid "Closed"
-#~ msgstr "Закрыто"
-
-#~ msgid "Inactive"
-#~ msgstr "Неактивный"
-
-#~ msgid "https://github.com/DiscipleTools/disciple-tools-network-dashboard"
-#~ msgstr "https://github.com/DiscipleTools/disciple-tools-network-dashboard"
-
-#~ msgid ""
-#~ "Connect this Disciple Tools site to a larger network of sites. Adds "
-#~ "security sensitive totals, mapping, activity logging."
-#~ msgstr ""
-#~ "Подключите этот сайт Disciple Tools к более крупной сети сайтов. "
-#~ "Добавляет чувствительные к безопасности итоги, отображение, ведение "
-#~ "журнала активности."
-
-#~ msgid "https://github.com/DiscipleTools"
-#~ msgstr "https://github.com/DiscipleTools"
-
-#~ msgid "https://github.com/DiscipleTools/disciple-tools-streams"
-#~ msgstr "https://github.com/DiscipleTools/disciple-tools-streams"
-
-#~ msgid ""
-#~ "Disciple Tools Streams Extension adds recording of streams and cross "
-#~ "reference them with contacts, groups, and locations."
-#~ msgstr ""
-#~ "Расширение Disciple Tools Streams Extension добавляет запись потоков и "
-#~ "перекрестные ссылки на них с контактами, группами и местоположениями."
-
-#~ msgid ""
-#~ "'Disciple Tools - Training' plugin requires 'Disciple Tools' theme to "
-#~ "work. Please activate 'Disciple Tools' theme or make sure it is latest "
-#~ "version."
-#~ msgstr ""
-#~ "Для работы плагина Disciple Tools - Training требуется тема Disciple "
-#~ "Tools. Пожалуйста, активируйте тему «Disciple Tools» или убедитесь, что "
-#~ "это последняя версия."
-
-#~ msgid "Current Disciple Tools version: %1$s, required version: %2$s"
-#~ msgstr "Текущая версия Disciple Tools: %1$s, необходимая версия: %2$s"
-
-#~ msgid "Duplicates"
-#~ msgstr "Дубликаты"
-
-#~ msgid "Coach"
-#~ msgstr "Тренер"
-
-#~ msgid "Leaders Total"
-#~ msgstr "Всего лидеров"
-
-#~ msgid "Disciples Total"
-#~ msgstr "Всего учеников"
-
-#~ msgid "Key Disciples"
-#~ msgstr "Ключевые ученики"
-
-#~ msgid "Groups Total"
-#~ msgstr "Всего групп"
-
-#~ msgid "Trainings Total"
-#~ msgstr "Всего тренировок"
-
-#~ msgid "Dashboard Plugin"
-#~ msgstr "Плагин Dashboard"
-
-#~ msgid "Dashboard"
-#~ msgstr "Приборная доска"
-
-#~ msgid "%s days since last update"
-#~ msgstr "%s дней с момента последнего обновления"
-
-#~ msgid "Accept"
-#~ msgstr "Принять"
-
-#~ msgid "Decline"
-#~ msgstr "Отказаться"
-
-#~ msgid "# Contacts Assigned"
-#~ msgstr "Назначено # контактов"
-
-#~ msgid "# First Meetings"
-#~ msgstr "# Первые встречи"
-
-#~ msgid "# Faith milestones"
-#~ msgstr "# Вехи веры"
-
-#~ msgid "Hurray! You are caught up."
-#~ msgstr "Ура! Вы попались."
-
-#~ msgid "remove"
-#~ msgstr "удалять"
-
-#~ msgid "mark as complete"
-#~ msgstr "отметить как завершенный"
-
-#~ msgid "No task created"
-#~ msgstr "Задача не создана"
-
-#~ msgid "Reminder"
-#~ msgstr "Напоминание"
-
-#~ msgid "No note set"
-#~ msgstr "Примечание не установлено"
-
-#~ msgid "Add a contact"
-#~ msgstr "Добавить контакт"
-
-#~ msgid "View Contacts List"
-#~ msgstr "Посмотреть список контактов"
-
-#~ msgid "Pending Contacts"
-#~ msgstr "Ожидающие контакты"
-
-#~ msgid "View All"
-#~ msgstr "Посмотреть все"
-
-#~ msgid "Update Needed"
-#~ msgstr "Требуется обновление"
-
-#~ msgid "Contact Workload"
-#~ msgstr "Контактная рабочая нагрузка"
-
-#~ msgid ""
-#~ "Choose an option to let the dispatcher(s) know if you are ready for new "
-#~ "contacts"
-#~ msgstr ""
-#~ "Выберите вариант, чтобы диспетчер (ы) знал, готовы ли вы к новым контактам"
-
-#~ msgid "Set travel or dates unavailable"
-#~ msgstr "Установить поездку или даты недоступны"
-
-#~ msgid "Personal Benchmarks"
-#~ msgstr "Личные тесты"
-
-#~ msgid "Faith Milestone Totals"
-#~ msgstr "Итоги вехи веры"
-
-#~ msgid "Milestones on your active contacts"
-#~ msgstr "Вехи ваших активных контактов"
-
-#~ msgid "Seeker Path Progress"
-#~ msgstr "Прогресс Пути Искателя"
-
-#~ msgid "No data to show yet. You have no active contacts"
-#~ msgstr "Нет данных для отображения. У вас нет активных контактов"
-
-#~ msgid "Disciple Tools - Dashboard"
-#~ msgstr "Инструменты ученика - Панель управления"
-
-#~ msgid "https://github.com/DiscipleTools/disciple-tools-dashboard"
-#~ msgstr "https://github.com/DiscipleTools/disciple-tools-dashboard"
-
-#~ msgid ""
-#~ "The multiplier dashboard upgrades the multipliers experience as soon as "
-#~ "they log into the system giving them a landing page with stats."
-#~ msgstr ""
-#~ "Панель управления множителями обновляет опыт множителей, как только они "
-#~ "входят в систему, предоставляя им целевую страницу со статистикой."
-
-#~ msgid "Reason Assigned To"
-#~ msgstr "Причина присвоения"
-
-#~ msgid "Follow-Up"
-#~ msgstr "Следовать за"
-
-#~ msgid "Digital Response"
-#~ msgstr "Цифровой ответ"
-
-#~ msgid "Dispatch"
-#~ msgstr "Отправка"
-
-#~ msgid "No Answer"
-#~ msgstr "Нет ответа"
-
-#~ msgid "Talked"
-#~ msgstr "Говорили"
-
-#~ msgid "Scheduled"
-#~ msgstr "Запланированное"
-
-#~ msgid "Complete"
-#~ msgstr "Завершить"
-
-#~ msgid "No-Show"
-#~ msgstr "Неявка"
-
-#~ msgid "No permission"
-#~ msgstr "Отсутствует разрешение"
-
-#~ msgid "All"
-#~ msgstr "Все"
-
-#~ msgid "Ready"
-#~ msgstr "готов"
-
-#~ msgid "Recent"
-#~ msgstr "Недавние"
-
-#~ msgid "Assign"
-#~ msgstr "Назначить"
-
-#~ msgid "Choose an option:"
-#~ msgstr "Выберите опцию:"
-
-#~ msgid "Cancel"
-#~ msgstr "отменить"
-
-#~ msgid "Assign For"
-#~ msgstr "Назначить для"
-
-#~ msgid "Search"
-#~ msgstr "Поиск"
-
-#~ msgid "Claim for follow-up"
-#~ msgstr "Заявление о последующих действиях"
-
-#~ msgid "Ready for Dispatch"
-#~ msgstr "Готов к отправке"
-
-#~ msgid "Disciple Tools - Advanced M2M Tiles"
-#~ msgstr "Инструменты ученика - Расширенные плитки M2M"
-
-#~ msgid "https://github.com/DiscipleTools/disciple-tools-advanced-m2m-tiles"
-#~ msgstr "https://github.com/DiscipleTools/disciple-tools-advanced-m2m-tiles"
-
-#~ msgid ""
-#~ "Disciple Tools - Advanced M2M Tiles adds specific supporting tiles for "
-#~ "different roles."
-#~ msgstr ""
-#~ "Инструменты ученика - Advanced M2M Tiles добавляет определенные "
-#~ "вспомогательные плитки для разных ролей."

@@ -26,36 +26,31 @@ msgstr "သင်တန်းမြေပုံ"
 
 #: network/network-dashboard-integration.php:44
 msgid "New Training"
-msgstr ""
+msgstr "သင်တန်းအသစ်"
 
 #: network/network-dashboard-integration.php:50
 msgid "Training Started"
-msgstr ""
+msgstr "သင်တန်းစတင်ပြီ"
 
 #: network/network-dashboard-integration.php:56
 msgid "Training Completed"
-msgstr ""
+msgstr "သင်တန်းပြီးဆုံးပြီ"
 
 #: post-type/module-base.php:28 post-type/module-base.php:495
 msgid "Training"
-msgstr "လေ့ကျင့်ရေး"
+msgstr "သင်တန်း"
 
 #: post-type/module-base.php:70
-#, fuzzy
-#| msgid "Trainings"
 msgid "Trainings Admin"
-msgstr "သင်တန်းများ"
+msgstr "သင်တန်းအုပ်ချုပ်ရေးမှူး"
 
 #: post-type/module-base.php:71
-#, fuzzy
-#| msgctxt "Optional Documentation"
-#| msgid "Leader of a training"
 msgid "Admin access to all trainings"
-msgstr "သင်တန်း၏ခေါင်းဆောင်"
+msgstr "သင်တန်းအားလုံးကိုအုပ်ချုပ်ရေးအဖြစ်ဝင်ရောက်ခွင့်"
 
 #: post-type/module-base.php:76
 msgid "Multiplier"
-msgstr "မြှောက်ကိန်း"
+msgstr "မြှောက်သူ"
 
 #: post-type/module-base.php:83
 msgid "Disciple.Tools Admin"
@@ -67,21 +62,21 @@ msgstr "အုပ်ချုပ်ရေးမှူး"
 
 #: post-type/module-base.php:127
 msgid "Tags"
-msgstr "အမှတ်အသားများ (Tags)"
+msgstr "အမှတ်အသားများ"
 
 #: post-type/module-base.php:128
 msgctxt "Optional Documentation"
 msgid ""
 "A useful way to group related items and can be used to filter the records"
-msgstr ""
+msgstr "ဆက်စပ်အရာများကိုအုပ်စုဖွဲ့ရန်အသုံးဝင်သောနည်းလမ်းဖြစ်ပြီး မှတ်တမ်းများကိုစစ်ထုတ်ရန်အသုံးပြုနိုင်သည်"
 
 #: post-type/module-base.php:135
 msgid "Follow"
-msgstr "နောက်လိုက်ပါ"
+msgstr "စောင့်ကြည့်ပါ"
 
 #: post-type/module-base.php:142
 msgid "Un-Follow"
-msgstr "လိုက်နာရန်မ"
+msgstr "စောင့်ကြည့်မှုရပ်ပါ"
 
 #: post-type/module-base.php:148
 msgid "Tasks"
@@ -95,17 +90,17 @@ msgstr "အသစ်"
 #: post-type/module-base.php:163
 msgctxt "Training Status field description"
 msgid "New training added to the system"
-msgstr "နယူးလေ့ကျင့်ရေးစနစ်ကဆက်ပြောသည်"
+msgstr "စနစ်သို့သင်တန်းအသစ်ထည့်သွင်းပြီး"
 
 #: post-type/module-base.php:167
 msgctxt "Training Status label"
 msgid "Proposed"
-msgstr "အဆိုတင်သွင်း"
+msgstr "အဆိုပြုထားသည်"
 
 #: post-type/module-base.php:168
 msgctxt "Training Status field description"
 msgid "This training has been proposed and is in initial conversations"
-msgstr "ဒီလေ့ကျင့်ရေးအဆိုပြုထားနှင့်ကန ဦး စကားပြောဆိုမှုများအတွက်ဖြစ်ပါတယ်ခဲ့တာဖြစ်ပါတယ်"
+msgstr "ဤသင်တန်းကိုအဆိုပြုထားပြီး ကနဦးဆွေးနွေးမှုများတွင်ရှိနေသည်"
 
 #: post-type/module-base.php:172
 msgctxt "Training Status label"
@@ -115,62 +110,62 @@ msgstr "စီစဉ်ထားသည်"
 #: post-type/module-base.php:173
 msgctxt "Training Status field description"
 msgid "This training is confirmed, on the calendar."
-msgstr "ဒီလေ့ကျင့်ရေးပြက္ခဒိန်အပေါ်အတည်ပြုခဲ့သည်။"
+msgstr "ဤသင်တန်းကိုအတည်ပြုပြီး ပြက္ခဒိန်တွင်ထည့်သွင်းထားသည်။"
 
 #: post-type/module-base.php:177
 msgctxt "Training Status label"
 msgid "In Progress"
-msgstr "ဆောင်ရွက်ဆဲဖြစ်သည်"
+msgstr "ဆောင်ရွက်ဆဲ"
 
 #: post-type/module-base.php:178
 msgctxt "Training Status field description"
 msgid "This training is confirmed, on the calendar, or currently active."
-msgstr "ဒီလေ့ကျင့်မှုကိုပြက္ခဒိန်တွင်အတည်ပြုပြီးဖြစ်သည်သို့မဟုတ်လက်ရှိတက်ကြွနေသည်။"
+msgstr "ဤသင်တန်းကိုအတည်ပြုပြီး ပြက္ခဒိန်တွင်ထည့်သွင်းထားသည် သို့မဟုတ် လက်ရှိလုပ်ဆောင်နေသည်။"
 
 #: post-type/module-base.php:182
 msgctxt "Training Status label"
 msgid "Complete"
-msgstr "ပြီးပြည့်စုံ"
+msgstr "ပြီးဆုံးသည်"
 
 #: post-type/module-base.php:183
 msgctxt "Training Status field description"
 msgid "This training has successfully completed"
-msgstr "ဒီသင်တန်းကိုအောင်မြင်စွာပြီးဆုံးပြီ"
+msgstr "ဤသင်တန်းကိုအောင်မြင်စွာပြီးဆုံးပြီ"
 
 #: post-type/module-base.php:187
 msgctxt "Training Status label"
 msgid "Paused"
-msgstr "ဆိုင်းငံ့မှု"
+msgstr "ဆိုင်းငံ့ထားသည်"
 
 #: post-type/module-base.php:188
 msgctxt "Training Status field description"
 msgid ""
 "This contact is currently on hold. It has potential of getting scheduled in "
 "the future."
-msgstr "ဒီအဆက်အသွယ်လက်ရှိဆိုင်းငံ့ထားသည် ဒါဟာအနာဂတ်မှာစီစဉ်ထားတဲ့၏အလားအလာရှိပါတယ်။"
+msgstr "ဤသင်တန်းကိုလက်ရှိဆိုင်းငံ့ထားသည်။ အနာဂတ်တွင်စီစဉ်နိုင်သည့်အလားအလာရှိသည်။"
 
 #: post-type/module-base.php:192
 msgctxt "Training Status label"
 msgid "Closed"
-msgstr "ပိတ်သိမ်း"
+msgstr "ပိတ်သိမ်းပြီး"
 
 #: post-type/module-base.php:193
 msgctxt "Training Status field description"
 msgid "This training is no longer going to happen."
-msgstr "ဒီလေ့ကျင့်မှုဟာဖြစ်လာတော့မှာမဟုတ်ဘူး။"
+msgstr "ဤသင်တန်းကိုဆက်လက်မကျင်းပတော့ပါ။"
 
 #: post-type/module-base.php:201
 msgid "Assigned To"
-msgstr "Assigned To"
+msgstr "တာဝန်ပေးထားသူ"
 
 #: post-type/module-base.php:202
 msgid ""
 "Select the main person who is responsible for reporting on this training."
-msgstr "ဒီသင်တန်းကိုအကြောင်းကြားရန်တာဝန်ရှိသူအဓိကပုဂ္ဂိုလ်ကိုရွေးချယ်ပါ။"
+msgstr "ဤသင်တန်းအကြောင်းအစီရင်ခံရန်တာဝန်ရှိသောအဓိကပုဂ္ဂိုလ်ကိုရွေးချယ်ပါ။"
 
 #: post-type/module-base.php:209
 msgid "Training Coach / Church Planter"
-msgstr "လေ့ကျင့်ရေးနည်းပြ / ဘုရားကျောင်း"
+msgstr "သင်တန်းနည်းပြ / အသင်းတော်စိုက်ပျိုးသူ"
 
 #: post-type/module-base.php:210
 msgctxt "Optional Documentation"
@@ -179,12 +174,12 @@ msgid ""
 "be assigned to a training while multiple people can be coaches / church "
 "planters of this training."
 msgstr ""
-"ဒီသင်တန်းကိုစိုက်သူ / သူနည်းပြသူ။ လူတစ် ဦး တည်းကိုသာဤသင်တန်း၏နည်းပြများ / "
-"ဘုရားရှိခိုးကျောင်းစိုက်ပျိုးနိုင်ပါတယ်နေစဉ်လူတစ် ဦး တည်းသာလေ့ကျင့်ရေးတာဝန်ပေးအပ်နိုင်ပါသည်။"
+"ဤသင်တန်းကိုစိုက်ပျိုးသူနှင့်/သို့မဟုတ် နည်းပြပေးနေသူ။ သင်တန်းတစ်ခုကိုလူတစ်ဦးသာတာဝန်ပေးနိုင်သော်လည်း နည်းပြများ/"
+"အသင်းတော်စိုက်ပျိုးသူများအနေဖြင့်လူအများပါဝင်နိုင်သည်။"
 
 #: post-type/module-base.php:222
 msgid "Requires Update"
-msgstr "အဆင့်မြှင့်ရန်လိုအပ်သည်"
+msgstr "အပ်ဒိတ်လိုအပ်သည်"
 
 #: post-type/module-base.php:228
 msgid "Video Link"
@@ -193,7 +188,7 @@ msgstr "ဗီဒီယိုလင့်ခ်"
 #: post-type/module-base.php:229
 msgctxt "Optional Documentation"
 msgid "Link to video chat service"
-msgstr "ဗီဒီယိုချက်တင်ဝန်ဆောင်မှုနှင့်ချိတ်ဆက်ပါ"
+msgstr "ဗီဒီယိုချတ်ဝန်ဆောင်မှုလင့်ခ်"
 
 #: post-type/module-base.php:236
 msgid "Notes"
@@ -202,11 +197,11 @@ msgstr "မှတ်စုများ"
 #: post-type/module-base.php:237
 msgctxt "Optional Documentation"
 msgid "Notes on when the trainings will happen"
-msgstr "သင်တန်းများမည်သည့်အချိန်တွင်ဖြစ်ပျက်မည်ကိုမှတ်သားပါ"
+msgstr "သင်တန်းများမည်သည့်အချိန်ကျင်းပမည်ကိုမှတ်စုများ"
 
 #: post-type/module-base.php:246 post-type/module-base.php:509
 msgid "Meeting Times"
-msgstr "အစည်းအဝေးကျင်းပ"
+msgstr "အစည်းအဝေးအချိန်များ"
 
 #: post-type/module-base.php:295 post-type/module-base.php:304
 msgid "Locations"
@@ -215,7 +210,7 @@ msgstr "တည်နေရာများ"
 #: post-type/module-base.php:296 post-type/module-base.php:305
 msgctxt "Optional Documentation"
 msgid "The general location where this contact is located."
-msgstr "ဒီအဆက်အသွယ်တည်ရှိရာအထွေထွေတည်နေရာ။"
+msgstr "ဤအဆက်အသွယ်တည်ရှိသောအထွေထွေတည်နေရာ။"
 
 #: post-type/module-base.php:313
 msgid "Address"
@@ -223,42 +218,44 @@ msgstr "လိပ်စာ"
 
 #: post-type/module-base.php:333
 msgid "Parent Training"
-msgstr "မိဘလေ့ကျင့်ရေး"
+msgstr "မူလသင်တန်း"
 
 #: post-type/module-base.php:334
 msgctxt "Optional Documentation"
 msgid "A training that launched this training."
-msgstr "ဒီသင်တန်းကိုစတင်ခဲ့တဲ့သင်တန်းတစ်ခု"
+msgstr "ဤသင်တန်းကိုစတင်ခဲ့သောသင်တန်း။"
 
 #: post-type/module-base.php:344
 msgid "Peer Training"
-msgstr "ရွယ်တူသင်တန်းပေးခြင်း"
+msgstr "အဆင့်တူသင်တန်း"
 
 #: post-type/module-base.php:345
 msgctxt "Optional Documentation"
 msgid ""
 "A related training that isn't a parent/child in relationship. It might "
 "indicate trainings that collaborate, are about to merge, recently split, etc."
-msgstr "မိဘ / ကလေးမဟုတ်သောဆက်နွယ်သည့်လေ့ကျင့်မှု။ ၎င်းသည်ပူးပေါင်းပါ ၀ င်မည့်သင်တန်းများ၊"
+msgstr ""
+"မူလ/ဆင်းသက်ဆက်နွယ်မှုမဟုတ်သောဆက်စပ်သင်တန်း။ ပူးပေါင်းဆောင်ရွက်သော၊ ပေါင်းစည်းတော့မည့်၊ "
+"မကြာသေးမီခွဲထွက်ခဲ့သောသင်တန်းများဖြစ်နိုင်သည်။"
 
 #: post-type/module-base.php:355
 msgid "Child Training"
-msgstr "ကလေးလေ့ကျင့်ရေး"
+msgstr "ဆင်းသက်သင်တန်း"
 
 #: post-type/module-base.php:356
 msgctxt "Optional Documentation"
 msgid "A training that has been birthed out of this training."
-msgstr "ဒီလေ့ကျင့်ရေးထဲက birthed ခဲ့ပြီးတစ် ဦး ကလေ့ကျင့်ရေး။"
+msgstr "ဤသင်တန်းမှပေါက်ဖွားလာသောသင်တန်း။"
 
 #: post-type/module-base.php:366 post-type/module-base.php:508
 #: post-type/module-base.php:542
 msgid "Member List"
-msgstr "အသင်းဝင်စာရင်း"
+msgstr "အဖွဲ့ဝင်စာရင်း"
 
 #: post-type/module-base.php:367
 msgctxt "Optional Documentation"
 msgid "The contacts who are members of this training."
-msgstr "ဒီသင်တန်း၏အဖွဲ့ဝင်များဖြစ်ကြောင်းအဆက်အသွယ်။"
+msgstr "ဤသင်တန်း၏အဖွဲ့ဝင်များဖြစ်သောအဆက်အသွယ်များ။"
 
 #: post-type/module-base.php:377
 msgid "Leaders"
@@ -266,12 +263,12 @@ msgstr "ခေါင်းဆောင်များ"
 
 #: post-type/module-base.php:387
 msgid "People Groups"
-msgstr "People Groups"
+msgstr "လူမျိုးစုများ"
 
 #: post-type/module-base.php:388
 msgctxt "Optional Documentation"
 msgid "The people trainings represented by this training."
-msgstr "ဒီသင်တန်းကကိုယ်စားပြုတဲ့လူထုသင်တန်းများ။"
+msgstr "ဤသင်တန်းကကိုယ်စားပြုသောလူမျိုးစုများ။"
 
 #: post-type/module-base.php:397
 msgid "Groups"
@@ -279,7 +276,7 @@ msgstr "အုပ်စုများ"
 
 #: post-type/module-base.php:409
 msgid "Member Count"
-msgstr "အသင်းဝင်"
+msgstr "အဖွဲ့ဝင်အရေအတွက်"
 
 #: post-type/module-base.php:410 post-type/module-base.php:417
 msgctxt "Optional Documentation"
@@ -289,17 +286,17 @@ msgid ""
 "manually to included people who may not be in the system but are also "
 "members of the training."
 msgstr ""
-"ဒီသင်တန်းမှာအဖွဲ့ဝင်အရေအတွက်။ အသင်း ၀ င်အသစ်များအားထည့်သွင်း (သို့) "
-"အသင်းဝင်စာရင်းတွင်ဖယ်ရှားသောအခါ၎င်းသည်အလိုအလျောက် update လုပ်လိမ့်မည်။ ဤနံပါတ်ကိုစနစ်တွင်မပါ ၀ "
-"င်နိုင်သော်လည်းသင်တန်းတွင်ပါ ၀ င်သူများပါ ၀ င်သောလူများအားလက်ဖြင့်ပြောင်းလဲပါ။"
+"ဤသင်တန်းရှိအဖွဲ့ဝင်အရေအတွက်။ အဖွဲ့ဝင်စာရင်းတွင်အဖွဲ့ဝင်အသစ်များထည့်သွင်းခြင်း သို့မဟုတ် "
+"ဖယ်ရှားခြင်းပြုလုပ်သောအခါအလိုအလျောက်အပ်ဒိတ်ဖြစ်မည်။ စနစ်တွင်မပါဝင်သော်လည်း "
+"သင်တန်း၏အဖွဲ့ဝင်များဖြစ်သူများကိုထည့်သွင်းရန်ဤနံပါတ်ကိုကိုယ်တိုင်ပြောင်းလဲပါ။"
 
 #: post-type/module-base.php:416
 msgid "Leader Count"
-msgstr "ခေါင်းဆောင်ရေတွက်"
+msgstr "ခေါင်းဆောင်အရေအတွက်"
 
 #: post-type/module-base.php:426
 msgid "Training as Leader"
-msgstr "ခေါင်းဆောင်အဖြစ်လေ့ကျင့်"
+msgstr "ခေါင်းဆောင်အဖြစ်သင်တန်း"
 
 #: post-type/module-base.php:427
 msgctxt "Optional Documentation"
@@ -308,7 +305,7 @@ msgstr "သင်တန်း၏ခေါင်းဆောင်"
 
 #: post-type/module-base.php:438
 msgid "Training as Participant"
-msgstr "ပါဝင်သူအဖြစ်လေ့ကျင့်ရေး"
+msgstr "ပါဝင်သူအဖြစ်သင်တန်း"
 
 #: post-type/module-base.php:439
 msgctxt "Optional Documentation"
@@ -329,7 +326,7 @@ msgstr "ရွေးချယ်ပါ"
 
 #: post-type/module-base.php:555
 msgid "To add new members, click on 'Create' or 'Select'."
-msgstr "အသင်း ၀ င်သစ်များကိုထည့်သွင်းရန် 'Create' သို့မဟုတ် 'Select' ကိုနှိပ်ပါ။"
+msgstr "အဖွဲ့ဝင်အသစ်များထည့်ရန် 'ဖန်တီးပါ' သို့မဟုတ် 'ရွေးချယ်ပါ' ကိုနှိပ်ပါ။"
 
 #: post-type/module-base.php:560
 msgctxt "Add members modal"
@@ -341,34 +338,28 @@ msgctxt "Add members modal"
 msgid ""
 "In the 'Member List' field, type the name of an existing contact to add them "
 "to this training."
-msgstr "'အသင်းဝင်စာရင်း' အကွက်ထဲတွင်ဤသင်တန်းသို့သူတို့ကိုထည့်ရန်ရှိပြီးသားအဆက်အသွယ်၏အမည်ကိုရိုက်ပါ။"
+msgstr "'အဖွဲ့ဝင်စာရင်း' အကွက်တွင် ဤသင်တန်းသို့ထည့်ရန်ရှိပြီးသားအဆက်အသွယ်၏အမည်ကိုရိုက်ပါ။"
 
 #: post-type/module-base.php:573
 msgid "Close"
-msgstr "ပိတ်"
+msgstr "ပိတ်ပါ"
 
 #: post-type/module-base.php:713
-#, fuzzy
-#| msgid "Removed %1$s: %2$s"
 msgid "Removed %1$s: {%2$s}"
-msgstr "%1$s ဖယ်ရှားပြီး %2$s"
+msgstr "%1$s ဖယ်ရှားပြီး: {%2$s}"
 
 #: post-type/module-base.php:716
-#, fuzzy
-#| msgid "Added %1$s: %2$s"
 msgid "Added %1$s: {%2$s}"
-msgstr "%1$s ထပ်တိုး %1$s ထည့်သွင်းထားသည်"
+msgstr "%1$s ထည့်သွင်းပြီး: {%2$s}"
 
 #: post-type/module-base.php:719
-#, fuzzy
-#| msgid "Updated %1$s: %2$s to %3$s"
 msgid "Updated %1$s: {%2$s} to {%3$s}"
-msgstr "%1$s မှ %2$s မှ %3$s သို့အဆင့်မြှင့်တင်ထားသည်"
+msgstr "%1$s ကို {%2$s} မှ {%3$s} သို့အပ်ဒိတ်လုပ်ပြီး"
 
 #: post-type/module-base.php:804
 msgctxt "List Filters"
 msgid "Assigned to me"
-msgstr "ငါ့ကိုဖို့တာဝန်"
+msgstr "ကျွန်ုပ်ထံတာဝန်ပေးထားသည်"
 
 #: post-type/module-base.php:812
 msgctxt "List Filters"
@@ -378,7 +369,7 @@ msgstr "အားလုံး"
 #: post-type/module-base.php:871
 msgctxt "List Filters"
 msgid "Default Filters"
-msgstr ""
+msgstr "မူလစစ်ထုတ်မှုများ"
 
 #: post-type/module-public-calendar.php:85
 msgid "Reports"
@@ -386,7 +377,7 @@ msgstr "အစီရင်ခံစာများ"
 
 #: post-type/module-public-calendar.php:121
 msgid "Total Groups"
-msgstr "စုစုပေါင်းအဖွဲ့များ"
+msgstr "စုစုပေါင်းအုပ်စုများ"
 
 #: post-type/module-public-calendar.php:122
 msgid "Total Baptisms"
@@ -402,7 +393,7 @@ msgstr "ပြည်နယ်များ"
 
 #: post-type/module-public-calendar.php:125
 msgid "Counties"
-msgstr "County"
+msgstr "ခရိုင်များ"
 
 #: post-type/module-public-calendar.php:432
 #: post-type/module-registration.php:385
@@ -411,15 +402,15 @@ msgstr "ထည့်ပါ"
 
 #: post-type/module-registration.php:31
 msgid "Magic Links"
-msgstr ""
+msgstr "မဟာဒ္ဒလင့်ခ်များ"
 
 #: post-type/module-registration.php:59
 msgid "copy link"
-msgstr "ကူးယူလင့်ခ်"
+msgstr "လင့်ခ်ကူးယူပါ"
 
 #: post-type/module-registration.php:61
 msgid "edit form"
-msgstr "တည်းဖြတ်ပုံစံ"
+msgstr "ပုံစံတည်းဖြတ်ပါ"
 
 #: post-type/module-registration.php:63
 msgid "report"
@@ -427,11 +418,11 @@ msgstr "အစီရင်ခံစာ"
 
 #: post-type/module-registration.php:67
 msgid "create link"
-msgstr "link ကိုဖန်တီးပါ"
+msgstr "လင့်ခ်ဖန်တီးပါ"
 
 #: post-type/module-registration.php:114
 msgid "link"
-msgstr "link"
+msgstr "လင့်ခ်"
 
 #: post-type/module-registration.php:116
 msgid "show on calendar"
@@ -439,7 +430,7 @@ msgstr "ပြက္ခဒိန်တွင်ပြပါ"
 
 #: post-type/module-registration.php:118
 msgid "open registration"
-msgstr "ပွင့်လင်းမှတ်ပုံတင် "
+msgstr "မှတ်ပုံတင်ခြင်းဖွင့်ပါ"
 
 #: post-type/module-registration.php:265
 msgid "add"
@@ -451,826 +442,32 @@ msgstr "အသုံးပြုပါ"
 
 #: post-type/module-registration.php:267 post-type/module-registration.php:695
 msgid "Search Location"
-msgstr "တည်နေရာကိုရှာပါ"
+msgstr "တည်နေရာရှာပါ"
 
 #: post-type/module-registration.php:268
 msgid "Delete Location"
-msgstr "တည်နေရာကိုဖျက်ပါ"
+msgstr "တည်နေရာဖျက်ပါ"
 
 #: post-type/module-registration.php:269
 msgid "Open Mapping"
-msgstr "မြေပုံကိုဖွင့်ပါ"
+msgstr "မြေပုံဖွင့်ပါ"
 
 #: post-type/module-registration.php:270
 msgid "clear"
-msgstr "ရှင်းလင်းသော"
+msgstr "ရှင်းပါ"
 
 #: post-type/module-registration.php:384
 msgid "Register for Training"
-msgstr "လေ့ကျင့်ရေးအတွက်မှတ်ပုံတင်ပါ"
+msgstr "သင်တန်းအတွက်မှတ်ပုံတင်ပါ"
 
 #: post-type/module-registration.php:386
 msgid "Join Training"
-msgstr "လေ့ကျင့်ရေး Join"
+msgstr "သင်တန်းပါဝင်ပါ"
 
 #: post-type/module-registration.php:387
 msgid "Join in"
-msgstr "ဆက်သွယ်ပါ"
+msgstr "ပါဝင်ပါ"
 
 #: post-type/module-registration.php:700
 msgid "Clear"
-msgstr "ရှင်းလင်းသော"
-
-#~ msgid "Apps"
-#~ msgstr "အက်ပလီကေးရှင်းများ"
-
-#, fuzzy
-#~| msgid "Disciple Tools - Training"
-#~ msgid "Disciple.Tools - Training"
-#~ msgstr "တပည့်ကိရိယာ - သင်တန်း"
-
-#~ msgid "https://github.com/DiscipleTools/disciple-tools-training"
-#~ msgstr "https://github.com/DiscipleTools/disciple-tools-training"
-
-#, fuzzy
-#~| msgid ""
-#~| "Disciple Tools Training Extension adds recording of trainings and cross "
-#~| "reference them with contacts, groups, and locations."
-#~ msgid ""
-#~ "Disciple.Tools Training Extension adds recording of trainings and cross "
-#~ "reference them with contacts, groups, and locations."
-#~ msgstr ""
-#~ "Disciple Tools Training Extension သည်သင်တန်းများကိုမှတ်တမ်းတင်ခြင်း၊ အဆက်အသွယ်များ၊ "
-#~ "အုပ်စုများနှင့်တည်နေရာများနှင့်အပြန်အလှန်ရည်ညွှန်းသည်။"
-
-#~ msgid "Whoah, partner!"
-#~ msgstr "ဘယ်သူလဲ"
-
-#~ msgid "Method does not exist."
-#~ msgstr "နည်းလမ်းမရှိပါ။"
-
-#~ msgid "Dispatcher"
-#~ msgstr "တောင်ကြီးမြို့"
-
-#~ msgid "Members"
-#~ msgstr "အဖွဲ့ဝင်များ"
-
-#~ msgid "Contacts"
-#~ msgstr "ဆက်သွယ်ရန်"
-
-#~ msgid "Coaches"
-#~ msgstr "နည်းပြများ"
-
-#~ msgid "Planted by"
-#~ msgstr "ကွမ်းခြံကုန်း"
-
-#~ msgid "Planting"
-#~ msgstr "စိုက်ပျိုးခြင်း"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid ""
-#~ "A useful way to training related items and can help training contacts "
-#~ "associated with noteworthy characteristics. e.g. business owner, sports "
-#~ "lover. The contacts can also be filtered using these tags."
-#~ msgstr ""
-#~ "ဆက်စပ်သောပစ္စည်းများလေ့ကျင့်ရန်အသုံးဝင်သောနည်းလမ်းနှင့်မှတ်သားထိုက်သောဝိသေသလက္ခဏာများနှင့်ဆက်စပ်သောလေ့ကျင့်ရေးအဆက်အသွယ်များကိုကူညီနိုင်သည်။ "
-#~ "ဥပမာ စီးပွားရေးပိုင်ရှင်၊ အားကစားကိုနှစ်သက်သည်။ အဆက်အသွယ်များကိုဤ tags များ သုံး၍ လည်းစစ်ထုတ်နိုင်သည်။"
-
-#~ msgctxt "input field placeholder"
-#~ msgid "Search Users"
-#~ msgstr "အသုံးပြုသူများကိုရှာပါ"
-
-#~ msgctxt "Search 'something'"
-#~ msgid "Search %s"
-#~ msgstr "%s ကိုရှာပါ"
-
-#~ msgid "Extensions (DT)"
-#~ msgstr "Extensions (DT)"
-
-#~ msgid "Network Dashboard"
-#~ msgstr "Network Dashboard"
-
-#~ msgid "You do not have sufficient permissions to access this page."
-#~ msgstr "ဤစာမျက်နှာကိုဝင်ရန်သင့်တွင်လုံလောက်သောခွင့်ပြုချက်မရှိပါ။"
-
-#~ msgid "nav-tab-active"
-#~ msgstr "nav-tab-active"
-
-#~ msgid "Network Dashboard Viewer"
-#~ msgstr "Network Dashboard Viewer"
-
-#~ msgid "ID"
-#~ msgstr "ID"
-
-#~ msgid "Site"
-#~ msgstr "ဆိုက်"
-
-#~ msgid "Users"
-#~ msgstr "အသုံးပြုသူများ"
-
-#~ msgid "Timestamp"
-#~ msgstr "အချိန်ဇယား"
-
-#~ msgid "Visit"
-#~ msgstr "အလည်အပတ်"
-
-#~ msgid "View"
-#~ msgstr "ကြည့်ရှုပါ"
-
-#~ msgid "Active Snapshot"
-#~ msgstr "Active Snapshot"
-
-#~ msgid "Generations"
-#~ msgstr "မျိုးဆက်များ"
-
-#~ msgid "Follow-up Funnel"
-#~ msgstr "နောက်ဆက်တွဲဖောက်သည်"
-
-#~ msgid "On-Going Meetings"
-#~ msgstr "On-Going အစည်းအဝေးများ"
-
-#~ msgid "Coaching"
-#~ msgstr "နည်းပြ"
-
-#~ msgid "Baptized"
-#~ msgstr "ဗတ္တိဇံ"
-
-#~ msgid "Active Groups"
-#~ msgstr "တက်ကြွသောအုပ်စုများ"
-
-#~ msgid "Church"
-#~ msgstr "ဘုရားရှိခိုးကျောင်း"
-
-#~ msgid "Health Metrics"
-#~ msgstr "ကျန်းမာရေးမက်ထရစ်"
-
-#~ msgid "Total Users"
-#~ msgstr "အသုံးပြုသူစုစုပေါင်း"
-
-#~ msgid "Responders"
-#~ msgstr "တုံ့ပြန်သူများ"
-
-#~ msgid "Dispatchers"
-#~ msgstr "။"
-
-#~ msgid "Multipliers"
-#~ msgstr "ပွားများ"
-
-#~ msgid "Admins"
-#~ msgstr "Admins"
-
-#~ msgid "User Login Activity"
-#~ msgstr "အသုံးပြုသူဝင်ခွင့်လှုပ်ရှားမှု"
-
-#~ msgid "Users Active in the Last 30 Days"
-#~ msgstr "ပြီးခဲ့သည့်ရက်ပေါင်း ၃၀ အတွင်းအသုံးပြုသူများ"
-
-#~ msgid "Practicing"
-#~ msgstr "လေ့ကျင့်"
-
-#~ msgid "Not Practicing"
-#~ msgstr "လေ့ကျင့်ခြင်းမ"
-
-#~ msgid "Chart Funnel"
-#~ msgstr "Funnel ဇယား"
-
-#~ msgid "Contact"
-#~ msgstr "ဆက်သွယ်ရန်"
-
-#~ msgid "Group"
-#~ msgstr "အုပ်စု"
-
-#~ msgid "User"
-#~ msgstr "အသုံးပြုသူကို"
-
-#~ msgid "Sites"
-#~ msgstr "ဆိုဒ်များ"
-
-#~ msgid "Baptisms"
-#~ msgstr "ဗတ္တိဇံ"
-
-#~ msgid "Churches"
-#~ msgstr "အသင်းတော်များ"
-
-#~ msgid "Location"
-#~ msgstr "တည်နေရာ"
-
-#~ msgid "Types"
-#~ msgstr "အမျိုးအစားများ"
-
-#~ msgid "modify filter"
-#~ msgstr "ပြုပြင်မွမ်းမံရန် filter ကို"
-
-#~ msgid "Filter List"
-#~ msgstr "စစ်ထုတ်ရန်စာရင်း"
-
-#~ msgid "reset data"
-#~ msgstr "ဒေတာကိုပြန်လည်သတ်မှတ်"
-
-#~ msgid "Status"
-#~ msgstr "အခြေအနေ"
-
-#~ msgid "Status - All"
-#~ msgstr "အခြေအနေ - အားလုံး"
-
-#~ msgid "Zoom Level"
-#~ msgstr "ချုံ့ချဲ့အဆင့်"
-
-#~ msgid "Auto Zoom"
-#~ msgstr "အော်တိုချဲ့ခြင်း"
-
-#~ msgid "World"
-#~ msgstr "ကမ္ဘာကြီး"
-
-#~ msgid "Country"
-#~ msgstr "နိုင်ငံ"
-
-#~ msgid "State"
-#~ msgstr "ပြည်နယ်"
-
-#~ msgid "Active Contacts"
-#~ msgstr "Active အဆက်အသွယ်များ"
-
-#~ msgid "Paused Contacts"
-#~ msgstr "ဆိုင်းငံ့မှုအဆက်အသွယ်များ"
-
-#~ msgid "Closed Contacts"
-#~ msgstr "ပိတ်ထားသောဆက်သွယ်ရန်"
-
-#~ msgid "Total Contacts"
-#~ msgstr "စုစုပေါင်းဆက်သွယ်ရန်"
-
-#~ msgid "New Contacts"
-#~ msgstr "အဆက်အသွယ်အသစ်များ"
-
-#~ msgid "New Baptisms"
-#~ msgstr "နှစ်ခြင်းအသစ်"
-
-#~ msgid "Baptism Generations"
-#~ msgstr "နှစ်ခြင်းမျိုးဆက်များ"
-
-#~ msgid "Select Location"
-#~ msgstr "တည်နေရာကိုရွေးချယ်ပါ"
-
-#~ msgid "New Groups"
-#~ msgstr "အုပ်စုအသစ်များ"
-
-#~ msgid "Pre-Group"
-#~ msgstr "Pre-Group မှ"
-
-#~ msgid "Pre-Groups"
-#~ msgstr "Pre- အဖွဲ့များ"
-
-#~ msgid "Last 7 Days"
-#~ msgstr "နောက်ဆုံး ၇ ရက်"
-
-#~ msgid "Last 30 Days"
-#~ msgstr "နောက်ဆုံး ၃၀ ရက်"
-
-#~ msgid "Last 60 Days"
-#~ msgstr "နောက်ဆုံး ၆၀ ရက်"
-
-#~ msgid "Last 12 Months"
-#~ msgstr "နောက်ဆုံး ၁၂ လ"
-
-#~ msgid "Last 24 Months"
-#~ msgstr "လွန်ခဲ့သော ၂၄ လ"
-
-#~ msgid "This Year"
-#~ msgstr "ဒီနှစ်"
-
-#~ msgid "Activity Map"
-#~ msgstr "လှုပ်ရှားမှုမြေပုံ"
-
-#~ msgid "Stats"
-#~ msgstr "Stats"
-
-#~ msgid "Activities"
-#~ msgstr "လှုပ်ရှားမှုများ"
-
-#~ msgid "Actions"
-#~ msgstr "လုပ်ဆောင်ချက်များ"
-
-#~ msgid "By Action Type"
-#~ msgstr "လှုပ်ရှားမှုအမျိုးအစားအားဖြင့်"
-
-#~ msgid "Key"
-#~ msgstr "သော့"
-
-#~ msgid "Name"
-#~ msgstr "နာမည်"
-
-#~ msgid "Total Activities"
-#~ msgstr "စုစုပေါင်းလှုပ်ရှားမှုများ"
-
-#~ msgid "Feed"
-#~ msgstr "အစာကျွေး"
-
-#~ msgid "Time"
-#~ msgstr "အချိန်"
-
-#~ msgid "Result Limit"
-#~ msgstr "ရလဒ်ကန့်သတ်ချက်"
-
-#~ msgid "uncheck"
-#~ msgstr "မဖြုတ်ပါ"
-
-#~ msgid "Home"
-#~ msgstr "နေအိမ်"
-
-#~ msgid "Events (30 Days)"
-#~ msgstr "ပွဲများ (နေ့ရက် ၃၀)"
-
-#~ msgid "All Active/Inactive"
-#~ msgstr "အားလုံးတက်ကြွ / မလှုပ်မရှား"
-
-#~ msgid "Hover Map"
-#~ msgstr "Hover မြေပုံ"
-
-#~ msgid "Network"
-#~ msgstr "ကွန်ယက်"
-
-#~ msgid "Map"
-#~ msgstr "မြေပုံ"
-
-#~ msgid "Log"
-#~ msgstr "log"
-
-#~ msgid "Activity"
-#~ msgstr "လှုပ်ရှားမှု"
-
-#~ msgid "Area Maps"
-#~ msgstr "Mရိယာမြေပုံများ"
-
-#~ msgid "Location List"
-#~ msgstr "တည်နေရာစာရင်း"
-
-#~ msgid "Maps"
-#~ msgstr "မြေပုံများ"
-
-#~ msgid "Site Reports"
-#~ msgstr "ဆိုဒ်အစီရင်ခံစာများ"
-
-#~ msgid "Statistics"
-#~ msgstr "စာရင်းအင်းများ"
-
-#~ msgid "Network Dashboard Transfer Both Ways"
-#~ msgstr "နည်းလမ်းနှစ်ခုစလုံးကို Network Dashboard လွှဲပြောင်းပေးသည်"
-
-#~ msgid "Network Dashboard Receiving Only"
-#~ msgstr "ကွန်ယက် Dashboard ကိုသာလက်ခံခြင်း"
-
-#~ msgid "Network Dashboard Sending Only"
-#~ msgstr "Network Dashboard ကိုသာပို့နေသည်"
-
-#~ msgid "Network Dashboard Site Profile"
-#~ msgstr "ကွန်ယက် Dashboard ဆိုက်ကိုကိုယ်ရေးအချက်အလက်"
-
-#~ msgid "Disciple Tools - Network Dashboard"
-#~ msgstr "တပည့်ကိရိယာများ - Network Dashboard"
-
-#~ msgid "Streams"
-#~ msgstr "စီး"
-
-#~ msgid "Stream Maps"
-#~ msgstr "မြေပုံ stream"
-
-#~ msgid "Streams Maps"
-#~ msgstr "မြေပုံများ streams"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid ""
-#~ "A useful way to stream related items and can help stream contacts "
-#~ "associated with noteworthy characteristics. e.g. business owner, sports "
-#~ "lover. The contacts can also be filtered using these tags."
-#~ msgstr ""
-#~ "ဆက်စပ်သောပစ္စည်းများ streaming "
-#~ "ရန်အသုံးဝင်သောနည်းလမ်းနှင့်မှတ်သားဖွယ်ဝိသေသလက္ခဏာများနှင့်ဆက်စပ်အဆက်အသွယ် stream ကူညီပေးနိုင်သည်။ ဥပမာ "
-#~ "စီးပွားရေးပိုင်ရှင်၊ အားကစားကိုနှစ်သက်သည်။ အဆက်အသွယ်များကိုဤ tags များ သုံး၍ လည်းစစ်ထုတ်နိုင်သည်။"
-
-#~ msgctxt "Stream Status label"
-#~ msgid "New"
-#~ msgstr "အသစ်"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "New stream added to the system"
-#~ msgstr "စီးဆင်းမှုအသစ်ကိုစနစ်ထဲသို့ထည့်သွင်း"
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Model"
-#~ msgstr "မော်ဒယ်"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "This stream has been proposed and is in initial conversations"
-#~ msgstr "ဤစီးဆင်းမှုကိုအဆိုပြုထားပြီးကန ဦး စကားပြောဆိုမှုများဖြစ်သည်"
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Assist"
-#~ msgstr "Assist"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "This stream is confirmed, on the calendar."
-#~ msgstr "ဤစီးကြောင်းပြက္ခဒိန်တွင်အတည်ပြုသည်။"
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Watch"
-#~ msgstr "စောင့်ကြည့်"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "This stream is confirmed, on the calendar, or currently active."
-#~ msgstr "ဤစီးကြောင်းသည်ပြက္ခဒိန်တွင်အတည်ပြုသည်သို့မဟုတ်လက်ရှိတက်ကြွနေသည်။"
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Leave"
-#~ msgstr "ထွက်ခွာမည်"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "This stream has successfully completed"
-#~ msgstr "ဒီစီးအောင်မြင်စွာပြီးဆုံးပါပြီ"
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Paused"
-#~ msgstr "ဆိုင်းငံ့မှု"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid ""
-#~ "This contact is currently on hold. It has potential of getting scheduled "
-#~ "in the future."
-#~ msgstr "ဒီအဆက်အသွယ်လက်ရှိဆိုင်းငံ့ထားသည် ဒါဟာအနာဂတ်မှာစီစဉ်ထားတဲ့၏အလားအလာရှိပါတယ်။"
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Closed"
-#~ msgstr "ပိတ်သိမ်း"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "This stream is no longer going to happen."
-#~ msgstr "ဒီစီးကြောင်းမရှိတော့ပါ။"
-
-#~ msgid ""
-#~ "Select the main person who is responsible for reporting on this stream."
-#~ msgstr "ဒီစီးဆင်းမှုအပေါ်အစီရင်ခံရန်တာဝန်ရှိသည်သောအဓိကပုဂ္ဂိုလ်ကိုရွေးချယ်ပါ။"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid ""
-#~ "The person who planted and/or is coaching this stream. Only one person "
-#~ "can be assigned to a stream while multiple people can be coaches / church "
-#~ "planters of this stream."
-#~ msgstr ""
-#~ "ဤစီးဆင်းမှုကိုစိုက်ပျိုးသူ / သို့မဟုတ်နည်းပြသူ။ လူအများစုသည်ဤစမ်းချောင်း၏နည်းပြများ / "
-#~ "ချာ့ချ်စိုက်သူများဖြစ်နိုင်သော်လည်းလူတစ် ဦး တည်းကိုစီးဆင်းရန်တာဝန်ပေးနိုင်သည်။"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid "The people streams represented by this stream."
-#~ msgstr "ဒီစီးမှကိုယ်စားပြုသောလူများစီးသည်။"
-
-#~ msgid "Parent Stream"
-#~ msgstr "မိဘစီးဆင်း"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid "A stream that launched this stream."
-#~ msgstr "ဒီစီးကိုစတင်ခဲ့တဲ့စီး။"
-
-#~ msgid "Peer Streams"
-#~ msgstr "အုပ်စုတူအဆင့်တူ"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid ""
-#~ "A related stream that isn't a parent/child in relationship. It might "
-#~ "indicate streams that collaborate, are about to merge, recently split, "
-#~ "etc."
-#~ msgstr ""
-#~ "ဆွေမျိုးတစ် ဦး မိဘ / ကလေးမဟုတ်သောဆက်စပ်သောစီး။ ၎င်းသည်ပူးပေါင်းပါ ၀ "
-#~ "င်သည့်အရာများကိုရည်ညွှန်းနိုင်သည်။"
-
-#~ msgid "Child Streams"
-#~ msgstr "ကလေးများ"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid "A stream that has been birthed out of this stream."
-#~ msgstr "ဒီစီးထဲက birthed ခဲ့ပြီးတစ် ဦး ကစီး။"
-
-#~ msgid "Leader in Stream"
-#~ msgstr "Stream အတွက်ခေါင်းဆောင်"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid "Leader of a stream"
-#~ msgstr "စီး၏ခေါင်းဆောင်"
-
-#~ msgid "Key Disciple in Stream"
-#~ msgstr "Stream အတွက် Key ကိုတပည့်"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid "Disciple in a stream."
-#~ msgstr "စီးအတွက်တပည့်။"
-
-#~ msgid "Connections"
-#~ msgstr "ဆက်သွယ်မှုများ"
-
-#~ msgid "Add Report"
-#~ msgstr "အစီရင်ခံစာထည့်ပါ"
-
-#~ msgid "Disciple Tools - Streams"
-#~ msgstr "တပည့် Tools များ - Streams"
-
-#~ msgid "Pre-Group Generations"
-#~ msgstr "Pre-Group မှမျိုးဆက်များ"
-
-#~ msgid "Group Generations"
-#~ msgstr "အုပ်စုမျိုးဆက်များ"
-
-#~ msgid "Church Generations"
-#~ msgstr "ဘုရားကျောင်း"
-
-#~ msgid "Team Generations"
-#~ msgstr "အဖွဲ့မျိုးဆက်များ"
-
-#~ msgid "%s is reporting a new pre-group generation."
-#~ msgstr "%s သည်အုပ်စုမတိုင်မီမျိုးဆက်သစ်ကိုသတင်းပို့သည်။"
-
-#~ msgid "%s is reporting a new group generation."
-#~ msgstr "%s သည်အုပ်စုမျိုးဆက်သစ်တစ်ခုကိုအစီရင်ခံနေသည်။"
-
-#~ msgid "%s is reporting a new church generation."
-#~ msgstr "%s သည်ဘုရားကျောင်းမျိုးဆက်သစ်တစ်ခုကိုအစီရင်ခံနေသည်။"
-
-#~ msgid "%s is reporting a new leadership team generation."
-#~ msgstr "%s သည်ခေါင်းဆောင်ပိုင်းမျိုးဆက်သစ်တစ်ခုကိုအစီရင်ခံနေသည်။"
-
-#~ msgid "New Contact"
-#~ msgstr "ဆက်သွယ်ရန်"
-
-#~ msgid "New Pre-Group"
-#~ msgstr "နယူး Pre-Group မှ"
-
-#~ msgid "New Group"
-#~ msgstr "အုပ်စုအသစ်"
-
-#~ msgid "New Church"
-#~ msgstr "ဘုရားကျောင်းအသစ်"
-
-#~ msgid "New Team"
-#~ msgstr "အဖွဲ့အသစ်"
-
-#~ msgid "New Baptism"
-#~ msgstr "နှစ်ခြင်းအသစ်"
-
-#~ msgid "New Coaching"
-#~ msgstr "နည်းပြအသစ်"
-
-#~ msgid "%s is reporting a new contact."
-#~ msgstr "%s သည်အဆက်အသွယ်အသစ်တစ်ခုကိုအစီရင်ခံနေသည်။"
-
-#~ msgid "%s is reporting a new pre-group formed."
-#~ msgstr "%s သည်ဖွဲ့စည်းထားသည့် Pre- group အသစ်တစ်ခုကိုအစီရင်ခံနေသည်။"
-
-#~ msgid "%s is reporting a new group formed."
-#~ msgstr "%s သည်ဖွဲ့စည်းသည့်အုပ်စုအသစ်တစ်ခုကိုအစီရင်ခံနေသည်။"
-
-#~ msgid "%s is reporting a new church."
-#~ msgstr "%s သည်ဘုရားကျောင်းအသစ်တစ်ခုကိုအစီရင်ခံနေသည်။"
-
-#~ msgid "%s is reporting a new leadership team formed."
-#~ msgstr "%s သည်ဖွဲ့စည်းထားသည့်ခေါင်းဆောင်အဖွဲ့အသစ်တစ်ခုကိုအစီရင်ခံနေသည်။"
-
-#~ msgid "%s is reporting a new baptism."
-#~ msgstr "%s သည်နှစ်ခြင်းအသစ်ကိုအစီရင်ခံနေသည်။"
-
-#~ msgid "%s is reporting an coaching relationship."
-#~ msgstr "%s သည်နည်းပြဆက်ဆံရေးကိုအစီရင်ခံနေသည်။"
-
-#~ msgid "Active"
-#~ msgstr "တက်ကြွ"
-
-#~ msgid "Paused"
-#~ msgstr "ဆိုင်းငံ့မှု"
-
-#~ msgid "Closed"
-#~ msgstr "ပိတ်သိမ်း"
-
-#~ msgid "Inactive"
-#~ msgstr "မလှုပ်မရှား"
-
-#~ msgid "https://github.com/DiscipleTools/disciple-tools-network-dashboard"
-#~ msgstr "https://github.com/DiscipleTools/disciple-tools-network-dashboard"
-
-#~ msgid ""
-#~ "Connect this Disciple Tools site to a larger network of sites. Adds "
-#~ "security sensitive totals, mapping, activity logging."
-#~ msgstr ""
-#~ "ဒီ Disciple Tools site ကိုပိုကြီးတဲ့ကွန်ရက်များနှင့်ချိတ်ဆက်ပါ။ လုံခြုံရေးအထိခိုက်မခံစုစုပေါင်းများ၊ "
-#~ "မြေပုံဆွဲခြင်း၊"
-
-#~ msgid "https://github.com/DiscipleTools"
-#~ msgstr "https://github.com/DiscipleTools"
-
-#~ msgid "https://github.com/DiscipleTools/disciple-tools-streams"
-#~ msgstr "https://github.com/DiscipleTools/disciple-tools-streams"
-
-#~ msgid ""
-#~ "Disciple Tools Streams Extension adds recording of streams and cross "
-#~ "reference them with contacts, groups, and locations."
-#~ msgstr ""
-#~ "Disciple Tools Streams Extension သည်စီးကြောင်းများကိုမှတ်တမ်းတင်ခြင်း၊ အဆက်အသွယ်များ၊ "
-#~ "အုပ်စုများနှင့်တည်နေရာများနှင့်ဆက်စပ်ဖော်ပြသည်။"
-
-#~ msgid ""
-#~ "'Disciple Tools - Training' plugin requires 'Disciple Tools' theme to "
-#~ "work. Please activate 'Disciple Tools' theme or make sure it is latest "
-#~ "version."
-#~ msgstr ""
-#~ "'Disciple Tools - Training' ပလပ်ဂင်တွင်အလုပ်လုပ်ရန် 'Disciple Tools' "
-#~ "အခင်းအကျင်းလိုအပ်သည်။ ကျေးဇူးပြု၍ 'Disciple Tools' "
-#~ "အခင်းအကျင်းကိုဖွင့်ပါသို့မဟုတ်၎င်းသည်နောက်ဆုံးပေါ်ဗားရှင်းဖြစ်ကြောင်းသေချာပါစေ။"
-
-#~ msgid "Current Disciple Tools version: %1$s, required version: %2$s"
-#~ msgstr "လက်ရှိ Disciple Tools ဗားရှင်း - %1$s၊ လိုအပ်သောမူကွဲ - %2$s"
-
-#~ msgid "Duplicates"
-#~ msgstr "ပုံတူပွားများ"
-
-#~ msgid "Coach"
-#~ msgstr "နည်းပြ"
-
-#~ msgid "Leaders Total"
-#~ msgstr "စုစုပေါင်းခေါင်းဆောင်များ"
-
-#~ msgid "Disciples Total"
-#~ msgstr "တပည့်တော်စုစုပေါင်း"
-
-#~ msgid "Key Disciples"
-#~ msgstr "အဓိကတပည့်များ"
-
-#~ msgid "Groups Total"
-#~ msgstr "အုပ်စုများစုစုပေါင်း"
-
-#~ msgid "Trainings Total"
-#~ msgstr "စုစုပေါင်းသင်တန်းများ"
-
-#~ msgid "Dashboard Plugin"
-#~ msgstr "Dashboard Plugin"
-
-#~ msgid "Dashboard"
-#~ msgstr "ဒိုင်ခွက်"
-
-#~ msgid "%s days since last update"
-#~ msgstr "%s ရက်နောက်ဆုံးပြင်ဆင်မှု မှစ၍"
-
-#~ msgid "Accept"
-#~ msgstr "လက်ခံသည်"
-
-#~ msgid "Decline"
-#~ msgstr "ငြင်း"
-
-#~ msgid "# Contacts Assigned"
-#~ msgstr "ဆက်သွယ်ရန်ဆက်သွယ်ရန်"
-
-#~ msgid "# First Meetings"
-#~ msgstr "# ပထမ ဦး ဆုံးအစည်းအဝေးများ"
-
-#~ msgid "# Faith milestones"
-#~ msgstr "# ယုံကြည်ခြင်းသမိုင်းမှတ်တိုင်များ"
-
-#~ msgid "Hurray! You are caught up."
-#~ msgstr "ဟားဟား! မင်းဖမ်းမိပြီ"
-
-#~ msgid "remove"
-#~ msgstr "ဖယ်ရှားလိုက်ပါ"
-
-#~ msgid "mark as complete"
-#~ msgstr "ပြီးပြည့်စုံသောအဖြစ်မှတ်သားပါ"
-
-#~ msgid "No task created"
-#~ msgstr "အလုပ်တစ်ခုမျှမဖန်တီးပါ"
-
-#~ msgid "Reminder"
-#~ msgstr "သတိပေးချက်"
-
-#~ msgid "No note set"
-#~ msgstr "မှတ်စုသတ်မှတ်မထားပါ"
-
-#~ msgid "Add a contact"
-#~ msgstr "အဆက်အသွယ်တစ်ခုထည့်ပါ"
-
-#~ msgid "View Contacts List"
-#~ msgstr "ဆက်သွယ်ရန်စာရင်းကိုကြည့်ပါ"
-
-#~ msgid "Pending Contacts"
-#~ msgstr "ဆိုင်းငံ့ထားအဆက်အသွယ်များ"
-
-#~ msgid "View All"
-#~ msgstr "အားလုံးကြည့်ပါ"
-
-#~ msgid "Update Needed"
-#~ msgstr "အပ်ဒိတ်လိုအပ်သည်"
-
-#~ msgid "Contact Workload"
-#~ msgstr "Workload ကိုဆက်သွယ်ပါ"
-
-#~ msgid ""
-#~ "Choose an option to let the dispatcher(s) know if you are ready for new "
-#~ "contacts"
-#~ msgstr "သင်အဆက်အသွယ်အသစ်များအတွက်အဆင်သင့်ဖြစ်မဖြစ်ကိုပြသသူ (များ) ကိုသိစေရန်ရွေးစရာတစ်ခုကိုရွေးချယ်ပါ"
-
-#~ msgid "Set travel or dates unavailable"
-#~ msgstr "ခရီးစဉ်သို့မဟုတ်ရက်စွဲများမရနိုင်ပါကိုသတ်မှတ်ပါ"
-
-#~ msgid "Personal Benchmarks"
-#~ msgstr "ကိုယ်ရေးကိုယ်တာ Benchmarks"
-
-#~ msgid "Faith Milestone Totals"
-#~ msgstr "ယုံကြည်ခြင်းမှတ်တိုင်စုစုပေါင်း"
-
-#~ msgid "Milestones on your active contacts"
-#~ msgstr "သင်၏တက်ကြွသောအဆက်အသွယ်များရှိမှတ်တိုင်များ"
-
-#~ msgid "Seeker Path Progress"
-#~ msgstr "ရှာဖွေသူလမ်းကြောင်းတိုးတက်မှု"
-
-#~ msgid "No data to show yet. You have no active contacts"
-#~ msgstr "ပြသရန်အချက်အလက်မရှိပါ သင့်တွင်တက်ကြွသောအဆက်အသွယ်များမရှိပါ"
-
-#~ msgid "Disciple Tools - Dashboard"
-#~ msgstr "တပည့်ကိရိယာများ - ဒိုင်ခွက်"
-
-#~ msgid "https://github.com/DiscipleTools/disciple-tools-dashboard"
-#~ msgstr "https://github.com/DiscipleTools/disciple-tools-dashboard"
-
-#~ msgid ""
-#~ "The multiplier dashboard upgrades the multipliers experience as soon as "
-#~ "they log into the system giving them a landing page with stats."
-#~ msgstr ""
-#~ "Multiplier Dashboard သည် Multipliers များအတွေ့အကြုံကိုအဆင့်မြှင့်တင်ပြီးစနစ်သို့ ၀ "
-#~ "င်ရောက်သည်နှင့်၎င်းတို့အား stats နှင့် landing page တစ်ခုပေးသည်။"
-
-#~ msgid "Reason Assigned To"
-#~ msgstr "လုပ်ရန်အကြောင်းပြချက်"
-
-#~ msgid "Follow-Up"
-#~ msgstr "နောက်ဆက်တွဲ"
-
-#~ msgid "Digital Response"
-#~ msgstr "ဒီဂျစ်တယ်တုံ့ပြန်မှု"
-
-#~ msgid "Dispatch"
-#~ msgstr "ပေးပို့သည်"
-
-#~ msgid "No Answer"
-#~ msgstr "အဖြေမရှိ"
-
-#~ msgid "Talked"
-#~ msgstr "စကားပြော"
-
-#~ msgid "Scheduled"
-#~ msgstr "စီစဉ်ထားသည်"
-
-#~ msgid "Complete"
-#~ msgstr "ပြီးပြည့်စုံ"
-
-#~ msgid "No-Show"
-#~ msgstr "မပြပါ"
-
-#~ msgid "No permission"
-#~ msgstr "ခွင့်ပြုချက်မရှိပါ"
-
-#~ msgid "All"
-#~ msgstr "အားလုံး"
-
-#~ msgid "Ready"
-#~ msgstr "အဆင်သင့်"
-
-#~ msgid "Recent"
-#~ msgstr "မကြာသေးမီက"
-
-#~ msgid "Assign"
-#~ msgstr "Assign"
-
-#~ msgid "Choose an option:"
-#~ msgstr "ရွေးစရာတစ်ခုကိုရွေးချယ်ပါ"
-
-#~ msgid "Cancel"
-#~ msgstr "ပယ်ဖျက်ပါ"
-
-#~ msgid "Assign For"
-#~ msgstr "အဘို့အ Assign"
-
-#~ msgid "Search"
-#~ msgstr "ရှာပါ"
-
-#~ msgid "Claim for follow-up"
-#~ msgstr "နောက်ဆက်တွဲအတွက်တောင်းဆိုချက်"
-
-#~ msgid "Ready for Dispatch"
-#~ msgstr "Dispatch များအတွက်အဆင်သင့်"
-
-#~ msgid "Disciple Tools - Advanced M2M Tiles"
-#~ msgstr "တပည့်တော်ကိရိယာ - အဆင့်မြင့် M2M အုပ်ကြွပ်များ"
-
-#~ msgid "https://github.com/DiscipleTools/disciple-tools-advanced-m2m-tiles"
-#~ msgstr "https://github.com/DiscipleTools/disciple-tools-advanced-m2m-tiles"
-
-#~ msgid ""
-#~ "Disciple Tools - Advanced M2M Tiles adds specific supporting tiles for "
-#~ "different roles."
-#~ msgstr ""
-#~ "တပည့်ကိရိယာများ - အဆင့်မြင့် M2M အုပ်ကြွပ်များသည်အခန်းကဏ္ supporting "
-#~ "အမျိုးမျိုးအတွက်တိကျသောထောက်ပံ့ပေးသည့်အုပ်ကြွပ်များကိုထပ်ထည့်သည်။"
+msgstr "ရှင်းပါ"

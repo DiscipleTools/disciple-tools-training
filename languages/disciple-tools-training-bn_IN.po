@@ -18,130 +18,132 @@ msgstr ""
 
 #: metrics/mapbox-maps.php:30
 msgid "Training Maps"
-msgstr ""
+msgstr "প্রশিক্ষণ মানচিত্র"
 
 #: metrics/mapbox-maps.php:31 metrics/mapbox-personal-maps.php:31
 #: post-type/module-base.php:29 post-type/module-base.php:461
 #: post-type/module-base.php:473 post-type/module-base.php:496
 msgid "Trainings"
-msgstr ""
+msgstr "প্রশিক্ষণসমূহ"
 
 #: metrics/mapbox-personal-maps.php:30
 msgid "Trainings Maps"
-msgstr ""
+msgstr "প্রশিক্ষণ মানচিত্র"
 
 #: network/network-dashboard-integration.php:44
 msgid "New Training"
-msgstr ""
+msgstr "নতুন প্রশিক্ষণ"
 
 #: network/network-dashboard-integration.php:50
 msgid "Training Started"
-msgstr ""
+msgstr "প্রশিক্ষণ শুরু হয়েছে"
 
 #: network/network-dashboard-integration.php:56
 msgid "Training Completed"
-msgstr ""
+msgstr "প্রশিক্ষণ সম্পন্ন হয়েছে"
 
 #: post-type/module-base.php:28 post-type/module-base.php:495
 msgid "Training"
-msgstr ""
+msgstr "প্রশিক্ষণ"
 
 #: post-type/module-base.php:70
 msgid "Trainings Admin"
-msgstr ""
+msgstr "প্রশিক্ষণ প্রশাসক"
 
 #: post-type/module-base.php:71
 msgid "Admin access to all trainings"
-msgstr ""
+msgstr "সকল প্রশিক্ষণে প্রশাসক অ্যাক্সেস"
 
 #: post-type/module-base.php:76
 msgid "Multiplier"
-msgstr ""
+msgstr "গুণক"
 
 #: post-type/module-base.php:83
 msgid "Disciple.Tools Admin"
-msgstr ""
+msgstr "Disciple.Tools প্রশাসক"
 
 #: post-type/module-base.php:90
 msgid "Administrator"
-msgstr ""
+msgstr "প্রশাসক"
 
 #: post-type/module-base.php:127
 msgid "Tags"
-msgstr ""
+msgstr "ট্যাগ"
 
 #: post-type/module-base.php:128
 msgctxt "Optional Documentation"
 msgid ""
 "A useful way to group related items and can be used to filter the records"
 msgstr ""
+"সম্পর্কিত আইটেমগুলি গোষ্ঠীবদ্ধ করার একটি কার্যকর উপায় এবং রেকর্ড ফিল্টার করতে ব্যবহার "
+"করা যেতে পারে"
 
 #: post-type/module-base.php:135
 msgid "Follow"
-msgstr ""
+msgstr "অনুসরণ করুন"
 
 #: post-type/module-base.php:142
 msgid "Un-Follow"
-msgstr ""
+msgstr "অনুসরণ বন্ধ করুন"
 
 #: post-type/module-base.php:148
 msgid "Tasks"
-msgstr ""
+msgstr "কাজ"
 
 #: post-type/module-base.php:162
 msgctxt "Training Status label"
 msgid "New"
-msgstr ""
+msgstr "নতুন"
 
 #: post-type/module-base.php:163
 msgctxt "Training Status field description"
 msgid "New training added to the system"
-msgstr ""
+msgstr "সিস্টেমে নতুন প্রশিক্ষণ যোগ করা হয়েছে"
 
 #: post-type/module-base.php:167
 msgctxt "Training Status label"
 msgid "Proposed"
-msgstr ""
+msgstr "প্রস্তাবিত"
 
 #: post-type/module-base.php:168
 msgctxt "Training Status field description"
 msgid "This training has been proposed and is in initial conversations"
-msgstr ""
+msgstr "এই প্রশিক্ষণটি প্রস্তাবিত হয়েছে এবং প্রাথমিক আলোচনায় রয়েছে"
 
 #: post-type/module-base.php:172
 msgctxt "Training Status label"
 msgid "Scheduled"
-msgstr ""
+msgstr "নির্ধারিত"
 
 #: post-type/module-base.php:173
 msgctxt "Training Status field description"
 msgid "This training is confirmed, on the calendar."
-msgstr ""
+msgstr "এই প্রশিক্ষণটি নিশ্চিত করা হয়েছে, ক্যালেন্ডারে রয়েছে।"
 
 #: post-type/module-base.php:177
 msgctxt "Training Status label"
 msgid "In Progress"
-msgstr ""
+msgstr "চলমান"
 
 #: post-type/module-base.php:178
 msgctxt "Training Status field description"
 msgid "This training is confirmed, on the calendar, or currently active."
-msgstr ""
+msgstr "এই প্রশিক্ষণটি নিশ্চিত করা হয়েছে, ক্যালেন্ডারে রয়েছে, অথবা বর্তমানে সক্রিয়।"
 
 #: post-type/module-base.php:182
 msgctxt "Training Status label"
 msgid "Complete"
-msgstr ""
+msgstr "সম্পন্ন"
 
 #: post-type/module-base.php:183
 msgctxt "Training Status field description"
 msgid "This training has successfully completed"
-msgstr ""
+msgstr "এই প্রশিক্ষণটি সফলভাবে সম্পন্ন হয়েছে"
 
 #: post-type/module-base.php:187
 msgctxt "Training Status label"
 msgid "Paused"
-msgstr ""
+msgstr "স্থগিত"
 
 #: post-type/module-base.php:188
 msgctxt "Training Status field description"
@@ -149,29 +151,30 @@ msgid ""
 "This contact is currently on hold. It has potential of getting scheduled in "
 "the future."
 msgstr ""
+"এই যোগাযোগটি বর্তমানে স্থগিত রয়েছে। ভবিষ্যতে নির্ধারিত হওয়ার সম্ভাবনা রয়েছে।"
 
 #: post-type/module-base.php:192
 msgctxt "Training Status label"
 msgid "Closed"
-msgstr ""
+msgstr "বন্ধ"
 
 #: post-type/module-base.php:193
 msgctxt "Training Status field description"
 msgid "This training is no longer going to happen."
-msgstr ""
+msgstr "এই প্রশিক্ষণটি আর হবে না।"
 
 #: post-type/module-base.php:201
 msgid "Assigned To"
-msgstr ""
+msgstr "নির্ধারিত"
 
 #: post-type/module-base.php:202
 msgid ""
 "Select the main person who is responsible for reporting on this training."
-msgstr ""
+msgstr "এই প্রশিক্ষণের প্রতিবেদনের জন্য দায়ী প্রধান ব্যক্তিকে নির্বাচন করুন।"
 
 #: post-type/module-base.php:209
 msgid "Training Coach / Church Planter"
-msgstr ""
+msgstr "প্রশিক্ষণ প্রশিক্ষক / মণ্ডলী স্থাপনকারী"
 
 #: post-type/module-base.php:210
 msgctxt "Optional Documentation"
@@ -180,58 +183,61 @@ msgid ""
 "be assigned to a training while multiple people can be coaches / church "
 "planters of this training."
 msgstr ""
+"যে ব্যক্তি এই প্রশিক্ষণ স্থাপন করেছেন এবং/অথবা প্রশিক্ষণ দিচ্ছেন। একটি প্রশিক্ষণে "
+"শুধুমাত্র একজন ব্যক্তি নির্ধারিত হতে পারেন যেখানে একাধিক ব্যক্তি এই প্রশিক্ষণের "
+"প্রশিক্ষক / মণ্ডলী স্থাপনকারী হতে পারেন।"
 
 #: post-type/module-base.php:222
 msgid "Requires Update"
-msgstr ""
+msgstr "আপডেট প্রয়োজন"
 
 #: post-type/module-base.php:228
 msgid "Video Link"
-msgstr ""
+msgstr "ভিডিও লিঙ্ক"
 
 #: post-type/module-base.php:229
 msgctxt "Optional Documentation"
 msgid "Link to video chat service"
-msgstr ""
+msgstr "ভিডিও চ্যাট সেবার লিঙ্ক"
 
 #: post-type/module-base.php:236
 msgid "Notes"
-msgstr ""
+msgstr "নোট"
 
 #: post-type/module-base.php:237
 msgctxt "Optional Documentation"
 msgid "Notes on when the trainings will happen"
-msgstr ""
+msgstr "প্রশিক্ষণ কখন হবে সে সম্পর্কে নোট"
 
 #: post-type/module-base.php:246 post-type/module-base.php:509
 msgid "Meeting Times"
-msgstr ""
+msgstr "সভার সময়"
 
 #: post-type/module-base.php:295 post-type/module-base.php:304
 msgid "Locations"
-msgstr ""
+msgstr "অবস্থান"
 
 #: post-type/module-base.php:296 post-type/module-base.php:305
 msgctxt "Optional Documentation"
 msgid "The general location where this contact is located."
-msgstr ""
+msgstr "এই যোগাযোগটি যে সাধারণ অবস্থানে রয়েছে।"
 
 #: post-type/module-base.php:313
 msgid "Address"
-msgstr ""
+msgstr "ঠিকানা"
 
 #: post-type/module-base.php:333
 msgid "Parent Training"
-msgstr ""
+msgstr "মূল প্রশিক্ষণ"
 
 #: post-type/module-base.php:334
 msgctxt "Optional Documentation"
 msgid "A training that launched this training."
-msgstr ""
+msgstr "যে প্রশিক্ষণ থেকে এই প্রশিক্ষণটি শুরু হয়েছে।"
 
 #: post-type/module-base.php:344
 msgid "Peer Training"
-msgstr ""
+msgstr "সমকক্ষ প্রশিক্ষণ"
 
 #: post-type/module-base.php:345
 msgctxt "Optional Documentation"
@@ -239,46 +245,48 @@ msgid ""
 "A related training that isn't a parent/child in relationship. It might "
 "indicate trainings that collaborate, are about to merge, recently split, etc."
 msgstr ""
+"একটি সম্পর্কিত প্রশিক্ষণ যা মূল/শাখা সম্পর্কে নেই। এটি এমন প্রশিক্ষণগুলি নির্দেশ করতে "
+"পারে যা সহযোগিতা করে, একত্রিত হতে চলেছে, সম্প্রতি বিভক্ত হয়েছে, ইত্যাদি।"
 
 #: post-type/module-base.php:355
 msgid "Child Training"
-msgstr ""
+msgstr "শাখা প্রশিক্ষণ"
 
 #: post-type/module-base.php:356
 msgctxt "Optional Documentation"
 msgid "A training that has been birthed out of this training."
-msgstr ""
+msgstr "এই প্রশিক্ষণ থেকে জন্ম নেওয়া একটি প্রশিক্ষণ।"
 
 #: post-type/module-base.php:366 post-type/module-base.php:508
 #: post-type/module-base.php:542
 msgid "Member List"
-msgstr ""
+msgstr "সদস্য তালিকা"
 
 #: post-type/module-base.php:367
 msgctxt "Optional Documentation"
 msgid "The contacts who are members of this training."
-msgstr ""
+msgstr "এই প্রশিক্ষণের সদস্য যোগাযোগগুলি।"
 
 #: post-type/module-base.php:377
 msgid "Leaders"
-msgstr ""
+msgstr "নেতৃবৃন্দ"
 
 #: post-type/module-base.php:387
 msgid "People Groups"
-msgstr ""
+msgstr "জনগোষ্ঠী"
 
 #: post-type/module-base.php:388
 msgctxt "Optional Documentation"
 msgid "The people trainings represented by this training."
-msgstr ""
+msgstr "এই প্রশিক্ষণ দ্বারা প্রতিনিধিত্বকারী জনগোষ্ঠীগুলি।"
 
 #: post-type/module-base.php:397
 msgid "Groups"
-msgstr ""
+msgstr "দল"
 
 #: post-type/module-base.php:409
 msgid "Member Count"
-msgstr ""
+msgstr "সদস্য সংখ্যা"
 
 #: post-type/module-base.php:410 post-type/module-base.php:417
 msgctxt "Optional Documentation"
@@ -288,49 +296,52 @@ msgid ""
 "manually to included people who may not be in the system but are also "
 "members of the training."
 msgstr ""
+"এই প্রশিক্ষণে সদস্য সংখ্যা। সদস্য তালিকায় নতুন সদস্য যোগ বা অপসারণ করলে এটি "
+"স্বয়ংক্রিয়ভাবে আপডেট হবে। সিস্টেমে নেই কিন্তু প্রশিক্ষণের সদস্য এমন ব্যক্তিদের অন্তর্ভুক্ত "
+"করতে এই সংখ্যাটি ম্যানুয়ালি পরিবর্তন করুন।"
 
 #: post-type/module-base.php:416
 msgid "Leader Count"
-msgstr ""
+msgstr "নেতা সংখ্যা"
 
 #: post-type/module-base.php:426
 msgid "Training as Leader"
-msgstr ""
+msgstr "নেতা হিসেবে প্রশিক্ষণ"
 
 #: post-type/module-base.php:427
 msgctxt "Optional Documentation"
 msgid "Leader of a training"
-msgstr ""
+msgstr "একটি প্রশিক্ষণের নেতা"
 
 #: post-type/module-base.php:438
 msgid "Training as Participant"
-msgstr ""
+msgstr "অংশগ্রহণকারী হিসেবে প্রশিক্ষণ"
 
 #: post-type/module-base.php:439
 msgctxt "Optional Documentation"
 msgid "Participant in a training."
-msgstr ""
+msgstr "একটি প্রশিক্ষণে অংশগ্রহণকারী।"
 
 #: post-type/module-base.php:510
 msgid "Other"
-msgstr ""
+msgstr "অন্যান্য"
 
 #: post-type/module-base.php:545
 msgid "Create"
-msgstr ""
+msgstr "তৈরি করুন"
 
 #: post-type/module-base.php:550
 msgid "Select"
-msgstr ""
+msgstr "নির্বাচন করুন"
 
 #: post-type/module-base.php:555
 msgid "To add new members, click on 'Create' or 'Select'."
-msgstr ""
+msgstr "নতুন সদস্য যোগ করতে, 'তৈরি করুন' বা 'নির্বাচন করুন'-এ ক্লিক করুন।"
 
 #: post-type/module-base.php:560
 msgctxt "Add members modal"
 msgid "Add members from existing contacts"
-msgstr ""
+msgstr "বিদ্যমান যোগাযোগ থেকে সদস্য যোগ করুন"
 
 #: post-type/module-base.php:561
 msgctxt "Add members modal"
@@ -338,135 +349,137 @@ msgid ""
 "In the 'Member List' field, type the name of an existing contact to add them "
 "to this training."
 msgstr ""
+"'সদস্য তালিকা' ক্ষেত্রে, এই প্রশিক্ষণে যোগ করতে একটি বিদ্যমান যোগাযোগের নাম টাইপ "
+"করুন।"
 
 #: post-type/module-base.php:573
 msgid "Close"
-msgstr ""
+msgstr "বন্ধ করুন"
 
 #: post-type/module-base.php:713
 msgid "Removed %1$s: {%2$s}"
-msgstr ""
+msgstr "%1$s সরানো হয়েছে: {%2$s}"
 
 #: post-type/module-base.php:716
 msgid "Added %1$s: {%2$s}"
-msgstr ""
+msgstr "%1$s যোগ করা হয়েছে: {%2$s}"
 
 #: post-type/module-base.php:719
 msgid "Updated %1$s: {%2$s} to {%3$s}"
-msgstr ""
+msgstr "%1$s আপডেট করা হয়েছে: {%2$s} থেকে {%3$s}"
 
 #: post-type/module-base.php:804
 msgctxt "List Filters"
 msgid "Assigned to me"
-msgstr ""
+msgstr "আমাকে নির্ধারিত"
 
 #: post-type/module-base.php:812
 msgctxt "List Filters"
 msgid "All"
-msgstr ""
+msgstr "সকল"
 
 #: post-type/module-base.php:871
 msgctxt "List Filters"
 msgid "Default Filters"
-msgstr ""
+msgstr "ডিফল্ট ফিল্টার"
 
 #: post-type/module-public-calendar.php:85
 msgid "Reports"
-msgstr ""
+msgstr "প্রতিবেদন"
 
 #: post-type/module-public-calendar.php:121
 msgid "Total Groups"
-msgstr ""
+msgstr "মোট দল"
 
 #: post-type/module-public-calendar.php:122
 msgid "Total Baptisms"
-msgstr ""
+msgstr "মোট বাপ্তিস্ম"
 
 #: post-type/module-public-calendar.php:123
 msgid "Countries"
-msgstr ""
+msgstr "দেশসমূহ"
 
 #: post-type/module-public-calendar.php:124
 msgid "States"
-msgstr ""
+msgstr "রাজ্যসমূহ"
 
 #: post-type/module-public-calendar.php:125
 msgid "Counties"
-msgstr ""
+msgstr "জেলাসমূহ"
 
 #: post-type/module-public-calendar.php:432
 #: post-type/module-registration.php:385
 msgid "Add"
-msgstr ""
+msgstr "যোগ করুন"
 
 #: post-type/module-registration.php:31
 msgid "Magic Links"
-msgstr ""
+msgstr "ম্যাজিক লিঙ্ক"
 
 #: post-type/module-registration.php:59
 msgid "copy link"
-msgstr ""
+msgstr "লিঙ্ক কপি করুন"
 
 #: post-type/module-registration.php:61
 msgid "edit form"
-msgstr ""
+msgstr "ফর্ম সম্পাদনা করুন"
 
 #: post-type/module-registration.php:63
 msgid "report"
-msgstr ""
+msgstr "প্রতিবেদন"
 
 #: post-type/module-registration.php:67
 msgid "create link"
-msgstr ""
+msgstr "লিঙ্ক তৈরি করুন"
 
 #: post-type/module-registration.php:114
 msgid "link"
-msgstr ""
+msgstr "লিঙ্ক"
 
 #: post-type/module-registration.php:116
 msgid "show on calendar"
-msgstr ""
+msgstr "ক্যালেন্ডারে দেখান"
 
 #: post-type/module-registration.php:118
 msgid "open registration"
-msgstr ""
+msgstr "নিবন্ধন খুলুন"
 
 #: post-type/module-registration.php:265
 msgid "add"
-msgstr ""
+msgstr "যোগ করুন"
 
 #: post-type/module-registration.php:266
 msgid "Use"
-msgstr ""
+msgstr "ব্যবহার করুন"
 
 #: post-type/module-registration.php:267 post-type/module-registration.php:695
 msgid "Search Location"
-msgstr ""
+msgstr "অবস্থান খুঁজুন"
 
 #: post-type/module-registration.php:268
 msgid "Delete Location"
-msgstr ""
+msgstr "অবস্থান মুছুন"
 
 #: post-type/module-registration.php:269
 msgid "Open Mapping"
-msgstr ""
+msgstr "ম্যাপিং খুলুন"
 
 #: post-type/module-registration.php:270
 msgid "clear"
-msgstr ""
+msgstr "মুছুন"
 
 #: post-type/module-registration.php:384
 msgid "Register for Training"
-msgstr ""
+msgstr "প্রশিক্ষণের জন্য নিবন্ধন করুন"
 
 #: post-type/module-registration.php:386
 msgid "Join Training"
-msgstr ""
+msgstr "প্রশিক্ষণে যোগ দিন"
 
 #: post-type/module-registration.php:387
 msgid "Join in"
-msgstr ""
+msgstr "যোগ দিন"
 
 #: post-type/module-registration.php:700
 msgid "Clear"
-msgstr ""
+msgstr "মুছুন"

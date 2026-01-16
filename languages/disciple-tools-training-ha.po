@@ -22,36 +22,31 @@ msgstr "Horarwa"
 
 #: metrics/mapbox-personal-maps.php:30
 msgid "Trainings Maps"
-msgstr "Horar da Taswirori"
+msgstr "Taswirar Horarwa"
 
 #: network/network-dashboard-integration.php:44
 msgid "New Training"
-msgstr ""
+msgstr "Sabon Horo"
 
 #: network/network-dashboard-integration.php:50
 msgid "Training Started"
-msgstr ""
+msgstr "An Fara Horo"
 
 #: network/network-dashboard-integration.php:56
 msgid "Training Completed"
-msgstr ""
+msgstr "An Kammala Horo"
 
 #: post-type/module-base.php:28 post-type/module-base.php:495
 msgid "Training"
 msgstr "Horarwa"
 
 #: post-type/module-base.php:70
-#, fuzzy
-#| msgid "Trainings"
 msgid "Trainings Admin"
-msgstr "Horarwa"
+msgstr "Mai Gudanar da Horarwa"
 
 #: post-type/module-base.php:71
-#, fuzzy
-#| msgctxt "Optional Documentation"
-#| msgid "Leader of a training"
 msgid "Admin access to all trainings"
-msgstr "Jagoran horo"
+msgstr "Damar shiga duk horarwa ta mai gudanarwa"
 
 #: post-type/module-base.php:76
 msgid "Multiplier"
@@ -74,6 +69,8 @@ msgctxt "Optional Documentation"
 msgid ""
 "A useful way to group related items and can be used to filter the records"
 msgstr ""
+"Hanya mai amfani don haɗa abubuwa masu alaƙa kuma ana iya amfani da shi don "
+"tace bayanai"
 
 #: post-type/module-base.php:135
 msgid "Follow"
@@ -81,11 +78,11 @@ msgstr "Bi"
 
 #: post-type/module-base.php:142
 msgid "Un-Follow"
-msgstr "Un-Bi"
+msgstr "Daina Bi"
 
 #: post-type/module-base.php:148
 msgid "Tasks"
-msgstr "Ksawainiya"
+msgstr "Ayyuka"
 
 #: post-type/module-base.php:162
 msgctxt "Training Status label"
@@ -95,7 +92,7 @@ msgstr "Sabo"
 #: post-type/module-base.php:163
 msgctxt "Training Status field description"
 msgid "New training added to the system"
-msgstr "Sabon horo da aka kara wa tsarin"
+msgstr "Sabon horo da aka ƙara wa tsarin"
 
 #: post-type/module-base.php:167
 msgctxt "Training Status label"
@@ -110,7 +107,7 @@ msgstr "An gabatar da wannan horon kuma yana cikin tattaunawar farko"
 #: post-type/module-base.php:172
 msgctxt "Training Status label"
 msgid "Scheduled"
-msgstr "Tsara"
+msgstr "An Tsara"
 
 #: post-type/module-base.php:173
 msgctxt "Training Status field description"
@@ -120,7 +117,7 @@ msgstr "An tabbatar da wannan horon, a kalanda."
 #: post-type/module-base.php:177
 msgctxt "Training Status label"
 msgid "In Progress"
-msgstr "Ana kai"
+msgstr "Ana Ci Gaba"
 
 #: post-type/module-base.php:178
 msgctxt "Training Status field description"
@@ -173,7 +170,7 @@ msgstr ""
 
 #: post-type/module-base.php:209
 msgid "Training Coach / Church Planter"
-msgstr "Kocin Horas / Mai Tsaran Coci"
+msgstr "Kocin Horo / Mai Dasa Coci"
 
 #: post-type/module-base.php:210
 msgctxt "Optional Documentation"
@@ -184,11 +181,11 @@ msgid ""
 msgstr ""
 "Mutumin da ya dasa da / ko yake horar da wannan horon. Mutum ɗaya ne kawai "
 "za a iya sanya wa horo yayin da mutane da yawa za su iya zama masu koyarwa / "
-"magirtan cocin wannan horon."
+"masu dasa cocin wannan horon."
 
 #: post-type/module-base.php:222
 msgid "Requires Update"
-msgstr "Yana buƙatar Updateaukakawa"
+msgstr "Yana Buƙatar Sabuntawa"
 
 #: post-type/module-base.php:228
 msgid "Video Link"
@@ -236,7 +233,7 @@ msgstr "Horon da ya ƙaddamar da wannan horon."
 
 #: post-type/module-base.php:344
 msgid "Peer Training"
-msgstr "Horar da Pean’uwa"
+msgstr "Horon Takwarorin"
 
 #: post-type/module-base.php:345
 msgctxt "Optional Documentation"
@@ -273,7 +270,7 @@ msgstr "Shugabanni"
 
 #: post-type/module-base.php:387
 msgid "People Groups"
-msgstr "Groupungiyoyin Mutane"
+msgstr "Ƙungiyoyin Mutane"
 
 #: post-type/module-base.php:388
 msgctxt "Optional Documentation"
@@ -282,11 +279,11 @@ msgstr "Horon mutane da wannan horon ya wakilta."
 
 #: post-type/module-base.php:397
 msgid "Groups"
-msgstr "Sungiyoyi"
+msgstr "Ƙungiyoyi"
 
 #: post-type/module-base.php:409
 msgid "Member Count"
-msgstr "Countidaya Memba"
+msgstr "Adadin Membobi"
 
 #: post-type/module-base.php:410 post-type/module-base.php:417
 msgctxt "Optional Documentation"
@@ -302,7 +299,7 @@ msgstr ""
 
 #: post-type/module-base.php:416
 msgid "Leader Count"
-msgstr "Jagoran Jagora"
+msgstr "Adadin Shugabanni"
 
 #: post-type/module-base.php:426
 msgid "Training as Leader"
@@ -328,7 +325,7 @@ msgstr "Sauran"
 
 #: post-type/module-base.php:545
 msgid "Create"
-msgstr "Createirƙira"
+msgstr "Ƙirƙira"
 
 #: post-type/module-base.php:550
 msgid "Select"
@@ -336,12 +333,12 @@ msgstr "Zaɓi"
 
 #: post-type/module-base.php:555
 msgid "To add new members, click on 'Create' or 'Select'."
-msgstr "Don ƙara sabbin membobi, danna 'Createirƙiri' ko 'Zaɓi'."
+msgstr "Don ƙara sabbin membobi, danna 'Ƙirƙira' ko 'Zaɓi'."
 
 #: post-type/module-base.php:560
 msgctxt "Add members modal"
 msgid "Add members from existing contacts"
-msgstr "Ara membobi daga lambobin da ke yanzu"
+msgstr "Ƙara membobi daga lambobin da ke yanzu"
 
 #: post-type/module-base.php:561
 msgctxt "Add members modal"
@@ -349,30 +346,24 @@ msgid ""
 "In the 'Member List' field, type the name of an existing contact to add them "
 "to this training."
 msgstr ""
-"A cikin 'Lissafin Memba', rubuta sunan lambar data kasance don ƙara su zuwa "
+"A cikin 'Jerin Membobi', rubuta sunan lambar da ta kasance don ƙara su zuwa "
 "wannan horon."
 
 #: post-type/module-base.php:573
 msgid "Close"
-msgstr "Kusa"
+msgstr "Rufe"
 
 #: post-type/module-base.php:713
-#, fuzzy
-#| msgid "Removed %1$s: %2$s"
 msgid "Removed %1$s: {%2$s}"
-msgstr "An cire %1$s: %2$s"
+msgstr "An cire %1$s: {%2$s}"
 
 #: post-type/module-base.php:716
-#, fuzzy
-#| msgid "Added %1$s: %2$s"
 msgid "Added %1$s: {%2$s}"
-msgstr "An ƙara %1$s: %2$s"
+msgstr "An ƙara %1$s: {%2$s}"
 
 #: post-type/module-base.php:719
-#, fuzzy
-#| msgid "Updated %1$s: %2$s to %3$s"
 msgid "Updated %1$s: {%2$s} to {%3$s}"
-msgstr "An sabunta %1$s: %2$s zuwa %3$s"
+msgstr "An sabunta %1$s: {%2$s} zuwa {%3$s}"
 
 #: post-type/module-base.php:804
 msgctxt "List Filters"
@@ -387,7 +378,7 @@ msgstr "Duk"
 #: post-type/module-base.php:871
 msgctxt "List Filters"
 msgid "Default Filters"
-msgstr ""
+msgstr "Tacewa ta Asali"
 
 #: post-type/module-public-calendar.php:85
 msgid "Reports"
@@ -395,7 +386,7 @@ msgstr "Rahotanni"
 
 #: post-type/module-public-calendar.php:121
 msgid "Total Groups"
-msgstr "Jimlar sungiyoyi"
+msgstr "Jimlar Ƙungiyoyi"
 
 #: post-type/module-public-calendar.php:122
 msgid "Total Baptisms"
@@ -403,7 +394,7 @@ msgstr "Jimlar Baftisma"
 
 #: post-type/module-public-calendar.php:123
 msgid "Countries"
-msgstr "Kasashe"
+msgstr "Ƙasashe"
 
 #: post-type/module-public-calendar.php:124
 msgid "States"
@@ -411,24 +402,24 @@ msgstr "Jihohi"
 
 #: post-type/module-public-calendar.php:125
 msgid "Counties"
-msgstr "Tiesananan hukumomi"
+msgstr "Ƙananan Hukumomi"
 
 #: post-type/module-public-calendar.php:432
 #: post-type/module-registration.php:385
 msgid "Add"
-msgstr "Ara"
+msgstr "Ƙara"
 
 #: post-type/module-registration.php:31
 msgid "Magic Links"
-msgstr ""
+msgstr "Hanyoyin Sihiri"
 
 #: post-type/module-registration.php:59
 msgid "copy link"
-msgstr "kwafin mahada"
+msgstr "kwafin hanyar haɗi"
 
 #: post-type/module-registration.php:61
 msgid "edit form"
-msgstr "gyara tsari"
+msgstr "gyara fom"
 
 #: post-type/module-registration.php:63
 msgid "report"
@@ -440,7 +431,7 @@ msgstr "ƙirƙirar hanyar haɗi"
 
 #: post-type/module-registration.php:114
 msgid "link"
-msgstr "mahada"
+msgstr "hanyar haɗi"
 
 #: post-type/module-registration.php:116
 msgid "show on calendar"
@@ -448,7 +439,7 @@ msgstr "nuna a kalanda"
 
 #: post-type/module-registration.php:118
 msgid "open registration"
-msgstr "bude rajista "
+msgstr "buɗe rajista"
 
 #: post-type/module-registration.php:265
 msgid "add"
@@ -472,7 +463,7 @@ msgstr "Buɗe Taswira"
 
 #: post-type/module-registration.php:270
 msgid "clear"
-msgstr "bayyanannu"
+msgstr "share"
 
 #: post-type/module-registration.php:384
 msgid "Register for Training"
@@ -480,7 +471,7 @@ msgstr "Yi rijista don horo"
 
 #: post-type/module-registration.php:386
 msgid "Join Training"
-msgstr "Shiga Training"
+msgstr "Shiga Horo"
 
 #: post-type/module-registration.php:387
 msgid "Join in"
@@ -488,808 +479,4 @@ msgstr "Shiga ciki"
 
 #: post-type/module-registration.php:700
 msgid "Clear"
-msgstr "Bayyanannu"
-
-#~ msgid "Apps"
-#~ msgstr "Ayyuka"
-
-#, fuzzy
-#~| msgid "Disciple Tools - Training"
-#~ msgid "Disciple.Tools - Training"
-#~ msgstr "Kayan Almajirai - Horarwa"
-
-#~ msgid "https://github.com/DiscipleTools/disciple-tools-training"
-#~ msgstr "https://github.com/DiscipleTools/disciple-tools-training"
-
-#, fuzzy
-#~| msgid ""
-#~| "Disciple Tools Training Extension adds recording of trainings and cross "
-#~| "reference them with contacts, groups, and locations."
-#~ msgid ""
-#~ "Disciple.Tools Training Extension adds recording of trainings and cross "
-#~ "reference them with contacts, groups, and locations."
-#~ msgstr ""
-#~ "Fadada Kayan Horar da Almajirai yana kara rikodi na horo da gicciye su "
-#~ "tare da abokan hulɗa, ƙungiyoyi, da wurare."
-
-#~ msgid "Whoah, partner!"
-#~ msgstr "Kai, abokin tarayya!"
-
-#~ msgid "Method does not exist."
-#~ msgstr "Hanyar babu."
-
-#~ msgid "Dispatcher"
-#~ msgstr "Dispatcher"
-
-#~ msgid "Members"
-#~ msgstr "Membobi"
-
-#~ msgid "Contacts"
-#~ msgstr "Lambobin sadarwa"
-
-#~ msgid "Coaches"
-#~ msgstr "Masu horarwa"
-
-#~ msgid "Planted by"
-#~ msgstr "Shuka ta"
-
-#~ msgid "Planting"
-#~ msgstr "Shuka"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid ""
-#~ "A useful way to training related items and can help training contacts "
-#~ "associated with noteworthy characteristics. e.g. business owner, sports "
-#~ "lover. The contacts can also be filtered using these tags."
-#~ msgstr ""
-#~ "Hanya mai amfani don horar da abubuwa masu alaƙa kuma na iya taimakawa "
-#~ "lambobin horo waɗanda ke da alaƙa da halaye na musamman. mis mai "
-#~ "kasuwanci, masoyin wasanni. Hakanan ana iya tace lambobin ta amfani da "
-#~ "waɗannan alamun."
-
-#~ msgctxt "input field placeholder"
-#~ msgid "Search Users"
-#~ msgstr "Masu Amfani da Bincike"
-
-#~ msgctxt "Search 'something'"
-#~ msgid "Search %s"
-#~ msgstr "Bincik %s"
-
-#~ msgid "Extensions (DT)"
-#~ msgstr "Fadada (DT)"
-
-#~ msgid "Network Dashboard"
-#~ msgstr "Dashboard na hanyar sadarwa"
-
-#~ msgid "You do not have sufficient permissions to access this page."
-#~ msgstr "Ba ku da isassun izini don isa ga wannan shafin."
-
-#~ msgid "nav-tab-active"
-#~ msgstr "nav-tab-mai aiki"
-
-#~ msgid "Network Dashboard Viewer"
-#~ msgstr "Mai Duba Dashboard na hanyar sadarwa"
-
-#~ msgid "ID"
-#~ msgstr "ID"
-
-#~ msgid "Site"
-#~ msgstr "Shafin"
-
-#~ msgid "Users"
-#~ msgstr "Masu amfani"
-
-#~ msgid "Timestamp"
-#~ msgstr "Lokaci"
-
-#~ msgid "Visit"
-#~ msgstr "Ziyarci"
-
-#~ msgid "View"
-#~ msgstr "Duba"
-
-#~ msgid "Active Snapshot"
-#~ msgstr "Hoton aiki"
-
-#~ msgid "Generations"
-#~ msgstr "Zamani"
-
-#~ msgid "Follow-up Funnel"
-#~ msgstr "Biyon Biyu"
-
-#~ msgid "On-Going Meetings"
-#~ msgstr "Taron kan Gaba"
-
-#~ msgid "Coaching"
-#~ msgstr "Koyawa"
-
-#~ msgid "Baptized"
-#~ msgstr "Baftisma"
-
-#~ msgid "Active Groups"
-#~ msgstr "Groupungiyoyi masu Aiki"
-
-#~ msgid "Church"
-#~ msgstr "Coci"
-
-#~ msgid "Health Metrics"
-#~ msgstr "Kiwon Lafiya"
-
-#~ msgid "Total Users"
-#~ msgstr "Jimlar Masu Amfani"
-
-#~ msgid "Responders"
-#~ msgstr "Masu amsawa"
-
-#~ msgid "Dispatchers"
-#~ msgstr "Masu watsawa"
-
-#~ msgid "Multipliers"
-#~ msgstr "Masu ninkawa"
-
-#~ msgid "Admins"
-#~ msgstr "Admins"
-
-#~ msgid "User Login Activity"
-#~ msgstr "Ayyukan Shiga Mai amfani"
-
-#~ msgid "Users Active in the Last 30 Days"
-#~ msgstr "Masu Amfani Suna Aiki A Kwanaki 30 Na Lastarshe"
-
-#~ msgid "Practicing"
-#~ msgstr "Yin aiki"
-
-#~ msgid "Not Practicing"
-#~ msgstr "Ba Yin Aiki ba"
-
-#~ msgid "Chart Funnel"
-#~ msgstr "Sashin gishiri"
-
-#~ msgid "Contact"
-#~ msgstr "Saduwa"
-
-#~ msgid "Group"
-#~ msgstr "Rukuni"
-
-#~ msgid "User"
-#~ msgstr "Mai amfani"
-
-#~ msgid "Sites"
-#~ msgstr "Shafuka"
-
-#~ msgid "Baptisms"
-#~ msgstr "Baftisma"
-
-#~ msgid "Churches"
-#~ msgstr "Ikklisiya"
-
-#~ msgid "Location"
-#~ msgstr "Wuri"
-
-#~ msgid "Types"
-#~ msgstr "Iri"
-
-#~ msgid "modify filter"
-#~ msgstr "gyara tace"
-
-#~ msgid "Filter List"
-#~ msgstr "Jerin Tace"
-
-#~ msgid "reset data"
-#~ msgstr "sake saita bayanai"
-
-#~ msgid "Status"
-#~ msgstr "Matsayi"
-
-#~ msgid "Status - All"
-#~ msgstr "Matsayi - Duk"
-
-#~ msgid "Zoom Level"
-#~ msgstr "Matakan zuƙowa"
-
-#~ msgid "Auto Zoom"
-#~ msgstr "Zuƙowa ta atomatik"
-
-#~ msgid "World"
-#~ msgstr "Duniya"
-
-#~ msgid "Country"
-#~ msgstr "Kasa"
-
-#~ msgid "State"
-#~ msgstr "Jiha"
-
-#~ msgid "Active Contacts"
-#~ msgstr "Lambobin aiki"
-
-#~ msgid "Paused Contacts"
-#~ msgstr "Dakatattun Lambobin"
-
-#~ msgid "Closed Contacts"
-#~ msgstr "Rufe Lambobin sadarwa"
-
-#~ msgid "Total Contacts"
-#~ msgstr "Jimlar Lambobi"
-
-#~ msgid "New Contacts"
-#~ msgstr "Sabuwar Lambobin sadarwa"
-
-#~ msgid "New Baptisms"
-#~ msgstr "Sabon Baftisma"
-
-#~ msgid "Baptism Generations"
-#~ msgstr "Baftisma Zamani"
-
-#~ msgid "Select Location"
-#~ msgstr "Zaɓi Wuri"
-
-#~ msgid "New Groups"
-#~ msgstr "Sabbin Kungiyoyi"
-
-#~ msgid "Pre-Group"
-#~ msgstr "Pre-Rukuni"
-
-#~ msgid "Pre-Groups"
-#~ msgstr "Pre-Rukuni"
-
-#~ msgid "Last 7 Days"
-#~ msgstr "Kwanaki 7 da suka gabata"
-
-#~ msgid "Last 30 Days"
-#~ msgstr "Kwanaki 30 da suka gabata"
-
-#~ msgid "Last 60 Days"
-#~ msgstr "Kwanaki 60 da suka gabata"
-
-#~ msgid "Last 12 Months"
-#~ msgstr "Watanni 12 da suka gabata"
-
-#~ msgid "Last 24 Months"
-#~ msgstr "Watanni 24 da suka gabata"
-
-#~ msgid "This Year"
-#~ msgstr "Wannan shekara"
-
-#~ msgid "Activity Map"
-#~ msgstr "Taswirar Ayyuka"
-
-#~ msgid "Stats"
-#~ msgstr "Stididdiga"
-
-#~ msgid "Activities"
-#~ msgstr "Ayyuka"
-
-#~ msgid "Actions"
-#~ msgstr "Ayyuka"
-
-#~ msgid "By Action Type"
-#~ msgstr "Ta Hanyar Aiki"
-
-#~ msgid "Key"
-#~ msgstr "Mabuɗi"
-
-#~ msgid "Name"
-#~ msgstr "Suna"
-
-#~ msgid "Total Activities"
-#~ msgstr "Jimlar Ayyuka"
-
-#~ msgid "Feed"
-#~ msgstr "Ciyar"
-
-#~ msgid "Time"
-#~ msgstr "Lokaci"
-
-#~ msgid "Result Limit"
-#~ msgstr "Sakamakon Sakamakon"
-
-#~ msgid "uncheck"
-#~ msgstr "dubawa"
-
-#~ msgid "Home"
-#~ msgstr "Gida"
-
-#~ msgid "Events (30 Days)"
-#~ msgstr "Ayyuka (Kwanaki 30)"
-
-#~ msgid "All Active/Inactive"
-#~ msgstr "Duk Mai Aiki / Aiki"
-
-#~ msgid "Hover Map"
-#~ msgstr "Tsayawa Taswira"
-
-#~ msgid "Network"
-#~ msgstr "Hanyar sadarwa"
-
-#~ msgid "Map"
-#~ msgstr "Taswira"
-
-#~ msgid "Log"
-#~ msgstr "Shiga ciki"
-
-#~ msgid "Activity"
-#~ msgstr "Ayyuka"
-
-#~ msgid "Area Maps"
-#~ msgstr "Taswirar Yanki"
-
-#~ msgid "Location List"
-#~ msgstr "Jerin Wuri"
-
-#~ msgid "Maps"
-#~ msgstr "Taswirori"
-
-#~ msgid "Site Reports"
-#~ msgstr "Rahotannin Yanar Gizo"
-
-#~ msgid "Statistics"
-#~ msgstr "Ididdiga"
-
-#~ msgid "Network Dashboard Transfer Both Ways"
-#~ msgstr "Canja wurin Dashboard na Hanyar Sadarwa Duk Hanyoyi"
-
-#~ msgid "Network Dashboard Receiving Only"
-#~ msgstr "Karɓar Gidan Yanan Sadarwa Kawai"
-
-#~ msgid "Network Dashboard Sending Only"
-#~ msgstr "Aika Dashboard na Hanyar Sadarwa Kawai"
-
-#~ msgid "Network Dashboard Site Profile"
-#~ msgstr "Bayanin Bayanan Gidan yanar gizon Dashboard"
-
-#~ msgid "Disciple Tools - Network Dashboard"
-#~ msgstr "Kayan aikin Almajirai - Dashboard na hanyar sadarwa"
-
-#~ msgid "Streams"
-#~ msgstr "Koguna"
-
-#~ msgid "Stream Maps"
-#~ msgstr "Taswirar Ruwa"
-
-#~ msgid "Streams Maps"
-#~ msgstr "Taswirar Ruwa"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid ""
-#~ "A useful way to stream related items and can help stream contacts "
-#~ "associated with noteworthy characteristics. e.g. business owner, sports "
-#~ "lover. The contacts can also be filtered using these tags."
-#~ msgstr ""
-#~ "Hanya mai amfani don watsa abubuwa masu alaƙa kuma na iya taimakawa "
-#~ "raƙuman lambobi waɗanda ke haɗe da halaye na abin lura. mis mai "
-#~ "kasuwanci, masoyin wasanni. Hakanan ana iya tace lambobin ta amfani da "
-#~ "waɗannan alamun."
-
-#~ msgctxt "Stream Status label"
-#~ msgid "New"
-#~ msgstr "Sabo"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "New stream added to the system"
-#~ msgstr "Sabon rafi ya kara zuwa tsarin"
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Model"
-#~ msgstr "Misali"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "This stream has been proposed and is in initial conversations"
-#~ msgstr "An gabatar da wannan rafin kuma yana cikin tattaunawa ta farko"
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Assist"
-#~ msgstr "Taimaka"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "This stream is confirmed, on the calendar."
-#~ msgstr "An tabbatar da wannan rafin, a kalanda."
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Watch"
-#~ msgstr "Kalli"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "This stream is confirmed, on the calendar, or currently active."
-#~ msgstr "An tabbatar da wannan rafin, a kalanda, ko yana aiki a halin yanzu."
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Leave"
-#~ msgstr "Bar"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "This stream has successfully completed"
-#~ msgstr "An gama kammala wannan rafin"
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Paused"
-#~ msgstr "Dakata"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid ""
-#~ "This contact is currently on hold. It has potential of getting scheduled "
-#~ "in the future."
-#~ msgstr ""
-#~ "Wannan lambar sadarwa a halin yanzu tana riƙe. Yana da damar yin tsarawa "
-#~ "a gaba."
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Closed"
-#~ msgstr "An rufe"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "This stream is no longer going to happen."
-#~ msgstr "Wannan rafin ba zai sake faruwa ba."
-
-#~ msgid ""
-#~ "Select the main person who is responsible for reporting on this stream."
-#~ msgstr ""
-#~ "Zaɓi babban mutumin da ke da alhakin bayar da rahoto game da wannan rafin."
-
-#~ msgctxt "Optional Documentation"
-#~ msgid ""
-#~ "The person who planted and/or is coaching this stream. Only one person "
-#~ "can be assigned to a stream while multiple people can be coaches / church "
-#~ "planters of this stream."
-#~ msgstr ""
-#~ "Mutumin da ya dasa da / ko yake horar da wannan rafin. Mutum ɗaya ne "
-#~ "kawai za a iya sanya shi zuwa rafi yayin da mutane da yawa na iya zama "
-#~ "masu koyarwa / magirtan cocin wannan rafin."
-
-#~ msgctxt "Optional Documentation"
-#~ msgid "The people streams represented by this stream."
-#~ msgstr "Kogunan mutane waɗanda wannan rafin ya wakilta."
-
-#~ msgid "Parent Stream"
-#~ msgstr "Rafin Iyaye"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid "A stream that launched this stream."
-#~ msgstr "Rafi wanda ya ƙaddamar da wannan rafin."
-
-#~ msgid "Peer Streams"
-#~ msgstr "Kogunan tsara"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid ""
-#~ "A related stream that isn't a parent/child in relationship. It might "
-#~ "indicate streams that collaborate, are about to merge, recently split, "
-#~ "etc."
-#~ msgstr ""
-#~ "Rafi mai dangantaka wanda ba mahaifa / ɗa bane cikin dangantaka. Yana iya "
-#~ "nuna magudanan ruwa waɗanda suka yi aiki tare, suna gab da haɗuwa, kwanan "
-#~ "nan raba, da dai sauransu."
-
-#~ msgid "Child Streams"
-#~ msgstr "Kogunan Yara"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid "A stream that has been birthed out of this stream."
-#~ msgstr "Wani rafi ne wanda aka ɗauke shi daga wannan rafin."
-
-#~ msgid "Leader in Stream"
-#~ msgstr "Jagora a Rafi"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid "Leader of a stream"
-#~ msgstr "Jagoran rafi"
-
-#~ msgid "Key Disciple in Stream"
-#~ msgstr "Almajiri Mai Muhimmanci a Rafi"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid "Disciple in a stream."
-#~ msgstr "Almajiri a rafi."
-
-#~ msgid "Connections"
-#~ msgstr "Haɗi"
-
-#~ msgid "Add Report"
-#~ msgstr "Reportara rahoto"
-
-#~ msgid "Disciple Tools - Streams"
-#~ msgstr "Almajiran Kayan aiki - Rafi"
-
-#~ msgid "Pre-Group Generations"
-#~ msgstr "Tsarin Groupungiyoyi"
-
-#~ msgid "Group Generations"
-#~ msgstr "Geneungiyoyin Groupungiya"
-
-#~ msgid "Church Generations"
-#~ msgstr "Tsarin Ikklisiya"
-
-#~ msgid "Team Generations"
-#~ msgstr "Geneungiyoyin Teamungiyoyi"
-
-#~ msgid "%s is reporting a new pre-group generation."
-#~ msgstr "%s yana bayar da rahoton sabon ƙarni-ƙarni."
-
-#~ msgid "%s is reporting a new group generation."
-#~ msgstr "%s yana bayar da rahoton sabon ƙarni na rukuni."
-
-#~ msgid "%s is reporting a new church generation."
-#~ msgstr "%s yana bayar da rahoton sabon ƙarni na coci."
-
-#~ msgid "%s is reporting a new leadership team generation."
-#~ msgstr "%s yana bayar da rahoton sabon ƙarni na ƙungiyar jagoranci."
-
-#~ msgid "New Contact"
-#~ msgstr "Sabuwar Saduwa"
-
-#~ msgid "New Pre-Group"
-#~ msgstr "Sabon Rukuni"
-
-#~ msgid "New Group"
-#~ msgstr "Sabon Rukuni"
-
-#~ msgid "New Church"
-#~ msgstr "Sabuwar Coci"
-
-#~ msgid "New Team"
-#~ msgstr "Sabuwar Kungiyar"
-
-#~ msgid "New Baptism"
-#~ msgstr "Sabuwar Baftisma"
-
-#~ msgid "New Coaching"
-#~ msgstr "Sabon Koyawa"
-
-#~ msgid "%s is reporting a new contact."
-#~ msgstr "%s yana bayar da rahoton sabuwar lamba."
-
-#~ msgid "%s is reporting a new pre-group formed."
-#~ msgstr "%s yana bayar da rahoton sabon rukuni da aka kafa."
-
-#~ msgid "%s is reporting a new group formed."
-#~ msgstr "%s yana bayar da rahoton sabon rukuni da aka kafa."
-
-#~ msgid "%s is reporting a new church."
-#~ msgstr "%s yana bayar da rahoton sabon coci."
-
-#~ msgid "%s is reporting a new leadership team formed."
-#~ msgstr "%s yana bayar da rahoton sabuwar ƙungiyar jagoranci da aka kafa."
-
-#~ msgid "%s is reporting a new baptism."
-#~ msgstr "%s yana ba da rahoton sabon baftisma."
-
-#~ msgid "%s is reporting an coaching relationship."
-#~ msgstr "%s yana bayar da rahoton dangantakar koyawa."
-
-#~ msgid "Active"
-#~ msgstr "Na aiki"
-
-#~ msgid "Paused"
-#~ msgstr "Dakata"
-
-#~ msgid "Closed"
-#~ msgstr "An rufe"
-
-#~ msgid "Inactive"
-#~ msgstr "Ba ya aiki"
-
-#~ msgid "https://github.com/DiscipleTools/disciple-tools-network-dashboard"
-#~ msgstr "https://github.com/DiscipleTools/disciple-tools-network-dashboard"
-
-#~ msgid ""
-#~ "Connect this Disciple Tools site to a larger network of sites. Adds "
-#~ "security sensitive totals, mapping, activity logging."
-#~ msgstr ""
-#~ "Haɗa wannan rukunin kayan aikin Almajiran zuwa babban rukunin yanar gizo. "
-#~ "Yana kara jimillar tsaro, taswira, aikin shiga."
-
-#~ msgid "https://github.com/DiscipleTools"
-#~ msgstr "https://github.com/DiscipleTools"
-
-#~ msgid "https://github.com/DiscipleTools/disciple-tools-streams"
-#~ msgstr "https://github.com/DiscipleTools/disciple-tools-streams"
-
-#~ msgid ""
-#~ "Disciple Tools Streams Extension adds recording of streams and cross "
-#~ "reference them with contacts, groups, and locations."
-#~ msgstr ""
-#~ "Ciaramar Kayan aikin Almajiranci Fadada tana ƙara rikodin rafuka da "
-#~ "gicciye su tare da lambobi, ƙungiyoyi, da wurare."
-
-#~ msgid ""
-#~ "'Disciple Tools - Training' plugin requires 'Disciple Tools' theme to "
-#~ "work. Please activate 'Disciple Tools' theme or make sure it is latest "
-#~ "version."
-#~ msgstr ""
-#~ "'Kayan aikin Almajiranci - Kayan horo' na buƙatar taken 'Kayan Almajiran' "
-#~ "don aiki. Da fatan za a kunna jigogin 'Almajiran Kayan aiki' ko tabbatar "
-#~ "sabon salo ne."
-
-#~ msgid "Current Disciple Tools version: %1$s, required version: %2$s"
-#~ msgstr "Sigar Kayan Almajirai Na Yanzu: %1$s, sigar da ake buƙata: %2$s"
-
-#~ msgid "Duplicates"
-#~ msgstr "Kwafi"
-
-#~ msgid "Coach"
-#~ msgstr "Koci"
-
-#~ msgid "Leaders Total"
-#~ msgstr "Shugabannin Gaba daya"
-
-#~ msgid "Disciples Total"
-#~ msgstr "Almajirai Gabaɗaya"
-
-#~ msgid "Key Disciples"
-#~ msgstr "Mabiyan Almajirai"
-
-#~ msgid "Groups Total"
-#~ msgstr "Totalungiyoyi Gabaɗaya"
-
-#~ msgid "Trainings Total"
-#~ msgstr "Horarwa Gabaɗaya"
-
-#~ msgid "Dashboard Plugin"
-#~ msgstr "Fitar Dashboard"
-
-#~ msgid "Dashboard"
-#~ msgstr "Dashboard"
-
-#~ msgid "%s days since last update"
-#~ msgstr "Kwanak %s tun ɗaukakawa ta ƙarshe"
-
-#~ msgid "Accept"
-#~ msgstr "Yarda"
-
-#~ msgid "Decline"
-#~ msgstr "Ragewa"
-
-#~ msgid "# Contacts Assigned"
-#~ msgstr "# Lambobin sadarwa An sanya su"
-
-#~ msgid "# First Meetings"
-#~ msgstr "# Tarurrukan Farko"
-
-#~ msgid "# Faith milestones"
-#~ msgstr "# Matakan imani"
-
-#~ msgid "Hurray! You are caught up."
-#~ msgstr "Yi sauri! Kuna kama."
-
-#~ msgid "remove"
-#~ msgstr "cire"
-
-#~ msgid "mark as complete"
-#~ msgstr "yi alama a matsayin cikakke"
-
-#~ msgid "No task created"
-#~ msgstr "Babu wani aiki da aka ƙirƙira"
-
-#~ msgid "Reminder"
-#~ msgstr "Tunatarwa"
-
-#~ msgid "No note set"
-#~ msgstr "Babu saitin bayanin kula"
-
-#~ msgid "Add a contact"
-#~ msgstr "Aara lamba"
-
-#~ msgid "View Contacts List"
-#~ msgstr "Duba Jerin Lambobin"
-
-#~ msgid "Pending Contacts"
-#~ msgstr "Masu jiran aiki"
-
-#~ msgid "View All"
-#~ msgstr "Duba Duk"
-
-#~ msgid "Update Needed"
-#~ msgstr "Ana Bukatar Sabuntawa"
-
-#~ msgid "Contact Workload"
-#~ msgstr "Tuntuɓi Aiki"
-
-#~ msgid ""
-#~ "Choose an option to let the dispatcher(s) know if you are ready for new "
-#~ "contacts"
-#~ msgstr ""
-#~ "Zaɓi wani zaɓi don sanar da mai aikawa (s) idan kun kasance a shirye don "
-#~ "sababbin lambobin sadarwa"
-
-#~ msgid "Set travel or dates unavailable"
-#~ msgstr "Saita tafiya ko kwanan wata babu"
-
-#~ msgid "Personal Benchmarks"
-#~ msgstr "Alamar sirri"
-
-#~ msgid "Faith Milestone Totals"
-#~ msgstr "Mididdigar Faithmãni Totarshe"
-
-#~ msgid "Milestones on your active contacts"
-#~ msgstr "Milestones a kan m lambobinka"
-
-#~ msgid "Seeker Path Progress"
-#~ msgstr "Ci gaban Tafiya Mai Neman"
-
-#~ msgid "No data to show yet. You have no active contacts"
-#~ msgstr "Babu bayanai da za a nuna tukuna. Ba ku da abokan hulɗa da ke aiki"
-
-#~ msgid "Disciple Tools - Dashboard"
-#~ msgstr "Kayan Almajirai - Dashboard"
-
-#~ msgid "https://github.com/DiscipleTools/disciple-tools-dashboard"
-#~ msgstr "https://github.com/DiscipleTools/disciple-tools-dashboard"
-
-#~ msgid ""
-#~ "The multiplier dashboard upgrades the multipliers experience as soon as "
-#~ "they log into the system giving them a landing page with stats."
-#~ msgstr ""
-#~ "Maɓallin daskararren haɓakawa yana haɓaka ƙididdigar masanan da zarar sun "
-#~ "shiga cikin tsarin yana ba su shafin sauka tare da ƙididdiga"
-
-#~ msgid "Reason Assigned To"
-#~ msgstr "Dalilin Sanadi Ga"
-
-#~ msgid "Follow-Up"
-#~ msgstr "Biyowa"
-
-#~ msgid "Digital Response"
-#~ msgstr "Amsar Dijital"
-
-#~ msgid "Dispatch"
-#~ msgstr "Aika"
-
-#~ msgid "No Answer"
-#~ msgstr "Babu Amsa"
-
-#~ msgid "Talked"
-#~ msgstr "Yayi magana"
-
-#~ msgid "Scheduled"
-#~ msgstr "Tsara"
-
-#~ msgid "Complete"
-#~ msgstr "Kammala"
-
-#~ msgid "No-Show"
-#~ msgstr "Ba-Nuni"
-
-#~ msgid "No permission"
-#~ msgstr "Babu izini"
-
-#~ msgid "All"
-#~ msgstr "Duk"
-
-#~ msgid "Ready"
-#~ msgstr "Shirya"
-
-#~ msgid "Recent"
-#~ msgstr "Kwanan nan"
-
-#~ msgid "Assign"
-#~ msgstr "Sanya"
-
-#~ msgid "Choose an option:"
-#~ msgstr "Zaɓi wani zaɓi:"
-
-#~ msgid "Cancel"
-#~ msgstr "Soke"
-
-#~ msgid "Assign For"
-#~ msgstr "Sanya Domin"
-
-#~ msgid "Search"
-#~ msgstr "Bincika"
-
-#~ msgid "Claim for follow-up"
-#~ msgstr "Da'awar a biyo baya"
-
-#~ msgid "Ready for Dispatch"
-#~ msgstr "Shirya don Aika"
-
-#~ msgid "Disciple Tools - Advanced M2M Tiles"
-#~ msgstr "Kayan Almajirai - Fale-falen M2M Na Gaba"
-
-#~ msgid "https://github.com/DiscipleTools/disciple-tools-advanced-m2m-tiles"
-#~ msgstr "https://github.com/DiscipleTools/disciple-tools-advanced-m2m-tiles"
-
-#~ msgid ""
-#~ "Disciple Tools - Advanced M2M Tiles adds specific supporting tiles for "
-#~ "different roles."
-#~ msgstr ""
-#~ "Kayan aikin Almajirai - Fale-falen M2M na Ci gaba yana ƙara takamaiman "
-#~ "tiles na goyan baya don matsayi daban-daban."
+msgstr "Share"

@@ -32,32 +32,27 @@ msgstr "خرائط التدريب"
 
 #: network/network-dashboard-integration.php:44
 msgid "New Training"
-msgstr ""
+msgstr "تدريب جديد"
 
 #: network/network-dashboard-integration.php:50
 msgid "Training Started"
-msgstr ""
+msgstr "بدأ التدريب"
 
 #: network/network-dashboard-integration.php:56
 msgid "Training Completed"
-msgstr ""
+msgstr "اكتمل التدريب"
 
 #: post-type/module-base.php:28 post-type/module-base.php:495
 msgid "Training"
 msgstr "تدريب"
 
 #: post-type/module-base.php:70
-#, fuzzy
-#| msgid "Trainings"
 msgid "Trainings Admin"
-msgstr "التدريبات"
+msgstr "مسؤول التدريبات"
 
 #: post-type/module-base.php:71
-#, fuzzy
-#| msgctxt "Optional Documentation"
-#| msgid "Leader of a training"
 msgid "Admin access to all trainings"
-msgstr "قائد التدريب"
+msgstr "صلاحية المسؤول للوصول إلى جميع التدريبات"
 
 #: post-type/module-base.php:76
 msgid "Multiplier"
@@ -79,7 +74,7 @@ msgstr "العلامات"
 msgctxt "Optional Documentation"
 msgid ""
 "A useful way to group related items and can be used to filter the records"
-msgstr ""
+msgstr "طريقة مفيدة لتجميع العناصر ذات الصلة ويمكن استخدامها لتصفية السجلات"
 
 #: post-type/module-base.php:135
 msgid "Follow"
@@ -121,22 +116,22 @@ msgstr "المقرر"
 #: post-type/module-base.php:173
 msgctxt "Training Status field description"
 msgid "This training is confirmed, on the calendar."
-msgstr "تم تأكيد هذا التدريب ، في التقويم."
+msgstr "تم تأكيد هذا التدريب، في التقويم."
 
 #: post-type/module-base.php:177
 msgctxt "Training Status label"
 msgid "In Progress"
-msgstr "في تقدم"
+msgstr "قيد التنفيذ"
 
 #: post-type/module-base.php:178
 msgctxt "Training Status field description"
 msgid "This training is confirmed, on the calendar, or currently active."
-msgstr "تم تأكيد هذا التدريب ، في التقويم ، أو نشط حاليًا."
+msgstr "تم تأكيد هذا التدريب، في التقويم، أو نشط حاليًا."
 
 #: post-type/module-base.php:182
 msgctxt "Training Status label"
 msgid "Complete"
-msgstr "اكتمال"
+msgstr "مكتمل"
 
 #: post-type/module-base.php:183
 msgctxt "Training Status field description"
@@ -153,9 +148,7 @@ msgctxt "Training Status field description"
 msgid ""
 "This contact is currently on hold. It has potential of getting scheduled in "
 "the future."
-msgstr ""
-"جهة الاتصال هذه قيد الانتظار حاليًا. لديها إمكانية الحصول على جدول زمني في "
-"المستقبل."
+msgstr "هذا التدريب قيد الانتظار حاليًا. لديه إمكانية الجدولة في المستقبل."
 
 #: post-type/module-base.php:192
 msgctxt "Training Status label"
@@ -178,7 +171,7 @@ msgstr "حدد الشخص الرئيسي المسؤول عن الإبلاغ عن
 
 #: post-type/module-base.php:209
 msgid "Training Coach / Church Planter"
-msgstr "مدرب تدريب / زارع الكنيسة"
+msgstr "مدرب التدريب/زارع الكنيسة"
 
 #: post-type/module-base.php:210
 msgctxt "Optional Documentation"
@@ -187,8 +180,8 @@ msgid ""
 "be assigned to a training while multiple people can be coaches / church "
 "planters of this training."
 msgstr ""
-"الشخص الذي زرع و / أو يوجه هذا التدريب. يمكن تعيين شخص واحد فقط للتدريب "
-"بينما يمكن لعدة أشخاص أن يكونوا مدربين / مزارعي الكنيسة لهذا التدريب."
+"الشخص الذي زرع و/أو يوجه هذا التدريب. يمكن تعيين شخص واحد فقط للتدريب بينما "
+"يمكن لعدة أشخاص أن يكونوا مدربين/زارعي الكنيسة لهذا التدريب."
 
 #: post-type/module-base.php:222
 msgid "Requires Update"
@@ -231,7 +224,7 @@ msgstr "العنوان"
 
 #: post-type/module-base.php:333
 msgid "Parent Training"
-msgstr "تدريب الوالدين"
+msgstr "التدريب الأصلي"
 
 #: post-type/module-base.php:334
 msgctxt "Optional Documentation"
@@ -248,12 +241,12 @@ msgid ""
 "A related training that isn't a parent/child in relationship. It might "
 "indicate trainings that collaborate, are about to merge, recently split, etc."
 msgstr ""
-"تدريب ذو صلة ليس والدًا / طفلًا في علاقة. قد يشير إلى التدريبات التي تتعاون ، "
-"أو على وشك الدمج ، أو الانقسام مؤخرًا ، إلخ."
+"تدريب ذو صلة ليس في علاقة أصل/فرع. قد يشير إلى التدريبات التي تتعاون، أو على "
+"وشك الدمج، أو الانقسام مؤخرًا، إلخ."
 
 #: post-type/module-base.php:355
 msgid "Child Training"
-msgstr "تدريب الأطفال"
+msgstr "التدريب الفرعي"
 
 #: post-type/module-base.php:356
 msgctxt "Optional Documentation"
@@ -305,7 +298,7 @@ msgstr ""
 
 #: post-type/module-base.php:416
 msgid "Leader Count"
-msgstr "زعيم العد"
+msgstr "عدد القادة"
 
 #: post-type/module-base.php:426
 msgid "Training as Leader"
@@ -339,12 +332,12 @@ msgstr "تحديد"
 
 #: post-type/module-base.php:555
 msgid "To add new members, click on 'Create' or 'Select'."
-msgstr "لإضافة أعضاء جدد ، انقر فوق \"إنشاء\" أو \"تحديد\"."
+msgstr "لإضافة أعضاء جدد، انقر فوق \"إنشاء\" أو \"تحديد\"."
 
 #: post-type/module-base.php:560
 msgctxt "Add members modal"
 msgid "Add members from existing contacts"
-msgstr "إنشاء مستخدم من خلال هذا المتصل"
+msgstr "إضافة أعضاء من جهات الاتصال الموجودة"
 
 #: post-type/module-base.php:561
 msgctxt "Add members modal"
@@ -352,7 +345,7 @@ msgid ""
 "In the 'Member List' field, type the name of an existing contact to add them "
 "to this training."
 msgstr ""
-"في الحقل \"قائمة الأعضاء\" ، اكتب اسم جهة اتصال موجودة لإضافتها إلى هذا "
+"في الحقل \"قائمة الأعضاء\"، اكتب اسم جهة اتصال موجودة لإضافتها إلى هذا "
 "التدريب."
 
 #: post-type/module-base.php:573
@@ -360,27 +353,21 @@ msgid "Close"
 msgstr "غلق"
 
 #: post-type/module-base.php:713
-#, fuzzy
-#| msgid "Removed %1$s: %2$s"
 msgid "Removed %1$s: {%2$s}"
-msgstr "تمت إزالة٪ 1 $ s:٪ 2 $ s"
+msgstr "تمت إزالة %1$s: {%2$s}"
 
 #: post-type/module-base.php:716
-#, fuzzy
-#| msgid "Added %1$s: %2$s"
 msgid "Added %1$s: {%2$s}"
-msgstr "تمت إضافة٪ 1 $ s:٪ 2 $ s"
+msgstr "تمت إضافة %1$s: {%2$s}"
 
 #: post-type/module-base.php:719
-#, fuzzy
-#| msgid "Updated %1$s: %2$s to %3$s"
 msgid "Updated %1$s: {%2$s} to {%3$s}"
-msgstr "تم تحديث٪ 1 $ s:٪ 2 $ s إلى٪ 3 $ s"
+msgstr "تم تحديث %1$s: {%2$s} إلى {%3$s}"
 
 #: post-type/module-base.php:804
 msgctxt "List Filters"
 msgid "Assigned to me"
-msgstr "تعيين لي"
+msgstr "مخصص لي"
 
 #: post-type/module-base.php:812
 msgctxt "List Filters"
@@ -390,7 +377,7 @@ msgstr "الكل"
 #: post-type/module-base.php:871
 msgctxt "List Filters"
 msgid "Default Filters"
-msgstr ""
+msgstr "الفلاتر الافتراضية"
 
 #: post-type/module-public-calendar.php:85
 msgid "Reports"
@@ -406,11 +393,11 @@ msgstr "مجموع المعموديات"
 
 #: post-type/module-public-calendar.php:123
 msgid "Countries"
-msgstr "بلدان"
+msgstr "البلدان"
 
 #: post-type/module-public-calendar.php:124
 msgid "States"
-msgstr "تنص على"
+msgstr "الولايات"
 
 #: post-type/module-public-calendar.php:125
 msgid "Counties"
@@ -423,7 +410,7 @@ msgstr "أضف"
 
 #: post-type/module-registration.php:31
 msgid "Magic Links"
-msgstr ""
+msgstr "الروابط السحرية"
 
 #: post-type/module-registration.php:59
 msgid "copy link"
@@ -435,7 +422,7 @@ msgstr "تحرير النموذج"
 
 #: post-type/module-registration.php:63
 msgid "report"
-msgstr "نقل"
+msgstr "تقرير"
 
 #: post-type/module-registration.php:67
 msgid "create link"
@@ -443,7 +430,7 @@ msgstr "إنشاء رابط"
 
 #: post-type/module-registration.php:114
 msgid "link"
-msgstr "حلقة الوصل"
+msgstr "رابط"
 
 #: post-type/module-registration.php:116
 msgid "show on calendar"
@@ -451,7 +438,7 @@ msgstr "تظهر في التقويم"
 
 #: post-type/module-registration.php:118
 msgid "open registration"
-msgstr "فتح التسجيل "
+msgstr "فتح التسجيل"
 
 #: post-type/module-registration.php:265
 msgid "add"
@@ -463,7 +450,7 @@ msgstr "استعمال"
 
 #: post-type/module-registration.php:267 post-type/module-registration.php:695
 msgid "Search Location"
-msgstr "موقع البحث"
+msgstr "البحث عن موقع"
 
 #: post-type/module-registration.php:268
 msgid "Delete Location"
@@ -475,7 +462,7 @@ msgstr "افتح رسم الخرائط"
 
 #: post-type/module-registration.php:270
 msgid "clear"
-msgstr "واضح"
+msgstr "مسح"
 
 #: post-type/module-registration.php:384
 msgid "Register for Training"
@@ -491,801 +478,4 @@ msgstr "إنضم إلى"
 
 #: post-type/module-registration.php:700
 msgid "Clear"
-msgstr "واضح"
-
-#~ msgid "Apps"
-#~ msgstr "تطبيقات"
-
-#, fuzzy
-#~| msgid "Disciple Tools - Training"
-#~ msgid "Disciple.Tools - Training"
-#~ msgstr "أدوات الضبط - التدريب"
-
-#~ msgid "https://github.com/DiscipleTools/disciple-tools-training"
-#~ msgstr "https://github.com/DiscipleTools/disciple-tools-training"
-
-#, fuzzy
-#~| msgid ""
-#~| "Disciple Tools Training Extension adds recording of trainings and cross "
-#~| "reference them with contacts, groups, and locations."
-#~ msgid ""
-#~ "Disciple.Tools Training Extension adds recording of trainings and cross "
-#~ "reference them with contacts, groups, and locations."
-#~ msgstr ""
-#~ "يضيف ملحق تدريب أدوات الضبط تسجيل التدريبات والإشارة إليها مع جهات "
-#~ "الاتصال والمجموعات والمواقع."
-
-#~ msgid "Whoah, partner!"
-#~ msgstr "قف ، شريك!"
-
-#~ msgid "Method does not exist."
-#~ msgstr "الطريقة غير موجودة."
-
-#~ msgid "Dispatcher"
-#~ msgstr "موزع المهام"
-
-#~ msgid "Members"
-#~ msgstr "الأعضاء"
-
-#~ msgid "Contacts"
-#~ msgstr "جهات الاتصالل"
-
-#~ msgid "Coaches"
-#~ msgstr "المدربين"
-
-#~ msgid "Planted by"
-#~ msgstr "مزروعة"
-
-#~ msgid "Planting"
-#~ msgstr "يزرع"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid ""
-#~ "A useful way to training related items and can help training contacts "
-#~ "associated with noteworthy characteristics. e.g. business owner, sports "
-#~ "lover. The contacts can also be filtered using these tags."
-#~ msgstr ""
-#~ "طريقة مفيدة لتدريب العناصر ذات الصلة ويمكن أن تساعد في تدريب جهات الاتصال "
-#~ "المرتبطة بخصائص جديرة بالملاحظة. على سبيل المثال صاحب العمل ومحبي "
-#~ "الرياضة. يمكن أيضًا تصفية جهات الاتصال باستخدام هذه العلامات."
-
-#~ msgctxt "input field placeholder"
-#~ msgid "Search Users"
-#~ msgstr "البحث عن مستخدمين"
-
-#~ msgctxt "Search 'something'"
-#~ msgid "Search %s"
-#~ msgstr "البحث  %s"
-
-#~ msgid "Extensions (DT)"
-#~ msgstr "ملحقات (DT)"
-
-#~ msgid "Network Dashboard"
-#~ msgstr "لوحة تحكم الشبكة"
-
-#~ msgid "You do not have sufficient permissions to access this page."
-#~ msgstr "ليس لديك أذونات كافية للوصول إلى هذه الصفحة."
-
-#~ msgid "nav-tab-active"
-#~ msgstr "التنقل بعلامة التبويب النشطة"
-
-#~ msgid "Network Dashboard Viewer"
-#~ msgstr "عارض لوحة معلومات الشبكة"
-
-#~ msgid "ID"
-#~ msgstr "هوية شخصية"
-
-#~ msgid "Site"
-#~ msgstr "موقع"
-
-#~ msgid "Users"
-#~ msgstr "المستخدم"
-
-#~ msgid "Timestamp"
-#~ msgstr "الطابع الزمني"
-
-#~ msgid "Visit"
-#~ msgstr "يزور"
-
-#~ msgid "View"
-#~ msgstr "رأي"
-
-#~ msgid "Active Snapshot"
-#~ msgstr "لقطة نشطة"
-
-#~ msgid "Generations"
-#~ msgstr "أجيال"
-
-#~ msgid "Follow-up Funnel"
-#~ msgstr "قمع المتابعة"
-
-#~ msgid "On-Going Meetings"
-#~ msgstr "الاجتماعات الجارية"
-
-#~ msgid "Coaching"
-#~ msgstr "التدريب"
-
-#~ msgid "Baptized"
-#~ msgstr "تم تعميده"
-
-#~ msgid "Active Groups"
-#~ msgstr "المجموعات الناشطة"
-
-#~ msgid "Church"
-#~ msgstr "كنيسة"
-
-#~ msgid "Health Metrics"
-#~ msgstr "مقاييس الصحة"
-
-#~ msgid "Total Users"
-#~ msgstr "إجمالي المستخدمين"
-
-#~ msgid "Responders"
-#~ msgstr "المستجيبون"
-
-#~ msgid "Dispatchers"
-#~ msgstr "منظمي الحركة"
-
-#~ msgid "Multipliers"
-#~ msgstr "المضاعفون"
-
-#~ msgid "Admins"
-#~ msgstr "المشرفون"
-
-#~ msgid "User Login Activity"
-#~ msgstr "نشاط تسجيل دخول المستخدم"
-
-#~ msgid "Users Active in the Last 30 Days"
-#~ msgstr "المستخدمون النشطون في آخر 30 يومًا"
-
-#~ msgid "Practicing"
-#~ msgstr "ممارسة"
-
-#~ msgid "Not Practicing"
-#~ msgstr "لا تمارس"
-
-#~ msgid "Chart Funnel"
-#~ msgstr "قمع الرسم البياني"
-
-#~ msgid "Contact"
-#~ msgstr "جهة اتصال"
-
-#~ msgid "Group"
-#~ msgstr "المجموعة"
-
-#~ msgid "User"
-#~ msgstr "المستخدم"
-
-#~ msgid "Sites"
-#~ msgstr "المواقع"
-
-#~ msgid "Baptisms"
-#~ msgstr "المعموديات"
-
-#~ msgid "Churches"
-#~ msgstr "الكنائس"
-
-#~ msgid "Location"
-#~ msgstr "موقعك"
-
-#~ msgid "Types"
-#~ msgstr "أنواع"
-
-#~ msgid "modify filter"
-#~ msgstr "تعديل عامل التصفية"
-
-#~ msgid "Filter List"
-#~ msgstr "قائمة الفلاتر"
-
-#~ msgid "reset data"
-#~ msgstr "إعادة تعيين بيانات"
-
-#~ msgid "Status"
-#~ msgstr "الحالة"
-
-#~ msgid "Status - All"
-#~ msgstr "الحالة - الكل"
-
-#~ msgid "Zoom Level"
-#~ msgstr "مستوى التكبير"
-
-#~ msgid "Auto Zoom"
-#~ msgstr "تكبير تلقائي"
-
-#~ msgid "World"
-#~ msgstr "العالم"
-
-#~ msgid "Country"
-#~ msgstr "بلد"
-
-#~ msgid "State"
-#~ msgstr "حالة"
-
-#~ msgid "Active Contacts"
-#~ msgstr "جهات الاتصال الناشطة"
-
-#~ msgid "Paused Contacts"
-#~ msgstr "جهات الاتصال المتوقفة مؤقتًا"
-
-#~ msgid "Closed Contacts"
-#~ msgstr "جهات الاتصال المغلقة"
-
-#~ msgid "Total Contacts"
-#~ msgstr "مجموع جهات الاتصال"
-
-#~ msgid "New Contacts"
-#~ msgstr "جهات اتصال جديدة"
-
-#~ msgid "New Baptisms"
-#~ msgstr "المعمودية الجديدة"
-
-#~ msgid "Baptism Generations"
-#~ msgstr "أجيال المعمودية"
-
-#~ msgid "Select Location"
-#~ msgstr "اختر موقعا"
-
-#~ msgid "New Groups"
-#~ msgstr "مجموعات جديدة"
-
-#~ msgid "Pre-Group"
-#~ msgstr "قبل المجموعة"
-
-#~ msgid "Pre-Groups"
-#~ msgstr "المجموعات المسبقة"
-
-#~ msgid "Last 7 Days"
-#~ msgstr "اخر 7 ايام"
-
-#~ msgid "Last 30 Days"
-#~ msgstr "آخر 30 يومًا"
-
-#~ msgid "Last 60 Days"
-#~ msgstr "آخر 60 يومًا"
-
-#~ msgid "Last 12 Months"
-#~ msgstr "آخر 12 شهرًا"
-
-#~ msgid "Last 24 Months"
-#~ msgstr "آخر 24 شهرًا"
-
-#~ msgid "This Year"
-#~ msgstr "هذا العام"
-
-#~ msgid "Activity Map"
-#~ msgstr "خريطة النشاط"
-
-#~ msgid "Stats"
-#~ msgstr "احصائيات"
-
-#~ msgid "Activities"
-#~ msgstr "أنشطة"
-
-#~ msgid "Actions"
-#~ msgstr "أجراءات"
-
-#~ msgid "By Action Type"
-#~ msgstr "حسب نوع الإجراء"
-
-#~ msgid "Key"
-#~ msgstr "مفتاح"
-
-#~ msgid "Name"
-#~ msgstr "الاسم"
-
-#~ msgid "Total Activities"
-#~ msgstr "إجمالي الأنشطة"
-
-#~ msgid "Feed"
-#~ msgstr "تغذية"
-
-#~ msgid "Time"
-#~ msgstr "زمن"
-
-#~ msgid "Result Limit"
-#~ msgstr "نتيجة حد"
-
-#~ msgid "uncheck"
-#~ msgstr "ازل"
-
-#~ msgid "Home"
-#~ msgstr "البيت"
-
-#~ msgid "Events (30 Days)"
-#~ msgstr "الأحداث (30 يومًا)"
-
-#~ msgid "All Active/Inactive"
-#~ msgstr "كل نشط / غير نشط"
-
-#~ msgid "Hover Map"
-#~ msgstr "تحوم الخريطة"
-
-#~ msgid "Network"
-#~ msgstr "شبكة الاتصال"
-
-#~ msgid "Map"
-#~ msgstr "خريطة"
-
-#~ msgid "Log"
-#~ msgstr "سجل"
-
-#~ msgid "Activity"
-#~ msgstr "النشاط"
-
-#~ msgid "Area Maps"
-#~ msgstr "خرائط المنطقة"
-
-#~ msgid "Location List"
-#~ msgstr "قائمة الموقع"
-
-#~ msgid "Maps"
-#~ msgstr "خرائط"
-
-#~ msgid "Site Reports"
-#~ msgstr "تقارير الموقع"
-
-#~ msgid "Statistics"
-#~ msgstr "الإحصاء"
-
-#~ msgid "Network Dashboard Transfer Both Ways"
-#~ msgstr "تنقل لوحة معلومات الشبكة كلا الاتجاهين"
-
-#~ msgid "Network Dashboard Receiving Only"
-#~ msgstr "استقبال لوحة معلومات الشبكة فقط"
-
-#~ msgid "Network Dashboard Sending Only"
-#~ msgstr "شبكة لوحة الإرسال فقط"
-
-#~ msgid "Network Dashboard Site Profile"
-#~ msgstr "ملف تعريف موقع لوحة معلومات الشبكة"
-
-#~ msgid "Disciple Tools - Network Dashboard"
-#~ msgstr "أدوات الضبط - لوحة معلومات الشبكة"
-
-#~ msgid "Streams"
-#~ msgstr "تيارات"
-
-#~ msgid "Stream Maps"
-#~ msgstr "تيار الخرائط"
-
-#~ msgid "Streams Maps"
-#~ msgstr "خرائط تيارات"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid ""
-#~ "A useful way to stream related items and can help stream contacts "
-#~ "associated with noteworthy characteristics. e.g. business owner, sports "
-#~ "lover. The contacts can also be filtered using these tags."
-#~ msgstr ""
-#~ "طريقة مفيدة لدفق العناصر ذات الصلة ويمكن أن تساعد في دفق جهات الاتصال "
-#~ "المرتبطة بخصائص جديرة بالملاحظة. على سبيل المثال صاحب العمل ومحبي "
-#~ "الرياضة. يمكن أيضًا تصفية جهات الاتصال باستخدام هذه العلامات."
-
-#~ msgctxt "Stream Status label"
-#~ msgid "New"
-#~ msgstr "جديد"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "New stream added to the system"
-#~ msgstr "دفق جديد يضاف إلى النظام"
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Model"
-#~ msgstr "نموذج"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "This stream has been proposed and is in initial conversations"
-#~ msgstr "تم اقتراح هذا الدفق وهو في المحادثات الأولية"
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Assist"
-#~ msgstr "مساعدة"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "This stream is confirmed, on the calendar."
-#~ msgstr "تم تأكيد هذا الدفق في التقويم."
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Watch"
-#~ msgstr "راقب"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "This stream is confirmed, on the calendar, or currently active."
-#~ msgstr "تم تأكيد هذا الدفق ، في التقويم ، أو نشط حاليًا."
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Leave"
-#~ msgstr "غادر"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "This stream has successfully completed"
-#~ msgstr "اكتمل هذا الدفق بنجاح"
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Paused"
-#~ msgstr "متوقف مؤقتًا"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid ""
-#~ "This contact is currently on hold. It has potential of getting scheduled "
-#~ "in the future."
-#~ msgstr ""
-#~ "جهة الاتصال هذه قيد الانتظار حاليًا. لديها إمكانية الحصول على جدول زمني في "
-#~ "المستقبل."
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Closed"
-#~ msgstr "مغلق"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "This stream is no longer going to happen."
-#~ msgstr "لن يحدث هذا التدفق بعد الآن."
-
-#~ msgid ""
-#~ "Select the main person who is responsible for reporting on this stream."
-#~ msgstr "حدد الشخص الرئيسي المسؤول عن الإبلاغ عن هذا البث."
-
-#~ msgctxt "Optional Documentation"
-#~ msgid ""
-#~ "The person who planted and/or is coaching this stream. Only one person "
-#~ "can be assigned to a stream while multiple people can be coaches / church "
-#~ "planters of this stream."
-#~ msgstr ""
-#~ "الشخص الذي زرع و / أو يوجه هذا التيار. يمكن تعيين شخص واحد فقط لتيار "
-#~ "بينما يمكن لعدة أشخاص أن يكونوا مدربين / مزارعي الكنيسة لهذا التيار."
-
-#~ msgctxt "Optional Documentation"
-#~ msgid "The people streams represented by this stream."
-#~ msgstr "تدفقات الأشخاص التي يمثلها هذا الدفق."
-
-#~ msgid "Parent Stream"
-#~ msgstr "تيار الوالدين"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid "A stream that launched this stream."
-#~ msgstr "تيار أطلق هذا الدفق."
-
-#~ msgid "Peer Streams"
-#~ msgstr "تيارات الأقران"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid ""
-#~ "A related stream that isn't a parent/child in relationship. It might "
-#~ "indicate streams that collaborate, are about to merge, recently split, "
-#~ "etc."
-#~ msgstr ""
-#~ "تيار ذي صلة ليس أحد الوالدين / الطفل في علاقة. قد يشير إلى التدفقات التي "
-#~ "تتعاون ، أو على وشك الدمج ، أو الانقسام مؤخرًا ، إلخ."
-
-#~ msgid "Child Streams"
-#~ msgstr "تيارات الطفل"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid "A stream that has been birthed out of this stream."
-#~ msgstr "تيار تم ولادته من هذا التيار."
-
-#~ msgid "Leader in Stream"
-#~ msgstr "زعيم في تيار"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid "Leader of a stream"
-#~ msgstr "زعيم تيار"
-
-#~ msgid "Key Disciple in Stream"
-#~ msgstr "تلميذ رئيسي في الدفق"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid "Disciple in a stream."
-#~ msgstr "تلميذ في مجرى مائي."
-
-#~ msgid "Connections"
-#~ msgstr "روابط"
-
-#~ msgid "Add Report"
-#~ msgstr "إضافة تقرير"
-
-#~ msgid "Disciple Tools - Streams"
-#~ msgstr "أدوات الضبط - تيارات"
-
-#~ msgid "Pre-Group Generations"
-#~ msgstr "أجيال ما قبل المجموعة"
-
-#~ msgid "Group Generations"
-#~ msgstr "مجموعة الأجيال"
-
-#~ msgid "Church Generations"
-#~ msgstr "أجيال الكنيسة"
-
-#~ msgid "Team Generations"
-#~ msgstr "أجيال الفريق"
-
-#~ msgid "%s is reporting a new pre-group generation."
-#~ msgstr "يقوم٪ s بالإعلام عن إنشاء ما قبل المجموعة الجديد."
-
-#~ msgid "%s is reporting a new group generation."
-#~ msgstr "يقوم٪ s بالإبلاغ عن جيل مجموعة جديد."
-
-#~ msgid "%s is reporting a new church generation."
-#~ msgstr "يقوم٪ s بالإبلاغ عن جيل جديد من الكنيسة."
-
-#~ msgid "%s is reporting a new leadership team generation."
-#~ msgstr "يقوم٪ s بالإبلاغ عن جيل فريق قيادة جديد."
-
-#~ msgid "New Contact"
-#~ msgstr "جهة اتصال جديدة"
-
-#~ msgid "New Pre-Group"
-#~ msgstr "مجموعة ما قبل جديدة"
-
-#~ msgid "New Group"
-#~ msgstr "مجموعة جديدة"
-
-#~ msgid "New Church"
-#~ msgstr "الكنيسة الجديدة"
-
-#~ msgid "New Team"
-#~ msgstr "فريق جديد"
-
-#~ msgid "New Baptism"
-#~ msgstr "المعمودية الجديدة"
-
-#~ msgid "New Coaching"
-#~ msgstr "تدريب جديد"
-
-#~ msgid "%s is reporting a new contact."
-#~ msgstr "يقوم٪ s بالإبلاغ عن جهة اتصال جديدة."
-
-#~ msgid "%s is reporting a new pre-group formed."
-#~ msgstr "يقوم٪ s بالإبلاغ عن مجموعة سابقة تم تشكيلها."
-
-#~ msgid "%s is reporting a new group formed."
-#~ msgstr "يقوم٪ s بالإبلاغ عن تشكيل مجموعة جديدة."
-
-#~ msgid "%s is reporting a new church."
-#~ msgstr "يقوم٪ s بالإبلاغ عن كنيسة جديدة."
-
-#~ msgid "%s is reporting a new leadership team formed."
-#~ msgstr "يقوم٪ s بالإبلاغ عن تشكيل فريق قيادة جديد."
-
-#~ msgid "%s is reporting a new baptism."
-#~ msgstr "يقوم٪ s بالإبلاغ عن معمودية جديدة."
-
-#~ msgid "%s is reporting an coaching relationship."
-#~ msgstr "يقوم٪ s بالإبلاغ عن علاقة تدريب."
-
-#~ msgid "Active"
-#~ msgstr "ناشط"
-
-#~ msgid "Paused"
-#~ msgstr "توقف"
-
-#~ msgid "Closed"
-#~ msgstr "مغلق"
-
-#~ msgid "Inactive"
-#~ msgstr "غير ناشط"
-
-#~ msgid "https://github.com/DiscipleTools/disciple-tools-network-dashboard"
-#~ msgstr "https://github.com/DiscipleTools/disciple-tools-network-dashboard"
-
-#~ msgid ""
-#~ "Connect this Disciple Tools site to a larger network of sites. Adds "
-#~ "security sensitive totals, mapping, activity logging."
-#~ msgstr ""
-#~ "قم بتوصيل موقع أدوات الضبط هذا بشبكة أكبر من المواقع. يضيف المجاميع "
-#~ "الأمنية الحساسة ، ورسم الخرائط ، وتسجيل النشاط."
-
-#~ msgid "https://github.com/DiscipleTools"
-#~ msgstr "https://github.com/DiscipleTools"
-
-#~ msgid "https://github.com/DiscipleTools/disciple-tools-streams"
-#~ msgstr "https://github.com/DiscipleTools/disciple-tools-streams"
-
-#~ msgid ""
-#~ "Disciple Tools Streams Extension adds recording of streams and cross "
-#~ "reference them with contacts, groups, and locations."
-#~ msgstr ""
-#~ "يضيف Disciple Tools Streams Extension تسجيل التدفقات والإشارة إليها مع "
-#~ "جهات الاتصال والمجموعات والمواقع."
-
-#~ msgid ""
-#~ "'Disciple Tools - Training' plugin requires 'Disciple Tools' theme to "
-#~ "work. Please activate 'Disciple Tools' theme or make sure it is latest "
-#~ "version."
-#~ msgstr ""
-#~ "يتطلب المكون الإضافي \"أدوات الضبط - التدريب\" سمة \"أدوات الضبط\" للعمل. "
-#~ "يرجى تفعيل موضوع \"أدوات الضبط\" أو التأكد من أنه أحدث إصدار."
-
-#~ msgid "Current Disciple Tools version: %1$s, required version: %2$s"
-#~ msgstr "إصدار أدوات الضبط الحالي:٪ 1 $ s ، الإصدار المطلوب:٪ 2 $ s"
-
-#~ msgid "Duplicates"
-#~ msgstr "مكرر"
-
-#~ msgid "Coach"
-#~ msgstr "مدرب"
-
-#~ msgid "Leaders Total"
-#~ msgstr "قادة المجموع"
-
-#~ msgid "Disciples Total"
-#~ msgstr "مجموع التلاميذ"
-
-#~ msgid "Key Disciples"
-#~ msgstr "التلاميذ الرئيسيون"
-
-#~ msgid "Groups Total"
-#~ msgstr "إجمالي المجموعات"
-
-#~ msgid "Trainings Total"
-#~ msgstr "إجمالي التدريبات"
-
-#~ msgid "Dashboard Plugin"
-#~ msgstr "المكوِّن الإضافي للوحة القيادة"
-
-#~ msgid "Dashboard"
-#~ msgstr "لوحة القيادة"
-
-#~ msgid "%s days since last update"
-#~ msgstr "%s يوم منذ آخر تحديث"
-
-#~ msgid "Accept"
-#~ msgstr "قبول"
-
-#~ msgid "Decline"
-#~ msgstr "رفض"
-
-#~ msgid "# Contacts Assigned"
-#~ msgstr "تم تعيين # جهات اتصال"
-
-#~ msgid "# First Meetings"
-#~ msgstr "# الاجتماعات الأولى"
-
-#~ msgid "# Faith milestones"
-#~ msgstr "# معالم الإيمان"
-
-#~ msgid "Hurray! You are caught up."
-#~ msgstr "يا هلا! تم القبض عليك."
-
-#~ msgid "remove"
-#~ msgstr "إزالة"
-
-#~ msgid "mark as complete"
-#~ msgstr "وضع علامة مكتمل"
-
-#~ msgid "No task created"
-#~ msgstr "تم إنشاء جهة اتصال جديدة"
-
-#~ msgid "Reminder"
-#~ msgstr "الجنس"
-
-#~ msgid "No note set"
-#~ msgstr "لا شيء محدّد"
-
-#~ msgid "Add a contact"
-#~ msgstr "أضف جهة اتصال"
-
-#~ msgid "View Contacts List"
-#~ msgstr "عرض قائمة جهات الاتصال"
-
-#~ msgid "Pending Contacts"
-#~ msgstr "جهات الاتصال المعلقة"
-
-#~ msgid "View All"
-#~ msgstr "مشاهدة الكل"
-
-#~ msgid "Update Needed"
-#~ msgstr "يحتاج إلى تحديث"
-
-#~ msgid "Contact Workload"
-#~ msgstr "الاتصال بعبء العمل"
-
-#~ msgid ""
-#~ "Choose an option to let the dispatcher(s) know if you are ready for new "
-#~ "contacts"
-#~ msgstr ""
-#~ "حدد خيارًا للسماح للمرسل (المرسلين) بمعرفة ما إذا كنت جاهزًا لجهات اتصال "
-#~ "جديدة"
-
-#~ msgid "Set travel or dates unavailable"
-#~ msgstr "تعيين السفر أو التواريخ غير متوفرة"
-
-#~ msgid "Personal Benchmarks"
-#~ msgstr "المعايير الشخصية"
-
-#~ msgid "Faith Milestone Totals"
-#~ msgstr "إجماليات الإيمان المعلم"
-
-#~ msgid "Milestones on your active contacts"
-#~ msgstr "معالم على جهات الاتصال النشطة الخاصة بك"
-
-#~ msgid "Seeker Path Progress"
-#~ msgstr "تقدم مسار الباحث"
-
-#~ msgid "No data to show yet. You have no active contacts"
-#~ msgstr "لا توجد بيانات لتظهر حتى الآن. ليس لديك جهات اتصال نشطة"
-
-#~ msgid "Disciple Tools - Dashboard"
-#~ msgstr "أدوات الضبط - لوحة القيادة"
-
-#~ msgid "https://github.com/DiscipleTools/disciple-tools-dashboard"
-#~ msgstr "https://github.com/DiscipleTools/disciple-tools-dashboard"
-
-#~ msgid ""
-#~ "The multiplier dashboard upgrades the multipliers experience as soon as "
-#~ "they log into the system giving them a landing page with stats."
-#~ msgstr ""
-#~ "تعمل لوحة التحكم المضاعفة على ترقية تجربة المضاعفات بمجرد تسجيل الدخول "
-#~ "إلى النظام مما يمنحهم صفحة مقصودة بها إحصائيات"
-
-#~ msgid "Reason Assigned To"
-#~ msgstr "سبب معين إلى"
-
-#~ msgid "Follow-Up"
-#~ msgstr "متابعة"
-
-#~ msgid "Digital Response"
-#~ msgstr "الاستجابة الرقمية"
-
-#~ msgid "Dispatch"
-#~ msgstr "إيفاد"
-
-#~ msgid "No Answer"
-#~ msgstr "لا اجابة"
-
-#~ msgid "Talked"
-#~ msgstr "تحدث"
-
-#~ msgid "Scheduled"
-#~ msgstr "المقرر"
-
-#~ msgid "Complete"
-#~ msgstr "اكتمال"
-
-#~ msgid "No-Show"
-#~ msgstr "عدم الحضور"
-
-#~ msgid "No permission"
-#~ msgstr "لا يوجد إذن"
-
-#~ msgid "All"
-#~ msgstr "الكل"
-
-#~ msgid "Ready"
-#~ msgstr "جاهز"
-
-#~ msgid "Recent"
-#~ msgstr "الأخيرة"
-
-#~ msgid "Assign"
-#~ msgstr "تعيين"
-
-#~ msgid "Choose an option:"
-#~ msgstr "إختر خيار:"
-
-#~ msgid "Cancel"
-#~ msgstr "إلغاء"
-
-#~ msgid "Assign For"
-#~ msgstr "تعيين لـ"
-
-#~ msgid "Search"
-#~ msgstr "بحث"
-
-#~ msgid "Claim for follow-up"
-#~ msgstr "مطالبة للمتابعة"
-
-#~ msgid "Ready for Dispatch"
-#~ msgstr "جاهز للإرسال"
-
-#~ msgid "Disciple Tools - Advanced M2M Tiles"
-#~ msgstr "أدوات الضبط - بلاط M2M المتقدم"
-
-#~ msgid "https://github.com/DiscipleTools/disciple-tools-advanced-m2m-tiles"
-#~ msgstr "https://github.com/DiscipleTools/disciple-tools-advanced-m2m-tiles"
-
-#~ msgid ""
-#~ "Disciple Tools - Advanced M2M Tiles adds specific supporting tiles for "
-#~ "different roles."
-#~ msgstr ""
-#~ "أدوات الضبط - تضيف مربعات M2M المتقدمة مربعات دعم محددة لأدوار مختلفة."
+msgstr "مسح"

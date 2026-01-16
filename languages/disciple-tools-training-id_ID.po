@@ -26,32 +26,27 @@ msgstr "Peta Pelatihan"
 
 #: network/network-dashboard-integration.php:44
 msgid "New Training"
-msgstr ""
+msgstr "Pelatihan Baru"
 
 #: network/network-dashboard-integration.php:50
 msgid "Training Started"
-msgstr ""
+msgstr "Pelatihan Dimulai"
 
 #: network/network-dashboard-integration.php:56
 msgid "Training Completed"
-msgstr ""
+msgstr "Pelatihan Selesai"
 
 #: post-type/module-base.php:28 post-type/module-base.php:495
 msgid "Training"
-msgstr "Latihan"
-
-#: post-type/module-base.php:70
-#, fuzzy
-#| msgid "Trainings"
-msgid "Trainings Admin"
 msgstr "Pelatihan"
 
+#: post-type/module-base.php:70
+msgid "Trainings Admin"
+msgstr "Admin Pelatihan"
+
 #: post-type/module-base.php:71
-#, fuzzy
-#| msgctxt "Optional Documentation"
-#| msgid "Leader of a training"
 msgid "Admin access to all trainings"
-msgstr "Pemimpin pelatihan"
+msgstr "Akses admin ke semua pelatihan"
 
 #: post-type/module-base.php:76
 msgid "Multiplier"
@@ -74,6 +69,8 @@ msgctxt "Optional Documentation"
 msgid ""
 "A useful way to group related items and can be used to filter the records"
 msgstr ""
+"Cara yang berguna untuk mengelompokkan item terkait dan dapat digunakan "
+"untuk memfilter catatan"
 
 #: post-type/module-base.php:135
 msgid "Follow"
@@ -120,7 +117,7 @@ msgstr "Pelatihan ini dikonfirmasi, di kalender."
 #: post-type/module-base.php:177
 msgctxt "Training Status label"
 msgid "In Progress"
-msgstr "Sedang berlangsung"
+msgstr "Sedang Berlangsung"
 
 #: post-type/module-base.php:178
 msgctxt "Training Status field description"
@@ -130,7 +127,7 @@ msgstr "Pelatihan ini dikonfirmasi, di kalender, atau sedang aktif."
 #: post-type/module-base.php:182
 msgctxt "Training Status label"
 msgid "Complete"
-msgstr "Lengkap"
+msgstr "Selesai"
 
 #: post-type/module-base.php:183
 msgctxt "Training Status field description"
@@ -148,13 +145,13 @@ msgid ""
 "This contact is currently on hold. It has potential of getting scheduled in "
 "the future."
 msgstr ""
-"Kontak ini sedang ditahan. Ini memiliki potensi untuk dijadwalkan di masa "
+"Pelatihan ini sedang ditahan. Ini memiliki potensi untuk dijadwalkan di masa "
 "depan."
 
 #: post-type/module-base.php:192
 msgctxt "Training Status label"
 msgid "Closed"
-msgstr "Tutup"
+msgstr "Ditutup"
 
 #: post-type/module-base.php:193
 msgctxt "Training Status field description"
@@ -163,7 +160,7 @@ msgstr "Pelatihan ini tidak akan terjadi lagi."
 
 #: post-type/module-base.php:201
 msgid "Assigned To"
-msgstr "Ditugaskan untuk"
+msgstr "Ditugaskan Kepada"
 
 #: post-type/module-base.php:202
 msgid ""
@@ -182,9 +179,9 @@ msgid ""
 "be assigned to a training while multiple people can be coaches / church "
 "planters of this training."
 msgstr ""
-"Orang yang menanam dan / atau melatih pelatihan ini. Hanya satu orang yang "
+"Orang yang menanam dan/atau melatih pelatihan ini. Hanya satu orang yang "
 "dapat ditugaskan untuk pelatihan sementara banyak orang dapat menjadi "
-"Pembina / pendiri gereja untuk pelatihan ini."
+"pelatih/penanam gereja untuk pelatihan ini."
 
 #: post-type/module-base.php:222
 msgid "Requires Update"
@@ -192,7 +189,7 @@ msgstr "Membutuhkan Pembaruan"
 
 #: post-type/module-base.php:228
 msgid "Video Link"
-msgstr "Tautan video"
+msgstr "Tautan Video"
 
 #: post-type/module-base.php:229
 msgctxt "Optional Documentation"
@@ -210,7 +207,7 @@ msgstr "Catatan kapan pelatihan akan dilakukan"
 
 #: post-type/module-base.php:246 post-type/module-base.php:509
 msgid "Meeting Times"
-msgstr "Waktu Rapat"
+msgstr "Waktu Pertemuan"
 
 #: post-type/module-base.php:295 post-type/module-base.php:304
 msgid "Locations"
@@ -227,7 +224,7 @@ msgstr "Alamat"
 
 #: post-type/module-base.php:333
 msgid "Parent Training"
-msgstr "Pelatihan Orang Tua"
+msgstr "Pelatihan Induk"
 
 #: post-type/module-base.php:334
 msgctxt "Optional Documentation"
@@ -236,7 +233,7 @@ msgstr "Pelatihan yang meluncurkan pelatihan ini."
 
 #: post-type/module-base.php:344
 msgid "Peer Training"
-msgstr "Pelatihan Teman"
+msgstr "Pelatihan Sejawat"
 
 #: post-type/module-base.php:345
 msgctxt "Optional Documentation"
@@ -244,9 +241,8 @@ msgid ""
 "A related training that isn't a parent/child in relationship. It might "
 "indicate trainings that collaborate, are about to merge, recently split, etc."
 msgstr ""
-"Pelatihan terkait yang bukan orang tua / anak dalam hubungan. Ini mungkin "
-"menunjukkan pelatihan yang berkolaborasi, akan bergabung, baru-baru ini "
-"dipisahkan, dll."
+"Pelatihan terkait yang bukan hubungan induk/anak. Ini mungkin menunjukkan "
+"pelatihan yang berkolaborasi, akan bergabung, baru-baru ini dipisahkan, dll."
 
 #: post-type/module-base.php:355
 msgid "Child Training"
@@ -255,12 +251,12 @@ msgstr "Pelatihan Anak"
 #: post-type/module-base.php:356
 msgctxt "Optional Documentation"
 msgid "A training that has been birthed out of this training."
-msgstr "Sebuah pelatihan yang telah lahir dari pelatihan ini."
+msgstr "Pelatihan yang telah lahir dari pelatihan ini."
 
 #: post-type/module-base.php:366 post-type/module-base.php:508
 #: post-type/module-base.php:542
 msgid "Member List"
-msgstr "Daftar anggota"
+msgstr "Daftar Anggota"
 
 #: post-type/module-base.php:367
 msgctxt "Optional Documentation"
@@ -278,7 +274,7 @@ msgstr "Kelompok Orang"
 #: post-type/module-base.php:388
 msgctxt "Optional Documentation"
 msgid "The people trainings represented by this training."
-msgstr "Pelatihan masyarakat yang diwakili oleh pelatihan ini."
+msgstr "Kelompok orang yang diwakili oleh pelatihan ini."
 
 #: post-type/module-base.php:397
 msgid "Groups"
@@ -286,7 +282,7 @@ msgstr "Grup"
 
 #: post-type/module-base.php:409
 msgid "Member Count"
-msgstr "jumlah anggota"
+msgstr "Jumlah Anggota"
 
 #: post-type/module-base.php:410 post-type/module-base.php:417
 msgctxt "Optional Documentation"
@@ -303,11 +299,11 @@ msgstr ""
 
 #: post-type/module-base.php:416
 msgid "Leader Count"
-msgstr "Hitungan Pemimpin"
+msgstr "Jumlah Pemimpin"
 
 #: post-type/module-base.php:426
 msgid "Training as Leader"
-msgstr "Pelatihan sebagai Leader"
+msgstr "Pelatihan sebagai Pemimpin"
 
 #: post-type/module-base.php:427
 msgctxt "Optional Documentation"
@@ -325,11 +321,11 @@ msgstr "Peserta pelatihan."
 
 #: post-type/module-base.php:510
 msgid "Other"
-msgstr "Lain"
+msgstr "Lainnya"
 
 #: post-type/module-base.php:545
 msgid "Create"
-msgstr "Membuat"
+msgstr "Buat"
 
 #: post-type/module-base.php:550
 msgid "Select"
@@ -355,25 +351,19 @@ msgstr ""
 
 #: post-type/module-base.php:573
 msgid "Close"
-msgstr "Menutup"
+msgstr "Tutup"
 
 #: post-type/module-base.php:713
-#, fuzzy
-#| msgid "Removed %1$s: %2$s"
 msgid "Removed %1$s: {%2$s}"
-msgstr "%1$s: %2$s dihapus"
+msgstr "Menghapus %1$s: {%2$s}"
 
 #: post-type/module-base.php:716
-#, fuzzy
-#| msgid "Added %1$s: %2$s"
 msgid "Added %1$s: {%2$s}"
-msgstr "Menambahkan %1$s: %2$s"
+msgstr "Menambahkan %1$s: {%2$s}"
 
 #: post-type/module-base.php:719
-#, fuzzy
-#| msgid "Updated %1$s: %2$s to %3$s"
 msgid "Updated %1$s: {%2$s} to {%3$s}"
-msgstr "Diperbarui %1$s: %2$s menjadi %3$s"
+msgstr "Memperbarui %1$s: {%2$s} menjadi {%3$s}"
 
 #: post-type/module-base.php:804
 msgctxt "List Filters"
@@ -388,7 +378,7 @@ msgstr "Semua"
 #: post-type/module-base.php:871
 msgctxt "List Filters"
 msgid "Default Filters"
-msgstr ""
+msgstr "Filter Bawaan"
 
 #: post-type/module-public-calendar.php:85
 msgid "Reports"
@@ -400,7 +390,7 @@ msgstr "Total Grup"
 
 #: post-type/module-public-calendar.php:122
 msgid "Total Baptisms"
-msgstr "Baptisan Total"
+msgstr "Total Baptisan"
 
 #: post-type/module-public-calendar.php:123
 msgid "Countries"
@@ -408,7 +398,7 @@ msgstr "Negara"
 
 #: post-type/module-public-calendar.php:124
 msgid "States"
-msgstr "Serikat"
+msgstr "Provinsi"
 
 #: post-type/module-public-calendar.php:125
 msgid "Counties"
@@ -417,15 +407,15 @@ msgstr "Kabupaten"
 #: post-type/module-public-calendar.php:432
 #: post-type/module-registration.php:385
 msgid "Add"
-msgstr "Menambahkan"
+msgstr "Tambah"
 
 #: post-type/module-registration.php:31
 msgid "Magic Links"
-msgstr ""
+msgstr "Tautan Ajaib"
 
 #: post-type/module-registration.php:59
 msgid "copy link"
-msgstr "Salin tautan"
+msgstr "salin tautan"
 
 #: post-type/module-registration.php:61
 msgid "edit form"
@@ -433,7 +423,7 @@ msgstr "edit formulir"
 
 #: post-type/module-registration.php:63
 msgid "report"
-msgstr "melaporkan"
+msgstr "laporan"
 
 #: post-type/module-registration.php:67
 msgid "create link"
@@ -445,23 +435,23 @@ msgstr "tautan"
 
 #: post-type/module-registration.php:116
 msgid "show on calendar"
-msgstr "tunjukkan di kalender"
+msgstr "tampilkan di kalender"
 
 #: post-type/module-registration.php:118
 msgid "open registration"
-msgstr "pendaftaran terbuka "
+msgstr "pendaftaran terbuka"
 
 #: post-type/module-registration.php:265
 msgid "add"
-msgstr "Menambahkan"
+msgstr "tambah"
 
 #: post-type/module-registration.php:266
 msgid "Use"
-msgstr "Menggunakan"
+msgstr "Gunakan"
 
 #: post-type/module-registration.php:267 post-type/module-registration.php:695
 msgid "Search Location"
-msgstr "Lokasi Pencarian"
+msgstr "Cari Lokasi"
 
 #: post-type/module-registration.php:268
 msgid "Delete Location"
@@ -473,7 +463,7 @@ msgstr "Buka Pemetaan"
 
 #: post-type/module-registration.php:270
 msgid "clear"
-msgstr "bersih"
+msgstr "bersihkan"
 
 #: post-type/module-registration.php:384
 msgid "Register for Training"
@@ -481,816 +471,12 @@ msgstr "Daftar untuk Pelatihan"
 
 #: post-type/module-registration.php:386
 msgid "Join Training"
-msgstr "Bergabunglah dengan Pelatihan"
+msgstr "Bergabung dengan Pelatihan"
 
 #: post-type/module-registration.php:387
 msgid "Join in"
-msgstr "Bergabunglah"
+msgstr "Bergabung"
 
 #: post-type/module-registration.php:700
 msgid "Clear"
-msgstr "Bersih"
-
-#~ msgid "Apps"
-#~ msgstr "Aplikasi"
-
-#, fuzzy
-#~| msgid "Disciple Tools - Training"
-#~ msgid "Disciple.Tools - Training"
-#~ msgstr "Alat Pemuridan - Pelatihan"
-
-#~ msgid "https://github.com/DiscipleTools/disciple-tools-training"
-#~ msgstr "https://github.com/DiscipleTools/disciple-tools-training"
-
-#, fuzzy
-#~| msgid ""
-#~| "Disciple Tools Training Extension adds recording of trainings and cross "
-#~| "reference them with contacts, groups, and locations."
-#~ msgid ""
-#~ "Disciple.Tools Training Extension adds recording of trainings and cross "
-#~ "reference them with contacts, groups, and locations."
-#~ msgstr ""
-#~ "Disciple Tools Training Extension menambahkan rekaman pelatihan dan "
-#~ "mereferensikannya dengan kontak, grup, dan lokasi."
-
-#~ msgid "Whoah, partner!"
-#~ msgstr "Wah, kawan!"
-
-#~ msgid "Method does not exist."
-#~ msgstr "Metode tidak ada."
-
-#~ msgid "Dispatcher"
-#~ msgstr "Operator"
-
-#~ msgid "Members"
-#~ msgstr "Anggota"
-
-#~ msgid "Contacts"
-#~ msgstr "Kontak"
-
-#~ msgid "Coaches"
-#~ msgstr "Pelatih"
-
-#~ msgid "Planted by"
-#~ msgstr "Ditanam oleh"
-
-#~ msgid "Planting"
-#~ msgstr "Penanaman"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid ""
-#~ "A useful way to training related items and can help training contacts "
-#~ "associated with noteworthy characteristics. e.g. business owner, sports "
-#~ "lover. The contacts can also be filtered using these tags."
-#~ msgstr ""
-#~ "Cara yang berguna untuk melatih item terkait dan dapat membantu melatih "
-#~ "kontak yang terkait dengan karakteristik yang patut diperhatikan. "
-#~ "misalnya pemilik bisnis, pencinta olahraga. Kontak juga dapat disaring "
-#~ "menggunakan tag ini."
-
-#~ msgctxt "input field placeholder"
-#~ msgid "Search Users"
-#~ msgstr "Cari Pengguna"
-
-#~ msgctxt "Search 'something'"
-#~ msgid "Search %s"
-#~ msgstr "Telusur %s"
-
-#~ msgid "Extensions (DT)"
-#~ msgstr "Ekstensi (DT)"
-
-#~ msgid "Network Dashboard"
-#~ msgstr "Dasbor Jaringan"
-
-#~ msgid "You do not have sufficient permissions to access this page."
-#~ msgstr "Anda tidak memiliki izin yang memadai untuk mengakses halaman ini."
-
-#~ msgid "nav-tab-active"
-#~ msgstr "nav-tab-aktif"
-
-#~ msgid "Network Dashboard Viewer"
-#~ msgstr "Penampil Dasbor Jaringan"
-
-#~ msgid "ID"
-#~ msgstr "Indo"
-
-#~ msgid "Site"
-#~ msgstr "Situs"
-
-#~ msgid "Users"
-#~ msgstr "Pengguna"
-
-#~ msgid "Timestamp"
-#~ msgstr "Stempel waktu"
-
-#~ msgid "Visit"
-#~ msgstr "Mengunjungi"
-
-#~ msgid "View"
-#~ msgstr "Melihat"
-
-#~ msgid "Active Snapshot"
-#~ msgstr "Snapshot Aktif"
-
-#~ msgid "Generations"
-#~ msgstr "Generasi"
-
-#~ msgid "Follow-up Funnel"
-#~ msgstr "Corong Tindak Lanjut"
-
-#~ msgid "On-Going Meetings"
-#~ msgstr "Rapat yang Sedang Berlangsung"
-
-#~ msgid "Coaching"
-#~ msgstr "Pembinaan"
-
-#~ msgid "Baptized"
-#~ msgstr "Dibaptis"
-
-#~ msgid "Active Groups"
-#~ msgstr "Grup Aktif"
-
-#~ msgid "Church"
-#~ msgstr "Gereja"
-
-#~ msgid "Health Metrics"
-#~ msgstr "Metrik Kesehatan"
-
-#~ msgid "Total Users"
-#~ msgstr "Total Pengguna"
-
-#~ msgid "Responders"
-#~ msgstr "Responden"
-
-#~ msgid "Dispatchers"
-#~ msgstr "Operator"
-
-#~ msgid "Multipliers"
-#~ msgstr "Pengganda"
-
-#~ msgid "Admins"
-#~ msgstr "Admin"
-
-#~ msgid "User Login Activity"
-#~ msgstr "Aktivitas Login Pengguna"
-
-#~ msgid "Users Active in the Last 30 Days"
-#~ msgstr "Pengguna Aktif dalam 30 Hari Terakhir"
-
-#~ msgid "Practicing"
-#~ msgstr "Berlatih"
-
-#~ msgid "Not Practicing"
-#~ msgstr "Tidak Berlatih"
-
-#~ msgid "Chart Funnel"
-#~ msgstr "Bagan Corong"
-
-#~ msgid "Contact"
-#~ msgstr "Kontak"
-
-#~ msgid "Group"
-#~ msgstr "Kelompok"
-
-#~ msgid "User"
-#~ msgstr "Pengguna"
-
-#~ msgid "Sites"
-#~ msgstr "Situs"
-
-#~ msgid "Baptisms"
-#~ msgstr "Baptisan"
-
-#~ msgid "Churches"
-#~ msgstr "Gereja"
-
-#~ msgid "Location"
-#~ msgstr "Lokasi"
-
-#~ msgid "Types"
-#~ msgstr "Jenis"
-
-#~ msgid "modify filter"
-#~ msgstr "ubah filter"
-
-#~ msgid "Filter List"
-#~ msgstr "Daftar Filter"
-
-#~ msgid "reset data"
-#~ msgstr "setel ulang data"
-
-#~ msgid "Status"
-#~ msgstr "Status"
-
-#~ msgid "Status - All"
-#~ msgstr "Status - Semua"
-
-#~ msgid "Zoom Level"
-#~ msgstr "Tingkat Zoom"
-
-#~ msgid "Auto Zoom"
-#~ msgstr "Zoom Otomatis"
-
-#~ msgid "World"
-#~ msgstr "Dunia"
-
-#~ msgid "Country"
-#~ msgstr "Negara"
-
-#~ msgid "State"
-#~ msgstr "Negara"
-
-#~ msgid "Active Contacts"
-#~ msgstr "Kontak Aktif"
-
-#~ msgid "Paused Contacts"
-#~ msgstr "Kontak yang Dijeda"
-
-#~ msgid "Closed Contacts"
-#~ msgstr "Kontak Tertutup"
-
-#~ msgid "Total Contacts"
-#~ msgstr "Total Kontak"
-
-#~ msgid "New Contacts"
-#~ msgstr "Kontak Baru"
-
-#~ msgid "New Baptisms"
-#~ msgstr "Baptisan Baru"
-
-#~ msgid "Baptism Generations"
-#~ msgstr "Generasi Baptisan"
-
-#~ msgid "Select Location"
-#~ msgstr "Pilih lokasi"
-
-#~ msgid "New Groups"
-#~ msgstr "Grup Baru"
-
-#~ msgid "Pre-Group"
-#~ msgstr "Pra-Grup"
-
-#~ msgid "Pre-Groups"
-#~ msgstr "Pra-Grup"
-
-#~ msgid "Last 7 Days"
-#~ msgstr "7 Hari Terakhir"
-
-#~ msgid "Last 30 Days"
-#~ msgstr "30 hari terakhir"
-
-#~ msgid "Last 60 Days"
-#~ msgstr "60 Hari Terakhir"
-
-#~ msgid "Last 12 Months"
-#~ msgstr "12 Bulan Terakhir"
-
-#~ msgid "Last 24 Months"
-#~ msgstr "24 Bulan Terakhir"
-
-#~ msgid "This Year"
-#~ msgstr "Tahun ini"
-
-#~ msgid "Activity Map"
-#~ msgstr "Peta Aktivitas"
-
-#~ msgid "Stats"
-#~ msgstr "Statistik"
-
-#~ msgid "Activities"
-#~ msgstr "Kegiatan"
-
-#~ msgid "Actions"
-#~ msgstr "Tindakan"
-
-#~ msgid "By Action Type"
-#~ msgstr "Berdasarkan Jenis Tindakan"
-
-#~ msgid "Key"
-#~ msgstr "Kunci"
-
-#~ msgid "Name"
-#~ msgstr "Nama"
-
-#~ msgid "Total Activities"
-#~ msgstr "Total Aktivitas"
-
-#~ msgid "Feed"
-#~ msgstr "Makan"
-
-#~ msgid "Time"
-#~ msgstr "Waktu"
-
-#~ msgid "Result Limit"
-#~ msgstr "Batas Hasil"
-
-#~ msgid "uncheck"
-#~ msgstr "hapus centang"
-
-#~ msgid "Home"
-#~ msgstr "Rumah"
-
-#~ msgid "Events (30 Days)"
-#~ msgstr "Peristiwa (30 Hari)"
-
-#~ msgid "All Active/Inactive"
-#~ msgstr "Semua Aktif / Tidak Aktif"
-
-#~ msgid "Hover Map"
-#~ msgstr "Arahkan Peta"
-
-#~ msgid "Network"
-#~ msgstr "Jaringan"
-
-#~ msgid "Map"
-#~ msgstr "Peta"
-
-#~ msgid "Log"
-#~ msgstr "Catatan"
-
-#~ msgid "Activity"
-#~ msgstr "Aktivitas"
-
-#~ msgid "Area Maps"
-#~ msgstr "Peta Area"
-
-#~ msgid "Location List"
-#~ msgstr "Daftar Lokasi"
-
-#~ msgid "Maps"
-#~ msgstr "Maps"
-
-#~ msgid "Site Reports"
-#~ msgstr "Laporan Situs"
-
-#~ msgid "Statistics"
-#~ msgstr "Statistik"
-
-#~ msgid "Network Dashboard Transfer Both Ways"
-#~ msgstr "Dasbor Jaringan Mentransfer Kedua Cara"
-
-#~ msgid "Network Dashboard Receiving Only"
-#~ msgstr "Dasbor Jaringan Hanya Menerima"
-
-#~ msgid "Network Dashboard Sending Only"
-#~ msgstr "Dasbor Jaringan Hanya Mengirim"
-
-#~ msgid "Network Dashboard Site Profile"
-#~ msgstr "Profil Situs Dasbor Jaringan"
-
-#~ msgid "Disciple Tools - Network Dashboard"
-#~ msgstr "Alat Pemuridan - Dasbor Jaringan"
-
-#~ msgid "Streams"
-#~ msgstr "Aliran"
-
-#~ msgid "Stream Maps"
-#~ msgstr "Stream Maps"
-
-#~ msgid "Streams Maps"
-#~ msgstr "Streams Maps"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid ""
-#~ "A useful way to stream related items and can help stream contacts "
-#~ "associated with noteworthy characteristics. e.g. business owner, sports "
-#~ "lover. The contacts can also be filtered using these tags."
-#~ msgstr ""
-#~ "Cara yang berguna untuk mengalirkan item terkait dan dapat membantu "
-#~ "mengalirkan kontak yang terkait dengan karakteristik yang patut "
-#~ "diperhatikan. misalnya pemilik bisnis, pencinta olahraga. Kontak juga "
-#~ "dapat disaring menggunakan tag ini."
-
-#~ msgctxt "Stream Status label"
-#~ msgid "New"
-#~ msgstr "Baru"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "New stream added to the system"
-#~ msgstr "Aliran baru ditambahkan ke sistem"
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Model"
-#~ msgstr "Model"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "This stream has been proposed and is in initial conversations"
-#~ msgstr "Aliran ini telah diusulkan dan dalam percakapan awal"
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Assist"
-#~ msgstr "Membantu"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "This stream is confirmed, on the calendar."
-#~ msgstr "Aliran ini dikonfirmasi, di kalender."
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Watch"
-#~ msgstr "Menonton"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "This stream is confirmed, on the calendar, or currently active."
-#~ msgstr "Aliran ini dikonfirmasi, di kalender, atau sedang aktif."
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Leave"
-#~ msgstr "Meninggalkan"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "This stream has successfully completed"
-#~ msgstr "Aliran ini berhasil diselesaikan"
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Paused"
-#~ msgstr "Dijeda"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid ""
-#~ "This contact is currently on hold. It has potential of getting scheduled "
-#~ "in the future."
-#~ msgstr ""
-#~ "Kontak ini sedang ditahan. Ini memiliki potensi untuk dijadwalkan di masa "
-#~ "depan."
-
-#~ msgctxt "Stream Status label"
-#~ msgid "Closed"
-#~ msgstr "Tutup"
-
-#~ msgctxt "Stream Status field description"
-#~ msgid "This stream is no longer going to happen."
-#~ msgstr "Aliran ini tidak akan terjadi lagi."
-
-#~ msgid ""
-#~ "Select the main person who is responsible for reporting on this stream."
-#~ msgstr ""
-#~ "Pilih orang utama yang bertanggung jawab untuk melaporkan aliran ini."
-
-#~ msgctxt "Optional Documentation"
-#~ msgid ""
-#~ "The person who planted and/or is coaching this stream. Only one person "
-#~ "can be assigned to a stream while multiple people can be coaches / church "
-#~ "planters of this stream."
-#~ msgstr ""
-#~ "Orang yang menanam dan / atau melatih aliran ini. Hanya satu orang yang "
-#~ "dapat ditugaskan ke aliran sementara beberapa orang dapat menjadi "
-#~ "Pembina / pendiri gereja aliran ini."
-
-#~ msgctxt "Optional Documentation"
-#~ msgid "The people streams represented by this stream."
-#~ msgstr "Aliran orang yang diwakili oleh aliran ini."
-
-#~ msgid "Parent Stream"
-#~ msgstr "Arus Induk"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid "A stream that launched this stream."
-#~ msgstr "Aliran yang meluncurkan aliran ini."
-
-#~ msgid "Peer Streams"
-#~ msgstr "Aliran Peer"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid ""
-#~ "A related stream that isn't a parent/child in relationship. It might "
-#~ "indicate streams that collaborate, are about to merge, recently split, "
-#~ "etc."
-#~ msgstr ""
-#~ "Aliran terkait yang bukan orang tua / anak dalam hubungan. Ini mungkin "
-#~ "menunjukkan aliran yang berkolaborasi, akan bergabung, baru-baru ini "
-#~ "dipisahkan, dll."
-
-#~ msgid "Child Streams"
-#~ msgstr "Aliran Anak"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid "A stream that has been birthed out of this stream."
-#~ msgstr "Aliran yang telah lahir dari arus ini."
-
-#~ msgid "Leader in Stream"
-#~ msgstr "Leader dalam Stream"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid "Leader of a stream"
-#~ msgstr "Pemimpin arus"
-
-#~ msgid "Key Disciple in Stream"
-#~ msgstr "Murid Utama di Stream"
-
-#~ msgctxt "Optional Documentation"
-#~ msgid "Disciple in a stream."
-#~ msgstr "Murid dalam aliran."
-
-#~ msgid "Connections"
-#~ msgstr "Koneksi"
-
-#~ msgid "Add Report"
-#~ msgstr "Tambahkan Laporan"
-
-#~ msgid "Disciple Tools - Streams"
-#~ msgstr "Alat Pemuridan - Aliran"
-
-#~ msgid "Pre-Group Generations"
-#~ msgstr "Generasi Pra-Grup"
-
-#~ msgid "Group Generations"
-#~ msgstr "Generasi Grup"
-
-#~ msgid "Church Generations"
-#~ msgstr "Generasi Gereja"
-
-#~ msgid "Team Generations"
-#~ msgstr "Generasi Tim"
-
-#~ msgid "%s is reporting a new pre-group generation."
-#~ msgstr "%s melaporkan generasi pra-grup baru."
-
-#~ msgid "%s is reporting a new group generation."
-#~ msgstr "%s melaporkan pembuatan grup baru."
-
-#~ msgid "%s is reporting a new church generation."
-#~ msgstr "%s melaporkan generasi gereja baru."
-
-#~ msgid "%s is reporting a new leadership team generation."
-#~ msgstr "%s melaporkan generasi tim kepemimpinan baru."
-
-#~ msgid "New Contact"
-#~ msgstr "Kontak baru"
-
-#~ msgid "New Pre-Group"
-#~ msgstr "Pra-Grup Baru"
-
-#~ msgid "New Group"
-#~ msgstr "Grup baru"
-
-#~ msgid "New Church"
-#~ msgstr "Gereja Baru"
-
-#~ msgid "New Team"
-#~ msgstr "Tim Baru"
-
-#~ msgid "New Baptism"
-#~ msgstr "Baptisan Baru"
-
-#~ msgid "New Coaching"
-#~ msgstr "Pelatihan Baru"
-
-#~ msgid "%s is reporting a new contact."
-#~ msgstr "%s melaporkan kontak baru."
-
-#~ msgid "%s is reporting a new pre-group formed."
-#~ msgstr "%s melaporkan kelompok baru yang dibentuk."
-
-#~ msgid "%s is reporting a new group formed."
-#~ msgstr "%s melaporkan pembentukan grup baru."
-
-#~ msgid "%s is reporting a new church."
-#~ msgstr "%s melaporkan gereja baru."
-
-#~ msgid "%s is reporting a new leadership team formed."
-#~ msgstr "%s melaporkan pembentukan tim kepemimpinan baru."
-
-#~ msgid "%s is reporting a new baptism."
-#~ msgstr "%s melaporkan pembaptisan baru."
-
-#~ msgid "%s is reporting an coaching relationship."
-#~ msgstr "%s melaporkan hubungan pembinaan."
-
-#~ msgid "Active"
-#~ msgstr "Aktif"
-
-#~ msgid "Paused"
-#~ msgstr "Dijeda"
-
-#~ msgid "Closed"
-#~ msgstr "Tutup"
-
-#~ msgid "Inactive"
-#~ msgstr "Tidak aktif"
-
-#~ msgid "https://github.com/DiscipleTools/disciple-tools-network-dashboard"
-#~ msgstr "https://github.com/DiscipleTools/disciple-tools-network-dashboard"
-
-#~ msgid ""
-#~ "Connect this Disciple Tools site to a larger network of sites. Adds "
-#~ "security sensitive totals, mapping, activity logging."
-#~ msgstr ""
-#~ "Hubungkan situs Alat Pemuridan ini ke jaringan situs yang lebih besar. "
-#~ "Menambahkan total sensitif keamanan, pemetaan, pencatatan aktivitas."
-
-#~ msgid "https://github.com/DiscipleTools"
-#~ msgstr "https://github.com/DiscipleTools"
-
-#~ msgid "https://github.com/DiscipleTools/disciple-tools-streams"
-#~ msgstr "https://github.com/DiscipleTools/disciple-tools-streams"
-
-#~ msgid ""
-#~ "Disciple Tools Streams Extension adds recording of streams and cross "
-#~ "reference them with contacts, groups, and locations."
-#~ msgstr ""
-#~ "Disciple Tools Streams Extension menambahkan rekaman aliran dan "
-#~ "mereferensikannya dengan kontak, grup, dan lokasi."
-
-#~ msgid ""
-#~ "'Disciple Tools - Training' plugin requires 'Disciple Tools' theme to "
-#~ "work. Please activate 'Disciple Tools' theme or make sure it is latest "
-#~ "version."
-#~ msgstr ""
-#~ "Plugin 'Disciple Tools - Training' membutuhkan tema 'Disciple Tools' agar "
-#~ "dapat berfungsi. Harap aktifkan tema 'Disciple Tools' atau pastikan itu "
-#~ "adalah versi terbaru."
-
-#~ msgid "Current Disciple Tools version: %1$s, required version: %2$s"
-#~ msgstr "Versi Alat Pemuridan saat ini: %1$s, versi yang diperlukan: %2$s"
-
-#~ msgid "Duplicates"
-#~ msgstr "Duplikat"
-
-#~ msgid "Coach"
-#~ msgstr "Pelatih"
-
-#~ msgid "Leaders Total"
-#~ msgstr "Total Pemimpin"
-
-#~ msgid "Disciples Total"
-#~ msgstr "Jumlah Murid"
-
-#~ msgid "Key Disciples"
-#~ msgstr "Murid Kunci"
-
-#~ msgid "Groups Total"
-#~ msgstr "Total Grup"
-
-#~ msgid "Trainings Total"
-#~ msgstr "Total Pelatihan"
-
-#~ msgid "Dashboard Plugin"
-#~ msgstr "Plugin Dashboard"
-
-#~ msgid "Dashboard"
-#~ msgstr "Dasbor"
-
-#~ msgid "%s days since last update"
-#~ msgstr "%s hari sejak pembaruan terakhir"
-
-#~ msgid "Accept"
-#~ msgstr "Menerima"
-
-#~ msgid "Decline"
-#~ msgstr "Menurun"
-
-#~ msgid "# Contacts Assigned"
-#~ msgstr "# Kontak Ditugaskan"
-
-#~ msgid "# First Meetings"
-#~ msgstr "# Pertemuan Pertama"
-
-#~ msgid "# Faith milestones"
-#~ msgstr "# Tonggak keyakinan"
-
-#~ msgid "Hurray! You are caught up."
-#~ msgstr "Hore! Anda tertangkap."
-
-#~ msgid "remove"
-#~ msgstr "menghapus"
-
-#~ msgid "mark as complete"
-#~ msgstr "tandai sebagai selesai"
-
-#~ msgid "No task created"
-#~ msgstr "Tidak ada tugas yang dibuat"
-
-#~ msgid "Reminder"
-#~ msgstr "Peringatan"
-
-#~ msgid "No note set"
-#~ msgstr "Tidak ada catatan"
-
-#~ msgid "Add a contact"
-#~ msgstr "Menambahkan kontak"
-
-#~ msgid "View Contacts List"
-#~ msgstr "Lihat Daftar Kontak"
-
-#~ msgid "Pending Contacts"
-#~ msgstr "Kontak yang Menunggu Keputusan"
-
-#~ msgid "View All"
-#~ msgstr "Lihat semua"
-
-#~ msgid "Update Needed"
-#~ msgstr "Pembaruan Diperlukan"
-
-#~ msgid "Contact Workload"
-#~ msgstr "Hubungi Beban Kerja"
-
-#~ msgid ""
-#~ "Choose an option to let the dispatcher(s) know if you are ready for new "
-#~ "contacts"
-#~ msgstr ""
-#~ "Pilih opsi untuk memberi tahu petugas operator jika Anda siap untuk "
-#~ "kontak baru"
-
-#~ msgid "Set travel or dates unavailable"
-#~ msgstr "Setel perjalanan atau tanggal tidak tersedia"
-
-#~ msgid "Personal Benchmarks"
-#~ msgstr "Tolok Ukur Pribadi"
-
-#~ msgid "Faith Milestone Totals"
-#~ msgstr "Total Milestone Keyakinan"
-
-#~ msgid "Milestones on your active contacts"
-#~ msgstr "Tonggak sejarah pada kontak aktif Anda"
-
-#~ msgid "Seeker Path Progress"
-#~ msgstr "Kemajuan Jalur Pencari"
-
-#~ msgid "No data to show yet. You have no active contacts"
-#~ msgstr "Belum ada data untuk ditampilkan. Anda tidak memiliki kontak aktif"
-
-#~ msgid "Disciple Tools - Dashboard"
-#~ msgstr "Alat Pemuridan - Dasbor"
-
-#~ msgid "https://github.com/DiscipleTools/disciple-tools-dashboard"
-#~ msgstr "https://github.com/DiscipleTools/disciple-tools-dashboard"
-
-#~ msgid ""
-#~ "The multiplier dashboard upgrades the multipliers experience as soon as "
-#~ "they log into the system giving them a landing page with stats."
-#~ msgstr ""
-#~ "Dasbor pengganda meningkatkan pengalaman pengganda segera setelah mereka "
-#~ "masuk ke sistem, memberi mereka halaman arahan dengan statistik"
-
-#~ msgid "Reason Assigned To"
-#~ msgstr "Alasan Ditugaskan Kepada"
-
-#~ msgid "Follow-Up"
-#~ msgstr "Mengikuti"
-
-#~ msgid "Digital Response"
-#~ msgstr "Respon Digital"
-
-#~ msgid "Dispatch"
-#~ msgstr "Pengiriman"
-
-#~ msgid "No Answer"
-#~ msgstr "Tidak ada Jawaban"
-
-#~ msgid "Talked"
-#~ msgstr "Berbicara"
-
-#~ msgid "Scheduled"
-#~ msgstr "Terjadwal"
-
-#~ msgid "Complete"
-#~ msgstr "Lengkap"
-
-#~ msgid "No-Show"
-#~ msgstr "No-Show"
-
-#~ msgid "No permission"
-#~ msgstr "Tidak ada izin"
-
-#~ msgid "All"
-#~ msgstr "Semua"
-
-#~ msgid "Ready"
-#~ msgstr "Siap"
-
-#~ msgid "Recent"
-#~ msgstr "Baru"
-
-#~ msgid "Assign"
-#~ msgstr "Menetapkan"
-
-#~ msgid "Choose an option:"
-#~ msgstr "Pilih salah satu opsi:"
-
-#~ msgid "Cancel"
-#~ msgstr "Membatalkan"
-
-#~ msgid "Assign For"
-#~ msgstr "Tetapkan Untuk"
-
-#~ msgid "Search"
-#~ msgstr "Cari"
-
-#~ msgid "Claim for follow-up"
-#~ msgstr "Klaim untuk tindak lanjut"
-
-#~ msgid "Ready for Dispatch"
-#~ msgstr "Siap untuk Pengiriman"
-
-#~ msgid "Disciple Tools - Advanced M2M Tiles"
-#~ msgstr "Alat Murid - Ubin M2M Tingkat Lanjut"
-
-#~ msgid "https://github.com/DiscipleTools/disciple-tools-advanced-m2m-tiles"
-#~ msgstr "https://github.com/DiscipleTools/disciple-tools-advanced-m2m-tiles"
-
-#~ msgid ""
-#~ "Disciple Tools - Advanced M2M Tiles adds specific supporting tiles for "
-#~ "different roles."
-#~ msgstr ""
-#~ "Disciple Tools - Advanced M2M Tiles menambahkan ubin pendukung khusus "
-#~ "untuk peran yang berbeda."
+msgstr "Bersihkan"
