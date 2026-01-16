@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Disciple Tools Plugins\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "training\n"
-"POT-Creation-Date: 2024-11-14T11:03:58+00:00\n"
+"POT-Creation-Date: 2026-01-15T09:26:10+00:00\n"
 "PO-Revision-Date: 2024-10-18 02:00+0000\n"
 "Last-Translator: \"Venkataramana (Wesley)\" <venkataramana.m1@gmail.com>\n"
 "Language-Team: Telugu <https://translate.disciple.tools/projects/disciple-"
@@ -351,14 +351,17 @@ msgid "Close"
 msgstr "మూసివేయు"
 
 #: post-type/module-base.php:713
+#, php-format
 msgid "Removed %1$s: {%2$s}"
 msgstr "%1$s తొలగించబడింది: {%2$s}"
 
 #: post-type/module-base.php:716
+#, php-format
 msgid "Added %1$s: {%2$s}"
 msgstr "%1$s జోడించబడింది: {%2$s}"
 
 #: post-type/module-base.php:719
+#, php-format
 msgid "Updated %1$s: {%2$s} to {%3$s}"
 msgstr "%1$s: {%2$s} నుండి {%3$s} వరకు నవీకరించబడింది"
 

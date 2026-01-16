@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Disciple.Tools - Training 2.6.3\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "training\n"
-"POT-Creation-Date: 2024-11-14T11:03:58+00:00\n"
+"POT-Creation-Date: 2026-01-15T09:26:10+00:00\n"
 "PO-Revision-Date: 2026-01-15 00:00+0000\n"
 "Last-Translator: \n"
 "Language-Team: Ukrainian\n"
@@ -360,14 +360,17 @@ msgid "Close"
 msgstr "Закрити"
 
 #: post-type/module-base.php:713
+#, php-format
 msgid "Removed %1$s: {%2$s}"
 msgstr "Видалено %1$s: {%2$s}"
 
 #: post-type/module-base.php:716
+#, php-format
 msgid "Added %1$s: {%2$s}"
 msgstr "Додано %1$s: {%2$s}"
 
 #: post-type/module-base.php:719
+#, php-format
 msgid "Updated %1$s: {%2$s} to {%3$s}"
 msgstr "Оновлено %1$s: {%2$s} на {%3$s}"
 
