@@ -54,6 +54,7 @@ class DT_Training_Base extends DT_Module_Base {
         //list
         add_filter( 'dt_user_list_filters', [ $this, 'dt_user_list_filters' ], 10, 2 );
         add_filter( 'dt_filter_access_permissions', [ $this, 'dt_filter_access_permissions' ], 20, 2 );
+        add_filter( 'dt_list_posts_custom_fields', [ $this, 'dt_list_posts_custom_fields' ], 10, 2 );
     }
 
     // setup post type
@@ -948,6 +949,37 @@ class DT_Training_Base extends DT_Module_Base {
             }
         }
         return $permissions;
+    }
+
+    public function dt_list_posts_custom_fields( $data, $post_type ){
+        if ( $post_type === 'trainings' ){
+            $post_ids = array_column( $data['posts'], 'ID' );
+            if ( empty( $post_ids ) ){
+                return $data;
+            }
+            $ids_sql = dt_array_to_sql( $post_ids, true );
+            global $wpdb;
+            // phpcs:disable
+            $meta_rows = $wpdb->get_results( "
+                SELECT post_id, meta_key, meta_value
+                FROM $wpdb->postmeta
+                WHERE post_id IN ( $ids_sql )
+                AND meta_key LIKE 'meeting_times_%'
+            ", ARRAY_A );
+            // phpcs:enable
+            $meeting_times_by_post = [];
+            foreach ( $meta_rows as $row ){
+                $meeting_times_by_post[ $row['post_id'] ][] = [
+                    'key' => $row['meta_key'],
+                    'timestamp' => is_numeric( $row['meta_value'] ) ? (int) $row['meta_value'] : dt_format_date( $row['meta_value'], 'U' ),
+                    'formatted' => dt_format_date( $row['meta_value'], 'long' ),
+                ];
+            }
+            foreach ( $data['posts'] as &$post ){
+                $post['meeting_times'] = $meeting_times_by_post[ $post['ID'] ] ?? [];
+            }
+        }
+        return $data;
     }
 
     private static function check_requires_update( $training_id ){
