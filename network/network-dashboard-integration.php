@@ -86,7 +86,6 @@ function dt_network_dashboard_write_log_new_trainings( $post_type, $post_id, $in
 
         DT_Network_Activity_Log::insert_log( $data );
     }
-
 }
 add_action( 'dt_post_updated', 'dt_network_dashboard_write_log_update_trainings', 10, 5 );
 function dt_network_dashboard_write_log_update_trainings( $post_type, $post_id, $initial_fields, $existing_post, $post ){
@@ -222,5 +221,4 @@ function dt_network_dashboard_rebuild_training_activity(){
  **************************************************************************************************************/
 
 add_action( 'dt_network_dashboard_loaded', function(){ // only load once the
-
 } );

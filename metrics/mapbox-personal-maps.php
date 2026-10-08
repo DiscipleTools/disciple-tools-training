@@ -147,7 +147,6 @@ class DT_Metrics_Mapbox_Personal_Trainings_Maps extends DT_Metrics_Chart_Base
         }
 
         return $list;
-
     }
 
     public function get_list_by_grid_id( WP_REST_Request $request ) {
@@ -182,7 +181,5 @@ class DT_Metrics_Mapbox_Personal_Trainings_Maps extends DT_Metrics_Chart_Base
 
         return Disciple_Tools_Mapping_Queries::points_geojson( $post_type, $query );
     }
-
-
 }
 new DT_Metrics_Mapbox_Personal_Trainings_Maps();

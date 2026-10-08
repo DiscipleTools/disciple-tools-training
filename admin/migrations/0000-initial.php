@@ -23,5 +23,4 @@ class DT_Training_Migration_0000 extends DT_Training_Migration {
      */
     public function test() {
     }
-
 }
