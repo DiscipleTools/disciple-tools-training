@@ -148,7 +148,6 @@ class DT_Training_Migration_Engine
             </tr>
         <?php });
     }
-
 }
 
 

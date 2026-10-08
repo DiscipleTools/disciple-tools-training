@@ -124,7 +124,6 @@ class DT_Training_App_Registration_Module extends DT_Module_Base {
 
         <?php }
     }
-
 }
 
 
@@ -275,7 +274,6 @@ class DT_Training_Magic_Registration
         if ( Disciple_Tools_Google_Geocode_API::get_key() ){
             wp_enqueue_script( 'google-search-widget', 'https://maps.googleapis.com/maps/api/js?libraries=places&key='.Disciple_Tools_Google_Geocode_API::get_key(), [ 'jquery', 'mapbox-gl' ], '1', false );
         }
-
     }
 
     public function print_scripts(){
@@ -828,7 +826,6 @@ class DT_Training_Magic_Registration
         }
 
         return $this->retrieve_reports( $post_id );
-
     }
 
     public function retrieve_reports( $post_id ) {
@@ -1024,6 +1021,5 @@ class DT_Training_Magic_Registration
             'features' => array()
         );
     }
-
 }
 

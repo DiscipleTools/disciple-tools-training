@@ -582,7 +582,6 @@ class DT_Training_Base extends DT_Module_Base {
                 </div>
             <?php endif;
         }
-
     }
 
     public function scripts(){
@@ -1046,5 +1045,4 @@ class DT_Training_Base extends DT_Module_Base {
 
         return $results;
     }
-
 }
