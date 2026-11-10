@@ -149,9 +149,13 @@ class DT_Metrics_Mapbox_Trainings_Maps extends DT_Metrics_Chart_Base
         }
 
         return $list;
+
     }
 
     public function get_list_by_grid_id( WP_REST_Request $request ) {
+        if ( ! $this->has_permission() ){
+            return new WP_Error( __METHOD__, 'Missing Permissions', [ 'status' => 400 ] );
+        }
         $params = $request->get_json_params() ?? $request->get_body_params();
         if ( ! isset( $params['grid_id'] ) || empty( $params['grid_id'] ) ) {
             return new WP_Error( __METHOD__, 'Missing Post Types', [ 'status' => 400 ] );
@@ -187,5 +191,7 @@ class DT_Metrics_Mapbox_Trainings_Maps extends DT_Metrics_Chart_Base
 
         return Disciple_Tools_Mapping_Queries::points_geojson( $post_type, $query );
     }
+
+
 }
 new DT_Metrics_Mapbox_Trainings_Maps();
