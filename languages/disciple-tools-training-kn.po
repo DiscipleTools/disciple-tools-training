@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Disciple Tools Plugins\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "training\n"
-"POT-Creation-Date: 2026-01-15T09:26:10+00:00\n"
+"POT-Creation-Date: 2026-11-10T20:37:15+00:00\n"
 "Language: kn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -15,8 +15,8 @@ msgid "Training Maps"
 msgstr "ತರಬೇತಿ ನಕ್ಷೆಗಳು"
 
 #: metrics/mapbox-maps.php:31 metrics/mapbox-personal-maps.php:31
-#: post-type/module-base.php:29 post-type/module-base.php:461
-#: post-type/module-base.php:473 post-type/module-base.php:496
+#: post-type/module-base.php:29 post-type/module-base.php:462
+#: post-type/module-base.php:474 post-type/module-base.php:497
 msgid "Trainings"
 msgstr "ತರಬೇತಿಗಳು"
 
@@ -36,110 +36,110 @@ msgstr "ತರಬೇತಿ ಪ್ರಾರಂಭವಾಯಿತು"
 msgid "Training Completed"
 msgstr "ತರಬೇತಿ ಪೂರ್ಣಗೊಂಡಿದೆ"
 
-#: post-type/module-base.php:28 post-type/module-base.php:495
+#: post-type/module-base.php:28 post-type/module-base.php:496
 msgid "Training"
 msgstr "ತರಬೇತಿ"
 
-#: post-type/module-base.php:70
+#: post-type/module-base.php:71
 msgid "Trainings Admin"
 msgstr "ತರಬೇತಿ ನಿರ್ವಾಹಕರು"
 
-#: post-type/module-base.php:71
+#: post-type/module-base.php:72
 msgid "Admin access to all trainings"
 msgstr "ಎಲ್ಲಾ ತರಬೇತಿಗಳಿಗೆ ನಿರ್ವಾಹಕ ಪ್ರವೇಶ"
 
-#: post-type/module-base.php:76
+#: post-type/module-base.php:77
 msgid "Multiplier"
 msgstr "ಗುಣಕ"
 
-#: post-type/module-base.php:83
+#: post-type/module-base.php:84
 msgid "Disciple.Tools Admin"
 msgstr "ಶಿಷ್ಯ. ಟೂಲ್ಸ್ ನಿರ್ವಹಣೆ"
 
-#: post-type/module-base.php:90
+#: post-type/module-base.php:91
 msgid "Administrator"
 msgstr "ನಿರ್ವಾಹಕರು"
 
-#: post-type/module-base.php:127
+#: post-type/module-base.php:128
 msgid "Tags"
 msgstr "ಟ್ಯಾಗ್ಗಳು"
 
-#: post-type/module-base.php:128
+#: post-type/module-base.php:129
 msgctxt "Optional Documentation"
 msgid ""
 "A useful way to group related items and can be used to filter the records"
 msgstr ""
 "ಸಂಬಂಧಿತ ಐಟಂಗಳನ್ನು ಗುಂಪು ಮಾಡಲು ಉಪಯುಕ್ತ ಮಾರ್ಗ ಮತ್ತು ದಾಖಲೆಗಳನ್ನು ಫಿಲ್ಟರ್ ಮಾಡಲು ಬಳಸಬಹುದು"
 
-#: post-type/module-base.php:135
+#: post-type/module-base.php:136
 msgid "Follow"
 msgstr "ಅನುಸರಿಸಿ"
 
-#: post-type/module-base.php:142
+#: post-type/module-base.php:143
 msgid "Un-Follow"
 msgstr "ಅನ್-ಫಾಲೋ"
 
-#: post-type/module-base.php:148
+#: post-type/module-base.php:149
 msgid "Tasks"
 msgstr "ಕಾರ್ಯಗಳು"
 
-#: post-type/module-base.php:162
+#: post-type/module-base.php:163
 msgctxt "Training Status label"
 msgid "New"
 msgstr "ಹೊಸದು"
 
-#: post-type/module-base.php:163
+#: post-type/module-base.php:164
 msgctxt "Training Status field description"
 msgid "New training added to the system"
 msgstr "ವ್ಯವಸ್ಥೆಗೆ ಹೊಸ ತರಬೇತಿ ಸೇರಿಸಲಾಗಿದೆ"
 
-#: post-type/module-base.php:167
+#: post-type/module-base.php:168
 msgctxt "Training Status label"
 msgid "Proposed"
 msgstr "ಪ್ರಸ್ತಾಪಿಸಲಾಗಿದೆ"
 
-#: post-type/module-base.php:168
+#: post-type/module-base.php:169
 msgctxt "Training Status field description"
 msgid "This training has been proposed and is in initial conversations"
 msgstr "ಈ ತರಬೇತಿಯನ್ನು ಪ್ರಸ್ತಾಪಿಸಲಾಗಿದೆ ಮತ್ತು ಆರಂಭಿಕ ಸಂಭಾಷಣೆಯಲ್ಲಿದೆ"
 
-#: post-type/module-base.php:172
+#: post-type/module-base.php:173
 msgctxt "Training Status label"
 msgid "Scheduled"
 msgstr "ಪರಿಶಿಷ್ಟ"
 
-#: post-type/module-base.php:173
+#: post-type/module-base.php:174
 msgctxt "Training Status field description"
 msgid "This training is confirmed, on the calendar."
 msgstr "ಈ ತರಬೇತಿಯನ್ನು ಕ್ಯಾಲೆಂಡರ್‌ನಲ್ಲಿ ದೃ is ಪಡಿಸಲಾಗಿದೆ."
 
-#: post-type/module-base.php:177
+#: post-type/module-base.php:178
 msgctxt "Training Status label"
 msgid "In Progress"
 msgstr "ಪ್ರಗತಿಯಲ್ಲಿದೆ"
 
-#: post-type/module-base.php:178
+#: post-type/module-base.php:179
 msgctxt "Training Status field description"
 msgid "This training is confirmed, on the calendar, or currently active."
 msgstr ""
 "ಈ ತರಬೇತಿಯನ್ನು ಕ್ಯಾಲೆಂಡರ್‌ನಲ್ಲಿ ಅಥವಾ ಪ್ರಸ್ತುತ ಸಕ್ರಿಯವಾಗಿ ದೃ confirmed ಪಡಿಸಲಾಗಿದೆ."
 
-#: post-type/module-base.php:182
+#: post-type/module-base.php:183
 msgctxt "Training Status label"
 msgid "Complete"
 msgstr "ಪೂರ್ಣಗೊಂಡಿದೆ"
 
-#: post-type/module-base.php:183
+#: post-type/module-base.php:184
 msgctxt "Training Status field description"
 msgid "This training has successfully completed"
 msgstr "ಈ ತರಬೇತಿ ಯಶಸ್ವಿಯಾಗಿ ಪೂರ್ಣಗೊಂಡಿದೆ"
 
-#: post-type/module-base.php:187
+#: post-type/module-base.php:188
 msgctxt "Training Status label"
 msgid "Paused"
 msgstr "ವಿರಾಮಗೊಳಿಸಲಾಗಿದೆ"
 
-#: post-type/module-base.php:188
+#: post-type/module-base.php:189
 msgctxt "Training Status field description"
 msgid ""
 "This contact is currently on hold. It has potential of getting scheduled in "
@@ -147,30 +147,30 @@ msgid ""
 msgstr ""
 "ಈ ಸಂಪರ್ಕವು ಪ್ರಸ್ತುತ ಸ್ಥಗಿತಗೊಂಡಿದೆ. ಇದು ಭವಿಷ್ಯದಲ್ಲಿ ನಿಗದಿತ ಸಾಮರ್ಥ್ಯವನ್ನು ಹೊಂದಿದೆ."
 
-#: post-type/module-base.php:192
+#: post-type/module-base.php:193
 msgctxt "Training Status label"
 msgid "Closed"
 msgstr "ಮುಚ್ಚಲಾಗಿದೆ"
 
-#: post-type/module-base.php:193
+#: post-type/module-base.php:194
 msgctxt "Training Status field description"
 msgid "This training is no longer going to happen."
 msgstr "ಈ ತರಬೇತಿ ಇನ್ನು ಮುಂದೆ ಆಗುವುದಿಲ್ಲ."
 
-#: post-type/module-base.php:201
+#: post-type/module-base.php:202
 msgid "Assigned To"
 msgstr "ಗೆ ನಿಯೋಜಿಸಲಾಗಿದೆ"
 
-#: post-type/module-base.php:202
+#: post-type/module-base.php:203
 msgid ""
 "Select the main person who is responsible for reporting on this training."
 msgstr "ಈ ತರಬೇತಿಯ ಬಗ್ಗೆ ವರದಿ ಮಾಡುವ ಜವಾಬ್ದಾರಿಯುತ ಮುಖ್ಯ ವ್ಯಕ್ತಿಯನ್ನು ಆಯ್ಕೆಮಾಡಿ."
 
-#: post-type/module-base.php:209
+#: post-type/module-base.php:210
 msgid "Training Coach / Church Planter"
 msgstr "ತರಬೇತಿ ಕೋಚ್ / ಚರ್ಚ್ ಪ್ಲಾಂಟರ್"
 
-#: post-type/module-base.php:210
+#: post-type/module-base.php:211
 msgctxt "Optional Documentation"
 msgid ""
 "The person who planted and/or is coaching this training. Only one person can "
@@ -181,59 +181,59 @@ msgstr ""
 "ತರಬೇತಿಗೆ ನಿಯೋಜಿಸಬಹುದು ಆದರೆ ಅನೇಕ ಜನರು ಈ ತರಬೇತಿಯ ತರಬೇತುದಾರರು / ಚರ್ಚ್ "
 "ಪ್ಲಾಂಟರ್‌ಗಳಾಗಿರಬಹುದು."
 
-#: post-type/module-base.php:222
+#: post-type/module-base.php:223
 msgid "Requires Update"
 msgstr "ನವೀಕರಣದ ಅಗತ್ಯವಿದೆ"
 
-#: post-type/module-base.php:228
+#: post-type/module-base.php:229
 msgid "Video Link"
 msgstr "ವೀಡಿಯೊ ಲಿಂಕ್"
 
-#: post-type/module-base.php:229
+#: post-type/module-base.php:230
 msgctxt "Optional Documentation"
 msgid "Link to video chat service"
 msgstr "ವೀಡಿಯೊ ಚಾಟ್ ಸೇವೆಗೆ ಲಿಂಕ್ ಮಾಡಿ"
 
-#: post-type/module-base.php:236
+#: post-type/module-base.php:237
 msgid "Notes"
 msgstr "ಟಿಪ್ಪಣಿಗಳು"
 
-#: post-type/module-base.php:237
+#: post-type/module-base.php:238
 msgctxt "Optional Documentation"
 msgid "Notes on when the trainings will happen"
 msgstr "ತರಬೇತಿಗಳು ಯಾವಾಗ ಸಂಭವಿಸುತ್ತವೆ ಎಂಬುದರ ಕುರಿತು ಟಿಪ್ಪಣಿಗಳು"
 
-#: post-type/module-base.php:246 post-type/module-base.php:509
+#: post-type/module-base.php:247 post-type/module-base.php:510
 msgid "Meeting Times"
 msgstr "ಮೀಟಿಂಗ್ ಟೈಮ್ಸ್"
 
-#: post-type/module-base.php:295 post-type/module-base.php:304
+#: post-type/module-base.php:296 post-type/module-base.php:305
 msgid "Locations"
 msgstr "ಸ್ಥಳಗಳು"
 
-#: post-type/module-base.php:296 post-type/module-base.php:305
+#: post-type/module-base.php:297 post-type/module-base.php:306
 msgctxt "Optional Documentation"
 msgid "The general location where this contact is located."
 msgstr "ಈ ಸಂಪರ್ಕ ಇರುವ ಸಾಮಾನ್ಯ ಸ್ಥಳ."
 
-#: post-type/module-base.php:313
+#: post-type/module-base.php:314
 msgid "Address"
 msgstr "ವಿಳಾಸ"
 
-#: post-type/module-base.php:333
+#: post-type/module-base.php:334
 msgid "Parent Training"
 msgstr "ಪೋಷಕರ ತರಬೇತಿ"
 
-#: post-type/module-base.php:334
+#: post-type/module-base.php:335
 msgctxt "Optional Documentation"
 msgid "A training that launched this training."
 msgstr "ಈ ತರಬೇತಿಯನ್ನು ಪ್ರಾರಂಭಿಸಿದ ತರಬೇತಿ."
 
-#: post-type/module-base.php:344
+#: post-type/module-base.php:345
 msgid "Peer Training"
 msgstr "ಪೀರ್ ತರಬೇತಿ"
 
-#: post-type/module-base.php:345
+#: post-type/module-base.php:346
 msgctxt "Optional Documentation"
 msgid ""
 "A related training that isn't a parent/child in relationship. It might "
@@ -242,47 +242,47 @@ msgstr ""
 "ಸಂಬಂಧದಲ್ಲಿ ಪೋಷಕರು / ಮಗು ಅಲ್ಲದ ಸಂಬಂಧಿತ ತರಬೇತಿ. ಇದು ಸಹಕರಿಸುವ, ವಿಲೀನಗೊಳ್ಳಲಿರುವ, "
 "ಇತ್ತೀಚೆಗೆ ವಿಭಜನೆಯಾಗುವಂತಹ ತರಬೇತಿಗಳನ್ನು ಸೂಚಿಸುತ್ತದೆ."
 
-#: post-type/module-base.php:355
+#: post-type/module-base.php:356
 msgid "Child Training"
 msgstr "ಮಕ್ಕಳ ತರಬೇತಿ"
 
-#: post-type/module-base.php:356
+#: post-type/module-base.php:357
 msgctxt "Optional Documentation"
 msgid "A training that has been birthed out of this training."
 msgstr "ಈ ತರಬೇತಿಯಿಂದ ಹೊರಹೊಮ್ಮಿದ ತರಬೇತಿ."
 
-#: post-type/module-base.php:366 post-type/module-base.php:508
-#: post-type/module-base.php:542
+#: post-type/module-base.php:367 post-type/module-base.php:509
+#: post-type/module-base.php:543
 msgid "Member List"
 msgstr "ಸದಸ್ಯರ ಪಟ್ಟಿ"
 
-#: post-type/module-base.php:367
+#: post-type/module-base.php:368
 msgctxt "Optional Documentation"
 msgid "The contacts who are members of this training."
 msgstr "ಈ ತರಬೇತಿಯ ಸದಸ್ಯರಾದ ಸಂಪರ್ಕಗಳು."
 
-#: post-type/module-base.php:377
+#: post-type/module-base.php:378
 msgid "Leaders"
 msgstr "ನಾಯಕರು"
 
-#: post-type/module-base.php:387
+#: post-type/module-base.php:388
 msgid "People Groups"
 msgstr "ಜನರ ಗುಂಪುಗಳು"
 
-#: post-type/module-base.php:388
+#: post-type/module-base.php:389
 msgctxt "Optional Documentation"
 msgid "The people trainings represented by this training."
 msgstr "ಈ ತರಬೇತಿಯಿಂದ ಪ್ರತಿನಿಧಿಸುವ ಜನರ ತರಬೇತಿ."
 
-#: post-type/module-base.php:397
+#: post-type/module-base.php:398
 msgid "Groups"
 msgstr "ಗುಂಪುಗಳು"
 
-#: post-type/module-base.php:409
+#: post-type/module-base.php:410
 msgid "Member Count"
 msgstr "ಸದಸ್ಯರ ಎಣಿಕೆ"
 
-#: post-type/module-base.php:410 post-type/module-base.php:417
+#: post-type/module-base.php:411 post-type/module-base.php:418
 msgctxt "Optional Documentation"
 msgid ""
 "The number of members in this training. It will automatically be updated "
@@ -294,50 +294,50 @@ msgstr ""
 "ತೆಗೆದುಹಾಕಿದಾಗ ಅದು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ನವೀಕರಿಸಲ್ಪಡುತ್ತದೆ. ವ್ಯವಸ್ಥೆಯಲ್ಲಿಲ್ಲದ ಆದರೆ ತರಬೇತಿಯ "
 "ಸದಸ್ಯರಾಗಿರುವ ವ್ಯಕ್ತಿಗಳಿಗೆ ಈ ಸಂಖ್ಯೆಯನ್ನು ಹಸ್ತಚಾಲಿತವಾಗಿ ಬದಲಾಯಿಸಿ."
 
-#: post-type/module-base.php:416
+#: post-type/module-base.php:417
 msgid "Leader Count"
 msgstr "ಲೀಡರ್ ಎಣಿಕೆ"
 
-#: post-type/module-base.php:426
+#: post-type/module-base.php:427
 msgid "Training as Leader"
 msgstr "ನಾಯಕನಾಗಿ ತರಬೇತಿ"
 
-#: post-type/module-base.php:427
+#: post-type/module-base.php:428
 msgctxt "Optional Documentation"
 msgid "Leader of a training"
 msgstr "ತರಬೇತಿಯ ನಾಯಕ"
 
-#: post-type/module-base.php:438
+#: post-type/module-base.php:439
 msgid "Training as Participant"
 msgstr "ಭಾಗವಹಿಸುವವರಾಗಿ ತರಬೇತಿ"
 
-#: post-type/module-base.php:439
+#: post-type/module-base.php:440
 msgctxt "Optional Documentation"
 msgid "Participant in a training."
 msgstr "ತರಬೇತಿಯಲ್ಲಿ ಭಾಗವಹಿಸುವವರು."
 
-#: post-type/module-base.php:510
+#: post-type/module-base.php:511
 msgid "Other"
 msgstr "ಇತರೆ"
 
-#: post-type/module-base.php:545
+#: post-type/module-base.php:546
 msgid "Create"
 msgstr "ರಚಿಸಿ"
 
-#: post-type/module-base.php:550
+#: post-type/module-base.php:551
 msgid "Select"
 msgstr "ಆಯ್ಕೆ ಮಾಡಿ"
 
-#: post-type/module-base.php:555
+#: post-type/module-base.php:556
 msgid "To add new members, click on 'Create' or 'Select'."
 msgstr "ಹೊಸ ಸದಸ್ಯರನ್ನು ಸೇರಿಸಲು, 'ರಚಿಸು' ಅಥವಾ 'ಆಯ್ಕೆ' ಕ್ಲಿಕ್ ಮಾಡಿ."
 
-#: post-type/module-base.php:560
+#: post-type/module-base.php:561
 msgctxt "Add members modal"
 msgid "Add members from existing contacts"
 msgstr "ಅಸ್ತಿತ್ವದಲ್ಲಿರುವ ಸಂಪರ್ಕಗಳಿಂದ ಸದಸ್ಯರನ್ನು ಸೇರಿಸಿ"
 
-#: post-type/module-base.php:561
+#: post-type/module-base.php:562
 msgctxt "Add members modal"
 msgid ""
 "In the 'Member List' field, type the name of an existing contact to add them "
@@ -346,7 +346,7 @@ msgstr ""
 "'ಸದಸ್ಯರ ಪಟ್ಟಿ' ಕ್ಷೇತ್ರದಲ್ಲಿ, ಈ ತರಬೇತಿಗೆ ಅವರನ್ನು ಸೇರಿಸಲು ಅಸ್ತಿತ್ವದಲ್ಲಿರುವ ಸಂಪರ್ಕದ "
 "ಹೆಸರನ್ನು ಟೈಪ್ ಮಾಡಿ."
 
-#: post-type/module-base.php:573
+#: post-type/module-base.php:574
 msgid "Close"
 msgstr "ಮುಚ್ಚಿ"
 
@@ -405,7 +405,7 @@ msgid "Counties"
 msgstr "ಕೌಂಟಿಗಳು"
 
 #: post-type/module-public-calendar.php:432
-#: post-type/module-registration.php:385
+#: post-type/module-registration.php:383
 msgid "Add"
 msgstr "ಸೇರಿಸಿ"
 
@@ -441,42 +441,42 @@ msgstr "ಕ್ಯಾಲೆಂಡರ್‌ನಲ್ಲಿ ತೋರಿಸಿ"
 msgid "open registration"
 msgstr "ಮುಕ್ತ ನೋಂದಣಿ "
 
-#: post-type/module-registration.php:265
+#: post-type/module-registration.php:264
 msgid "add"
 msgstr "ಸೇರಿಸಿ"
 
-#: post-type/module-registration.php:266
+#: post-type/module-registration.php:265
 msgid "Use"
 msgstr "ಬಳಸಿ"
 
-#: post-type/module-registration.php:267 post-type/module-registration.php:695
+#: post-type/module-registration.php:266 post-type/module-registration.php:693
 msgid "Search Location"
 msgstr "ಸ್ಥಳವನ್ನು ಹುಡುಕಿ"
 
-#: post-type/module-registration.php:268
+#: post-type/module-registration.php:267
 msgid "Delete Location"
 msgstr "ಸ್ಥಳವನ್ನು ಅಳಿಸಿ"
 
-#: post-type/module-registration.php:269
+#: post-type/module-registration.php:268
 msgid "Open Mapping"
 msgstr "ಓಪನ್ ಮ್ಯಾಪಿಂಗ್"
 
-#: post-type/module-registration.php:270
+#: post-type/module-registration.php:269
 msgid "clear"
 msgstr "ಸ್ಪಷ್ಟ"
 
-#: post-type/module-registration.php:384
+#: post-type/module-registration.php:382
 msgid "Register for Training"
 msgstr "ತರಬೇತಿಗಾಗಿ ನೋಂದಾಯಿಸಿ"
 
-#: post-type/module-registration.php:386
+#: post-type/module-registration.php:384
 msgid "Join Training"
 msgstr "ತರಬೇತಿಗೆ ಸೇರಿ"
 
-#: post-type/module-registration.php:387
+#: post-type/module-registration.php:385
 msgid "Join in"
 msgstr "ಸೇರಲು"
 
-#: post-type/module-registration.php:700
+#: post-type/module-registration.php:698
 msgid "Clear"
 msgstr "ಸ್ಪಷ್ಟ"
