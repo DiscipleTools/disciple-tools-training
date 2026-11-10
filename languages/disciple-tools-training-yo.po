@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Disciple Tools Plugins\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "training\n"
-"POT-Creation-Date: 2026-01-15T09:26:10+00:00\n"
+"POT-Creation-Date: 2026-11-10T20:37:15+00:00\n"
 "Language: yo\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -15,8 +15,8 @@ msgid "Training Maps"
 msgstr "Awọn Maapu Ikẹkọ"
 
 #: metrics/mapbox-maps.php:31 metrics/mapbox-personal-maps.php:31
-#: post-type/module-base.php:29 post-type/module-base.php:461
-#: post-type/module-base.php:473 post-type/module-base.php:496
+#: post-type/module-base.php:29 post-type/module-base.php:462
+#: post-type/module-base.php:474 post-type/module-base.php:497
 msgid "Trainings"
 msgstr "Awọn ikẹkọ"
 
@@ -36,35 +36,35 @@ msgstr "Ikẹkọ Ti Bẹrẹ"
 msgid "Training Completed"
 msgstr "Ikẹkọ Ti Pari"
 
-#: post-type/module-base.php:28 post-type/module-base.php:495
+#: post-type/module-base.php:28 post-type/module-base.php:496
 msgid "Training"
 msgstr "Idanileko"
 
-#: post-type/module-base.php:70
+#: post-type/module-base.php:71
 msgid "Trainings Admin"
 msgstr "Alakoso Awọn Ikẹkọ"
 
-#: post-type/module-base.php:71
+#: post-type/module-base.php:72
 msgid "Admin access to all trainings"
 msgstr "Iwọle alakoso si gbogbo awọn ikẹkọ"
 
-#: post-type/module-base.php:76
+#: post-type/module-base.php:77
 msgid "Multiplier"
 msgstr "Onilọpọ"
 
-#: post-type/module-base.php:83
+#: post-type/module-base.php:84
 msgid "Disciple.Tools Admin"
 msgstr "Ọmọ-ẹhin.Tools Admin"
 
-#: post-type/module-base.php:90
+#: post-type/module-base.php:91
 msgid "Administrator"
 msgstr "Alakoso"
 
-#: post-type/module-base.php:127
+#: post-type/module-base.php:128
 msgid "Tags"
 msgstr "Awọn afi"
 
-#: post-type/module-base.php:128
+#: post-type/module-base.php:129
 msgctxt "Optional Documentation"
 msgid ""
 "A useful way to group related items and can be used to filter the records"
@@ -72,74 +72,74 @@ msgstr ""
 "Ọna ti o wulo lati ṣe akojọpọ awọn ohun ti o jọmọ ati pe a le lo lati ṣe "
 "àyọkà awọn igbasilẹ"
 
-#: post-type/module-base.php:135
+#: post-type/module-base.php:136
 msgid "Follow"
 msgstr "Tẹle"
 
-#: post-type/module-base.php:142
+#: post-type/module-base.php:143
 msgid "Un-Follow"
 msgstr "Un-Tẹle"
 
-#: post-type/module-base.php:148
+#: post-type/module-base.php:149
 msgid "Tasks"
 msgstr "Awọn iṣẹ-ṣiṣe"
 
-#: post-type/module-base.php:162
+#: post-type/module-base.php:163
 msgctxt "Training Status label"
 msgid "New"
 msgstr "Tuntun"
 
-#: post-type/module-base.php:163
+#: post-type/module-base.php:164
 msgctxt "Training Status field description"
 msgid "New training added to the system"
 msgstr "Ikẹkọ tuntun ti a fi kun si eto naa"
 
-#: post-type/module-base.php:167
+#: post-type/module-base.php:168
 msgctxt "Training Status label"
 msgid "Proposed"
 msgstr "Ti dabaa"
 
-#: post-type/module-base.php:168
+#: post-type/module-base.php:169
 msgctxt "Training Status field description"
 msgid "This training has been proposed and is in initial conversations"
 msgstr "A ti dabaa ikẹkọ yii o si wa ni awọn ibaraẹnisọrọ akọkọ"
 
-#: post-type/module-base.php:172
+#: post-type/module-base.php:173
 msgctxt "Training Status label"
 msgid "Scheduled"
 msgstr "Ti ṣe eto"
 
-#: post-type/module-base.php:173
+#: post-type/module-base.php:174
 msgctxt "Training Status field description"
 msgid "This training is confirmed, on the calendar."
 msgstr "Yi ikẹkọ ti wa ni timo, lori kalẹnda."
 
-#: post-type/module-base.php:177
+#: post-type/module-base.php:178
 msgctxt "Training Status label"
 msgid "In Progress"
 msgstr "Ni Ilọsiwaju"
 
-#: post-type/module-base.php:178
+#: post-type/module-base.php:179
 msgctxt "Training Status field description"
 msgid "This training is confirmed, on the calendar, or currently active."
 msgstr "Ikẹkọ yii jẹrisi, lori kalẹnda, tabi lọwọlọwọ lọwọlọwọ."
 
-#: post-type/module-base.php:182
+#: post-type/module-base.php:183
 msgctxt "Training Status label"
 msgid "Complete"
 msgstr "Pari"
 
-#: post-type/module-base.php:183
+#: post-type/module-base.php:184
 msgctxt "Training Status field description"
 msgid "This training has successfully completed"
 msgstr "Ikẹkọ yii ti pari ni ifijišẹ"
 
-#: post-type/module-base.php:187
+#: post-type/module-base.php:188
 msgctxt "Training Status label"
 msgid "Paused"
 msgstr "Da duro"
 
-#: post-type/module-base.php:188
+#: post-type/module-base.php:189
 msgctxt "Training Status field description"
 msgid ""
 "This contact is currently on hold. It has potential of getting scheduled in "
@@ -147,30 +147,30 @@ msgid ""
 msgstr ""
 "Olubasọrọ yii wa ni idaduro lọwọlọwọ. O ni agbara ti ṣiṣe eto ni ọjọ iwaju."
 
-#: post-type/module-base.php:192
+#: post-type/module-base.php:193
 msgctxt "Training Status label"
 msgid "Closed"
 msgstr "Ni pipade"
 
-#: post-type/module-base.php:193
+#: post-type/module-base.php:194
 msgctxt "Training Status field description"
 msgid "This training is no longer going to happen."
 msgstr "Ikẹkọ yii ko ni ṣẹlẹ mọ."
 
-#: post-type/module-base.php:201
+#: post-type/module-base.php:202
 msgid "Assigned To"
 msgstr "Sọtọ Lati"
 
-#: post-type/module-base.php:202
+#: post-type/module-base.php:203
 msgid ""
 "Select the main person who is responsible for reporting on this training."
 msgstr "Yan eniyan akọkọ ti o ni ẹri fun ijabọ lori ikẹkọ yii."
 
-#: post-type/module-base.php:209
+#: post-type/module-base.php:210
 msgid "Training Coach / Church Planter"
 msgstr "Olukọni Ikẹkọ / Igbimọ Ile ijọsin"
 
-#: post-type/module-base.php:210
+#: post-type/module-base.php:211
 msgctxt "Optional Documentation"
 msgid ""
 "The person who planted and/or is coaching this training. Only one person can "
@@ -181,59 +181,59 @@ msgstr ""
 "fi si ikẹkọ kan lakoko ti ọpọlọpọ eniyan le jẹ awọn olukọni / awọn oluka ile "
 "ijọsin ti ikẹkọ yii."
 
-#: post-type/module-base.php:222
+#: post-type/module-base.php:223
 msgid "Requires Update"
 msgstr "Nilo imudojuiwọn"
 
-#: post-type/module-base.php:228
+#: post-type/module-base.php:229
 msgid "Video Link"
 msgstr "Video ọna asopọ"
 
-#: post-type/module-base.php:229
+#: post-type/module-base.php:230
 msgctxt "Optional Documentation"
 msgid "Link to video chat service"
 msgstr "Ọna asopọ si iṣẹ iwiregbe fidio"
 
-#: post-type/module-base.php:236
+#: post-type/module-base.php:237
 msgid "Notes"
 msgstr "Awọn akọsilẹ"
 
-#: post-type/module-base.php:237
+#: post-type/module-base.php:238
 msgctxt "Optional Documentation"
 msgid "Notes on when the trainings will happen"
 msgstr "Awọn akọsilẹ lori nigbati awọn ikẹkọ yoo ṣẹlẹ"
 
-#: post-type/module-base.php:246 post-type/module-base.php:509
+#: post-type/module-base.php:247 post-type/module-base.php:510
 msgid "Meeting Times"
 msgstr "Awọn akoko Ipade"
 
-#: post-type/module-base.php:295 post-type/module-base.php:304
+#: post-type/module-base.php:296 post-type/module-base.php:305
 msgid "Locations"
 msgstr "Awọn ipo"
 
-#: post-type/module-base.php:296 post-type/module-base.php:305
+#: post-type/module-base.php:297 post-type/module-base.php:306
 msgctxt "Optional Documentation"
 msgid "The general location where this contact is located."
 msgstr "Ipo gbogbogbo nibiti olubasoro yii wa."
 
-#: post-type/module-base.php:313
+#: post-type/module-base.php:314
 msgid "Address"
 msgstr "Adirẹsi"
 
-#: post-type/module-base.php:333
+#: post-type/module-base.php:334
 msgid "Parent Training"
 msgstr "Ikẹkọ Obi"
 
-#: post-type/module-base.php:334
+#: post-type/module-base.php:335
 msgctxt "Optional Documentation"
 msgid "A training that launched this training."
 msgstr "Ikẹkọ kan ti o ṣe ifilọlẹ ikẹkọ yii."
 
-#: post-type/module-base.php:344
+#: post-type/module-base.php:345
 msgid "Peer Training"
 msgstr "Ikẹkọ Ẹlẹgbẹ"
 
-#: post-type/module-base.php:345
+#: post-type/module-base.php:346
 msgctxt "Optional Documentation"
 msgid ""
 "A related training that isn't a parent/child in relationship. It might "
@@ -242,47 +242,47 @@ msgstr ""
 "Ikẹkọ ti o jọmọ ti kii ṣe obi / ọmọ ni ibatan. O le tọka awọn ikẹkọ ti o ṣe "
 "ifowosowopo, ti fẹrẹ dapọ, pin laipẹ, ati bẹbẹ lọ."
 
-#: post-type/module-base.php:355
+#: post-type/module-base.php:356
 msgid "Child Training"
 msgstr "Ikẹkọ Ọmọ"
 
-#: post-type/module-base.php:356
+#: post-type/module-base.php:357
 msgctxt "Optional Documentation"
 msgid "A training that has been birthed out of this training."
 msgstr "Ikẹkọ kan ti a ti bi kuro ninu ikẹkọ yii."
 
-#: post-type/module-base.php:366 post-type/module-base.php:508
-#: post-type/module-base.php:542
+#: post-type/module-base.php:367 post-type/module-base.php:509
+#: post-type/module-base.php:543
 msgid "Member List"
 msgstr "Akojọ omo egbe"
 
-#: post-type/module-base.php:367
+#: post-type/module-base.php:368
 msgctxt "Optional Documentation"
 msgid "The contacts who are members of this training."
 msgstr "Awọn olubasọrọ ti o jẹ ọmọ ẹgbẹ ti ikẹkọ yii."
 
-#: post-type/module-base.php:377
+#: post-type/module-base.php:378
 msgid "Leaders"
 msgstr "Olori"
 
-#: post-type/module-base.php:387
+#: post-type/module-base.php:388
 msgid "People Groups"
 msgstr "Awọn ẹgbẹ Awọn eniyan"
 
-#: post-type/module-base.php:388
+#: post-type/module-base.php:389
 msgctxt "Optional Documentation"
 msgid "The people trainings represented by this training."
 msgstr "Awọn ikẹkọ eniyan ti o jẹ aṣoju nipasẹ ikẹkọ yii."
 
-#: post-type/module-base.php:397
+#: post-type/module-base.php:398
 msgid "Groups"
 msgstr "Awọn ẹgbẹ"
 
-#: post-type/module-base.php:409
+#: post-type/module-base.php:410
 msgid "Member Count"
 msgstr "Ẹgbẹ Ka"
 
-#: post-type/module-base.php:410 post-type/module-base.php:417
+#: post-type/module-base.php:411 post-type/module-base.php:418
 msgctxt "Optional Documentation"
 msgid ""
 "The number of members in this training. It will automatically be updated "
@@ -295,50 +295,50 @@ msgstr ""
 "pẹlu ọwọ si awọn eniyan to wa ti o le ma wa ninu eto ṣugbọn tun jẹ ọmọ ẹgbẹ "
 "ti ikẹkọ."
 
-#: post-type/module-base.php:416
+#: post-type/module-base.php:417
 msgid "Leader Count"
 msgstr "Alakoso ka"
 
-#: post-type/module-base.php:426
+#: post-type/module-base.php:427
 msgid "Training as Leader"
 msgstr "Ikẹkọ bi Alakoso"
 
-#: post-type/module-base.php:427
+#: post-type/module-base.php:428
 msgctxt "Optional Documentation"
 msgid "Leader of a training"
 msgstr "Olori ti ikẹkọ kan"
 
-#: post-type/module-base.php:438
+#: post-type/module-base.php:439
 msgid "Training as Participant"
 msgstr "Ikẹkọ bi Olukopa"
 
-#: post-type/module-base.php:439
+#: post-type/module-base.php:440
 msgctxt "Optional Documentation"
 msgid "Participant in a training."
 msgstr "Olukopa ninu ikẹkọ kan."
 
-#: post-type/module-base.php:510
+#: post-type/module-base.php:511
 msgid "Other"
 msgstr "Omiiran"
 
-#: post-type/module-base.php:545
+#: post-type/module-base.php:546
 msgid "Create"
 msgstr "Ṣẹda"
 
-#: post-type/module-base.php:550
+#: post-type/module-base.php:551
 msgid "Select"
 msgstr "Yan"
 
-#: post-type/module-base.php:555
+#: post-type/module-base.php:556
 msgid "To add new members, click on 'Create' or 'Select'."
 msgstr "Lati ṣafikun awọn ọmọ ẹgbẹ tuntun, tẹ lori 'Ṣẹda' tabi 'Yan'."
 
-#: post-type/module-base.php:560
+#: post-type/module-base.php:561
 msgctxt "Add members modal"
 msgid "Add members from existing contacts"
 msgstr "Ṣafikun awọn ọmọ ẹgbẹ lati awọn olubasọrọ to wa tẹlẹ"
 
-#: post-type/module-base.php:561
+#: post-type/module-base.php:562
 msgctxt "Add members modal"
 msgid ""
 "In the 'Member List' field, type the name of an existing contact to add them "
@@ -347,7 +347,7 @@ msgstr ""
 "Ni aaye 'Akojọ Ọmọ ẹgbẹ', tẹ orukọ ti olubasoro ti o wa tẹlẹ lati ṣafikun "
 "wọn si ikẹkọ yii."
 
-#: post-type/module-base.php:573
+#: post-type/module-base.php:574
 msgid "Close"
 msgstr "Pade"
 
@@ -406,7 +406,7 @@ msgid "Counties"
 msgstr "Awọn agbegbe"
 
 #: post-type/module-public-calendar.php:432
-#: post-type/module-registration.php:385
+#: post-type/module-registration.php:383
 msgid "Add"
 msgstr "Fikun-un"
 
@@ -442,42 +442,42 @@ msgstr "fihan lori kalẹnda"
 msgid "open registration"
 msgstr "ìmọ registration "
 
-#: post-type/module-registration.php:265
+#: post-type/module-registration.php:264
 msgid "add"
 msgstr "fikun"
 
-#: post-type/module-registration.php:266
+#: post-type/module-registration.php:265
 msgid "Use"
 msgstr "Lo"
 
-#: post-type/module-registration.php:267 post-type/module-registration.php:695
+#: post-type/module-registration.php:266 post-type/module-registration.php:693
 msgid "Search Location"
 msgstr "Wa Ipo"
 
-#: post-type/module-registration.php:268
+#: post-type/module-registration.php:267
 msgid "Delete Location"
 msgstr "Paarẹ Ipo"
 
-#: post-type/module-registration.php:269
+#: post-type/module-registration.php:268
 msgid "Open Mapping"
 msgstr "Ṣii aworan agbaye"
 
-#: post-type/module-registration.php:270
+#: post-type/module-registration.php:269
 msgid "clear"
 msgstr "ko o"
 
-#: post-type/module-registration.php:384
+#: post-type/module-registration.php:382
 msgid "Register for Training"
 msgstr "Forukọsilẹ fun Ikẹkọ"
 
-#: post-type/module-registration.php:386
+#: post-type/module-registration.php:384
 msgid "Join Training"
 msgstr "Darapọ mọ Ikẹkọ"
 
-#: post-type/module-registration.php:387
+#: post-type/module-registration.php:385
 msgid "Join in"
 msgstr "Darapo mo"
 
-#: post-type/module-registration.php:700
+#: post-type/module-registration.php:698
 msgid "Clear"
 msgstr "Mu kuro"

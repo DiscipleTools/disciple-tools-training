@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Disciple Tools Plugins\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "training\n"
-"POT-Creation-Date: 2026-01-15T09:26:10+00:00\n"
+"POT-Creation-Date: 2026-11-10T20:37:15+00:00\n"
 "Language: am\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -15,8 +15,8 @@ msgid "Training Maps"
 msgstr "የሥልጠና ካርታዎች"
 
 #: metrics/mapbox-maps.php:31 metrics/mapbox-personal-maps.php:31
-#: post-type/module-base.php:29 post-type/module-base.php:461
-#: post-type/module-base.php:473 post-type/module-base.php:496
+#: post-type/module-base.php:29 post-type/module-base.php:462
+#: post-type/module-base.php:474 post-type/module-base.php:497
 msgid "Trainings"
 msgstr "ስልጠናዎች"
 
@@ -36,138 +36,138 @@ msgstr "ስልጠና ተጀምሯል"
 msgid "Training Completed"
 msgstr "ስልጠና ተጠናቅቋል"
 
-#: post-type/module-base.php:28 post-type/module-base.php:495
+#: post-type/module-base.php:28 post-type/module-base.php:496
 msgid "Training"
 msgstr "ስልጠና"
 
-#: post-type/module-base.php:70
+#: post-type/module-base.php:71
 msgid "Trainings Admin"
 msgstr "የስልጠናዎች አስተዳዳሪ"
 
-#: post-type/module-base.php:71
+#: post-type/module-base.php:72
 msgid "Admin access to all trainings"
 msgstr "ለሁሉም ስልጠናዎች የአስተዳዳሪ መዳረሻ"
 
-#: post-type/module-base.php:76
+#: post-type/module-base.php:77
 msgid "Multiplier"
 msgstr "አባዢ"
 
-#: post-type/module-base.php:83
+#: post-type/module-base.php:84
 msgid "Disciple.Tools Admin"
 msgstr "የDisciple.Tools አስተዳዳሪ"
 
-#: post-type/module-base.php:90
+#: post-type/module-base.php:91
 msgid "Administrator"
 msgstr "አስተዳዳሪ"
 
-#: post-type/module-base.php:127
+#: post-type/module-base.php:128
 msgid "Tags"
 msgstr "መለያዎች"
 
-#: post-type/module-base.php:128
+#: post-type/module-base.php:129
 msgctxt "Optional Documentation"
 msgid ""
 "A useful way to group related items and can be used to filter the records"
 msgstr "ተዛማጅ ንጥሎችን ለመቧደን ጠቃሚ መንገድ ሲሆን መዝገቦችን ለማጣራት ሊያገለግል ይችላል"
 
-#: post-type/module-base.php:135
+#: post-type/module-base.php:136
 msgid "Follow"
 msgstr "ተከተል"
 
-#: post-type/module-base.php:142
+#: post-type/module-base.php:143
 msgid "Un-Follow"
 msgstr "አትከተል"
 
-#: post-type/module-base.php:148
+#: post-type/module-base.php:149
 msgid "Tasks"
 msgstr "ተግባራት"
 
-#: post-type/module-base.php:162
+#: post-type/module-base.php:163
 msgctxt "Training Status label"
 msgid "New"
 msgstr "አዲስ"
 
-#: post-type/module-base.php:163
+#: post-type/module-base.php:164
 msgctxt "Training Status field description"
 msgid "New training added to the system"
 msgstr "አዲስ ስልጠና ወደ ስርዓቱ ታክሏል"
 
-#: post-type/module-base.php:167
+#: post-type/module-base.php:168
 msgctxt "Training Status label"
 msgid "Proposed"
 msgstr "የቀረበው"
 
-#: post-type/module-base.php:168
+#: post-type/module-base.php:169
 msgctxt "Training Status field description"
 msgid "This training has been proposed and is in initial conversations"
 msgstr "ይህ ስልጠና የቀረበ ሲሆን በመጀመሪያ ውይይቶች ላይ ነው"
 
-#: post-type/module-base.php:172
+#: post-type/module-base.php:173
 msgctxt "Training Status label"
 msgid "Scheduled"
 msgstr "መርሐግብር ተይዞለታል"
 
-#: post-type/module-base.php:173
+#: post-type/module-base.php:174
 msgctxt "Training Status field description"
 msgid "This training is confirmed, on the calendar."
 msgstr "ይህ ስልጠና በቀን መቁጠሪያው ላይ ተረጋግጧል።"
 
-#: post-type/module-base.php:177
+#: post-type/module-base.php:178
 msgctxt "Training Status label"
 msgid "In Progress"
 msgstr "በሂደት ላይ"
 
-#: post-type/module-base.php:178
+#: post-type/module-base.php:179
 msgctxt "Training Status field description"
 msgid "This training is confirmed, on the calendar, or currently active."
 msgstr "ይህ ስልጠና በቀን መቁጠሪያ ወይም በአሁኑ ጊዜ ተረጋግጧል።"
 
-#: post-type/module-base.php:182
+#: post-type/module-base.php:183
 msgctxt "Training Status label"
 msgid "Complete"
 msgstr "ተጠናቀቀ"
 
-#: post-type/module-base.php:183
+#: post-type/module-base.php:184
 msgctxt "Training Status field description"
 msgid "This training has successfully completed"
 msgstr "ይህ ስልጠና በተሳካ ሁኔታ ተጠናቋል"
 
-#: post-type/module-base.php:187
+#: post-type/module-base.php:188
 msgctxt "Training Status label"
 msgid "Paused"
 msgstr "ለአፍታ ቆሟል"
 
-#: post-type/module-base.php:188
+#: post-type/module-base.php:189
 msgctxt "Training Status field description"
 msgid ""
 "This contact is currently on hold. It has potential of getting scheduled in "
 "the future."
 msgstr "ይህ እውቂያ በአሁኑ ጊዜ በእረፍት ላይ ነው። ለወደፊቱ መርሃግብር የማድረግ አቅም አለው።"
 
-#: post-type/module-base.php:192
+#: post-type/module-base.php:193
 msgctxt "Training Status label"
 msgid "Closed"
 msgstr "ዝግ"
 
-#: post-type/module-base.php:193
+#: post-type/module-base.php:194
 msgctxt "Training Status field description"
 msgid "This training is no longer going to happen."
 msgstr "ይህ ስልጠና ከአሁን በኋላ አይከሰትም።"
 
-#: post-type/module-base.php:201
+#: post-type/module-base.php:202
 msgid "Assigned To"
 msgstr "ተመድቧል ለ"
 
-#: post-type/module-base.php:202
+#: post-type/module-base.php:203
 msgid ""
 "Select the main person who is responsible for reporting on this training."
 msgstr "በዚህ ስልጠና ላይ ሪፖርት የማድረግ ኃላፊነት ያለበት ዋናውን ሰው ይምረጡ።"
 
-#: post-type/module-base.php:209
+#: post-type/module-base.php:210
 msgid "Training Coach / Church Planter"
 msgstr "የሥልጠና አሰልጣኝ / የቤተክርስቲያን ተከላ"
 
-#: post-type/module-base.php:210
+#: post-type/module-base.php:211
 msgctxt "Optional Documentation"
 msgid ""
 "The person who planted and/or is coaching this training. Only one person can "
@@ -177,59 +177,59 @@ msgstr ""
 "ይህንን ስልጠና የተተከለው / ወይም አሰልጣኝ የሆነው ሰው። ብዙ ሰዎች የዚህ ስልጠና አሰልጣኞች / የቤተክርስቲያን "
 "ተከላዎች ሊሆኑ ሲችሉ አንድ ሰው ብቻ ለስልጠና ሊመደብ ይችላል።"
 
-#: post-type/module-base.php:222
+#: post-type/module-base.php:223
 msgid "Requires Update"
 msgstr "ማዘመን ይፈልጋል"
 
-#: post-type/module-base.php:228
+#: post-type/module-base.php:229
 msgid "Video Link"
 msgstr "የቪዲዮ አገናኝ"
 
-#: post-type/module-base.php:229
+#: post-type/module-base.php:230
 msgctxt "Optional Documentation"
 msgid "Link to video chat service"
 msgstr "ወደ ቪዲዮ ውይይት አገልግሎት አገናኝ"
 
-#: post-type/module-base.php:236
+#: post-type/module-base.php:237
 msgid "Notes"
 msgstr "ማስታወሻዎች"
 
-#: post-type/module-base.php:237
+#: post-type/module-base.php:238
 msgctxt "Optional Documentation"
 msgid "Notes on when the trainings will happen"
 msgstr "ስልጠናዎቹ መቼ እንደሚከናወኑ ማስታወሻዎች"
 
-#: post-type/module-base.php:246 post-type/module-base.php:509
+#: post-type/module-base.php:247 post-type/module-base.php:510
 msgid "Meeting Times"
 msgstr "የስብሰባ ጊዜዎች"
 
-#: post-type/module-base.php:295 post-type/module-base.php:304
+#: post-type/module-base.php:296 post-type/module-base.php:305
 msgid "Locations"
 msgstr "አካባቢዎች"
 
-#: post-type/module-base.php:296 post-type/module-base.php:305
+#: post-type/module-base.php:297 post-type/module-base.php:306
 msgctxt "Optional Documentation"
 msgid "The general location where this contact is located."
 msgstr "ይህ እውቂያ የሚገኝበት አጠቃላይ ቦታ።"
 
-#: post-type/module-base.php:313
+#: post-type/module-base.php:314
 msgid "Address"
 msgstr "አድራሻ"
 
-#: post-type/module-base.php:333
+#: post-type/module-base.php:334
 msgid "Parent Training"
 msgstr "የወላጅ ስልጠና"
 
-#: post-type/module-base.php:334
+#: post-type/module-base.php:335
 msgctxt "Optional Documentation"
 msgid "A training that launched this training."
 msgstr "ይህንን ስልጠና የጀመረ ስልጠና።"
 
-#: post-type/module-base.php:344
+#: post-type/module-base.php:345
 msgid "Peer Training"
 msgstr "የእኩዮች ስልጠና"
 
-#: post-type/module-base.php:345
+#: post-type/module-base.php:346
 msgctxt "Optional Documentation"
 msgid ""
 "A related training that isn't a parent/child in relationship. It might "
@@ -238,47 +238,47 @@ msgstr ""
 "በግንኙነት ውስጥ ወላጅ / ልጅ ያልሆነ ተዛማጅ ስልጠና። የሚተባበሩ፣ ሊዋሃዱ፣ በቅርቡ ሊከፋፈሉ የሚችሉ ስልጠናዎችን "
 "ሊያመለክት ይችላል።"
 
-#: post-type/module-base.php:355
+#: post-type/module-base.php:356
 msgid "Child Training"
 msgstr "የልጆች ስልጠና"
 
-#: post-type/module-base.php:356
+#: post-type/module-base.php:357
 msgctxt "Optional Documentation"
 msgid "A training that has been birthed out of this training."
 msgstr "ከዚህ ስልጠና የተወለደ ስልጠና።"
 
-#: post-type/module-base.php:366 post-type/module-base.php:508
-#: post-type/module-base.php:542
+#: post-type/module-base.php:367 post-type/module-base.php:509
+#: post-type/module-base.php:543
 msgid "Member List"
 msgstr "የአባልነት ዝርዝር"
 
-#: post-type/module-base.php:367
+#: post-type/module-base.php:368
 msgctxt "Optional Documentation"
 msgid "The contacts who are members of this training."
 msgstr "የዚህ ስልጠና አባል የሆኑ እውቂያዎች።"
 
-#: post-type/module-base.php:377
+#: post-type/module-base.php:378
 msgid "Leaders"
 msgstr "መሪዎች"
 
-#: post-type/module-base.php:387
+#: post-type/module-base.php:388
 msgid "People Groups"
 msgstr "የህዝብ ቡድኖች"
 
-#: post-type/module-base.php:388
+#: post-type/module-base.php:389
 msgctxt "Optional Documentation"
 msgid "The people trainings represented by this training."
 msgstr "በዚህ ስልጠና የተወከሉት የሰዎች ስልጠናዎች።"
 
-#: post-type/module-base.php:397
+#: post-type/module-base.php:398
 msgid "Groups"
 msgstr "ቡድኖች"
 
-#: post-type/module-base.php:409
+#: post-type/module-base.php:410
 msgid "Member Count"
 msgstr "የአባል ቆጠራ"
 
-#: post-type/module-base.php:410 post-type/module-base.php:417
+#: post-type/module-base.php:411 post-type/module-base.php:418
 msgctxt "Optional Documentation"
 msgid ""
 "The number of members in this training. It will automatically be updated "
@@ -289,57 +289,57 @@ msgstr ""
 "በዚህ ስልጠና ውስጥ የአባላት ብዛት። በአባላቱ ዝርዝር ውስጥ አዳዲስ አባላት ሲደመሩ ወይም ሲወገዱ በራስ-ሰር ይዘምናል። "
 "በስርዓቱ ውስጥ የሌሉ ነገር ግን የስልጠናው አባል የሆኑ ሰዎችን ለማካተት ይህንን ቁጥር በእጅ ይለውጡ።"
 
-#: post-type/module-base.php:416
+#: post-type/module-base.php:417
 msgid "Leader Count"
 msgstr "መሪ ቆጠራ"
 
-#: post-type/module-base.php:426
+#: post-type/module-base.php:427
 msgid "Training as Leader"
 msgstr "ስልጠና እንደ መሪ"
 
-#: post-type/module-base.php:427
+#: post-type/module-base.php:428
 msgctxt "Optional Documentation"
 msgid "Leader of a training"
 msgstr "የስልጠና መሪ"
 
-#: post-type/module-base.php:438
+#: post-type/module-base.php:439
 msgid "Training as Participant"
 msgstr "እንደ ተሳታፊ ስልጠና"
 
-#: post-type/module-base.php:439
+#: post-type/module-base.php:440
 msgctxt "Optional Documentation"
 msgid "Participant in a training."
 msgstr "በስልጠና ውስጥ ተሳታፊ"
 
-#: post-type/module-base.php:510
+#: post-type/module-base.php:511
 msgid "Other"
 msgstr "ሌላ"
 
-#: post-type/module-base.php:545
+#: post-type/module-base.php:546
 msgid "Create"
 msgstr "ፍጠር"
 
-#: post-type/module-base.php:550
+#: post-type/module-base.php:551
 msgid "Select"
 msgstr "ይምረጡ"
 
-#: post-type/module-base.php:555
+#: post-type/module-base.php:556
 msgid "To add new members, click on 'Create' or 'Select'."
 msgstr "አዲስ አባላትን ለማከል 'ፍጠር' ወይም 'ይምረጡ' ላይ ጠቅ ያድርጉ።"
 
-#: post-type/module-base.php:560
+#: post-type/module-base.php:561
 msgctxt "Add members modal"
 msgid "Add members from existing contacts"
 msgstr "ከነባር እውቂያዎች አባላትን ያክሉ"
 
-#: post-type/module-base.php:561
+#: post-type/module-base.php:562
 msgctxt "Add members modal"
 msgid ""
 "In the 'Member List' field, type the name of an existing contact to add them "
 "to this training."
 msgstr "በ 'የአባልነት ዝርዝር' መስክ ውስጥ ወደዚህ ስልጠና ለማከል ነባር የእውቂያ ስም ይተይቡ።"
 
-#: post-type/module-base.php:573
+#: post-type/module-base.php:574
 msgid "Close"
 msgstr "ዝጋ"
 
@@ -398,7 +398,7 @@ msgid "Counties"
 msgstr "አውራጃዎች"
 
 #: post-type/module-public-calendar.php:432
-#: post-type/module-registration.php:385
+#: post-type/module-registration.php:383
 msgid "Add"
 msgstr "አክል"
 
@@ -434,42 +434,42 @@ msgstr "በቀን መቁጠሪያ ላይ አሳይ"
 msgid "open registration"
 msgstr "ክፍት ምዝገባ"
 
-#: post-type/module-registration.php:265
+#: post-type/module-registration.php:264
 msgid "add"
 msgstr "ጨምር"
 
-#: post-type/module-registration.php:266
+#: post-type/module-registration.php:265
 msgid "Use"
 msgstr "ተጠቀም"
 
-#: post-type/module-registration.php:267 post-type/module-registration.php:695
+#: post-type/module-registration.php:266 post-type/module-registration.php:693
 msgid "Search Location"
 msgstr "አካባቢን ይፈልጉ"
 
-#: post-type/module-registration.php:268
+#: post-type/module-registration.php:267
 msgid "Delete Location"
 msgstr "አካባቢን ሰርዝ"
 
-#: post-type/module-registration.php:269
+#: post-type/module-registration.php:268
 msgid "Open Mapping"
 msgstr "ካርታ ክፈት"
 
-#: post-type/module-registration.php:270
+#: post-type/module-registration.php:269
 msgid "clear"
 msgstr "አጽዳ"
 
-#: post-type/module-registration.php:384
+#: post-type/module-registration.php:382
 msgid "Register for Training"
 msgstr "ለስልጠና ይመዝገቡ"
 
-#: post-type/module-registration.php:386
+#: post-type/module-registration.php:384
 msgid "Join Training"
 msgstr "ስልጠናን ይቀላቀሉ"
 
-#: post-type/module-registration.php:387
+#: post-type/module-registration.php:385
 msgid "Join in"
 msgstr "ተቀላቀል"
 
-#: post-type/module-registration.php:700
+#: post-type/module-registration.php:698
 msgid "Clear"
 msgstr "አጽዳ"

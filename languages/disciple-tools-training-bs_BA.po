@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Disciple Tools Plugins\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "training\n"
-"POT-Creation-Date: 2026-01-15T09:26:10+00:00\n"
+"POT-Creation-Date: 2026-11-10T20:37:15+00:00\n"
 "PO-Revision-Date: 2024-05-26 11:21+0000\n"
 "Last-Translator: Dragana <celikdragana0@gmail.com>\n"
 "Language-Team: Bosnian <https://translate.disciple.tools/projects/disciple-"
@@ -21,8 +21,8 @@ msgid "Training Maps"
 msgstr "Karte obuka"
 
 #: metrics/mapbox-maps.php:31 metrics/mapbox-personal-maps.php:31
-#: post-type/module-base.php:29 post-type/module-base.php:461
-#: post-type/module-base.php:473 post-type/module-base.php:496
+#: post-type/module-base.php:29 post-type/module-base.php:462
+#: post-type/module-base.php:474 post-type/module-base.php:497
 msgid "Trainings"
 msgstr "Obuke"
 
@@ -42,35 +42,35 @@ msgstr "Obuka je započela"
 msgid "Training Completed"
 msgstr "Obuka je završena"
 
-#: post-type/module-base.php:28 post-type/module-base.php:495
+#: post-type/module-base.php:28 post-type/module-base.php:496
 msgid "Training"
 msgstr "Obuka"
 
-#: post-type/module-base.php:70
+#: post-type/module-base.php:71
 msgid "Trainings Admin"
 msgstr "Administrator obuka"
 
-#: post-type/module-base.php:71
+#: post-type/module-base.php:72
 msgid "Admin access to all trainings"
 msgstr "Administratorski pristup svim obukama"
 
-#: post-type/module-base.php:76
+#: post-type/module-base.php:77
 msgid "Multiplier"
 msgstr "Množitelj"
 
-#: post-type/module-base.php:83
+#: post-type/module-base.php:84
 msgid "Disciple.Tools Admin"
 msgstr "Disciple.Tools Administrator"
 
-#: post-type/module-base.php:90
+#: post-type/module-base.php:91
 msgid "Administrator"
 msgstr "Administrator"
 
-#: post-type/module-base.php:127
+#: post-type/module-base.php:128
 msgid "Tags"
 msgstr "Oznake"
 
-#: post-type/module-base.php:128
+#: post-type/module-base.php:129
 msgctxt "Optional Documentation"
 msgid ""
 "A useful way to group related items and can be used to filter the records"
@@ -78,74 +78,74 @@ msgstr ""
 "Koristan način za grupisanje povezanih stavki i može se koristiti za "
 "filtriranje zapisa"
 
-#: post-type/module-base.php:135
+#: post-type/module-base.php:136
 msgid "Follow"
 msgstr "Prati"
 
-#: post-type/module-base.php:142
+#: post-type/module-base.php:143
 msgid "Un-Follow"
 msgstr "Poništi praćenje"
 
-#: post-type/module-base.php:148
+#: post-type/module-base.php:149
 msgid "Tasks"
 msgstr "Zadaci"
 
-#: post-type/module-base.php:162
+#: post-type/module-base.php:163
 msgctxt "Training Status label"
 msgid "New"
 msgstr "Novo"
 
-#: post-type/module-base.php:163
+#: post-type/module-base.php:164
 msgctxt "Training Status field description"
 msgid "New training added to the system"
 msgstr "Nova obuka dodana u sistem"
 
-#: post-type/module-base.php:167
+#: post-type/module-base.php:168
 msgctxt "Training Status label"
 msgid "Proposed"
 msgstr "Predloženo"
 
-#: post-type/module-base.php:168
+#: post-type/module-base.php:169
 msgctxt "Training Status field description"
 msgid "This training has been proposed and is in initial conversations"
 msgstr "Ova obuka je predložena i u početnim je razgovorima"
 
-#: post-type/module-base.php:172
+#: post-type/module-base.php:173
 msgctxt "Training Status label"
 msgid "Scheduled"
 msgstr "Zakazano"
 
-#: post-type/module-base.php:173
+#: post-type/module-base.php:174
 msgctxt "Training Status field description"
 msgid "This training is confirmed, on the calendar."
 msgstr "Ova obuka je potvrđena i nalazi se u kalendaru."
 
-#: post-type/module-base.php:177
+#: post-type/module-base.php:178
 msgctxt "Training Status label"
 msgid "In Progress"
 msgstr "U toku"
 
-#: post-type/module-base.php:178
+#: post-type/module-base.php:179
 msgctxt "Training Status field description"
 msgid "This training is confirmed, on the calendar, or currently active."
 msgstr "Ova obuka je potvrđena, u kalendaru ili trenutno aktivna."
 
-#: post-type/module-base.php:182
+#: post-type/module-base.php:183
 msgctxt "Training Status label"
 msgid "Complete"
 msgstr "Završeno"
 
-#: post-type/module-base.php:183
+#: post-type/module-base.php:184
 msgctxt "Training Status field description"
 msgid "This training has successfully completed"
 msgstr "Ova obuka je uspješno završena"
 
-#: post-type/module-base.php:187
+#: post-type/module-base.php:188
 msgctxt "Training Status label"
 msgid "Paused"
 msgstr "Pauzirano"
 
-#: post-type/module-base.php:188
+#: post-type/module-base.php:189
 msgctxt "Training Status field description"
 msgid ""
 "This contact is currently on hold. It has potential of getting scheduled in "
@@ -154,31 +154,31 @@ msgstr ""
 "Ova obuka je trenutno na čekanju. Postoji mogućnost da se zakaže u "
 "budućnosti."
 
-#: post-type/module-base.php:192
+#: post-type/module-base.php:193
 msgctxt "Training Status label"
 msgid "Closed"
 msgstr "Zatvoreno"
 
-#: post-type/module-base.php:193
+#: post-type/module-base.php:194
 msgctxt "Training Status field description"
 msgid "This training is no longer going to happen."
 msgstr "Ova obuka se više neće održati."
 
-#: post-type/module-base.php:201
+#: post-type/module-base.php:202
 msgid "Assigned To"
 msgstr "Dodijeljeno"
 
-#: post-type/module-base.php:202
+#: post-type/module-base.php:203
 msgid ""
 "Select the main person who is responsible for reporting on this training."
 msgstr ""
 "Odaberite glavnu osobu koja je odgovorna za izvještavanje o ovoj obuci."
 
-#: post-type/module-base.php:209
+#: post-type/module-base.php:210
 msgid "Training Coach / Church Planter"
 msgstr "Trener obuke / Osnivač crkve"
 
-#: post-type/module-base.php:210
+#: post-type/module-base.php:211
 msgctxt "Optional Documentation"
 msgid ""
 "The person who planted and/or is coaching this training. Only one person can "
@@ -189,59 +189,59 @@ msgstr ""
 "dodijeljena obuci, dok više ljudi može biti treneri / osnivači crkve za ovu "
 "obuku."
 
-#: post-type/module-base.php:222
+#: post-type/module-base.php:223
 msgid "Requires Update"
 msgstr "Zahtijeva ažuriranje"
 
-#: post-type/module-base.php:228
+#: post-type/module-base.php:229
 msgid "Video Link"
 msgstr "Video link"
 
-#: post-type/module-base.php:229
+#: post-type/module-base.php:230
 msgctxt "Optional Documentation"
 msgid "Link to video chat service"
 msgstr "Link na uslugu video razgovora"
 
-#: post-type/module-base.php:236
+#: post-type/module-base.php:237
 msgid "Notes"
 msgstr "Napomene"
 
-#: post-type/module-base.php:237
+#: post-type/module-base.php:238
 msgctxt "Optional Documentation"
 msgid "Notes on when the trainings will happen"
 msgstr "Napomene o tome kada će se obuke održati"
 
-#: post-type/module-base.php:246 post-type/module-base.php:509
+#: post-type/module-base.php:247 post-type/module-base.php:510
 msgid "Meeting Times"
 msgstr "Vrijeme sastanaka"
 
-#: post-type/module-base.php:295 post-type/module-base.php:304
+#: post-type/module-base.php:296 post-type/module-base.php:305
 msgid "Locations"
 msgstr "Lokacije"
 
-#: post-type/module-base.php:296 post-type/module-base.php:305
+#: post-type/module-base.php:297 post-type/module-base.php:306
 msgctxt "Optional Documentation"
 msgid "The general location where this contact is located."
 msgstr "Opća lokacija na kojoj se nalazi ovaj kontakt."
 
-#: post-type/module-base.php:313
+#: post-type/module-base.php:314
 msgid "Address"
 msgstr "Adresa"
 
-#: post-type/module-base.php:333
+#: post-type/module-base.php:334
 msgid "Parent Training"
 msgstr "Matična obuka"
 
-#: post-type/module-base.php:334
+#: post-type/module-base.php:335
 msgctxt "Optional Documentation"
 msgid "A training that launched this training."
 msgstr "Obuka koja je pokrenula ovu obuku."
 
-#: post-type/module-base.php:344
+#: post-type/module-base.php:345
 msgid "Peer Training"
 msgstr "Srodna obuka"
 
-#: post-type/module-base.php:345
+#: post-type/module-base.php:346
 msgctxt "Optional Documentation"
 msgid ""
 "A related training that isn't a parent/child in relationship. It might "
@@ -250,47 +250,47 @@ msgstr ""
 "Povezana obuka koja nije u odnosu roditelj/dijete. Može ukazivati na obuke "
 "koje sarađuju, koje se spremaju za spajanje, nedavno su se razdvojile itd."
 
-#: post-type/module-base.php:355
+#: post-type/module-base.php:356
 msgid "Child Training"
 msgstr "Podređena obuka"
 
-#: post-type/module-base.php:356
+#: post-type/module-base.php:357
 msgctxt "Optional Documentation"
 msgid "A training that has been birthed out of this training."
 msgstr "Obuka koja je nastala iz ove obuke."
 
-#: post-type/module-base.php:366 post-type/module-base.php:508
-#: post-type/module-base.php:542
+#: post-type/module-base.php:367 post-type/module-base.php:509
+#: post-type/module-base.php:543
 msgid "Member List"
 msgstr "Lista članova"
 
-#: post-type/module-base.php:367
+#: post-type/module-base.php:368
 msgctxt "Optional Documentation"
 msgid "The contacts who are members of this training."
 msgstr "Kontakti koji su članovi ove obuke."
 
-#: post-type/module-base.php:377
+#: post-type/module-base.php:378
 msgid "Leaders"
 msgstr "Vođe"
 
-#: post-type/module-base.php:387
+#: post-type/module-base.php:388
 msgid "People Groups"
 msgstr "Narodne grupe"
 
-#: post-type/module-base.php:388
+#: post-type/module-base.php:389
 msgctxt "Optional Documentation"
 msgid "The people trainings represented by this training."
 msgstr "Narodne grupe koje predstavlja ova obuka."
 
-#: post-type/module-base.php:397
+#: post-type/module-base.php:398
 msgid "Groups"
 msgstr "Grupe"
 
-#: post-type/module-base.php:409
+#: post-type/module-base.php:410
 msgid "Member Count"
 msgstr "Broj članova"
 
-#: post-type/module-base.php:410 post-type/module-base.php:417
+#: post-type/module-base.php:411 post-type/module-base.php:418
 msgctxt "Optional Documentation"
 msgid ""
 "The number of members in this training. It will automatically be updated "
@@ -302,50 +302,50 @@ msgstr ""
 "dodaju ili uklone sa liste članova. Promijenite ovaj broj ručno da uključite "
 "ljude koji možda nisu u sistemu, ali su također članovi obuke."
 
-#: post-type/module-base.php:416
+#: post-type/module-base.php:417
 msgid "Leader Count"
 msgstr "Broj vođa"
 
-#: post-type/module-base.php:426
+#: post-type/module-base.php:427
 msgid "Training as Leader"
 msgstr "Obuka kao vođa"
 
-#: post-type/module-base.php:427
+#: post-type/module-base.php:428
 msgctxt "Optional Documentation"
 msgid "Leader of a training"
 msgstr "Vođa obuke"
 
-#: post-type/module-base.php:438
+#: post-type/module-base.php:439
 msgid "Training as Participant"
 msgstr "Obuka kao polaznik"
 
-#: post-type/module-base.php:439
+#: post-type/module-base.php:440
 msgctxt "Optional Documentation"
 msgid "Participant in a training."
 msgstr "Polaznik obuke."
 
-#: post-type/module-base.php:510
+#: post-type/module-base.php:511
 msgid "Other"
 msgstr "Ostalo"
 
-#: post-type/module-base.php:545
+#: post-type/module-base.php:546
 msgid "Create"
 msgstr "Kreiraj"
 
-#: post-type/module-base.php:550
+#: post-type/module-base.php:551
 msgid "Select"
 msgstr "Odaberi"
 
-#: post-type/module-base.php:555
+#: post-type/module-base.php:556
 msgid "To add new members, click on 'Create' or 'Select'."
 msgstr "Da biste dodali nove članove, kliknite na 'Kreiraj' ili 'Odaberi'."
 
-#: post-type/module-base.php:560
+#: post-type/module-base.php:561
 msgctxt "Add members modal"
 msgid "Add members from existing contacts"
 msgstr "Dodajte članove iz postojećih kontakata"
 
-#: post-type/module-base.php:561
+#: post-type/module-base.php:562
 msgctxt "Add members modal"
 msgid ""
 "In the 'Member List' field, type the name of an existing contact to add them "
@@ -354,7 +354,7 @@ msgstr ""
 "U polje 'Lista članova' unesite ime postojećeg kontakta da biste ga dodali u "
 "ovu obuku."
 
-#: post-type/module-base.php:573
+#: post-type/module-base.php:574
 msgid "Close"
 msgstr "Zatvori"
 
@@ -413,7 +413,7 @@ msgid "Counties"
 msgstr "Okruzi"
 
 #: post-type/module-public-calendar.php:432
-#: post-type/module-registration.php:385
+#: post-type/module-registration.php:383
 msgid "Add"
 msgstr "Dodaj"
 
@@ -449,42 +449,42 @@ msgstr "prikaži na kalendaru"
 msgid "open registration"
 msgstr "otvorena registracija"
 
-#: post-type/module-registration.php:265
+#: post-type/module-registration.php:264
 msgid "add"
 msgstr "dodaj"
 
-#: post-type/module-registration.php:266
+#: post-type/module-registration.php:265
 msgid "Use"
 msgstr "Koristi"
 
-#: post-type/module-registration.php:267 post-type/module-registration.php:695
+#: post-type/module-registration.php:266 post-type/module-registration.php:693
 msgid "Search Location"
 msgstr "Pretraži lokaciju"
 
-#: post-type/module-registration.php:268
+#: post-type/module-registration.php:267
 msgid "Delete Location"
 msgstr "Izbriši lokaciju"
 
-#: post-type/module-registration.php:269
+#: post-type/module-registration.php:268
 msgid "Open Mapping"
 msgstr "Otvori mapiranje"
 
-#: post-type/module-registration.php:270
+#: post-type/module-registration.php:269
 msgid "clear"
 msgstr "obriši"
 
-#: post-type/module-registration.php:384
+#: post-type/module-registration.php:382
 msgid "Register for Training"
 msgstr "Prijavi se za obuku"
 
-#: post-type/module-registration.php:386
+#: post-type/module-registration.php:384
 msgid "Join Training"
 msgstr "Pridruži se obuci"
 
-#: post-type/module-registration.php:387
+#: post-type/module-registration.php:385
 msgid "Join in"
 msgstr "Pridruži se"
 
-#: post-type/module-registration.php:700
+#: post-type/module-registration.php:698
 msgid "Clear"
 msgstr "Obriši"

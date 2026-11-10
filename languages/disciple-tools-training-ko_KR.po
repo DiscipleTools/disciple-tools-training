@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Disciple Tools Plugins\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/disciple-tools-"
 "training\n"
-"POT-Creation-Date: 2026-01-15T09:26:10+00:00\n"
+"POT-Creation-Date: 2026-11-10T20:37:15+00:00\n"
 "PO-Revision-Date: 2024-09-14 07:59+0000\n"
 "Last-Translator: Zack Han <suburbanideal@gmail.com>\n"
 "Language-Team: Korean <https://translate.disciple.tools/projects/disciple-"
@@ -20,8 +20,8 @@ msgid "Training Maps"
 msgstr "교육지도"
 
 #: metrics/mapbox-maps.php:31 metrics/mapbox-personal-maps.php:31
-#: post-type/module-base.php:29 post-type/module-base.php:461
-#: post-type/module-base.php:473 post-type/module-base.php:496
+#: post-type/module-base.php:29 post-type/module-base.php:462
+#: post-type/module-base.php:474 post-type/module-base.php:497
 msgid "Trainings"
 msgstr "훈련"
 
@@ -41,35 +41,35 @@ msgstr "훈련 시작됨"
 msgid "Training Completed"
 msgstr "훈련 완료됨"
 
-#: post-type/module-base.php:28 post-type/module-base.php:495
+#: post-type/module-base.php:28 post-type/module-base.php:496
 msgid "Training"
 msgstr "훈련"
 
-#: post-type/module-base.php:70
+#: post-type/module-base.php:71
 msgid "Trainings Admin"
 msgstr "훈련 관리자"
 
-#: post-type/module-base.php:71
+#: post-type/module-base.php:72
 msgid "Admin access to all trainings"
 msgstr "모든 훈련에 대한 관리자 접근 권한"
 
-#: post-type/module-base.php:76
+#: post-type/module-base.php:77
 msgid "Multiplier"
 msgstr "승수"
 
-#: post-type/module-base.php:83
+#: post-type/module-base.php:84
 msgid "Disciple.Tools Admin"
 msgstr "Disciple.Tools 관리자"
 
-#: post-type/module-base.php:90
+#: post-type/module-base.php:91
 msgid "Administrator"
 msgstr "관리자"
 
-#: post-type/module-base.php:127
+#: post-type/module-base.php:128
 msgid "Tags"
 msgstr "태그"
 
-#: post-type/module-base.php:128
+#: post-type/module-base.php:129
 msgctxt "Optional Documentation"
 msgid ""
 "A useful way to group related items and can be used to filter the records"
@@ -77,104 +77,104 @@ msgstr ""
 "관련 항목을 그룹화하는 유용한 방법이며 기록을 필터링하는 데 사용할 수 있습니"
 "다"
 
-#: post-type/module-base.php:135
+#: post-type/module-base.php:136
 msgid "Follow"
 msgstr "따르다"
 
-#: post-type/module-base.php:142
+#: post-type/module-base.php:143
 msgid "Un-Follow"
 msgstr "팔로우 취소"
 
-#: post-type/module-base.php:148
+#: post-type/module-base.php:149
 msgid "Tasks"
 msgstr "과제"
 
-#: post-type/module-base.php:162
+#: post-type/module-base.php:163
 msgctxt "Training Status label"
 msgid "New"
 msgstr "새로운"
 
-#: post-type/module-base.php:163
+#: post-type/module-base.php:164
 msgctxt "Training Status field description"
 msgid "New training added to the system"
 msgstr "시스템에 추가 된 새로운 교육"
 
-#: post-type/module-base.php:167
+#: post-type/module-base.php:168
 msgctxt "Training Status label"
 msgid "Proposed"
 msgstr "제안"
 
-#: post-type/module-base.php:168
+#: post-type/module-base.php:169
 msgctxt "Training Status field description"
 msgid "This training has been proposed and is in initial conversations"
 msgstr "이 교육은 제안되었으며 초기 대화 중입니다."
 
-#: post-type/module-base.php:172
+#: post-type/module-base.php:173
 msgctxt "Training Status label"
 msgid "Scheduled"
 msgstr "예정"
 
-#: post-type/module-base.php:173
+#: post-type/module-base.php:174
 msgctxt "Training Status field description"
 msgid "This training is confirmed, on the calendar."
 msgstr "이 교육은 달력에서 확인됩니다."
 
-#: post-type/module-base.php:177
+#: post-type/module-base.php:178
 msgctxt "Training Status label"
 msgid "In Progress"
 msgstr "진행 중"
 
-#: post-type/module-base.php:178
+#: post-type/module-base.php:179
 msgctxt "Training Status field description"
 msgid "This training is confirmed, on the calendar, or currently active."
 msgstr "이 교육은 달력에 확인되었거나 현재 활성화되어 있습니다."
 
-#: post-type/module-base.php:182
+#: post-type/module-base.php:183
 msgctxt "Training Status label"
 msgid "Complete"
 msgstr "완료"
 
-#: post-type/module-base.php:183
+#: post-type/module-base.php:184
 msgctxt "Training Status field description"
 msgid "This training has successfully completed"
 msgstr "이 교육은 성공적으로 완료되었습니다."
 
-#: post-type/module-base.php:187
+#: post-type/module-base.php:188
 msgctxt "Training Status label"
 msgid "Paused"
 msgstr "일시 중지됨"
 
-#: post-type/module-base.php:188
+#: post-type/module-base.php:189
 msgctxt "Training Status field description"
 msgid ""
 "This contact is currently on hold. It has potential of getting scheduled in "
 "the future."
 msgstr "이 연락처는 현재 보류 중입니다. 미래에 계획 될 가능성이 있습니다."
 
-#: post-type/module-base.php:192
+#: post-type/module-base.php:193
 msgctxt "Training Status label"
 msgid "Closed"
 msgstr "종료됨"
 
-#: post-type/module-base.php:193
+#: post-type/module-base.php:194
 msgctxt "Training Status field description"
 msgid "This training is no longer going to happen."
 msgstr "이 훈련은 더 이상 일어나지 않을 것입니다."
 
-#: post-type/module-base.php:201
+#: post-type/module-base.php:202
 msgid "Assigned To"
 msgstr "할당"
 
-#: post-type/module-base.php:202
+#: post-type/module-base.php:203
 msgid ""
 "Select the main person who is responsible for reporting on this training."
 msgstr "이 교육에 대한보고를 담당하는 주 담당자를 선택하십시오."
 
-#: post-type/module-base.php:209
+#: post-type/module-base.php:210
 msgid "Training Coach / Church Planter"
 msgstr "훈련 코치 / 교회 개척자"
 
-#: post-type/module-base.php:210
+#: post-type/module-base.php:211
 msgctxt "Optional Documentation"
 msgid ""
 "The person who planted and/or is coaching this training. Only one person can "
@@ -184,59 +184,59 @@ msgstr ""
 "이 교육을 심거나지도하는 사람입니다. 한 사람 만 훈련에 배정 될 수 있으며 여"
 "러 사람이이 훈련의 코치 / 교회 개척자가 될 수 있습니다."
 
-#: post-type/module-base.php:222
+#: post-type/module-base.php:223
 msgid "Requires Update"
 msgstr "업데이트 필요"
 
-#: post-type/module-base.php:228
+#: post-type/module-base.php:229
 msgid "Video Link"
 msgstr "비디오 링크"
 
-#: post-type/module-base.php:229
+#: post-type/module-base.php:230
 msgctxt "Optional Documentation"
 msgid "Link to video chat service"
 msgstr "영상 채팅 서비스에 연결"
 
-#: post-type/module-base.php:236
+#: post-type/module-base.php:237
 msgid "Notes"
 msgstr "메모"
 
-#: post-type/module-base.php:237
+#: post-type/module-base.php:238
 msgctxt "Optional Documentation"
 msgid "Notes on when the trainings will happen"
 msgstr "교육 실시시기에 대한 참고 사항"
 
-#: post-type/module-base.php:246 post-type/module-base.php:509
+#: post-type/module-base.php:247 post-type/module-base.php:510
 msgid "Meeting Times"
 msgstr "회의 시간"
 
-#: post-type/module-base.php:295 post-type/module-base.php:304
+#: post-type/module-base.php:296 post-type/module-base.php:305
 msgid "Locations"
 msgstr "위치"
 
-#: post-type/module-base.php:296 post-type/module-base.php:305
+#: post-type/module-base.php:297 post-type/module-base.php:306
 msgctxt "Optional Documentation"
 msgid "The general location where this contact is located."
 msgstr "이 연락처가있는 일반적인 위치입니다."
 
-#: post-type/module-base.php:313
+#: post-type/module-base.php:314
 msgid "Address"
 msgstr "주소"
 
-#: post-type/module-base.php:333
+#: post-type/module-base.php:334
 msgid "Parent Training"
 msgstr "상위 훈련"
 
-#: post-type/module-base.php:334
+#: post-type/module-base.php:335
 msgctxt "Optional Documentation"
 msgid "A training that launched this training."
 msgstr "이 교육을 시작한 교육입니다."
 
-#: post-type/module-base.php:344
+#: post-type/module-base.php:345
 msgid "Peer Training"
 msgstr "동료 교육"
 
-#: post-type/module-base.php:345
+#: post-type/module-base.php:346
 msgctxt "Optional Documentation"
 msgid ""
 "A related training that isn't a parent/child in relationship. It might "
@@ -245,47 +245,47 @@ msgstr ""
 "관계에서 부모 / 자녀가 아닌 관련 교육. 공동 작업, 병합 예정, 최근 분할 등의 "
 "교육을 나타낼 수 있습니다."
 
-#: post-type/module-base.php:355
+#: post-type/module-base.php:356
 msgid "Child Training"
 msgstr "하위 훈련"
 
-#: post-type/module-base.php:356
+#: post-type/module-base.php:357
 msgctxt "Optional Documentation"
 msgid "A training that has been birthed out of this training."
 msgstr "이 훈련에서 탄생 한 훈련."
 
-#: post-type/module-base.php:366 post-type/module-base.php:508
-#: post-type/module-base.php:542
+#: post-type/module-base.php:367 post-type/module-base.php:509
+#: post-type/module-base.php:543
 msgid "Member List"
 msgstr "회원 목록"
 
-#: post-type/module-base.php:367
+#: post-type/module-base.php:368
 msgctxt "Optional Documentation"
 msgid "The contacts who are members of this training."
 msgstr "이 교육의 구성원 인 연락처입니다."
 
-#: post-type/module-base.php:377
+#: post-type/module-base.php:378
 msgid "Leaders"
 msgstr "지도자들"
 
-#: post-type/module-base.php:387
+#: post-type/module-base.php:388
 msgid "People Groups"
 msgstr "사람들 그룹"
 
-#: post-type/module-base.php:388
+#: post-type/module-base.php:389
 msgctxt "Optional Documentation"
 msgid "The people trainings represented by this training."
 msgstr "이 훈련으로 대표되는 사람들 훈련."
 
-#: post-type/module-base.php:397
+#: post-type/module-base.php:398
 msgid "Groups"
 msgstr "그룹"
 
-#: post-type/module-base.php:409
+#: post-type/module-base.php:410
 msgid "Member Count"
 msgstr "회원 수"
 
-#: post-type/module-base.php:410 post-type/module-base.php:417
+#: post-type/module-base.php:411 post-type/module-base.php:418
 msgctxt "Optional Documentation"
 msgid ""
 "The number of members in this training. It will automatically be updated "
@@ -297,57 +297,57 @@ msgstr ""
 "로 업데이트됩니다. 시스템에 없지만 교육의 구성원이기도 한 포함 된 사람으로이 "
 "번호를 수동으로 변경합니다."
 
-#: post-type/module-base.php:416
+#: post-type/module-base.php:417
 msgid "Leader Count"
 msgstr "리더 수"
 
-#: post-type/module-base.php:426
+#: post-type/module-base.php:427
 msgid "Training as Leader"
 msgstr "리더로서의 훈련"
 
-#: post-type/module-base.php:427
+#: post-type/module-base.php:428
 msgctxt "Optional Documentation"
 msgid "Leader of a training"
 msgstr "훈련의 리더"
 
-#: post-type/module-base.php:438
+#: post-type/module-base.php:439
 msgid "Training as Participant"
 msgstr "참가자 교육"
 
-#: post-type/module-base.php:439
+#: post-type/module-base.php:440
 msgctxt "Optional Documentation"
 msgid "Participant in a training."
 msgstr "교육 참가자."
 
-#: post-type/module-base.php:510
+#: post-type/module-base.php:511
 msgid "Other"
 msgstr "기타"
 
-#: post-type/module-base.php:545
+#: post-type/module-base.php:546
 msgid "Create"
 msgstr "생성"
 
-#: post-type/module-base.php:550
+#: post-type/module-base.php:551
 msgid "Select"
 msgstr "선택"
 
-#: post-type/module-base.php:555
+#: post-type/module-base.php:556
 msgid "To add new members, click on 'Create' or 'Select'."
 msgstr "새 회원을 추가하려면 '만들기'또는 '선택'을 클릭하십시오."
 
-#: post-type/module-base.php:560
+#: post-type/module-base.php:561
 msgctxt "Add members modal"
 msgid "Add members from existing contacts"
 msgstr "기존 연락처에서 구성원 추가"
 
-#: post-type/module-base.php:561
+#: post-type/module-base.php:562
 msgctxt "Add members modal"
 msgid ""
 "In the 'Member List' field, type the name of an existing contact to add them "
 "to this training."
 msgstr "'멤버 목록'필드에 기존 연락처의 이름을 입력하여이 교육에 추가합니다."
 
-#: post-type/module-base.php:573
+#: post-type/module-base.php:574
 msgid "Close"
 msgstr "닫기"
 
@@ -406,7 +406,7 @@ msgid "Counties"
 msgstr "카운티"
 
 #: post-type/module-public-calendar.php:432
-#: post-type/module-registration.php:385
+#: post-type/module-registration.php:383
 msgid "Add"
 msgstr "추가"
 
@@ -442,42 +442,42 @@ msgstr "달력에 표시"
 msgid "open registration"
 msgstr "공개 등록"
 
-#: post-type/module-registration.php:265
+#: post-type/module-registration.php:264
 msgid "add"
 msgstr "추가"
 
-#: post-type/module-registration.php:266
+#: post-type/module-registration.php:265
 msgid "Use"
 msgstr "사용"
 
-#: post-type/module-registration.php:267 post-type/module-registration.php:695
+#: post-type/module-registration.php:266 post-type/module-registration.php:693
 msgid "Search Location"
 msgstr "위치 검색"
 
-#: post-type/module-registration.php:268
+#: post-type/module-registration.php:267
 msgid "Delete Location"
 msgstr "위치 삭제"
 
-#: post-type/module-registration.php:269
+#: post-type/module-registration.php:268
 msgid "Open Mapping"
 msgstr "오픈 매핑"
 
-#: post-type/module-registration.php:270
+#: post-type/module-registration.php:269
 msgid "clear"
 msgstr "지우기"
 
-#: post-type/module-registration.php:384
+#: post-type/module-registration.php:382
 msgid "Register for Training"
 msgstr "교육 등록"
 
-#: post-type/module-registration.php:386
+#: post-type/module-registration.php:384
 msgid "Join Training"
 msgstr "교육 참여"
 
-#: post-type/module-registration.php:387
+#: post-type/module-registration.php:385
 msgid "Join in"
 msgstr "참여"
 
-#: post-type/module-registration.php:700
+#: post-type/module-registration.php:698
 msgid "Clear"
 msgstr "지우기"
