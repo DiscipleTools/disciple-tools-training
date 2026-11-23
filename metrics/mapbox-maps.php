@@ -118,12 +118,12 @@ class DT_Metrics_Mapbox_Trainings_Maps extends DT_Metrics_Chart_Base
         }
 
         $params = $request->get_json_params() ?? $request->get_body_params();
-        if ( ! isset( $params['post_type'] ) || empty( $params['post_type'] ) ) {
-            return new WP_Error( __METHOD__, 'Missing Post Types', [ 'status' => 400 ] );
+        if ( ( $params['post_type'] ?? null ) !== $this->post_type ) {
+            return new WP_Error( __METHOD__, 'Invalid Post Type', [ 'status' => 400 ] );
         }
         $post_type = $this->post_type;
         $query = ( isset( $params['query'] ) && is_array( $params['query'] ) ) ? $params['query'] : [];
-        $query = dt_array_merge_recursive_distinct( $query, $this->base_filter );
+        $query = array_merge( $query, $this->base_filter ); // base_filter values override any caller-supplied value for the same key
 
         $offset = ! empty( $params['offset'] ) ? absint( $params['offset'] ) : 0;
         $limit = ! empty( $params['limit'] ) ? absint( $params['limit'] ) : 50000;
@@ -138,12 +138,12 @@ class DT_Metrics_Mapbox_Trainings_Maps extends DT_Metrics_Chart_Base
             return new WP_Error( __METHOD__, 'Missing Permissions', [ 'status' => 403 ] );
         }
         $params = $request->get_json_params() ?? $request->get_body_params();
-        if ( ! isset( $params['post_type'] ) || empty( $params['post_type'] ) ) {
-            return new WP_Error( __METHOD__, 'Missing Post Types', [ 'status' => 400 ] );
+        if ( ( $params['post_type'] ?? null ) !== $this->post_type ) {
+            return new WP_Error( __METHOD__, 'Invalid Post Type', [ 'status' => 400 ] );
         }
         $post_type = $this->post_type;
         $query = ( isset( $params['query'] ) && is_array( $params['query'] ) ) ? $params['query'] : [];
-        $query = dt_array_merge_recursive_distinct( $query, $this->base_filter );
+        $query = array_merge( $query, $this->base_filter ); // base_filter values override any caller-supplied value for the same key
         $results = Disciple_Tools_Mapping_Queries::query_location_grid_meta_totals( $post_type, $query );
         if ( is_wp_error( $results ) ) {
             return $results;
@@ -167,12 +167,12 @@ class DT_Metrics_Mapbox_Trainings_Maps extends DT_Metrics_Chart_Base
         }
         $grid_id = sanitize_text_field( wp_unslash( $params['grid_id'] ) );
 
-        if ( ! isset( $params['post_type'] ) || empty( $params['post_type'] ) ) {
-            return new WP_Error( __METHOD__, 'Missing Post Types', [ 'status' => 400 ] );
+        if ( ( $params['post_type'] ?? null ) !== $this->post_type ) {
+            return new WP_Error( __METHOD__, 'Invalid Post Type', [ 'status' => 400 ] );
         }
         $post_type = $this->post_type;
         $query = ( isset( $params['query'] ) && is_array( $params['query'] ) ) ? $params['query'] : [];
-        $query = dt_array_merge_recursive_distinct( $query, $this->base_filter );
+        $query = array_merge( $query, $this->base_filter ); // base_filter values override any caller-supplied value for the same key
 
         return Disciple_Tools_Mapping_Queries::query_under_location_grid_meta_id( $post_type, $grid_id, $query );
     }
@@ -187,12 +187,12 @@ class DT_Metrics_Mapbox_Trainings_Maps extends DT_Metrics_Chart_Base
         }
 
         $params = $request->get_json_params() ?? $request->get_body_params();
-        if ( ! isset( $params['post_type'] ) || empty( $params['post_type'] ) ) {
-            return new WP_Error( __METHOD__, 'Missing Post Types', [ 'status' => 400 ] );
+        if ( ( $params['post_type'] ?? null ) !== $this->post_type ) {
+            return new WP_Error( __METHOD__, 'Invalid Post Type', [ 'status' => 400 ] );
         }
         $post_type = $this->post_type;
         $query = ( isset( $params['query'] ) && is_array( $params['query'] ) ) ? $params['query'] : [];
-        $query = dt_array_merge_recursive_distinct( $query, $this->base_filter );
+        $query = array_merge( $query, $this->base_filter ); // base_filter values override any caller-supplied value for the same key
 
         return Disciple_Tools_Mapping_Queries::points_geojson( $post_type, $query );
     }
