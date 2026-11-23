@@ -122,6 +122,7 @@ class DT_Metrics_Mapbox_Personal_Trainings_Maps extends DT_Metrics_Chart_Base
         $post_type = $this->post_type;
         $query = ( isset( $params['query'] ) && !empty( $params['query'] ) ) ? $params['query'] : [];
         $query = dt_array_merge_recursive_distinct( $query, $this->base_filter );
+        $query['assigned_to'] = $this->base_filter['assigned_to']; // scope to the current user; ignore any caller-supplied assigned_to
 
         return Disciple_Tools_Mapping_Queries::cluster_geojson( $post_type, $query );
     }
@@ -139,6 +140,7 @@ class DT_Metrics_Mapbox_Personal_Trainings_Maps extends DT_Metrics_Chart_Base
         $post_type = $this->post_type;
         $query = ( isset( $params['query'] ) && !empty( $params['query'] ) ) ? $params['query'] : [];
         $query = dt_array_merge_recursive_distinct( $query, $this->base_filter );
+        $query['assigned_to'] = $this->base_filter['assigned_to']; // scope to the current user; ignore any caller-supplied assigned_to
         $results = Disciple_Tools_Mapping_Queries::query_location_grid_meta_totals( $post_type, $query );
 
         $list = [];
@@ -161,6 +163,7 @@ class DT_Metrics_Mapbox_Personal_Trainings_Maps extends DT_Metrics_Chart_Base
         $post_type = $this->post_type;
         $query = ( isset( $params['query'] ) && !empty( $params['query'] ) ) ? $params['query'] : [];
         $query = dt_array_merge_recursive_distinct( $query, $this->base_filter );
+        $query['assigned_to'] = $this->base_filter['assigned_to']; // scope to the current user; ignore any caller-supplied assigned_to
 
         return Disciple_Tools_Mapping_Queries::query_under_location_grid_meta_id( $post_type, $grid_id, $query );
     }
@@ -181,6 +184,7 @@ class DT_Metrics_Mapbox_Personal_Trainings_Maps extends DT_Metrics_Chart_Base
         $post_type = $this->post_type;
         $query = ( isset( $params['query'] ) && !empty( $params['query'] ) ) ? $params['query'] : [];
         $query = dt_array_merge_recursive_distinct( $query, $this->base_filter );
+        $query['assigned_to'] = $this->base_filter['assigned_to']; // scope to the current user; ignore any caller-supplied assigned_to
 
         return Disciple_Tools_Mapping_Queries::points_geojson( $post_type, $query );
     }
