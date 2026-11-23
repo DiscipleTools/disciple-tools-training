@@ -121,7 +121,7 @@ class DT_Metrics_Mapbox_Trainings_Maps extends DT_Metrics_Chart_Base
         if ( ! isset( $params['post_type'] ) || empty( $params['post_type'] ) ) {
             return new WP_Error( __METHOD__, 'Missing Post Types', [ 'status' => 400 ] );
         }
-        $post_type = $params['post_type'];
+        $post_type = $this->post_type;
         $query = ( isset( $params['query'] ) && !empty( $params['query'] ) ) ? $params['query'] : [];
         $query = dt_array_merge_recursive_distinct( $query, $this->base_filter );
 
@@ -138,7 +138,7 @@ class DT_Metrics_Mapbox_Trainings_Maps extends DT_Metrics_Chart_Base
         if ( ! isset( $params['post_type'] ) || empty( $params['post_type'] ) ) {
             return new WP_Error( __METHOD__, 'Missing Post Types', [ 'status' => 400 ] );
         }
-        $post_type = $params['post_type'];
+        $post_type = $this->post_type;
         $query = ( isset( $params['query'] ) && !empty( $params['query'] ) ) ? $params['query'] : [];
         $query = dt_array_merge_recursive_distinct( $query, $this->base_filter );
         $results = Disciple_Tools_Mapping_Queries::query_location_grid_meta_totals( $post_type, $query );
@@ -164,7 +164,7 @@ class DT_Metrics_Mapbox_Trainings_Maps extends DT_Metrics_Chart_Base
         if ( ! isset( $params['post_type'] ) || empty( $params['post_type'] ) ) {
             return new WP_Error( __METHOD__, 'Missing Post Types', [ 'status' => 400 ] );
         }
-        $post_type = $params['post_type'];
+        $post_type = $this->post_type;
         $query = ( isset( $params['query'] ) && !empty( $params['query'] ) ) ? $params['query'] : [];
         $query = dt_array_merge_recursive_distinct( $query, $this->base_filter );
 
@@ -184,7 +184,7 @@ class DT_Metrics_Mapbox_Trainings_Maps extends DT_Metrics_Chart_Base
         if ( ! isset( $params['post_type'] ) || empty( $params['post_type'] ) ) {
             return new WP_Error( __METHOD__, 'Missing Post Types', [ 'status' => 400 ] );
         }
-        $post_type = $params['post_type'];
+        $post_type = $this->post_type;
         $query = ( isset( $params['query'] ) && !empty( $params['query'] ) ) ? $params['query'] : [];
         $query = dt_array_merge_recursive_distinct( $query, $this->base_filter );
 
