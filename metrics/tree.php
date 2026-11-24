@@ -231,15 +231,17 @@ class DT_Metrics_Trainings_Tree extends DT_Metrics_Chart_Base
         foreach ( $query as $item ) {
             $list[$item['id']] = $item;
         }
+        // Key rows by "id-parent_id" so a parent with several children is only added once.
         $multiplying_only = [];
         foreach ( $query as $item ) {
-            if ( ! empty( $item['parent_id'] ) ) {
-                $multiplying_only[] = $item;
-                $multiplying_only[] = $list[$item['parent_id']];
+            if ( ! empty( $item['parent_id'] ) && isset( $list[$item['parent_id']] ) ) {
+                $parent = $list[$item['parent_id']];
+                $multiplying_only[ $item['id'] . '-' . $item['parent_id'] ] = $item;
+                $multiplying_only[ $parent['id'] . '-' . $parent['parent_id'] ] = $parent;
             }
         }
 
-        return $multiplying_only;
+        return array_values( $multiplying_only );
     }
 }
 new DT_Metrics_Trainings_Tree();
